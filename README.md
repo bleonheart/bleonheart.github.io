@@ -1,5 +1,3 @@
----
-
 # My Portfolio
 
 Welcome to my portfolio! Here you'll find a collection of my projects, skills, and experiences. Feel free to explore and reach out if you have any questions or opportunities.
@@ -22,7 +20,5 @@ I am adept at both front-end and back-end development, ensuring a comprehensive 
 ## Contact
 
 - **Discord:** `liliaplayer`
-
----
 
 Thank you for visiting my portfolio! Feel free to reach out if you have any questions or would like to collaborate on a project.
