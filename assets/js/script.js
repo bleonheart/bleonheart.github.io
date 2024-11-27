@@ -208,6 +208,78 @@ document.addEventListener('DOMContentLoaded', () => {
                     </ul>
                 `
             },
+
+            'cctv': {
+                title: 'CCTV',
+                description: `
+                <p>Enhance your server's security with Nameable Cameras, a faction whitelist system, and a camera hacking feature.</p>
+                <ul>
+                    <li>Nameable Cameras for remote location viewing</li>
+                    <li>Faction whitelist system to limit camera swapping</li>
+                    <li>Camera hacking system for remote viewing access</li>
+                </ul>
+            `
+            },
+
+            'character-list': {
+                title: 'Character List',
+                description: `
+                <p>Manage your server's characters efficiently with comprehensive information and offline ban capabilities.</p>
+                <ul>
+                    <li>View all player characters' information</li>
+                    <li>Offline ban and unban player characters</li>
+                    <li>Perfect tool for server management</li>
+                </ul>
+            `
+            },
+
+            'control-points': {
+                title: 'Control Points',
+                description: `
+                <p>Introduce dynamic territory control with controllable points that offer monetary rewards to factions.</p>
+                <ul>
+                    <li>Controllable points provide money rewards</li>
+                    <li>Factions can claim points and earn money when members are nearby</li>
+                    <li>Dynamic territory control system</li>
+                </ul>
+            `
+            },
+
+            'waypoints': {
+                title: 'Waypoints',
+                description: `
+                <p>Customize and display waypoints easily to enhance navigation and gameplay experience.</p>
+                <ul>
+                    <li>Customizable and viewable waypoints</li>
+                    <li>Easy setup and customization process</li>
+                </ul>
+            `
+            },
+
+            'car-bomb': {
+                title: 'Car Bomb',
+                description: `
+                <p>Add suspense to your gameplay with bombs that can be placed in cars, complete with defusal mechanics.</p>
+                <ul>
+                    <li>Placeable bombs in vehicles</li>
+                    <li>Audible countdown indicating explosion timing</li>
+                    <li>Defusal possible with the appropriate kit</li>
+                </ul>
+            `
+            },
+
+            'injuries': {
+                title: 'Injuries',
+                description: `
+                <p>Introduce realistic injury mechanics with multiple injury types affecting gameplay and requiring specific treatments.</p>
+                <ul>
+                    <li><strong>Concussion:</strong> Blurry screen effect, healed with meds</li>
+                    <li><strong>PTSD:</strong> Suffering hallucinations and other symptoms</li>
+                    <li><strong>Broken Leg:</strong> Reduced movement speed, fixed with a splint</li>
+                    <li><strong>Bleeding:</strong> Periodic damage, healable with bandages</li>
+                </ul>
+            `
+            },
         };
 
         return plugins[plugin] || { title: 'Unknown Plugin', description: 'No information available.' };
