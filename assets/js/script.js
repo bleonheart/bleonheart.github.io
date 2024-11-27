@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
             },
 
-            'character-list': {
+            'characterlist': {
                 title: 'Character List',
                 description: `
                 <p>Manage your server's characters efficiently with comprehensive information and offline ban capabilities.</p>
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
             },
 
-            'control-points': {
+            'controlpoints': {
                 title: 'Control Points',
                 description: `
                 <p>Introduce dynamic territory control with controllable points that offer monetary rewards to factions.</p>
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
             },
 
-            'car-bomb': {
+            'carbomb': {
                 title: 'Car Bomb',
                 description: `
                 <p>Add suspense to your gameplay with bombs that can be placed in cars, complete with defusal mechanics.</p>
