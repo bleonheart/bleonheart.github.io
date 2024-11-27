@@ -11,7 +11,7 @@ Welcome to my portfolio! Here you'll find a collection of my projects, skills, a
 
 I have been a developer since I was a child, driven by a passion for creating and innovating.
 
-I have been active on **Garry's Mod** since 2012, contributing to the community with my skills and expertise.
+I have been active on **Garry's Mod** since 2019, contributing to the community with my skills and expertise.
 
 My experience includes working with frameworks such as **Lilia**, **Nutscript**, **DarkRP**, and **Helix**.
 
