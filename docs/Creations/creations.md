@@ -1,9 +1,14 @@
+---
+
 # For Sale
+
+**Disclaimer**: The videos presented in this document are still being recorded. Clicking any link comes with the risk of being rickrolled—proceed at your own discretion!
+
 ---
 
 ## General Mechanics
 
-### Representative Voting
+### Representative Voting  
 **Description**: Implements a voting system analogous to the American [House of Representatives](https://en.wikipedia.org/wiki/United_States_House_of_Representatives), enabling representative voting processes within the game.  
 **Features**:
 
