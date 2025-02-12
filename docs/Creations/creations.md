@@ -204,7 +204,15 @@
 
 - Custom animations for immersion.
 
-**Video**: [Video of Showcase](https://youtu.be/dQw4w9WgXcQ)
+**Video**:
+<details>
+  <summary>Video of Showcase</summary>
+  <video width="560" height="315" controls>
+    <source src="assets/videos/showcase.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
 
 ---
 
