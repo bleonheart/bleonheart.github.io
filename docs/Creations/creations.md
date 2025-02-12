@@ -61,9 +61,13 @@
 **Features**:
 
 - **Initial Passport Papers**: Players receive passport papers during character creation, serving as temporary identification.
+
 - **Combine Processing**: Interact with Combine NPCs or terminals to process and upgrade passport papers to a definitive Citizen ID.
+
 - **Unique Identification**: Each Citizen ID is unique and tied to the player's character, ensuring proper identification within the HL2RP framework.
+
 - **Faction Integration**: IDs can be linked to specific factions, facilitating access control and role-specific functionalities.
+
 - **Secure Storage**: Prevents identity theft and unauthorized access, maintaining the integrity of the identification system.
 
 ---
@@ -75,9 +79,13 @@
 **Features**:
 
 - **Class Selection**: Choose and become different classes within a faction through interactive terminals.
+
 - **Customization**: Heavily customizable settings to modify terminal functionalities and available classes.
+
 - **Employment Status**: Players can flag up (active) or flag down (inactive) their working status directly through the terminals.
+
 - **User-Friendly Interface**: Simple and intuitive interface for seamless interaction and class management.
+
 - **Integration with Faction Systems**: Works in tandem with existing faction mechanics to streamline player roles and responsibilities.
 
 ---
@@ -89,9 +97,13 @@
 **Features**:
 
 - **Emergency Keybind**: Press a designated key to activate Code 99 and summon police help instantly.
+
 - **Waypoint Indicators**: Displays a waypoint on the player's screen showing the number of police entrants required to respond to the call.
+
 - **Visual Icons**: Adds icons to the waypoint for easy identification and navigation by responding officers.
+
 - **Notification System**: Alerts nearby police players about the Code 99 activation and the location of the emergency.
+
 - **Cooldown Mechanism**: Prevents abuse by implementing cooldown periods between successive Code 99 activations.
 
 ---
@@ -103,9 +115,13 @@
 **Features**:
 
 - **Mustard Gas Swep**: Deployable gas grenades that create hazardous areas, simulating mustard gas exposure.
+
 - **Wearable Gas Mask**: Equip gas masks to protect against gas hazards and reduce damage from environmental threats.
+
 - **Damage Over Time**: Players without a gas mask take continuous heavy damage when exposed to gas grenades.
+
 - **Visual and Audio Indicators**: Indicators notify players of gas exposure and the need to equip a gas mask.
+
 - **Durability and Maintenance**: Gas masks have durability and may require maintenance or replacement after extended use.
 
 ---
@@ -117,9 +133,13 @@
 **Features**:
 
 - **Randomized Stats**: Each RP character spawns with unique stats, encouraging diverse gameplay styles and roles.
+
 - **Temporary Transformation**: Players can assume the identity of an RP character for a limited time, fostering dynamic roleplay scenarios.
+
 - **Life Duration Display**: Upon death, the system presents the duration the player lived, adding a narrative element to character lifespans.
+
 - **Character Diversity**: Supports a wide range of character types and backgrounds to enrich the roleplaying environment.
+
 - **Integration with Existing Systems**: Works seamlessly with factions, classes, and other roleplay mechanics to enhance overall immersion.
 
 ### Zomboid Stats
@@ -129,10 +149,15 @@
 **Features**:
 
 - **Comprehensive Character Screen**: View and manage detailed stats, including traits, skills, and character backgrounds.
+
 - **Traits and Skills**: Assign and develop traits and skills that affect player abilities and interactions within the game.
+
 - **Background Stories**: Create and integrate character backgrounds to enrich roleplaying and narrative depth.
+
 - **Stat Influence**: Stats impact various gameplay elements such as crafting efficiency, combat prowess, and survival capabilities.
+
 - **Bug Management**: Initial release may include bugs and default settings, with ongoing updates planned for improvements and refinements.
+
 - **Integration with Systems**: Works alongside Farming, Food, Medical Systems, and more to create a cohesive and immersive experience.
 
 ---
@@ -1456,9 +1481,13 @@
 **Features**:
 
 - **Customizable Intro Videos**: Upload and assign specific videos to play for new players upon their first join.
+
 - **Trigger Mechanisms**: Intros can be triggered by player actions, such as first login or entering specific areas.
+
 - **Seamless Integration**: Smooth transitions between video intros and gameplay to maintain immersion without disrupting the player experience.
+
 - **Interactive Prompts**: Optional interactive elements within intros, such as prompts to accept rules or navigate tutorials.
+
 - **Support for Multiple Formats**: Compatible with various video formats to accommodate different content creation needs.
 
 ---
