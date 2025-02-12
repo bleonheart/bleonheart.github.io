@@ -6,220 +6,293 @@
 
 ## General Mechanics
 
-### Representative Voting  
+### Representative Voting
 
-**Description**: Implements a voting system analogous to the American [House of Representatives](https://en.wikipedia.org/wiki/United_States_House_of_Representatives), enabling representative voting processes within the game.  
+**Description**:
+
+Implements a voting system analogous to the American [House of Representatives](https://en.wikipedia.org/wiki/United_States_House_of_Representatives), enabling representative voting processes within the game.
 
 **Features**:
 
-- Representative-style voting.
-
+- Representative-style voting.  
 - Tallying of votes based on seats/factions or similar systems.
 
 ---
 
 ### Legislative Voting
 
-**Description**: Introduces a legislative system for lawmaking. Players can propose laws with three voting options: Aye, Nay, and Abstain. The results are tallied at the end of the election.  
+**Description**:
+
+Introduces a legislative system for lawmaking. Players can propose laws with three voting options: Aye, Nay, and Abstain. The results are tallied at the end of the election.
 
 **Features**:
 
-- Legislative-style law proposals.
-
-- Aye/Nay/Abstain voting system.
-
+- Legislative-style law proposals.  
+- Aye/Nay/Abstain voting system.  
 - Automatic tallying.
 
 ---
 
 ### Presidential Voting
 
-**Description**: Facilitates presidential elections based on the popular vote count.  
+**Description**:
+
+Facilitates presidential elections based on the popular vote count.
 
 **Features**:
 
-- Popular-vote-based presidential election system.
-
+- Popular-vote-based presidential election system.  
 - Candidate registration and vote tallying.
 
 ---
 
 ### Food
 
-**Description**: Adds mechanics for hunger and thirst, incorporating customizable effects. Thirst impedes stamina regeneration, while starvation depletes health.  
+**Description**:
+
+Adds mechanics for hunger and thirst, incorporating customizable effects. Thirst impedes stamina regeneration, while starvation depletes health.
 
 **Features**:
 
-- Simple integration for creating new food items.
-
-- Compatible with the Zero's MasterChef addon for extended functionality.
-
+- Simple integration for creating new food items.  
+- Compatible with the Zero’s MasterChef addon for extended functionality.  
 - Supports “Radiation” mechanic (see below).
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Food.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
-### Citizen ID - Passport Papers
+### Citizen ID – Passport Papers
 
+**Description**:
 
-**Description**: Tailored for **Half-Life 2 Roleplay (HL2RP)**, this system provides players with passport papers upon character creation instead of a standard Citizen ID. Players must interact with a Combine authority to process and obtain their definitive Citizen ID, enhancing the immersive experience of the HL2RP environment.
+Tailored for **Half-Life 2 Roleplay (HL2RP)**, this system provides players with passport papers upon character creation instead of a standard Citizen ID. Players must interact with a Combine authority to process and obtain their definitive Citizen ID, enhancing the immersive experience of the HL2RP environment.
 
 **Features**:
 
-- **Initial Passport Papers**: Players receive passport papers during character creation, serving as temporary identification.
-
-- **Combine Processing**: Interact with Combine NPCs or terminals to process and upgrade passport papers to a definitive Citizen ID.
-
-- **Unique Identification**: Each Citizen ID is unique and tied to the player's character, ensuring proper identification within the HL2RP framework.
-
-- **Faction Integration**: IDs can be linked to specific factions, facilitating access control and role-specific functionalities.
-
+- **Initial Passport Papers**: Players receive passport papers during character creation, serving as temporary identification.  
+- **Combine Processing**: Interact with Combine NPCs or terminals to process and upgrade passport papers to a definitive Citizen ID.  
+- **Unique Identification**: Each Citizen ID is unique and tied to the player's character, ensuring proper identification within the HL2RP framework.  
+- **Faction Integration**: IDs can be linked to specific factions, facilitating access control and role-specific functionalities.  
 - **Secure Storage**: Prevents identity theft and unauthorized access, maintaining the integrity of the identification system.
+
+**Videos**:
+
+<details>
+  <summary>Click to Show Video (CID.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/CID.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+<details>
+  <summary>Click to Show Video (ImprovedCID.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/ImprovedCID.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Civil Terminals
 
+**Description**:
 
-**Description**: Introduces multiple **Civil Terminals** that enable players to join various classes within a given faction. These terminals are highly customizable and easy to modify, allowing players to flag their active or inactive status based on their employment within the faction.
+Introduces multiple **Civil Terminals** that enable players to join various classes within a given faction. These terminals are highly customizable and easy to modify, allowing players to flag their active or inactive status based on their employment within the faction.
 
 **Features**:
 
-- **Class Selection**: Choose and become different classes within a faction through interactive terminals.
-
-- **Customization**: Heavily customizable settings to modify terminal functionalities and available classes.
-
-- **Employment Status**: Players can flag up (active) or flag down (inactive) their working status directly through the terminals.
-
-- **User-Friendly Interface**: Simple and intuitive interface for seamless interaction and class management.
-
+- **Class Selection**: Choose and become different classes within a faction through interactive terminals.  
+- **Customization**: Heavily customizable settings to modify terminal functionalities and available classes.  
+- **Employment Status**: Players can flag up (active) or flag down (inactive) their working status directly through the terminals.  
+- **User-Friendly Interface**: Simple and intuitive interface for seamless interaction and class management.  
 - **Integration with Faction Systems**: Works in tandem with existing faction mechanics to streamline player roles and responsibilities.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/civilterminals.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Code 99
 
+**Description**:
 
-**Description**: Implements a **Code 99** emergency response system that allows players to call for police assistance via a keybind. Upon activation, a waypoint appears on the screen indicating the number of entrants until the target is reached, along with a corresponding icon to guide responders.
+Implements a **Code 99** emergency response system that allows players to call for police assistance via a keybind. Upon activation, a waypoint appears on the screen indicating the number of entrants until the target is reached, along with a corresponding icon to guide responders.
 
 **Features**:
 
-- **Emergency Keybind**: Press a designated key to activate Code 99 and summon police help instantly.
-
-- **Waypoint Indicators**: Displays a waypoint on the player's screen showing the number of police entrants required to respond to the call.
-
-- **Visual Icons**: Adds icons to the waypoint for easy identification and navigation by responding officers.
-
-- **Notification System**: Alerts nearby police players about the Code 99 activation and the location of the emergency.
-
+- **Emergency Keybind**: Press a designated key to activate Code 99 and summon police help instantly.  
+- **Waypoint Indicators**: Displays a waypoint on the player's screen showing how many officers are needed to respond.  
+- **Visual Icons**: Adds icons to the waypoint for easy identification and navigation by responding officers.  
+- **Notification System**: Alerts nearby police players about the Code 99 activation and the location of the emergency.  
 - **Cooldown Mechanism**: Prevents abuse by implementing cooldown periods between successive Code 99 activations.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Code99.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Gas Mask
 
+**Description**:
 
-**Description**: Adds a **Mustard Gas Swep** and a **Gas Mask** to the game, providing players with protection against hazardous environments. If a player is not wearing a gas mask when exposed to a gas grenade, they will suffer heavy damage over time. Conversely, wearing a gas mask ensures safe breathing and immunity to gas effects.
+Adds a **Mustard Gas Swep** and a **Gas Mask** to the game, providing players with protection against hazardous environments. If a player is not wearing a gas mask when exposed to a gas grenade, they will suffer heavy damage over time. Conversely, wearing a gas mask ensures safe breathing and immunity to gas effects.
 
 **Features**:
 
-- **Mustard Gas Swep**: Deployable gas grenades that create hazardous areas, simulating mustard gas exposure.
-
-- **Wearable Gas Mask**: Equip gas masks to protect against gas hazards and reduce damage from environmental threats.
-
-- **Damage Over Time**: Players without a gas mask take continuous heavy damage when exposed to gas grenades.
-
-- **Visual and Audio Indicators**: Indicators notify players of gas exposure and the need to equip a gas mask.
-
+- **Mustard Gas Swep**: Deployable gas grenades that create hazardous areas, simulating mustard gas exposure.  
+- **Wearable Gas Mask**: Equip gas masks to protect against gas hazards and reduce damage from environmental threats.  
+- **Damage Over Time**: Players without a gas mask take continuous heavy damage when exposed to gas grenades.  
+- **Visual and Audio Indicators**: Indicators notify players of gas exposure and the need to equip a gas mask.  
 - **Durability and Maintenance**: Gas masks have durability and may require maintenance or replacement after extended use.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/GasMask.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### RP Characters
 
+**Description**:
 
-**Description**: Enhances roleplaying by introducing **RP Characters** that spawn with randomly generated stats, allowing players to temporarily immerse themselves as specific characters. Upon death, the system displays how long the player lived, adding depth to the roleplay experience.
+Enhances roleplaying by introducing **RP Characters** that spawn with randomly generated stats, allowing players to temporarily immerse themselves as specific characters. Upon death, the system displays how long the player lived, adding depth to the roleplay experience.
 
 **Features**:
 
-- **Randomized Stats**: Each RP character spawns with unique stats, encouraging diverse gameplay styles and roles.
-
-- **Temporary Transformation**: Players can assume the identity of an RP character for a limited time, fostering dynamic roleplay scenarios.
-
-- **Life Duration Display**: Upon death, the system presents the duration the player lived, adding a narrative element to character lifespans.
-
-- **Character Diversity**: Supports a wide range of character types and backgrounds to enrich the roleplaying environment.
-
+- **Randomized Stats**: Each RP character spawns with unique stats, encouraging diverse gameplay styles and roles.  
+- **Temporary Transformation**: Players can assume the identity of an RP character for a limited time, fostering dynamic roleplay scenarios.  
+- **Life Duration Display**: Upon death, the system presents the duration the player lived, adding a narrative element to character lifespans.  
+- **Character Diversity**: Supports a wide range of character types and backgrounds to enrich the roleplaying environment.  
 - **Integration with Existing Systems**: Works seamlessly with factions, classes, and other roleplay mechanics to enhance overall immersion.
+
+**Videos**:
+
+<details>
+  <summary>Click to Show Video (RPCharacters.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/RPCharacters.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+<details>
+  <summary>Click to Show Video (RPLifes.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/RPLifes.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
 
 ### Zomboid Stats
 
+**Description**:
 
-**Description**: Introduces a **Project Zomboid**-inspired character screen that tracks detailed statistics, including traits, skills, and backgrounds. These stats influence gameplay mechanics and provide a deeper layer of character development, though they may come with some bugs and default settings initially.
+Introduces a **Project Zomboid**-inspired character screen that tracks detailed statistics, including traits, skills, and backgrounds. These stats influence gameplay mechanics and provide a deeper layer of character development, though they may come with some bugs and default settings initially.
 
 **Features**:
 
-- **Comprehensive Character Screen**: View and manage detailed stats, including traits, skills, and character backgrounds.
+- **Comprehensive Character Screen**: View and manage detailed stats, including traits, skills, and character backgrounds.  
+- **Traits and Skills**: Assign and develop traits and skills that affect player abilities and interactions within the game.  
+- **Background Stories**: Create and integrate character backgrounds to enrich roleplaying and narrative depth.  
+- **Stat Influence**: Stats impact various gameplay elements such as crafting efficiency, combat prowess, and survival capabilities.  
+- **Bug Management**: Initial release may include bugs and default settings, with ongoing updates planned for improvements.  
+- **Integration with Systems**: Works alongside Farming, Food, Medical Systems, etc., to create a cohesive and immersive experience.
 
-- **Traits and Skills**: Assign and develop traits and skills that affect player abilities and interactions within the game.
+**Video**:
 
-- **Background Stories**: Create and integrate character backgrounds to enrich roleplaying and narrative depth.
-
-- **Stat Influence**: Stats impact various gameplay elements such as crafting efficiency, combat prowess, and survival capabilities.
-
-- **Bug Management**: Initial release may include bugs and default settings, with ongoing updates planned for improvements and refinements.
-
-- **Integration with Systems**: Works alongside Farming, Food, Medical Systems, and more to create a cohesive and immersive experience.
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Zomboid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Radiation
 
-**Description**: Functions similarly to the radiation mechanics in Fallout 4/76, reducing health and increasing radiation levels.  
+**Description**:
+
+Functions similarly to the radiation mechanics in Fallout 4/76, reducing health and increasing radiation levels.
 
 **Features**:
 
-- Gradual health reduction as radiation level increases.
-
+- Gradual health reduction as radiation level increases.  
 - Potential for anti-radiation items or medical treatments.
 
 ---
 
 ### Drugs
 
-**Description**: Adds drug bricks that require processing. Processed drugs provide various buffs and debuffs.  
+**Description**:
+
+Adds drug bricks that require processing. Processed drugs provide various buffs and debuffs.
 
 **Features**:
 
-- Processing system for raw drug materials.
-
+- Processing system for raw drug materials.  
 - Variety of possible buffs/debuffs (speed, health, etc.).
 
 ---
 
 ### Languages
 
-**Description**: Allows players to learn and speak different languages. Comprehension is limited to known languages.  
+**Description**:
+
+Allows players to learn and speak different languages. Comprehension is limited to known languages.
 
 **Features**:
 
-- Language learning system.
-
+- Language learning system.  
 - In-character communication restrictions to known languages.
 
 ---
 
 ### Tying
 
-**Description**: Expands the tying mechanic to include dragging restrained players and introduces additional options.  
+**Description**:
+
+Expands the tying mechanic to include dragging restrained players and introduces additional options.
 
 **Features**:
 
-- Blindfold or gag restrained players.
-
-- Drag tied players freely or move them into vehicles.
-
-- Search tied players or request to search them.
-
+- Blindfold or gag restrained players.  
+- Drag tied players freely or move them into vehicles.  
+- Search tied players or request to search them.  
 - Custom animations for immersion.
 
 **Video**:
@@ -236,1011 +309,1245 @@
 
 ### Looting
 
-**Description**: Enables looting across the map, with items categorized by rarity and probability.  
+**Description**:
+
+Enables looting across the map, with items categorized by rarity and probability.
 
 **Features**:
 
-- Configurable loot tables.
-
+- Configurable loot tables.  
 - Probability-based item distribution.
 
 ---
 
 ### Wiretaps
 
-**Description**: Adds wiretap devices for eavesdropping on conversations, featuring both receiver and listener components.  
+**Description**:
+
+Adds wiretap devices for eavesdropping on conversations, featuring both receiver and listener components.
 
 **Features**:
 
-- Place wiretaps on phones or in rooms.
-
+- Place wiretaps on phones or in rooms.  
 - Listen in from designated receivers.
 
 ---
 
 ### Crafting
 
-**Description**: Introduces an in-depth crafting system requiring multiple crafting tables and blueprints.  
+**Description**:
+
+Introduces an in-depth crafting system requiring multiple crafting tables and blueprints.
 
 **Features**:
 
-- Multi-table, multi-step processes.
-
+- Multi-table, multi-step processes.  
 - Blueprint requirement for higher-tier items.
 
 ---
 
 ### Bank Robbery
 
-**Description**: Adds a bank safe that can be robbed, with configurable settings such as minimum police presence and incremental money accumulation.  
+**Description**:
+
+Adds a bank safe that can be robbed, with configurable settings such as minimum police presence and incremental money accumulation.
 
 **Features**:
 
-- Configurable safe-cooldown and police requirements.
-
+- Configurable safe-cooldown and police requirements.  
 - Progressive money accumulation.
 
 ---
 
 ### Rideable Mounts
 
-**Description**: Adds a variety of rideable pets that players can mount.  
+**Description**:
+
+Adds a variety of rideable pets that players can mount.
 
 **Features**:
 
-- Flying mounts (use spacebar to ascend).
-
-- Sprinting on land mounts (shift key).
-
-- Customizable bone positions for unique pets.
-
+- Flying mounts (use spacebar to ascend).  
+- Sprinting on land mounts (shift key).  
+- Customizable bone positions for unique pets.  
 - Two pre-configured pets included.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/RideablePets.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Pets
 
-**Description**: Introduces pets with needs (hunger, boredom, thirst, health). Pets can also get sick over time.  
+**Description**:
+
+Introduces pets with needs (hunger, boredom, thirst, health). Pets can also get sick over time.
 
 **Features**:
 
-- Pet need system (food, play, water).
-
+- Pet need system (food, play, water).  
 - Illness and recovery mechanics.
 
 ---
 
 ### In-depth Armors
 
-**Description**: Allows for comprehensive customization of armor, affecting player models, movement speed, jump height, and more.  
+**Description**:
+
+Allows for comprehensive customization of armor, affecting player models, movement speed, jump height, and more.
 
 **Features**:
 
-- Movement modifiers (speed, jump, fall damage immunity).
-
-- Resistance percentages, radiation immunity, footstep sounds, visual overlays.
-
+- Movement modifiers (speed, jump, fall damage immunity).  
+- Resistance percentages, radiation immunity, footstep sounds, visual overlays.  
 - Full model-based customization.
 
 ---
 
 ### Marketplace
 
-**Description**: Establishes a global marketplace for player transactions.  
+**Description**:
+
+Establishes a global marketplace for player transactions.
 
 **Features**:
 
-- Global listing of items for sale.
-
+- Global listing of items for sale.  
 - Player-driven economy.
 
 ---
 
 ### Lockpicking
 
-**Description**: Introduces lockpicks to open locked doors.  
+**Description**:
+
+Introduces lockpicks to open locked doors.
 
 **Features**:
 
-- Lockpick mini-game or skill check.
-
+- Lockpick mini-game or skill check.  
 - Configurable success rates and door types.
 
 ---
 
 ### Phone
 
-**Description**: Adds mobile phones for direct messaging, simulating SMS communication.  
+**Description**:
+
+Adds mobile phones for direct messaging, simulating SMS communication.
 
 **Features**:
 
-- Private text messages between players.
-
+- Private text messages between players.  
 - Contact lists and conversation logs.
 
 ---
 
 ### Telephone
 
-**Description**: Adds payphones for making calls to other players.  
+**Description**:
+
+Adds payphones for making calls to other players.
 
 **Features**:
 
-- Public payphones with call costs or free usage.
-
+- Public payphones with call costs or free usage.  
 - Possible phone tapping or wiretapping integration.
 
 ---
 
 ### Cellphone
 
-**Description**: Adds mobile phones that allow players to make calls and send messages to others.  
+**Description**:
+
+Adds mobile phones that allow players to make calls and send messages to others.
 
 **Features**:
 
-- In-game call system.
-
+- In-game call system.  
 - Text messaging separate from “Phone” if desired.
 
 ---
 
 ### Radio
 
-**Description**: Introduces radios with configurable frequencies for communication via text or voice.  
+**Description**:
+
+Introduces radios with configurable frequencies for communication via text or voice.
 
 **Features**:
 
-- Multi-frequency system.
-
+- Multi-frequency system.  
 - Team/faction-based channels.
 
 ---
 
 ### Jukeboxes
 
-**Description**: Provides jukeboxes that play music from a web server.  
+**Description**:
+
+Provides jukeboxes that play music from a web server.
 
 **Features**:
 
-- Customizable music libraries.
-
+- Customizable music libraries.  
 - Shared environment audio.
 
 ---
 
 ### Typewriter
 
-**Description**: Adds a typewriter for creating items that link to Google Docs.  
+**Description**:
+
+Adds a typewriter for creating items that link to Google Docs.
 
 **Features**:
 
-- Printable in-game notes or documents with a real-world doc link.
-
+- Printable in-game notes or documents with a real-world doc link.  
 - Potential for roleplay “newspapers,” “letters,” etc.
 
 ---
 
 ### Fishing
 
-**Description**: Introduces fishing with configurable rarity settings.  
+**Description**:
+
+Introduces fishing with configurable rarity settings.
 
 **Features**:
 
-- Customizable catches (items, trash, money).
-
-- “Sweet spot” mechanic for precise success.
-
+- Customizable catches (items, trash, money).  
+- “Sweet spot” mechanic for precise success.  
 - Easily extendable with new items/probabilities.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Fishing.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Woodcutting
 
-**Description**: Adds woodcutting with configurable rarity settings.  
+**Description**:
+
+Adds woodcutting with configurable rarity settings.
 
 **Features**:
 
-- Configurable drop rates and item outcomes.
-
+- Configurable drop rates and item outcomes.  
 - Integration with crafting or economy.
 
 ---
 
 ### Mining
 
-**Description**: Implements mining with configurable rarity settings.  
+**Description**:
+
+Implements mining with configurable rarity settings.
 
 **Features**:
 
-- Configurable ore types and drop rates.
-
+- Configurable ore types and drop rates.  
 - Integration with crafting or economy.
 
 ---
 
 ### Store Robbery
 
-**Description**: Allows players to rob stores for items.  
+**Description**:
+
+Allows players to rob stores for items.
 
 **Features**:
 
-- Configurable item lists and store defenses.
-
+- Configurable item lists and store defenses.  
 - Potential alarm or police response events.
 
 ---
 
 ### Forward Operating Bases
 
-**Description**: Introduces a FOB mechanic for setting up outposts where faction members can spawn.  
+**Description**:
+
+Introduces a FOB mechanic for setting up outposts where faction members can spawn.
 
 **Features**:
 
-- Custom respawn points.
-
-- Configurable respawn cooldowns.
-
+- Custom respawn points.  
+- Configurable respawn cooldowns.  
 - Lightweight and optimized system.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/FOB.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Safebox
 
-**Description**: Adds an ender-chest-like stash system.  
+**Description**:
+
+Adds an ender-chest-like stash system.
 
 **Features**:
 
-- Secure, personal storage accessible from multiple points.
-
+- Secure, personal storage accessible from multiple points.  
 - Persistent storage (database saved).
 
 ---
 
 ### Newspapers
 
-**Description**: Adds readable newspapers that can be written by a dedicated newspaper faction.  
+**Description**:
+
+Adds readable newspapers that can be written by a dedicated newspaper faction.
 
 **Features**:
 
-- Editable text by authorized players/factions.
-
+- Editable text by authorized players/factions.  
 - Physical newspaper items in-game.
 
 ---
 
 ### Oil
 
-**Description**: Introduces mechanics for extracting and selling oil.  
+**Description**:
+
+Introduces mechanics for extracting and selling oil.
 
 **Features**:
 
-- Oil rigs or pumps that generate oil over time.
-
+- Oil rigs or pumps that generate oil over time.  
 - Sell or refine oil for profit.
 
 ---
 
 ### Revive System
 
-**Description**: Implements a system where players are downed until they bleed out upon death.  
+**Description**:
+
+Implements a system where players are downed until they bleed out upon death.
 
 **Features**:
 
-- Downed state with bleed-out timer.
-
+- Downed state with bleed-out timer.  
 - Reviving via medical items or teammates.
 
 ---
 
 ### Vending Machines
 
-**Description**: Adds vending machines that sell specific items.  
+**Description**:
+
+Adds vending machines that sell specific items.
 
 **Features**:
 
-- Configurable item lists and prices.
-
+- Configurable item lists and prices.  
 - Automatic item dispensing.
 
 ---
 
 ### Broadcast Radio
 
-**Description**: Introduces a radio system for broadcasting voice and music.  
+**Description**:
+
+Introduces a radio system for broadcasting voice and music.
 
 **Features**:
 
-- Wide-range broadcast channels.
-
+- Wide-range broadcast channels.  
 - DJ or radio host roles possible.
 
 ---
 
 ### Vinyl Disk Player
 
-**Description**: Adds a vinyl player for playing records.  
+**Description**:
+
+Adds a vinyl player for playing records.
 
 **Features**:
 
-- Physical record items with different tracks.
-
+- Physical record items with different tracks.  
 - Classic record-playing interface.
 
 ---
 
 ### Car Radios
 
-**Description**: Integrates radios into cars for in-vehicle music playback.  
+**Description**:
+
+Integrates radios into cars for in-vehicle music playback.
 
 **Features**:
 
-- Tune into broadcast or custom streams while driving.
-
+- Tune into broadcast or custom streams while driving.  
 - Optional passenger controls.
 
 ---
 
 ### Chess
 
-**Description**: Adds a playable chess game.  
+**Description**:
+
+Adds a playable chess game.
 
 **Features**:
 
-- Full chess logic with pieces and board.
-
+- Full chess logic with pieces and board.  
 - Player vs player matches.
 
 ---
 
 ### Permits
 
-**Description**: Restricts certain items from being bought without the proper permits, which can be tied to factions or classes.  
+**Description**:
+
+Restricts certain items from being bought without the proper permits, which can be tied to factions or classes.
 
 **Features**:
 
-- Permit system for restricted items.
-
+- Permit system for restricted items.  
 - Faction/class-based permissions.
 
 ---
 
 ### Convertibles
 
-**Description**: Adds entities that can be converted into items and retrieved later.  
+**Description**:
+
+Adds entities that can be converted into items and retrieved later.
 
 **Features**:
 
-- Store props/entities in item form.
-
+- Store props/entities in item form.  
 - Redeploy items elsewhere.
 
 ---
 
 ### Medical System
 
-**Description**: Introduces a detailed medical system with various health management features.  
+**Description**:
+
+Introduces a detailed medical system with various health management features.
 
 **Features**:
 
-- Limb-based damage.
-
+- Limb-based damage.  
 - Diseases, treatments, advanced healing items.
 
 ---
 
 ### Clock
 
-**Description**: Adds a clock that displays the time, synchronized with Stormfox2 time.  
+**Description**:
+
+Adds a clock that displays the time, synchronized with Stormfox2 time.
 
 **Features**:
 
-- Real-time or server-based time display.
-
+- Real-time or server-based time display.  
 - Possible roleplay integration (curfews, events).
 
 ---
 
 ### Stables
 
-**Description**: Adds a horse ownership system, allowing players to spawn and ride horses.  
+**Description**:
+
+Adds a horse ownership system, allowing players to spawn and ride horses.
 
 **Features**:
 
-- Purchase or claim horses.
-
+- Purchase or claim horses.  
 - Horse stats (speed, health, etc.).
 
 ---
 
 ### Magazines
 
-**Description**: Implements a system where ammo is tied to magazine items, which feed the guns.  
+**Description**:
+
+Implements a system where ammo is tied to magazine items, which feed the guns.
 
 **Features**:
 
-- Physical magazine items with limited capacity.
-
+- Physical magazine items with limited capacity.  
 - Reload mechanics that require correct magazines.
 
 ---
 
 ### Perks
 
-**Description**: Introduces a configurable perks system, with perks locked behind conditions such as faction membership, level, or custom requirements.  
+**Description**:
+
+Introduces a configurable perks system, with perks locked behind conditions such as faction membership, level, or custom requirements.
 
 **Features**:
 
-- Perk tree or list.
-
+- Perk tree or list.  
 - Unlock conditions (factions, level, achievements).
 
 ---
 
 ### Car Bomber
 
-**Description**: Adds a car bomb feature, causing cars to explode after a set time.  
+**Description**:
+
+Adds a car bomb feature, causing cars to explode after a set time.
 
 **Features**:
 
-- Placeable bombs in vehicles.
-
+- Placeable bombs in vehicles.  
 - Audible countdown and defusing mechanics.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/CarBomb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Factories
 
-**Description**: Implements a factory system that dynamically spawns items.  
+**Description**:
+
+Implements a factory system that dynamically spawns items.
 
 **Features**:
 
-- Automated item production with resource inputs.
-
+- Automated item production with resource inputs.  
 - Configurable spawn rates, item types.
 
 ---
 
 ### VATS
 
-**Description**: Adds the VATS targeting system from Fallout.  
+**Description**:
+
+Adds the VATS targeting system from Fallout.
 
 **Features**:
 
-- Targeted shots with chance-based outcomes.
-
+- Targeted shots with chance-based outcomes.  
 - Slow-motion effect or simulated focus.
 
 ---
 
 ### Gacha Bags
 
-**Description**: Introduces a gambling system similar to [Gacha](https://www.yourdictionary.com/gacha).  
+**Description**:
+
+Introduces a gambling system similar to [Gacha](https://www.yourdictionary.com/gacha).
 
 **Features**:
 
-- Random loot from “bags” or “boxes.”
+- Random loot from “bags” or “boxes.”  
 - Configurable rarities and item pools.
 
 ---
 
 ### Airdrops
 
-**Description**: Adds passive airdrop events with items.  
+**Description**:
+
+Adds passive airdrop events with items.
 
 **Features**:
 
-- Random or timed airdrops across the map.
-
+- Random or timed airdrops across the map.  
 - Loot crates with configurable contents.
 
 ---
 
 ### Turf Wars
 
-**Description**: Introduces an area capture system that rewards items or money.  
+**Description**:
+
+Introduces an area capture system that rewards items or money.
 
 **Features**:
 
-- Control points providing faction income.
-
-- Money earned when faction members stay nearby.
-
+- Control points providing faction income.  
+- Money earned when faction members stay nearby.  
 - Dynamic territory control mechanics.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/ControlPoints.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Animal Butchering
 
-**Description**: Adds a system for butchering animals and looting their carcasses.  
+**Description**:
+
+Adds a system for butchering animals and looting their carcasses.
 
 **Features**:
 
-- Animal carcasses drop meat, hides, etc.
-
+- Animal carcasses drop meat, hides, etc.  
 - Integration with cooking or crafting.
 
 ---
 
 ### Keycards
 
-**Description**: Implements a keycard system for opening doors.  
+**Description**:
+
+Implements a keycard system for opening doors.
 
 **Features**:
 
-- Keycard items with level or clearance.
-
+- Keycard items with level or clearance.  
 - Customizable door access logic.
 
 ---
 
 ### Clearance Levels
 
-**Description**: Adds clearance levels to certain doors.  
+**Description**:
+
+Adds clearance levels to certain doors.
 
 **Features**:
 
-- Multi-tier access control.
-
+- Multi-tier access control.  
 - Tied to factions, ranks, or keycards.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Clearance.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Sanity
 
-**Description**: Adds a sanity system that implements hallucinations.  
+**Description**:
+
+Adds a sanity system that implements hallucinations.
 
 **Features**:
 
-- Sanity meter that decreases from events or items.
-
+- Sanity meter that decreases from events or items.  
 - Visual/audio hallucinations at low sanity.
 
 ---
 
 ### Organs
 
-**Description**: Adds organs that are randomly defined during character creation. These have various drawbacks and bonuses depending on their quality.  
+**Description**:
+
+Adds organs that are randomly defined during character creation. These have various drawbacks and bonuses depending on their quality.
 
 **Features**:
 
-- Random organ quality per character.
-
+- Random organ quality per character.  
 - Potential buffs/debuffs for each organ’s condition.
 
 ---
 
 ### Attribute Rolling
 
-**Description**: Adds attribute rolling with multipliers.  
+**Description**:
+
+Adds attribute rolling with multipliers.
 
 **Features**:
 
-- Randomly generated stats on character creation.
-
+- Randomly generated stats on character creation.  
 - Multipliers affecting various gameplay elements.
 
 ---
 
 ### Attribute Fog
 
-**Description**: Adds fog that renders in the distance based on how much perception you have.  
+**Description**:
+
+Adds fog that renders in the distance based on how much perception you have.
 
 **Features**:
 
-- Dynamic draw distance tied to “Perception.”
+- Dynamic draw distance tied to “Perception.”  
 - Creates tension/atmosphere for low-perception characters.
 
 ---
 
 ### Cinematic Text
 
-**Description**: Adds cinematic text similar to [this example](https://withaterriblefate.files.wordpress.com/2015/01/postman-in-repose.png?w=640).  
+**Description**:
+
+Adds cinematic text similar to [this example](https://withaterriblefate.files.wordpress.com/2015/01/postman-in-repose.png?w=640).
 
 **Features**:
 
-- Large stylized text overlays.
-
+- Large stylized text overlays.  
 - Configurable triggers and durations.
 
 ---
 
 ### Attribute-Based Damage
 
-**Description**: Adds a configurable variable that can influence damage (e.g., melee damage influenced by strength).  
+**Description**:
+
+Adds a configurable variable that can influence damage (e.g., melee damage influenced by strength).
 
 **Features**:
 
-- Stat-based bonus or penalty to damage output.
-
+- Stat-based bonus or penalty to damage output.  
 - Easily configurable for custom stats.
 
 ---
 
 ### Durability
 
-**Description**: Adds a durability variable to weapons.  
+**Description**:
+
+Adds a durability variable to weapons.
 
 **Features**:
 
-- Weapons degrade over time/use.
-
+- Weapons degrade over time/use.  
 - Repair mechanics or item required to restore durability.
 
 ---
 
 ### Animations
 
-**Description**: Adds additional animations for roleplay (Surrender, Salute, Cross Arms, etc.).  
+**Description**:
+
+Adds additional animations for roleplay (Surrender, Salute, Cross Arms, etc.).
 
 **Features**:
 
-- Toggleable animations via commands or menu.
-
+- Toggleable animations via commands or menu.  
 - Customizable for unique scenarios.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video (Animations.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Animations.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Animation Wheel
 
-**Description**: Adds a wheel that allows you to play some whitelisted animations.  
+**Description**:
+
+Adds a wheel that allows you to play some whitelisted animations.
 
 **Features**:
 
-- Model-specific animation support.
-
+- Model-specific animation support.  
 - Built-in whitelist for allowed animations.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video (AnimationWheel.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/AnimationWheel.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Squads
 
-**Description**: Adds a squad system, similar to a party system from an RPG.  
+**Description**:
+
+Adds a squad system, similar to a party system from an RPG.
 
 **Features**:
 
-- Group-based chat, markers, and rewards.
-
+- Group-based chat, markers, and rewards.  
 - Easily invite/kick from squad interface.
 
 ---
 
 ### Reputation System
 
-**Description**: All NPCs attached to a faction are neutral unless the player displays allegiance to an enemy (wearing their clothes, etc.).  
+**Description**:
+
+All NPCs attached to a faction are neutral unless the player displays allegiance to an enemy (wearing their clothes, etc.).
 
 **Features**:
 
-- NPC/faction-based reputations.
-
+- NPC/faction-based reputations.  
 - Conditional hostility or friendliness.
 
 ---
 
 ### Karma System
 
-**Description**: Adds a system that assigns a Karma Level based on your actions.  
+**Description**:
+
+Adds a system that assigns a Karma Level based on your actions.
 
 **Features**:
 
-- Positive or negative karma events.
-
+- Positive or negative karma events.  
 - Possible effects on NPC interactions, perks, etc.
 
 ---
 
 ### Medals
 
-**Description**: Adds medals that display above your head.  
+**Description**:
+
+Adds medals that display above your head.
 
 **Features**:
 
-- Visual flair for achievements or roles.
-
+- Visual flair for achievements or roles.  
 - Configurable types of medals.
 
 ---
 
 ### Faction Menu
 
-**Description**: Adds a menu for kicking characters out of factions and inviting players.  
+**Description**:
+
+Adds a menu for kicking characters out of factions and inviting players.
 
 **Features**:
 
-- Faction management UI.
-
+- Faction management UI.  
 - Invite, remove, or promote members.
+
+**Video** (Faction Invites):
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/FactionInvites.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Map
 
-**Description**: Adds a top-view map of the game world.  
+**Description**:
+
+Adds a top-view map of the game world.
 
 **Features**:
 
-- Pinpoint locations, set waypoints.
-
+- Pinpoint locations, set waypoints.  
 - Possibly integrated with factions or squads.
 
 ---
 
 ### Serial Numbers
 
-**Description**: Adds serial numbers to items that can be checked by police.  
+**Description**:
+
+Adds serial numbers to items that can be checked by police.
 
 **Features**:
 
-- Erasable serial numbers.
-
-- Police can check fingerprints to identify characters.
-
+- Erasable serial numbers.  
+- Police can check fingerprints to identify characters.  
 - Whitelisted weapons can be protected from erasure.
 
 ---
 
 ### EFT Corpses
 
-**Description**: Makes your corpse lootable when you die.  
+**Description**:
+
+Makes your corpse lootable when you die.
 
 **Features**:
 
-- Full inventory loot system upon death.
-
+- Full inventory loot system upon death.  
 - Potential for partial loot or item protection.
 
 ---
 
 ### Transformative Items
 
-**Description**: Adds items that can transform you into certain creatures.  
+**Description**:
+
+Adds items that can transform you into certain creatures.
 
 **Features**:
 
-- Temporary or permanent transformations.
-
+- Temporary or permanent transformations.  
 - Unique abilities or stats while transformed.
 
 ---
 
 ### Clothing Status
 
-**Description**: Adds a system where clothing gets dirty over time and requires maintenance.  
+**Description**:
+
+Adds a system where clothing gets dirty over time and requires maintenance.
 
 **Features**:
 
-- Dirt buildup mechanic with visual changes.
-
+- Dirt buildup mechanic with visual changes.  
 - Cleaning/washing processes or shops.
 
 ---
 
 ### Raiding System
 
-**Description**: Adds a raiding and ambushing system designed for faction confrontations.  
+**Description**:
+
+Adds a raiding and ambushing system designed for faction confrontations.
 
 **Features**:
 
-- Structured raid alerts or timers.
-
+- Structured raid alerts or timers.  
 - Rewards for successful raids/defenses.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Raid System.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Police Lockers
 
-**Description**: Adds police lockers that provide temporary guns for police officers to use while on duty.  
+**Description**:
+
+Adds police lockers that provide temporary guns for police officers to use while on duty.
 
 **Features**:
 
-- Weapon checkout/return system.
-
+- Weapon checkout/return system.  
 - Time-limited or duty-limited usage.
 
 ---
 
 ### TV System
 
-**Description**: Allows players to watch broadcasted content from other players.  
+**Description**:
+
+Allows players to watch broadcasted content from other players.
 
 **Features**:
 
-- Real-time streaming or pre-recorded videos.
-
+- Real-time streaming or pre-recorded videos.  
 - Broadcast stations and in-game TV props.
 
 ---
 
 ### Leveling
 
-**Description**: Adds a configurable leveling system, currently increasing health but adaptable for other enhancements.  
+**Description**:
+
+Adds a configurable leveling system, currently increasing health but adaptable for other enhancements.
 
 **Features**:
 
-- XP-based progression.
-
+- XP-based progression.  
 - Configurable rewards at each level.
 
 ---
 
 ### Ranking System
 
-**Description**: Adds various ranks that show on the scoreboard.  
+**Description**:
+
+Adds various ranks that show on the scoreboard.
 
 **Features**:
 
-- Faction-tied ranks.
+- Faction-tied ranks.  
+- Potential stat changes, custom models, and custom weapons for each rank.
 
-- Potential stat changes, custom models, custom weapons for each rank.
+**Videos**:
+
+<details>
+  <summary>Click to Show Video (Ranks.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Ranks.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+<details>
+  <summary>Click to Show Video (SimpleRankingSystem.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/SimpleRankingSystem.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Syringes
 
-**Description**: Adds syringes that can provide effects such as speed, armor, health, or jump boosts.  
+**Description**:
+
+Adds syringes that can provide effects such as speed, armor, health, or jump boosts.
 
 **Features**:
 
-- Single-use or limited-use consumables.
-
+- Single-use or limited-use consumables.  
 - Customizable effect duration and power.
 
 ---
 
 ### Social Credit System
 
-**Description**: A ranking system that rewards players with points based on playtime, tasks, or admin awards.  
+**Description**:
+
+A ranking system that rewards players with points based on playtime, tasks, or admin awards.
 
 **Features**:
 
-- Accumulate points to unlock rewards.
-
+- Accumulate points to unlock rewards.  
 - Encourages positive behavior and participation.
 
 ---
 
 ### Prop-Based Construction
 
-**Description**: A construction system inspired by Rust, where players use items to build structures instead of a spawn menu.  
+**Description**:
+
+A construction system inspired by Rust, where players use items to build structures instead of a spawn menu.
 
 **Features**:
 
-- Immersive item-based building.
-
+- Immersive item-based building.  
 - Tiered building parts (wood, metal, etc.).
 
 ---
 
 ### Farming
 
-**Description**: Introduces farmable items that players can plant and grow over time.  
+**Description**:
+
+Introduces farmable items that players can plant and grow over time.
 
 **Features**:
 
-- Crop growth cycles and harvesting.
-
+- Crop growth cycles and harvesting.  
 - Different seeds and produce with various uses.
 
 ---
 
 ### Advanced Injuries
 
-**Description**: Incorporates several injuries affecting gameplay (PTSD, Bleeding, Broken Arm/Leg, Concussion).  
+**Description**:
+
+Incorporates several injuries affecting gameplay (PTSD, Bleeding, Broken Arm/Leg, Concussion).
 
 **Features**:
 
-- Each injury has specific effects (DoT, slower reload, reduced speed).
-
+- Each injury has specific effects (DoT, slower reload, reduced speed).  
 - Healable with proper medical treatments.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Injuries.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Bonemerge System
 
-**Description**: Allows different clothes to be worn on different parts of the body. Two main presets: Fallout and Mafia.  
+**Description**:
+
+Allows different clothes to be worn on different parts of the body. Two main presets: Fallout and Mafia.
 
 **Features**:
 
-- Layered clothing/armor models.
-
+- Layered clothing/armor models.  
 - Customizable synergy with armor, outfits, etc.
 
 ---
 
 ### Guilds
 
-**Description**: Adds a group creation system with custom ranks, permissions, item/money banks, etc.  
+**Description**:
+
+Adds a group creation system with custom ranks, permissions, item/money banks, etc.
 
 **Features**:
 
-- Player management tools and logs.
-
+- Player management tools and logs.  
 - Configurable rank permissions and organizational structure.
+
+**Video** (Organizations.mp4):
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Organizations.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Housing
 
-**Description**: Adds a housing system managed by factions or admins.  
+**Description**:
+
+Adds a housing system managed by factions or admins.
 
 **Features**:
 
-- Assign door groups, manage residents.
-
-- Configurable rent collection.
-
+- Assign door groups, manage residents.  
+- Configurable rent collection.  
 - Database-saved for persistence.
 
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Housing.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
-### Camera
+### Camera (CCTV)
 
-**Description**: Adds CCTV functionality with nameable cameras for remote viewing, faction whitelist, and hacking.  
+**Description**:
+
+Adds CCTV functionality with nameable cameras for remote viewing, faction whitelist, and hacking.
 
 **Features**:
 
-- View live feeds from secure cameras.
-
+- View live feeds from secure cameras.  
 - Hack cameras if not whitelisted.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/CCTV.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Law Board
 
-**Description**: Adds a Law Board that, when interacted with, displays a webpage with the rules.  
+**Description**:
+
+Adds a Law Board that, when interacted with, displays a webpage with the rules.
 
 **Features**:
 
-- Physical board entity for server laws/rules.
-
+- Physical board entity for server laws/rules.  
 - Customizable web page link or text.
 
 ---
 
 ### DEFCON
 
-**Description**: Implements a DEFCON system that adjusts server security levels based on in-game events.  
+**Description**:
+
+Implements a DEFCON system that adjusts server security levels based on in-game events.
 
 **Features**:
 
-- Tiered levels (1–5).
-
+- Tiered levels (1–5).  
 - Potential bonuses or restrictions at each level.
 
 ---
 
 ### Trading
 
-**Description**: Introduces a trading mechanic that allows players to securely trade items and currency.  
+**Description**:
+
+Introduces a trading mechanic that allows players to securely trade items and currency.
 
 **Features**:
 
-- Secure trade window with confirmation.
-
+- Secure trade window with confirmation.  
 - Prevents scamming or item dropping.
 
 ---
 
 ### Cutscenes
 
-**Description**: Adds simple Call of Duty-inspired cutscenes where you can submit text entries explaining the missions.  
+**Description**:
+
+Adds simple Call of Duty-inspired cutscenes where you can submit text entries explaining missions.
 
 **Features**:
 
-- Three text entries for mission intros.
-
+- Three text entries for mission intros.  
 - Cinematic camera transitions.
 
 ---
 
 ### Car Options
 
-**Description**: Adds options such as kicking players from cars, locking the car from inside, etc.  
+**Description**:
+
+Adds options such as kicking players from cars, locking the car from inside, etc.
 
 **Features**:
 
-- Inside locking, occupant management.
-
+- Inside locking, occupant management.  
 - Potential trunk or interior inventory checks.
 
 ---
@@ -1249,173 +1556,195 @@
 
 ### Bodyguard System
 
-**Description**: Adds a mechanic where you can hire security guards whose job is to protect you.  
+**Description**:
+
+Adds a mechanic where you can hire security guards whose job is to protect you.
 
 **Features**:
 
-- Hireable NPC bodyguards.
-
+- Hireable NPC bodyguards.  
 - Wage system and guard loyalty.
 
 ---
 
 ### Property Seller
 
-**Description**: Adds houses that can be bought. The NPC sells them.  
+**Description**:
+
+Adds houses that can be bought. The NPC sells them.
 
 **Features**:
 
-- NPC-based real estate transactions.
-
+- NPC-based real estate transactions.  
 - House ownership transfers.
 
 ---
 
 ### Black Market Vendor
 
-**Description**: Provides an NPC that can deliver items to certain parts of the map.  
+**Description**:
+
+Provides an NPC that can deliver items to certain parts of the map.
 
 **Features**:
 
-- Illicit goods purchase.
-
+- Illicit goods purchase.  
 - Delivery or pickup points.
 
 ---
 
 ### Car Dealer
 
-**Description**: Adds a Car Dealer that allows buying and selling cars.  
+**Description**:
+
+Adds a Car Dealer that allows buying and selling cars.
 
 **Features**:
 
-- Vehicle shop interface.
-
+- Vehicle shop interface.  
 - Buying, selling, and possibly customizing.
 
 ---
 
 ### Bounty Hunter
 
-**Description**: Adds a Bounty Hunter NPC that provides bounties.  
+**Description**:
+
+Adds a Bounty Hunter NPC that provides bounties.
 
 **Features**:
 
-- Wanted list with target rewards.
-
+- Wanted list with target rewards.  
 - Payment upon proof of bounty completion.
 
 ---
 
 ### Jailer
 
-**Description**: Adds a Jailer NPC that allows jailing players for a determined time.  
+**Description**:
+
+Adds a Jailer NPC that allows jailing players for a determined time.
 
 **Features**:
 
-- Sentence length configuration.
-
+- Sentence length configuration.  
 - Automatic release after time served.
 
 ---
 
 ### Mechanic
 
-**Description**: Adds an NPC designed to hire you for a faction responsible for fixing cars.  
+**Description**:
+
+Adds an NPC designed to hire you for a faction responsible for fixing cars.
 
 **Features**:
 
-- Join mechanic faction for vehicle repair jobs.
-
+- Join mechanic faction for vehicle repair jobs.  
 - Earn money or reputation for car repairs.
 
 ---
 
 ### Police
 
-**Description**: Adds an NPC designed to manage police-related activities such as recruitment and crime reports.  
+**Description**:
+
+Adds an NPC designed to manage police-related activities such as recruitment and crime reports.
 
 **Features**:
 
-- Join/leave police faction.
-
+- Join/leave police faction.  
 - File or check crime reports.
 
 ---
 
 ### Taxis
 
-**Description**: Adds an NPC designed to hire you for a Taxi Job that allows you to drive around for money.  
+**Description**:
+
+Adds an NPC designed to hire you for a Taxi Job that allows you to drive around for money.
 
 **Features**:
 
-- Pickup and drop-off missions.
-
+- Pickup and drop-off missions.  
 - Payment per passenger or distance.
 
 ---
 
 ### Delivery
 
-**Description**: Adds a Delivery Job where you go around delivering packages in a car.  
+**Description**:
+
+Adds a Delivery Job where you go around delivering packages in a car.
 
 **Features**:
 
-- Delivery routes, timed missions.
-
+- Delivery routes, timed missions.  
 - Payment upon successful deliveries.
 
 ---
 
 ### Intergalactic Taxi
 
-**Description**: Adds a taxi NPC that can teleport you to certain locations, similar to Fast Travel.  
+**Description**:
+
+Adds a taxi NPC that can teleport you to certain locations, similar to Fast Travel.
 
 **Features**:
 
-- Instant travel to set waypoints.
-
+- Instant travel to set waypoints.  
 - Possible fee or cooldown system.
 
 ---
 
 ### Recruitment NPC
 
-**Description**: An NPC that can recruit you into a specific faction.  
+**Description**:
+
+An NPC that can recruit you into a specific faction.
 
 **Features**:
 
-- Single-click faction joining.
-
+- Single-click faction joining.  
 - Potential rank assignment on join.
 
 ---
 
 ### Help NPC
 
-**Description**: Adds an NPC with information about the server.  
+**Description**:
+
+Adds an NPC with information about the server.
 
 **Features**:
 
-- FAQ or tutorial dialogue.
-
+- FAQ or tutorial dialogue.  
 - Potential link to server rules or website.
 
 ---
 
 ### Banker
 
-**Description**: Comprehensive banking system with multiple NPC roles.  
+**Description**:
+
+Comprehensive banking system with multiple NPC roles.
 
 **Features**:
 
-- **Paycheck Retriever**: Where you get your salary.
-
-- **Bank Manager**: Where you create your account.
-
-- **Bank Teller**: Where you manage your bank accounts.
-
+- **Paycheck Retriever**: Where you get your salary.  
+- **Bank Manager**: Where you create your account.  
+- **Bank Teller**: Where you manage your bank accounts.  
 - Deposits, transfers, item banks, logs, etc.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Banking.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
@@ -1423,120 +1752,150 @@
 
 ### NPC Relationship
 
-**Description**: Makes NPCs from enemy factions attack you and allied ones be friendly towards you.  
+**Description**:
+
+Makes NPCs from enemy factions attack you and allied ones be friendly towards you.
 
 **Features**:
 
-- Faction-based hostility or friendliness.
-
+- Faction-based hostility or friendliness.  
 - Potential for neutral or dynamic relationships.
 
 ---
 
 ### NPC Spawner
 
-**Description**: Adds spawners that can be placed in designated areas to generate NPCs.  
+**Description**:
+
+Adds spawners that can be placed in designated areas to generate NPCs.
 
 **Features**:
 
-- Configurable spawn rates and NPC types.
-
-- Potential wave-based spawns or random spawns.
+- Configurable spawn rates and NPC types.  
+- Potential wave-based or random spawns.
 
 ---
 
 ### Waypoints
 
-**Description**: Adds waypoints to preview and navigate to various locations.  
+**Description**:
+
+Adds waypoints to preview and navigate to various locations.
 
 **Features**:
 
-- Customizable markers with names.
-
+- Customizable markers with names.  
 - Minimaps or on-screen arrow guidance.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Waypoints.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Daily Rewards
 
-**Description**: Adds a daily reward system that provides bonuses for consecutive logins.  
+**Description**:
+
+Adds a daily reward system that provides bonuses for consecutive logins.
 
 **Features**:
 
-- Increasing rewards each day in a streak.
-
+- Increasing rewards each day in a streak.  
 - Reset if a day is missed.
 
 ---
 
 ### Activities
 
-**Description**: Adds an activities system to keep players engaged with various tasks.  
+**Description**:
+
+Adds an activities system to keep players engaged with various tasks.
 
 **Features**:
 
-- Quests or tasks with rewards.
-
+- Quests or tasks with rewards.  
 - Rotating daily or weekly objectives.
 
 ---
 
 ### Steam Group Rewards
 
-**Description**: Adds a reward system based on players' membership in the Steam group.  
+**Description**:
+
+Adds a reward system based on players' membership in the Steam group.
 
 **Features**:
 
-- Bonus items or currency for group members.
-
+- Bonus items or currency for group members.  
 - Automatic checking of group membership.
 
 ---
 
 ### Steam Name Rewards
 
-**Description**: Adds a reward system for players who include the server identifier in their name.  
+**Description**:
+
+Adds a reward system for players who include the server identifier in their name.
 
 **Features**:
 
-- Automated or admin-approved checks.
-
+- Automated or admin-approved checks.  
 - In-game reward distribution.
 
 ---
 
 ### Character List
 
-**Description**: A system that allows listing characters by a specific SteamID.  
+**Description**:
+
+A system that allows listing characters by a specific SteamID.
 
 **Features**:
 
-- View character info, offline ban/unban.
-
+- View character info, offline ban/unban.  
 - Admin management for inactive characters.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/CharacterList.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Automatic Events
 
-**Description**: Adds automatic events that spawn entities and NPCs, similar to the Wild Wasteland perk from Fallout.  
+**Description**:
+
+Adds automatic events that spawn entities and NPCs, similar to the Wild Wasteland perk from Fallout.
 
 **Features**:
 
-- Random or scheduled events.
-
+- Random or scheduled events.  
 - Unique encounters, treasure hunts, or NPC invasions.
 
 ---
 
 ### Teleportable Doors
 
-**Description**: Adds a system where players can interact with doors to be teleported to different locations.  
+**Description**:
+
+Adds a system where players can interact with doors to be teleported to different locations.
 
 **Features**:
 
-- Linked-door teleports or multi-destination menus.
-
+- Linked-door teleports or multi-destination menus.  
 - Potential cooldown or permission checks.
 
 ---
@@ -1545,79 +1904,208 @@
 
 ### EFT HUD
 
-**Description**: Adds a HUD similar to [Escape from Tarkov](https://www.escapefromtarkov.com/).  
+**Description**:
+
+Adds a HUD similar to [Escape from Tarkov](https://www.escapefromtarkov.com/).
 
 **Features**:
 
-- Minimalistic ammo/health/stamina indicators.
-
+- Minimalistic ammo/health/stamina indicators.  
 - Inspired by EFT’s style and layout.
 
 ---
 
 ### Modified Character Creation
 
-**Description**: Adds an automatic description generator based on character details. Can include an ID system that displays various information about a player.  
+**Description**:
+
+Adds an automatic description generator based on character details. Can include an ID system that displays various information about a player.
 
 **Features**:
 
-- Dynamic description creation (height, weight, traits).
-
+- Dynamic description creation (height, weight, traits).  
 - ID cards with embedded data.
 
 ---
 
 ### Fallout 76 HUD
 
-**Description**: Adds a HUD similar to [Fallout 76](https://fallout.bethesda.net/en/games/fallout-76).  
+**Description**:
+
+Adds a HUD similar to [Fallout 76](https://fallout.bethesda.net/en/games/fallout-76).
 
 **Features**:
 
-- AP meter, health bar, radiation indicators, etc.
-
+- AP meter, health bar, radiation indicators, etc.  
 - Authentic Fallout 76 style and color scheme.
 
 ---
 
 ### Start Info
 
-**Description**: Adds a start information window that explains the setting of your game mode.  
+**Description**:
+
+Adds a start information window that explains the setting of your game mode.
 
 **Features**:
 
-- Custom text/graphics for new players.
-
+- Custom text/graphics for new players.  
 - Configurable design and pop-up triggers.
 
 ---
 
 ### Fallout 3/New Vegas HUD
 
-**Description**: Adds a [Fallout: New Vegas](https://fallout.bethesda.net/en/game/fallout-new-vegas) themed HUD.  
+**Description**:
+
+Adds a [Fallout: New Vegas](https://fallout.bethesda.net/en/game/fallout-new-vegas) themed HUD.
 
 **Features**:
 
-- Classic green Pip-Boy style bars.
-
+- Classic green Pip-Boy style bars.  
 - Health, AP, RAD, ammo counters in FNV style.
 
 ---
 
 ### Video Intro
 
+**Description**:
 
-**Description**: Adds introductory video sequences that play whenever a player first joins the server. These intros are typically used to display videos introducing the server, its rules, lore, and gameplay objectives, thereby enhancing player immersion and providing clear guidance from the outset.
+Adds introductory video sequences that play whenever a player first joins the server. Useful for introducing rules, lore, or gameplay objectives.
 
 **Features**:
 
-- **Customizable Intro Videos**: Upload and assign specific videos to play for new players upon their first join.
+- **Customizable Intro Videos**: Upload and assign specific videos to play for new players.  
+- **Trigger Mechanisms**: Can be triggered on first login or entering specific areas.  
+- **Seamless Integration**: Smooth transitions between video intros and gameplay.  
+- **Interactive Prompts**: Optionally require rule acceptance or tutorial navigation.  
+- **Support for Multiple Formats**: Compatible with various video formats.
 
-- **Trigger Mechanisms**: Intros can be triggered by player actions, such as first login or entering specific areas.
+**Video**:
 
-- **Seamless Integration**: Smooth transitions between video intros and gameplay to maintain immersion without disrupting the player experience.
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/VideoIntro.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
-- **Interactive Prompts**: Optional interactive elements within intros, such as prompts to accept rules or navigate tutorials.
+---
 
-- **Support for Multiple Formats**: Compatible with various video formats to accommodate different content creation needs.
+## Additional/Missing Systems
+
+### Weapon Holstering
+
+**Description**:
+
+Allows players to holster and unholster weapons visually, improving RP immersion.
+
+**Features**:
+
+- Visible holstered weapon model on the player.  
+- Quick keybind to holster/unholster.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/WeaponHolstering.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Walk Types
+
+**Description**:
+
+Adds various walking styles or speeds for players (e.g., limp, crouched walk, etc.).
+
+**Features**:
+
+- Multiple walk styles selectable via menu or command.  
+- Could tie into injury system or roleplay scenarios.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/WalkTypes.mkv" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Dropshipping System
+
+**Description**:
+
+A specialized system for creating “dropship” style deliveries (not to be confused with standard “Airdrops”).
+
+**Features**:
+
+- Deployable dropship entity that can deliver goods or players.  
+- Configurable flight paths and landing zones.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Dropshipping System.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Faction Stashes
+
+**Description**:
+
+Shared storage specifically for faction members.
+
+**Features**:
+
+- Centralized stash accessible by all members of a faction.  
+- Configurable permissions and item logs.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video (factionstashes.mp4)</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/factionstashes.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Working Terminal
+
+**Description**:
+
+A specialized terminal system (separate from Civil Terminals) for tasks such as job registration, data entry, or server events.
+
+**Features**:
+
+- Customizable UI for specific interactions.  
+- Potential tie-in with server events or logging.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/WorkingTerminal.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
