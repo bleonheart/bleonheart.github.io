@@ -374,10 +374,6 @@
 
 - Easily extendable with new items/probabilities.
 
-**Video**:  
-[Watch Fishing Demo](/docs/Creations/video/Fishing.mp4)  
-[Video of Showcase](https://youtu.be/dQw4w9WgXcQ)
-
 ---
 
 ### Woodcutting
@@ -1042,10 +1038,6 @@
 
 - Configurable rank permissions and organizational structure.
 
-**Video**:  
-[Watch Organizations Demo](/docs/Creations/video/Organizations.mp4)  
-[Video of Showcase](https://youtu.be/dQw4w9WgXcQ)
-
 ---
 
 ### Housing
@@ -1059,9 +1051,6 @@
 
 - Database-saved for persistence.
 
-**Video**:  
-[Watch Housing Demo](/docs/Creations/video/Housing.mp4)  
-[Video of Showcase](https://youtu.be/dQw4w9WgXcQ)
 
 ---
 
@@ -1073,10 +1062,6 @@
 - View live feeds from secure cameras.
 
 - Hack cameras if not whitelisted.
-
-**Video**:  
-[Watch CCTV Demo](/docs/Creations/video/CCTV.mp4)  
-[Video of Showcase](https://youtu.be/dQw4w9WgXcQ)
 
 ---
 
