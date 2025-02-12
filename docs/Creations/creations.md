@@ -215,7 +215,9 @@
     <source src="assets/videos/tying.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</details>---
+</details>
+
+---
 
 ### Looting
 **Description**: Enables looting across the map, with items categorized by rarity and probability.  
