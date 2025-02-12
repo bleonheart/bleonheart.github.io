@@ -223,11 +223,11 @@
 - Custom animations for immersion.
 
 **Video**:
+
 <video width="560" height="315" controls>
-  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  <source src="assets/videos/tying.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
 
 ---
 
