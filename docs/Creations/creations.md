@@ -6,6 +6,121 @@
 
 ## General Mechanics
 
+### Weapon Holstering
+
+**Description**:
+
+Allows players to holster and unholster weapons visually, improving RP immersion.
+
+**Features**:
+
+- Visible holstered weapon model on the player.  
+- Quick keybind to holster/unholster.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/WeaponHolstering.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Walk Types
+
+**Description**:
+
+Adds various walking styles or speeds for players (e.g., limp, crouched walk, etc.).
+
+**Features**:
+
+- Multiple walk styles selectable via menu or command.  
+- Could tie into injury system or roleplay scenarios.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/WalkTypes.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Dropshipping System
+
+**Description**:
+
+A specialized system for creating “dropship” style deliveries (not to be confused with standard “Airdrops”).
+
+**Features**:
+
+- Deployable dropship entity that can deliver goods or players.  
+- Configurable flight paths and landing zones.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Dropshipping System.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Faction Stashes
+
+**Description**:
+
+Shared storage specifically for faction members.
+
+**Features**:
+
+- Centralized stash accessible by all members of a faction.  
+- Configurable permissions and item logs.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/factionstashes.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Working Terminal
+
+**Description**:
+
+A specialized terminal system (separate from Civil Terminals) for tasks such as job registration, data entry, or server events.
+
+**Features**:
+
+- Customizable UI for specific interactions.  
+- Potential tie-in with server events or logging.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/WorkingTerminal.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
 ### Representative Voting
 
 **Description**:
@@ -87,20 +202,13 @@ Tailored for **Half-Life 2 Roleplay (HL2RP)**, this system provides players with
 **Videos**:
 
 <details>
-  <summary>Click to Show Video (CID.mp4)</summary>
+  <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/CID.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </details>
 
-<details>
-  <summary>Click to Show Video (ImprovedCID.mp4)</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/ImprovedCID.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
 
 ---
 
@@ -199,7 +307,7 @@ Enhances roleplaying by introducing **RP Characters** that spawn with randomly g
 **Videos**:
 
 <details>
-  <summary>Click to Show Video (RPCharacters.mp4)</summary>
+  <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/RPCharacters.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -207,7 +315,7 @@ Enhances roleplaying by introducing **RP Characters** that spawn with randomly g
 </details>
 
 <details>
-  <summary>Click to Show Video (RPLifes.mp4)</summary>
+  <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/RPLifes.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -1063,7 +1171,7 @@ Adds additional animations for roleplay (Surrender, Salute, Cross Arms, etc.).
 **Video**:
 
 <details>
-  <summary>Click to Show Video (Animations.mp4)</summary>
+  <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Animations.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -1086,7 +1194,7 @@ Adds a wheel that allows you to play some whitelisted animations.
 **Video**:
 
 <details>
-  <summary>Click to Show Video (AnimationWheel.mp4)</summary>
+  <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/AnimationWheel.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -1312,7 +1420,7 @@ Adds various ranks that show on the scoreboard.
 **Videos**:
 
 <details>
-  <summary>Click to Show Video (Ranks.mp4)</summary>
+  <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Ranks.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -1320,7 +1428,7 @@ Adds various ranks that show on the scoreboard.
 </details>
 
 <details>
-  <summary>Click to Show Video (SimpleRankingSystem.mp4)</summary>
+  <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/SimpleRankingSystem.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -1428,7 +1536,7 @@ Adds a group creation system with custom ranks, permissions, item/money banks, e
 - Player management tools and logs.  
 - Configurable rank permissions and organizational structure.
 
-**Video** (Organizations.mp4):
+**Video**:
 
 <details>
   <summary>Click to Show Video</summary>
@@ -1987,123 +2095,6 @@ Adds introductory video sequences that play whenever a player first joins the se
   <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/VideoIntro.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-## Additional/Missing Systems
-
-### Weapon Holstering
-
-**Description**:
-
-Allows players to holster and unholster weapons visually, improving RP immersion.
-
-**Features**:
-
-- Visible holstered weapon model on the player.  
-- Quick keybind to holster/unholster.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/WeaponHolstering.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Walk Types
-
-**Description**:
-
-Adds various walking styles or speeds for players (e.g., limp, crouched walk, etc.).
-
-**Features**:
-
-- Multiple walk styles selectable via menu or command.  
-- Could tie into injury system or roleplay scenarios.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/WalkTypes.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Dropshipping System
-
-**Description**:
-
-A specialized system for creating “dropship” style deliveries (not to be confused with standard “Airdrops”).
-
-**Features**:
-
-- Deployable dropship entity that can deliver goods or players.  
-- Configurable flight paths and landing zones.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Dropshipping System.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Faction Stashes
-
-**Description**:
-
-Shared storage specifically for faction members.
-
-**Features**:
-
-- Centralized stash accessible by all members of a faction.  
-- Configurable permissions and item logs.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video (factionstashes.mp4)</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/factionstashes.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Working Terminal
-
-**Description**:
-
-A specialized terminal system (separate from Civil Terminals) for tasks such as job registration, data entry, or server events.
-
-**Features**:
-
-- Customizable UI for specific interactions.  
-- Potential tie-in with server events or logging.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/WorkingTerminal.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </details>
