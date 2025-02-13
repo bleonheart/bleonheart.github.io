@@ -1,21 +1,17 @@
----
-
 # For Sale
 
 ---
 
 ## General Mechanics
 
+---
+
 ### Weapon Holstering
 
-**Description**:
+**Description**:  
 
-Allows players to holster and unholster weapons visually, improving RP immersion.
 
-**Features**:
-
-- Visible holstered weapon model on the player.  
-- Quick keybind to holster/unholster.
+Allows players to holster and unholster weapons visually, improving immersion by showing the holstered weapon model on the player.
 
 **Video**:
 
@@ -31,14 +27,10 @@ Allows players to holster and unholster weapons visually, improving RP immersion
 
 ### Walk Types
 
-**Description**:
+**Description**:  
 
-Adds various walking styles or speeds for players (e.g., limp, crouched walk, etc.).
 
-**Features**:
-
-- Multiple walk styles selectable via menu or command.  
-- Could tie into injury system or roleplay scenarios.
+Adds various walking speeds and styles for players, each with a distinct movement speed and animation.
 
 **Video**:
 
@@ -54,21 +46,17 @@ Adds various walking styles or speeds for players (e.g., limp, crouched walk, et
 
 ### Dropshipping System
 
-**Description**:
+**Description**:  
 
-A specialized system for creating “dropship” style deliveries (not to be confused with standard “Airdrops”).
 
-**Features**:
-
-- Deployable dropship entity that can deliver goods or players.  
-- Configurable flight paths and landing zones.
+Implements a Combine Dropship for fast travel or troop transport. Allows configuring destinations and straightforward setups.
 
 **Video**:
 
 <details>
   <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Dropshipping System.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/videos/Dropshipping%20System.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </details>
@@ -77,14 +65,10 @@ A specialized system for creating “dropship” style deliveries (not to be con
 
 ### Faction Stashes
 
-**Description**:
+**Description**:  
 
-Shared storage specifically for faction members.
 
-**Features**:
-
-- Centralized stash accessible by all members of a faction.  
-- Configurable permissions and item logs.
+Provides a centralized stash shared by all members of a faction. Items can have a set price, managed by stock, and cannot be purchased if the stock is empty.
 
 **Video**:
 
@@ -98,80 +82,39 @@ Shared storage specifically for faction members.
 
 ---
 
-### Working Terminal
-
-**Description**:
-
-A specialized terminal system (separate from Civil Terminals) for tasks such as job registration, data entry, or server events.
-
-**Features**:
-
-- Customizable UI for specific interactions.  
-- Potential tie-in with server events or logging.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/WorkingTerminal.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
 ### Representative Voting
 
-**Description**:
+**Description**:  
 
-Implements a voting system analogous to the American [House of Representatives](https://en.wikipedia.org/wiki/United_States_House_of_Representatives), enabling representative voting processes within the game.
 
-**Features**:
-
-- Representative-style voting.  
-- Tallying of votes based on seats/factions or similar systems.
+Implements a voting system akin to the American House of Representatives, where selected individuals from a predefined list are voted in for a given role or group.
 
 ---
 
 ### Legislative Voting
 
-**Description**:
+**Description**:  
 
-Introduces a legislative system for lawmaking. Players can propose laws with three voting options: Aye, Nay, and Abstain. The results are tallied at the end of the election.
 
-**Features**:
-
-- Legislative-style law proposals.  
-- Aye/Nay/Abstain voting system.  
-- Automatic tallying.
+Introduces a lawmaking system where players propose laws and vote “Aye,” “Nay,” or “Abstain.” Results are tallied at the end.
 
 ---
 
 ### Presidential Voting
 
-**Description**:
+**Description**:  
 
-Facilitates presidential elections based on the popular vote count.
 
-**Features**:
-
-- Popular-vote-based presidential election system.  
-- Candidate registration and vote tallying.
+Facilitates presidential elections based on popular vote. Players register as candidates, and the system tallies votes.
 
 ---
 
 ### Food
 
-**Description**:
+**Description**:  
 
-Adds mechanics for hunger and thirst, incorporating customizable effects. Thirst impedes stamina regeneration, while starvation depletes health.
 
-**Features**:
-
-- Simple integration for creating new food items.  
-- Compatible with the Zero’s MasterChef addon for extended functionality.  
-- Supports “Radiation” mechanic (see below).
+Implements a hunger and thirst system that can affect stamina regeneration or prevent sprinting if left unchecked. Supports integration with Zero’s MasterChef and includes optional radiation mechanics.
 
 **Video**:
 
@@ -187,19 +130,12 @@ Adds mechanics for hunger and thirst, incorporating customizable effects. Thirst
 
 ### Citizen ID – Passport Papers
 
-**Description**:
+**Description**:  
 
-Tailored for **Half-Life 2 Roleplay (HL2RP)**, this system provides players with passport papers upon character creation instead of a standard Citizen ID. Players must interact with a Combine authority to process and obtain their definitive Citizen ID, enhancing the immersive experience of the HL2RP environment.
 
-**Features**:
+Designed for HL2RP, players start with temporary passport papers and must visit a Combine authority or terminal to obtain a permanent Citizen ID, each uniquely tied to the character.
 
-- **Initial Passport Papers**: Players receive passport papers during character creation, serving as temporary identification.  
-- **Combine Processing**: Interact with Combine NPCs or terminals to process and upgrade passport papers to a definitive Citizen ID.  
-- **Unique Identification**: Each Citizen ID is unique and tied to the player's character, ensuring proper identification within the HL2RP framework.  
-- **Faction Integration**: IDs can be linked to specific factions, facilitating access control and role-specific functionalities.  
-- **Secure Storage**: Prevents identity theft and unauthorized access, maintaining the integrity of the identification system.
-
-**Videos**:
+**Video**:
 
 <details>
   <summary>Click to Show Video</summary>
@@ -209,22 +145,14 @@ Tailored for **Half-Life 2 Roleplay (HL2RP)**, this system provides players with
   </video>
 </details>
 
-
 ---
 
-### Civil Terminals
+### Working Terminal
 
-**Description**:
+**Description**:  
 
-Introduces multiple **Civil Terminals** that enable players to join various classes within a given faction. These terminals are highly customizable and easy to modify, allowing players to flag their active or inactive status based on their employment within the faction.
 
-**Features**:
-
-- **Class Selection**: Choose and become different classes within a faction through interactive terminals.  
-- **Customization**: Heavily customizable settings to modify terminal functionalities and available classes.  
-- **Employment Status**: Players can flag up (active) or flag down (inactive) their working status directly through the terminals.  
-- **User-Friendly Interface**: Simple and intuitive interface for seamless interaction and class management.  
-- **Integration with Faction Systems**: Works in tandem with existing faction mechanics to streamline player roles and responsibilities.
+Allows players to join or leave specific classes in a faction through interactive terminals. Settings are highly customizable, and players can flag themselves active or inactive.
 
 **Video**:
 
@@ -240,17 +168,10 @@ Introduces multiple **Civil Terminals** that enable players to join various clas
 
 ### Code 99
 
-**Description**:
+**Description**:  
 
-Implements a **Code 99** emergency response system that allows players to call for police assistance via a keybind. Upon activation, a waypoint appears on the screen indicating the number of entrants until the target is reached, along with a corresponding icon to guide responders.
 
-**Features**:
-
-- **Emergency Keybind**: Press a designated key to activate Code 99 and summon police help instantly.  
-- **Waypoint Indicators**: Displays a waypoint on the player's screen showing how many officers are needed to respond.  
-- **Visual Icons**: Adds icons to the waypoint for easy identification and navigation by responding officers.  
-- **Notification System**: Alerts nearby police players about the Code 99 activation and the location of the emergency.  
-- **Cooldown Mechanism**: Prevents abuse by implementing cooldown periods between successive Code 99 activations.
+Lets players quickly call police assistance via a keybind. Displays a waypoint to indicate how many officers are needed and highlights the location.
 
 **Video**:
 
@@ -266,17 +187,10 @@ Implements a **Code 99** emergency response system that allows players to call f
 
 ### Gas Mask
 
-**Description**:
+**Description**:  
 
-Adds a **Mustard Gas Swep** and a **Gas Mask** to the game, providing players with protection against hazardous environments. If a player is not wearing a gas mask when exposed to a gas grenade, they will suffer heavy damage over time. Conversely, wearing a gas mask ensures safe breathing and immunity to gas effects.
 
-**Features**:
-
-- **Mustard Gas Swep**: Deployable gas grenades that create hazardous areas, simulating mustard gas exposure.  
-- **Wearable Gas Mask**: Equip gas masks to protect against gas hazards and reduce damage from environmental threats.  
-- **Damage Over Time**: Players without a gas mask take continuous heavy damage when exposed to gas grenades.  
-- **Visual and Audio Indicators**: Indicators notify players of gas exposure and the need to equip a gas mask.  
-- **Durability and Maintenance**: Gas masks have durability and may require maintenance or replacement after extended use.
+Adds a mustard gas SWEP and a gas mask item. Players in gas without a mask take heavy damage over time; wearing a gas mask provides immunity.
 
 **Video**:
 
@@ -292,19 +206,12 @@ Adds a **Mustard Gas Swep** and a **Gas Mask** to the game, providing players wi
 
 ### RP Characters
 
-**Description**:
+**Description**:  
 
-Enhances roleplaying by introducing **RP Characters** that spawn with randomly generated stats, allowing players to temporarily immerse themselves as specific characters. Upon death, the system displays how long the player lived, adding depth to the roleplay experience.
 
-**Features**:
+Players spawn as randomly generated characters with unique stats. Upon death, the system shows how long they survived, adding narrative depth to roleplay.
 
-- **Randomized Stats**: Each RP character spawns with unique stats, encouraging diverse gameplay styles and roles.  
-- **Temporary Transformation**: Players can assume the identity of an RP character for a limited time, fostering dynamic roleplay scenarios.  
-- **Life Duration Display**: Upon death, the system presents the duration the player lived, adding a narrative element to character lifespans.  
-- **Character Diversity**: Supports a wide range of character types and backgrounds to enrich the roleplaying environment.  
-- **Integration with Existing Systems**: Works seamlessly with factions, classes, and other roleplay mechanics to enhance overall immersion.
-
-**Videos**:
+**Video**:
 
 <details>
   <summary>Click to Show Video</summary>
@@ -314,30 +221,14 @@ Enhances roleplaying by introducing **RP Characters** that spawn with randomly g
   </video>
 </details>
 
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/RPLifes.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
 ---
 
 ### Zomboid Stats
 
-**Description**:
+**Description**:  
 
-Introduces a **Project Zomboid**-inspired character screen that tracks detailed statistics, including traits, skills, and backgrounds. These stats influence gameplay mechanics and provide a deeper layer of character development, though they may come with some bugs and default settings initially.
 
-**Features**:
-
-- **Comprehensive Character Screen**: View and manage detailed stats, including traits, skills, and character backgrounds.  
-- **Traits and Skills**: Assign and develop traits and skills that affect player abilities and interactions within the game.  
-- **Background Stories**: Create and integrate character backgrounds to enrich roleplaying and narrative depth.  
-- **Stat Influence**: Stats impact various gameplay elements such as crafting efficiency, combat prowess, and survival capabilities.  
-- **Bug Management**: Initial release may include bugs and default settings, with ongoing updates planned for improvements.  
-- **Integration with Systems**: Works alongside Farming, Food, Medical Systems, etc., to create a cohesive and immersive experience.
+Inspired by Project Zomboid, this adds detailed traits, skills, and backgrounds to characters. These stats can affect crafting, combat, and other gameplay elements.
 
 **Video**:
 
@@ -353,55 +244,37 @@ Introduces a **Project Zomboid**-inspired character screen that tracks detailed 
 
 ### Radiation
 
-**Description**:
+**Description**:  
 
-Functions similarly to the radiation mechanics in Fallout 4/76, reducing health and increasing radiation levels.
 
-**Features**:
-
-- Gradual health reduction as radiation level increases.  
-- Potential for anti-radiation items or medical treatments.
+Functions similarly to Fallout, where increasing radiation levels reduce maximum health. Anti-radiation items or treatments may be used to combat it.
 
 ---
 
 ### Drugs
 
-**Description**:
+**Description**:  
 
-Adds drug bricks that require processing. Processed drugs provide various buffs and debuffs.
 
-**Features**:
-
-- Processing system for raw drug materials.  
-- Variety of possible buffs/debuffs (speed, health, etc.).
+Introduces a system to process raw drug bricks into usable items that grant various buffs or debuffs.
 
 ---
 
 ### Languages
 
-**Description**:
+**Description**:  
 
-Allows players to learn and speak different languages. Comprehension is limited to known languages.
 
-**Features**:
-
-- Language learning system.  
-- In-character communication restrictions to known languages.
+Lets players learn and speak different languages via books. Only those who know a language can understand it in-character.
 
 ---
 
 ### Tying
 
-**Description**:
+**Description**:  
 
-Expands the tying mechanic to include dragging restrained players and introduces additional options.
 
-**Features**:
-
-- Blindfold or gag restrained players.  
-- Drag tied players freely or move them into vehicles.  
-- Search tied players or request to search them.  
-- Custom animations for immersion.
+Expands on tying mechanics, allowing dragging, blindfolding, and gagging of restrained players. Also enables searching them with or without consent.
 
 **Video**:
 
@@ -417,68 +290,46 @@ Expands the tying mechanic to include dragging restrained players and introduces
 
 ### Looting
 
-**Description**:
+**Description**:  
 
-Enables looting across the map, with items categorized by rarity and probability.
 
-**Features**:
-
-- Configurable loot tables.  
-- Probability-based item distribution.
+Enables looting across the map with configurable rarity, probability-based item distribution, and per-entity loot tables.
 
 ---
 
 ### Wiretaps
 
-**Description**:
+**Description**:  
 
-Adds wiretap devices for eavesdropping on conversations, featuring both receiver and listener components.
 
-**Features**:
-
-- Place wiretaps on phones or in rooms.  
-- Listen in from designated receivers.
+Lets players place wiretap devices in rooms and listen in from a remote receiver, facilitating covert surveillance.
 
 ---
 
 ### Crafting
 
-**Description**:
+**Description**:  
 
-Introduces an in-depth crafting system requiring multiple crafting tables and blueprints.
 
-**Features**:
-
-- Multi-table, multi-step processes.  
-- Blueprint requirement for higher-tier items.
+Provides a multi-table, multi-step crafting system governed by blueprints, limiting who can craft specific items.
 
 ---
 
 ### Bank Robbery
 
-**Description**:
+**Description**:  
 
-Adds a bank safe that can be robbed, with configurable settings such as minimum police presence and incremental money accumulation.
 
-**Features**:
-
-- Configurable safe-cooldown and police requirements.  
-- Progressive money accumulation.
+Adds a bank safe that can be robbed if enough police are online. The safe accumulates money incrementally over time.
 
 ---
 
 ### Rideable Mounts
 
-**Description**:
+**Description**:  
 
-Adds a variety of rideable pets that players can mount.
 
-**Features**:
-
-- Flying mounts (use spacebar to ascend).  
-- Sprinting on land mounts (shift key).  
-- Customizable bone positions for unique pets.  
-- Two pre-configured pets included.
+Allows players to mount animals or creatures. Flying mounts can ascend by holding jump, while land mounts can sprint.
 
 **Video**:
 
@@ -492,148 +343,84 @@ Adds a variety of rideable pets that players can mount.
 
 ---
 
-### Pets
-
-**Description**:
-
-Introduces pets with needs (hunger, boredom, thirst, health). Pets can also get sick over time.
-
-**Features**:
-
-- Pet need system (food, play, water).  
-- Illness and recovery mechanics.
-
----
-
 ### In-depth Armors
 
-**Description**:
+**Description**:  
 
-Allows for comprehensive customization of armor, affecting player models, movement speed, jump height, and more.
 
-**Features**:
-
-- Movement modifiers (speed, jump, fall damage immunity).  
-- Resistance percentages, radiation immunity, footstep sounds, visual overlays.  
-- Full model-based customization.
+Offers deep customization for armors, including movement speed changes, jump height, resistances, and visual overlays.
 
 ---
 
 ### Marketplace
 
-**Description**:
+**Description**:  
 
-Establishes a global marketplace for player transactions.
 
-**Features**:
-
-- Global listing of items for sale.  
-- Player-driven economy.
+Establishes a global marketplace entity where players can list items for sale, buy items, and manage transactions.
 
 ---
 
 ### Lockpicking
 
-**Description**:
+**Description**:  
 
-Introduces lockpicks to open locked doors.
 
-**Features**:
-
-- Lockpick mini-game or skill check.  
-- Configurable success rates and door types.
+Adds a Fallout-style lockpick mini-game to open locked doors, with configurable difficulty and success rates.
 
 ---
 
 ### Phone
 
-**Description**:
+**Description**:  
 
-Adds mobile phones for direct messaging, simulating SMS communication.
 
-**Features**:
-
-- Private text messages between players.  
-- Contact lists and conversation logs.
+Implements mobile phones for in-game private messaging (SMS) and an optional call system.
 
 ---
 
 ### Telephone
 
-**Description**:
+**Description**:  
 
-Adds payphones for making calls to other players.
 
-**Features**:
-
-- Public payphones with call costs or free usage.  
-- Possible phone tapping or wiretapping integration.
-
----
-
-### Cellphone
-
-**Description**:
-
-Adds mobile phones that allow players to make calls and send messages to others.
-
-**Features**:
-
-- In-game call system.  
-- Text messaging separate from “Phone” if desired.
+Adds payphones for public or private calls to other players; can be integrated with wiretapping.
 
 ---
 
 ### Radio
 
-**Description**:
+**Description**:  
 
-Introduces radios with configurable frequencies for communication via text or voice.
 
-**Features**:
-
-- Multi-frequency system.  
-- Team/faction-based channels.
+Provides radios with multiple frequencies for text or voice communication.
 
 ---
 
 ### Jukeboxes
 
-**Description**:
+**Description**:  
 
-Provides jukeboxes that play music from a web server.
 
-**Features**:
-
-- Customizable music libraries.  
-- Shared environment audio.
+Allows environment-wide music playback using a configured library on a web server.
 
 ---
 
 ### Typewriter
 
-**Description**:
+**Description**:  
 
-Adds a typewriter for creating items that link to Google Docs.
 
-**Features**:
-
-- Printable in-game notes or documents with a real-world doc link.  
-- Potential for roleplay “newspapers,” “letters,” etc.
+Enables creation of in-game notes or documents linking to external Google Docs. Perfect for newspapers or official letters.
 
 ---
 
 ### Fishing
 
-**Description**:
+**Description**:  
 
-Introduces fishing with configurable rarity settings.
 
-**Features**:
-
-- Customizable catches (items, trash, money).  
-- “Sweet spot” mechanic for precise success.  
-- Easily extendable with new items/probabilities.
+Lets players fish for items, trash, or money based on a configurable rarity system. Includes a “sweet spot” mechanic for timing.
 
 **Video**:
 
@@ -649,54 +436,57 @@ Introduces fishing with configurable rarity settings.
 
 ### Woodcutting
 
-**Description**:
+**Description**:  
 
-Adds woodcutting with configurable rarity settings.
 
-**Features**:
+Introduces the ability to chop wood from trees, with configurable drop rates. Often integrates with crafting or economy systems.
 
-- Configurable drop rates and item outcomes.  
-- Integration with crafting or economy.
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Woodcutting.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Mining
 
-**Description**:
+**Description**:  
 
-Implements mining with configurable rarity settings.
 
-**Features**:
+Allows players to mine ores from designated nodes, with drop chances and rarity settings. Often ties into crafting or trade.
 
-- Configurable ore types and drop rates.  
-- Integration with crafting or economy.
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="Mining.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ---
 
 ### Store Robbery
 
-**Description**:
+**Description**:  
 
-Allows players to rob stores for items.
 
-**Features**:
-
-- Configurable item lists and store defenses.  
-- Potential alarm or police response events.
+Lets players rob stores for configurable loot items and possibly trigger police alerts or alarms.
 
 ---
 
-### Forward Operating Bases
+### Forward Operating Bases (FOB)
 
-**Description**:
+**Description**:  
 
-Introduces a FOB mechanic for setting up outposts where faction members can spawn.
 
-**Features**:
-
-- Custom respawn points.  
-- Configurable respawn cooldowns.  
-- Lightweight and optimized system.
+Allows a faction to set up a spawnable outpost for its members to respawn at, with customizable cooldowns.
 
 **Video**:
 
@@ -712,222 +502,154 @@ Introduces a FOB mechanic for setting up outposts where faction members can spaw
 
 ### Safebox
 
-**Description**:
+**Description**:  
 
-Adds an ender-chest-like stash system.
 
-**Features**:
-
-- Secure, personal storage accessible from multiple points.  
-- Persistent storage (database saved).
+Works like an Ender Chest, giving players personal, persistent storage accessible from multiple safebox entities.
 
 ---
 
 ### Newspapers
 
-**Description**:
+**Description**:  
 
-Adds readable newspapers that can be written by a dedicated newspaper faction.
 
-**Features**:
-
-- Editable text by authorized players/factions.  
-- Physical newspaper items in-game.
+Lets a designated faction create in-game newspapers with editable text, distributing them as physical items.
 
 ---
 
 ### Oil
 
-**Description**:
+**Description**:  
 
-Introduces mechanics for extracting and selling oil.
 
-**Features**:
-
-- Oil rigs or pumps that generate oil over time.  
-- Sell or refine oil for profit.
+Adds the ability to extract oil over time using rigs or pumps, which can then be sold or refined for profit.
 
 ---
 
 ### Revive System
 
-**Description**:
+**Description**:  
 
-Implements a system where players are downed until they bleed out upon death.
 
-**Features**:
-
-- Downed state with bleed-out timer.  
-- Reviving via medical items or teammates.
+Players become downed instead of dying immediately, giving teammates a chance to revive them before they bleed out.
 
 ---
 
 ### Vending Machines
 
-**Description**:
+**Description**:  
 
-Adds vending machines that sell specific items.
 
-**Features**:
-
-- Configurable item lists and prices.  
-- Automatic item dispensing.
+Dispenses configurable items for a set price, automatically providing the purchased item to the player.
 
 ---
 
 ### Broadcast Radio
 
-**Description**:
+**Description**:  
 
-Introduces a radio system for broadcasting voice and music.
 
-**Features**:
-
-- Wide-range broadcast channels.  
-- DJ or radio host roles possible.
+Allows server-wide voice or music broadcasts. Ideal for radio host or DJ-style roleplay.
 
 ---
 
 ### Vinyl Disk Player
 
-**Description**:
+**Description**:  
 
-Adds a vinyl player for playing records.
 
-**Features**:
-
-- Physical record items with different tracks.  
-- Classic record-playing interface.
+Enables the use of vinyl records with unique tracks on a vintage-style player.
 
 ---
 
 ### Car Radios
 
-**Description**:
+**Description**:  
 
-Integrates radios into cars for in-vehicle music playback.
 
-**Features**:
-
-- Tune into broadcast or custom streams while driving.  
-- Optional passenger controls.
+Lets drivers and passengers tune into radio stations or streams while in a vehicle.
 
 ---
 
 ### Chess
 
-**Description**:
+**Description**:  
 
-Adds a playable chess game.
 
-**Features**:
-
-- Full chess logic with pieces and board.  
-- Player vs player matches.
+Adds a fully playable chess board and pieces for two players.
 
 ---
 
 ### Permits
 
-**Description**:
+**Description**:  
 
-Restricts certain items from being bought without the proper permits, which can be tied to factions or classes.
 
-**Features**:
-
-- Permit system for restricted items.  
-- Faction/class-based permissions.
+Restricts certain items behind permits, which can be granted to specific factions or classes.
 
 ---
 
 ### Convertibles
 
-**Description**:
+**Description**:  
 
-Adds entities that can be converted into items and retrieved later.
 
-**Features**:
-
-- Store props/entities in item form.  
-- Redeploy items elsewhere.
+Allows players to convert placed props or entities into item form, enabling redeployment elsewhere.
 
 ---
 
 ### Medical System
 
-**Description**:
+**Description**:  
 
-Introduces a detailed medical system with various health management features.
 
-**Features**:
-
-- Limb-based damage.  
-- Diseases, treatments, advanced healing items.
+Provides detailed health mechanics such as limb injuries, diseases, and treatments.
 
 ---
 
 ### Clock
 
-**Description**:
+**Description**:  
 
-Adds a clock that displays the time, synchronized with Stormfox2 time.
 
-**Features**:
-
-- Real-time or server-based time display.  
-- Possible roleplay integration (curfews, events).
+Displays current time, synchronizing with Stormfox2 or server time for roleplay purposes.
 
 ---
 
 ### Stables
 
-**Description**:
+**Description**:  
 
-Adds a horse ownership system, allowing players to spawn and ride horses.
 
-**Features**:
-
-- Purchase or claim horses.  
-- Horse stats (speed, health, etc.).
+Introduces a horse ownership system where players can purchase, spawn, and ride their personal horses.
 
 ---
 
 ### Magazines
 
-**Description**:
+**Description**:  
 
-Implements a system where ammo is tied to magazine items, which feed the guns.
 
-**Features**:
-
-- Physical magazine items with limited capacity.  
-- Reload mechanics that require correct magazines.
+Requires players to manage physical magazines for their weapons; guns only reload from these magazines.
 
 ---
 
 ### Perks
 
-**Description**:
+**Description**:  
 
-Introduces a configurable perks system, with perks locked behind conditions such as faction membership, level, or custom requirements.
 
-**Features**:
-
-- Perk tree or list.  
-- Unlock conditions (factions, level, achievements).
+Adds a perks interface that can be restricted by faction, level, or other conditions.
 
 ---
 
 ### Car Bomber
 
-**Description**:
+**Description**:  
 
-Adds a car bomb feature, causing cars to explode after a set time.
 
-**Features**:
-
-- Placeable bombs in vehicles.  
-- Audible countdown and defusing mechanics.
+Lets players place a bomb in a vehicle, triggering a timed explosion with optional defusal mechanics.
 
 **Video**:
 
@@ -943,67 +665,46 @@ Adds a car bomb feature, causing cars to explode after a set time.
 
 ### Factories
 
-**Description**:
+**Description**:  
 
-Implements a factory system that dynamically spawns items.
 
-**Features**:
-
-- Automated item production with resource inputs.  
-- Configurable spawn rates, item types.
+Spawns items automatically by consuming resources, acting like a production line with configurable rates.
 
 ---
 
 ### VATS
 
-**Description**:
+**Description**:  
 
-Adds the VATS targeting system from Fallout.
 
-**Features**:
-
-- Targeted shots with chance-based outcomes.  
-- Slow-motion effect or simulated focus.
+Inspired by Fallout’s targeting system, allows players to attempt targeted shots with chance-based success.
 
 ---
 
 ### Gacha Bags
 
-**Description**:
+**Description**:  
 
-Introduces a gambling system similar to [Gacha](https://www.yourdictionary.com/gacha).
 
-**Features**:
-
-- Random loot from “bags” or “boxes.”  
-- Configurable rarities and item pools.
+Implements a gacha mechanic where players open “bags” or “boxes” for randomized item rewards.
 
 ---
 
 ### Airdrops
 
-**Description**:
+**Description**:  
 
-Adds passive airdrop events with items.
 
-**Features**:
-
-- Random or timed airdrops across the map.  
-- Loot crates with configurable contents.
+Periodically drops crates with loot around the map, encouraging players to race for the rewards.
 
 ---
 
 ### Turf Wars
 
-**Description**:
+**Description**:  
 
-Introduces an area capture system that rewards items or money.
 
-**Features**:
-
-- Control points providing faction income.  
-- Money earned when faction members stay nearby.  
-- Dynamic territory control mechanics.
+Introduces capture zones that generate money or items for the faction holding them. Encourages territorial conflict.
 
 **Video**:
 
@@ -1019,40 +720,28 @@ Introduces an area capture system that rewards items or money.
 
 ### Animal Butchering
 
-**Description**:
+**Description**:  
 
-Adds a system for butchering animals and looting their carcasses.
 
-**Features**:
-
-- Animal carcasses drop meat, hides, etc.  
-- Integration with cooking or crafting.
+When certain animals are killed, their carcasses can be butchered for meat, hides, or other resources.
 
 ---
 
 ### Keycards
 
-**Description**:
+**Description**:  
 
-Implements a keycard system for opening doors.
 
-**Features**:
-
-- Keycard items with level or clearance.  
-- Customizable door access logic.
+Grants item-based door access using keycards of varying clearance levels.
 
 ---
 
 ### Clearance Levels
 
-**Description**:
+**Description**:  
 
-Adds clearance levels to certain doors.
 
-**Features**:
-
-- Multi-tier access control.  
-- Tied to factions, ranks, or keycards.
+Restricts doors and areas based on multi-tier security clearances, often tied to factions or ranks.
 
 **Video**:
 
@@ -1068,105 +757,73 @@ Adds clearance levels to certain doors.
 
 ### Sanity
 
-**Description**:
+**Description**:  
 
-Adds a sanity system that implements hallucinations.
 
-**Features**:
-
-- Sanity meter that decreases from events or items.  
-- Visual/audio hallucinations at low sanity.
+Adds a sanity meter that decreases from traumatic events, causing visual/auditory hallucinations at low levels.
 
 ---
 
 ### Organs
 
-**Description**:
+**Description**:  
 
-Adds organs that are randomly defined during character creation. These have various drawbacks and bonuses depending on their quality.
 
-**Features**:
-
-- Random organ quality per character.  
-- Potential buffs/debuffs for each organ’s condition.
+Assigns random-quality organs to each character. Better organs grant minor buffs; worse ones cause drawbacks.
 
 ---
 
 ### Attribute Rolling
 
-**Description**:
+**Description**:  
 
-Adds attribute rolling with multipliers.
 
-**Features**:
-
-- Randomly generated stats on character creation.  
-- Multipliers affecting various gameplay elements.
+Randomly generates character stats (e.g., Strength, Perception) on creation, affecting gameplay accordingly.
 
 ---
 
 ### Attribute Fog
 
-**Description**:
+**Description**:  
 
-Adds fog that renders in the distance based on how much perception you have.
 
-**Features**:
-
-- Dynamic draw distance tied to “Perception.”  
-- Creates tension/atmosphere for low-perception characters.
+Limits view distance based on a “Perception” attribute, creating literal fog for lower scores.
 
 ---
 
 ### Cinematic Text
 
-**Description**:
+**Description**:  
 
-Adds cinematic text similar to [this example](https://withaterriblefate.files.wordpress.com/2015/01/postman-in-repose.png?w=640).
 
-**Features**:
-
-- Large stylized text overlays.  
-- Configurable triggers and durations.
+Displays large, stylized text overlays for dramatic effect during events or cutscenes.
 
 ---
 
 ### Attribute-Based Damage
 
-**Description**:
+**Description**:  
 
-Adds a configurable variable that can influence damage (e.g., melee damage influenced by strength).
 
-**Features**:
-
-- Stat-based bonus or penalty to damage output.  
-- Easily configurable for custom stats.
+Ties damage output to specific stats, such as Strength for melee.
 
 ---
 
 ### Durability
 
-**Description**:
+**Description**:  
 
-Adds a durability variable to weapons.
 
-**Features**:
-
-- Weapons degrade over time/use.  
-- Repair mechanics or item required to restore durability.
+Implements weapon durability, reducing an item’s effectiveness over time until repaired.
 
 ---
 
 ### Animations
 
-**Description**:
+**Description**:  
 
-Adds additional animations for roleplay (Surrender, Salute, Cross Arms, etc.).
 
-**Features**:
-
-- Toggleable animations via commands or menu.  
-- Customizable for unique scenarios.
+Adds extra roleplay animations like Surrender, Salute, or Cross Arms, accessible via commands or a menu.
 
 **Video**:
 
@@ -1182,14 +839,10 @@ Adds additional animations for roleplay (Surrender, Salute, Cross Arms, etc.).
 
 ### Animation Wheel
 
-**Description**:
+**Description**:  
 
-Adds a wheel that allows you to play some whitelisted animations.
 
-**Features**:
-
-- Model-specific animation support.  
-- Built-in whitelist for allowed animations.
+Provides a wheel interface with a whitelist of animations for quick selection.
 
 **Video**:
 
@@ -1205,66 +858,46 @@ Adds a wheel that allows you to play some whitelisted animations.
 
 ### Squads
 
-**Description**:
+**Description**:  
 
-Adds a squad system, similar to a party system from an RPG.
 
-**Features**:
-
-- Group-based chat, markers, and rewards.  
-- Easily invite/kick from squad interface.
+Allows players to form squads (or parties) with shared chat, markers, and possible group rewards.
 
 ---
 
 ### Reputation System
 
-**Description**:
+**Description**:  
 
-All NPCs attached to a faction are neutral unless the player displays allegiance to an enemy (wearing their clothes, etc.).
 
-**Features**:
-
-- NPC/faction-based reputations.  
-- Conditional hostility or friendliness.
+NPC factions may be friendly or hostile depending on the player’s faction affiliation, gear, or actions.
 
 ---
 
 ### Karma System
 
-**Description**:
+**Description**:  
 
-Adds a system that assigns a Karma Level based on your actions.
 
-**Features**:
-
-- Positive or negative karma events.  
-- Possible effects on NPC interactions, perks, etc.
+Awards or subtracts karma based on player actions, which can affect NPC or faction attitudes.
 
 ---
 
 ### Medals
 
-**Description**:
+**Description**:  
 
-Adds medals that display above your head.
 
-**Features**:
-
-- Visual flair for achievements or roles.  
-- Configurable types of medals.
+Displays earned medals above a player’s head, highlighting achievements or roles.
 
 ---
 
 ### Faction Menu
 
-**Description**:
+**Description**:  
 
-Adds a menu for kicking characters out of factions and inviting players.
 
-**Features**:
-
-- Faction management UI.  
-- Invite, remove, or promote members.
+Enables in-game faction management for inviting or removing members.
 
 **Video** (Faction Invites):
 
@@ -1280,87 +913,62 @@ Adds a menu for kicking characters out of factions and inviting players.
 
 ### Map
 
-**Description**:
+**Description**:  
 
-Adds a top-view map of the game world.
 
-**Features**:
-
-- Pinpoint locations, set waypoints.  
-- Possibly integrated with factions or squads.
+Provides a top-down map interface with the ability to set waypoints or markers, useful for navigation.
 
 ---
 
 ### Serial Numbers
 
-**Description**:
+**Description**:  
 
-Adds serial numbers to items that can be checked by police.
 
-**Features**:
-
-- Erasable serial numbers.  
-- Police can check fingerprints to identify characters.  
-- Whitelisted weapons can be protected from erasure.
+Each item (or weapon) has a serial number that police can check. Some can be erased if illicit.
 
 ---
 
 ### EFT Corpses
 
-**Description**:
+**Description**:  
 
-Makes your corpse lootable when you die.
 
-**Features**:
-
-- Full inventory loot system upon death.  
-- Potential for partial loot or item protection.
+Makes player corpses fully lootable upon death, mimicking Escape from Tarkov’s loot-on-death style.
 
 ---
 
 ### Transformative Items
 
-**Description**:
+**Description**:  
 
-Adds items that can transform you into certain creatures.
 
-**Features**:
-
-- Temporary or permanent transformations.  
-- Unique abilities or stats while transformed.
+Allows items to temporarily or permanently turn the player into a creature with unique abilities.
 
 ---
 
 ### Clothing Status
 
-**Description**:
+**Description**:  
 
-Adds a system where clothing gets dirty over time and requires maintenance.
 
-**Features**:
-
-- Dirt buildup mechanic with visual changes.  
-- Cleaning/washing processes or shops.
+Tracks clothing cleanliness. Over time, clothes get dirty and may need washing or repair.
 
 ---
 
 ### Raiding System
 
-**Description**:
+**Description**:  
 
-Adds a raiding and ambushing system designed for faction confrontations.
 
-**Features**:
-
-- Structured raid alerts or timers.  
-- Rewards for successful raids/defenses.
+Adds structured raiding or ambushing features for faction conflict. Notifies defenders and rewards attackers or defenders.
 
 **Video**:
 
 <details>
   <summary>Click to Show Video</summary>
   <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Raid System.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/videos/Raid%20System.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </details>
@@ -1369,58 +977,42 @@ Adds a raiding and ambushing system designed for faction confrontations.
 
 ### Police Lockers
 
-**Description**:
+**Description**:  
 
-Adds police lockers that provide temporary guns for police officers to use while on duty.
 
-**Features**:
-
-- Weapon checkout/return system.  
-- Time-limited or duty-limited usage.
+Police officers can temporarily draw guns from lockers while on duty and must return them afterwards.
 
 ---
 
 ### TV System
 
-**Description**:
+**Description**:  
 
-Allows players to watch broadcasted content from other players.
 
-**Features**:
-
-- Real-time streaming or pre-recorded videos.  
-- Broadcast stations and in-game TV props.
+Allows broadcasting of live or recorded content to in-game televisions for other players to watch.
 
 ---
 
 ### Leveling
 
-**Description**:
+**Description**:  
 
-Adds a configurable leveling system, currently increasing health but adaptable for other enhancements.
 
-**Features**:
-
-- XP-based progression.  
-- Configurable rewards at each level.
+Implements a level system, increasing attributes like max health or unlocking new abilities.
 
 ---
 
 ### Ranking System
 
-**Description**:
+**Description**:  
 
-Adds various ranks that show on the scoreboard.
 
-**Features**:
-
-- Faction-tied ranks.  
-- Potential stat changes, custom models, and custom weapons for each rank.
+Adds visible ranks on the scoreboard. Can integrate with factions, awarding custom weapons or models for higher ranks.
 
 **Videos**:
 
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Click to Show Video (Ranks)</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Ranks.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -1428,7 +1020,7 @@ Adds various ranks that show on the scoreboard.
 </details>
 
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Click to Show Video (SimpleRankingSystem)</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/SimpleRankingSystem.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -1439,66 +1031,46 @@ Adds various ranks that show on the scoreboard.
 
 ### Syringes
 
-**Description**:
+**Description**:  
 
-Adds syringes that can provide effects such as speed, armor, health, or jump boosts.
 
-**Features**:
-
-- Single-use or limited-use consumables.  
-- Customizable effect duration and power.
+One-use items that grant temporary boosts (speed, armor, health, or jump). Often used in combat or emergencies.
 
 ---
 
 ### Social Credit System
 
-**Description**:
+**Description**:  
 
-A ranking system that rewards players with points based on playtime, tasks, or admin awards.
 
-**Features**:
-
-- Accumulate points to unlock rewards.  
-- Encourages positive behavior and participation.
+Awards points for desirable behavior or tasks. Points can unlock perks, titles, or bonuses.
 
 ---
 
 ### Prop-Based Construction
 
-**Description**:
+**Description**:  
 
-A construction system inspired by Rust, where players use items to build structures instead of a spawn menu.
 
-**Features**:
-
-- Immersive item-based building.  
-- Tiered building parts (wood, metal, etc.).
+Inspired by Rust. Instead of spawning props freely, players use items to build structures in tiers.
 
 ---
 
 ### Farming
 
-**Description**:
+**Description**:  
 
-Introduces farmable items that players can plant and grow over time.
 
-**Features**:
-
-- Crop growth cycles and harvesting.  
-- Different seeds and produce with various uses.
+Enables planting and growing crops over time, harvested for resources or sale.
 
 ---
 
 ### Advanced Injuries
 
-**Description**:
+**Description**:  
 
-Incorporates several injuries affecting gameplay (PTSD, Bleeding, Broken Arm/Leg, Concussion).
 
-**Features**:
-
-- Each injury has specific effects (DoT, slower reload, reduced speed).  
-- Healable with proper medical treatments.
+Implements various injuries (bleeding, broken limbs, PTSD, concussion) with unique effects and specialized treatments.
 
 **Video**:
 
@@ -1514,27 +1086,19 @@ Incorporates several injuries affecting gameplay (PTSD, Bleeding, Broken Arm/Leg
 
 ### Bonemerge System
 
-**Description**:
+**Description**:  
 
-Allows different clothes to be worn on different parts of the body. Two main presets: Fallout and Mafia.
 
-**Features**:
-
-- Layered clothing/armor models.  
-- Customizable synergy with armor, outfits, etc.
+Lets players layer multiple clothing or armor pieces that bonemerge onto their model. Useful for outfit variety.
 
 ---
 
 ### Guilds
 
-**Description**:
+**Description**:  
 
-Adds a group creation system with custom ranks, permissions, item/money banks, etc.
 
-**Features**:
-
-- Player management tools and logs.  
-- Configurable rank permissions and organizational structure.
+Allows creation of player-made organizations with custom ranks, permissions, shared banks, and logs.
 
 **Video**:
 
@@ -1548,17 +1112,12 @@ Adds a group creation system with custom ranks, permissions, item/money banks, e
 
 ---
 
-### Housing
+### Assigned Housing
 
-**Description**:
+**Description**:  
 
-Adds a housing system managed by factions or admins.
 
-**Features**:
-
-- Assign door groups, manage residents.  
-- Configurable rent collection.  
-- Database-saved for persistence.
+Enables properties or doors to be assigned to specific factions or players, with persistent ownership and rent.
 
 **Video**:
 
@@ -1574,14 +1133,10 @@ Adds a housing system managed by factions or admins.
 
 ### Camera (CCTV)
 
-**Description**:
+**Description**:  
 
-Adds CCTV functionality with nameable cameras for remote viewing, faction whitelist, and hacking.
 
-**Features**:
-
-- View live feeds from secure cameras.  
-- Hack cameras if not whitelisted.
+Players or factions can place cameras that can be named and remotely viewed. Non-whitelisted players can hack them.
 
 **Video**:
 
@@ -1597,252 +1152,176 @@ Adds CCTV functionality with nameable cameras for remote viewing, faction whitel
 
 ### Law Board
 
-**Description**:
+**Description**:  
 
-Adds a Law Board that, when interacted with, displays a webpage with the rules.
 
-**Features**:
-
-- Physical board entity for server laws/rules.  
-- Customizable web page link or text.
+Presents a clickable board that opens a webpage or text displaying server rules or local laws.
 
 ---
 
 ### DEFCON
 
-**Description**:
+**Description**:  
 
-Implements a DEFCON system that adjusts server security levels based on in-game events.
 
-**Features**:
-
-- Tiered levels (1–5).  
-- Potential bonuses or restrictions at each level.
+Implements security levels 1–5, shifting server states or restrictions based on threats.
 
 ---
 
 ### Trading
 
-**Description**:
+**Description**:  
 
-Introduces a trading mechanic that allows players to securely trade items and currency.
 
-**Features**:
-
-- Secure trade window with confirmation.  
-- Prevents scamming or item dropping.
+Adds a secure trade window to exchange items and money, preventing scams.
 
 ---
 
 ### Cutscenes
 
-**Description**:
+**Description**:  
 
-Adds simple Call of Duty-inspired cutscenes where you can submit text entries explaining missions.
 
-**Features**:
-
-- Three text entries for mission intros.  
-- Cinematic camera transitions.
+Creates Call of Duty-inspired mission briefings or story intros, complete with cinematic camera transitions.
 
 ---
 
 ### Car Options
 
-**Description**:
+**Description**:  
 
-Adds options such as kicking players from cars, locking the car from inside, etc.
 
-**Features**:
-
-- Inside locking, occupant management.  
-- Potential trunk or interior inventory checks.
+Gives drivers extra controls such as kicking passengers, locking doors from the inside, or checking trunk contents.
 
 ---
 
 ## Talkable NPCs
 
+---
+
 ### Bodyguard System
 
-**Description**:
+**Description**:  
 
-Adds a mechanic where you can hire security guards whose job is to protect you.
 
-**Features**:
-
-- Hireable NPC bodyguards.  
-- Wage system and guard loyalty.
+Enables hiring NPC guards for protection, with wages and loyalty checks.
 
 ---
 
 ### Property Seller
 
-**Description**:
+**Description**:  
 
-Adds houses that can be bought. The NPC sells them.
 
-**Features**:
-
-- NPC-based real estate transactions.  
-- House ownership transfers.
+NPC that sells houses to players, transferring ownership upon purchase.
 
 ---
 
 ### Black Market Vendor
 
-**Description**:
+**Description**:  
 
-Provides an NPC that can deliver items to certain parts of the map.
 
-**Features**:
-
-- Illicit goods purchase.  
-- Delivery or pickup points.
+NPC offering illegal items or deliveries to specific map locations.
 
 ---
 
 ### Car Dealer
 
-**Description**:
+**Description**:  
 
-Adds a Car Dealer that allows buying and selling cars.
 
-**Features**:
-
-- Vehicle shop interface.  
-- Buying, selling, and possibly customizing.
+Facilitates buying and selling cars through an NPC menu, optionally with customization.
 
 ---
 
 ### Bounty Hunter
 
-**Description**:
+**Description**:  
 
-Adds a Bounty Hunter NPC that provides bounties.
 
-**Features**:
-
-- Wanted list with target rewards.  
-- Payment upon proof of bounty completion.
+Provides bounties for wanted players. Rewards are given once proof of capture or elimination is provided.
 
 ---
 
 ### Jailer
 
-**Description**:
+**Description**:  
 
-Adds a Jailer NPC that allows jailing players for a determined time.
 
-**Features**:
-
-- Sentence length configuration.  
-- Automatic release after time served.
+Allows jailing of players for a set time through an NPC interface, automatically freeing them after.
 
 ---
 
 ### Mechanic
 
-**Description**:
+**Description**:  
 
-Adds an NPC designed to hire you for a faction responsible for fixing cars.
 
-**Features**:
-
-- Join mechanic faction for vehicle repair jobs.  
-- Earn money or reputation for car repairs.
+Hires players into a mechanic faction, repairing vehicles for money or faction reputation.
 
 ---
 
 ### Police
 
-**Description**:
+**Description**:  
 
-Adds an NPC designed to manage police-related activities such as recruitment and crime reports.
 
-**Features**:
-
-- Join/leave police faction.  
-- File or check crime reports.
+NPC that manages police faction recruitment and handles crime reports or warrants.
 
 ---
 
 ### Taxis
 
-**Description**:
+**Description**:  
 
-Adds an NPC designed to hire you for a Taxi Job that allows you to drive around for money.
 
-**Features**:
-
-- Pickup and drop-off missions.  
-- Payment per passenger or distance.
+Lets players join a Taxi Job, picking up NPC or player passengers for monetary rewards.
 
 ---
 
 ### Delivery
 
-**Description**:
+**Description**:  
 
-Adds a Delivery Job where you go around delivering packages in a car.
 
-**Features**:
-
-- Delivery routes, timed missions.  
-- Payment upon successful deliveries.
+Adds a delivery job where players drive packages around the map, earning money upon completion.
 
 ---
 
 ### Intergalactic Taxi
 
-**Description**:
+**Description**:  
 
-Adds a taxi NPC that can teleport you to certain locations, similar to Fast Travel.
 
-**Features**:
-
-- Instant travel to set waypoints.  
-- Possible fee or cooldown system.
+NPC-based fast travel system, allowing players to teleport to specified destinations for a fee.
 
 ---
 
 ### Recruitment NPC
 
-**Description**:
+**Description**:  
 
-An NPC that can recruit you into a specific faction.
 
-**Features**:
-
-- Single-click faction joining.  
-- Potential rank assignment on join.
+Instantly recruits players into a specific faction with assigned ranks if necessary.
 
 ---
 
 ### Help NPC
 
-**Description**:
+**Description**:  
 
-Adds an NPC with information about the server.
 
-**Features**:
-
-- FAQ or tutorial dialogue.  
-- Potential link to server rules or website.
+Offers new or existing players in-game tips and tutorial info, possibly linking to external resources.
 
 ---
 
 ### Banker
 
-**Description**:
+**Description**:  
 
-Comprehensive banking system with multiple NPC roles.
 
-**Features**:
-
-- **Paycheck Retriever**: Where you get your salary.  
-- **Bank Manager**: Where you create your account.  
-- **Bank Teller**: Where you manage your bank accounts.  
-- Deposits, transfers, item banks, logs, etc.
+Comprehensive banking solution with multiple roles (Paycheck Retriever, Bank Manager, Teller) and account management.
 
 **Video**:
 
@@ -1858,42 +1337,32 @@ Comprehensive banking system with multiple NPC roles.
 
 ## Management
 
+---
+
 ### NPC Relationship
 
-**Description**:
+**Description**:  
 
-Makes NPCs from enemy factions attack you and allied ones be friendly towards you.
 
-**Features**:
-
-- Faction-based hostility or friendliness.  
-- Potential for neutral or dynamic relationships.
+Makes NPCs hostile or friendly based on faction alignment. Enemy factions attack on sight; allied ones assist.
 
 ---
 
 ### NPC Spawner
 
-**Description**:
+**Description**:  
 
-Adds spawners that can be placed in designated areas to generate NPCs.
 
-**Features**:
-
-- Configurable spawn rates and NPC types.  
-- Potential wave-based or random spawns.
+Places spawn points that periodically generate NPCs of selected types, with configurable rates and behaviors.
 
 ---
 
 ### Waypoints
 
-**Description**:
+**Description**:  
 
-Adds waypoints to preview and navigate to various locations.
 
-**Features**:
-
-- Customizable markers with names.  
-- Minimaps or on-screen arrow guidance.
+Creates navigational markers with on-screen indicators or distance previews.
 
 **Video**:
 
@@ -1909,66 +1378,46 @@ Adds waypoints to preview and navigate to various locations.
 
 ### Daily Rewards
 
-**Description**:
+**Description**:  
 
-Adds a daily reward system that provides bonuses for consecutive logins.
 
-**Features**:
-
-- Increasing rewards each day in a streak.  
-- Reset if a day is missed.
+Offers login streak bonuses. Missing a day resets the streak.
 
 ---
 
 ### Activities
 
-**Description**:
+**Description**:  
 
-Adds an activities system to keep players engaged with various tasks.
 
-**Features**:
-
-- Quests or tasks with rewards.  
-- Rotating daily or weekly objectives.
+Cycles through daily or weekly tasks for players to complete, rewarding items or currency.
 
 ---
 
 ### Steam Group Rewards
 
-**Description**:
+**Description**:  
 
-Adds a reward system based on players' membership in the Steam group.
 
-**Features**:
-
-- Bonus items or currency for group members.  
-- Automatic checking of group membership.
+Provides extra benefits to players who are verified members of the server’s Steam group.
 
 ---
 
 ### Steam Name Rewards
 
-**Description**:
+**Description**:  
 
-Adds a reward system for players who include the server identifier in their name.
 
-**Features**:
-
-- Automated or admin-approved checks.  
-- In-game reward distribution.
+Grants in-game perks or items if players include the server name/tag in their Steam username.
 
 ---
 
 ### Character List
 
-**Description**:
+**Description**:  
 
-A system that allows listing characters by a specific SteamID.
 
-**Features**:
-
-- View character info, offline ban/unban.  
-- Admin management for inactive characters.
+Lets admins or players view all characters tied to a SteamID. Can show stats, offline ban options, or other management tools.
 
 **Video**:
 
@@ -1984,110 +1433,77 @@ A system that allows listing characters by a specific SteamID.
 
 ### Automatic Events
 
-**Description**:
+**Description**:  
 
-Adds automatic events that spawn entities and NPCs, similar to the Wild Wasteland perk from Fallout.
 
-**Features**:
-
-- Random or scheduled events.  
-- Unique encounters, treasure hunts, or NPC invasions.
+Spawns random or scheduled events around the map (e.g., rare NPC encounters or treasure drops).
 
 ---
 
 ### Teleportable Doors
 
-**Description**:
+**Description**:  
 
-Adds a system where players can interact with doors to be teleported to different locations.
 
-**Features**:
-
-- Linked-door teleports or multi-destination menus.  
-- Potential cooldown or permission checks.
+Creates linked doors that teleport players between locations, with optional permissions or cooldowns.
 
 ---
 
 ## HUDs/UIs
 
+---
+
 ### EFT HUD
 
-**Description**:
+**Description**:  
 
-Adds a HUD similar to [Escape from Tarkov](https://www.escapefromtarkov.com/).
 
-**Features**:
-
-- Minimalistic ammo/health/stamina indicators.  
-- Inspired by EFT’s style and layout.
+Mimics the Escape from Tarkov HUD, showing minimalistic health, ammo, and stamina bars on-screen.
 
 ---
 
 ### Modified Character Creation
 
-**Description**:
+**Description**:  
 
-Adds an automatic description generator based on character details. Can include an ID system that displays various information about a player.
 
-**Features**:
-
-- Dynamic description creation (height, weight, traits).  
-- ID cards with embedded data.
+Adds an automatic description generator, including physical stats (height, weight) or attributes for new characters. May also provide an in-game ID system.
 
 ---
 
 ### Fallout 76 HUD
 
-**Description**:
+**Description**:  
 
-Adds a HUD similar to [Fallout 76](https://fallout.bethesda.net/en/games/fallout-76).
 
-**Features**:
-
-- AP meter, health bar, radiation indicators, etc.  
-- Authentic Fallout 76 style and color scheme.
+Reproduces the Fallout 76 interface, including AP, health, rad meters, and the signature aesthetic.
 
 ---
 
 ### Start Info
 
-**Description**:
+**Description**:  
 
-Adds a start information window that explains the setting of your game mode.
 
-**Features**:
-
-- Custom text/graphics for new players.  
-- Configurable design and pop-up triggers.
+Displays a custom pop-up or window on first join to explain the server setting, lore, or rules.
 
 ---
 
 ### Fallout 3/New Vegas HUD
 
-**Description**:
+**Description**:  
 
-Adds a [Fallout: New Vegas](https://fallout.bethesda.net/en/game/fallout-new-vegas) themed HUD.
 
-**Features**:
-
-- Classic green Pip-Boy style bars.  
-- Health, AP, RAD, ammo counters in FNV style.
+Provides a classic green Pip-Boy style HUD, showing health, AP, rad levels, and ammo counters.
 
 ---
 
 ### Video Intro
 
-**Description**:
+**Description**:  
 
-Adds introductory video sequences that play whenever a player first joins the server. Useful for introducing rules, lore, or gameplay objectives.
 
-**Features**:
-
-- **Customizable Intro Videos**: Upload and assign specific videos to play for new players.  
-- **Trigger Mechanisms**: Can be triggered on first login or entering specific areas.  
-- **Seamless Integration**: Smooth transitions between video intros and gameplay.  
-- **Interactive Prompts**: Optionally require rule acceptance or tutorial navigation.  
-- **Support for Multiple Formats**: Compatible with various video formats.
+Adds an introductory video (or series of videos) that plays for new players, conveying rules, lore, or tutorials. The system supports various triggers—such as first-time login or entering specific areas—and seamlessly transitions back to gameplay afterward. It can also incorporate prompts for rule acceptance or tutorial navigation, and supports multiple video formats for maximum compatibility.
 
 **Video**:
 
@@ -2100,3 +1516,543 @@ Adds introductory video sequences that play whenever a player first joins the se
 </details>
 
 ---
+
+### Combat Zones
+
+**Description**:  
+
+
+Introduces designated PvP or contested areas, rewarding players or factions for maintaining control.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/CombatZones.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Helix Loot Spawner
+
+**Description**:  
+
+
+An advanced loot spawning system made for Helix that periodically generates randomized items in configured locations.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/IX_LootSpawner.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+### Warhammer Character Sheet
+
+**Description**:  
+
+
+Adds a dedicated Warhammer-themed character sheet that references Warhammer lore. This may include specialized factions, weapons, or races, integrated with unique stats and roleplay elements to create an immersive Warhammer experience.
+
+**Video**:
+
+<details>
+  <summary>Click to Show Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Warhammer%20CharSheet.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</details>
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Compatbility
+
+
+
+
+### Modern Warfare Base Support
+
+**Description**:  
+
+
+Implements Compatibility to the Modern Warfare Weapon Base.
+
+---
+
+### News
+
+**Description**:  
+
+
+Adds A NewsPaper System that distributes the news.
+
+---
+
+### NPC Drop
+
+**Description**:  
+
+
+Allows certain items to be dropped by certain NPCs depending on a given configuration.
+
+---
+
+### Property
+
+**Description**:  
+
+
+Implements a property-ownership system that differs from standard Assigned Housing. Allows advanced configuration options for renting, door ownership and allows you to buy it on demand, witohut having to be asigned.
+
+---
+
+### Roulette
+
+**Description**:  
+
+
+Adds a gacha-like bags that have a item table. This allows you to set gacha bags that give a item based on chance.
+
+---
+
+### Skill Menu
+
+**Description**:  
+
+
+Provides a visually intuitive interface for players to view and improve their skills, abilities. Useful in RPG-styled servers where progression is tied to skill levels.
+
+---
+
+### View Bobbing
+
+**Description**:  
+
+
+Introduces a more immersive first-person camera movement, making the player’s view gently bob or sway while walking or running.
+
+---
+
+
+### Activity
+
+**Description**:  
+
+
+Adds Several Activites to keep players base
+---
+
+
+### Cassette Player
+
+**Description**:  
+
+
+Simulates an old-school cassette deck that can play localized music or audio logs. Great for thematic servers wanting a retro vibe.
+
+---
+
+### Cinematic Entrance
+
+**Description**:  
+
+
+Emulates Call of Duty–style mission starts or teleports. Players may spawn or enter a zone with dramatic camera work.
+
+---
+
+### Consoles
+
+**Description**:  
+
+
+Generates in-game “consoles” or terminals that periodically provide random roleplay information, data logs, or intel. Often used in sci-fi or military settings.
+
+---
+
+### RPG Main Menu
+
+**Description**:  
+
+
+Overhauls character creation and other UI elements with a cinematic approach, suitable for serious RP frameworks where immersion is key.
+
+---
+
+### Global Voice
+
+**Description**:  
+
+
+Allows admins or specially permitted users to broadcast voice chat server-wide, overriding normal proximity or radio channels.
+
+---
+
+### Intel
+
+**Description**:  
+
+
+Provides randomizable “intel” items or data that can be found, traded, or used in missions. Often has strategic value for factions or roleplay storylines.
+
+---
+
+### JMOD EFT
+
+**Description**:  
+
+
+Adds JMOD compatibility for EFT-inspired features—such as loot containers, advanced medical or ballistic items—for servers blending JMOD with Escape from Tarkov mechanics.
+
+---
+
+### Limb Ripper
+
+**Description**:  
+
+
+A more extreme take on limb damage, expanding upon limbsevering with additional gore effects or advanced wound tracking.
+
+
+
+
+### Modern Warfare Base Support
+
+**Description**:  
+
+Implements Compatibility to the Modern Warfare Weapon Base.
+
+---
+
+### News
+
+**Description**:  
+
+Adds A NewsPaper System that distributes the news.
+
+---
+
+### NPC Drop
+
+**Description**:  
+
+Allows certain items to be dropped by certain NPCs depending on a given configuration.
+
+---
+
+### Property
+
+**Description**:  
+
+Implements a property-ownership system that differs from standard Assigned Housing. Allows advanced configuration options for renting, door ownership and lets you buy it on demand, without having to be assigned.
+
+---
+
+### Roulette
+
+**Description**:  
+
+Adds a gacha-like bag system that has an item table. This allows you to set bags that give an item based on chance.
+
+---
+
+### Skill Menu
+
+**Description**:  
+
+Provides a visually intuitive interface for players to view and improve their skills and abilities. Useful in RPG-styled servers where progression is tied to skill levels.
+
+---
+
+### View Bobbing
+
+**Description**:  
+
+Introduces a more immersive first-person camera movement, making the player’s view gently bob or sway while walking or running.
+
+---
+
+### Activity
+
+**Description**:  
+
+Adds several activities to keep the player base engaged.
+
+---
+
+### Cassette Player
+
+**Description**:  
+
+Simulates an old-school cassette deck that can play localized music or audio logs. Great for thematic servers wanting a retro vibe.
+
+---
+
+### Cinematic Entrance
+
+**Description**:  
+
+Emulates Call of Duty–style mission starts or teleports. Players may spawn or enter a zone with dramatic camera work.
+
+---
+
+### Consoles
+
+**Description**:  
+
+Generates in-game “consoles” or terminals that periodically provide random roleplay information, data logs, or intel. Often used in sci-fi or military settings.
+
+---
+
+### RPG Main Menu
+
+**Description**:  
+
+Overhauls character creation and other UI elements with a cinematic approach, suitable for serious RP frameworks where immersion is key.
+
+---
+
+### Global Voice
+
+**Description**:  
+
+Allows admins or specially permitted users to broadcast voice chat server-wide, overriding normal proximity or radio channels.
+
+---
+
+### Intel
+
+**Description**:  
+
+Provides randomizable “intel” items or data that can be found, traded, or used in missions. Often has strategic value for factions or roleplay storylines.
+
+---
+
+### JMOD EFT
+
+**Description**:  
+
+Adds JMOD compatibility for EFT-inspired features—such as loot containers, advanced medical or ballistic items—for servers blending JMOD with Escape from Tarkov mechanics.
+
+---
+
+### Limb Ripper
+
+**Description**:  
+
+A more extreme take on limb damage, expanding upon limb severing with additional gore effects or advanced wound tracking.
+
+---
+
+### ARC9 Base
+
+**Description**:  
+
+Integrates the ARC9 weapon customization system.
+
+---
+
+### ARCCW Base
+
+**Description**:  
+
+Implements a compatibility system for ARCCW, similar to ARC9 but focused on ARCCW's codebase.
+
+---
+
+### GQuest
+
+**Description**:  
+
+Adds compatibility with [GQuest](https://www.gmodstore.com/market/view/gquest-the-perfect-quest-system).
+
+---
+
+### Cigarette Factory
+
+**Description**:  
+
+Adds compatibility with [Cigarette Factory](https://www.gmodstore.com/market/view/simple-cigarette-factory).
+
+---
+
+### Casino Kit Blackjack
+
+**Description**:  
+
+Adds compatibility with [Casino Kit Blackjack](https://www.gmodstore.com/market/view/casino-kit-blackjack).
+
+---
+
+### Casino Kit Craps
+
+**Description**:  
+
+Adds compatibility with [Casino Kit Craps](https://www.gmodstore.com/market/view/casino-kit-craps).
+
+---
+
+### PCasino
+
+**Description**:  
+
+Adds compatibility with [PCasino](https://www.gmodstore.com/market/view/pcasino-the-perfect-casino-addon-roulette-blackjack-slots-prize-wheel).
+
+---
+
+### UWeed
+
+**Description**:  
+
+Adds compatibility with [UWeed](https://www.gmodstore.com/market/view/uweed-advanced-cannabis-growth-drug).
+
+---
+
+### UWeed Edibles
+
+**Description**:  
+
+Adds compatibility with [UWeed Edibles](https://www.gmodstore.com/market/view/uweed-extended-edibles-dlc).
+
+---
+
+### Tobacco Factory
+
+**Description**:  
+
+Adds compatibility with [Tobacco Factory](https://www.gmodstore.com/market/view/tobacco-factory).
+
+---
+
+### Zero's Retro Mining
+
+**Description**:  
+
+Adds compatibility with [Zero's Retro Miner](https://www.gmodstore.com/market/view/zero-s-retrominer-mining-script).
+
+---
+
+### ATOW/CW Compatibility
+
+**Description**:  
+
+Adds compatibility with [ATOW](https://steamcommunity.com/sharedfiles/filedetails/?id=859981128) and [Customizable Weaponry](https://steamcommunity.com/workshop/filedetails/?id=349050451).
+
+---
+
+### TFA
+
+**Description**:  
+
+Adds compatibility with [TFA Base](https://steamcommunity.com/sharedfiles/filedetails/?id=2840031720).
+
+---
+
+### APhone
+
+**Description**:  
+
+Adds compatibility with [APhone](https://www.gmodstore.com/market/view/aphone-a-feature-rich-phone).
+
+---
+
+### Zero's Cooking
+
+**Description**:  
+
+Adds compatibility with [Zero's MasterChef](https://www.gmodstore.com/market/view/zero-s-masterchef-cooking-script).
+
+---
+
+### Zero's Factory
+
+**Description**:  
+
+Adds compatibility with [Zero's Factory](https://www.gmodstore.com/market/view/zero-s-factory-crafting-space).
+
+---
+
+### CityWorker
+
+**Description**:  
+
+Adds compatibility with [CityWorker](https://www.gmodstore.com/market/view/darkrp-city-worker).
+
+---
+
+### CH_Farming
+
+**Description**:  
+
+Adds compatibility with [CH_Farming](https://www.gmodstore.com/market/view/farming-grow-plants-sell-crops).
+
+---
+
+### CH_BitMiners
+
+**Description**:  
+
+Adds compatibility with [CH_BitMiners](https://www.gmodstore.com/market/view/bitminers).
+
+---
+
+### Fine/Fining
+
+**Description**:  
+
+Adds compatibility with [Fine/Fining System Customizable](https://www.gmodstore.com/market/view/v1-3-1-fine-fining-system-customizable).
+
+---
+
+### Magic Mushroom Factory
+
+**Description**:  
+
+Adds compatibility with [Magic Mushroom Factory](https://www.gmodstore.com/market/view/magic-mushroom-factory-drug-script-and-darkrp-job).
+
+---
+
+### Stock Market
+
+**Description**:  
+
+Adds compatibility with [Stock Market Addon | Control Your Economy](https://www.gmodstore.com/market/view/stock-market-addon-pointshop-support-control-your-economy).
+
+---
+
+### LSCS - Lightsaber
+
+**Description**:  
+
+Adds compatibility with [[LSCS] - Lightsaber - Force Powers](https://steamcommunity.com/sharedfiles/filedetails/?id=2837856621).
+
+---
+
+### Simple Mining System
+
+**Description**:  
+
+Adds compatibility with [Simple Mining System](https://www.gmodstore.com/market/view/simple-mining-system).
