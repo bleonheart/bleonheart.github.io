@@ -1,1021 +1,817 @@
-# For Sale
+Below is the original feature list reorganized into **four main categories** as requested:  
+1. **General Mechanics**  
+2. **Talkable NPCs**  
+3. **HUDs/UIs**  
+4. **Compatibility**  
+
+All descriptions, video links, and details have been placed under whichever of the four categories they best fit.  
 
 ---
 
-## General Mechanics
+# 1. General Mechanics
 
 ---
 
-### Weapon Holstering
-
-**Description**:  
-
+## Weapon Holstering
+**Description**: 
 
 Allows players to holster and unholster weapons visually, improving immersion by showing the holstered weapon model on the player.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/WeaponHolstering.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Walk Types
-
-**Description**:  
-
+## Walk Types
+**Description**: 
 
 Adds various walking speeds and styles for players, each with a distinct movement speed and animation.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/WalkTypes.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Dropshipping System
-
-**Description**:  
-
+## Dropshipping System
+**Description**: 
 
 Implements a Combine Dropship for fast travel or troop transport. Allows configuring destinations and straightforward setups.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Dropshipping%20System.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Faction Stashes
-
-**Description**:  
-
+## Faction Stashes
+**Description**: 
 
 Provides a centralized stash shared by all members of a faction. Items can have a set price, managed by stock, and cannot be purchased if the stock is empty.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/factionstashes.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Representative Voting
-
-**Description**:  
-
+## Representative Voting
+**Description**: 
 
 Implements a voting system akin to the American House of Representatives, where selected individuals from a predefined list are voted in for a given role or group.
 
 ---
 
-### Legislative Voting
-
-**Description**:  
-
+## Legislative Voting
+**Description**: 
 
 Introduces a lawmaking system where players propose laws and vote “Aye,” “Nay,” or “Abstain.” Results are tallied at the end.
 
 ---
 
-### Presidential Voting
-
-**Description**:  
-
+## Presidential Voting
+**Description**: 
 
 Facilitates presidential elections based on popular vote. Players register as candidates, and the system tallies votes.
 
 ---
 
-### Food
-
-**Description**:  
-
+## Food
+**Description**: 
 
 Implements a hunger and thirst system that can affect stamina regeneration or prevent sprinting if left unchecked. Supports integration with Zero’s MasterChef and includes optional radiation mechanics.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Food.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Citizen ID – Passport Papers
-
-**Description**:  
-
+## Citizen ID – Passport Papers
+**Description**: 
 
 Designed for HL2RP, players start with temporary passport papers and must visit a Combine authority or terminal to obtain a permanent Citizen ID, each uniquely tied to the character.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/CID.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Working Terminal
-
-**Description**:  
-
+## Working Terminal
+**Description**: 
 
 Allows players to join or leave specific classes in a faction through interactive terminals. Settings are highly customizable, and players can flag themselves active or inactive.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/civilterminals.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Code 99
-
-**Description**:  
-
+## Code 99
+**Description**: 
 
 Lets players quickly call police assistance via a keybind. Displays a waypoint to indicate how many officers are needed and highlights the location.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Code99.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Gas Mask
-
-**Description**:  
-
+## Gas Mask
+**Description**: 
 
 Adds a mustard gas SWEP and a gas mask item. Players in gas without a mask take heavy damage over time; wearing a gas mask provides immunity.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/GasMask.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### RP Characters
-
-**Description**:  
-
+## RP Characters
+**Description**: 
 
 Players spawn as randomly generated characters with unique stats. Upon death, the system shows how long they survived, adding narrative depth to roleplay.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/RPCharacters.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Zomboid Stats
-
-**Description**:  
-
+## Zomboid Stats
+**Description**: 
 
 Inspired by Project Zomboid, this adds detailed traits, skills, and backgrounds to characters. These stats can affect crafting, combat, and other gameplay elements.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Zomboid.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Radiation
-
-**Description**:  
-
+## Radiation
+**Description**: 
 
 Functions similarly to Fallout, where increasing radiation levels reduce maximum health. Anti-radiation items or treatments may be used to combat it.
 
 ---
 
-### Drugs
+## NPC Drop
+**Description**: 
 
-**Description**:  
+Allows certain items to be dropped by certain NPCs depending on a given configuration.
 
+---
+
+## Property
+**Description**: 
+
+Implements a property-ownership system that differs from standard Assigned Housing—allows advanced configuration options for renting, door ownership, and on-demand buying.
+
+---
+
+## Roulette
+**Description**: 
+
+Adds a gacha-like bag system that has an item table; items are given based on chance.
+
+---
+
+## Skill Menu
+**Description**: 
+
+Provides a visually intuitive interface for players to view and improve their skills/abilities, useful in RPG-styled servers.
+
+---
+
+## View Bobbing
+**Description**: 
+
+Introduces a more immersive first-person camera movement, making the player’s view gently sway while walking/running.
+
+---
+
+## Drugs
+**Description**: 
 
 Introduces a system to process raw drug bricks into usable items that grant various buffs or debuffs.
 
 ---
 
-### Languages
-
-**Description**:  
-
+## Languages
+**Description**: 
 
 Lets players learn and speak different languages via books. Only those who know a language can understand it in-character.
 
 ---
 
-### Tying
-
-**Description**:  
-
+## Tying
+**Description**: 
 
 Expands on tying mechanics, allowing dragging, blindfolding, and gagging of restrained players. Also enables searching them with or without consent.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Tying.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Looting
-
-**Description**:  
-
+## Looting
+**Description**: 
 
 Enables looting across the map with configurable rarity, probability-based item distribution, and per-entity loot tables.
 
 ---
 
-### Wiretaps
-
-**Description**:  
-
+## Wiretaps
+**Description**: 
 
 Lets players place wiretap devices in rooms and listen in from a remote receiver, facilitating covert surveillance.
 
 ---
 
-### Crafting
-
-**Description**:  
-
+## Crafting
+**Description**: 
 
 Provides a multi-table, multi-step crafting system governed by blueprints, limiting who can craft specific items.
 
 ---
 
-### Bank Robbery
-
-**Description**:  
-
+## Bank Robbery
+**Description**: 
 
 Adds a bank safe that can be robbed if enough police are online. The safe accumulates money incrementally over time.
 
 ---
 
-### Rideable Mounts
-
-**Description**:  
-
+## Rideable Mounts
+**Description**: 
 
 Allows players to mount animals or creatures. Flying mounts can ascend by holding jump, while land mounts can sprint.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/RideablePets.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### In-depth Armors
-
-**Description**:  
-
+## In-depth Armors
+**Description**: 
 
 Offers deep customization for armors, including movement speed changes, jump height, resistances, and visual overlays.
 
 ---
 
-### Marketplace
-
-**Description**:  
-
+## Marketplace
+**Description**: 
 
 Establishes a global marketplace entity where players can list items for sale, buy items, and manage transactions.
 
 ---
 
-### Lockpicking
-
-**Description**:  
-
+## Lockpicking
+**Description**: 
 
 Adds a Fallout-style lockpick mini-game to open locked doors, with configurable difficulty and success rates.
 
 ---
 
-### Phone
-
-**Description**:  
-
+## Phone
+**Description**: 
 
 Implements mobile phones for in-game private messaging (SMS) and an optional call system.
 
 ---
 
-### Telephone
-
-**Description**:  
-
+## Telephone
+**Description**: 
 
 Adds payphones for public or private calls to other players; can be integrated with wiretapping.
 
 ---
 
-### Radio
-
-**Description**:  
-
+## Radio
+**Description**: 
 
 Provides radios with multiple frequencies for text or voice communication.
 
 ---
 
-### Jukeboxes
-
-**Description**:  
-
+## Jukeboxes
+**Description**: 
 
 Allows environment-wide music playback using a configured library on a web server.
 
 ---
 
-### Typewriter
-
-**Description**:  
-
+## Typewriter
+**Description**: 
 
 Enables creation of in-game notes or documents linking to external Google Docs. Perfect for newspapers or official letters.
 
 ---
 
-### Fishing
-
-**Description**:  
-
+## Fishing
+**Description**: 
 
 Lets players fish for items, trash, or money based on a configurable rarity system. Includes a “sweet spot” mechanic for timing.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Fishing.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Woodcutting
-
-**Description**:  
-
+## Woodcutting
+**Description**: 
 
 Introduces the ability to chop wood from trees, with configurable drop rates. Often integrates with crafting or economy systems.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Woodcutting.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Mining
-
-**Description**:  
-
+## Mining
+**Description**: 
 
 Allows players to mine ores from designated nodes, with drop chances and rarity settings. Often ties into crafting or trade.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="Mining.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Store Robbery
-
-**Description**:  
-
+## Store Robbery
+**Description**: 
 
 Lets players rob stores for configurable loot items and possibly trigger police alerts or alarms.
 
 ---
 
-### Forward Operating Bases (FOB)
-
-**Description**:  
-
+## Forward Operating Bases (FOB)
+**Description**: 
 
 Allows a faction to set up a spawnable outpost for its members to respawn at, with customizable cooldowns.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/FOB.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Safebox
-
-**Description**:  
-
+## Safebox
+**Description**: 
 
 Works like an Ender Chest, giving players personal, persistent storage accessible from multiple safebox entities.
 
 ---
 
-### Newspapers
-
-**Description**:  
-
+## Newspapers
+**Description**: 
 
 Lets a designated faction create in-game newspapers with editable text, distributing them as physical items.
 
 ---
 
-### Oil
-
-**Description**:  
-
+## Oil
+**Description**: 
 
 Adds the ability to extract oil over time using rigs or pumps, which can then be sold or refined for profit.
 
 ---
 
-### Revive System
-
-**Description**:  
-
+## Revive System
+**Description**: 
 
 Players become downed instead of dying immediately, giving teammates a chance to revive them before they bleed out.
 
 ---
 
-### Vending Machines
-
-**Description**:  
-
+## Vending Machines
+**Description**: 
 
 Dispenses configurable items for a set price, automatically providing the purchased item to the player.
 
 ---
 
-### Broadcast Radio
-
-**Description**:  
-
+## Broadcast Radio
+**Description**: 
 
 Allows server-wide voice or music broadcasts. Ideal for radio host or DJ-style roleplay.
 
 ---
 
-### Vinyl Disk Player
-
-**Description**:  
-
+## Vinyl Disk Player
+**Description**: 
 
 Enables the use of vinyl records with unique tracks on a vintage-style player.
 
 ---
 
-### Car Radios
-
-**Description**:  
-
+## Car Radios
+**Description**: 
 
 Lets drivers and passengers tune into radio stations or streams while in a vehicle.
 
 ---
 
-### Chess
-
-**Description**:  
-
+## Chess
+**Description**: 
 
 Adds a fully playable chess board and pieces for two players.
 
 ---
 
-### Permits
-
-**Description**:  
-
+## Permits
+**Description**: 
 
 Restricts certain items behind permits, which can be granted to specific factions or classes.
 
 ---
 
-### Convertibles
-
-**Description**:  
-
+## Convertibles
+**Description**: 
 
 Allows players to convert placed props or entities into item form, enabling redeployment elsewhere.
 
 ---
 
-### Medical System
-
-**Description**:  
-
+## Medical System
+**Description**: 
 
 Provides detailed health mechanics such as limb injuries, diseases, and treatments.
 
 ---
 
-### Clock
-
-**Description**:  
-
+## Clock
+**Description**: 
 
 Displays current time, synchronizing with Stormfox2 or server time for roleplay purposes.
 
 ---
 
-### Stables
-
-**Description**:  
-
+## Stables
+**Description**: 
 
 Introduces a horse ownership system where players can purchase, spawn, and ride their personal horses.
 
 ---
 
-### Magazines
-
-**Description**:  
-
+## Magazines
+**Description**: 
 
 Requires players to manage physical magazines for their weapons; guns only reload from these magazines.
 
 ---
 
-### Perks
-
-**Description**:  
-
+## Perks
+**Description**: 
 
 Adds a perks interface that can be restricted by faction, level, or other conditions.
 
 ---
 
-### Car Bomber
-
-**Description**:  
-
+## Car Bomber
+**Description**: 
 
 Lets players place a bomb in a vehicle, triggering a timed explosion with optional defusal mechanics.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/CarBomb.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Factories
-
-**Description**:  
-
+## Factories
+**Description**: 
 
 Spawns items automatically by consuming resources, acting like a production line with configurable rates.
 
 ---
 
-### VATS
-
-**Description**:  
-
+## VATS
+**Description**: 
 
 Inspired by Fallout’s targeting system, allows players to attempt targeted shots with chance-based success.
 
 ---
 
-### Gacha Bags
-
-**Description**:  
-
+## Gacha Bags
+**Description**: 
 
 Implements a gacha mechanic where players open “bags” or “boxes” for randomized item rewards.
 
 ---
 
-### Airdrops
-
-**Description**:  
-
+## Airdrops
+**Description**: 
 
 Periodically drops crates with loot around the map, encouraging players to race for the rewards.
 
 ---
 
-### Turf Wars
-
-**Description**:  
-
+## Turf Wars
+**Description**: 
 
 Introduces capture zones that generate money or items for the faction holding them. Encourages territorial conflict.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/ControlPoints.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Animal Butchering
-
-**Description**:  
-
+## Animal Butchering
+**Description**: 
 
 When certain animals are killed, their carcasses can be butchered for meat, hides, or other resources.
 
 ---
 
-### Keycards
-
-**Description**:  
-
+## Keycards
+**Description**: 
 
 Grants item-based door access using keycards of varying clearance levels.
 
 ---
 
-### Clearance Levels
-
-**Description**:  
-
+## Clearance Levels
+**Description**: 
 
 Restricts doors and areas based on multi-tier security clearances, often tied to factions or ranks.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Clearance.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Sanity
-
-**Description**:  
-
+## Sanity
+**Description**: 
 
 Adds a sanity meter that decreases from traumatic events, causing visual/auditory hallucinations at low levels.
 
 ---
 
-### Organs
-
-**Description**:  
-
+## Organs
+**Description**: 
 
 Assigns random-quality organs to each character. Better organs grant minor buffs; worse ones cause drawbacks.
 
 ---
 
-### Attribute Rolling
-
-**Description**:  
-
+## Attribute Rolling
+**Description**: 
 
 Randomly generates character stats (e.g., Strength, Perception) on creation, affecting gameplay accordingly.
 
 ---
 
-### Attribute Fog
-
-**Description**:  
-
+## Attribute Fog
+**Description**: 
 
 Limits view distance based on a “Perception” attribute, creating literal fog for lower scores.
 
 ---
 
-### Cinematic Text
-
-**Description**:  
-
+## Cinematic Text
+**Description**: 
 
 Displays large, stylized text overlays for dramatic effect during events or cutscenes.
 
 ---
 
-### Attribute-Based Damage
-
-**Description**:  
-
+## Attribute-Based Damage
+**Description**: 
 
 Ties damage output to specific stats, such as Strength for melee.
 
 ---
 
-### Durability
-
-**Description**:  
-
+## Durability
+**Description**: 
 
 Implements weapon durability, reducing an item’s effectiveness over time until repaired.
 
 ---
 
-### Animations
-
-**Description**:  
-
+## Animations
+**Description**: 
 
 Adds extra roleplay animations like Surrender, Salute, or Cross Arms, accessible via commands or a menu.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Animations.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Animation Wheel
-
-**Description**:  
-
+## Animation Wheel
+**Description**: 
 
 Provides a wheel interface with a whitelist of animations for quick selection.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/AnimationWheel.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Squads
-
-**Description**:  
-
+## Squads
+**Description**: 
 
 Allows players to form squads (or parties) with shared chat, markers, and possible group rewards.
 
 ---
 
-### Reputation System
-
-**Description**:  
-
+## Reputation System
+**Description**: 
 
 NPC factions may be friendly or hostile depending on the player’s faction affiliation, gear, or actions.
 
 ---
 
-### Karma System
-
-**Description**:  
-
+## Karma System
+**Description**: 
 
 Awards or subtracts karma based on player actions, which can affect NPC or faction attitudes.
 
 ---
 
-### Medals
-
-**Description**:  
-
+## Medals
+**Description**: 
 
 Displays earned medals above a player’s head, highlighting achievements or roles.
 
 ---
 
-### Faction Menu
-
-**Description**:  
-
+## Faction Menu
+**Description**: 
 
 Enables in-game faction management for inviting or removing members.
 
-**Video** (Faction Invites):
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video (Faction Invites)</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/FactionInvites.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Map
-
-**Description**:  
-
+## Map
+**Description**: 
 
 Provides a top-down map interface with the ability to set waypoints or markers, useful for navigation.
 
 ---
 
-### Serial Numbers
-
-**Description**:  
-
+## Serial Numbers
+**Description**: 
 
 Each item (or weapon) has a serial number that police can check. Some can be erased if illicit.
 
 ---
 
-### EFT Corpses
-
-**Description**:  
-
+## EFT Corpses
+**Description**: 
 
 Makes player corpses fully lootable upon death, mimicking Escape from Tarkov’s loot-on-death style.
 
 ---
 
-### Transformative Items
-
-**Description**:  
-
+## Transformative Items
+**Description**: 
 
 Allows items to temporarily or permanently turn the player into a creature with unique abilities.
 
 ---
 
-### Clothing Status
-
-**Description**:  
-
+## Clothing Status
+**Description**: 
 
 Tracks clothing cleanliness. Over time, clothes get dirty and may need washing or repair.
 
 ---
 
-### Raiding System
-
-**Description**:  
-
+## Raiding System
+**Description**: 
 
 Adds structured raiding or ambushing features for faction conflict. Notifies defenders and rewards attackers or defenders.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Raid%20System.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Police Lockers
-
-**Description**:  
-
+## Police Lockers
+**Description**: 
 
 Police officers can temporarily draw guns from lockers while on duty and must return them afterwards.
 
 ---
 
-### TV System
-
-**Description**:  
-
+## TV System
+**Description**: 
 
 Allows broadcasting of live or recorded content to in-game televisions for other players to watch.
 
 ---
 
-### Leveling
-
-**Description**:  
-
+## Leveling
+**Description**: 
 
 Implements a level system, increasing attributes like max health or unlocking new abilities.
 
 ---
 
-### Ranking System
-
-**Description**:  
-
+## Ranking System
+**Description**: 
 
 Adds visible ranks on the scoreboard. Can integrate with factions, awarding custom weapons or models for higher ranks.
-
-**Videos**:
 
 <details>
   <summary>Click to Show Video (Ranks)</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Ranks.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
@@ -1023,1036 +819,656 @@ Adds visible ranks on the scoreboard. Can integrate with factions, awarding cust
   <summary>Click to Show Video (SimpleRankingSystem)</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/SimpleRankingSystem.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Syringes
-
-**Description**:  
-
+## Syringes
+**Description**: 
 
 One-use items that grant temporary boosts (speed, armor, health, or jump). Often used in combat or emergencies.
 
 ---
 
-### Social Credit System
-
-**Description**:  
-
+## Social Credit System
+**Description**: 
 
 Awards points for desirable behavior or tasks. Points can unlock perks, titles, or bonuses.
 
 ---
 
-### Prop-Based Construction
-
-**Description**:  
-
+## Prop-Based Construction
+**Description**: 
 
 Inspired by Rust. Instead of spawning props freely, players use items to build structures in tiers.
 
 ---
 
-### Farming
-
-**Description**:  
-
+## Farming
+**Description**: 
 
 Enables planting and growing crops over time, harvested for resources or sale.
 
 ---
 
-### Advanced Injuries
-
-**Description**:  
-
+## Advanced Injuries
+**Description**: 
 
 Implements various injuries (bleeding, broken limbs, PTSD, concussion) with unique effects and specialized treatments.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Injuries.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Bonemerge System
-
-**Description**:  
-
+## Bonemerge System
+**Description**: 
 
 Lets players layer multiple clothing or armor pieces that bonemerge onto their model. Useful for outfit variety.
 
 ---
 
-### Guilds
-
-**Description**:  
-
+## Guilds
+**Description**: 
 
 Allows creation of player-made organizations with custom ranks, permissions, shared banks, and logs.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Organizations.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Assigned Housing
-
-**Description**:  
-
+## Assigned Housing
+**Description**: 
 
 Enables properties or doors to be assigned to specific factions or players, with persistent ownership and rent.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/Housing.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Camera (CCTV)
-
-**Description**:  
-
+## Camera (CCTV)
+**Description**: 
 
 Players or factions can place cameras that can be named and remotely viewed. Non-whitelisted players can hack them.
 
-**Video**:
-
 <details>
-  <summary>Click to Show Video</summary>
+  <summary>Video</summary>
   <video width="560" height="315" controls>
     <source src="https://bleonheart.github.io/assets/videos/CCTV.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </details>
 
 ---
 
-### Law Board
-
-**Description**:  
-
+## Law Board
+**Description**: 
 
 Presents a clickable board that opens a webpage or text displaying server rules or local laws.
 
 ---
 
-### DEFCON
-
-**Description**:  
-
+## DEFCON
+**Description**: 
 
 Implements security levels 1–5, shifting server states or restrictions based on threats.
 
 ---
 
-### Trading
-
-**Description**:  
-
+## Trading
+**Description**: 
 
 Adds a secure trade window to exchange items and money, preventing scams.
 
 ---
 
-### Cutscenes
-
-**Description**:  
-
+## Cutscenes
+**Description**: 
 
 Creates Call of Duty-inspired mission briefings or story intros, complete with cinematic camera transitions.
 
 ---
 
-### Car Options
-
-**Description**:  
-
+## Car Options
+**Description**: 
 
 Gives drivers extra controls such as kicking passengers, locking doors from the inside, or checking trunk contents.
 
 ---
 
-## Talkable NPCs
-
----
-
-### Bodyguard System
-
-**Description**:  
-
-
-Enables hiring NPC guards for protection, with wages and loyalty checks.
-
----
-
-### Property Seller
-
-**Description**:  
-
-
-NPC that sells houses to players, transferring ownership upon purchase.
-
----
-
-### Black Market Vendor
-
-**Description**:  
-
-
-NPC offering illegal items or deliveries to specific map locations.
-
----
-
-### Car Dealer
-
-**Description**:  
-
-
-Facilitates buying and selling cars through an NPC menu, optionally with customization.
-
----
-
-### Bounty Hunter
-
-**Description**:  
-
-
-Provides bounties for wanted players. Rewards are given once proof of capture or elimination is provided.
-
----
-
-### Jailer
-
-**Description**:  
-
-
-Allows jailing of players for a set time through an NPC interface, automatically freeing them after.
-
----
-
-### Mechanic
-
-**Description**:  
-
-
-Hires players into a mechanic faction, repairing vehicles for money or faction reputation.
-
----
-
-### Police
-
-**Description**:  
-
-
-NPC that manages police faction recruitment and handles crime reports or warrants.
-
----
-
-### Taxis
-
-**Description**:  
-
-
-Lets players join a Taxi Job, picking up NPC or player passengers for monetary rewards.
-
----
-
-### Delivery
-
-**Description**:  
-
-
-Adds a delivery job where players drive packages around the map, earning money upon completion.
-
----
-
-### Intergalactic Taxi
-
-**Description**:  
-
-
-NPC-based fast travel system, allowing players to teleport to specified destinations for a fee.
-
----
-
-### Recruitment NPC
-
-**Description**:  
-
-
-Instantly recruits players into a specific faction with assigned ranks if necessary.
-
----
-
-### Help NPC
-
-**Description**:  
-
-
-Offers new or existing players in-game tips and tutorial info, possibly linking to external resources.
-
----
-
-### Banker
-
-**Description**:  
-
-
-Comprehensive banking solution with multiple roles (Paycheck Retriever, Bank Manager, Teller) and account management.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Banking.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-## Management
-
----
-
-### NPC Relationship
-
-**Description**:  
-
-
-Makes NPCs hostile or friendly based on faction alignment. Enemy factions attack on sight; allied ones assist.
-
----
-
-### NPC Spawner
-
-**Description**:  
-
-
-Places spawn points that periodically generate NPCs of selected types, with configurable rates and behaviors.
-
----
-
-### Waypoints
-
-**Description**:  
-
-
-Creates navigational markers with on-screen indicators or distance previews.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Waypoints.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Daily Rewards
-
-**Description**:  
-
-
-Offers login streak bonuses. Missing a day resets the streak.
-
----
-
-### Activities
-
-**Description**:  
-
-
-Cycles through daily or weekly tasks for players to complete, rewarding items or currency.
-
----
-
-### Steam Group Rewards
-
-**Description**:  
-
-
-Provides extra benefits to players who are verified members of the server’s Steam group.
-
----
-
-### Steam Name Rewards
-
-**Description**:  
-
-
-Grants in-game perks or items if players include the server name/tag in their Steam username.
-
----
-
-### Character List
-
-**Description**:  
-
-
-Lets admins or players view all characters tied to a SteamID. Can show stats, offline ban options, or other management tools.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/CharacterList.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Automatic Events
-
-**Description**:  
-
-
-Spawns random or scheduled events around the map (e.g., rare NPC encounters or treasure drops).
-
----
-
-### Teleportable Doors
-
-**Description**:  
-
-
-Creates linked doors that teleport players between locations, with optional permissions or cooldowns.
-
----
-
-## HUDs/UIs
-
----
-
-### EFT HUD
-
-**Description**:  
-
-
-Mimics the Escape from Tarkov HUD, showing minimalistic health, ammo, and stamina bars on-screen.
-
----
-
-### Modified Character Creation
-
-**Description**:  
-
-
-Adds an automatic description generator, including physical stats (height, weight) or attributes for new characters. May also provide an in-game ID system.
-
----
-
-### Fallout 76 HUD
-
-**Description**:  
-
-
-Reproduces the Fallout 76 interface, including AP, health, rad meters, and the signature aesthetic.
-
----
-
-### Start Info
-
-**Description**:  
-
-
-Displays a custom pop-up or window on first join to explain the server setting, lore, or rules.
-
----
-
-### Fallout 3/New Vegas HUD
-
-**Description**:  
-
-
-Provides a classic green Pip-Boy style HUD, showing health, AP, rad levels, and ammo counters.
-
----
-
-### Video Intro
-
-**Description**:  
-
-
-Adds an introductory video (or series of videos) that plays for new players, conveying rules, lore, or tutorials. The system supports various triggers—such as first-time login or entering specific areas—and seamlessly transitions back to gameplay afterward. It can also incorporate prompts for rule acceptance or tutorial navigation, and supports multiple video formats for maximum compatibility.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/VideoIntro.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Combat Zones
-
-**Description**:  
-
-
-Introduces designated PvP or contested areas, rewarding players or factions for maintaining control.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/CombatZones.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Helix Loot Spawner
-
-**Description**:  
-
-
-An advanced loot spawning system made for Helix that periodically generates randomized items in configured locations.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/IX_LootSpawner.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-### Warhammer Character Sheet
-
-**Description**:  
-
-
-Adds a dedicated Warhammer-themed character sheet that references Warhammer lore. This may include specialized factions, weapons, or races, integrated with unique stats and roleplay elements to create an immersive Warhammer experience.
-
-**Video**:
-
-<details>
-  <summary>Click to Show Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Warhammer%20CharSheet.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</details>
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Compatbility
-
-
-
-
-### Modern Warfare Base Support
-
-**Description**:  
-
-
-Implements Compatibility to the Modern Warfare Weapon Base.
-
----
-
-### News
-
-**Description**:  
-
-
-Adds A NewsPaper System that distributes the news.
-
----
-
-### NPC Drop
-
-**Description**:  
-
-
-Allows certain items to be dropped by certain NPCs depending on a given configuration.
-
----
-
-### Property
-
-**Description**:  
-
-
-Implements a property-ownership system that differs from standard Assigned Housing. Allows advanced configuration options for renting, door ownership and allows you to buy it on demand, witohut having to be asigned.
-
----
-
-### Roulette
-
-**Description**:  
-
-
-Adds a gacha-like bags that have a item table. This allows you to set gacha bags that give a item based on chance.
-
----
-
-### Skill Menu
-
-**Description**:  
-
-
-Provides a visually intuitive interface for players to view and improve their skills, abilities. Useful in RPG-styled servers where progression is tied to skill levels.
-
----
-
-### View Bobbing
-
-**Description**:  
-
-
-Introduces a more immersive first-person camera movement, making the player’s view gently bob or sway while walking or running.
-
----
-
-
-### Activity
-
-**Description**:  
-
-
-Adds Several Activites to keep players base
----
-
-
-### Cassette Player
-
-**Description**:  
-
-
-Simulates an old-school cassette deck that can play localized music or audio logs. Great for thematic servers wanting a retro vibe.
-
----
-
-### Cinematic Entrance
-
-**Description**:  
-
+## Cinematic Entrance
+**Description**: 
 
 Emulates Call of Duty–style mission starts or teleports. Players may spawn or enter a zone with dramatic camera work.
 
 ---
 
-### Consoles
-
-**Description**:  
-
-
-Generates in-game “consoles” or terminals that periodically provide random roleplay information, data logs, or intel. Often used in sci-fi or military settings.
-
----
-
-### RPG Main Menu
-
-**Description**:  
-
-
-Overhauls character creation and other UI elements with a cinematic approach, suitable for serious RP frameworks where immersion is key.
-
----
-
-### Global Voice
-
-**Description**:  
-
-
-Allows admins or specially permitted users to broadcast voice chat server-wide, overriding normal proximity or radio channels.
-
----
-
-### Intel
-
-**Description**:  
-
-
-Provides randomizable “intel” items or data that can be found, traded, or used in missions. Often has strategic value for factions or roleplay storylines.
-
----
-
-### JMOD EFT
-
-**Description**:  
-
-
-Adds JMOD compatibility for EFT-inspired features—such as loot containers, advanced medical or ballistic items—for servers blending JMOD with Escape from Tarkov mechanics.
-
----
-
-### Limb Ripper
-
-**Description**:  
-
-
-A more extreme take on limb damage, expanding upon limbsevering with additional gore effects or advanced wound tracking.
-
-
-
-
-### Modern Warfare Base Support
-
-**Description**:  
-
-Implements Compatibility to the Modern Warfare Weapon Base.
-
----
-
-### News
-
-**Description**:  
-
-Adds A NewsPaper System that distributes the news.
-
----
-
-### NPC Drop
-
-**Description**:  
-
-Allows certain items to be dropped by certain NPCs depending on a given configuration.
-
----
-
-### Property
-
-**Description**:  
-
-Implements a property-ownership system that differs from standard Assigned Housing. Allows advanced configuration options for renting, door ownership and lets you buy it on demand, without having to be assigned.
-
----
-
-### Roulette
-
-**Description**:  
-
-Adds a gacha-like bag system that has an item table. This allows you to set bags that give an item based on chance.
-
----
-
-### Skill Menu
-
-**Description**:  
-
-Provides a visually intuitive interface for players to view and improve their skills and abilities. Useful in RPG-styled servers where progression is tied to skill levels.
-
----
-
-### View Bobbing
-
-**Description**:  
-
-Introduces a more immersive first-person camera movement, making the player’s view gently bob or sway while walking or running.
-
----
-
-### Activity
-
-**Description**:  
-
-Adds several activities to keep the player base engaged.
-
----
-
-### Cassette Player
-
-**Description**:  
+## Cassette Player
+**Description**: 
 
 Simulates an old-school cassette deck that can play localized music or audio logs. Great for thematic servers wanting a retro vibe.
 
 ---
 
-### Cinematic Entrance
-
-**Description**:  
-
-Emulates Call of Duty–style mission starts or teleports. Players may spawn or enter a zone with dramatic camera work.
-
----
-
-### Consoles
-
-**Description**:  
+## Consoles
+**Description**: 
 
 Generates in-game “consoles” or terminals that periodically provide random roleplay information, data logs, or intel. Often used in sci-fi or military settings.
 
 ---
 
-### RPG Main Menu
-
-**Description**:  
-
-Overhauls character creation and other UI elements with a cinematic approach, suitable for serious RP frameworks where immersion is key.
-
----
-
-### Global Voice
-
-**Description**:  
+## Global Voice
+**Description**: 
 
 Allows admins or specially permitted users to broadcast voice chat server-wide, overriding normal proximity or radio channels.
 
 ---
 
-### Intel
-
-**Description**:  
+## Intel
+**Description**: 
 
 Provides randomizable “intel” items or data that can be found, traded, or used in missions. Often has strategic value for factions or roleplay storylines.
 
 ---
 
-### JMOD EFT
-
-**Description**:  
-
-Adds JMOD compatibility for EFT-inspired features—such as loot containers, advanced medical or ballistic items—for servers blending JMOD with Escape from Tarkov mechanics.
-
----
-
-### Limb Ripper
-
-**Description**:  
+## Limb Ripper
+**Description**: 
 
 A more extreme take on limb damage, expanding upon limb severing with additional gore effects or advanced wound tracking.
 
 ---
 
-### ARC9 Base
+## Activities
+**Description**: 
 
-**Description**:  
+Cycles through daily or weekly tasks for players to complete, rewarding items or currency.
+
+---
+
+## Combat Zones
+**Description**: 
+
+Introduces designated PvP or contested areas, rewarding players or factions for maintaining control.
+
+<details>
+  <summary>Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/CombatZones.mp4" type="video/mp4">
+  </video>
+</details>
+
+---
+
+## Helix Loot Spawner
+**Description**: 
+
+An advanced loot spawning system made for Helix that periodically generates randomized items in configured locations.
+
+<details>
+  <summary>Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/IX_LootSpawner.mp4" type="video/mp4">
+  </video>
+</details>
+
+---
+
+## NPC Relationship
+**Description**: 
+
+Makes NPCs hostile or friendly based on faction alignment. Enemy factions attack on sight; allied ones assist.
+
+---
+
+## NPC Spawner
+**Description**: 
+
+Places spawn points that periodically generate NPCs of selected types, with configurable rates and behaviors.
+
+---
+
+## Waypoints
+**Description**: 
+
+Creates navigational markers with on-screen indicators or distance previews.
+
+<details>
+  <summary>Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Waypoints.mp4" type="video/mp4">
+  </video>
+</details>
+
+---
+
+## Daily Rewards
+**Description**: 
+
+Offers login streak bonuses. Missing a day resets the streak.
+
+---
+
+## Steam Group Rewards
+**Description**: 
+
+Provides extra benefits to players who are verified members of the server’s Steam group.
+
+---
+
+## Steam Name Rewards
+**Description**: 
+
+Grants in-game perks or items if players include the server name/tag in their Steam username.
+
+---
+
+## Character List
+**Description**: 
+
+Lets admins or players view all characters tied to a SteamID. Can show stats, offline ban options, or other management tools.
+
+<details>
+  <summary>Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/CharacterList.mp4" type="video/mp4">
+  </video>
+</details>
+
+---
+
+## Automatic Events
+**Description**: 
+
+Spawns random or scheduled events around the map (e.g., rare NPC encounters or treasure drops).
+
+---
+
+## Teleportable Doors
+**Description**: 
+
+Creates linked doors that teleport players between locations, with optional permissions or cooldowns.
+
+---
+
+# 2. Talkable NPCs
+
+---
+
+## Bodyguard System
+**Description**: 
+
+Enables hiring NPC guards for protection, with wages and loyalty checks.
+
+---
+
+## Property Seller
+**Description**: 
+
+NPC that sells houses to players, transferring ownership upon purchase.
+
+---
+
+## Black Market Vendor
+**Description**: 
+
+NPC offering illegal items or deliveries to specific map locations.
+
+---
+
+## Car Dealer
+**Description**: 
+
+Facilitates buying and selling cars through an NPC menu, optionally with customization.
+
+---
+
+## Bounty Hunter
+**Description**: 
+
+Provides bounties for wanted players. Rewards are given once proof of capture or elimination is provided.
+
+---
+
+## Jailer
+**Description**: 
+
+Allows jailing of players for a set time through an NPC interface, automatically freeing them after.
+
+---
+
+## Mechanic
+**Description**: 
+
+Hires players into a mechanic faction, repairing vehicles for money or faction reputation.
+
+---
+
+## Police
+**Description**: 
+
+NPC that manages police faction recruitment and handles crime reports or warrants.
+
+---
+
+## Taxis
+**Description**: 
+
+Lets players join a Taxi Job, picking up NPC or player passengers for monetary rewards.
+
+---
+
+## Delivery
+**Description**: 
+
+Adds a delivery job where players drive packages around the map, earning money upon completion.
+
+---
+
+## Intergalactic Taxi
+**Description**: 
+
+NPC-based fast travel system, allowing players to teleport to specified destinations for a fee.
+
+---
+
+## Recruitment NPC
+**Description**: 
+
+Instantly recruits players into a specific faction with assigned ranks if necessary.
+
+---
+
+## Help NPC
+**Description**: 
+
+Offers new or existing players in-game tips and tutorial info, possibly linking to external resources.
+
+---
+
+## Banker
+**Description**: 
+
+Comprehensive banking solution with multiple roles (Paycheck Retriever, Bank Manager, Teller) and account management.
+
+<details>
+  <summary>Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Banking.mp4" type="video/mp4">
+  </video>
+</details>
+
+---
+
+# 3. HUDs/UIs
+
+---
+
+## EFT HUD
+**Description**: 
+
+Mimics the Escape from Tarkov HUD, showing minimalistic health, ammo, and stamina bars on-screen.
+
+---
+
+## Modified Character Creation
+**Description**: 
+
+Adds an automatic description generator, including physical stats (height, weight) or attributes for new characters. May also provide an in-game ID system.
+
+---
+
+## Fallout 76 HUD
+**Description**: 
+
+Reproduces the Fallout 76 interface, including AP, health, rad meters, and the signature aesthetic.
+
+---
+
+## Start Info
+**Description**: 
+
+Displays a custom pop-up or window on first join to explain the server setting, lore, or rules.
+
+---
+
+## Fallout 3/New Vegas HUD
+**Description**: 
+
+Provides a classic green Pip-Boy style HUD, showing health, AP, rad levels, and ammo counters.
+
+---
+
+## Video Intro
+**Description**: 
+
+Adds an introductory video (or series of videos) that plays for new players, conveying rules, lore, or tutorials. The system supports various triggers—such as first-time login or entering specific areas—and seamlessly transitions back to gameplay afterward.
+
+<details>
+  <summary>Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/VideoIntro.mp4" type="video/mp4">
+  </video>
+</details>
+
+---
+
+## Warhammer Character Sheet
+**Description**: 
+
+Adds a dedicated Warhammer-themed character sheet that references Warhammer lore. This may include specialized factions, weapons, or races, integrated with unique stats and roleplay elements to create an immersive Warhammer experience.
+
+<details>
+  <summary>Video</summary>
+  <video width="560" height="315" controls>
+    <source src="https://bleonheart.github.io/assets/videos/Warhammer%20CharSheet.mp4" type="video/mp4">
+  </video>
+</details>
+
+---
+
+## RPG Main Menu
+**Description**: 
+
+Overhauls character creation and other UI elements with a cinematic approach, suitable for serious RP frameworks where immersion is key.
+
+---
+
+# 4. Compatibility
+
+---
+
+
+## JMOD EFT
+**Description**: 
+
+Adds JMOD compatibility for EFT-inspired features—loot containers, advanced medical/ballistic items, etc.
+
+---
+## Modern Warfare Base Support
+**Description**: 
+
+Implements compatibility with the Modern Warfare Weapon Base.
+
+---
+
+## ARC9 Base
+**Description**: 
 
 Integrates the ARC9 weapon customization system.
 
 ---
 
-### ARCCW Base
+## ARCCW Base
+**Description**: 
 
-**Description**:  
-
-Implements a compatibility system for ARCCW, similar to ARC9 but focused on ARCCW's codebase.
+Implements a compatibility system for ARCCW, similar to ARC9 but focused on ARCCW’s codebase.
 
 ---
 
-### GQuest
-
-**Description**:  
+## GQuest
+**Description**: 
 
 Adds compatibility with [GQuest](https://www.gmodstore.com/market/view/gquest-the-perfect-quest-system).
 
 ---
 
-### Cigarette Factory
+## Cigarette Factory
+**Description**: 
 
-**Description**:  
-
-Adds compatibility with [Cigarette Factory](https://www.gmodstore.com/market/view/simple-cigarette-factory).
+Adds compatibility with [Simple Cigarette Factory](https://www.gmodstore.com/market/view/simple-cigarette-factory).
 
 ---
 
-### Casino Kit Blackjack
-
-**Description**:  
+## Casino Kit Blackjack
+**Description**: 
 
 Adds compatibility with [Casino Kit Blackjack](https://www.gmodstore.com/market/view/casino-kit-blackjack).
 
 ---
 
-### Casino Kit Craps
-
-**Description**:  
+## Casino Kit Craps
+**Description**: 
 
 Adds compatibility with [Casino Kit Craps](https://www.gmodstore.com/market/view/casino-kit-craps).
 
 ---
 
-### PCasino
-
-**Description**:  
+## PCasino
+**Description**: 
 
 Adds compatibility with [PCasino](https://www.gmodstore.com/market/view/pcasino-the-perfect-casino-addon-roulette-blackjack-slots-prize-wheel).
 
 ---
 
-### UWeed
+## UWeed
+**Description**: 
 
-**Description**:  
-
-Adds compatibility with [UWeed](https://www.gmodstore.com/market/view/uweed-advanced-cannabis-growth-drug).
+Adds compatibility with [UWeed - Advanced Cannabis](https://www.gmodstore.com/market/view/uweed-advanced-cannabis-growth-drug).
 
 ---
 
-### UWeed Edibles
-
-**Description**:  
+## UWeed Edibles
+**Description**: 
 
 Adds compatibility with [UWeed Edibles](https://www.gmodstore.com/market/view/uweed-extended-edibles-dlc).
 
 ---
 
-### Tobacco Factory
-
-**Description**:  
+## Tobacco Factory
+**Description**: 
 
 Adds compatibility with [Tobacco Factory](https://www.gmodstore.com/market/view/tobacco-factory).
 
 ---
 
-### Zero's Retro Mining
+## Zero's Retro Mining
+**Description**: 
 
-**Description**:  
-
-Adds compatibility with [Zero's Retro Miner](https://www.gmodstore.com/market/view/zero-s-retrominer-mining-script).
+Adds compatibility with [Zero's Retrominer (Mining Script)](https://www.gmodstore.com/market/view/zero-s-retrominer-mining-script).
 
 ---
 
-### ATOW/CW Compatibility
-
-**Description**:  
+## ATOW/CW Compatibility
+**Description**: 
 
 Adds compatibility with [ATOW](https://steamcommunity.com/sharedfiles/filedetails/?id=859981128) and [Customizable Weaponry](https://steamcommunity.com/workshop/filedetails/?id=349050451).
 
 ---
 
-### TFA
-
-**Description**:  
+## TFA
+**Description**: 
 
 Adds compatibility with [TFA Base](https://steamcommunity.com/sharedfiles/filedetails/?id=2840031720).
 
 ---
 
-### APhone
-
-**Description**:  
+## APhone
+**Description**: 
 
 Adds compatibility with [APhone](https://www.gmodstore.com/market/view/aphone-a-feature-rich-phone).
 
 ---
 
-### Zero's Cooking
-
-**Description**:  
+## Zero's Cooking
+**Description**: 
 
 Adds compatibility with [Zero's MasterChef](https://www.gmodstore.com/market/view/zero-s-masterchef-cooking-script).
 
 ---
 
-### Zero's Factory
-
-**Description**:  
+## Zero's Factory
+**Description**: 
 
 Adds compatibility with [Zero's Factory](https://www.gmodstore.com/market/view/zero-s-factory-crafting-space).
 
 ---
 
-### CityWorker
-
-**Description**:  
+## CityWorker
+**Description**: 
 
 Adds compatibility with [CityWorker](https://www.gmodstore.com/market/view/darkrp-city-worker).
 
 ---
 
-### CH_Farming
-
-**Description**:  
+## CH_Farming
+**Description**: 
 
 Adds compatibility with [CH_Farming](https://www.gmodstore.com/market/view/farming-grow-plants-sell-crops).
 
 ---
 
-### CH_BitMiners
-
-**Description**:  
+## CH_BitMiners
+**Description**: 
 
 Adds compatibility with [CH_BitMiners](https://www.gmodstore.com/market/view/bitminers).
 
 ---
 
-### Fine/Fining
-
-**Description**:  
+## Fine/Fining
+**Description**: 
 
 Adds compatibility with [Fine/Fining System Customizable](https://www.gmodstore.com/market/view/v1-3-1-fine-fining-system-customizable).
 
 ---
 
-### Magic Mushroom Factory
-
-**Description**:  
+## Magic Mushroom Factory
+**Description**: 
 
 Adds compatibility with [Magic Mushroom Factory](https://www.gmodstore.com/market/view/magic-mushroom-factory-drug-script-and-darkrp-job).
 
 ---
 
-### Stock Market
+## Stock Market
+**Description**: 
 
-**Description**:  
-
-Adds compatibility with [Stock Market Addon | Control Your Economy](https://www.gmodstore.com/market/view/stock-market-addon-pointshop-support-control-your-economy).
+Adds compatibility with [Stock Market Addon](https://www.gmodstore.com/market/view/stock-market-addon-pointshop-support-control-your-economy).
 
 ---
 
-### LSCS - Lightsaber
-
-**Description**:  
+## LSCS - Lightsaber
+**Description**: 
 
 Adds compatibility with [[LSCS] - Lightsaber - Force Powers](https://steamcommunity.com/sharedfiles/filedetails/?id=2837856621).
 
 ---
 
-### Simple Mining System
-
-**Description**:  
+## Simple Mining System
+**Description**: 
 
 Adds compatibility with [Simple Mining System](https://www.gmodstore.com/market/view/simple-mining-system).
+
+---
