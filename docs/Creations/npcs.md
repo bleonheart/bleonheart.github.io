@@ -112,12 +112,13 @@ Offers new or existing players in-game tips and tutorial info, possibly linking 
 
 Comprehensive banking solution with multiple roles (Paycheck Retriever, Bank Manager, Teller) and account management.
 
-<div style="text-align: center;">
 <details>
   <summary>Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Banking.mp4" type="video/mp4">
-  </video>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos/Banking.mp4" type="video/mp4">
+    </video>
+  </div>
 </details>
 
 ---
