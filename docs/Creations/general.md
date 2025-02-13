@@ -23,7 +23,7 @@ Allows players to holster and unholster weapons visually, improving immersion by
 
 **Description**: 
 
-Adds various walking speeds and styles for players, each with a distinct movement speed and animation.
+A walk type mechanic similar to Star Citizen, allowing you to adjust your walking speed according to your needs. I added a table where you can set the speed values for each type as a percentage, making it easy to configure and balance. Sprinting, of course, overrides the walk speed.  
 
 <details>
   <summary>Video</summary>
@@ -805,13 +805,13 @@ Provides a wheel interface with a whitelist of animations for quick selection.
 
 **Description**: 
 
-Provides a wheel interface that allows you to select the guns that you own. Replaces the default GMOD weapon wheel
+A weapon wheel that can be summoned by holding the middle mouse button. Clicking on any weapon equips it. I added support for logos, if necessary.  
 
 <details>
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//WeaponWheel.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/videos/WeaponWheel.mp4" type="video/mp4">
     </video>
   </div>
 </details>
