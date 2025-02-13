@@ -1,6 +1,6 @@
 ---
 
-# 3. Visuals
+# Visuals
 
 ---
 
