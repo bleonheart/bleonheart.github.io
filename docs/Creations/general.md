@@ -416,12 +416,13 @@ Lets players fish for items, trash, or money based on a configurable rarity syst
 
 Introduces the ability to chop wood from trees, with configurable drop rates. Often integrates with crafting or economy systems.
 
-<div style="text-align: center;">
 <details>
   <summary>Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Woodcutting.mp4" type="video/mp4">
-  </video>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos/Woodcutting.mp4" type="video/mp4">
+    </video>
+  </div>
 </details>
 
 ---
@@ -432,16 +433,14 @@ Introduces the ability to chop wood from trees, with configurable drop rates. Of
 
 Allows players to mine ores from designated nodes, with drop chances and rarity settings. Often ties into crafting or trade.
 
-
-<div style="text-align: center;">
 <details>
   <summary>Video</summary>
-  <video width="560" height="315" controls>
-    <source src="https://bleonheart.github.io/assets/videos/Mining.mp4" type="video/mp4">
-  </video>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos/Mining.mp4" type="video/mp4">
+    </video>
+  </div>
 </details>
-
-</div>
 
 ---
 
