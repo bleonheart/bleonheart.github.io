@@ -5,6 +5,7 @@
 ---
 
 ## Weapon Holstering
+
 **Description**: 
 
 Allows players to holster and unholster weapons visually, improving immersion by showing the holstered weapon model on the player.
@@ -20,6 +21,7 @@ Allows players to holster and unholster weapons visually, improving immersion by
 ---
 
 ## Walk Types
+
 **Description**: 
 
 Adds various walking speeds and styles for players, each with a distinct movement speed and animation.
@@ -35,6 +37,7 @@ Adds various walking speeds and styles for players, each with a distinct movemen
 ---
 
 ## Dropshipping System
+
 **Description**: 
 
 Implements a Combine Dropship for fast travel or troop transport. Allows configuring destinations and straightforward setups.
@@ -50,6 +53,7 @@ Implements a Combine Dropship for fast travel or troop transport. Allows configu
 ---
 
 ## Faction Stashes
+
 **Description**: 
 
 Provides a centralized stash shared by all members of a faction. Items can have a set price, managed by stock, and cannot be purchased if the stock is empty.
@@ -65,6 +69,7 @@ Provides a centralized stash shared by all members of a faction. Items can have 
 ---
 
 ## Representative Voting
+
 **Description**: 
 
 Implements a voting system akin to the American House of Representatives, where selected individuals from a predefined list are voted in for a given role or group.
@@ -72,6 +77,7 @@ Implements a voting system akin to the American House of Representatives, where 
 ---
 
 ## Legislative Voting
+
 **Description**: 
 
 Introduces a lawmaking system where players propose laws and vote “Aye,” “Nay,” or “Abstain.” Results are tallied at the end.
@@ -79,6 +85,7 @@ Introduces a lawmaking system where players propose laws and vote “Aye,” “
 ---
 
 ## Presidential Voting
+
 **Description**: 
 
 Facilitates presidential elections based on popular vote. Players register as candidates, and the system tallies votes.
@@ -86,6 +93,7 @@ Facilitates presidential elections based on popular vote. Players register as ca
 ---
 
 ## Food
+
 **Description**: 
 
 Implements a hunger and thirst system that can affect stamina regeneration or prevent sprinting if left unchecked. Supports integration with Zero’s MasterChef and includes optional radiation mechanics.
@@ -101,6 +109,7 @@ Implements a hunger and thirst system that can affect stamina regeneration or pr
 ---
 
 ## Citizen ID – Passport Papers
+
 **Description**: 
 
 Designed for HL2RP, players start with temporary passport papers and must visit a Combine authority or terminal to obtain a permanent Citizen ID, each uniquely tied to the character.
@@ -116,6 +125,7 @@ Designed for HL2RP, players start with temporary passport papers and must visit 
 ---
 
 ## Working Terminal
+
 **Description**: 
 
 Allows players to join or leave specific classes in a faction through interactive terminals. Settings are highly customizable, and players can flag themselves active or inactive.
@@ -131,6 +141,7 @@ Allows players to join or leave specific classes in a faction through interactiv
 ---
 
 ## Code 99
+
 **Description**: 
 
 Lets players quickly call police assistance via a keybind. Displays a waypoint to indicate how many officers are needed and highlights the location.
@@ -146,6 +157,7 @@ Lets players quickly call police assistance via a keybind. Displays a waypoint t
 ---
 
 ## Gas Mask
+
 **Description**: 
 
 Adds a mustard gas SWEP and a gas mask item. Players in gas without a mask take heavy damage over time; wearing a gas mask provides immunity.
@@ -161,6 +173,7 @@ Adds a mustard gas SWEP and a gas mask item. Players in gas without a mask take 
 ---
 
 ## RP Characters
+
 **Description**: 
 
 Players spawn as randomly generated characters with unique stats. Upon death, the system shows how long they survived, adding narrative depth to roleplay.
@@ -176,6 +189,7 @@ Players spawn as randomly generated characters with unique stats. Upon death, th
 ---
 
 ## Zomboid Stats
+
 **Description**: 
 
 Inspired by Project Zomboid, this adds detailed traits, skills, and backgrounds to characters. These stats can affect crafting, combat, and other gameplay elements.
@@ -191,6 +205,7 @@ Inspired by Project Zomboid, this adds detailed traits, skills, and backgrounds 
 ---
 
 ## Radiation
+
 **Description**: 
 
 Functions similarly to Fallout, where increasing radiation levels reduce maximum health. Anti-radiation items or treatments may be used to combat it.
@@ -198,6 +213,7 @@ Functions similarly to Fallout, where increasing radiation levels reduce maximum
 ---
 
 ## NPC Drop
+
 **Description**: 
 
 Allows certain items to be dropped by certain NPCs depending on a given configuration.
@@ -205,6 +221,7 @@ Allows certain items to be dropped by certain NPCs depending on a given configur
 ---
 
 ## Property
+
 **Description**: 
 
 Implements a property-ownership system that differs from standard Assigned Housing—allows advanced configuration options for renting, door ownership, and on-demand buying.
@@ -212,6 +229,7 @@ Implements a property-ownership system that differs from standard Assigned Housi
 ---
 
 ## Roulette
+
 **Description**: 
 
 Adds a gacha-like bag system that has an item table; items are given based on chance.
@@ -219,6 +237,7 @@ Adds a gacha-like bag system that has an item table; items are given based on ch
 ---
 
 ## Skill Menu
+
 **Description**: 
 
 Provides a visually intuitive interface for players to view and improve their skills/abilities, useful in RPG-styled servers.
@@ -226,6 +245,7 @@ Provides a visually intuitive interface for players to view and improve their sk
 ---
 
 ## View Bobbing
+
 **Description**: 
 
 Introduces a more immersive first-person camera movement, making the player’s view gently sway while walking/running.
@@ -233,6 +253,7 @@ Introduces a more immersive first-person camera movement, making the player’s 
 ---
 
 ## Drugs
+
 **Description**: 
 
 Introduces a system to process raw drug bricks into usable items that grant various buffs or debuffs.
@@ -240,6 +261,7 @@ Introduces a system to process raw drug bricks into usable items that grant vari
 ---
 
 ## Languages
+
 **Description**: 
 
 Lets players learn and speak different languages via books. Only those who know a language can understand it in-character.
@@ -247,6 +269,7 @@ Lets players learn and speak different languages via books. Only those who know 
 ---
 
 ## Tying
+
 **Description**: 
 
 Expands on tying mechanics, allowing dragging, blindfolding, and gagging of restrained players. Also enables searching them with or without consent.
@@ -262,6 +285,7 @@ Expands on tying mechanics, allowing dragging, blindfolding, and gagging of rest
 ---
 
 ## Looting
+
 **Description**: 
 
 Enables looting across the map with configurable rarity, probability-based item distribution, and per-entity loot tables.
@@ -269,6 +293,7 @@ Enables looting across the map with configurable rarity, probability-based item 
 ---
 
 ## Wiretaps
+
 **Description**: 
 
 Lets players place wiretap devices in rooms and listen in from a remote receiver, facilitating covert surveillance.
@@ -276,6 +301,7 @@ Lets players place wiretap devices in rooms and listen in from a remote receiver
 ---
 
 ## Crafting
+
 **Description**: 
 
 Provides a multi-table, multi-step crafting system governed by blueprints, limiting who can craft specific items.
@@ -283,6 +309,7 @@ Provides a multi-table, multi-step crafting system governed by blueprints, limit
 ---
 
 ## Bank Robbery
+
 **Description**: 
 
 Adds a bank safe that can be robbed if enough police are online. The safe accumulates money incrementally over time.
@@ -290,6 +317,7 @@ Adds a bank safe that can be robbed if enough police are online. The safe accumu
 ---
 
 ## Rideable Mounts
+
 **Description**: 
 
 Allows players to mount animals or creatures. Flying mounts can ascend by holding jump, while land mounts can sprint.
@@ -305,6 +333,7 @@ Allows players to mount animals or creatures. Flying mounts can ascend by holdin
 ---
 
 ## In-depth Armors
+
 **Description**: 
 
 Offers deep customization for armors, including movement speed changes, jump height, resistances, and visual overlays.
@@ -312,6 +341,7 @@ Offers deep customization for armors, including movement speed changes, jump hei
 ---
 
 ## Marketplace
+
 **Description**: 
 
 Establishes a global marketplace entity where players can list items for sale, buy items, and manage transactions.
@@ -319,6 +349,7 @@ Establishes a global marketplace entity where players can list items for sale, b
 ---
 
 ## Lockpicking
+
 **Description**: 
 
 Adds a Fallout-style lockpick mini-game to open locked doors, with configurable difficulty and success rates.
@@ -326,6 +357,7 @@ Adds a Fallout-style lockpick mini-game to open locked doors, with configurable 
 ---
 
 ## Phone
+
 **Description**: 
 
 Implements mobile phones for in-game private messaging (SMS) and an optional call system.
@@ -333,6 +365,7 @@ Implements mobile phones for in-game private messaging (SMS) and an optional cal
 ---
 
 ## Telephone
+
 **Description**: 
 
 Adds payphones for public or private calls to other players; can be integrated with wiretapping.
@@ -340,6 +373,7 @@ Adds payphones for public or private calls to other players; can be integrated w
 ---
 
 ## Radio
+
 **Description**: 
 
 Provides radios with multiple frequencies for text or voice communication.
@@ -347,6 +381,7 @@ Provides radios with multiple frequencies for text or voice communication.
 ---
 
 ## Jukeboxes
+
 **Description**: 
 
 Allows environment-wide music playback using a configured library on a web server.
@@ -354,6 +389,7 @@ Allows environment-wide music playback using a configured library on a web serve
 ---
 
 ## Typewriter
+
 **Description**: 
 
 Enables creation of in-game notes or documents linking to external Google Docs. Perfect for newspapers or official letters.
@@ -361,6 +397,7 @@ Enables creation of in-game notes or documents linking to external Google Docs. 
 ---
 
 ## Fishing
+
 **Description**: 
 
 Lets players fish for items, trash, or money based on a configurable rarity system. Includes a “sweet spot” mechanic for timing.
@@ -376,6 +413,7 @@ Lets players fish for items, trash, or money based on a configurable rarity syst
 ---
 
 ## Woodcutting
+
 **Description**: 
 
 Introduces the ability to chop wood from trees, with configurable drop rates. Often integrates with crafting or economy systems.
@@ -391,6 +429,7 @@ Introduces the ability to chop wood from trees, with configurable drop rates. Of
 ---
 
 ## Mining
+
 **Description**: 
 
 Allows players to mine ores from designated nodes, with drop chances and rarity settings. Often ties into crafting or trade.
@@ -409,6 +448,7 @@ Allows players to mine ores from designated nodes, with drop chances and rarity 
 ---
 
 ## Store Robbery
+
 **Description**: 
 
 Lets players rob stores for configurable loot items and possibly trigger police alerts or alarms.
@@ -416,6 +456,7 @@ Lets players rob stores for configurable loot items and possibly trigger police 
 ---
 
 ## Forward Operating Bases (FOB)
+
 **Description**: 
 
 Allows a faction to set up a spawnable outpost for its members to respawn at, with customizable cooldowns.
@@ -431,6 +472,7 @@ Allows a faction to set up a spawnable outpost for its members to respawn at, wi
 ---
 
 ## Safebox
+
 **Description**: 
 
 Works like an Ender Chest, giving players personal, persistent storage accessible from multiple safebox entities.
@@ -438,6 +480,7 @@ Works like an Ender Chest, giving players personal, persistent storage accessibl
 ---
 
 ## Newspapers
+
 **Description**: 
 
 Lets a designated faction create in-game newspapers with editable text, distributing them as physical items.
@@ -445,6 +488,7 @@ Lets a designated faction create in-game newspapers with editable text, distribu
 ---
 
 ## Oil
+
 **Description**: 
 
 Adds the ability to extract oil over time using rigs or pumps, which can then be sold or refined for profit.
@@ -452,6 +496,7 @@ Adds the ability to extract oil over time using rigs or pumps, which can then be
 ---
 
 ## Revive System
+
 **Description**: 
 
 Players become downed instead of dying immediately, giving teammates a chance to revive them before they bleed out.
@@ -459,6 +504,7 @@ Players become downed instead of dying immediately, giving teammates a chance to
 ---
 
 ## Vending Machines
+
 **Description**: 
 
 Dispenses configurable items for a set price, automatically providing the purchased item to the player.
@@ -466,6 +512,7 @@ Dispenses configurable items for a set price, automatically providing the purcha
 ---
 
 ## Broadcast Radio
+
 **Description**: 
 
 Allows server-wide voice or music broadcasts. Ideal for radio host or DJ-style roleplay.
@@ -473,6 +520,7 @@ Allows server-wide voice or music broadcasts. Ideal for radio host or DJ-style r
 ---
 
 ## Vinyl Disk Player
+
 **Description**: 
 
 Enables the use of vinyl records with unique tracks on a vintage-style player.
@@ -480,6 +528,7 @@ Enables the use of vinyl records with unique tracks on a vintage-style player.
 ---
 
 ## Car Radios
+
 **Description**: 
 
 Lets drivers and passengers tune into radio stations or streams while in a vehicle.
@@ -487,6 +536,7 @@ Lets drivers and passengers tune into radio stations or streams while in a vehic
 ---
 
 ## Chess
+
 **Description**: 
 
 Adds a fully playable chess board and pieces for two players.
@@ -494,6 +544,7 @@ Adds a fully playable chess board and pieces for two players.
 ---
 
 ## Permits
+
 **Description**: 
 
 Restricts certain items behind permits, which can be granted to specific factions or classes.
@@ -501,6 +552,7 @@ Restricts certain items behind permits, which can be granted to specific faction
 ---
 
 ## Convertibles
+
 **Description**: 
 
 Allows players to convert placed props or entities into item form, enabling redeployment elsewhere.
@@ -508,6 +560,7 @@ Allows players to convert placed props or entities into item form, enabling rede
 ---
 
 ## Medical System
+
 **Description**: 
 
 Provides detailed health mechanics such as limb injuries, diseases, and treatments.
@@ -515,6 +568,7 @@ Provides detailed health mechanics such as limb injuries, diseases, and treatmen
 ---
 
 ## Clock
+
 **Description**: 
 
 Displays current time, synchronizing with Stormfox2 or server time for roleplay purposes.
@@ -522,6 +576,7 @@ Displays current time, synchronizing with Stormfox2 or server time for roleplay 
 ---
 
 ## Stables
+
 **Description**: 
 
 Introduces a horse ownership system where players can purchase, spawn, and ride their personal horses.
@@ -529,6 +584,7 @@ Introduces a horse ownership system where players can purchase, spawn, and ride 
 ---
 
 ## Magazines
+
 **Description**: 
 
 Requires players to manage physical magazines for their weapons; guns only reload from these magazines.
@@ -536,6 +592,7 @@ Requires players to manage physical magazines for their weapons; guns only reloa
 ---
 
 ## Perks
+
 **Description**: 
 
 Adds a perks interface that can be restricted by faction, level, or other conditions.
@@ -543,6 +600,7 @@ Adds a perks interface that can be restricted by faction, level, or other condit
 ---
 
 ## Car Bomber
+
 **Description**: 
 
 Lets players place a bomb in a vehicle, triggering a timed explosion with optional defusal mechanics.
@@ -558,6 +616,7 @@ Lets players place a bomb in a vehicle, triggering a timed explosion with option
 ---
 
 ## Factories
+
 **Description**: 
 
 Spawns items automatically by consuming resources, acting like a production line with configurable rates.
@@ -565,6 +624,7 @@ Spawns items automatically by consuming resources, acting like a production line
 ---
 
 ## VATS
+
 **Description**: 
 
 Inspired by Fallout’s targeting system, allows players to attempt targeted shots with chance-based success.
@@ -572,6 +632,7 @@ Inspired by Fallout’s targeting system, allows players to attempt targeted sho
 ---
 
 ## Gacha Bags
+
 **Description**: 
 
 Implements a gacha mechanic where players open “bags” or “boxes” for randomized item rewards.
@@ -579,6 +640,7 @@ Implements a gacha mechanic where players open “bags” or “boxes” for ran
 ---
 
 ## Airdrops
+
 **Description**: 
 
 Periodically drops crates with loot around the map, encouraging players to race for the rewards.
@@ -586,6 +648,7 @@ Periodically drops crates with loot around the map, encouraging players to race 
 ---
 
 ## Turf Wars
+
 **Description**: 
 
 Introduces capture zones that generate money or items for the faction holding them. Encourages territorial conflict.
@@ -601,6 +664,7 @@ Introduces capture zones that generate money or items for the faction holding th
 ---
 
 ## Animal Butchering
+
 **Description**: 
 
 When certain animals are killed, their carcasses can be butchered for meat, hides, or other resources.
@@ -608,6 +672,7 @@ When certain animals are killed, their carcasses can be butchered for meat, hide
 ---
 
 ## Keycards
+
 **Description**: 
 
 Grants item-based door access using keycards of varying clearance levels.
@@ -615,6 +680,7 @@ Grants item-based door access using keycards of varying clearance levels.
 ---
 
 ## Clearance Levels
+
 **Description**: 
 
 Restricts doors and areas based on multi-tier security clearances, often tied to factions or ranks.
@@ -630,6 +696,7 @@ Restricts doors and areas based on multi-tier security clearances, often tied to
 ---
 
 ## Sanity
+
 **Description**: 
 
 Adds a sanity meter that decreases from traumatic events, causing visual/auditory hallucinations at low levels.
@@ -637,6 +704,7 @@ Adds a sanity meter that decreases from traumatic events, causing visual/auditor
 ---
 
 ## Organs
+
 **Description**: 
 
 Assigns random-quality organs to each character. Better organs grant minor buffs; worse ones cause drawbacks.
@@ -644,6 +712,7 @@ Assigns random-quality organs to each character. Better organs grant minor buffs
 ---
 
 ## Attribute Rolling
+
 **Description**: 
 
 Randomly generates character stats (e.g., Strength, Perception) on creation, affecting gameplay accordingly.
@@ -651,6 +720,7 @@ Randomly generates character stats (e.g., Strength, Perception) on creation, aff
 ---
 
 ## Attribute Fog
+
 **Description**: 
 
 Limits view distance based on a “Perception” attribute, creating literal fog for lower scores.
@@ -658,6 +728,7 @@ Limits view distance based on a “Perception” attribute, creating literal fog
 ---
 
 ## Cinematic Text
+
 **Description**: 
 
 Displays large, stylized text overlays for dramatic effect during events or cutscenes.
@@ -665,6 +736,7 @@ Displays large, stylized text overlays for dramatic effect during events or cuts
 ---
 
 ## Attribute-Based Damage
+
 **Description**: 
 
 Ties damage output to specific stats, such as Strength for melee.
@@ -672,6 +744,7 @@ Ties damage output to specific stats, such as Strength for melee.
 ---
 
 ## Durability
+
 **Description**: 
 
 Implements weapon durability, reducing an item’s effectiveness over time until repaired.
@@ -679,6 +752,7 @@ Implements weapon durability, reducing an item’s effectiveness over time until
 ---
 
 ## Animations
+
 **Description**: 
 
 Adds extra roleplay animations like Surrender, Salute, or Cross Arms, accessible via commands or a menu.
@@ -694,6 +768,7 @@ Adds extra roleplay animations like Surrender, Salute, or Cross Arms, accessible
 ---
 
 ## Animation Wheel
+
 **Description**: 
 
 Provides a wheel interface with a whitelist of animations for quick selection.
@@ -709,6 +784,7 @@ Provides a wheel interface with a whitelist of animations for quick selection.
 ---
 
 ## Squads
+
 **Description**: 
 
 Allows players to form squads (or parties) with shared chat, markers, and possible group rewards.
@@ -716,6 +792,7 @@ Allows players to form squads (or parties) with shared chat, markers, and possib
 ---
 
 ## Reputation System
+
 **Description**: 
 
 NPC factions may be friendly or hostile depending on the player’s faction affiliation, gear, or actions.
@@ -723,6 +800,7 @@ NPC factions may be friendly or hostile depending on the player’s faction affi
 ---
 
 ## Karma System
+
 **Description**: 
 
 Awards or subtracts karma based on player actions, which can affect NPC or faction attitudes.
@@ -730,6 +808,7 @@ Awards or subtracts karma based on player actions, which can affect NPC or facti
 ---
 
 ## Medals
+
 **Description**: 
 
 Displays earned medals above a player’s head, highlighting achievements or roles.
@@ -737,6 +816,7 @@ Displays earned medals above a player’s head, highlighting achievements or rol
 ---
 
 ## Faction Menu
+
 **Description**: 
 
 Enables in-game faction management for inviting or removing members.
@@ -752,6 +832,7 @@ Enables in-game faction management for inviting or removing members.
 ---
 
 ## Map
+
 **Description**: 
 
 Provides a top-down map interface with the ability to set waypoints or markers, useful for navigation.
@@ -759,6 +840,7 @@ Provides a top-down map interface with the ability to set waypoints or markers, 
 ---
 
 ## Serial Numbers
+
 **Description**: 
 
 Each item (or weapon) has a serial number that police can check. Some can be erased if illicit.
@@ -766,6 +848,7 @@ Each item (or weapon) has a serial number that police can check. Some can be era
 ---
 
 ## EFT Corpses
+
 **Description**: 
 
 Makes player corpses fully lootable upon death, mimicking Escape from Tarkov’s loot-on-death style.
@@ -773,6 +856,7 @@ Makes player corpses fully lootable upon death, mimicking Escape from Tarkov’s
 ---
 
 ## Transformative Items
+
 **Description**: 
 
 Allows items to temporarily or permanently turn the player into a creature with unique abilities.
@@ -780,6 +864,7 @@ Allows items to temporarily or permanently turn the player into a creature with 
 ---
 
 ## Clothing Status
+
 **Description**: 
 
 Tracks clothing cleanliness. Over time, clothes get dirty and may need washing or repair.
@@ -787,6 +872,7 @@ Tracks clothing cleanliness. Over time, clothes get dirty and may need washing o
 ---
 
 ## Raiding System
+
 **Description**: 
 
 Adds structured raiding or ambushing features for faction conflict. Notifies defenders and rewards attackers or defenders.
@@ -802,6 +888,7 @@ Adds structured raiding or ambushing features for faction conflict. Notifies def
 ---
 
 ## Police Lockers
+
 **Description**: 
 
 Police officers can temporarily draw guns from lockers while on duty and must return them afterwards.
@@ -809,6 +896,7 @@ Police officers can temporarily draw guns from lockers while on duty and must re
 ---
 
 ## TV System
+
 **Description**: 
 
 Allows broadcasting of live or recorded content to in-game televisions for other players to watch.
@@ -816,13 +904,23 @@ Allows broadcasting of live or recorded content to in-game televisions for other
 ---
 
 ## Leveling
+
 **Description**: 
 
 Implements a level system, increasing attributes like max health or unlocking new abilities.
 
 ---
 
+## JMOD EFT
+
+**Description**:  
+
+Adds compatibility with [JMOD EFT](https://steamcommunity.com/sharedfiles/filedetails/?id=2804625575), bringing EFT-inspired features—loot containers, advanced medical/ballistic items, and more.
+
+---
+
 ## Ranking System
+
 **Description**: 
 
 Adds visible ranks on the scoreboard. Can integrate with factions, awarding custom weapons or models for higher ranks.
@@ -846,6 +944,7 @@ Adds visible ranks on the scoreboard. Can integrate with factions, awarding cust
 ---
 
 ## Syringes
+
 **Description**: 
 
 One-use items that grant temporary boosts (speed, armor, health, or jump). Often used in combat or emergencies.
@@ -853,6 +952,7 @@ One-use items that grant temporary boosts (speed, armor, health, or jump). Often
 ---
 
 ## Social Credit System
+
 **Description**: 
 
 Awards points for desirable behavior or tasks. Points can unlock perks, titles, or bonuses.
@@ -860,6 +960,7 @@ Awards points for desirable behavior or tasks. Points can unlock perks, titles, 
 ---
 
 ## Prop-Based Construction
+
 **Description**: 
 
 Inspired by Rust. Instead of spawning props freely, players use items to build structures in tiers.
@@ -867,6 +968,7 @@ Inspired by Rust. Instead of spawning props freely, players use items to build s
 ---
 
 ## Farming
+
 **Description**: 
 
 Enables planting and growing crops over time, harvested for resources or sale.
@@ -874,6 +976,7 @@ Enables planting and growing crops over time, harvested for resources or sale.
 ---
 
 ## Advanced Injuries
+
 **Description**: 
 
 Implements various injuries (bleeding, broken limbs, PTSD, concussion) with unique effects and specialized treatments.
@@ -889,6 +992,7 @@ Implements various injuries (bleeding, broken limbs, PTSD, concussion) with uniq
 ---
 
 ## Bonemerge System
+
 **Description**: 
 
 Lets players layer multiple clothing or armor pieces that bonemerge onto their model. Useful for outfit variety.
@@ -896,6 +1000,7 @@ Lets players layer multiple clothing or armor pieces that bonemerge onto their m
 ---
 
 ## Guilds
+
 **Description**: 
 
 Allows creation of player-made organizations with custom ranks, permissions, shared banks, and logs.
@@ -911,6 +1016,7 @@ Allows creation of player-made organizations with custom ranks, permissions, sha
 ---
 
 ## Assigned Housing
+
 **Description**: 
 
 Enables properties or doors to be assigned to specific factions or players, with persistent ownership and rent.
@@ -926,6 +1032,7 @@ Enables properties or doors to be assigned to specific factions or players, with
 ---
 
 ## Camera (CCTV)
+
 **Description**: 
 
 Players or factions can place cameras that can be named and remotely viewed. Non-whitelisted players can hack them.
@@ -941,6 +1048,7 @@ Players or factions can place cameras that can be named and remotely viewed. Non
 ---
 
 ## Law Board
+
 **Description**: 
 
 Presents a clickable board that opens a webpage or text displaying server rules or local laws.
@@ -948,6 +1056,7 @@ Presents a clickable board that opens a webpage or text displaying server rules 
 ---
 
 ## DEFCON
+
 **Description**: 
 
 Implements security levels 1–5, shifting server states or restrictions based on threats.
@@ -955,6 +1064,7 @@ Implements security levels 1–5, shifting server states or restrictions based o
 ---
 
 ## Trading
+
 **Description**: 
 
 Adds a secure trade window to exchange items and money, preventing scams.
@@ -962,6 +1072,7 @@ Adds a secure trade window to exchange items and money, preventing scams.
 ---
 
 ## Cutscenes
+
 **Description**: 
 
 Creates Call of Duty-inspired mission briefings or story intros, complete with cinematic camera transitions.
@@ -969,6 +1080,7 @@ Creates Call of Duty-inspired mission briefings or story intros, complete with c
 ---
 
 ## Car Options
+
 **Description**: 
 
 Gives drivers extra controls such as kicking passengers, locking doors from the inside, or checking trunk contents.
@@ -976,6 +1088,7 @@ Gives drivers extra controls such as kicking passengers, locking doors from the 
 ---
 
 ## Cinematic Entrance
+
 **Description**: 
 
 Emulates Call of Duty–style mission starts or teleports. Players may spawn or enter a zone with dramatic camera work.
@@ -983,6 +1096,7 @@ Emulates Call of Duty–style mission starts or teleports. Players may spawn or 
 ---
 
 ## Cassette Player
+
 **Description**: 
 
 Simulates an old-school cassette deck that can play localized music or audio logs. Great for thematic servers wanting a retro vibe.
@@ -990,6 +1104,7 @@ Simulates an old-school cassette deck that can play localized music or audio log
 ---
 
 ## Consoles
+
 **Description**: 
 
 Generates in-game “consoles” or terminals that periodically provide random roleplay information, data logs, or intel. Often used in sci-fi or military settings.
@@ -997,6 +1112,7 @@ Generates in-game “consoles” or terminals that periodically provide random r
 ---
 
 ## Global Voice
+
 **Description**: 
 
 Allows admins or specially permitted users to broadcast voice chat server-wide, overriding normal proximity or radio channels.
@@ -1004,6 +1120,7 @@ Allows admins or specially permitted users to broadcast voice chat server-wide, 
 ---
 
 ## Intel
+
 **Description**: 
 
 Provides randomizable “intel” items or data that can be found, traded, or used in missions. Often has strategic value for factions or roleplay storylines.
@@ -1011,6 +1128,7 @@ Provides randomizable “intel” items or data that can be found, traded, or us
 ---
 
 ## Limb Ripper
+
 **Description**: 
 
 A more extreme take on limb damage, expanding upon limb severing with additional gore effects or advanced wound tracking.
@@ -1018,6 +1136,7 @@ A more extreme take on limb damage, expanding upon limb severing with additional
 ---
 
 ## Activities
+
 **Description**: 
 
 Cycles through daily or weekly tasks for players to complete, rewarding items or currency.
@@ -1025,6 +1144,7 @@ Cycles through daily or weekly tasks for players to complete, rewarding items or
 ---
 
 ## Combat Zones
+
 **Description**: 
 
 Introduces designated PvP or contested areas, rewarding players or factions for maintaining control.
@@ -1040,6 +1160,7 @@ Introduces designated PvP or contested areas, rewarding players or factions for 
 ---
 
 ## Helix Loot Spawner
+
 **Description**: 
 
 An advanced loot spawning system made for Helix that periodically generates randomized items in configured locations.
@@ -1055,6 +1176,7 @@ An advanced loot spawning system made for Helix that periodically generates rand
 ---
 
 ## NPC Relationship
+
 **Description**: 
 
 Makes NPCs hostile or friendly based on faction alignment. Enemy factions attack on sight; allied ones assist.
@@ -1062,6 +1184,7 @@ Makes NPCs hostile or friendly based on faction alignment. Enemy factions attack
 ---
 
 ## NPC Spawner
+
 **Description**: 
 
 Places spawn points that periodically generate NPCs of selected types, with configurable rates and behaviors.
@@ -1069,6 +1192,7 @@ Places spawn points that periodically generate NPCs of selected types, with conf
 ---
 
 ## Waypoints
+
 **Description**: 
 
 Creates navigational markers with on-screen indicators or distance previews.
@@ -1084,6 +1208,7 @@ Creates navigational markers with on-screen indicators or distance previews.
 ---
 
 ## Daily Rewards
+
 **Description**: 
 
 Offers login streak bonuses. Missing a day resets the streak.
@@ -1091,6 +1216,7 @@ Offers login streak bonuses. Missing a day resets the streak.
 ---
 
 ## Steam Group Rewards
+
 **Description**: 
 
 Provides extra benefits to players who are verified members of the server’s Steam group.
@@ -1098,6 +1224,7 @@ Provides extra benefits to players who are verified members of the server’s St
 ---
 
 ## Steam Name Rewards
+
 **Description**: 
 
 Grants in-game perks or items if players include the server name/tag in their Steam username.
@@ -1105,6 +1232,7 @@ Grants in-game perks or items if players include the server name/tag in their St
 ---
 
 ## Character List
+
 **Description**: 
 
 Lets admins or players view all characters tied to a SteamID. Can show stats, offline ban options, or other management tools.
@@ -1120,6 +1248,7 @@ Lets admins or players view all characters tied to a SteamID. Can show stats, of
 ---
 
 ## Automatic Events
+
 **Description**: 
 
 Spawns random or scheduled events around the map (e.g., rare NPC encounters or treasure drops).
@@ -1127,6 +1256,7 @@ Spawns random or scheduled events around the map (e.g., rare NPC encounters or t
 ---
 
 ## Teleportable Doors
+
 **Description**: 
 
 Creates linked doors that teleport players between locations, with optional permissions or cooldowns.

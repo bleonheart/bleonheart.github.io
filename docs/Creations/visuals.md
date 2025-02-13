@@ -5,6 +5,7 @@
 ---
 
 ## EFT HUD
+
 **Description**: 
 
 Mimics the Escape from Tarkov HUD, showing minimalistic health, ammo, and stamina bars on-screen.
@@ -12,6 +13,7 @@ Mimics the Escape from Tarkov HUD, showing minimalistic health, ammo, and stamin
 ---
 
 ## Modified Character Creation
+
 **Description**: 
 
 Adds an automatic description generator, including physical stats (height, weight) or attributes for new characters. May also provide an in-game ID system.
@@ -19,6 +21,7 @@ Adds an automatic description generator, including physical stats (height, weigh
 ---
 
 ## Fallout 76 HUD
+
 **Description**: 
 
 Reproduces the Fallout 76 interface, including AP, health, rad meters, and the signature aesthetic.
@@ -26,6 +29,7 @@ Reproduces the Fallout 76 interface, including AP, health, rad meters, and the s
 ---
 
 ## Start Info
+
 **Description**: 
 
 Displays a custom pop-up or window on first join to explain the server setting, lore, or rules.
@@ -33,6 +37,7 @@ Displays a custom pop-up or window on first join to explain the server setting, 
 ---
 
 ## Fallout 3/New Vegas HUD
+
 **Description**: 
 
 Provides a classic green Pip-Boy style HUD, showing health, AP, rad levels, and ammo counters.
@@ -40,6 +45,7 @@ Provides a classic green Pip-Boy style HUD, showing health, AP, rad levels, and 
 ---
 
 ## Video Intro
+
 **Description**: 
 
 Adds an introductory video (or series of videos) that plays for new players, conveying rules, lore, or tutorials. The system supports various triggers—such as first-time login or entering specific areas—and seamlessly transitions back to gameplay afterward.
@@ -55,6 +61,7 @@ Adds an introductory video (or series of videos) that plays for new players, con
 ---
 
 ## Warhammer Character Sheet
+
 **Description**: 
 
 Adds a dedicated Warhammer-themed character sheet that references Warhammer lore. This may include specialized factions, weapons, or races, integrated with unique stats and roleplay elements to create an immersive Warhammer experience.
@@ -70,6 +77,7 @@ Adds a dedicated Warhammer-themed character sheet that references Warhammer lore
 ---
 
 ## RPG Main Menu
+
 **Description**: 
 
 Overhauls character creation and other UI elements with a cinematic approach, suitable for serious RP frameworks where immersion is key.
