@@ -44,6 +44,7 @@ Provides a classic green Pip-Boy style HUD, showing health, AP, rad levels, and 
 
 Adds an introductory video (or series of videos) that plays for new players, conveying rules, lore, or tutorials. The system supports various triggers—such as first-time login or entering specific areas—and seamlessly transitions back to gameplay afterward.
 
+<div style="text-align: center;">
 <details>
   <summary>Video</summary>
   <video width="560" height="315" controls>
@@ -58,6 +59,7 @@ Adds an introductory video (or series of videos) that plays for new players, con
 
 Adds a dedicated Warhammer-themed character sheet that references Warhammer lore. This may include specialized factions, weapons, or races, integrated with unique stats and roleplay elements to create an immersive Warhammer experience.
 
+<div style="text-align: center;">
 <details>
   <summary>Video</summary>
   <video width="560" height="315" controls>
