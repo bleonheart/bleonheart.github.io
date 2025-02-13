@@ -1,6 +1,5 @@
 arrange:
-  - creations.md
-  - generalmechanics.md
-  - talkingnpcs.md
-  - management.md
-  - uis.md
+  - general.md
+  - npcs.md
+  - visuals.md
+  - compatibility.md
