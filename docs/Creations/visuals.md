@@ -52,7 +52,7 @@ Adds an introductory video (or series of videos) that plays for new players, con
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/videos/VideoIntro.mp4" type="video/mp4">
+      <source src="https://github.com/bleonheart/bleonheart.github.io/blob/main/videos//VideoIntro.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -70,7 +70,7 @@ Adds a dedicated Warhammer-themed character sheet that references Warhammer lore
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/videos/Warhammer%20CharSheet.mp4" type="video/mp4">
+      <source src="https://github.com/bleonheart/bleonheart.github.io/blob/main/videos//Warhammer%20CharSheet.mp4" type="video/mp4">
     </video>
   </div>
 </details>
