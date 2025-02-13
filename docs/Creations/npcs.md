@@ -1,5 +1,3 @@
----
-
 # Talkable NPCs
 
 ---
