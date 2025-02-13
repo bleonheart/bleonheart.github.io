@@ -116,7 +116,7 @@ Comprehensive banking solution with multiple roles (Paycheck Retriever, Bank Man
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://github.com/bleonheart/bleonheart.github.io/blob/main/videos/Banking.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/videos//Banking.mp4" type="video/mp4">
     </video>
   </div>
 </details>
