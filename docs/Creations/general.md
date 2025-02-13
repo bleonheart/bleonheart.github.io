@@ -380,12 +380,16 @@ Introduces the ability to chop wood from trees, with configurable drop rates. Of
 
 Allows players to mine ores from designated nodes, with drop chances and rarity settings. Often ties into crafting or trade.
 
+<div style="text-align: center;">
+
 <details>
   <summary>Video</summary>
   <video width="560" height="315" controls>
-    <source src="Mining.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/videos/Mining.mp4" type="video/mp4">
   </video>
 </details>
+
+</div>
 
 ---
 
