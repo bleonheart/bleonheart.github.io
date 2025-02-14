@@ -971,15 +971,6 @@ Adds visible ranks on the scoreboard. Can integrate with factions, awarding cust
   </div>
 </details>
 
-<details>
-  <summary>Click to Show Video (SimpleRankingSystem)</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//SimpleRankingSystem.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Syringes
