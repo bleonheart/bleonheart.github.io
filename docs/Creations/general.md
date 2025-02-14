@@ -611,7 +611,7 @@ Adds a perks interface that can be restricted by faction, level, or other condit
 
 ---
 
-## Car Bomber
+## Simple Car Bomber
 
 **Description**: 
 
