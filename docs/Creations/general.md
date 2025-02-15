@@ -873,6 +873,15 @@ Enables in-game faction management for inviting or removing members.
 
 Provides a top-down map interface with the ability to set waypoints or markers, useful for navigation.
 
+<details>
+  <summary>Video (Faction Invites)</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Map.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## Serial Numbers
