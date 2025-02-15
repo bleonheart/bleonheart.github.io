@@ -857,7 +857,7 @@ Displays earned medals above a player’s head, highlighting achievements or rol
 Enables in-game faction management for inviting or removing members.
 
 <details>
-  <summary>Video (Faction Invites)</summary>
+  <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
       <source src="https://bleonheart.github.io/assets/videos//FactionInvites.mp4" type="video/mp4">
@@ -874,7 +874,7 @@ Enables in-game faction management for inviting or removing members.
 Provides a top-down map interface.
 
 <details>
-  <summary>Video (Faction Invites)</summary>
+  <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
       <source src="https://bleonheart.github.io/assets/videos//Map.mp4" type="video/mp4">
@@ -972,7 +972,7 @@ Adds compatibility with [JMOD EFT](https://steamcommunity.com/sharedfiles/filede
 Adds visible ranks on the scoreboard. Can integrate with factions, awarding custom weapons or models for higher ranks.
 
 <details>
-  <summary>Click to Show Video (Ranks)</summary>
+  <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
       <source src="https://bleonheart.github.io/assets/videos//Ranks.mp4" type="video/mp4">
