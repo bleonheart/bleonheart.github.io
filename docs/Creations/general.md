@@ -871,7 +871,7 @@ Enables in-game faction management for inviting or removing members.
 
 **Description**: 
 
-Provides a top-down map interface with the ability to set waypoints or markers, useful for navigation.
+Provides a top-down map interface.
 
 <details>
   <summary>Video (Faction Invites)</summary>
