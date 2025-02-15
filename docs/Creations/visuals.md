@@ -10,11 +10,20 @@ Mimics the Escape from Tarkov HUD, showing minimalistic health, ammo, and stamin
 
 ---
 
-## Modified Character Creation
+## Modified Character Creation | ID System
 
 **Description**: 
 
 Adds an automatic description generator, including physical stats (height, weight) or attributes for new characters. May also provide an in-game ID system.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//ModifiedCharacterCreation.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
