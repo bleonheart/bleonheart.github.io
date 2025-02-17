@@ -1183,8 +1183,16 @@ Provides randomizable “intel” items or data that can be found, traded, or us
 
 **Description**: 
 
-A more extreme take on limb damage, expanding upon limb severing with additional gore effects or advanced wound tracking.
+A more extreme take on limb damage, expanding upon limb severing with additional gore effects.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//LimbRipper.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 ---
 
 ## Activities
