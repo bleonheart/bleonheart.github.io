@@ -1128,6 +1128,15 @@ Creates Call of Duty-inspired mission briefings or story intros, complete with c
 
 Gives drivers extra controls such as kicking passengers, locking doors from the inside, or checking trunk contents.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//CarOptions.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## Cinematic Entrance
