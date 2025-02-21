@@ -848,6 +848,15 @@ Awards or subtracts karma based on player actions, which can affect NPC or facti
 
 Displays earned medals above a player’s head, highlighting achievements or roles.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Medals.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## Faction Menu
