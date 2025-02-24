@@ -1023,6 +1023,23 @@ Enables planting and growing crops over time, harvested for resources or sale.
 
 ---
 
+## Alcoholism
+
+**Description**: 
+
+Implements various alcoholic beverages that affect you based on the amount of alcohol in your blood. The effects range from blurry vision to a loss of control, where your character loses the ability to move properly. These effects scale according to your level of intoxication.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Alcoholism.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
+---
+
 ## Advanced Injuries
 
 **Description**: 
