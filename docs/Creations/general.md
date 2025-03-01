@@ -36,6 +36,23 @@ A walk type mechanic similar to Star Citizen, allowing you to adjust your walkin
 
 ---
 
+## Intro Rules
+
+**Description**: 
+
+A system that is planned to enforce that players review the rules before playing.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//RulesIntro.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
+---
+
 ## Dropshipping System
 
 **Description**: 
