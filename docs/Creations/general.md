@@ -317,6 +317,15 @@ Expands on tying mechanics, allowing dragging, blindfolding, and gagging of rest
 
 Enables looting across the map with configurable rarity, probability-based item distribution, and per-entity loot tables.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Lootables.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## Wiretaps
@@ -384,11 +393,20 @@ Adds a Fallout-style lockpick mini-game to open locked doors, with configurable 
 
 ---
 
-## Phone
+## Cellphones
 
 **Description**: 
 
 Implements mobile phones for in-game private messaging (SMS) and an optional call system.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Cellphones.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
@@ -585,6 +603,15 @@ Restricts certain items behind permits, which can be granted to specific faction
 **Description**: 
 
 Allows players to convert placed props or entities into item form, enabling redeployment elsewhere.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Convertibles.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
