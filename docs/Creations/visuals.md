@@ -85,9 +85,3 @@ Adds a dedicated Warhammer-themed character sheet that references Warhammer lore
 </details>
 
 ---
-
-## RPG Main Menu
-
-**Description**: 
-
-Overhauls character creation and other UI elements with a cinematic approach, suitable for serious RP frameworks where immersion is key.
