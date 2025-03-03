@@ -14,7 +14,16 @@ Enables hiring NPC guards for protection, with wages and loyalty checks.
 
 **Description**: 
 
-NPC that sells houses to players, transferring ownership upon purchase.
+A NPC that rents houses to players.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Properties.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
