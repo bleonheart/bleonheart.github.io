@@ -88,7 +88,16 @@ NPC that manages police faction recruitment and handles crime reports or warrant
 
 **Description**: 
 
-Lets players join a Taxi Job, picking up NPC or player passengers for monetary rewards.
+Lets players join a Taxi Job, picking up NPC or player passengers for monetary rewards. Comes with an Automatic Taxi feature, which allows to fast travel to configurable locations for a fee.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Taxi.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
@@ -100,19 +109,20 @@ Adds a delivery job where players drive packages around the map, earning money u
 
 ---
 
-## Intergalactic Taxi
-
-**Description**: 
-
-NPC-based fast travel system, allowing players to teleport to specified destinations for a fee.
-
----
-
-## Recruitment NPC
+## Recruitment
 
 **Description**: 
 
 Instantly recruits players into a specific faction with assigned ranks if necessary.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Recruitment.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
