@@ -1386,7 +1386,16 @@ Lets admins or players view all characters tied to a SteamID. Can show stats, of
 
 **Description**: 
 
-Spawns random or scheduled events around the map (e.g., rare NPC encounters or treasure drops).
+Spawns random or scheduled events around the map.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Events.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
