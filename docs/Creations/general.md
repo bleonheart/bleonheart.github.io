@@ -1398,11 +1398,3 @@ Spawns random or scheduled events around the map.
 </details>
 
 ---
-
-## Teleportable Doors
-
-**Description**: 
-
-Creates linked doors that teleport players between locations, with optional permissions or cooldowns.
-
----
