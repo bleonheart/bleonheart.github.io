@@ -246,14 +246,6 @@ Allows certain items to be dropped by certain NPCs depending on a given configur
 
 ---
 
-## Property
-
-**Description**: 
-
-Implements a property-ownership system that differs from standard Assigned Housing—allows advanced configuration options for renting, door ownership, and on-demand buying.
-
----
-
 ## Roulette
 
 **Description**: 
