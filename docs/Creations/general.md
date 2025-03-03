@@ -385,6 +385,23 @@ Adds a Fallout-style lockpick mini-game to open locked doors, with configurable 
 
 ---
 
+## Modified Character Creation | ID System
+
+**Description**: 
+
+Adds an automatic description generator, including physical stats (height, weight) or attributes for new characters. May also provide an in-game ID system.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//ModifiedCharacterCreation.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
+---
+
 ## Cellphones
 
 **Description**: 
