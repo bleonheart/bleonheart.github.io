@@ -72,8 +72,16 @@ Allows jailing of players for a set time through an NPC interface, automatically
 
 **Description**: 
 
-Hires players into a mechanic faction, repairing vehicles for money or faction reputation.
+Hires players into a mechanic faction, repairing vehicles for money.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Mechanic.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 ---
 
 ## Police
@@ -131,6 +139,15 @@ Instantly recruits players into a specific faction with assigned ranks if necess
 **Description**: 
 
 Offers new or existing players in-game tips and tutorial info, possibly linking to external resources.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Recruitment.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
