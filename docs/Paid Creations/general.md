@@ -309,6 +309,15 @@ Introduces a system to process raw drug bricks into usable items that grant vari
 
 Lets players learn and speak different languages via books. Only those who know a language can understand it in-character.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Languages.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## Tying
@@ -358,14 +367,6 @@ Lets players place wiretap devices in rooms and listen in from a remote receiver
 **Description**: 
 
 Provides a multi-table, multi-step crafting system governed by blueprints, limiting who can craft specific items.
-
----
-
-## Bank Robbery
-
-**Description**: 
-
-Adds a bank safe that can be robbed if enough police are online. The safe accumulates money incrementally over time.
 
 ---
 
@@ -527,12 +528,20 @@ Allows players to mine ores from designated nodes, with drop chances and rarity 
 
 ---
 
-## Store Robbery
+## Robberies
 
 **Description**: 
 
-Lets players rob stores for configurable loot items and possibly trigger police alerts or alarms.
+Adds several entities from which items can be robbed. These entities are highly configurable, allowing extensive customization to suit your taste.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Robberies.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 ---
 
 ## Forward Operating Bases (FOB)
