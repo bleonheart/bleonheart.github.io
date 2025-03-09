@@ -50,6 +50,15 @@ NPC offering illegal items or deliveries to specific map locations.
 
 Facilitates buying and selling cars through an NPC menu, optionally with customization.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//CarDealer.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## Bounty Hunter
