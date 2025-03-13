@@ -528,6 +528,23 @@ Allows players to mine ores from designated nodes, with drop chances and rarity 
 
 ---
 
+## Turns
+
+**Description**: 
+
+Adds a Turns System that allows SeriousRP servers to manage turns in SeriousRP Scenarios.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//TurnSystem.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
+---
+
 ## Robberies
 
 **Description**: 
