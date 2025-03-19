@@ -1011,6 +1011,49 @@ Each item (or weapon) has a serial number that police can check. Some can be era
 
 Makes player corpses fully lootable upon death, mimicking Escape from Tarkov’s loot-on-death style.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//EFTBodies.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
+---
+
+## Director Spawner
+
+**Description**:  
+
+Introduces a **Director Spawner**, similar to the system used in Left 4 Dead. Zombies spawn within a specified range, limited by both quantity and environmental conditions, creating dynamic and strategic gameplay.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//DirectorSpawns.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
+---
+
+## Achievement System
+
+**Description**:  
+
+Adds a comprehensive **Achievement System**, where players can unlock various achievements based on in-game milestones, actions, or challenges completed. These achievements offer rewards, track player progress, and provide a sense of accomplishment.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://example.com/achievement-system-video.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## Transformative Items
@@ -1068,6 +1111,15 @@ Allows broadcasting of live or recorded content to in-game televisions for other
 
 Implements a level system, increasing attributes like max health or unlocking new abilities.
 
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Leveling.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
 ---
 
 ## JMOD EFT
@@ -1078,6 +1130,32 @@ Adds compatibility with [JMOD EFT](https://steamcommunity.com/sharedfiles/filede
 
 ---
 
+## Extraction
+
+**Description**: 
+
+Adds an Extraction mechanic where, upon deploying a flare, you are recalled to one of several predefined safe zones. This feature includes a countdown timer and a short animation to accompany the extraction process.
+
+<details> <summary>Video</summary> <div style="text-align: center;"> <video width="560" height="315" controls> <source src="https://bleonheart.github.io/assets/videos//Extraction.mp4" type="video/mp4"> </video> </div> </details>
+
+---
+
+## Infection
+
+**Description**: 
+
+When attacked by zombie players or zombie NPCs, an infection mechanic is triggered. As your infection level increases, you begin to experience more debilitating debuffs. You can cure yourself with Zombrex, but if your infection surpasses 100%, you will fully transform into a zombie.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//Infection.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
+
+---
 ## Ranking System
 
 **Description**: 
@@ -1116,6 +1194,15 @@ Awards points for desirable behavior or tasks. Points can unlock perks, titles, 
 **Description**: 
 
 Inspired by Rust. Instead of spawning props freely, players use items to build structures in tiers.
+
+<details>
+  <summary>Video</summary>
+  <div style="text-align: center;">
+    <video width="560" height="315" controls>
+      <source src="https://bleonheart.github.io/assets/videos//PropPlacer.mp4" type="video/mp4">
+    </video>
+  </div>
+</details>
 
 ---
 
