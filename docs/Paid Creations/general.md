@@ -905,7 +905,7 @@ Provides a wheel interface with a whitelist of animations for quick selection.
 
 ---
 
-## Animation Wheel
+## Weapon Wheel
 
 **Description**: 
 
