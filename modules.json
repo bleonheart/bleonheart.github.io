@@ -1,0 +1,477 @@
+[
+  {
+    "name": "Achievements",
+    "author": "@liliaplayer",
+    "description": "Adds Achievements",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/achievements.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/achievements",
+    "uniqueID": "achievements",
+    "workshop": []
+  },
+  {
+    "name": "Animations",
+    "author": "@liliaplayer",
+    "description": "Ported EGM Animations to Commands",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/anim.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/anim",
+    "uniqueID": "anim",
+    "workshop": []
+  },
+  {
+    "name": "ArcCW Attachments",
+    "author": "@liliaplayer",
+    "description": "Adds ArcCW Attachments as equippable items.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/arccw.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/arccw",
+    "uniqueID": "arccw",
+    "workshop": []
+  },
+  {
+    "name": "Banking",
+    "author": "@liliaplayer",
+    "description": "Adds Banking",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/banking.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/banking",
+    "uniqueID": "banking",
+    "workshop": [
+      "3431349605"
+    ]
+  },
+  {
+    "name": "Clothing System",
+    "author": "@liliaplayer",
+    "description": "Bonemerging System for Clothing and Outfits.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/bonemerge.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/bonemerge",
+    "uniqueID": "bonemerge",
+    "workshop": [
+      "3425712055",
+      "3425709315",
+      "3425707500",
+      "3425693671"
+    ]
+  },
+  {
+    "name": "Cameras",
+    "author": "@liliaplayer",
+    "description": "Adds Map Cameras",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/cameras.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/cameras",
+    "uniqueID": "cameras",
+    "workshop": [
+      "904615164"
+    ]
+  },
+  {
+    "name": "Car Bomb",
+    "author": "@liliaplayer",
+    "description": "A carbomb module that allows you to roleplay as a arab.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/carbomber.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/carbomber",
+    "uniqueID": "carbomber",
+    "workshop": []
+  },
+  {
+    "name": "Car Options",
+    "author": "@liliaplayer",
+    "description": "Adds a few QOL Car Options",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/caroptions.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/caroptions",
+    "uniqueID": "caroptions",
+    "workshop": []
+  },
+  {
+    "name": "Mobile Phones",
+    "author": "@liliaplayer",
+    "description": "Adds a Mobile Phone System.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/cellphones.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/cellphones",
+    "uniqueID": "cellphones",
+    "workshop": [
+      "3431352659"
+    ]
+  },
+  {
+    "name": "Character List",
+    "author": "@liliaplayer",
+    "description": "Adds a Character Listing System.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/characterlist.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/characterlist",
+    "uniqueID": "characterlist",
+    "workshop": []
+  },
+  {
+    "name": "Chess and Droughts",
+    "author": "@liliaplayer",
+    "description": "Adding chess and droughts to Lilia.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/chess.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/chess",
+    "uniqueID": "chess",
+    "workshop": []
+  },
+  {
+    "name": "Code 99",
+    "author": "@liliaplayer",
+    "description": "Adds a Code 99 System",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/code99.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/code99",
+    "uniqueID": "code99",
+    "workshop": []
+  },
+  {
+    "name": "Control Points",
+    "author": "",
+    "description": "Adds some control points to take control of.",
+    "version": "",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/controlpoint.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/controlpoint",
+    "uniqueID": "controlpoint",
+    "workshop": []
+  },
+  {
+    "name": "Entity Conversible",
+    "author": "@liliaplayer",
+    "description": "A Conversible Entity System.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/convertibles.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/convertibles",
+    "uniqueID": "convertibles",
+    "workshop": []
+  },
+  {
+    "name": "Director Mode",
+    "author": "@liliaplayer",
+    "description": "Adds a Director Mode similar to L4D",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/director.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/director",
+    "uniqueID": "director",
+    "workshop": []
+  },
+  {
+    "name": "Roleplay Rules",
+    "author": "@liliaplayer",
+    "description": "A Roleplay Rules System",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/documentloader.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/documentloader",
+    "uniqueID": "documentloader",
+    "workshop": []
+  },
+  {
+    "name": "Drugs",
+    "author": "@liliaplayer",
+    "description": "Adds a Custom Drugs Base",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/drugs.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/drugs",
+    "uniqueID": "drugs",
+    "workshop": [
+      "3431406689"
+    ]
+  },
+  {
+    "name": "EFT Corpses",
+    "author": "@liliaplayer",
+    "description": "Allows to search players corpses.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/eftcorpses.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/eftcorpses",
+    "uniqueID": "eftcorpses",
+    "workshop": []
+  },
+  {
+    "name": "Events",
+    "author": "@liliaplayer",
+    "description": "A Module For automatic events.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/events.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/events",
+    "uniqueID": "events",
+    "workshop": []
+  },
+  {
+    "name": "Extraction",
+    "author": "@liliaplayer",
+    "description": "Adds a Extraction Mechanic",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/extraction.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/extraction",
+    "uniqueID": "extraction",
+    "workshop": []
+  },
+  {
+    "name": "FOBs",
+    "author": "@liliaplayer",
+    "description": "Adds some FOBs.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/fob.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/fob",
+    "uniqueID": "fob",
+    "workshop": []
+  },
+  {
+    "name": "Lootables",
+    "author": "@liliaplayer",
+    "description": "Scavenge for items.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/gachabags.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/gachabags",
+    "uniqueID": "gachabags",
+    "workshop": []
+  },
+  {
+    "name": "Infection",
+    "author": "@liliaplayer",
+    "description": "Adds Infection mechanics.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/infection.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/infection",
+    "uniqueID": "infection",
+    "workshop": []
+  },
+  {
+    "name": "Injuries System",
+    "author": "@liliaplayer",
+    "description": "Adds indepth damage to legs with side effects",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/injuries.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/injuries",
+    "uniqueID": "injuries",
+    "workshop": []
+  },
+  {
+    "name": "Languages",
+    "author": "@liliaplayer",
+    "description": "Teaches you to say Caralho",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/languages.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/languages",
+    "uniqueID": "languages",
+    "workshop": []
+  },
+  {
+    "name": "Skills",
+    "author": "@liliaplayer",
+    "description": "Adds Skills",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/leveling.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/leveling",
+    "uniqueID": "leveling",
+    "workshop": []
+  },
+  {
+    "name": "Limb Ripper",
+    "author": "@liliaplayer",
+    "description": "Adds Limb Ripping Mechanics",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/limbripper.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/limbripper",
+    "uniqueID": "limbripper",
+    "workshop": [
+      "3429516924"
+    ]
+  },
+  {
+    "name": "Lootables",
+    "author": "@liliaplayer",
+    "description": "Scavenge for items.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/looting.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/looting",
+    "uniqueID": "looting",
+    "workshop": []
+  },
+  {
+    "name": "Global Map",
+    "author": "@liliaplayer",
+    "description": "A Module For Displaying The World Map.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/map.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/map",
+    "uniqueID": "map",
+    "workshop": []
+  },
+  {
+    "name": "Medals",
+    "author": "@liliaplayer",
+    "description": "Adds Medals",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/medals.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/medals",
+    "uniqueID": "medals",
+    "workshop": [
+      "3431351553"
+    ]
+  },
+  {
+    "name": "Woodcutting",
+    "author": "@liliaplayer",
+    "description": "Minecraft Axe",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/mining.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/mining",
+    "uniqueID": "mining",
+    "workshop": [
+      "3135774516"
+    ]
+  },
+  {
+    "name": "Character Creation",
+    "author": "@liliaplayer",
+    "description": "Modifies character creation.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/modified_charcreation.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/modified_charcreation",
+    "uniqueID": "modified_charcreation",
+    "workshop": [
+      "3431349723"
+    ]
+  },
+  {
+    "name": "Roleplay NPCs",
+    "author": "@liliaplayer",
+    "description": "A Roleplay NPCs Framework",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/npcs.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/npcs",
+    "uniqueID": "npcs",
+    "workshop": []
+  },
+  {
+    "name": "Gun License",
+    "author": "@liliaplayer",
+    "description": "Adds gun licenses for items",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/permits.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/permits",
+    "uniqueID": "permits",
+    "workshop": []
+  },
+  {
+    "name": "Improved Constructable Props",
+    "author": "@liliaplayer",
+    "description": "Adds the ability to construct props and entities",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/propbasedbuilding.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/propbasedbuilding",
+    "uniqueID": "propbasedbuilding",
+    "workshop": []
+  },
+  {
+    "name": "Radio Voice Chat",
+    "author": "@liliaplayer",
+    "description": "Radio Voice Chat",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/radio.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/radio",
+    "uniqueID": "radio",
+    "workshop": [
+      "3431349806"
+    ]
+  },
+  {
+    "name": "Store Robbery",
+    "author": "@liliaplayer",
+    "description": "Simple Store Robbery Module.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/robberies.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/robberies",
+    "uniqueID": "robberies",
+    "workshop": []
+  },
+  {
+    "name": "Lockpicking",
+    "author": "@liliaplayer",
+    "description": "Adds Lockpicking to bruteforce doors!",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/simple_lockpicking.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/simple_lockpicking",
+    "uniqueID": "simple_lockpicking",
+    "workshop": []
+  },
+  {
+    "name": "Character Info",
+    "author": "@liliaplayer",
+    "description": "Information that shows up in character creation.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/startinfo.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/startinfo",
+    "uniqueID": "startinfo",
+    "workshop": []
+  },
+  {
+    "name": "Trading",
+    "author": "@liliaplayer",
+    "description": "Trading of items between players.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/trading.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/trading",
+    "uniqueID": "trading",
+    "workshop": []
+  },
+  {
+    "name": "Tying",
+    "author": "@liliaplayer",
+    "description": "Adds Tying Items That Serve As Handcuffs. Enchance Roleplay Overall.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/tying.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/tying",
+    "uniqueID": "tying",
+    "workshop": []
+  },
+  {
+    "name": "Vending",
+    "author": "@liliaplayer",
+    "description": "Adds Vending Machines.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/vending.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/vending",
+    "uniqueID": "vending",
+    "workshop": []
+  },
+  {
+    "name": "Waypoints",
+    "author": "@liliaplayer",
+    "description": "Adds a waypoint system.",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/waypoints.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/waypoints",
+    "uniqueID": "waypoints",
+    "workshop": []
+  },
+  {
+    "name": "WireTaps",
+    "author": "@liliaplayer",
+    "description": "Adds Wiretaps",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/wiretaps.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/wiretaps",
+    "uniqueID": "wiretaps",
+    "workshop": []
+  },
+  {
+    "name": "Woodcutting",
+    "author": "@liliaplayer",
+    "description": "Minecraft Axe",
+    "version": "1.0",
+    "download": "https://github.com/LiliaFramework/Modules/raw/refs/heads/gh-pages/Downloads/woodcutting.zip",
+    "source": "https://github.com/LiliaFramework/Modules/tree/main/woodcutting",
+    "uniqueID": "woodcutting",
+    "workshop": [
+      "3135774516"
+    ]
+  }
+]
