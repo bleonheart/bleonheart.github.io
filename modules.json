@@ -142,7 +142,7 @@
   {
     "name": "Global Map",
     "uniqueID": "map",
-    "version": "1.0"
+    "version": ""
   },
   {
     "name": "Medals",
@@ -202,7 +202,7 @@
   {
     "name": "Tying",
     "uniqueID": "tying",
-    "version": "1.0\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Vending",
