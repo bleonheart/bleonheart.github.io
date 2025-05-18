@@ -2,12 +2,12 @@
   {
     "name": "Achievements",
     "uniqueID": "achievements",
-    "version": "Stock\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Animations",
     "uniqueID": "anim",
-    "version": "1.0\n1.0"
+    "version": "1.0"
   },
   {
     "name": "ArcCW Attachments",
@@ -17,7 +17,7 @@
   {
     "name": "Banking",
     "uniqueID": "banking",
-    "version": "1.0\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Clothing System",
@@ -47,7 +47,7 @@
   {
     "name": "Character List",
     "uniqueID": "characterlist",
-    "version": "1.0\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Chess and Droughts",
@@ -57,7 +57,7 @@
   {
     "name": "Code 99",
     "uniqueID": "code99",
-    "version": "Stock\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Control Points",
@@ -72,12 +72,12 @@
   {
     "name": "Director Mode",
     "uniqueID": "director",
-    "version": "Stock\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Roleplay Rules",
     "uniqueID": "documentloader",
-    "version": "1.0\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Drugs",
@@ -97,7 +97,7 @@
   {
     "name": "Extraction",
     "uniqueID": "extraction",
-    "version": "Stock\n1.0"
+    "version": "1.0"
   },
   {
     "name": "FOBs",
@@ -122,7 +122,7 @@
   {
     "name": "Languages",
     "uniqueID": "languages",
-    "version": "1.0\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Skills",
@@ -142,7 +142,7 @@
   {
     "name": "Global Map",
     "uniqueID": "map",
-    "version": ""
+    "version": "1.0"
   },
   {
     "name": "Medals",
@@ -162,7 +162,7 @@
   {
     "name": "Roleplay NPCs",
     "uniqueID": "npcs",
-    "version": "1.0\n1.0"
+    "version": "1.0"
   },
   {
     "name": "Gun License",
