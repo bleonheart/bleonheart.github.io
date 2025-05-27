@@ -40,6 +40,11 @@
     "version": "1.0"
   },
   {
+    "name": "Cassette Player",
+    "uniqueID": "cassette",
+    "version": ""
+  },
+  {
     "name": "Mobile Phones",
     "uniqueID": "cellphones",
     "version": "1.0"
@@ -67,6 +72,11 @@
   {
     "name": "Entity Conversible",
     "uniqueID": "convertibles",
+    "version": "1.0"
+  },
+  {
+    "name": "Crafting",
+    "uniqueID": "crafting",
     "version": "1.0"
   },
   {
@@ -98,6 +108,11 @@
     "name": "Extraction",
     "uniqueID": "extraction",
     "version": "1.0"
+  },
+  {
+    "name": "Fish",
+    "uniqueID": "fish",
+    "version": ""
   },
   {
     "name": "FOBs",
@@ -182,11 +197,6 @@
   {
     "name": "Store Robbery",
     "uniqueID": "robberies",
-    "version": "1.0"
-  },
-  {
-    "name": "Lockpicking",
-    "uniqueID": "simple_lockpicking",
     "version": "1.0"
   },
   {
