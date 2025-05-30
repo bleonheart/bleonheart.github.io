@@ -42,7 +42,7 @@
   {
     "name": "Cassette Player",
     "uniqueID": "cassette",
-    "version": ""
+    "version": "1.0"
   },
   {
     "name": "Mobile Phones",
@@ -108,6 +108,11 @@
     "name": "Extraction",
     "uniqueID": "extraction",
     "version": "1.0"
+  },
+  {
+    "name": "Fallout UI",
+    "uniqueID": "falloutui",
+    "version": ""
   },
   {
     "name": "Fish",
