@@ -17,12 +17,12 @@
   {
     "name": "Banking",
     "uniqueID": "banking",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Clothing System",
     "uniqueID": "bonemerge",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Cameras",
@@ -37,17 +37,17 @@
   {
     "name": "Car Options",
     "uniqueID": "caroptions",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Cassette Player",
     "uniqueID": "cassette",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Mobile Phones",
     "uniqueID": "cellphones",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Character List",
@@ -57,12 +57,12 @@
   {
     "name": "Chess and Droughts",
     "uniqueID": "chess",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Code 99",
     "uniqueID": "code99",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Control Points",
@@ -77,7 +77,7 @@
   {
     "name": "Crafting",
     "uniqueID": "crafting",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Director Mode",
@@ -87,7 +87,7 @@
   {
     "name": "Roleplay Rules",
     "uniqueID": "documentloader",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Drugs",
@@ -97,7 +97,7 @@
   {
     "name": "EFT Corpses",
     "uniqueID": "eftcorpses",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Events",
@@ -110,11 +110,6 @@
     "version": "1.0"
   },
   {
-    "name": "Fallout UI",
-    "uniqueID": "falloutui",
-    "version": ""
-  },
-  {
     "name": "Fish",
     "uniqueID": "fish",
     "version": ""
@@ -122,6 +117,11 @@
   {
     "name": "FOBs",
     "uniqueID": "fob",
+    "version": "1.0.1"
+  },
+  {
+    "name": "Dynamic Food",
+    "uniqueID": "food",
     "version": "1.0"
   },
   {
@@ -137,7 +137,7 @@
   {
     "name": "Injuries System",
     "uniqueID": "injuries",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Languages",
@@ -147,17 +147,17 @@
   {
     "name": "Skills",
     "uniqueID": "leveling",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Limb Ripper",
     "uniqueID": "limbripper",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Lootables",
     "uniqueID": "looting",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Global Map",
@@ -167,7 +167,7 @@
   {
     "name": "Medals",
     "uniqueID": "medals",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Woodcutting",
@@ -182,7 +182,7 @@
   {
     "name": "Roleplay NPCs",
     "uniqueID": "npcs",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Gun License",
@@ -197,7 +197,7 @@
   {
     "name": "Radio Voice Chat",
     "uniqueID": "radio",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Store Robbery",
@@ -212,7 +212,7 @@
   {
     "name": "Trading",
     "uniqueID": "trading",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Tying",
@@ -222,7 +222,7 @@
   {
     "name": "Vending",
     "uniqueID": "vending",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Waypoints",
