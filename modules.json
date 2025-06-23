@@ -7,7 +7,7 @@
   {
     "name": "Animations",
     "uniqueID": "anim",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "ArcCW Attachments",
@@ -32,12 +32,12 @@
   {
     "name": "Car Bomb",
     "uniqueID": "carbomber",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Car Options",
     "uniqueID": "caroptions",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   {
     "name": "Cassette Player",
@@ -212,7 +212,7 @@
   {
     "name": "Trading",
     "uniqueID": "trading",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   {
     "name": "Tying",
