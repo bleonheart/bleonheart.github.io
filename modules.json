@@ -17,7 +17,7 @@
   {
     "name": "Banking",
     "uniqueID": "banking",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   {
     "name": "Clothing System",
@@ -27,7 +27,7 @@
   {
     "name": "Cameras",
     "uniqueID": "cameras",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Car Bomb",
@@ -52,7 +52,7 @@
   {
     "name": "Character List",
     "uniqueID": "characterlist",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Chess and Droughts",
@@ -87,7 +87,7 @@
   {
     "name": "Roleplay Rules",
     "uniqueID": "documentloader",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   {
     "name": "Drugs",
@@ -142,12 +142,12 @@
   {
     "name": "Languages",
     "uniqueID": "languages",
-    "version": "1.0"
+    "version": "1.0.1"
   },
   {
     "name": "Skills",
     "uniqueID": "leveling",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   {
     "name": "Limb Ripper",
@@ -167,7 +167,7 @@
   {
     "name": "Medals",
     "uniqueID": "medals",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   {
     "name": "Woodcutting",
