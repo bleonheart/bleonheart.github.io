@@ -5,6 +5,11 @@
     "version": "1.0"
   },
   {
+    "name": "Admin Stick",
+    "uniqueID": "adminstick",
+    "version": "1.0"
+  },
+  {
     "name": "Animations",
     "uniqueID": "anim",
     "version": "1.0.1"
