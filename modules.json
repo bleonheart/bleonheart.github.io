@@ -60,6 +60,51 @@
     "version": "1.0.2"
   },
   {
+    "name": "Presidential Voting",
+    "uniqueID": "presidential_voting",
+    "version": "1.0"
+  },
+  {
+    "name": "Animation Wheel",
+    "uniqueID": "animationwheel",
+    "version": "1.0"
+  },
+  {
+    "name": "Traits",
+    "uniqueID": "traits",
+    "version": "1.0"
+  },
+  {
+    "name": "Representative Voting",
+    "uniqueID": "rep_voting",
+    "version": "1.0"
+  },
+  {
+    "name": "Serial Numbers",
+    "uniqueID": "serialnumbers",
+    "version": "1.0"
+  },
+  {
+    "name": "ID System",
+    "uniqueID": "id_system",
+    "version": "1.0"
+  },
+  {
+    "name": "Character Creation",
+    "uniqueID": "charcreate",
+    "version": "1.0"
+  },
+  {
+    "name": "Legislative Voting",
+    "uniqueID": "leg_voting",
+    "version": "1.0"
+  },
+  {
+    "name": "Communication",
+    "uniqueID": "telephone",
+    "version": ""
+  },
+  {
     "name": "Lootables",
     "uniqueID": "gachabags",
     "version": "1.0"
