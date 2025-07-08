@@ -75,11 +75,6 @@
     "version": "1.0"
   },
   {
-    "name": "Representative Voting",
-    "uniqueID": "rep_voting",
-    "version": "1.0"
-  },
-  {
     "name": "Serial Numbers",
     "uniqueID": "serialnumbers",
     "version": "1.0"
@@ -95,11 +90,6 @@
     "version": "1.0"
   },
   {
-    "name": "Legislative Voting",
-    "uniqueID": "leg_voting",
-    "version": "1.0"
-  },
-  {
     "name": "Communication",
     "uniqueID": "telephone",
     "version": ""
@@ -107,6 +97,11 @@
   {
     "name": "Lootables",
     "uniqueID": "gachabags",
+    "version": "1.0"
+  },
+  {
+    "name": "Representative Voting",
+    "uniqueID": "rep_voting",
     "version": "1.0"
   },
   {
@@ -268,6 +263,11 @@
     "name": "Cassette Player",
     "uniqueID": "cassette",
     "version": "1.0.1"
+  },
+  {
+    "name": "Legislative Voting",
+    "uniqueID": "leg_voting",
+    "version": "1.0"
   },
   {
     "name": "Infection",
