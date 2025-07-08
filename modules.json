@@ -12,7 +12,7 @@
   {
     "name": "Fish",
     "uniqueID": "fish",
-    "version": "1.0"
+    "version": ""
   },
   {
     "name": "FOBs",
@@ -92,7 +92,7 @@
   {
     "name": "Communication",
     "uniqueID": "telephone",
-    "version": "1.0"
+    "version": ""
   },
   {
     "name": "Lootables",
