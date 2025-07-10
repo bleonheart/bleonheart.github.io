@@ -2,356 +2,853 @@
   {
     "name": "Code 99",
     "uniqueID": "code99",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a Code 99 System",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Code99.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Car Options",
     "uniqueID": "caroptions",
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a few QOL Car Options",
+    "Showcase": "https://bleonheart.github.io/assets/videos//CarOptions.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Fish",
     "uniqueID": "fish",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "An fishing system.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Fishing.mp4",
+    "Features": "",
+    "WorkshopContent": "3135774516",
+    "private_uniqueID": ""
   },
   {
     "name": "FOBs",
     "uniqueID": "fob",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds some FOBs.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//FOB.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Extraction",
     "uniqueID": "extraction",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a Extraction Mechanic",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Extraction.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Equip Slots",
     "uniqueID": "inv_rework",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Equip Slots",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Clothing System",
     "uniqueID": "bonemerge",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Bonemerging System for Clothing and Outfits.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Bonemerge.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Medals",
     "uniqueID": "medals",
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Medals",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Medals.mp4",
+    "Features": "",
+    "WorkshopContent": "3431351553",
+    "private_uniqueID": ""
   },
   {
     "name": "Drugs",
     "uniqueID": "drugs",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a Custom Drugs Base",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "3431406689",
+    "private_uniqueID": ""
   },
   {
     "name": "Lootables",
     "uniqueID": "looting",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Scavenge for items.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Lootables.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Events",
     "uniqueID": "events",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A Module For automatic events.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Events.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Banking",
     "uniqueID": "banking",
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Default Desc",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Banking.mp4",
+    "Features": "",
+    "WorkshopContent": "3431349605",
+    "private_uniqueID": ""
   },
   {
     "name": "Presidential Voting",
     "uniqueID": "presidential_voting",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Presidential Voting.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Animation Wheel",
     "uniqueID": "animationwheel",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds an Animation Wheel with Pre-Set Animations.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//AnimationWheel.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Traits",
     "uniqueID": "traits",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Just Traits lmao",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Serial Numbers",
     "uniqueID": "serialnumbers",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Weapon Serial numbers and a PD computer for searching.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "ID System",
     "uniqueID": "id_system",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds an important document with all the information about the player.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Character Creation",
     "uniqueID": "charcreate",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A Character Creation",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Communication",
     "uniqueID": "telephone",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Telephone!",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Lootables",
     "uniqueID": "gachabags",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Scavenge for items.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Representative Voting",
     "uniqueID": "rep_voting",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Representative Voting.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Global Map",
     "uniqueID": "map",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A Module For Displaying The World Map.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Map.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Injuries System",
     "uniqueID": "injuries",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds indepth damage to legs with side effects",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Injuries.mp4",
+    "Features": "",
+    "WorkshopContent": "3482445599",
+    "private_uniqueID": ""
   },
   {
     "name": "Chess and Droughts",
     "uniqueID": "chess",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adding chess and droughts to Lilia.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "3488362335",
+    "private_uniqueID": ""
   },
   {
     "name": "Gun License",
     "uniqueID": "permits",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds gun licenses for items",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Character Info",
     "uniqueID": "startinfo",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Information that shows up in character creation.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//StartInfo.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Dynamic Food",
     "uniqueID": "food",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds creation of food thingies",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Food.mp4",
+    "Features": "",
+    "WorkshopContent": "3431353368",
+    "private_uniqueID": ""
   },
   {
     "name": "Car Bomb",
     "uniqueID": "carbomber",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A carbomb module that allows you to roleplay as a arab.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//CarBomb.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Mobile Phones",
     "uniqueID": "cellphones",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a Mobile Phone System.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Cellphones.mp4",
+    "Features": "",
+    "WorkshopContent": "3431352659",
+    "private_uniqueID": ""
   },
   {
     "name": "Vending",
     "uniqueID": "vending",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Vending Machines.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Character List",
     "uniqueID": "characterlist",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a Character Listing System.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//CharacterList.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Achievements",
     "uniqueID": "achievements",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Achievements",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Achievements.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Languages",
     "uniqueID": "languages",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Teaches you to say Caralho",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Languages.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Limb Ripper",
     "uniqueID": "limbripper",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Limb Ripping Mechanics",
+    "Showcase": "https://bleonheart.github.io/assets/videos//LimbRipper.mp4",
+    "Features": "",
+    "WorkshopContent": "3429516924",
+    "private_uniqueID": ""
   },
   {
     "name": "Search Tying Sub-Module",
     "uniqueID": "tyingsearch",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Searching to Tying",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Tying Extras Sub-Module",
     "uniqueID": "tyingextras",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Gagging, Vehicle Restrictions and Blindfolding to Tying",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Tying Dragging Sub-Module",
     "uniqueID": "tyingdragging",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Dragging to Tying",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Tying",
     "uniqueID": "tying",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Tying Items That Serve As Handcuffs. Enchance Roleplay Overall.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Tying.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Cameras",
     "uniqueID": "cameras",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Map Cameras",
+    "Showcase": "https://bleonheart.github.io/assets/videos//CCTV.mp4",
+    "Features": "",
+    "WorkshopContent": "904615164",
+    "private_uniqueID": ""
   },
   {
     "name": "Store Robbery",
     "uniqueID": "robberies",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Simple Store Robbery Module.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Robberies.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Woodcutting",
     "uniqueID": "mining",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Minecraft Axe",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Mining.mp4",
+    "Features": "",
+    "WorkshopContent": "3135774516",
+    "private_uniqueID": ""
   },
   {
     "name": "Entity Conversible",
     "uniqueID": "convertibles",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A Conversible Entity System.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Convertibles.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Roleplay Rules",
     "uniqueID": "documentloader",
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A Roleplay Rules System",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Animations",
     "uniqueID": "anim",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Ported EGM Animations to Commands",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Animations.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Waypoints",
     "uniqueID": "waypoints",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a waypoint system.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Waypoints.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Woodcutting",
     "uniqueID": "woodcutting",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Minecraft Axe",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Woodcutting.mp4",
+    "Features": "",
+    "WorkshopContent": "3135774516",
+    "private_uniqueID": ""
   },
   {
     "name": "ArcCW Attachments",
     "uniqueID": "arccw",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds ArcCW Attachments as equippable items.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Admin Stick",
     "uniqueID": "adminstick",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Admin stick menu for player commands",
+    "Showcase": "https://bleonheart.github.io/assets/videos//AdminStick.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Radio Voice Chat",
     "uniqueID": "radio",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Radio Voice Chat",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "3431349806",
+    "private_uniqueID": ""
   },
   {
     "name": "Control Points",
     "uniqueID": "controlpoint",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds some control points to take control of.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//ControlPoints.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Improved Constructable Props",
     "uniqueID": "propbasedbuilding",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds the ability to construct props and entities",
+    "Showcase": "https://bleonheart.github.io/assets/videos//PropPlacer.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Trading",
     "uniqueID": "trading",
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Trading of items between players.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Cassette Player",
     "uniqueID": "cassette",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Collect cassette's and listen to your favorite tunes.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Legislative Voting",
     "uniqueID": "leg_voting",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Legislative Voting.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Infection",
     "uniqueID": "infection",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Infection mechanics.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Infection.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "EFT Corpses",
     "uniqueID": "eftcorpses",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Allows to search players corpses.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//EFTBodies.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "ID System",
     "uniqueID": "id_system",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds an important document with all the information about the player.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Character Creation",
     "uniqueID": "modified_charcreation",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Modifies character creation.",
+    "Showcase": "https://bleonheart.github.io/assets/videos//ModifiedCharacterCreation.mp4",
+    "Features": "",
+    "WorkshopContent": "3431349723",
+    "private_uniqueID": ""
   },
   {
     "name": "Black Market NPC",
     "uniqueID": "blackmarket",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "The Black Market NPC",
+    "Showcase": "https://bleonheart.github.io/assets/videos//BlackMarket.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Recruitment NPC",
     "uniqueID": "recruitment",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "The Recruitment NPC",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Recruitment.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Taxi NPC",
     "uniqueID": "taxi",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "The Taxi NPC",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Taxi.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Mechanic NPC",
     "uniqueID": "mechanic",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "The Mechanic NPC",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Mechanic.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Help NPCs",
     "uniqueID": "helpnpc",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "The Help NPC",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Recruitment.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Roleplay NPCs",
     "uniqueID": "property",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A Roleplay NPCs Framework",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Properties.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Delivery NPC",
     "uniqueID": "delivery",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "The Delivery NPC",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Delivery.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Car Dealer",
     "uniqueID": "cardealer",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a Car Dealer",
+    "Showcase": "https://bleonheart.github.io/assets/videos//CarDealer.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Roleplay NPCs",
     "uniqueID": "npcs",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "A Roleplay NPCs Framework",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "WireTaps",
     "uniqueID": "wiretaps",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds Wiretaps",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Leveling",
     "uniqueID": "leveling",
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds leveling and experience",
+    "Showcase": "https://bleonheart.github.io/assets/videos//Leveling.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Director Mode",
     "uniqueID": "director",
-    "version": "1.0"
+    "version": "1.0",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a Director Mode similar to L4D",
+    "Showcase": "https://bleonheart.github.io/assets/videos//DirectorSpawns.mp4",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   },
   {
     "name": "Crafting",
     "uniqueID": "crafting",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "desc": "Adds a pretty indepth crafting system.",
+    "Showcase": "MODULE.Showcase = \"\"",
+    "Features": "",
+    "WorkshopContent": "",
+    "private_uniqueID": ""
   }
 ]
