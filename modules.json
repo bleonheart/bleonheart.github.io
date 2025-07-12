@@ -324,18 +324,6 @@
     "private_uniqueID": ""
   },
   {
-    "name": "Admin Stick",
-    "uniqueID": "adminstick",
-    "version": "1.0",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "desc": "Admin stick menu for player commands",
-    "Showcase": "https://bleonheart.github.io/assets/videos//AdminStick.mp4",
-    "Features": "",
-    "WorkshopContent": "",
-    "private_uniqueID": ""
-  },
-  {
     "name": "Achievements",
     "uniqueID": "achievements",
     "version": "1.0",
