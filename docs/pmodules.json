@@ -1,0 +1,1006 @@
+[
+  {
+    "name": "Achievements",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Tracks kill and death milestones for multiple NPC types, Displays progress bars and achievement list in a menu, Unlocks rewards when requirements are met, Notifies players upon unlocking an achievement, and Character data stores achievement progress.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/achievements.html",
+    "uniqueID": "private_achievements",
+    "features": [
+      "Tracks kill and death milestones for multiple NPC types",
+      "Displays progress bars and achievement list in a menu",
+      "Unlocks rewards when requirements are met",
+      "Notifies players upon unlocking an achievement",
+      "Character data stores achievement progress"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Achievements.mp4"
+    ]
+  },
+  {
+    "name": "Animations",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Adds various /act commands for roleplay animations, Commands trigger animations from the EGM pack, Animations can be interrupted with movement, Supports both casual and combat poses, and Showcases dancing and gesture options.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/anim.html",
+    "uniqueID": "private_anim",
+    "features": [
+      "Adds various /act commands for roleplay animations",
+      "Commands trigger animations from the EGM pack",
+      "Animations can be interrupted with movement",
+      "Supports both casual and combat poses",
+      "Showcases dancing and gesture options"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Animations.mp4"
+    ]
+  },
+  {
+    "name": "ArcCW Attachments",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Creates ArcCW attachment items for weapons, Players equip attachments through inventory, Attachments modify weapon stats and appearance, Can disable if ArcCW is not present, and Supports custom attachment lists.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/arccw.html",
+    "uniqueID": "private_arccw",
+    "features": [
+      "Creates ArcCW attachment items for weapons",
+      "Players equip attachments through inventory",
+      "Attachments modify weapon stats and appearance",
+      "Can disable if ArcCW is not present",
+      "Supports custom attachment lists"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Banking",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can open up to three bank accounts for fees, Deposit, withdraw and transfer funds between accounts, Item bank storage with size based on VIP status, Transaction logs stored per account, and Anti-spam timers for banking actions.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/banking.html",
+    "uniqueID": "private_banking",
+    "features": [
+      "Players can open up to three bank accounts for fees",
+      "Deposit",
+      " withdraw and transfer funds between accounts",
+      "Item bank storage with size based on VIP status",
+      "Transaction logs stored per account",
+      "Anti-spam timers for banking actions"
+    ],
+    "workshop": [
+      "3431349605"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Banking.mp4"
+    ]
+  },
+  {
+    "name": "Clothing System",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Bonemerge system attaches clothing models to players, Handles gender specific models and bodygroups, Vendors sell outfits from configuration, Maintains equipped items across sessions, and Supports ties and other accessories.",
+    "version": "1.05",
+    "source": "https://liliaframework.github.io/Modules/bonemerge.html",
+    "uniqueID": "private_bonemerge",
+    "features": [
+      "Bonemerge system attaches clothing models to players",
+      "Handles gender specific models and bodygroups",
+      "Vendors sell outfits from configuration",
+      "Maintains equipped items across sessions",
+      "Supports ties and other accessories"
+    ],
+    "workshop": [
+      "3425707500",
+      "3425693671"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Bonemerge.mp4"
+    ]
+  },
+  {
+    "name": "Cameras",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Adds static surveillance cameras around the map, Players can view camera feeds on monitors, Supports linking cameras to security factions, Workshop content provides camera models, and Integrates with the map for immersion.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/cameras.html",
+    "uniqueID": "private_cameras",
+    "features": [
+      "Adds static surveillance cameras around the map",
+      "Players can view camera feeds on monitors",
+      "Supports linking cameras to security factions",
+      "Workshop content provides camera models",
+      "Integrates with the map for immersion"
+    ],
+    "workshop": [
+      "904615164"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//CCTV.mp4"
+    ]
+  },
+  {
+    "name": "Car Bomb",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows arming vehicles with timed car bombs, Bomb starts when engine is active and explodes after delay, Remote Explode action available for the bomber, Explosion removes the vehicle, and Uses Think hook to trigger detonation.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/carbomber.html",
+    "uniqueID": "private_carbomber",
+    "features": [
+      "Allows arming vehicles with timed car bombs",
+      "Bomb starts when engine is active and explodes after delay",
+      "Remote Explode action available for the bomber",
+      "Explosion removes the vehicle",
+      "Uses Think hook to trigger detonation"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//CarBomb.mp4"
+    ]
+  },
+  {
+    "name": "Car Options",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows players to lock or unlock personal vehicles, Engine toggle and headlight controls, Radio system with preset songs, Supports custom car horn sounds, and Quality-of-life options for car owners.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/caroptions.html",
+    "uniqueID": "private_caroptions",
+    "features": [
+      "Allows players to lock or unlock personal vehicles",
+      "Engine toggle and headlight controls",
+      "Radio system with preset songs",
+      "Supports custom car horn sounds",
+      "Quality-of-life options for car owners"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//CarOptions.mp4"
+    ]
+  },
+  {
+    "name": "Cassette Player",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Adds portable cassette players, Cassettes are collectible items with music, Players insert tapes to play audio, Playback heard by nearby players, and Useful for ambience or RP events.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/cassette.html",
+    "uniqueID": "private_cassette",
+    "features": [
+      "Adds portable cassette players",
+      "Cassettes are collectible items with music",
+      "Players insert tapes to play audio",
+      "Playback heard by nearby players",
+      "Useful for ambience or RP events"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Mobile Phones",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can pair phones to chat privately, Voice chat only works when partners are connected, Text chat via /phone command shows green prefix, Copy phone numbers to clipboard through UI, and Partner tracking stored using network vars.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/cellphones.html",
+    "uniqueID": "private_cellphones",
+    "features": [
+      "Players can pair phones to chat privately",
+      "Voice chat only works when partners are connected",
+      "Text chat via /phone command shows green prefix",
+      "Copy phone numbers to clipboard through UI",
+      "Partner tracking stored using network vars"
+    ],
+    "workshop": [
+      "3431352659"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Cellphones.mp4"
+    ]
+  },
+  {
+    "name": "Character List",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Lists all characters on the server, Displays faction, class and play time, Search function for quick lookup, Useful for staff management, and Accessible from the F1 menu.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/characterlist.html",
+    "uniqueID": "private_characterlist",
+    "features": [
+      "Lists all characters on the server",
+      "Displays faction",
+      " class and play time",
+      "Search function for quick lookup",
+      "Useful for staff management",
+      "Accessible from the F1 menu"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//CharacterList.mp4"
+    ]
+  },
+  {
+    "name": "Chess and Droughts",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Spawn a chess board entity for matches, Supports both chess and checkers rules, Uses workshop models for board and pieces, Players take turns by interacting with pieces, and Great for downtime between events.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/chess.html",
+    "uniqueID": "private_chess",
+    "features": [
+      "Spawn a chess board entity for matches",
+      "Supports both chess and checkers rules",
+      "Uses workshop models for board and pieces",
+      "Players take turns by interacting with pieces",
+      "Great for downtime between events"
+    ],
+    "workshop": [
+      "3488362335"
+    ],
+    "showcase": []
+  },
+  {
+    "name": "Code 99",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players trigger Code 99 alerts with network message, Sends name and position to authorized jobs, HUD displays hold progress and cooldown timer, Only certain factions can call or hear the alert, and Alerts multiple players simultaneously.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/code99.html",
+    "uniqueID": "private_code99",
+    "features": [
+      "Players trigger Code 99 alerts with network message",
+      "Sends name and position to authorized jobs",
+      "HUD displays hold progress and cooldown timer",
+      "Only certain factions can call or hear the alert",
+      "Alerts multiple players simultaneously"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Code99.mp4"
+    ]
+  },
+  {
+    "name": "Control Points",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Control points captureable by factions, Spawn NPC entities that defend zones, Provides rewards for holding points, Shows status on HUD for participants, and Designed for PvP skirmishes.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/controlpoint.html",
+    "uniqueID": "private_controlpoint",
+    "features": [
+      "Control points captureable by factions",
+      "Spawn NPC entities that defend zones",
+      "Provides rewards for holding points",
+      "Shows status on HUD for participants",
+      "Designed for PvP skirmishes"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//ControlPoints.mp4"
+    ]
+  },
+  {
+    "name": "Entity Conversible",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows converting entities into interactable props, Players can pick up and move converted items, Useful for building barricades or scenes, Supports a variety of map objects, and Simple configuration table.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/convertibles.html",
+    "uniqueID": "private_convertibles",
+    "features": [
+      "Allows converting entities into interactable props",
+      "Players can pick up and move converted items",
+      "Useful for building barricades or scenes",
+      "Supports a variety of map objects",
+      "Simple configuration table"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Convertibles.mp4"
+    ]
+  },
+  {
+    "name": "Crafting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Craft items using recipes and ingredients, Supports multiple crafting benches, Time-based crafting with progress bar, Item blueprints define required skills, and Integrates with resource gathering mods.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/crafting.html",
+    "uniqueID": "private_crafting",
+    "features": [
+      "Craft items using recipes and ingredients",
+      "Supports multiple crafting benches",
+      "Time-based crafting with progress bar",
+      "Item blueprints define required skills",
+      "Integrates with resource gathering mods"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Director Mode",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Spawn waves of enemies on demand, Balances difficulty based on player count, Designed after Left 4 Dead director, Allows admins to start dynamic events, and Great for cooperative scenarios.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/director.html",
+    "uniqueID": "private_director",
+    "features": [
+      "Spawn waves of enemies on demand",
+      "Balances difficulty based on player count",
+      "Designed after Left 4 Dead director",
+      "Allows admins to start dynamic events",
+      "Great for cooperative scenarios"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//DirectorSpawns.mp4"
+    ]
+  },
+  {
+    "name": "Roleplay Rules",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Displays server rules in an in-game browser, Stores URL configuration for newcomers, Accessible from the help menu, Encourages players to read guidelines, and Simple and lightweight module.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/documentloader.html",
+    "uniqueID": "private_documentloader",
+    "features": [
+      "Displays server rules in an in-game browser",
+      "Stores URL configuration for newcomers",
+      "Accessible from the help menu",
+      "Encourages players to read guidelines",
+      "Simple and lightweight module"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Drugs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Custom drug cooking stations, Configurable timers for production, Drug items apply unique effects, Workshop content provides models, and Can expand with new drug recipes.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/drugs.html",
+    "uniqueID": "private_drugs",
+    "features": [
+      "Custom drug cooking stations",
+      "Configurable timers for production",
+      "Drug items apply unique effects",
+      "Workshop content provides models",
+      "Can expand with new drug recipes"
+    ],
+    "workshop": [
+      "3431406689"
+    ],
+    "showcase": []
+  },
+  {
+    "name": "EFT Corpses",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can loot items from corpses, Search radius limited by corpseMaxDist, Corpses use EFT-style models, Supports loot tables for random rewards, and Encourages risk vs reward gameplay.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/eftcorpses.html",
+    "uniqueID": "private_eftcorpses",
+    "features": [
+      "Players can loot items from corpses",
+      "Search radius limited by corpseMaxDist",
+      "Corpses use EFT-style models",
+      "Supports loot tables for random rewards",
+      "Encourages risk vs reward gameplay"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//EFTBodies.mp4"
+    ]
+  },
+  {
+    "name": "Events",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Config defines NPC events per map with spawn positions, Automatic timer spawns events when requirements met, notificationCallback sends staff and player messages, Admin commands to start events or remove NPCs, and Keeps track of active event NPCs using net vars.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/events.html",
+    "uniqueID": "private_events",
+    "features": [
+      "Config defines NPC events per map with spawn positions",
+      "Automatic timer spawns events when requirements met",
+      "notificationCallback sends staff and player messages",
+      "Admin commands to start events or remove NPCs",
+      "Keeps track of active event NPCs using net vars"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Events.mp4"
+    ]
+  },
+  {
+    "name": "Extraction",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players must reach extraction zones to escape, Timer counts down before evacuation, Positions configurable per map, Useful for raid style events, and Provides audio/visual cues.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/extraction.html",
+    "uniqueID": "private_extraction",
+    "features": [
+      "Players must reach extraction zones to escape",
+      "Timer counts down before evacuation",
+      "Positions configurable per map",
+      "Useful for raid style events",
+      "Provides audio/visual cues"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Extraction.mp4"
+    ]
+  },
+  {
+    "name": "Fish",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Cast fishing rods to catch various fish, Huge list of collectible fish items, Randomized chance values per species, Workshop models add visual variety, and Registers fish as usable inventory items.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/fish.html",
+    "uniqueID": "private_fish",
+    "features": [
+      "Cast fishing rods to catch various fish",
+      "Huge list of collectible fish items",
+      "Randomized chance values per species",
+      "Workshop models add visual variety",
+      "Registers fish as usable inventory items"
+    ],
+    "workshop": [
+      "3135774516"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Fishing.mp4"
+    ]
+  },
+  {
+    "name": "FOBs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Forward operating bases spawn friendly NPCs, Capture zones that produce income, Defenders respawn at the FOB, Includes map markers and announcements, and Encourages strategic team play.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/fob.html",
+    "uniqueID": "private_fob",
+    "features": [
+      "Forward operating bases spawn friendly NPCs",
+      "Capture zones that produce income",
+      "Defenders respawn at the FOB",
+      "Includes map markers and announcements",
+      "Encourages strategic team play"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//FOB.mp4"
+    ]
+  },
+  {
+    "name": "Dynamic Food",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Craft and cook various food items, Food restores hunger stats, Workshop props for ingredients and dishes, Definitions file for adding new recipes, and Integrates with hunger/thirst systems.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/food.html",
+    "uniqueID": "private_food",
+    "features": [
+      "Craft and cook various food items",
+      "Food restores hunger stats",
+      "Workshop props for ingredients and dishes",
+      "Definitions file for adding new recipes",
+      "Integrates with hunger/thirst systems"
+    ],
+    "workshop": [
+      "3431353368"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Food.mp4"
+    ]
+  },
+  {
+    "name": "Lootables",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Random loot bags that drop items, Different rarity tiers of bags, Encourages exploration and scavenging, Items generated from configurable tables, and Simple use animation when opening.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/gachabags.html",
+    "uniqueID": "private_gachabags",
+    "features": [
+      "Random loot bags that drop items",
+      "Different rarity tiers of bags",
+      "Encourages exploration and scavenging",
+      "Items generated from configurable tables",
+      "Simple use animation when opening"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Infection",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can become infected from zombies, Progresses through multiple sickness stages, Treatment items cure or slow infection, Adds tension to survival gameplay, and Visual indicators show infection level.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/infection.html",
+    "uniqueID": "private_infection",
+    "features": [
+      "Players can become infected from zombies",
+      "Progresses through multiple sickness stages",
+      "Treatment items cure or slow infection",
+      "Adds tension to survival gameplay",
+      "Visual indicators show infection level"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Infection.mp4"
+    ]
+  },
+  {
+    "name": "Injuries System",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Adds limping and leg damage effects, Players require splints or medics to heal, Fall damage may break bones, Workshop models for crutches and casts, and Immersive injury system for realism.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/injuries.html",
+    "uniqueID": "private_injuries",
+    "features": [
+      "Adds limping and leg damage effects",
+      "Players require splints or medics to heal",
+      "Fall damage may break bones",
+      "Workshop models for crutches and casts",
+      "Immersive injury system for realism"
+    ],
+    "workshop": [
+      "3482445599"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Injuries.mp4"
+    ]
+  },
+  {
+    "name": "Languages",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can learn new languages, Chat messages translated for speakers, Supports picking languages on char creation, Language table defines available options, and Useful for immersive roleplay.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/languages.html",
+    "uniqueID": "private_languages",
+    "features": [
+      "Players can learn new languages",
+      "Chat messages translated for speakers",
+      "Supports picking languages on char creation",
+      "Language table defines available options",
+      "Useful for immersive roleplay"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Languages.mp4"
+    ]
+  },
+  {
+    "name": "Legislative Voting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players propose and vote on new laws, Tracks votes per SteamID to prevent spam, Winning laws stored in LegislativeBoxLaws, Optional box entity for physical voting, and Brings politics to the server.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/leg_voting.html",
+    "uniqueID": "private_leg_voting",
+    "features": [
+      "Players propose and vote on new laws",
+      "Tracks votes per SteamID to prevent spam",
+      "Winning laws stored in LegislativeBoxLaws",
+      "Optional box entity for physical voting",
+      "Brings politics to the server"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Leveling",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Character levels with experience points, XP awarded for various actions, Level determines unlocks and perks, Persistent across player sessions, and Supports manual adjustments by admins.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/leveling.html",
+    "uniqueID": "private_leveling",
+    "features": [
+      "Character levels with experience points",
+      "XP awarded for various actions",
+      "Level determines unlocks and perks",
+      "Persistent across player sessions",
+      "Supports manual adjustments by admins"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Leveling.mp4"
+    ]
+  },
+  {
+    "name": "Limb Ripper",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows ripping limbs from ragdolls, Limbs become usable melee weapons, Gory visual effects for horror RP, Requires workshop models for limbs, and Optionally restrict to certain factions.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/limbripper.html",
+    "uniqueID": "private_limbripper",
+    "features": [
+      "Allows ripping limbs from ragdolls",
+      "Limbs become usable melee weapons",
+      "Gory visual effects for horror RP",
+      "Requires workshop models for limbs",
+      "Optionally restrict to certain factions"
+    ],
+    "workshop": [
+      "3429516924"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//LimbRipper.mp4"
+    ]
+  },
+  {
+    "name": "Lootables",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Spawn searchable containers around the map, Players loot random items from them, Containers have cooldowns before reuse, Supports customizing loot tables, and Encourages exploration for supplies.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/looting.html",
+    "uniqueID": "private_looting",
+    "features": [
+      "Spawn searchable containers around the map",
+      "Players loot random items from them",
+      "Containers have cooldowns before reuse",
+      "Supports customizing loot tables",
+      "Encourages exploration for supplies"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Lootables.mp4"
+    ]
+  },
+  {
+    "name": "Global Map",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Displays a world map for navigation, Flag controlled access for map tools, Useful for large open world maps, Players can mark locations, and Supports custom map images.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/map.html",
+    "uniqueID": "private_map",
+    "features": [
+      "Displays a world map for navigation",
+      "Flag controlled access for map tools",
+      "Useful for large open world maps",
+      "Players can mark locations",
+      "Supports custom map images"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Map.mp4"
+    ]
+  },
+  {
+    "name": "Medals",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Award players with persistent medals, Medals displayed on character profiles, Staff permissions for giving or taking medals, Workshop models for medal icons, and Encourages achievement-based gameplay.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/medals.html",
+    "uniqueID": "private_medals",
+    "features": [
+      "Award players with persistent medals",
+      "Medals displayed on character profiles",
+      "Staff permissions for giving or taking medals",
+      "Workshop models for medal icons",
+      "Encourages achievement-based gameplay"
+    ],
+    "workshop": [
+      "3431351553"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Medals.mp4"
+    ]
+  },
+  {
+    "name": "Woodcutting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Mine rocks for ore resources, Uses pickaxe tool with durability, Ores processed into crafting materials, Workshop props for rocks and tools, and Simple progression for gathering.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/mining.html",
+    "uniqueID": "private_mining",
+    "features": [
+      "Mine rocks for ore resources",
+      "Uses pickaxe tool with durability",
+      "Ores processed into crafting materials",
+      "Workshop props for rocks and tools",
+      "Simple progression for gathering"
+    ],
+    "workshop": [
+      "3135774516"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Mining.mp4"
+    ]
+  },
+  {
+    "name": "Character Creation",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Overhauls the default character creation UI, Adds custom fields and validation, Supports ID system submodule, Workshop content for backgrounds, and Makes new characters more immersive.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/modified_charcreation.html",
+    "uniqueID": "private_modified_charcreation",
+    "features": [
+      "Overhauls the default character creation UI",
+      "Adds custom fields and validation",
+      "Supports ID system submodule",
+      "Workshop content for backgrounds",
+      "Makes new characters more immersive"
+    ],
+    "workshop": [
+      "3431349723"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//ModifiedCharacterCreation.mp4"
+    ]
+  },
+  {
+    "name": "Roleplay NPCs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Framework for custom roleplay NPCs, Supports dialogue trees and quests, Easy to add new NPC types, Used by submodules like mechanic or taxi, and Centralizes NPC scripts.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/npcs.html",
+    "uniqueID": "private_npcs",
+    "features": [
+      "Framework for custom roleplay NPCs",
+      "Supports dialogue trees and quests",
+      "Easy to add new NPC types",
+      "Used by submodules like mechanic or taxi",
+      "Centralizes NPC scripts"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Gun License",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Maps vendor items to required permit items, Checks player inventory before allowing purchase, Notifies players when permit is missing, Works for selling items without restrictions, and Simple shared configuration table.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/permits.html",
+    "uniqueID": "private_permits",
+    "features": [
+      "Maps vendor items to required permit items",
+      "Checks player inventory before allowing purchase",
+      "Notifies players when permit is missing",
+      "Works for selling items without restrictions",
+      "Simple shared configuration table"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Improved Constructable Props",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows players to spawn constructable props, Prop placement follows resource cost system, Supports upgrading props into entities, Great for base building mechanics, and Integrated with toolgun options.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/propbasedbuilding.html",
+    "uniqueID": "private_propbasedbuilding",
+    "features": [
+      "Allows players to spawn constructable props",
+      "Prop placement follows resource cost system",
+      "Supports upgrading props into entities",
+      "Great for base building mechanics",
+      "Integrated with toolgun options"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//PropPlacer.mp4"
+    ]
+  },
+  {
+    "name": "Radio Voice Chat",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Handheld radios enable voice chat, Players tune to channels via UI, Range based on radio quality, Supports push-to-talk or open mic, and Workshop model provides radio item.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/radio.html",
+    "uniqueID": "private_radio",
+    "features": [
+      "Handheld radios enable voice chat",
+      "Players tune to channels via UI",
+      "Range based on radio quality",
+      "Supports push-to-talk or open mic",
+      "Workshop model provides radio item"
+    ],
+    "workshop": [
+      "3431349806"
+    ],
+    "showcase": []
+  },
+  {
+    "name": "Representative Voting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players run as candidates for representative, Voting period toggled by admins, Tracks votes per player to avoid duplicates, Winners stored in CurrentRepresentatives, and Useful for community-driven governments.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/rep_voting.html",
+    "uniqueID": "private_rep_voting",
+    "features": [
+      "Players run as candidates for representative",
+      "Voting period toggled by admins",
+      "Tracks votes per player to avoid duplicates",
+      "Winners stored in CurrentRepresentatives",
+      "Useful for community-driven governments"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Store Robbery",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Rob convenience stores for quick cash, Alarm triggers police notification, NPC clerk hands over money on success, Cooldown prevents repeated robbery, and Short, simple criminal activity.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/robberies.html",
+    "uniqueID": "private_robberies",
+    "features": [
+      "Rob convenience stores for quick cash",
+      "Alarm triggers police notification",
+      "NPC clerk hands over money on success",
+      "Cooldown prevents repeated robbery",
+      "Short",
+      " simple criminal activity"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Robberies.mp4"
+    ]
+  },
+  {
+    "name": "Character Info",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Displays custom messages during char creation, Can show server rules or tips, Helps new players understand the setting, Works alongside other creation modules, and Easily editable text strings.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/startinfo.html",
+    "uniqueID": "private_startinfo",
+    "features": [
+      "Displays custom messages during char creation",
+      "Can show server rules or tips",
+      "Helps new players understand the setting",
+      "Works alongside other creation modules",
+      "Easily editable text strings"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//StartInfo.mp4"
+    ]
+  },
+  {
+    "name": "Trading",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Secure trading window between two players, Both sides confirm before exchange, Supports item and money trades, Prevents dropping items during trade, and Logging to prevent scamming.",
+    "version": "1.03",
+    "source": "https://liliaframework.github.io/Modules/trading.html",
+    "uniqueID": "private_trading",
+    "features": [
+      "Secure trading window between two players",
+      "Both sides confirm before exchange",
+      "Supports item and money trades",
+      "Prevents dropping items during trade",
+      "Logging to prevent scamming"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Tying",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Rope items can restrain other players, Bound players cannot use weapons, Supports dragging with submodules, Blindfold and gag features available, and Encourages hostage scenarios.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/tying.html",
+    "uniqueID": "private_tying",
+    "features": [
+      "Rope items can restrain other players",
+      "Bound players cannot use weapons",
+      "Supports dragging with submodules",
+      "Blindfold and gag features available",
+      "Encourages hostage scenarios"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Tying.mp4"
+    ]
+  },
+  {
+    "name": "Vending",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Placeable vending machine entities, Players withdraw earnings stored in the machine, Owners refill stock using items from inventory, Checks faction ownership before allowing actions, and Network messages handle opening UI and transactions.",
+    "version": "1.02",
+    "source": "https://liliaframework.github.io/Modules/vending.html",
+    "uniqueID": "private_vending",
+    "features": [
+      "Placeable vending machine entities",
+      "Players withdraw earnings stored in the machine",
+      "Owners refill stock using items from inventory",
+      "Checks faction ownership before allowing actions",
+      "Network messages handle opening UI and transactions"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Waypoints",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can place personal waypoints, Visible markers appear on HUD, Waypoints shareable with squad mates, Commands to clear or rename markers, and Great for navigation during events.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/waypoints.html",
+    "uniqueID": "private_waypoints",
+    "features": [
+      "Players can place personal waypoints",
+      "Visible markers appear on HUD",
+      "Waypoints shareable with squad mates",
+      "Commands to clear or rename markers",
+      "Great for navigation during events"
+    ],
+    "workshop": [],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Waypoints.mp4"
+    ]
+  },
+  {
+    "name": "WireTaps",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can plant wiretap devices, Taps relay nearby voice chat, Hidden from victims unless found, Useful for undercover investigations, and Simple placement and removal.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/wiretaps.html",
+    "uniqueID": "private_wiretaps",
+    "features": [
+      "Players can plant wiretap devices",
+      "Taps relay nearby voice chat",
+      "Hidden from victims unless found",
+      "Useful for undercover investigations",
+      "Simple placement and removal"
+    ],
+    "workshop": [],
+    "showcase": []
+  },
+  {
+    "name": "Woodcutting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Chop trees to gather wood logs, Uses axe tools with swinging animation, Logs processed into crafting materials, Workshop models for trees and stumps, and Simple skill progression system.",
+    "version": "1.01",
+    "source": "https://liliaframework.github.io/Modules/woodcutting.html",
+    "uniqueID": "private_woodcutting",
+    "features": [
+      "Chop trees to gather wood logs",
+      "Uses axe tools with swinging animation",
+      "Logs processed into crafting materials",
+      "Workshop models for trees and stumps",
+      "Simple skill progression system"
+    ],
+    "workshop": [
+      "3135774516"
+    ],
+    "showcase": [
+      "https://bleonheart.github.io/assets/videos//Woodcutting.mp4"
+    ]
+  }
+]
