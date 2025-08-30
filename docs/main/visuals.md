@@ -28,7 +28,7 @@ Displays a custom panel on character creation to explain the server setting and 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//StartInfo.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//StartInfo.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -53,7 +53,7 @@ Adds an introductory video (or series of videos) that plays for new players, con
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//VideoIntro.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//VideoIntro.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -71,7 +71,7 @@ Adds a dedicated Warhammer-themed character sheet that references Warhammer lore
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Warhammer%20CharSheet.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Warhammer%20CharSheet.mp4" type="video/mp4">
     </video>
   </div>
 </details>

@@ -20,7 +20,7 @@ A NPC that rents houses to players.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Properties.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Properties.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -37,7 +37,7 @@ NPC offering illegal items or deliveries to specific map locations.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//BlackMarket.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//BlackMarket.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -54,7 +54,7 @@ Facilitates buying and selling cars through an NPC menu, optionally with customi
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//CarDealer.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//CarDealer.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -87,7 +87,7 @@ Hires players into a mechanic faction, repairing vehicles for money.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Mechanic.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Mechanic.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -111,7 +111,7 @@ Lets players join a Taxi Job, picking up NPC or player passengers for monetary r
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Taxi.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Taxi.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -128,7 +128,7 @@ Adds a delivery job where players drive packages around the map, earning money u
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Delivery.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Delivery.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -145,7 +145,7 @@ Instantly recruits players into a specific faction with assigned ranks if necess
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Recruitment.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Recruitment.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -162,7 +162,7 @@ Offers new or existing players in-game tips and tutorial info, possibly linking 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Recruitment.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Recruitment.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -179,7 +179,7 @@ Comprehensive banking solution with multiple roles (Paycheck Retriever, Bank Man
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Banking.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Banking.mp4" type="video/mp4">
     </video>
   </div>
 </details>

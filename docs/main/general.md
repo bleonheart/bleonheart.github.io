@@ -11,7 +11,7 @@ Adds an SWEP to simplify player management. This SWEP can run administrative com
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//AdminStick.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//AdminStick.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -28,7 +28,7 @@ Allows players to holster and unholster weapons visually, improving immersion by
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//WeaponHolstering.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//WeaponHolstering.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -45,7 +45,7 @@ A walk type mechanic similar to Star Citizen, allowing you to adjust your walkin
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//WalkTypes.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//WalkTypes.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -62,7 +62,7 @@ A system that is planned to enforce that players review the rules before playing
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//RulesIntro.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//RulesIntro.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -79,7 +79,7 @@ Implements a Combine Dropship for fast travel or troop transport. Allows configu
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Dropshipping%20System.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Dropshipping%20System.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -96,7 +96,7 @@ Provides a centralized stash shared by all members of a faction. Items can have 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//factionstashes.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//factionstashes.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -137,7 +137,7 @@ Implements a hunger and thirst system that can affect stamina regeneration or pr
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Food.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Food.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -154,7 +154,7 @@ Designed for HL2RP, players start with temporary passport papers and must visit 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//CID.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//CID.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -171,7 +171,7 @@ Allows players to join or leave specific classes in a faction through interactiv
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//civilterminals.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//civilterminals.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -188,7 +188,7 @@ Lets players quickly call police assistance via a keybind. Displays a waypoint t
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Code99.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Code99.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -205,7 +205,7 @@ Adds a mustard gas SWEP and a gas mask item. Players in gas without a mask take 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//GasMask.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//GasMask.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -222,7 +222,7 @@ Players spawn as randomly generated characters with unique stats. Upon death, th
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//RPCharacters.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//RPCharacters.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -239,7 +239,7 @@ Inspired by Project Zomboid, this adds detailed traits, skills, and backgrounds 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Zomboid.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Zomboid.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -288,7 +288,7 @@ Introduces a more immersive first-person camera movement, making the player’s 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//RideablePets.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//RideablePets.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -313,7 +313,7 @@ Lets players learn and speak different languages via books. Only those who know 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Languages.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Languages.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -330,7 +330,7 @@ Expands on tying mechanics, allowing dragging, blindfolding, and gagging of rest
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Tying.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Tying.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -347,7 +347,7 @@ Enables looting across the map with configurable rarity, probability-based item 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Lootables.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Lootables.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -380,7 +380,7 @@ Allows players to mount animals or creatures. Flying mounts can ascend by holdin
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//RideablePets.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//RideablePets.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -421,7 +421,7 @@ Adds an automatic description generator, including physical stats (height, weigh
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//ModifiedCharacterCreation.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//ModifiedCharacterCreation.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -438,7 +438,7 @@ Implements mobile phones for in-game private messaging (SMS) and an optional cal
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Cellphones.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Cellphones.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -487,7 +487,7 @@ Lets players fish for items, trash, or money based on a configurable rarity syst
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Fishing.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Fishing.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -504,7 +504,7 @@ Introduces the ability to chop wood from trees, with configurable drop rates. Of
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Woodcutting.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Woodcutting.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -521,7 +521,7 @@ Allows players to mine ores from designated nodes, with drop chances and rarity 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Mining.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Mining.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -538,7 +538,7 @@ Adds a Turns System that allows SeriousRP servers to manage turns in SeriousRP S
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//TurnSystem.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//TurnSystem.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -555,7 +555,7 @@ Adds several entities from which items can be robbed. These entities are highly 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Robberies.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Robberies.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -571,7 +571,7 @@ Allows a faction to set up a spawnable outpost for its members to respawn at, wi
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//FOB.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//FOB.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -668,7 +668,7 @@ Allows players to convert placed props or entities into item form, enabling rede
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Convertibles.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Convertibles.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -725,7 +725,7 @@ Lets players place a bomb in a vehicle, triggering a timed explosion with option
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//CarBomb.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//CarBomb.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -774,7 +774,7 @@ Introduces capture zones that generate money or items for the faction holding th
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//ControlPoints.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//ControlPoints.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -807,7 +807,7 @@ Restricts doors and areas based on multi-tier security clearances, often tied to
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Clearance.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Clearance.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -880,7 +880,7 @@ Adds extra roleplay animations like Surrender, Salute, or Cross Arms, accessible
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Animations.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Animations.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -897,7 +897,7 @@ Provides a wheel interface with a whitelist of animations for quick selection.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//AnimationWheel.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//AnimationWheel.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -915,7 +915,7 @@ A weapon wheel that can be summoned by holding the middle mouse button. Clicking
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos/WeaponWheel.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos/WeaponWheel.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -956,7 +956,7 @@ Displays earned medals above a player’s head, highlighting achievements or rol
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Medals.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Medals.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -973,7 +973,7 @@ Enables in-game faction management for inviting or removing members.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//FactionInvites.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//FactionInvites.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -990,7 +990,7 @@ Provides a top-down map interface.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Map.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Map.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1015,7 +1015,7 @@ Makes player corpses fully lootable upon death, mimicking Escape from Tarkov’s
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//EFTBodies.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//EFTBodies.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1032,7 +1032,7 @@ Introduces a **Director Spawner**, similar to the system used in Left 4 Dead. Zo
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//DirectorSpawns.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//DirectorSpawns.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1049,7 +1049,7 @@ Adds a comprehensive **Achievement System**, where players can unlock various ac
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Achievements.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Achievements.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1082,7 +1082,7 @@ Adds structured raiding or ambushing features for faction conflict. Notifies def
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Raid%20System.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Raid%20System.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1115,7 +1115,7 @@ Implements a level system, increasing attributes like max health or unlocking ne
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Leveling.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Leveling.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1136,7 +1136,7 @@ Adds compatibility with [JMOD EFT](https://steamcommunity.com/sharedfiles/filede
 
 Adds an Extraction mechanic where, upon deploying a flare, you are recalled to one of several predefined safe zones. This feature includes a countdown timer and a short animation to accompany the extraction process.
 
-<details> <summary>Video</summary> <div style="text-align: center;"> <video width="560" height="315" controls> <source src="https://bleonheart.github.io/assets/videos//Extraction.mp4" type="video/mp4"> </video> </div> </details>
+<details> <summary>Video</summary> <div style="text-align: center;"> <video width="560" height="315" controls> <source src="https://bleonheart.github.io/assets/legacy_videos//Extraction.mp4" type="video/mp4"> </video> </div> </details>
 
 ---
 
@@ -1150,7 +1150,7 @@ When attacked by zombie players or zombie NPCs, an infection mechanic is trigger
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Infection.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Infection.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1166,7 +1166,7 @@ Adds visible ranks on the scoreboard. Can integrate with factions, awarding cust
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Ranks.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Ranks.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1199,7 +1199,7 @@ Inspired by Rust. Instead of spawning props freely, players use items to build s
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//PropPlacer.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//PropPlacer.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1224,7 +1224,7 @@ Implements various injuries (bleeding, broken limbs, PTSD, concussion) with uniq
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Injuries.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Injuries.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1241,7 +1241,7 @@ Lets players layer multiple clothing or armor pieces that bonemerge onto their m
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Bonemerge.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Bonemerge.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1258,7 +1258,7 @@ Allows creation of player-made organizations with custom ranks, permissions, sha
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Organizations.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Organizations.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1275,7 +1275,7 @@ Enables properties or doors to be assigned to specific factions or players, with
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Housing.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Housing.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1292,7 +1292,7 @@ Players or factions can place cameras that can be named and remotely viewed. Non
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//CCTV.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//CCTV.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1341,7 +1341,7 @@ Gives drivers extra controls such as kicking passengers, locking doors from the 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//CarOptions.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//CarOptions.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1398,7 +1398,7 @@ A more extreme take on limb damage, expanding upon limb severing with additional
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//LimbRipper.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//LimbRipper.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1422,7 +1422,7 @@ Introduces designated PvP or contested areas, rewarding players or factions for 
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//CombatZones.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//CombatZones.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1439,7 +1439,7 @@ An advanced loot spawning system made for Helix that periodically generates rand
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//IX_LootSpawner.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//IX_LootSpawner.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1472,7 +1472,7 @@ Creates navigational markers with on-screen indicators or distance previews.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Waypoints.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Waypoints.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1513,7 +1513,7 @@ Lets admins or players view all characters tied to a SteamID. Can show stats, of
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//CharacterList.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//CharacterList.mp4" type="video/mp4">
     </video>
   </div>
 </details>
@@ -1530,7 +1530,7 @@ Spawns random or scheduled events around the map.
   <summary>Video</summary>
   <div style="text-align: center;">
     <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/videos//Events.mp4" type="video/mp4">
+      <source src="https://bleonheart.github.io/assets/legacy_videos//Events.mp4" type="video/mp4">
     </video>
   </div>
 </details>
