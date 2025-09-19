@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Marketplace
-
-**Description:**
-
 Provides an infinite marketplace system for player-to-player trading with no expiration dates. Features configurable listing limits, minimum prices, NPC vendor interface, search and filter functionality, and seamless economic system integration for enhanced server economy.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

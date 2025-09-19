@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Medals
-
-**Description:**
-
 Provides a comprehensive medal awarding system where players can earn persistent medals displayed on their character profiles. Features staff permissions for giving/taking medals, workshop models for medal icons, and achievement-based gameplay encouragement with network synchronization.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

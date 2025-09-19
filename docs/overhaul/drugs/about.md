@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Drugs
-
-**Description:**
-
 Provides a complete drug production and manufacturing system with consumable drug items, plant growing mechanics, drug processing, and realistic drug effects. Features workshop content for drug models, administrative oversight, and a comprehensive drug economy simulation.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

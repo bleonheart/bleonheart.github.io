@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Achievements
-
-**Description:**
-
 Provides a comprehensive achievement system that tracks kill and death milestones for multiple NPC types. Features progress bars, achievement lists in menus, reward unlocks, player notifications, and character data storage for achievement progress.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

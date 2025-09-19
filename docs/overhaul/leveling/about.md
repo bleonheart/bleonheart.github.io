@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Leveling
-
-**Description:**
-
 Provides a comprehensive character leveling system with experience points awarded for various actions. Features persistent level progression, unlockable perks and abilities, and administrative controls for experience management.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
@@ -12,8 +7,10 @@ Provides a comprehensive character leveling system with experience points awarde
 - Character levels with experience points
 - XP awarded for various in-game actions
 - Level-based unlocks and perks system
+- Skill points system with configurable points per level
+- Visual skill tree with dependencies and connections
 - Persistent progression across sessions
-- Administrative commands for XP management
+- Administrative commands for XP, skill points, and skill management
 - Configurable leveling parameters
 - Character variable integration
 

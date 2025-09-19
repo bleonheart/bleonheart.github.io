@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Lootables
-
-**Description:**
-
 Provides dynamic lootable container system that spawns searchable containers around the map. Players can loot random items from these containers using a side-by-side inventory interface. Features skill requirements, alarm systems, and intelligent locking mechanisms for enhanced exploration gameplay.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

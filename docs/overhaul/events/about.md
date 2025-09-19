@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Events
-
-**Description:**
-
 Provides a comprehensive event spawning system with map-specific NPC events, automatic timers, and administrative controls. Features configurable spawn positions, notification systems, and tracking of active event entities.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

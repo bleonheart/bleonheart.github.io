@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Tying
-
-**Description:**
-
 Provides comprehensive player restraint features including handcuff-based player tying, weapon restrictions for bound players, drag support with submodules, blindfold and gag functionality, and encouragement of hostage scenarios for immersive roleplay. Features realistic sound effects and integration with search mechanics.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

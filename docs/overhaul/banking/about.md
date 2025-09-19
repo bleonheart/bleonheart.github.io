@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Banking
-
-**Description:**
-
 Provides comprehensive banking features including multiple bank accounts, secure fund management, item storage, and ATM functionality. Players can create several bank accounts with fees, deposit, withdraw and transfer funds between accounts, and utilize item bank storage with size based on VIP status. Includes anti-spam timers for banking actions and administrative controls.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

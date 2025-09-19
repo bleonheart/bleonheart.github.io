@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Animations
-
-**Description:**
-
 Provides a comprehensive animation system with various /act commands for immersive roleplay. Features bone manipulation animations that can be interrupted with movement, supporting both casual and combat poses with dancing and gesture options. The system uses EGM pack animations with realistic bone positioning and smooth transitions.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

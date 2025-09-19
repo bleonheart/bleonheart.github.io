@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Extraction
-
-**Description:**
-
 Provides a dynamic extraction zone system requiring players to reach designated areas to escape during events. Features countdown timers, map-specific configuration, and audio/visual cues for intense raid-style gameplay.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

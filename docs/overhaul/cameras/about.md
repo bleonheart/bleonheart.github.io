@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Cameras
-
-**Description:**
-
 Provides a comprehensive surveillance system with static cameras placed around the map that players can view through monitors. Features faction-specific camera access controls and workshop content for realistic camera models.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>

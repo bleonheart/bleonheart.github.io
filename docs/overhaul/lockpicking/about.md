@@ -1,10 +1,5 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-**Name:**
-Lockpicking
-
-**Description:**
-
 Provides realistic lockpicking mechanics for interactive door and container manipulation with an immersive minigame interface. Features detailed audio feedback, visual lockpicking interface, progressive difficulty, and lockpick durability system for enhanced roleplay experiences.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
