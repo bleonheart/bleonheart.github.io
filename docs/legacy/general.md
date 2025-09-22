@@ -295,13 +295,6 @@ Introduces a more immersive first-person camera movement, making the player’s 
 
 ---
 
-## Drugs
-
-**Description**: 
-
-Introduces a system to process raw drug bricks into usable items that grant various buffs or debuffs.
-
----
 
 ## Languages
 
@@ -320,39 +313,7 @@ Lets players learn and speak different languages via books. Only those who know 
 
 ---
 
-## Tying
 
-**Description**: 
-
-Expands on tying mechanics, allowing dragging, blindfolding, and gagging of restrained players. Also enables searching them with or without consent.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Tying.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-## Looting
-
-**Description**: 
-
-Enables looting across the map with configurable rarity, probability-based item distribution, and per-entity loot tables.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Lootables.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
 
 ## Wiretaps
 
@@ -362,13 +323,6 @@ Lets players place wiretap devices in rooms and listen in from a remote receiver
 
 ---
 
-## Crafting
-
-**Description**: 
-
-Provides a multi-table, multi-step crafting system governed by blueprints, limiting who can craft specific items.
-
----
 
 ## Rideable Mounts
 
@@ -395,21 +349,7 @@ Offers deep customization for armors, including movement speed changes, jump hei
 
 ---
 
-## Marketplace
 
-**Description**: 
-
-Establishes a global marketplace entity where players can list items for sale, buy items, and manage transactions.
-
----
-
-## Lockpicking
-
-**Description**: 
-
-Adds a Fallout-style lockpick mini-game to open locked doors, with configurable difficulty and success rates.
-
----
 
 ## Modified Character Creation | ID System
 
@@ -870,22 +810,6 @@ Implements weapon durability, reducing an item’s effectiveness over time until
 
 ---
 
-## Animations
-
-**Description**: 
-
-Adds extra roleplay animations like Surrender, Salute, or Cross Arms, accessible via commands or a menu.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Animations.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
 
 ## Animation Wheel
 
@@ -946,22 +870,6 @@ Awards or subtracts karma based on player actions, which can affect NPC or facti
 
 ---
 
-## Medals
-
-**Description**: 
-
-Displays earned medals above a player’s head, highlighting achievements or roles.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Medals.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
 
 ## Faction Menu
 
@@ -1039,22 +947,6 @@ Introduces a **Director Spawner**, similar to the system used in Left 4 Dead. Zo
 
 ---
 
-## Achievement System
-
-**Description**:  
-
-Adds a comprehensive **Achievement System**, where players can unlock various achievements based on in-game milestones, actions, or challenges completed. These achievements offer rewards, track player progress, and provide a sense of accomplishment.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Achievements.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
 
 ## Transformative Items
 
@@ -1105,22 +997,6 @@ Allows broadcasting of live or recorded content to in-game televisions for other
 
 ---
 
-## Leveling
-
-**Description**: 
-
-Implements a level system, increasing attributes like max health or unlocking new abilities.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Leveling.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
 
 ## JMOD EFT
 
@@ -1130,15 +1006,6 @@ Adds compatibility with [JMOD EFT](https://steamcommunity.com/sharedfiles/filede
 
 ---
 
-## Extraction
-
-**Description**: 
-
-Adds an Extraction mechanic where, upon deploying a flare, you are recalled to one of several predefined safe zones. This feature includes a countdown timer and a short animation to accompany the extraction process.
-
-<details> <summary>Video</summary> <div style="text-align: center;"> <video width="560" height="315" controls> <source src="https://bleonheart.github.io/assets/legacy_videos//Extraction.mp4" type="video/mp4"> </video> </div> </details>
-
----
 
 ## Infection
 
@@ -1514,23 +1381,6 @@ Lets admins or players view all characters tied to a SteamID. Can show stats, of
   <div style="text-align: center;">
     <video width="560" height="315" controls>
       <source src="https://bleonheart.github.io/assets/legacy_videos//CharacterList.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-## Automatic Events
-
-**Description**: 
-
-Spawns random or scheduled events around the map.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Events.mp4" type="video/mp4">
     </video>
   </div>
 </details>

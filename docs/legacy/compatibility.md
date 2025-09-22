@@ -39,61 +39,12 @@ Adds compatibility with [GQuest](https://www.gmodstore.com/market/view/gquest-th
 
 ---
 
-## Cigarette Factory
 
-**Description**: 
 
-Adds compatibility with [Simple Cigarette Factory](https://www.gmodstore.com/market/view/simple-cigarette-factory).
 
----
 
-## Casino Kit Blackjack
 
-**Description**: 
 
-Adds compatibility with [Casino Kit Blackjack](https://www.gmodstore.com/market/view/casino-kit-blackjack).
-
----
-
-## Casino Kit Craps
-
-**Description**: 
-
-Adds compatibility with [Casino Kit Craps](https://www.gmodstore.com/market/view/casino-kit-craps).
-
----
-
-## PCasino
-
-**Description**: 
-
-Adds compatibility with [PCasino](https://www.gmodstore.com/market/view/pcasino-the-perfect-casino-addon-roulette-blackjack-slots-prize-wheel).
-
----
-
-## UWeed
-
-**Description**: 
-
-Adds compatibility with [UWeed - Advanced Cannabis](https://www.gmodstore.com/market/view/uweed-advanced-cannabis-growth-drug).
-
----
-
-## UWeed Edibles
-
-**Description**: 
-
-Adds compatibility with [UWeed Edibles](https://www.gmodstore.com/market/view/uweed-extended-edibles-dlc).
-
----
-
-## Tobacco Factory
-
-**Description**: 
-
-Adds compatibility with [Tobacco Factory](https://www.gmodstore.com/market/view/tobacco-factory).
-
----
 
 ## Zero's Retro Mining
 
@@ -175,21 +126,7 @@ Adds compatibility with [Fine/Fining System Customizable](https://www.gmodstore.
 
 ---
 
-## Magic Mushroom Factory
 
-**Description**: 
-
-Adds compatibility with [Magic Mushroom Factory](https://www.gmodstore.com/market/view/magic-mushroom-factory-drug-script-and-darkrp-job).
-
----
-
-## Stock Market
-
-**Description**: 
-
-Adds compatibility with [Stock Market Addon](https://www.gmodstore.com/market/view/stock-market-addon-pointshop-support-control-your-economy).
-
----
 
 ## LSCS - Lightsaber
 
