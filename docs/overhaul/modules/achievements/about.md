@@ -16,7 +16,7 @@ Provides a comprehensive achievement system that tracks kill and death milestone
 
 <p align="center">
   <video width="900" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="../assets/Achievements.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/Achievements.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>
