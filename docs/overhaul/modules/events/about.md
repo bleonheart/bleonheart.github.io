@@ -16,7 +16,7 @@ Provides a comprehensive event spawning system with map-specific NPC events, aut
 
 <p align="center">
   <video width="900" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://github.com/bleonheart/bleonheart.github.io/raw/refs/heads/main/docs/assets/AutomaticEvents.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/AutomaticEvents.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>
