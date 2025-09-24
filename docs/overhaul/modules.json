@@ -131,18 +131,6 @@
     "workshop": []
   },
   {
-    "name": "Crafting",
-    "versionID": "private_crafting",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Craft items using recipes and ingredients, Supports multiple crafting benches, Time-based crafting with progress bar, Item blueprints define required skills, and Integrates with resource gathering mods.",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/crafting",
-    "source": "https://bleonheart.github.io/docs/modules/crafting.html",
-    "features": [],
-    "workshop": []
-  },
-  {
     "name": "Tying",
     "versionID": "private_tying",
     "author": "Samael",
@@ -293,6 +281,18 @@
     "version": "1.0",
     "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/controlpoint",
     "source": "https://bleonheart.github.io/docs/modules/controlpoint.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Crafting",
+    "versionID": "private_crafting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Craft items using recipes and ingredients, Supports multiple crafting benches, Time-based crafting with progress bar, Item blueprints define required skills, and Integrates with resource gathering mods.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/crafting",
+    "source": "https://bleonheart.github.io/docs/modules/crafting.html",
     "features": [],
     "workshop": []
   },
