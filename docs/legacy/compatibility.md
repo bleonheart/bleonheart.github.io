@@ -39,13 +39,6 @@ Adds compatibility with [GQuest](https://www.gmodstore.com/market/view/gquest-th
 
 ---
 
-
-
-
-
-
-
-
 ## Zero's Retro Mining
 
 **Description**: 
@@ -125,8 +118,6 @@ Adds compatibility with [CH_BitMiners](https://www.gmodstore.com/market/view/bit
 Adds compatibility with [Fine/Fining System Customizable](https://www.gmodstore.com/market/view/v1-3-1-fine-fining-system-customizable).
 
 ---
-
-
 
 ## LSCS - Lightsaber
 

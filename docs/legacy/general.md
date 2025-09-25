@@ -7,15 +7,6 @@
 **Description**: 
 Adds an SWEP to simplify player management. This SWEP can run administrative commands as well as chat commands targeted at players or entities. It aims to solve the problem of admins not knowing all the commands.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//AdminStick.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Weapon Holstering
@@ -23,15 +14,6 @@ Adds an SWEP to simplify player management. This SWEP can run administrative com
 **Description**: 
 
 Allows players to holster and unholster weapons visually, improving immersion by showing the holstered weapon model on the player.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//WeaponHolstering.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -41,15 +23,6 @@ Allows players to holster and unholster weapons visually, improving immersion by
 
 A walk type mechanic similar to Star Citizen, allowing you to adjust your walking speed according to your needs. I added a table where you can set the speed values for each type as a percentage, making it easy to configure and balance. Sprinting, of course, overrides the walk speed.  
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//WalkTypes.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Intro Rules
@@ -57,15 +30,6 @@ A walk type mechanic similar to Star Citizen, allowing you to adjust your walkin
 **Description**: 
 
 A system that is planned to enforce that players review the rules before playing.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//RulesIntro.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -75,15 +39,6 @@ A system that is planned to enforce that players review the rules before playing
 
 Implements a Combine Dropship for fast travel or troop transport. Allows configuring destinations and straightforward setups.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Dropshipping%20System.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Faction Stashes
@@ -91,15 +46,6 @@ Implements a Combine Dropship for fast travel or troop transport. Allows configu
 **Description**: 
 
 Provides a centralized stash shared by all members of a faction. Items can have a set price, managed by stock, and cannot be purchased if the stock is empty.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//factionstashes.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -127,37 +73,11 @@ Facilitates presidential elections based on popular vote. Players register as ca
 
 ---
 
-## Food
-
-**Description**: 
-
-Implements a hunger and thirst system that can affect stamina regeneration or prevent sprinting if left unchecked. Supports integration with Zero’s MasterChef and includes optional radiation mechanics.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Food.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
 ## Citizen ID – Passport Papers
 
 **Description**: 
 
 Designed for HL2RP, players start with temporary passport papers and must visit a Combine authority or terminal to obtain a permanent Citizen ID, each uniquely tied to the character.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//CID.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -167,15 +87,6 @@ Designed for HL2RP, players start with temporary passport papers and must visit 
 
 Allows players to join or leave specific classes in a faction through interactive terminals. Settings are highly customizable, and players can flag themselves active or inactive.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//civilterminals.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Code 99
@@ -183,15 +94,6 @@ Allows players to join or leave specific classes in a faction through interactiv
 **Description**: 
 
 Lets players quickly call police assistance via a keybind. Displays a waypoint to indicate how many officers are needed and highlights the location.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Code99.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -201,15 +103,6 @@ Lets players quickly call police assistance via a keybind. Displays a waypoint t
 
 Adds a mustard gas SWEP and a gas mask item. Players in gas without a mask take heavy damage over time; wearing a gas mask provides immunity.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//GasMask.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## RP Characters
@@ -218,15 +111,6 @@ Adds a mustard gas SWEP and a gas mask item. Players in gas without a mask take 
 
 Players spawn as randomly generated characters with unique stats. Upon death, the system shows how long they survived, adding narrative depth to roleplay.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//RPCharacters.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Zomboid Stats
@@ -234,15 +118,6 @@ Players spawn as randomly generated characters with unique stats. Upon death, th
 **Description**: 
 
 Inspired by Project Zomboid, this adds detailed traits, skills, and backgrounds to characters. These stats can affect crafting, combat, and other gameplay elements.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Zomboid.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -284,36 +159,7 @@ Provides a visually intuitive interface for players to view and improve their sk
 
 Introduces a more immersive first-person camera movement, making the player’s view gently sway while walking/running.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//RideablePets.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
-
-
-## Languages
-
-**Description**: 
-
-Lets players learn and speak different languages via books. Only those who know a language can understand it in-character.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Languages.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-
 
 ## Wiretaps
 
@@ -323,21 +169,11 @@ Lets players place wiretap devices in rooms and listen in from a remote receiver
 
 ---
 
-
 ## Rideable Mounts
 
 **Description**: 
 
 Allows players to mount animals or creatures. Flying mounts can ascend by holding jump, while land mounts can sprint.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//RideablePets.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -349,22 +185,11 @@ Offers deep customization for armors, including movement speed changes, jump hei
 
 ---
 
-
-
 ## Modified Character Creation | ID System
 
 **Description**: 
 
 Adds an automatic description generator, including physical stats (height, weight) or attributes for new characters. May also provide an in-game ID system.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//ModifiedCharacterCreation.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -374,15 +199,6 @@ Adds an automatic description generator, including physical stats (height, weigh
 
 Implements mobile phones for in-game private messaging (SMS) and an optional call system.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Cellphones.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Telephone
@@ -390,14 +206,6 @@ Implements mobile phones for in-game private messaging (SMS) and an optional cal
 **Description**: 
 
 Adds payphones for public or private calls to other players; can be integrated with wiretapping.
-
----
-
-## Radio
-
-**Description**: 
-
-Provides radios with multiple frequencies for text or voice communication.
 
 ---
 
@@ -417,88 +225,12 @@ Enables creation of in-game notes or documents linking to external Google Docs. 
 
 ---
 
-## Fishing
-
-**Description**: 
-
-Lets players fish for items, trash, or money based on a configurable rarity system. Includes a “sweet spot” mechanic for timing.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Fishing.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-## Woodcutting
-
-**Description**: 
-
-Introduces the ability to chop wood from trees, with configurable drop rates. Often integrates with crafting or economy systems.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Woodcutting.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-## Mining
-
-**Description**: 
-
-Allows players to mine ores from designated nodes, with drop chances and rarity settings. Often ties into crafting or trade.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Mining.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
 ## Turns
 
 **Description**: 
 
 Adds a Turns System that allows SeriousRP servers to manage turns in SeriousRP Scenarios.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//TurnSystem.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-## Robberies
-
-**Description**: 
-
-Adds several entities from which items can be robbed. These entities are highly configurable, allowing extensive customization to suit your taste.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Robberies.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 ---
 
 ## Forward Operating Bases (FOB)
@@ -506,15 +238,6 @@ Adds several entities from which items can be robbed. These entities are highly 
 **Description**: 
 
 Allows a faction to set up a spawnable outpost for its members to respawn at, with customizable cooldowns.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//FOB.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -582,36 +305,11 @@ Lets drivers and passengers tune into radio stations or streams while in a vehic
 
 ---
 
-## Chess
-
-**Description**: 
-
-Adds a fully playable chess board and pieces for two players.
-
----
-
 ## Permits
 
 **Description**: 
 
 Restricts certain items behind permits, which can be granted to specific factions or classes.
-
----
-
-## Convertibles
-
-**Description**: 
-
-Allows players to convert placed props or entities into item form, enabling redeployment elsewhere.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Convertibles.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -661,15 +359,6 @@ Adds a perks interface that can be restricted by faction, level, or other condit
 
 Lets players place a bomb in a vehicle, triggering a timed explosion with optional defusal mechanics.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//CarBomb.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Factories
@@ -710,15 +399,6 @@ Periodically drops crates with loot around the map, encouraging players to race 
 
 Introduces capture zones that generate money or items for the faction holding them. Encourages territorial conflict.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//ControlPoints.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Animal Butchering
@@ -742,15 +422,6 @@ Grants item-based door access using keycards of varying clearance levels.
 **Description**: 
 
 Restricts doors and areas based on multi-tier security clearances, often tied to factions or ranks.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Clearance.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -810,23 +481,6 @@ Implements weapon durability, reducing an item’s effectiveness over time until
 
 ---
 
-
-## Animation Wheel
-
-**Description**: 
-
-Provides a wheel interface with a whitelist of animations for quick selection.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//AnimationWheel.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
-
 ---
 
 ## Weapon Wheel
@@ -834,15 +488,6 @@ Provides a wheel interface with a whitelist of animations for quick selection.
 **Description**: 
 
 A weapon wheel that can be summoned by holding the middle mouse button. Clicking on any weapon equips it. I added support for logos, if necessary.  
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos/WeaponWheel.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -870,21 +515,11 @@ Awards or subtracts karma based on player actions, which can affect NPC or facti
 
 ---
 
-
 ## Faction Menu
 
 **Description**: 
 
 Enables in-game faction management for inviting or removing members.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//FactionInvites.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -893,15 +528,6 @@ Enables in-game faction management for inviting or removing members.
 **Description**: 
 
 Provides a top-down map interface.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Map.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -913,40 +539,13 @@ Each item (or weapon) has a serial number that police can check. Some can be era
 
 ---
 
-## EFT Corpses
-
-**Description**: 
-
-Makes player corpses fully lootable upon death, mimicking Escape from Tarkov’s loot-on-death style.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//EFTBodies.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
 ## Director Spawner
 
 **Description**:  
 
 Introduces a **Director Spawner**, similar to the system used in Left 4 Dead. Zombies spawn within a specified range, limited by both quantity and environmental conditions, creating dynamic and strategic gameplay.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//DirectorSpawns.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
-
 
 ## Transformative Items
 
@@ -970,15 +569,6 @@ Tracks clothing cleanliness. Over time, clothes get dirty and may need washing o
 
 Adds structured raiding or ambushing features for faction conflict. Notifies defenders and rewards attackers or defenders.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Raid%20System.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Police Lockers
@@ -997,7 +587,6 @@ Allows broadcasting of live or recorded content to in-game televisions for other
 
 ---
 
-
 ## JMOD EFT
 
 **Description**:  
@@ -1006,21 +595,11 @@ Adds compatibility with [JMOD EFT](https://steamcommunity.com/sharedfiles/filede
 
 ---
 
-
 ## Infection
 
 **Description**: 
 
 When attacked by zombie players or zombie NPCs, an infection mechanic is triggered. As your infection level increases, you begin to experience more debilitating debuffs. You can cure yourself with Zombrex, but if your infection surpasses 100%, you will fully transform into a zombie.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Infection.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 ## Ranking System
@@ -1028,15 +607,6 @@ When attacked by zombie players or zombie NPCs, an infection mechanic is trigger
 **Description**: 
 
 Adds visible ranks on the scoreboard. Can integrate with factions, awarding custom weapons or models for higher ranks.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Ranks.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -1062,15 +632,6 @@ Awards points for desirable behavior or tasks. Points can unlock perks, titles, 
 
 Inspired by Rust. Instead of spawning props freely, players use items to build structures in tiers.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//PropPlacer.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Farming
@@ -1087,15 +648,6 @@ Enables planting and growing crops over time, harvested for resources or sale.
 
 Implements various injuries (bleeding, broken limbs, PTSD, concussion) with unique effects and specialized treatments.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Injuries.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Bonemerge System
@@ -1103,15 +655,6 @@ Implements various injuries (bleeding, broken limbs, PTSD, concussion) with uniq
 **Description**: 
 
 Lets players layer multiple clothing or armor pieces that bonemerge onto their model. Useful for outfit variety.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Bonemerge.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -1121,15 +664,6 @@ Lets players layer multiple clothing or armor pieces that bonemerge onto their m
 
 Allows creation of player-made organizations with custom ranks, permissions, shared banks, and logs.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Organizations.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
 ---
 
 ## Assigned Housing
@@ -1137,32 +671,6 @@ Allows creation of player-made organizations with custom ranks, permissions, sha
 **Description**: 
 
 Enables properties or doors to be assigned to specific factions or players, with persistent ownership and rent.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Housing.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-## Camera (CCTV)
-
-**Description**: 
-
-Players or factions can place cameras that can be named and remotely viewed. Non-whitelisted players can hack them.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//CCTV.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -1195,23 +703,6 @@ Adds a secure trade window to exchange items and money, preventing scams.
 **Description**: 
 
 Creates Call of Duty-inspired mission briefings or story intros, complete with cinematic camera transitions.
-
----
-
-## Car Options
-
-**Description**: 
-
-Gives drivers extra controls such as kicking passengers, locking doors from the inside, or checking trunk contents.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//CarOptions.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -1261,14 +752,6 @@ Provides randomizable “intel” items or data that can be found, traded, or us
 
 A more extreme take on limb damage, expanding upon limb severing with additional gore effects.
 
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//LimbRipper.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 ---
 
 ## Activities
@@ -1284,32 +767,6 @@ Cycles through daily or weekly tasks for players to complete, rewarding items or
 **Description**: 
 
 Introduces designated PvP or contested areas, rewarding players or factions for maintaining control.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//CombatZones.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
-
----
-
-## Helix Loot Spawner
-
-**Description**: 
-
-An advanced loot spawning system made for Helix that periodically generates randomized items in configured locations.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//IX_LootSpawner.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -1334,15 +791,6 @@ Places spawn points that periodically generate NPCs of selected types, with conf
 **Description**: 
 
 Creates navigational markers with on-screen indicators or distance previews.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//Waypoints.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
 
@@ -1375,14 +823,5 @@ Grants in-game perks or items if players include the server name/tag in their St
 **Description**: 
 
 Lets admins or players view all characters tied to a SteamID. Can show stats, offline ban options, or other management tools.
-
-<details>
-  <summary>Video</summary>
-  <div style="text-align: center;">
-    <video width="560" height="315" controls>
-      <source src="https://bleonheart.github.io/assets/legacy_videos//CharacterList.mp4" type="video/mp4">
-    </video>
-  </div>
-</details>
 
 ---
