@@ -26,4 +26,11 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material mkdocs-awesome-pages-plugin
+      - run: mkdocs build
+      - name: Copy versioning files to build directory
+        run: |
+          mkdir -p site/versioning
+          cp docs/versioning/*.json site/versioning/
+          # Ensure modules.json is also accessible from the root of the GitHub Pages site
+          if [ -f docs/versioning/modules.json ]; then cp docs/versioning/modules.json site/; fi
       - run: mkdocs gh-deploy --force
