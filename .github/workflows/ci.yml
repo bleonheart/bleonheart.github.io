@@ -30,7 +30,12 @@ jobs:
       - name: Copy versioning files to build directory
         run: |
           mkdir -p site/versioning
-          cp docs/versioning/*.json site/versioning/
+          # Copy all JSON files if any exist
+          if compgen -G "docs/versioning/*.json" > /dev/null; then
+            cp docs/versioning/*.json site/versioning/
+          else
+            echo "No versioning JSON files found; skipping copy."
+          fi
           # Ensure modules.json is also accessible from the root of the GitHub Pages site
           if [ -f docs/versioning/modules.json ]; then cp docs/versioning/modules.json site/; fi
       - run: mkdocs gh-deploy --force
