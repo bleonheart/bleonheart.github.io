@@ -825,3 +825,293 @@ Grants in-game perks or items if players include the server name/tag in their St
 Lets admins or players view all characters tied to a SteamID. Can show stats, offline ban options, or other management tools.
 
 ---
+
+# Compatibility
+
+---
+
+## ⚠️ Disclaimer
+> **Note:** This compatibility is meant for non-DarkRP based frameworks.
+
+---
+
+## Modern Warfare Base Support
+
+**Description**:  
+
+Implements compatibility with the [Modern Warfare Weapon Base](https://steamcommunity.com/workshop/filedetails/?id=2459720887).
+
+---
+
+## ARC9 Base
+
+**Description**:  
+
+Integrates the [ARC9](https://steamcommunity.com/workshop/filedetails/?id=2910505837) weapon customization system.
+
+---
+
+## ARCCW Base
+
+**Description**:  
+
+Implements a compatibility system for [ARCCW](https://steamcommunity.com/sharedfiles/filedetails/?id=2131057232), similar to ARC9 but focused on ARCCW’s codebase.
+
+---
+
+## GQuest
+
+**Description**: 
+
+Adds compatibility with [GQuest](https://www.gmodstore.com/market/view/gquest-the-perfect-quest-system).
+
+---
+
+## Zero's Retro Mining
+
+**Description**: 
+
+Adds compatibility with [Zero's Retrominer (Mining Script)](https://www.gmodstore.com/market/view/zero-s-retrominer-mining-script).
+
+---
+
+## ATOW/CW Compatibility
+
+**Description**: 
+
+Adds compatibility with [ATOW](https://steamcommunity.com/sharedfiles/filedetails/?id=859981128) and [Customizable Weaponry](https://steamcommunity.com/workshop/filedetails/?id=349050451).
+
+---
+
+## TFA
+
+**Description**: 
+
+Adds compatibility with [TFA Base](https://steamcommunity.com/sharedfiles/filedetails/?id=2840031720).
+
+---
+
+## APhone
+
+**Description**: 
+
+Adds compatibility with [APhone](https://www.gmodstore.com/market/view/aphone-a-feature-rich-phone).
+
+---
+
+## Zero's Cooking
+
+**Description**: 
+
+Adds compatibility with [Zero's MasterChef](https://www.gmodstore.com/market/view/zero-s-masterchef-cooking-script).
+
+---
+
+## Zero's Factory
+
+**Description**: 
+
+Adds compatibility with [Zero's Factory](https://www.gmodstore.com/market/view/zero-s-factory-crafting-space).
+
+---
+
+## CityWorker
+
+**Description**: 
+
+Adds compatibility with [CityWorker](https://www.gmodstore.com/market/view/darkrp-city-worker).
+
+---
+
+## CH_Farming
+
+**Description**: 
+
+Adds compatibility with [CH_Farming](https://www.gmodstore.com/market/view/farming-grow-plants-sell-crops).
+
+---
+
+## CH_BitMiners
+
+**Description**: 
+
+Adds compatibility with [CH_BitMiners](https://www.gmodstore.com/market/view/bitminers).
+
+---
+
+## Fine/Fining
+
+**Description**: 
+
+Adds compatibility with [Fine/Fining System Customizable](https://www.gmodstore.com/market/view/v1-3-1-fine-fining-system-customizable).
+
+---
+
+## LSCS - Lightsaber
+
+**Description**: 
+
+Adds compatibility with [[LSCS] - Lightsaber - Force Powers](https://steamcommunity.com/sharedfiles/filedetails/?id=2837856621).
+
+---
+
+## Simple Mining System
+
+**Description**: 
+
+Adds compatibility with [Simple Mining System](https://www.gmodstore.com/market/view/simple-mining-system).
+
+---
+
+
+# Talkable NPCs
+
+---
+
+## Bodyguard System
+
+**Description**:
+
+Enables hiring NPC guards for protection, with wages and loyalty checks.
+
+---
+
+## Property Seller
+
+**Description**:
+
+A NPC that rents houses to players.
+
+---
+
+## Black Market Vendor
+
+**Description**:
+
+NPC offering illegal items or deliveries to specific map locations.
+
+---
+
+## Car Dealer
+
+**Description**:
+
+Facilitates buying and selling cars through an NPC menu, optionally with customization.
+
+---
+
+## Bounty Hunter
+
+**Description**:
+
+Provides bounties for wanted players. Rewards are given once proof of capture or elimination is provided.
+
+---
+
+## Jailer
+
+**Description**:
+
+Allows jailing of players for a set time through an NPC interface, automatically freeing them after.
+
+---
+
+## Mechanic
+
+**Description**:
+
+Hires players into a mechanic faction, repairing vehicles for money.
+
+---
+
+## Police
+
+**Description**:
+
+NPC that manages police faction recruitment and handles crime reports or warrants.
+
+---
+
+## Taxis
+
+**Description**:
+
+Lets players join a Taxi Job, picking up NPC or player passengers for monetary rewards. Comes with an Automatic Taxi feature, which allows to fast travel to configurable locations for a fee.
+
+---
+
+## Delivery
+
+**Description**:
+
+Adds a delivery job where players drive packages around the map, earning money upon completion.
+
+---
+
+## Recruitment
+
+**Description**:
+
+Instantly recruits players into a specific faction with assigned ranks if necessary.
+
+---
+
+## Help NPC
+
+**Description**:
+
+Offers new or existing players in-game tips and tutorial info, possibly linking to external resources.
+
+---
+
+# Visuals
+
+---
+
+## EFT HUD
+
+**Description**:
+
+Mimics the Escape from Tarkov HUD, showing minimalistic health, ammo, and stamina bars on-screen.
+
+---
+
+## Fallout 76 HUD
+
+**Description**:
+
+Reproduces the Fallout 76 interface, including AP, health, rad meters, and the signature aesthetic.
+
+---
+
+## Start Info
+
+**Description**:
+
+Displays a custom panel on character creation to explain the server setting and lore.
+
+---
+
+## Fallout 3/New Vegas HUD
+
+**Description**:
+
+Provides a classic green Pip-Boy style HUD, showing health, AP, rad levels, and ammo counters.
+
+---
+
+## Video Intro
+
+**Description**:
+
+Adds an introductory video (or series of videos) that plays for new players, conveying rules, lore, or tutorials. The system supports various triggers—such as first-time login or entering specific areas—and seamlessly transitions back to gameplay afterward.
+
+---
+
+## Warhammer Character Sheet
+
+**Description**:
+
+Adds a dedicated Warhammer-themed character sheet that references Warhammer lore. This may include specialized factions, weapons, or races, integrated with unique stats and roleplay elements to create an immersive Warhammer experience.
+
+---
