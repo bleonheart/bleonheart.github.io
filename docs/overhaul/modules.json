@@ -1,0 +1,499 @@
+[
+  {
+    "name": "Achievements",
+    "versionID": "private_achievements",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Tracks kill and death milestones for multiple NPC types, Displays progress bars and achievement list in a menu, Unlocks rewards when requirements are met, Notifies players upon unlocking an achievement, and Character data stores achievement progress.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/achievements",
+    "source": "https://bleonheart.github.io/docs/modules/achievements.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Animations",
+    "versionID": "private_anim",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Adds various /act commands for roleplay animations, Commands trigger animations from the EGM pack, Animations can be interrupted with movement, Supports both casual and combat poses, and Showcases dancing and gesture options.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/anim",
+    "source": "https://bleonheart.github.io/docs/modules/anim.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "ArcCW Attachments & Magazines",
+    "versionID": "private_arccw",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Creates ArcCW attachment items for weapons, Players equip attachments through inventory, Attachments modify weapon stats and appearance, Magazine system for realistic ammunition management, Can disable if ArcCW is not present, and Supports custom attachment lists.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/arccw",
+    "source": "https://bleonheart.github.io/docs/modules/arccw.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Banking",
+    "versionID": "private_banking",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players can open several bank accounts for fees, Deposit, withdraw and transfer funds between accounts, Item bank storage with size based on VIP status, and Anti-spam timers for banking actions.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/banking",
+    "source": "https://bleonheart.github.io/docs/modules/banking.html",
+    "features": [],
+    "workshop": [
+      "3527541984"
+    ]
+  },
+  {
+    "name": "Clothing System",
+    "versionID": "private_bonemerge",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Bonemerge system attaches clothing models to players, Handles gender specific models and bodygroups, Vendors sell outfits from configuration, Maintains equipped items across sessions, and Supports ties and other accessories.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/bonemerge",
+    "source": "https://bleonheart.github.io/docs/modules/bonemerge.html",
+    "features": [],
+    "workshop": [
+      "3425707500",
+      "3425693671"
+    ]
+  },
+  {
+    "name": "Cameras",
+    "versionID": "private_cameras",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Adds static surveillance cameras around the map, Players can view camera feeds on monitors, Supports linking cameras to security factions, Workshop content provides camera models, and Integrates with the map for immersion.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/cameras",
+    "source": "https://bleonheart.github.io/docs/modules/cameras.html",
+    "features": [],
+    "workshop": [
+      "3527545883"
+    ]
+  },
+  {
+    "name": "Car Options",
+    "versionID": "private_caroptions",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Provides features such as Quality of life improvements for vehicles, Enhanced car interaction options, Improved vehicle handling mechanics, and Additional convenience features for drivers.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/caroptions",
+    "source": "https://bleonheart.github.io/docs/modules/caroptions.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Mobile Phones",
+    "versionID": "private_cellphones",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Mobile phone system for communication, Text messaging between players, Phone call functionality, Contact management system, and Workshop content for phone models.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/cellphones",
+    "source": "https://bleonheart.github.io/docs/modules/cellphones.html",
+    "features": [],
+    "workshop": [
+      "3431352659"
+    ]
+  },
+  {
+    "name": "Chess and Droughts",
+    "versionID": "private_chess",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Chess and checkers board games, Interactive game pieces and boards, Multiplayer board game functionality, Workshop content for game pieces, and Social gaming activities.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/chess",
+    "source": "https://bleonheart.github.io/docs/modules/chess.html",
+    "features": [],
+    "workshop": [
+      "3527544455"
+    ]
+  },
+  {
+    "name": "Corpses & Looting",
+    "versionID": "private_corpses_looting",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Provides features such as Search player corpses after death, Transfer items and money from corpses, Configurable looting distance and permissions, Anti-spam protection for corpse interactions, and Realistic post-death item management.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/corpselooting",
+    "source": "https://bleonheart.github.io/docs/modules/corpselooting.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Crafting",
+    "versionID": "private_crafting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Craft items using recipes and ingredients, Supports multiple crafting benches, Time-based crafting with progress bar, Item blueprints define required skills, and Integrates with resource gathering mods.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/crafting",
+    "source": "https://bleonheart.github.io/docs/modules/crafting.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Tying",
+    "versionID": "private_tying",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Rope items can restrain other players, Bound players cannot use weapons, Supports dragging with submodules, Blindfold and gag features available, and Encourages hostage scenarios.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/cuffs",
+    "source": "https://bleonheart.github.io/docs/modules/cuffs.html",
+    "features": [],
+    "workshop": [
+      "3527551786"
+    ]
+  },
+  {
+    "name": "Drugs",
+    "versionID": "private_drugs",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Provides features such as Drug production and manufacturing system, Consumable drug items with effects, Drug addiction and withdrawal mechanics, Workshop content for drug models, and Realistic drug economy simulation.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/drugs",
+    "source": "https://bleonheart.github.io/docs/modules/drugs.html",
+    "features": [],
+    "workshop": [
+      "3527542199"
+    ]
+  },
+  {
+    "name": "Events",
+    "versionID": "private_events",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Config defines NPC events per map with spawn positions, Automatic timer spawns events when requirements met, notificationCallback sends staff and player messages, Admin commands to start events or remove NPCs, and Keeps track of active event NPCs using net vars.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/events",
+    "source": "https://bleonheart.github.io/docs/modules/events.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Extraction",
+    "versionID": "private_extraction",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Players must reach extraction zones to escape, Timer counts down before evacuation, Positions configurable per map, Useful for raid style events, and Provides audio/visual cues.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/extraction",
+    "source": "https://bleonheart.github.io/docs/modules/extraction.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Dynamic Food",
+    "versionID": "private_food",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Craft and cook various food items, Food restores hunger stats, Workshop props for ingredients and dishes, Definitions file for adding new recipes, and Integrates with hunger/thirst systems.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/food",
+    "source": "https://bleonheart.github.io/docs/modules/food.html",
+    "features": [],
+    "workshop": [
+      "3527551464"
+    ]
+  },
+  {
+    "name": "Limb Damage",
+    "versionID": "private_limbdamage",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Implements limb damage system where leg shots cause sprint delay and heal automatically.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/limbdamage",
+    "source": "https://bleonheart.github.io/docs/modules/limbdamage.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Medals",
+    "versionID": "private_medals",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Award players with persistent medals, Medals displayed on character profiles, Staff permissions for giving or taking medals, Workshop models for medal icons, and Encourages achievement-based gameplay.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/medals",
+    "source": "https://bleonheart.github.io/docs/modules/medals.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Improved Constructable Props",
+    "versionID": "private_propbasedbuilding",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows players to spawn constructable props, Prop placement follows resource cost system, Supports upgrading props into entities, Great for base building mechanics, and Integrated with toolgun options. Added optional health system for destructible props.",
+    "version": "1.1",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/propbasedbuilding",
+    "source": "https://bleonheart.github.io/docs/modules/propbasedbuilding.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Radio Voice Chat",
+    "versionID": "private_radio",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Handheld radios enable voice chat, Players tune to channels via UI, Range based on radio quality, Supports push-to-talk or open mic, and Workshop model provides radio item.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/radio",
+    "source": "https://bleonheart.github.io/docs/modules/radio.html",
+    "features": [],
+    "workshop": [
+      "3527548881"
+    ]
+  },
+  {
+    "name": "Store Robbery",
+    "versionID": "private_robberies",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Store robbery mechanics for criminal roleplay, Interactive robbery scenarios, Police response system integration, Robbery rewards and consequences, and Realistic criminal activities.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/robberies",
+    "source": "https://bleonheart.github.io/docs/modules/robberies.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Control Points",
+    "versionID": "private_controlpoint",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Control points captureable by factions, Spawn NPC entities that defend zones, Provides rewards for holding points, Shows status on HUD for participants, and Designed for PvP skirmishes.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/territories",
+    "source": "https://bleonheart.github.io/docs/modules/territories.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Car Bomb",
+    "versionID": "private_terrorism",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows arming vehicles with timed car bombs, Bomb starts when engine is active and explodes after delay, Remote Explode action available for the bomber, Explosion removes the vehicle, Uses Think hook to trigger detonation, Allows arming doors with timed explosives, Door bombs detonate after specified delay, Manual detonation available for door bombs, and Explosion removes the door and creates debris.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/_done/terrorism",
+    "source": "https://bleonheart.github.io/docs/modules/terrorism.html",
+    "features": [],
+    "workshop": [
+      "3555533196"
+    ]
+  },
+  {
+    "name": "Gathering System",
+    "versionID": "private_gathering",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Resource gathering from trees and rocks, Fishing system with various fish types, Mining for ores and materials, Loot tables with chance-based drops, and Stackable items for inventory management.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/gathering",
+    "source": "https://bleonheart.github.io/docs/modules/gathering.html",
+    "features": [],
+    "workshop": [
+      "3527546250"
+    ]
+  },
+  {
+    "name": "ID System",
+    "versionID": "private_idsystem",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Overhauls the default character creation UI, Adds custom fields and validation, Supports ID system submodule, Workshop content for backgrounds, and Makes new characters more immersive.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/identifications",
+    "source": "https://bleonheart.github.io/docs/modules/identifications.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Leveling",
+    "versionID": "private_leveling",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Character levels with experience points, XP awarded for various actions, Level determines unlocks and perks, Skill points system with configurable points per level, Visual skill tree with dependencies and connections, F1 menu integration, Persistent across player sessions, and Supports manual adjustments by admins.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/leveling",
+    "source": "https://bleonheart.github.io/docs/modules/leveling.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Lootables",
+    "versionID": "private_looting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Spawn searchable containers around the map, Players loot random items from them, Containers have cooldowns before reuse, Supports customizing loot tables, and Encourages exploration for supplies.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/looting",
+    "source": "https://bleonheart.github.io/docs/modules/looting.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Roleplay NPCs",
+    "versionID": "private_npcs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Framework for custom roleplay NPCs, Supports dialogue trees and quests, Easy to add new NPC types, Used by submodules like mechanic or taxi, and Centralizes NPC scripts.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs",
+    "source": "https://bleonheart.github.io/docs/modules/npcs.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Black Market NPC",
+    "versionID": "private_blackmarket",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Sells illegal weapons and contraband, Limited stock with restock timers, Requires players to find secret location, Prices configurable via script, and Great for underground roleplay.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/blackmarket",
+    "source": "https://bleonheart.github.io/docs/modules/blackmarket.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Car Dealer",
+    "versionID": "private_cardealer",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Purchase vehicles from a dealer NPC, Return or repair owned vehicles for a fee, Custom paint jobs and bodygroup modifications with configurable price, Garages store vehicles safely, and Integrates with driving addons.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/cardealer",
+    "source": "https://bleonheart.github.io/docs/modules/cardealer.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Delivery NPC",
+    "versionID": "private_delivery",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Offers parcel delivery side jobs, Random drop-off locations per mission, Pays players money on completion, NPC shows delivery progress via dialog, and Encourages exploration of the map.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/delivery",
+    "source": "https://bleonheart.github.io/docs/modules/delivery.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Fence NPC",
+    "versionID": "private_fence",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Buy stolen items from players, Pay based on item reward values, Support for all robbery items, and Secure transaction system.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/fence",
+    "source": "https://bleonheart.github.io/docs/modules/fence.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Help NPCs",
+    "versionID": "private_helpnpc",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Provides information to new players, Can give basic starter items, Dialog tree explains server mechanics, Directs players to other NPC services, and Simple friendly conversation.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/helpnpc",
+    "source": "https://bleonheart.github.io/docs/modules/helpnpc.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Marketplace",
+    "versionID": "private_marketplace",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Marketplace system for player-to-player trading, Buy and sell items with no expiration dates, Configurable listing limits and minimum prices, NPC vendor interface for easy access, Search and filter functionality for items, Economic system integration for server economy, and Super admin item removal tools.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/marketplace",
+    "source": "https://bleonheart.github.io/docs/modules/marketplace.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Mechanic NPC",
+    "versionID": "private_mechanic",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Repairs damaged vehicles for a fee, Can customize vehicle paint jobs, Sells spare parts and upgrades, Works with car dealer garage system, and Uses simple NPC dialog.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/mechanic",
+    "source": "https://bleonheart.github.io/docs/modules/mechanic.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Roleplay NPCs",
+    "versionID": "private_property",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows players to buy and sell properties, NPC manages rental durations and payments, Staff privileges for managing listings, Works with property submodule of NPCs, and Integrated showcase for property system.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/property",
+    "source": "https://bleonheart.github.io/docs/modules/property.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Recruitment NPC",
+    "versionID": "private_recruitment",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Recruits players into factions, Provides introductory dialogue, Can assign starter gear upon enlistment, Supports multiple factions if configured, and Simple interaction with yes/no options.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/recruitment",
+    "source": "https://bleonheart.github.io/docs/modules/recruitment.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Taxi NPC",
+    "versionID": "private_taxi",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Spawns taxi vehicles for hire, NPC teleports you to preset locations, Charges fee based on distance, Checks if player already owns a taxi, and Uses workshop vehicle models.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/npcs/submodules/taxi",
+    "source": "https://bleonheart.github.io/docs/modules/taxi.html",
+    "features": [],
+    "workshop": [
+      "1238235086",
+      "771487490"
+    ]
+  },
+  {
+    "name": "Police Suite",
+    "versionID": "private_policesuite",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides alarms, 999 calls, stun weapons, crime types, warrants, arrests, police NPCs and computer.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/overhaul/policesuite",
+    "source": "https://bleonheart.github.io/docs/modules/policesuite.html",
+    "features": [],
+    "workshop": [
+      "3432649835",
+      "3556219887"
+    ]
+  }
+]
