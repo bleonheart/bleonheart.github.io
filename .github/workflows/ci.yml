@@ -26,4 +26,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material mkdocs-awesome-pages-plugin
+      - run: mkdocs build
+      - run: cp modules.json site/
       - run: mkdocs gh-deploy --force
