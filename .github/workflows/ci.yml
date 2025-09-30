@@ -38,4 +38,16 @@ jobs:
           fi
           # Ensure modules.json is also accessible from the root of the GitHub Pages site
           if [ -f docs/versioning/modules.json ]; then cp docs/versioning/modules.json site/; fi
-      - run: mkdocs gh-deploy --force
+      - name: Deploy to GitHub Pages
+        run: |
+          cd site
+          # Ensure we're in the correct directory with the built site
+          ls -la
+          # Initialize git repository in site directory for gh-pages deployment
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          # Force push to gh-pages branch
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main:gh-pages
