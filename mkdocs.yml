@@ -1,12 +1,5 @@
 site_name: Samael Portofolio
 site_url: 'https://bleonheart.github.io/'
-
-# Ensure docs directory is correctly set
-docs_dir: docs
-
-# Ensure site builds to site directory
-site_dir: site
-
 theme:
   name: material
   logo: assets/logo.png
@@ -48,10 +41,6 @@ extra:
   social:
     - icon: simple/github
       link: 'https://github.com/bleonheart'
-nav:
-  - Home: index.md
-  - Modules: modules.md
-  - Legacy: legacy.md
 plugins:
   - search
   - awesome-pages
