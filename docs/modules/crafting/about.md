@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a comprehensive crafting system allowing players to craft items using recipes and ingredients. Supports multiple crafting benches with time-based crafting, progress bars, and item blueprints that define required skills. Integrates with resource gathering mods.
+Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides a comprehensive crafting system allowing players to craft items using r
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/crafting.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Crafting.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

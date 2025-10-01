@@ -18,7 +18,7 @@ Provides a marketplace system for player-to-player trading with no expiration da
 <br><br>
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/marketplace.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Marketplace.mp4" type="video/mp4">
     Your browser does not support the video tag.c
   </video>
 </p>

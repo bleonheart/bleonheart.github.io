@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides comprehensive banking features including multiple bank accounts, secure fund management, item storage, and ATM functionality. Players can create several bank accounts with fees, deposit, withdraw and transfer funds between accounts, and utilize item bank storage with size based on VIP status. Includes anti-spam timers for banking actions and administrative controls.
+Full banking system with multiple accounts, deposits/withdrawals, transfers, item storage, check writing/redemption, ATMs, and paycheck integration.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides comprehensive banking features including multiple bank accounts, secure
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/banking.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Banking.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

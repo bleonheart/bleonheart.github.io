@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a comprehensive surveillance system with static cameras placed around the map that players can view through monitors. Features faction-specific camera access controls and workshop content for realistic camera models.
+Security camera and CCTV monitor system for surveillance with faction-restricted access and live feed viewing.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides a comprehensive surveillance system with static cameras placed around t
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/cameras.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Cameras.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

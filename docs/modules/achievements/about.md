@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a comprehensive achievement system that tracks kill and death milestones for multiple NPC types. Features progress bars, achievement lists in menus, reward unlocks, player notifications, and character data storage for achievement progress.
+Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards and progress tracking.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides a comprehensive achievement system that tracks kill and death milestone
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/achievements.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Achievements.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

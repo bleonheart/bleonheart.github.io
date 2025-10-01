@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a dynamic extraction zone system requiring players to reach designated areas to escape during events. Features countdown timers, map-specific configuration, and audio/visual cues for intense raid-style gameplay.
+Raid-style extraction system requiring players to reach escape zones within countdown timer, with configurable positions per map and audio/visual cues.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides a dynamic extraction zone system requiring players to reach designated 
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/extraction.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Extraction.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

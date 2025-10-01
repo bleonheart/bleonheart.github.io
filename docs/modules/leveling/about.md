@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a comprehensive character leveling system with experience points awarded for various actions. Features persistent level progression, unlockable perks and abilities, and administrative controls for experience management.
+Character leveling system with XP, skill points, and skill tree (Endurance: +25 health, Combat Training: +15% damage, Engineering: +15% tool effectiveness/+30% repair speed) with dependencies, F1 menu integration, and admin adjustment tools.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides a comprehensive character leveling system with experience points awarde
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/leveling.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Leveling.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

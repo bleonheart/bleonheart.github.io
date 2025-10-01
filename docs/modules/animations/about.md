@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a comprehensive animation system with various /act commands for immersive roleplay. Features bone manipulation animations that can be interrupted with movement, supporting both casual and combat poses with dancing and gesture options. The system uses EGM pack animations with realistic bone positioning and smooth transitions.
+Roleplay animations (/act commands) including surrender, salute, cross arms, attention, typing poses, and combat stances that interrupt on movement.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -17,7 +17,7 @@ Provides a comprehensive animation system with various /act commands for immersi
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/animation.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Animation.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

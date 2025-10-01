@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides comprehensive player restraint features including handcuff-based player tying, weapon restrictions for bound players, drag support with submodules, blindfold and gag functionality, and encouragement of hostage scenarios for immersive roleplay. Features realistic sound effects and integration with search mechanics.
+Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides comprehensive player restraint features including handcuff-based player
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/handcuffs.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Handcuffs.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

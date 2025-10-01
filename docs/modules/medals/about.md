@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a comprehensive medal awarding system where players can earn persistent medals displayed on their character profiles. Features staff permissions for giving/taking medals, workshop models for medal icons, and achievement-based gameplay encouragement with network synchronization.
+Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides a comprehensive medal awarding system where players can earn persistent
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/medals.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/Medals.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

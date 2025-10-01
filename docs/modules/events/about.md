@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-Provides a comprehensive event spawning system with map-specific NPC events, automatic timers, and administrative controls. Features configurable spawn positions, notification systems, and tracking of active event entities.
+Map-based NPC event system with configurable spawn positions, player count requirements, automatic timers, and staff/player notifications.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
@@ -19,7 +19,7 @@ Provides a comprehensive event spawning system with map-specific NPC events, aut
 
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/docs/automaticevents.mp4" type="video/mp4">
+    <source src="https://bleonheart.github.io/assets/docs/AutomaticEvents.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>
