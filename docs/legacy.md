@@ -1,4 +1,4 @@
-# General Mechanics
+# Legacy Modules List
 
 ---
 
@@ -193,13 +193,6 @@ Adds an automatic description generator, including physical stats (height, weigh
 
 ---
 
-## Cellphones
-
-**Description**: 
-
-Implements mobile phones for in-game private messaging (SMS) and an optional call system.
-
----
 
 ## Telephone
 
@@ -626,13 +619,6 @@ Awards points for desirable behavior or tasks. Points can unlock perks, titles, 
 
 ---
 
-## Prop-Based Construction
-
-**Description**: 
-
-Inspired by Rust. Instead of spawning props freely, players use items to build structures in tiers.
-
----
 
 ## Farming
 
@@ -650,13 +636,6 @@ Implements various injuries (bleeding, broken limbs, PTSD, concussion) with uniq
 
 ---
 
-## Bonemerge System
-
-**Description**: 
-
-Lets players layer multiple clothing or armor pieces that bonemerge onto their model. Useful for outfit variety.
-
----
 
 ## Guilds
 
