@@ -1,4 +1,4 @@
-# List of Modules
+# Modules List
 
 ## [Achievements](https://bleonheart.github.io/docs/modules/achievements.html)
 Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards
