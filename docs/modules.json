@@ -209,6 +209,18 @@
     ]
   },
   {
+    "name": "ID System",
+    "versionID": "private_idsystem",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "ID card system allowing players to show/request/force view IDs with multiple designs (California, German, Miami, New York, NYPD, Southside, Yorkshire) and character recognition mechanics.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/identifications",
+    "source": "https://bleonheart.github.io/docs/modules/identifications.html",
+    "features": [],
+    "workshop": []
+  },
+  {
     "name": "Limb Damage",
     "versionID": "private_limbdamage",
     "author": "Samael",
