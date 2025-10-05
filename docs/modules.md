@@ -75,6 +75,9 @@ ID card system allowing players to show/request/force view IDs with multiple des
 ## Improved Constructable Props (1.1)
 Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities
 
+## LSCS Compatibility (1.0)
+Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber combat mechanics.
+
 ## Leveling (1.0)
 Character leveling system with XP, skill points, and skill tree (Endurance: +25 health, Combat Training: +15% damage, Engineering: +15% tool effectiveness/+30% repair speed) with dependencies, F1 menu integration, and admin adjustment tools.
 

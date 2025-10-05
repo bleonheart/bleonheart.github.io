@@ -233,6 +233,18 @@
     "workshop": []
   },
   {
+    "name": "LSCS Compatibility",
+    "versionID": "private_lscs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber combat mechanics.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/lscs",
+    "source": "https://bleonheart.github.io/docs/modules/lscs.html",
+    "features": [],
+    "workshop": []
+  },
+  {
     "name": "Medals",
     "versionID": "private_medals",
     "author": "Samael",
