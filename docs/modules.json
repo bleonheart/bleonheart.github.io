@@ -6,7 +6,7 @@
     "discord": "liliaplayer",
     "description": "Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/achievements",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/achievements",
     "source": "https://bleonheart.github.io/docs/modules/achievements.html",
     "features": [],
     "workshop": []
@@ -18,7 +18,7 @@
     "discord": "liliaplayer",
     "description": "Roleplay animations (/act commands) including surrender, salute, cross arms, attention, typing poses, and combat stances that interrupt on movement",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/anim",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/anim",
     "source": "https://bleonheart.github.io/docs/modules/anim.html",
     "features": [],
     "workshop": []
@@ -30,7 +30,7 @@
     "discord": "liliaplayer",
     "description": "Creates inventory items for all ArcCW weapon attachments and magazines with configurable capacity and ammo types",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/arccw",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/arccw",
     "source": "https://bleonheart.github.io/docs/modules/arccw.html",
     "features": [],
     "workshop": []
@@ -42,7 +42,7 @@
     "discord": "liliaplayer",
     "description": "Full banking system with multiple accounts, deposits/withdrawals, transfers, item storage, check writing/redemption, ATMs, and paycheck integration",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/banking",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/banking",
     "source": "https://bleonheart.github.io/docs/modules/banking.html",
     "features": [],
     "workshop": [
@@ -56,7 +56,7 @@
     "discord": "liliaplayer",
     "description": "Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, vests, rings, and accessories to players with vendor purchase and persistence",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/bonemerge",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/bonemerge",
     "source": "https://bleonheart.github.io/docs/modules/bonemerge.html",
     "features": [],
     "workshop": [
@@ -71,7 +71,7 @@
     "discord": "liliaplayer",
     "description": "Security camera and CCTV monitor system for surveillance with faction-restricted access and live feed viewing",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/cameras",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/cameras",
     "source": "https://bleonheart.github.io/docs/modules/cameras.html",
     "features": [],
     "workshop": [
@@ -85,7 +85,7 @@
     "discord": "@liliaplayer",
     "description": "Vehicle quality of life features including CD player system with music tracks, albums, and audio streaming for in-car entertainment",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/caroptions",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/caroptions",
     "source": "https://bleonheart.github.io/docs/modules/caroptions.html",
     "features": [],
     "workshop": []
@@ -97,7 +97,7 @@
     "discord": "liliaplayer",
     "description": "Mobile phone system with unique phone numbers, voice calling, text messaging, and contact management for player communication",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/cellphones",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/cellphones",
     "source": "https://bleonheart.github.io/docs/modules/cellphones.html",
     "features": [],
     "workshop": [
@@ -111,7 +111,7 @@
     "discord": "liliaplayer",
     "description": "Interactive chess and checkers (draughts) board games with multiplayer support, wagering system, and leaderboard tracking",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/chess",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/chess",
     "source": "https://bleonheart.github.io/docs/modules/chess.html",
     "features": [],
     "workshop": [
@@ -125,7 +125,7 @@
     "discord": "@liliaplayer",
     "description": "Corpse looting system allowing players to search dead bodies, transfer items and money, with configurable search distance and anti-spam protection",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/corpselooting",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/corpselooting",
     "source": "https://bleonheart.github.io/docs/modules/corpselooting.html",
     "features": [],
     "workshop": []
@@ -137,7 +137,7 @@
     "discord": "liliaplayer",
     "description": "Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/crafting",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/crafting",
     "source": "https://bleonheart.github.io/docs/modules/crafting.html",
     "features": [],
     "workshop": []
@@ -149,7 +149,7 @@
     "discord": "liliaplayer",
     "description": "Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/cuffs",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/cuffs",
     "source": "https://bleonheart.github.io/docs/modules/cuffs.html",
     "features": [],
     "workshop": [
@@ -163,7 +163,7 @@
     "discord": "@liliaplayer",
     "description": "Drug cultivation, processing, consumption, and addiction system with effects like speed boost, damage reduction, and stamina regeneration",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/drugs",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/drugs",
     "source": "https://bleonheart.github.io/docs/modules/drugs.html",
     "features": [],
     "workshop": [
@@ -177,7 +177,7 @@
     "discord": "liliaplayer",
     "description": "Map-based NPC event system with configurable spawn positions, player count requirements, automatic timers, and staff/player notifications",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/events",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/events",
     "source": "https://bleonheart.github.io/docs/modules/events.html",
     "features": [],
     "workshop": []
@@ -189,7 +189,7 @@
     "discord": "liliaplayer",
     "description": "Raid-style extraction system requiring players to reach escape zones within countdown timer, with configurable positions per map and audio/visual cues",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/extraction",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/extraction",
     "source": "https://bleonheart.github.io/docs/modules/extraction.html",
     "features": [],
     "workshop": []
@@ -201,123 +201,11 @@
     "discord": "liliaplayer",
     "description": "Restaurant cooking system with cooking machines, customer orders, ingredient fridges, worktables, dish preparation, and hunger restoration mechanics",
     "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/food",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/food",
     "source": "https://bleonheart.github.io/docs/modules/food.html",
     "features": [],
     "workshop": [
       "3527551464"
-    ]
-  },
-  {
-    "name": "ID System",
-    "versionID": "private_idsystem",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "ID card system allowing players to show/request/force view IDs with multiple designs (California, German, Miami, New York, NYPD, Southside, Yorkshire) and character recognition mechanics.",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/identifications",
-    "source": "https://bleonheart.github.io/docs/modules/identifications.html",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Limb Damage",
-    "versionID": "private_limbdamage",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Limb damage system where leg shots cause configurable sprint delay with automatic healing and toggleable enable/disable functionality",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/limbdamage",
-    "source": "https://bleonheart.github.io/docs/modules/limbdamage.html",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "LSCS Compatibility",
-    "versionID": "private_lscs",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber combat mechanics.",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/lscs",
-    "source": "https://bleonheart.github.io/docs/modules/lscs.html",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Medals",
-    "versionID": "private_medals",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/medals",
-    "source": "https://bleonheart.github.io/docs/modules/medals.html",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Improved Constructable Props",
-    "versionID": "private_propbasedbuilding",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities",
-    "version": "1.1",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/propbasedbuilding",
-    "source": "https://bleonheart.github.io/docs/modules/propbasedbuilding.html",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Radio Voice Chat",
-    "versionID": "private_radio",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/radio",
-    "source": "https://bleonheart.github.io/docs/modules/radio.html",
-    "features": [],
-    "workshop": [
-      "3527548881"
-    ]
-  },
-  {
-    "name": "Store Robbery",
-    "versionID": "private_robberies",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Store robbery system with jewelry cases and cash registers, stealable items (cash, jewelry, watches, rings), police requirements, and respawn timers",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/robberies",
-    "source": "https://bleonheart.github.io/docs/modules/robberies.html",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Control Points",
-    "versionID": "private_controlpoint",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Faction control point system with configurable capture zones, NPC defenders, HUD status display, and rewards for holding territories",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/territories",
-    "source": "https://bleonheart.github.io/docs/modules/territories.html",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Car Bomb",
-    "versionID": "private_terrorism",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Terrorism mechanics with vehicle car bombs (engine-activated) and door explosives, both with timed detonation, remote detonation, and debris creation",
-    "version": "1.0",
-    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/_done/terrorism",
-    "source": "https://bleonheart.github.io/docs/modules/terrorism.html",
-    "features": [],
-    "workshop": [
-      "3555533196"
     ]
   },
   {
@@ -359,6 +247,18 @@
     "workshop": []
   },
   {
+    "name": "Limb Damage",
+    "versionID": "private_limbdamage",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Limb damage system where leg shots cause configurable sprint delay with automatic healing and toggleable enable/disable functionality",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/limbdamage",
+    "source": "https://bleonheart.github.io/docs/modules/limbdamage.html",
+    "features": [],
+    "workshop": []
+  },
+  {
     "name": "Lootables",
     "versionID": "private_looting",
     "author": "Samael",
@@ -367,6 +267,30 @@
     "version": "1.0",
     "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/looting",
     "source": "https://bleonheart.github.io/docs/modules/looting.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "LSCS Compatibility",
+    "versionID": "private_lscs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber combat mechanics.",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/lscs",
+    "source": "https://bleonheart.github.io/docs/modules/lscs.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Medals",
+    "versionID": "private_medals",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls",
+    "version": "1.1",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/medals",
+    "source": "https://bleonheart.github.io/docs/modules/medals.html",
     "features": [],
     "workshop": []
   },
@@ -518,6 +442,70 @@
     "workshop": [
       "3432649835",
       "3556219887"
+    ]
+  },
+  {
+    "name": "Improved Constructable Props",
+    "versionID": "private_propbasedbuilding",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities",
+    "version": "1.1",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/propbasedbuilding",
+    "source": "https://bleonheart.github.io/docs/modules/propbasedbuilding.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Radio Voice Chat",
+    "versionID": "private_radio",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/radio",
+    "source": "https://bleonheart.github.io/docs/modules/radio.html",
+    "features": [],
+    "workshop": [
+      "3527548881"
+    ]
+  },
+  {
+    "name": "Store Robbery",
+    "versionID": "private_robberies",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Store robbery system with jewelry cases and cash registers, stealable items (cash, jewelry, watches, rings), police requirements, and respawn timers",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/robberies",
+    "source": "https://bleonheart.github.io/docs/modules/robberies.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Control Points",
+    "versionID": "private_controlpoint",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Faction control point system with configurable capture zones, NPC defenders, HUD status display, and rewards for holding territories",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/territories",
+    "source": "https://bleonheart.github.io/docs/modules/territories.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Car Bomb",
+    "versionID": "private_terrorism",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Terrorism mechanics with vehicle car bombs (engine-activated) and door explosives, both with timed detonation, remote detonation, and debris creation",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/terrorism",
+    "source": "https://bleonheart.github.io/docs/modules/terrorism.html",
+    "features": [],
+    "workshop": [
+      "3555533196"
     ]
   }
 ]

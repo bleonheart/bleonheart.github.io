@@ -69,9 +69,6 @@ Provides features such as Provides information to new players, Can give basic st
 ## ID System (1.0)
 ID card system allowing players to show/request/force view IDs with multiple designs (California, German, Miami, New York, NYPD, Southside, Yorkshire) and character recognition mechanics.
 
-## ID System (1.0)
-ID card system allowing players to show/request/force view IDs with multiple designs (California, German, Miami, New York, NYPD, Southside, Yorkshire) and character recognition mechanics.
-
 ## Improved Constructable Props (1.1)
 Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities
 
@@ -93,7 +90,7 @@ Provides features such as Marketplace system for player-to-player trading, Buy a
 ## Mechanic NPC (1.0)
 Provides features such as Repairs damaged vehicles for a fee, Can customize vehicle paint jobs, Sells spare parts and upgrades, Works with car dealer garage system, and Uses simple NPC dialog.
 
-## Medals (1.0)
+## Medals (1.1)
 Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls
 
 ## Mobile Phones (1.0)
