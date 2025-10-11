@@ -42,6 +42,9 @@ Corpse looting system allowing players to search dead bodies, transfer items and
 ## Crafting (1.0)
 Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions
 
+## Daily Rewards (0.00)
+Daily rewards system with 20 objectives (walking, chatting, playtime, money, interactions, jobs, building, vehicles, arrests, healing, property, lockpicking, paychecks, ads, emergencies, XP, voting, crimes, spending, sprinting) and escalating streak bonuses at 14/30/60/90 days.
+
 ## Delivery NPC (1.0)
 Provides features such as Offers parcel delivery side jobs, Random drop-off locations per mission, Pays players money on completion, NPC shows delivery progress via dialog, and Encourages exploration of the map.
 
@@ -105,6 +108,9 @@ Handheld radio voice chat system with frequency tuning, encrypted channels, fact
 ## Recruitment NPC (1.0)
 Provides features such as Recruits players into factions, Provides introductory dialogue, Can assign starter gear upon enlistment, Supports multiple factions if configured, and Simple interaction with yes/no options.
 
+## Referrals (0.00)
+Player referral system allowing players to refer others and earn monetary rewards when referred players join, with configurable reward amounts and admin management tools.
+
 ## Roleplay NPCs (1.0)
 Roleplay NPC framework with dialogue trees, quest systems, and submodule support (mechanics, taxis, vendors, fences) with centralized NPC management and customization tools.
 
@@ -119,4 +125,7 @@ Provides features such as Spawns taxi vehicles for hire, NPC teleports you to pr
 
 ## Tying (1.0)
 Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios
+
+## Welcome Cinematic (0.00)
+Welcome cinematic system for new players with 5 scenes (Welcome, Character Creation, World Exploration, Social Interaction, Journey Begins) and smooth camera transitions
 

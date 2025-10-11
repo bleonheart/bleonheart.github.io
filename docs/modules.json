@@ -119,6 +119,18 @@
     ]
   },
   {
+    "name": "Welcome Cinematic",
+    "versionID": "private_cinematicloading",
+    "author": "Lilia Framework",
+    "discord": "@liliaplayer",
+    "description": "Welcome cinematic system for new players with 5 scenes (Welcome, Character Creation, World Exploration, Social Interaction, Journey Begins) and smooth camera transitions",
+    "version": "0.00",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/cinematicloading",
+    "source": "https://bleonheart.github.io/docs/modules/cinematicloading.html",
+    "features": [],
+    "workshop": []
+  },
+  {
     "name": "Corpses & Looting",
     "versionID": "private_corpses_looting",
     "author": "Samael",
@@ -155,6 +167,18 @@
     "workshop": [
       "3527551786"
     ]
+  },
+  {
+    "name": "Daily Rewards",
+    "versionID": "private_dailyrewards",
+    "author": "Lilia Team",
+    "discord": "@liliaplayer",
+    "description": "Daily rewards system with 20 objectives (walking, chatting, playtime, money, interactions, jobs, building, vehicles, arrests, healing, property, lockpicking, paychecks, ads, emergencies, XP, voting, crimes, spending, sprinting) and escalating streak bonuses at 14/30/60/90 days.",
+    "version": "0.00",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/dailyrewards",
+    "source": "https://bleonheart.github.io/docs/modules/dailyrewards.html",
+    "features": [],
+    "workshop": []
   },
   {
     "name": "Drugs",
@@ -469,6 +493,18 @@
     "workshop": [
       "3527548881"
     ]
+  },
+  {
+    "name": "Referrals",
+    "versionID": "private_referrals",
+    "author": "Supernova Corp",
+    "discord": "@supernova",
+    "description": "Player referral system allowing players to refer others and earn monetary rewards when referred players join, with configurable reward amounts and admin management tools.",
+    "version": "0.00",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/referrals",
+    "source": "https://bleonheart.github.io/docs/modules/referrals.html",
+    "features": [],
+    "workshop": []
   },
   {
     "name": "Store Robbery",
