@@ -131,6 +131,18 @@
     "workshop": []
   },
   {
+    "name": "Clearance Levels",
+    "versionID": "private_clearance",
+    "author": "Assistant",
+    "discord": "@assistant",
+    "description": "Adds clearance level system to doors",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/clearance",
+    "source": "https://bleonheart.github.io/docs/modules/clearance.html",
+    "features": [],
+    "workshop": []
+  },
+  {
     "name": "Corpses & Looting",
     "versionID": "private_corpses_looting",
     "author": "Samael",
@@ -279,6 +291,18 @@
     "version": "1.0",
     "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/limbdamage",
     "source": "https://bleonheart.github.io/docs/modules/limbdamage.html",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Lockpicking",
+    "versionID": "private_lockpicking",
+    "author": "BleonHeart",
+    "discord": "@bleonheart",
+    "description": "Door lockpicking system with 4 difficulty levels (Basic, Copper Easy, Silver Medium, Gold Hard), job restrictions (thieves can lockpick, police cannot), and configurable success margins with interactive mini-game",
+    "version": "1.0",
+    "download": "https://github.com/bleonheart/bleonheart.github.io/tree/main/docs/modules/lockpicking",
+    "source": "https://bleonheart.github.io/docs/modules/lockpicking.html",
     "features": [],
     "workshop": []
   },
