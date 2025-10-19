@@ -1,76 +1,76 @@
 # Modules
 
-- [Achievements](../modules/achievements/about/)
+- [Achievements](../modules/achievements/)
 
-- [ArcCW Attachments & Magazines](../modules/arccw/about/)
+- [ArcCW Attachments & Magazines](../modules/arccw/)
 
-- [Black Market NPC](../modules/blackmarket/about/)
+- [Black Market NPC](../modules/blackmarket/)
 
-- [Cameras](../modules/cameras/about/)
+- [Cameras](../modules/cameras/)
 
-- [Car Bomb](../modules/terrorism/about/)
+- [Car Bomb](../modules/terrorism/)
 
-- [Car Dealer](../modules/cardealer/about/)
+- [Car Dealer](../modules/cardealer/)
 
-- [Car Options](../modules/caroptions/about/)
+- [Car Options](../modules/caroptions/)
 
-- [Chess and Droughts](../modules/chess/about/)
+- [Chess and Droughts](../modules/chess/)
 
-- [Corpses & Looting](../modules/corpselooting/about/)
+- [Corpses & Looting](../modules/corpselooting/)
 
-- [Crafting](../modules/crafting/about/)
+- [Crafting](../modules/crafting/)
 
-- [Daily Rewards](../modules/dailyrewards/about/)
+- [Daily Rewards](../modules/dailyrewards/)
 
-- [Delivery NPC](../modules/delivery/about/)
+- [Delivery NPC](../modules/delivery/)
 
-- [Drugs](../modules/drugs/about/)
+- [Drugs](../modules/drugs/)
 
-- [Dynamic Food](../modules/food/about/)
+- [Dynamic Food](../modules/food/)
 
-- [Events](../modules/events/about/)
+- [Events](../modules/events/)
 
-- [Extraction](../modules/extraction/about/)
+- [Extraction](../modules/extraction/)
 
-- [Fence NPC](../modules/fence/about/)
+- [Fence NPC](../modules/fence/)
 
-- [Gathering System](../modules/gathering/about/)
+- [Gathering System](../modules/gathering/)
 
-- [Help NPCs](../modules/helpnpc/about/)
+- [Help NPCs](../modules/helpnpc/)
 
-- [Improved Constructable Props](../modules/propbasedbuilding/about/)
+- [Improved Constructable Props](../modules/propbasedbuilding/)
 
-- [LSCS Compatibility](../modules/lscs/about/)
+- [LSCS Compatibility](../modules/lscs/)
 
-- [Leveling](../modules/leveling/about/)
+- [Leveling](../modules/leveling/)
 
-- [Limb Damage](../modules/limbdamage/about/)
+- [Limb Damage](../modules/limbdamage/)
 
-- [Lockpicking](../modules/lockpicking/about/)
+- [Lockpicking](../modules/lockpicking/)
 
-- [Lootables](../modules/looting/about/)
+- [Lootables](../modules/looting/)
 
-- [Marketplace](../modules/marketplace/about/)
+- [Marketplace](../modules/marketplace/)
 
-- [Mechanic NPC](../modules/mechanic/about/)
+- [Mechanic NPC](../modules/mechanic/)
 
-- [Mobile Phones](../modules/cellphones/about/)
+- [Mobile Phones](../modules/cellphones/)
 
-- [Police Suite](../modules/policesuite/about/)
+- [Police Suite](../modules/policesuite/)
 
-- [Recruitment NPC](../modules/recruitment/about/)
+- [Recruitment NPC](../modules/recruitment/)
 
-- [Referrals](../modules/referrals/about/)
+- [Referrals](../modules/referrals/)
 
-- [Roleplay NPCs](../modules/npcs/about/)
+- [Roleplay NPCs](../modules/npcs/)
 
-- [Roleplay NPCs](../modules/property/about/)
+- [Roleplay NPCs](../modules/property/)
 
-- [Store Robbery](../modules/robberies/about/)
+- [Store Robbery](../modules/robberies/)
 
-- [Taxi NPC](../modules/taxi/about/)
+- [Taxi NPC](../modules/taxi/)
 
-- [Territories](../modules/territories/about/)
+- [Territories](../modules/territories/)
 
-- [Welcome Cinematic](../modules/cinematicloading/about/)
+- [Welcome Cinematic](../modules/cinematicloading/)
 
