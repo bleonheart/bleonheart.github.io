@@ -2,7 +2,11 @@
 
 - [Achievements](../modules/achievements/)
 
+- [Animations](../modules/anim/)
+
 - [ArcCW Attachments & Magazines](../modules/arccw/)
+
+- [Banking](../modules/banking/)
 
 - [Black Market NPC](../modules/blackmarket/)
 
@@ -15,6 +19,10 @@
 - [Car Options](../modules/caroptions/)
 
 - [Chess and Droughts](../modules/chess/)
+
+- [Clearance Levels](../modules/clearance/)
+
+- [Clothing System](../modules/bonemerge/)
 
 - [Corpses & Looting](../modules/corpselooting/)
 
@@ -38,6 +46,8 @@
 
 - [Help NPCs](../modules/helpnpc/)
 
+- [ID System](../modules/identifications/)
+
 - [Improved Constructable Props](../modules/propbasedbuilding/)
 
 - [LSCS Compatibility](../modules/lscs/)
@@ -54,9 +64,13 @@
 
 - [Mechanic NPC](../modules/mechanic/)
 
+- [Medals](../modules/medals/)
+
 - [Mobile Phones](../modules/cellphones/)
 
 - [Police Suite](../modules/policesuite/)
+
+- [Radio Voice Chat](../modules/radio/)
 
 - [Recruitment NPC](../modules/recruitment/)
 
@@ -71,6 +85,8 @@
 - [Taxi NPC](../modules/taxi/)
 
 - [Territories](../modules/territories/)
+
+- [Tying](../modules/cuffs/)
 
 - [Welcome Cinematic](../modules/cinematicloading/)
 

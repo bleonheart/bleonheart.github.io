@@ -3,8 +3,14 @@
 ## [Achievements](https://bleonheart.github.io/modules/achievements/)
 Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards
 
+## [Animations](https://bleonheart.github.io/modules/anim/)
+Roleplay animations (/act commands) including surrender, salute, cross arms, attention, typing poses, and combat stances that interrupt on movement
+
 ## [ArcCW Attachments & Magazines](https://bleonheart.github.io/modules/arccw/)
 Creates inventory items for all ArcCW weapon attachments and magazines with configurable capacity and ammo types
+
+## [Banking](https://bleonheart.github.io/modules/banking/)
+Full banking system with multiple accounts, deposits/withdrawals, transfers, item storage, check writing/redemption, ATMs, and paycheck integration
 
 ## [Black Market NPC](https://bleonheart.github.io/modules/blackmarket/)
 Provides features such as Sells illegal weapons and contraband, Limited stock with restock timers, Requires players to find secret location, Prices configurable via script, and Great for underground roleplay.
@@ -23,6 +29,12 @@ Vehicle quality of life features including CD player system with music tracks, a
 
 ## [Chess and Droughts](https://bleonheart.github.io/modules/chess/)
 Interactive chess and checkers (draughts) board games with multiplayer support, wagering system, and leaderboard tracking
+
+## [Clearance Levels](https://bleonheart.github.io/modules/clearance/)
+Adds clearance level system to doors
+
+## [Clothing System](https://bleonheart.github.io/modules/bonemerge/)
+Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, vests, rings, and accessories to players with vendor purchase and persistence
 
 ## [Corpses & Looting](https://bleonheart.github.io/modules/corpselooting/)
 Corpse looting system allowing players to search dead bodies, transfer items and money, with configurable search distance and anti-spam protection
@@ -57,6 +69,9 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
 ## [Help NPCs](https://bleonheart.github.io/modules/helpnpc/)
 Provides features such as Provides information to new players, Can give basic starter items, Dialog tree explains server mechanics, Directs players to other NPC services, and Simple friendly conversation.
 
+## [ID System](https://bleonheart.github.io/modules/identifications/)
+ID card system allowing players to show/request/force view IDs with multiple designs (California, German, Miami, New York, NYPD, Southside, Yorkshire) and character recognition mechanics.
+
 ## [Improved Constructable Props](https://bleonheart.github.io/modules/propbasedbuilding/)
 Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities
 
@@ -81,11 +96,17 @@ Provides features such as Marketplace system for player-to-player trading, Buy a
 ## [Mechanic NPC](https://bleonheart.github.io/modules/mechanic/)
 Provides features such as Repairs damaged vehicles for a fee, Can customize vehicle paint jobs, Sells spare parts and upgrades, Works with car dealer garage system, and Uses simple NPC dialog.
 
+## [Medals](https://bleonheart.github.io/modules/medals/)
+Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls
+
 ## [Mobile Phones](https://bleonheart.github.io/modules/cellphones/)
 Mobile phone system with unique phone numbers, voice calling, text messaging, and contact management for player communication
 
 ## [Police Suite](https://bleonheart.github.io/modules/policesuite/)
 Comprehensive police system with alarms, 999 emergency calls, stun weapons, crime tracking, warrants, arrests, police NPCs, and computer database for law enforcement management.
+
+## [Radio Voice Chat](https://bleonheart.github.io/modules/radio/)
+Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication
 
 ## [Recruitment NPC](https://bleonheart.github.io/modules/recruitment/)
 Provides features such as Recruits players into factions, Provides introductory dialogue, Can assign starter gear upon enlistment, Supports multiple factions if configured, and Simple interaction with yes/no options.
@@ -107,6 +128,9 @@ Provides features such as Spawns taxi vehicles for hire, NPC teleports you to pr
 
 ## [Territories](https://bleonheart.github.io/modules/territories/)
 Faction control point system with configurable capture zones, NPC defenders, HUD status display, and rewards for holding territories
+
+## [Tying](https://bleonheart.github.io/modules/cuffs/)
+Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios
 
 ## [Welcome Cinematic](https://bleonheart.github.io/modules/cinematicloading/)
 Welcome cinematic system for new players with 5 scenes (Welcome, Character Creation, World Exploration, Social Interaction, Journey Begins) and smooth camera transitions

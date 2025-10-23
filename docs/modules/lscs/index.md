@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
 
-LSCS (Lightsaber Combat System) compatibility module that integrates lightsaber components into the Lilia inventory system, enabling players to equip hilts, crystals, stances, and Force abilities through the standard item interface with dual-wielding support.
+LSCS (Lightsaber Combat System) compatibility module that integrates lightsaber components into the Helix inventory system, enabling players to equip hilts, crystals, stances, and Force abilities through the standard item interface with dual-wielding support.
 
 <h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
 
