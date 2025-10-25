@@ -36,20 +36,6 @@
     "workshop": []
   },
   {
-    "name": "Banking",
-    "versionID": "private_banking",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Full banking system with multiple accounts, deposits/withdrawals, transfers, item storage, check writing/redemption, ATMs, and paycheck integration",
-    "version": "1.4",
-    "source": "https://bleonheart.github.io/modules/banking/",
-    "directory": "banking",
-    "features": [],
-    "workshop": [
-      "3527541984"
-    ]
-  },
-  {
     "name": "Clothing System",
     "versionID": "private_bonemerge",
     "author": "Samael",
@@ -167,20 +153,6 @@
     "workshop": []
   },
   {
-    "name": "Tying",
-    "versionID": "private_tying",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios",
-    "version": "1.4",
-    "source": "https://bleonheart.github.io/modules/cuffs/",
-    "directory": "cuffs",
-    "features": [],
-    "workshop": [
-      "3527551786"
-    ]
-  },
-  {
     "name": "Daily Rewards",
     "versionID": "private_dailyrewards",
     "author": "Lilia Team",
@@ -205,18 +177,6 @@
     "workshop": [
       "3527542199"
     ]
-  },
-  {
-    "name": "Death Trooper Scrambler",
-    "versionID": "private_dt_scrambler",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Communication scrambler system for Death Trooper faction allowing private, encrypted voice communications with sound effects for non-authorized listeners",
-    "version": "1.0",
-    "source": "https://bleonheart.github.io/modules/dt_scrambler/",
-    "directory": "dt_scrambler",
-    "features": [],
-    "workshop": []
   },
   {
     "name": "Events",
@@ -353,141 +313,6 @@
     "directory": "medals",
     "features": [],
     "workshop": []
-  },
-  {
-    "name": "Roleplay NPCs",
-    "versionID": "private_npcs",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Roleplay NPC framework with dialogue trees, quest systems, and submodule support (mechanics, taxis, vendors, fences) with centralized NPC management and customization tools.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/npcs/",
-    "directory": "npcs",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Black Market NPC",
-    "versionID": "private_blackmarket",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Sells illegal weapons and contraband, Limited stock with restock timers, Requires players to find secret location, Prices configurable via script, and Great for underground roleplay.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/blackmarket/",
-    "directory": "npcs/submodules/blackmarket",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Car Dealer",
-    "versionID": "private_cardealer",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Purchase vehicles from a dealer NPC, Return or repair owned vehicles for a fee, Custom paint jobs and bodygroup modifications with configurable price, Garages store vehicles safely, and Integrates with driving addons.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/cardealer/",
-    "directory": "npcs/submodules/cardealer",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Delivery NPC",
-    "versionID": "private_delivery",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Offers parcel delivery side jobs, Random drop-off locations per mission, Pays players money on completion, NPC shows delivery progress via dialog, and Encourages exploration of the map.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/delivery/",
-    "directory": "npcs/submodules/delivery",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Fence NPC",
-    "versionID": "private_fence",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Buy stolen items from players, Pay based on item reward values, Support for all robbery items, and Secure transaction system.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/fence/",
-    "directory": "npcs/submodules/fence",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Help NPCs",
-    "versionID": "private_helpnpc",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Provides information to new players, Can give basic starter items, Dialog tree explains server mechanics, Directs players to other NPC services, and Simple friendly conversation.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/helpnpc/",
-    "directory": "npcs/submodules/helpnpc",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Marketplace",
-    "versionID": "private_marketplace",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Marketplace system for player-to-player trading, Buy and sell items with no expiration dates, Configurable listing limits and minimum prices, NPC vendor interface for easy access, Search and filter functionality for items, Economic system integration for server economy, and Super admin item removal tools.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/marketplace/",
-    "directory": "npcs/submodules/marketplace",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Mechanic NPC",
-    "versionID": "private_mechanic",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Repairs damaged vehicles for a fee, Can customize vehicle paint jobs, Sells spare parts and upgrades, Works with car dealer garage system, and Uses simple NPC dialog.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/mechanic/",
-    "directory": "npcs/submodules/mechanic",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Roleplay NPCs",
-    "versionID": "private_property",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Allows players to buy and sell properties, NPC manages rental durations and payments, Staff privileges for managing listings, Works with property submodule of NPCs, and Integrated showcase for property system.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/property/",
-    "directory": "npcs/submodules/property",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Recruitment NPC",
-    "versionID": "private_recruitment",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Recruits players into factions, Provides introductory dialogue, Can assign starter gear upon enlistment, Supports multiple factions if configured, and Simple interaction with yes/no options.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/recruitment/",
-    "directory": "npcs/submodules/recruitment",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Taxi NPC",
-    "versionID": "private_taxi",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Provides features such as Spawns taxi vehicles for hire, NPC teleports you to preset locations, Charges fee based on distance, Checks if player already owns a taxi, and Uses workshop vehicle models.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/taxi/",
-    "directory": "npcs/submodules/taxi",
-    "features": [],
-    "workshop": [
-      "1238235086",
-      "771487490"
-    ]
   },
   {
     "name": "Police Suite",
