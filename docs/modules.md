@@ -45,6 +45,9 @@ Recipe-based crafting system with crafting stations (forge, workbench), time-bas
 ## [Daily Rewards](https://bleonheart.github.io/modules/dailyrewards/)
 Daily rewards system with 20 objectives (walking, chatting, playtime, money, interactions, jobs, building, vehicles, arrests, healing, property, lockpicking, paychecks, ads, emergencies, XP, voting, crimes, spending, sprinting) and escalating streak bonuses at 14/30/60/90 days.
 
+## [Death Trooper Scrambler](https://bleonheart.github.io/modules/dt_scrambler/)
+Communication scrambler system for Death Trooper faction allowing private, encrypted voice communications with sound effects for non-authorized listeners
+
 ## [Delivery NPC](https://bleonheart.github.io/modules/delivery/)
 Provides features such as Offers parcel delivery side jobs, Random drop-off locations per mission, Pays players money on completion, NPC shows delivery progress via dialog, and Encourages exploration of the map.
 

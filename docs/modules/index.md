@@ -30,6 +30,8 @@
 
 - [Daily Rewards](../modules/dailyrewards/)
 
+- [Death Trooper Scrambler](../modules/dt_scrambler/)
+
 - [Delivery NPC](../modules/delivery/)
 
 - [Drugs](../modules/drugs/)
