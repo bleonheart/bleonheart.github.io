@@ -14,14 +14,14 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark mode
-      primary: brown
-      accent: deep orange
+      primary: teal
+      accent: teal
     - scheme: default
       toggle:
         icon: material/weather-sunny
         name: Light mode
-      primary: brown
-      accent: brown
+      primary: teal
+      accent: teal
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
