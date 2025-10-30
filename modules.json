@@ -1,0 +1,408 @@
+[
+  {
+    "name": "Achievements",
+    "versionID": "private_achievements",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/achievements/",
+    "directory": "achievements",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Animations",
+    "versionID": "private_anim",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Roleplay animations (/act commands) including surrender, salute, cross arms, attention, typing poses, and combat stances that interrupt on movement",
+    "version": "1.4",
+    "source": "https://bleonheart.github.io/modules/anim/",
+    "directory": "anim",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "ArcCW Attachments & Magazines",
+    "versionID": "private_arccw",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Creates inventory items for all ArcCW weapon attachments and magazines with configurable capacity and ammo types",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/arccw/",
+    "directory": "arccw",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Clothing System",
+    "versionID": "private_bonemerge",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, vests, rings, and accessories to players with vendor purchase and persistence",
+    "version": "1.4",
+    "source": "https://bleonheart.github.io/modules/bonemerge/",
+    "directory": "bonemerge",
+    "features": [],
+    "workshop": [
+      "3425707500",
+      "3425693671"
+    ]
+  },
+  {
+    "name": "Cameras",
+    "versionID": "private_cameras",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Security camera and CCTV monitor system for surveillance with faction-restricted access and live feed viewing",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/cameras/",
+    "directory": "cameras",
+    "features": [],
+    "workshop": [
+      "3527545883"
+    ]
+  },
+  {
+    "name": "Car Options",
+    "versionID": "private_caroptions",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Vehicle quality of life features including CD player system with music tracks, albums, and audio streaming for in-car entertainment",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/caroptions/",
+    "directory": "caroptions",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Mobile Phones",
+    "versionID": "private_cellphones",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Mobile phone system with unique phone numbers, voice calling, text messaging, and contact management for player communication",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/cellphones/",
+    "directory": "cellphones",
+    "features": [],
+    "workshop": [
+      "3431352659"
+    ]
+  },
+  {
+    "name": "Chess and Droughts",
+    "versionID": "private_chess",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Interactive chess and checkers (draughts) board games with multiplayer support, wagering system, and leaderboard tracking",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/chess/",
+    "directory": "chess",
+    "features": [],
+    "workshop": [
+      "3527544455"
+    ]
+  },
+  {
+    "name": "Welcome Cinematic",
+    "versionID": "private_cinematicloading",
+    "author": "Lilia Framework",
+    "discord": "@liliaplayer",
+    "description": "Welcome cinematic system for new players with 5 scenes (Welcome, Character Creation, World Exploration, Social Interaction, Journey Begins) and smooth camera transitions",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/cinematicloading/",
+    "directory": "cinematicloading",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Clearance Levels",
+    "versionID": "private_clearance",
+    "author": "Assistant",
+    "discord": "@assistant",
+    "description": "Adds clearance level system to doors",
+    "version": "1.1",
+    "source": "https://bleonheart.github.io/modules/clearance/",
+    "directory": "clearance",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Corpses & Looting",
+    "versionID": "private_corpses_looting",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Corpse looting system allowing players to search dead bodies, transfer items and money, with configurable search distance and anti-spam protection",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/corpselooting/",
+    "directory": "corpselooting",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Crafting",
+    "versionID": "private_crafting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/crafting/",
+    "directory": "crafting",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Daily Rewards",
+    "versionID": "private_dailyrewards",
+    "author": "Lilia Team",
+    "discord": "@liliaplayer",
+    "description": "Daily rewards system with 20 objectives (walking, chatting, playtime, money, interactions, jobs, building, vehicles, arrests, healing, property, lockpicking, paychecks, ads, emergencies, XP, voting, crimes, spending, sprinting) and escalating streak bonuses at 14/30/60/90 days.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/dailyrewards/",
+    "directory": "dailyrewards",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Drugs",
+    "versionID": "private_drugs",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Drug cultivation, processing, consumption, and addiction system with effects like speed boost, damage reduction, and stamina regeneration",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/drugs/",
+    "directory": "drugs",
+    "features": [],
+    "workshop": [
+      "3527542199"
+    ]
+  },
+  {
+    "name": "Events",
+    "versionID": "private_events",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Map-based NPC event system with configurable spawn positions, player count requirements, automatic timers, and staff/player notifications",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/events/",
+    "directory": "events",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Extraction",
+    "versionID": "private_extraction",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Raid-style extraction system requiring players to reach escape zones within countdown timer, with configurable positions per map and audio/visual cues",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/extraction/",
+    "directory": "extraction",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Dynamic Food",
+    "versionID": "private_food",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Restaurant cooking system with cooking machines, customer orders, ingredient fridges, worktables, dish preparation, and hunger restoration mechanics",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/food/",
+    "directory": "food",
+    "features": [],
+    "workshop": [
+      "3527551464"
+    ]
+  },
+  {
+    "name": "Gathering System",
+    "versionID": "private_gathering",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver ore, coal), fishing system with pole/bait and fish types (trout, bass, catfish, perch) plus junk, crafting materials (ingots, wood, swords), and stackable inventory management.",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/gathering/",
+    "directory": "gathering",
+    "features": [],
+    "workshop": [
+      "3527546250"
+    ]
+  },
+  {
+    "name": "ID System",
+    "versionID": "private_idsystem",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "ID card system allowing players to show/request/force view IDs with multiple designs (California, German, Miami, New York, NYPD, Southside, Yorkshire) and character recognition mechanics.",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/identifications/",
+    "directory": "identifications",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Leveling",
+    "versionID": "private_leveling",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Character leveling system with XP, skill points, and skill tree (Endurance: +25 health, Combat Training: +15% damage, Engineering: +15% tool effectiveness/+30% repair speed) with dependencies, F1 menu integration, and admin adjustment tools.",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/leveling/",
+    "directory": "leveling",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Limb Damage",
+    "versionID": "private_limbdamage",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Limb damage system where leg shots cause configurable sprint delay with automatic healing and toggleable enable/disable functionality",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/limbdamage/",
+    "directory": "limbdamage",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Lockpicking",
+    "versionID": "private_lockpicking",
+    "author": "BleonHeart",
+    "discord": "@bleonheart",
+    "description": "Door lockpicking system with 4 difficulty levels (Basic, Copper Easy, Silver Medium, Gold Hard), job restrictions (thieves can lockpick, police cannot), and configurable success margins with interactive mini-game",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/lockpicking/",
+    "directory": "lockpicking",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Lootables",
+    "versionID": "private_looting",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Searchable loot containers (cardboard boxes, wooden crates, metal barrels, lockers, safes) with rarity tiers (Common/Uncommon/Rare/Legendary/Unique), skill requirements (strength/luck), alarm systems, and cooldown timers for exploration-based item gathering.",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/looting/",
+    "directory": "looting",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "LSCS Compatibility",
+    "versionID": "private_lscs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber combat mechanics.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/lscs/",
+    "directory": "lscs",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Medals",
+    "versionID": "private_medals",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls",
+    "version": "1.4",
+    "source": "https://bleonheart.github.io/modules/medals/",
+    "directory": "medals",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Police Suite",
+    "versionID": "private_policesuite",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Comprehensive police system with alarms, 999 emergency calls, stun weapons, crime tracking, warrants, arrests, police NPCs, and computer database for law enforcement management.",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/policesuite/",
+    "directory": "policesuite",
+    "features": [],
+    "workshop": [
+      "3432649835",
+      "3556219887"
+    ]
+  },
+  {
+    "name": "Improved Constructable Props",
+    "versionID": "private_propbasedbuilding",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/propbasedbuilding/",
+    "directory": "propbasedbuilding",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Radio Voice Chat",
+    "versionID": "private_radio",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication",
+    "version": "1.4",
+    "source": "https://bleonheart.github.io/modules/radio/",
+    "directory": "radio",
+    "features": [],
+    "workshop": [
+      "3527548881"
+    ]
+  },
+  {
+    "name": "Referrals",
+    "versionID": "private_referrals",
+    "author": "Supernova Corp",
+    "discord": "@supernova",
+    "description": "Player referral system allowing players to refer others and earn monetary rewards when referred players join, with configurable reward amounts and admin management tools.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/referrals/",
+    "directory": "referrals",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Store Robbery",
+    "versionID": "private_robberies",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Store robbery system with jewelry cases and cash registers, stealable items (cash, jewelry, watches, rings), police requirements, and respawn timers",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/robberies/",
+    "directory": "robberies",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Territories",
+    "versionID": "private_controlpoint",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Faction control point system with configurable capture zones, NPC defenders, HUD status display, and rewards for holding territories",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/territories/",
+    "directory": "territories",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Car Bomb",
+    "versionID": "private_terrorism",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Terrorism mechanics with vehicle car bombs (engine-activated) and door explosives, both with timed detonation, remote detonation, and debris creation",
+    "version": "1.3",
+    "source": "https://bleonheart.github.io/modules/terrorism/",
+    "directory": "terrorism",
+    "features": [],
+    "workshop": [
+      "3555533196"
+    ]
+  }
+]
