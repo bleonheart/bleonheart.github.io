@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.3 (07112025)
+
+- Code optimizations and improvements
+- Enhanced compatibility with recent game updates
+
 ### Version 1.2
 
 - **Breaking Change**: Standardized function names to camelCase
@@ -13,3 +18,4 @@
 ### Version 1.0
 
 - Initial Release
+

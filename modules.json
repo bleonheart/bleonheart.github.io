@@ -7,7 +7,7 @@
     "description": "Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/achievements/",
-    "directory": "achievements",
+    "directory": "./achievements",
     "features": [],
     "workshop": []
   },
@@ -19,7 +19,7 @@
     "description": "Roleplay animations (/act commands) including surrender, salute, cross arms, attention, typing poses, and combat stances that interrupt on movement",
     "version": "1.4",
     "source": "https://bleonheart.github.io/modules/anim/",
-    "directory": "anim",
+    "directory": "./anim",
     "features": [],
     "workshop": []
   },
@@ -31,9 +31,35 @@
     "description": "Creates inventory items for all ArcCW weapon attachments and magazines with configurable capacity and ammo types",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/arccw/",
-    "directory": "arccw",
+    "directory": "./arccw",
     "features": [],
     "workshop": []
+  },
+  {
+    "name": "Armor",
+    "versionID": "private_armor",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Adds Funny Armors",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/armor/",
+    "directory": "./armor",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Banking",
+    "versionID": "private_banking",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Full banking system with multiple accounts, deposits/withdrawals, transfers, item storage, check writing/redemption, ATMs, and paycheck integration",
+    "version": "1.4",
+    "source": "https://bleonheart.github.io/modules/banking/",
+    "directory": "./banking",
+    "features": [],
+    "workshop": [
+      "3527541984"
+    ]
   },
   {
     "name": "Clothing System",
@@ -43,7 +69,7 @@
     "description": "Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, vests, rings, and accessories to players with vendor purchase and persistence",
     "version": "1.4",
     "source": "https://bleonheart.github.io/modules/bonemerge/",
-    "directory": "bonemerge",
+    "directory": "./bonemerge",
     "features": [],
     "workshop": [
       "3425707500",
@@ -58,7 +84,7 @@
     "description": "Security camera and CCTV monitor system for surveillance with faction-restricted access and live feed viewing",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/cameras/",
-    "directory": "cameras",
+    "directory": "./cameras",
     "features": [],
     "workshop": [
       "3527545883"
@@ -72,7 +98,19 @@
     "description": "Vehicle quality of life features including CD player system with music tracks, albums, and audio streaming for in-car entertainment",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/caroptions/",
-    "directory": "caroptions",
+    "directory": "./caroptions",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Car Spawner",
+    "versionID": "private_carspawner",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Module for spawning themed cars for players.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/carspawner/",
+    "directory": "./carspawner",
     "features": [],
     "workshop": []
   },
@@ -84,7 +122,7 @@
     "description": "Mobile phone system with unique phone numbers, voice calling, text messaging, and contact management for player communication",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/cellphones/",
-    "directory": "cellphones",
+    "directory": "./cellphones",
     "features": [],
     "workshop": [
       "3431352659"
@@ -98,7 +136,7 @@
     "description": "Interactive chess and checkers (draughts) board games with multiplayer support, wagering system, and leaderboard tracking",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/chess/",
-    "directory": "chess",
+    "directory": "./chess",
     "features": [],
     "workshop": [
       "3527544455"
@@ -112,7 +150,7 @@
     "description": "Welcome cinematic system for new players with 5 scenes (Welcome, Character Creation, World Exploration, Social Interaction, Journey Begins) and smooth camera transitions",
     "version": "1.0",
     "source": "https://bleonheart.github.io/modules/cinematicloading/",
-    "directory": "cinematicloading",
+    "directory": "./cinematicloading",
     "features": [],
     "workshop": []
   },
@@ -124,7 +162,7 @@
     "description": "Adds clearance level system to doors",
     "version": "1.1",
     "source": "https://bleonheart.github.io/modules/clearance/",
-    "directory": "clearance",
+    "directory": "./clearance",
     "features": [],
     "workshop": []
   },
@@ -136,7 +174,7 @@
     "description": "Corpse looting system allowing players to search dead bodies, transfer items and money, with configurable search distance and anti-spam protection",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/corpselooting/",
-    "directory": "corpselooting",
+    "directory": "./corpselooting",
     "features": [],
     "workshop": []
   },
@@ -148,9 +186,23 @@
     "description": "Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/crafting/",
-    "directory": "crafting",
+    "directory": "./crafting",
     "features": [],
     "workshop": []
+  },
+  {
+    "name": "Tying",
+    "versionID": "private_tying",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios",
+    "version": "1.4",
+    "source": "https://bleonheart.github.io/modules/cuffs/",
+    "directory": "./cuffs",
+    "features": [],
+    "workshop": [
+      "3527551786"
+    ]
   },
   {
     "name": "Daily Rewards",
@@ -160,7 +212,7 @@
     "description": "Daily rewards system with 20 objectives (walking, chatting, playtime, money, interactions, jobs, building, vehicles, arrests, healing, property, lockpicking, paychecks, ads, emergencies, XP, voting, crimes, spending, sprinting) and escalating streak bonuses at 14/30/60/90 days.",
     "version": "1.0",
     "source": "https://bleonheart.github.io/modules/dailyrewards/",
-    "directory": "dailyrewards",
+    "directory": "./dailyrewards",
     "features": [],
     "workshop": []
   },
@@ -172,11 +224,23 @@
     "description": "Drug cultivation, processing, consumption, and addiction system with effects like speed boost, damage reduction, and stamina regeneration",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/drugs/",
-    "directory": "drugs",
+    "directory": "./drugs",
     "features": [],
     "workshop": [
       "3527542199"
     ]
+  },
+  {
+    "name": "Death Trooper Scrambler",
+    "versionID": "private_dt_scrambler",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Communication scrambler system for Death Trooper faction allowing private, encrypted voice communications with sound effects for non-authorized listeners",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/dt_scrambler/",
+    "directory": "./dt_scrambler",
+    "features": [],
+    "workshop": []
   },
   {
     "name": "Events",
@@ -186,7 +250,7 @@
     "description": "Map-based NPC event system with configurable spawn positions, player count requirements, automatic timers, and staff/player notifications",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/events/",
-    "directory": "events",
+    "directory": "./events",
     "features": [],
     "workshop": []
   },
@@ -198,7 +262,7 @@
     "description": "Raid-style extraction system requiring players to reach escape zones within countdown timer, with configurable positions per map and audio/visual cues",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/extraction/",
-    "directory": "extraction",
+    "directory": "./extraction",
     "features": [],
     "workshop": []
   },
@@ -210,7 +274,7 @@
     "description": "Restaurant cooking system with cooking machines, customer orders, ingredient fridges, worktables, dish preparation, and hunger restoration mechanics",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/food/",
-    "directory": "food",
+    "directory": "./food",
     "features": [],
     "workshop": [
       "3527551464"
@@ -224,7 +288,7 @@
     "description": "Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver ore, coal), fishing system with pole/bait and fish types (trout, bass, catfish, perch) plus junk, crafting materials (ingots, wood, swords), and stackable inventory management.",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/gathering/",
-    "directory": "gathering",
+    "directory": "./gathering",
     "features": [],
     "workshop": [
       "3527546250"
@@ -238,7 +302,7 @@
     "description": "ID card system allowing players to show/request/force view IDs with multiple designs (California, German, Miami, New York, NYPD, Southside, Yorkshire) and character recognition mechanics.",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/identifications/",
-    "directory": "identifications",
+    "directory": "./identifications",
     "features": [],
     "workshop": []
   },
@@ -250,7 +314,7 @@
     "description": "Character leveling system with XP, skill points, and skill tree (Endurance: +25 health, Combat Training: +15% damage, Engineering: +15% tool effectiveness/+30% repair speed) with dependencies, F1 menu integration, and admin adjustment tools.",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/leveling/",
-    "directory": "leveling",
+    "directory": "./leveling",
     "features": [],
     "workshop": []
   },
@@ -262,7 +326,7 @@
     "description": "Limb damage system where leg shots cause configurable sprint delay with automatic healing and toggleable enable/disable functionality",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/limbdamage/",
-    "directory": "limbdamage",
+    "directory": "./limbdamage",
     "features": [],
     "workshop": []
   },
@@ -274,7 +338,7 @@
     "description": "Door lockpicking system with 4 difficulty levels (Basic, Copper Easy, Silver Medium, Gold Hard), job restrictions (thieves can lockpick, police cannot), and configurable success margins with interactive mini-game",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/lockpicking/",
-    "directory": "lockpicking",
+    "directory": "./lockpicking",
     "features": [],
     "workshop": []
   },
@@ -286,7 +350,7 @@
     "description": "Searchable loot containers (cardboard boxes, wooden crates, metal barrels, lockers, safes) with rarity tiers (Common/Uncommon/Rare/Legendary/Unique), skill requirements (strength/luck), alarm systems, and cooldown timers for exploration-based item gathering.",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/looting/",
-    "directory": "looting",
+    "directory": "./looting",
     "features": [],
     "workshop": []
   },
@@ -298,7 +362,7 @@
     "description": "Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber combat mechanics.",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/lscs/",
-    "directory": "lscs",
+    "directory": "./lscs",
     "features": [],
     "workshop": []
   },
@@ -310,9 +374,144 @@
     "description": "Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls",
     "version": "1.4",
     "source": "https://bleonheart.github.io/modules/medals/",
-    "directory": "medals",
+    "directory": "./medals",
     "features": [],
     "workshop": []
+  },
+  {
+    "name": "Roleplay NPCs",
+    "versionID": "private_npcs",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Roleplay NPC framework with dialogue trees, quest systems, and submodule support (mechanics, taxis, vendors, fences) with centralized NPC management and customization tools.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/npcs/",
+    "directory": "./npcs",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Black Market NPC",
+    "versionID": "private_blackmarket",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Sells illegal weapons and contraband, Limited stock with restock timers, Requires players to find secret location, Prices configurable via script, and Great for underground roleplay.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/blackmarket/",
+    "directory": "./npcs/submodules/blackmarket",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Car Dealer",
+    "versionID": "private_cardealer",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Purchase vehicles from a dealer NPC, Return or repair owned vehicles for a fee, Custom paint jobs and bodygroup modifications with configurable price, Garages store vehicles safely, and Integrates with driving addons.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/cardealer/",
+    "directory": "./npcs/submodules/cardealer",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Delivery NPC",
+    "versionID": "private_delivery",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Offers parcel delivery side jobs, Random drop-off locations per mission, Pays players money on completion, NPC shows delivery progress via dialog, and Encourages exploration of the map.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/delivery/",
+    "directory": "./npcs/submodules/delivery",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Fence NPC",
+    "versionID": "private_fence",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Buy stolen items from players, Pay based on item reward values, Support for all robbery items, and Secure transaction system.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/fence/",
+    "directory": "./npcs/submodules/fence",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Help NPCs",
+    "versionID": "private_helpnpc",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Provides information to new players, Can give basic starter items, Dialog tree explains server mechanics, Directs players to other NPC services, and Simple friendly conversation.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/helpnpc/",
+    "directory": "./npcs/submodules/helpnpc",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Marketplace",
+    "versionID": "private_marketplace",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Marketplace system for player-to-player trading, Buy and sell items with no expiration dates, Configurable listing limits and minimum prices, NPC vendor interface for easy access, Search and filter functionality for items, Economic system integration for server economy, and Super admin item removal tools.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/marketplace/",
+    "directory": "./npcs/submodules/marketplace",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Mechanic NPC",
+    "versionID": "private_mechanic",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Repairs damaged vehicles for a fee, Can customize vehicle paint jobs, Sells spare parts and upgrades, Works with car dealer garage system, and Uses simple NPC dialog.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/mechanic/",
+    "directory": "./npcs/submodules/mechanic",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Roleplay NPCs",
+    "versionID": "private_property",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Allows players to buy and sell properties, NPC manages rental durations and payments, Staff privileges for managing listings, Works with property submodule of NPCs, and Integrated showcase for property system.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/property/",
+    "directory": "./npcs/submodules/property",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Recruitment NPC",
+    "versionID": "private_recruitment",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Recruits players into factions, Provides introductory dialogue, Can assign starter gear upon enlistment, Supports multiple factions if configured, and Simple interaction with yes/no options.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/recruitment/",
+    "directory": "./npcs/submodules/recruitment",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Taxi NPC",
+    "versionID": "private_taxi",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Spawns taxi vehicles for hire, NPC teleports you to preset locations, Charges fee based on distance, Checks if player already owns a taxi, and Uses workshop vehicle models.",
+    "version": "1.2",
+    "source": "https://bleonheart.github.io/modules/taxi/",
+    "directory": "./npcs/submodules/taxi",
+    "features": [],
+    "workshop": [
+      "1238235086",
+      "771487490"
+    ]
   },
   {
     "name": "Police Suite",
@@ -322,7 +521,7 @@
     "description": "Comprehensive police system with alarms, 999 emergency calls, stun weapons, crime tracking, warrants, arrests, police NPCs, and computer database for law enforcement management.",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/policesuite/",
-    "directory": "policesuite",
+    "directory": "./policesuite",
     "features": [],
     "workshop": [
       "3432649835",
@@ -337,7 +536,7 @@
     "description": "Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/propbasedbuilding/",
-    "directory": "propbasedbuilding",
+    "directory": "./propbasedbuilding",
     "features": [],
     "workshop": []
   },
@@ -349,11 +548,23 @@
     "description": "Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication",
     "version": "1.4",
     "source": "https://bleonheart.github.io/modules/radio/",
-    "directory": "radio",
+    "directory": "./radio",
     "features": [],
     "workshop": [
       "3527548881"
     ]
+  },
+  {
+    "name": "Ranking",
+    "versionID": "private_ranking",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Ranking system for the gamemode",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/ranking/",
+    "directory": "./ranking",
+    "features": [],
+    "workshop": []
   },
   {
     "name": "Referrals",
@@ -363,7 +574,7 @@
     "description": "Player referral system allowing players to refer others and earn monetary rewards when referred players join, with configurable reward amounts and admin management tools.",
     "version": "1.0",
     "source": "https://bleonheart.github.io/modules/referrals/",
-    "directory": "referrals",
+    "directory": "./referrals",
     "features": [],
     "workshop": []
   },
@@ -375,7 +586,7 @@
     "description": "Store robbery system with jewelry cases and cash registers, stealable items (cash, jewelry, watches, rings), police requirements, and respawn timers",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/robberies/",
-    "directory": "robberies",
+    "directory": "./robberies",
     "features": [],
     "workshop": []
   },
@@ -387,7 +598,7 @@
     "description": "Faction control point system with configurable capture zones, NPC defenders, HUD status display, and rewards for holding territories",
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/territories/",
-    "directory": "territories",
+    "directory": "./territories",
     "features": [],
     "workshop": []
   },
@@ -399,7 +610,7 @@
     "description": "Terrorism mechanics with vehicle car bombs (engine-activated) and door explosives, both with timed detonation, remote detonation, and debris creation",
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/terrorism/",
-    "directory": "terrorism",
+    "directory": "./terrorism",
     "features": [],
     "workshop": [
       "3555533196"

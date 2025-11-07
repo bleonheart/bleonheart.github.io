@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.2 (07112025)
+
+- Code optimizations and improvements
+- Enhanced compatibility with recent game updates
+
 ### Version 1.1
 
 - **Breaking Change**: Function name standardization to lowercase
@@ -8,3 +13,4 @@
 ### Version 1.0
 
 - Initial Release
+

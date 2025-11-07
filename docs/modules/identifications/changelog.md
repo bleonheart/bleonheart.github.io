@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.4 (07112025)
+
+- Code optimizations and improvements
+- Enhanced compatibility with recent game updates
+
 ### Version 1.3
 
 - Removed comments from Lua files for cleaner code
@@ -21,3 +26,4 @@
 ### Version 1.0
 
 - Initial Release
+
