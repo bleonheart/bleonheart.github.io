@@ -1,4 +1,4 @@
-# Modules
+# List of Modules
 
 - [Achievements](../modules/achievements/)
 
