@@ -2,18 +2,15 @@
 
 Map-based NPC event system with configurable spawn positions, player count requirements, automatic timers, and staff/player notifications.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Map-Specific Event Configurations**: Individual event setups for different maps with unique NPC types and spawn locations
-- **Automated Timer System**: Time-based event spawning with configurable intervals and requirement checking
-- **Dynamic Spawn Position Management**: Customizable spawn positions per map with validation and conflict prevention
-- **Multi-Tier Notification System**: Comprehensive notification callbacks for staff alerts and player announcements
-- **Administrative Command Suite**: Complete admin toolkit for manual event triggering, NPC removal, and event management
-- **Active Event Tracking**: Network variable system for tracking spawned event NPCs and their current status
-- **Configurable Spawn Requirements**: Flexible requirement system controlling when and how events can trigger
-- **Event Entity Management**: Sophisticated tracking system for spawned NPCs with cleanup and monitoring
-- **Cross-Map Compatibility**: Event system designed to work across multiple maps with map-specific configurations
-- **Performance Optimized Spawning**: Efficient event spawning system with rate limiting and resource management
+- Map Events Event table configured per map
+- Timer System Automatic event spawning on configurable interval
+- Event NPCs NPCs spawned with EventNPC netvar flag
+- Conditional Spawning ShouldSpawn callback for requirements
+- Manual Trigger Admin command to start specific events
+- NPC Removal Command Remove all event NPCs from map
+- Notification Callbacks Custom callbacks for staff and players
 
 <br><br>
 

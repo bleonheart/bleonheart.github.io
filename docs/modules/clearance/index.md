@@ -2,18 +2,16 @@
 
 Hierarchical security clearance system with 7-tier access control for doors, character management, salary bonuses, and administrative oversight.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **7-Tier Clearance System**: Complete hierarchical access control from public (Level 0) to top-secret (Level 6) with configurable descriptions and salary bonuses
-- **Door Access Control**: Assign clearance levels to doors with automatic access restriction and ownership disabling for security compliance
-- **Character Clearance Management**: Administrative system for setting player clearance levels with privilege-based access control and flag permissions
-- **Salary Integration**: Automatic salary bonuses based on clearance level (25-300 currency) with seamless paycheck system integration
-- **Item Restriction System**: Items can require specific clearance levels preventing unauthorized equipment access and maintaining security protocols
-- **Database Persistence**: Automatic database column creation with per-gamemode and per-map data isolation for reliable data storage
-- **Administrative Commands**: Complete command suite including `/doorclearance` and `/charclearance` with validation and error handling
-- **UI Integration**: Clearance information displayed in character panels, main menu, and player information with visual indicators
-- **Real-time Synchronization**: NetVar-based system ensuring immediate clearance updates across all clients and server instances
-- **Comprehensive Validation**: Input validation, privilege checking, and error handling for all clearance operations and security measures
+- Seven Tiers Clearance levels 0 through 6 stored per character
+- Door Clearance Doors require clearance level stored in database
+- Door Hacking Radial minigame to hack doors with cooldown timer
+- Salary Bonuses Clearance adds bonus pay to character salary
+- Item Restrictions Items can require clearance to equip
+- Hack Warnings Players with warned clearance notified of hack attempts
+- Database Storage Door clearance saved per gamemode and map
+- Admin Commands Set door and character clearance levels
 
 <br><br>
 

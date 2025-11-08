@@ -1,11 +1,11 @@
 # Changelog
 
-### Version 1.3 (07112025)
+### Version 1.3
 
 - Code optimizations and improvements
 - Enhanced compatibility with recent game updates
 
-### Version 1.2 (15102025)
+### Version 1.2
 
 - Code optimizations and improvements
 - Enhanced compatibility with recent game updates

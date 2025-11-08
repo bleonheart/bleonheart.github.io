@@ -2,18 +2,16 @@
 
 Restaurant cooking system with cooking machines, customer orders, ingredient fridges, worktables, dish preparation, and hunger restoration mechanics.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Advanced Cooking Mechanics**: Craft and cook various food items with realistic preparation and cooking processes
-- **Hunger Restoration System**: Food items restore hunger stats with configurable nutritional values and effects
-- **Workshop Integration**: High-quality 3D models and textures for ingredients, dishes, and cooking equipment
-- **Recipe Definition System**: Flexible definitions file system for adding new recipes and customizing existing ones
-- **Hunger/Thirst Integration**: Seamless compatibility with hunger and thirst management systems for realistic survival mechanics
-- **Customer Service System**: Interactive customer ordering system with NPC customers and order management
-- **Specialized Cooking Stations**: Multiple cooking machines including woks, worktables, and specialized preparation areas
-- **Dynamic Inventory Management**: Advanced inventory system with drag-and-drop functionality and item categorization
-- **Temperature Control System**: Cooking temperature management with visual indicators and recipe requirements
-- **Restaurant Management Tools**: Complete restaurant simulation with customer tables, dish serving, and order tracking
+- ZMC Integration Dynamic food system using zmc addon
+- Cooking Machines Woks and other cooking equipment
+- Ingredient Fridges Buy ingredients from fridges
+- Worktables Craft dishes at worktables
+- Customer Tables NPC customers place orders
+- Hunger Thirst Saves hunger and thirst to character data
+- Refill On Death Optionally refills hunger/thirst on death
+- Character Persistence Hunger and thirst persist across sessions
 
 <br><br>
 

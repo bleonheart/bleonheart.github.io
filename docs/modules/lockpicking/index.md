@@ -2,18 +2,16 @@
 
 Door lockpicking system with 4 difficulty levels (Basic, Copper Easy, Silver Medium, Gold Hard), job restrictions (thieves can lockpick, police cannot), and configurable success margins.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Interactive Mini-Game**: Angle-based lockpicking system requiring precise timing and player input for authentic burglary simulation
-- **Tiered Difficulty System**: Three lockpick levels (Copper, Silver, Gold) with progressively tighter angle margins and increased challenge
-- **Job-Based Access Control**: Criminal occupations can lockpick while law enforcement and government jobs are restricted from using the system
-- **Multi-Platform Compatibility**: Works seamlessly with both doors and vehicles for comprehensive property intrusion mechanics
-- **Realistic Audio Feedback**: Authentic lockpicking sound effects and tension feedback for immersive gameplay experience
-- **Property Ownership Protection**: Prevents players from lockpicking their own property with automatic ownership verification
-- **Visual Lockpick Model**: 3D animated lockpick tool with custom models, bone manipulation, and sequence-based animations
-- **Consumable Ammo System**: Optional lockpick pin consumption with configurable starting amounts and buyable replenishment
-- **Anti-Cheat Measures**: Distance checking, lockpick state validation, and automatic reset mechanisms to prevent exploitation
-- **Framework Integration**: Compatible with multiple gamemode frameworks including LifeRP, Yorkshire RP, and custom property systems
+- Lockpick SWEP Weapon-based lockpicking system
+- Difficulty Levels Basic, Copper, Silver, and Gold stored on doors
+- Angle Minigame Precise angle-based lockpicking game
+- Job Restrictions Thieves can lockpick, police cannot
+- Door Vehicles Works on doors and vehicles
+- Ownership Check Cannot lockpick your own property
+- Level Reset Lockpick level resets when door purchased
+- Lockpick Ammo Consumable lockpick pins as ammo items
 
 <br><br>
 

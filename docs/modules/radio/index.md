@@ -2,18 +2,16 @@
 
 Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Handheld Radios**: Portable communication devices for voice chat
-- **Channel Tuning**: UI-based frequency selection and management
-- **Range-Based Quality**: Communication quality depends on radio range
-- **Push-to-Talk**: Configurable voice activation modes
-- **Open Mic Support**: Continuous voice transmission options
-- **Encrypted Frequencies**: Secure channels for specific factions
-- **Radio Operator System**: Role-based radio access permissions
-- **Static Effects**: Realistic radio static for encrypted channels
-- **Workshop Integration**: Custom radio models and sounds
-- **Faction Integration**: Police and other factions have encrypted frequencies
+- Radio SWEP Handheld radio weapon that syncs with inventory item
+- Frequency Tuning Adjust radio frequency via UI
+- Encrypted Frequencies Protected frequencies require authorization
+- Static Radios World radios can pick up frequencies within 250 units
+- Radio Operator Class or faction flag required for static radios
+- Single Radio Only one radio item allowed per player
+- Auto Equip Radio automatically given on spawn if in inventory
+- Range Based Communication quality depends on distance to static radios
 
 <br><br>
 

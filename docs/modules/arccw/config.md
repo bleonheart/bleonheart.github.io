@@ -1,197 +1,57 @@
-# Leveling Module Configuration
+# ARCCW Module Configuration
 
-Comprehensive documentation for all leveling system configurations in the Leveling module.
+Comprehensive documentation for all ARCCW weapon system configurations in the ARCCW module.
 
 ---
 
 ## Overview
 
-This file contains detailed documentation for every configuration setting in the Leveling module. Each configuration entry includes its purpose, description, data type, and value ranges.
+This file contains detailed documentation for every configuration setting in the ARCCW module. The ARCCW module provides integration with ARCCW weapons, including magazine system support and weapon configuration.
 
 ---
 
 ## Configuration Fields
 
-### PlayerKillXP
+### ARCCWMagazinesEnabled
 
-- **Description**: Amount of experience points awarded for killing other players
+- **Description**: Whether the magazine system for ARCCW weapons is enabled
+- **Type**: Boolean
+- **Default**: true
+- **Category**: ARCCW
+- **Purpose**: When enabled, ARCCW weapons use a magazine system where players must reload magazines separately. When disabled, weapons use standard reload mechanics.
+
+---
+
+### ARCCWMagazineCapacity
+
+- **Description**: Default magazine capacity for generated magazines
 - **Type**: Integer
 - **Default**: 30
-- **Min**: 0
-- **Max**: 1000
-- **Category**: Leveling
+- **Minimum**: 1
+- **Maximum**: 100
+- **Category**: ARCCW
+- **Purpose**: Sets the default number of rounds that fit in a magazine when magazines are automatically generated
 
 ---
 
-### DefaultNPCKillXP
+### ARCCWMagazineModel
 
-- **Description**: Default amount of experience points awarded for killing NPCs not specifically configured
-- **Type**: Integer
-- **Default**: 15
-- **Min**: 0
-- **Max**: 1000
-- **Category**: Leveling
-
----
-
-### PassiveXPDelay
-
-- **Description**: Time delay in seconds between passive XP gains
-- **Type**: Integer
-- **Default**: 1200 (20 minutes)
-- **Min**: 1
-- **Max**: 3600 (1 hour)
-- **Category**: Leveling
+- **Description**: Default 3D model path for generated magazines
+- **Type**: String (Generic)
+- **Default**: `"models/Items/BoxSRounds.mdl"`
+- **Category**: ARCCW
+- **Purpose**: Model displayed for magazine items in the inventory and world
 
 ---
 
-### PassiveXPAmount
+## Magazine System
 
-- **Description**: Amount of experience points awarded passively over time
-- **Type**: Integer
-- **Default**: 50
-- **Min**: 0
-- **Max**: 1000
-- **Category**: Leveling
+When `ARCCWMagazinesEnabled` is set to `true`, ARCCW weapons use a magazine-based reloading system:
 
----
+- Players must carry separate magazine items
+- Magazines can be loaded with ammunition
+- Reloading consumes a magazine from inventory
+- Empty magazines can be refilled with ammunition
+- Magazine capacity is determined by `ARCCWMagazineCapacity` unless overridden per weapon
 
-### FriendlyKillPenalty
-
-- **Description**: Experience point penalty for killing friendly players/team members
-- **Type**: Integer
-- **Default**: 20
-- **Min**: 0
-- **Max**: 1000
-- **Category**: Leveling
-
----
-
-### ReprimandPenalty
-
-- **Description**: Experience point penalty for receiving administrative reprimands
-- **Type**: Integer
-- **Default**: 50
-- **Min**: 0
-- **Max**: 1000
-- **Category**: Leveling
-
----
-
-### BaseXP
-
-- **Description**: Base experience points required for the first level
-- **Type**: Integer
-- **Default**: 100
-- **Min**: 1
-- **Max**: 10000
-- **Category**: Leveling
-
----
-
-### LevelMultiplier
-
-- **Description**: Multiplier applied to base XP for each subsequent level (exponential growth)
-- **Type**: Float
-- **Default**: 1.25
-- **Min**: 0
-- **Max**: 10
-- **Category**: Leveling
-
----
-
-### MaxLevel
-
-- **Description**: Maximum level players can reach
-- **Type**: Integer
-- **Default**: 100
-- **Min**: 1
-- **Max**: 1000
-- **Category**: Leveling
-
----
-
-### XPBarFadeInTime
-
-- **Description**: Time in seconds for the XP bar to fade in when XP is gained
-- **Type**: Float
-- **Default**: 0.5
-- **Min**: 0.1
-- **Max**: 5.0
-- **Category**: Leveling
-
----
-
-### XPBarDisplayTime
-
-- **Description**: Time in seconds the XP bar remains visible after XP is gained
-- **Type**: Float
-- **Default**: 5.0
-- **Min**: 1.0
-- **Max**: 30.0
-- **Category**: Leveling
-
----
-
-### XPBarFadeOutTime
-
-- **Description**: Time in seconds for the XP bar to fade out
-- **Type**: Float
-- **Default**: 1.0
-- **Min**: 0.1
-- **Max**: 10.0
-- **Category**: Leveling
-
----
-
-### XPBarWidth
-
-- **Description**: Width of the XP progress bar in pixels
-- **Type**: Integer
-- **Default**: 600
-- **Min**: 200
-- **Max**: 800
-- **Category**: Leveling
-
----
-
-### XPBarHeight
-
-- **Description**: Height of the XP progress bar in pixels
-- **Type**: Integer
-- **Default**: 50
-- **Min**: 10
-- **Max**: 50
-- **Category**: Leveling
-
----
-
-### PointsPerLevel
-
-- **Description**: Number of skill points awarded per level up
-- **Type**: Integer
-- **Default**: 1
-- **Min**: 1
-- **Max**: 10
-- **Category**: Leveling
-
----
-
-### SkillResetCost
-
-- **Description**: Cost in skill points to reset all skills
-- **Type**: Integer
-- **Default**: 0 (free)
-- **Min**: 0
-- **Max**: 100
-- **Category**: Leveling
-
----
-
-## NPCKillXP Table
-
-The `MODULE.NPCKillXP` table allows custom XP values for specific NPC classes. Currently configured NPCs:
-
-- **npc_vj_crabsynth2_z**: 100 XP
-
----
+When `ARCCWMagazinesEnabled` is set to `false`, weapons use standard reload mechanics without separate magazine items.

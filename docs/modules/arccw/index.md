@@ -2,16 +2,15 @@
 
 Creates inventory items for all ArcCW weapon attachments and magazines with configurable capacity and ammo types.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **ArcCW Integration**: Seamless integration with ArcCW weapon system
-- **Attachment Items**: Creates inventory items for weapon attachments
-- **Inventory Management**: Players equip attachments through inventory system
-- **Weapon Modification**: Attachments modify weapon stats and appearance
-- **Magazine System**: Realistic ammunition management with magazine items
-- **Auto-Disable**: Automatically disables if ArcCW is not present
-- **Custom Attachments**: Supports custom attachment lists and configurations
-- **Weapon Customization**: Complete weapon modification system
+- Attachment Items Creates inventory items for ArcCW attachments
+- Magazine System Inventory-based magazine items with ammo
+- Reload Hook Consumes ammo from magazines when reloading
+- Shoot Hook Consumes ammo from magazines when shooting
+- CanShoot Check Validates ammo in magazines before shooting
+- Auto Disable Disables if ArcCW addon not installed
+- Ammo Types Magazines match weapon ammo types
 
 <br><br>
 

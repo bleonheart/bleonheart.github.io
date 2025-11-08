@@ -12,6 +12,16 @@ This file contains detailed documentation for every configuration setting in the
 
 ## Configuration Fields
 
+### RadioChatColor
+
+- **Description**: Theme color used for radio chat messages and UI elements
+- **Type**: Color (RGB)
+- **Default**: Color(100, 255, 50) - Green
+- **Category**: Visuals
+- **Purpose**: Sets the color theme for radio-related visual elements including chat text and interface components
+
+---
+
 ### RequireRadioOperator
 
 - **Description**: Whether players need to be designated as radio operators to use radio functionality

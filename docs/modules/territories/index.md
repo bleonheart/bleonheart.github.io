@@ -2,18 +2,16 @@
 
 Faction control point system with configurable capture zones, NPC defenders, HUD status display, and rewards for holding territories.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Strategic Control Point System**: Placeable capture entities with configurable mechanics for faction-based territorial warfare
-- **Proximity Capture Mechanics**: Players must maintain close proximity for timed capture duration with progress interruption on movement
-- **Dynamic Faction Ownership**: Real-time territory control tracking with faction color coding and ownership transitions
-- **Live HUD Integration**: Real-time territory status display showing capture progress, ownership, and defender counts
-- **Minimum Defender Requirements**: Configurable online faction member thresholds required for territory defense
-- **Admin Spawn Interface**: Intuitive spawn menu integration for easy control point placement and configuration
-- **Anti-Overlap Detection**: Intelligent collision detection preventing conflicting territory placement for balanced gameplay
-- **Configuration Persistence**: Automatic saving and restoration of control point settings across server restarts
-- **Visual Territory Indicators**: Optional radius visualization and boundary markers for strategic planning and positioning
-- **Real-time Event Notifications**: Instant player alerts for territory capture events, losses, and defensive actions
+- Control Points Spawnable entities with configurable settings
+- Capture System Stand within 100 units to capture over time
+- Faction Ownership Points owned by specific factions
+- Min Defenders Requires minimum faction members online to capture
+- Conquestable Toggle Can disable capturing for specific points
+- Radius Config Configurable capture radius per point
+- Collision Detection Prevents overlapping control points
+- Persistence Control points save across server restarts
 
 <br><br>
 

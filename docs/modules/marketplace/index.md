@@ -2,24 +2,23 @@
 
 Provides a marketplace system for player-to-player trading with no expiration dates. Features configurable listing limits, minimum prices, NPC vendor interface, search and filter functionality, and seamless economic system integration for enhanced server economy.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Player-to-Player Trading**: Marketplace system for item trading
-- **No Expiration Dates**: Items can be listed indefinitely
-- **Configurable Limits**: Set maximum listings per player and minimum prices
-- **NPC Vendor Interface**: Easy access through NPC interactions
-- **Search & Filter**: Find specific items quickly
-- **Economic Integration**: Seamless integration with server economy
-- **Listing Management**: Update and manage your listings
-- **Page-based Browsing**: Navigate through listings efficiently
-- **Network Synchronization**: Real-time updates across all clients
-- **Admin Tools**: Super admin item removal functionality
+- Item Listings Players can list items for sale through NPC
+- No Expiration Listings never expire and stay active indefinitely
+- Listing Limits Maximum 10 listings per player configurable
+- Minimum Price Enforces minimum price requirement for listings
+- Search Function Find specific items quickly in marketplace
+- Page System Browse listings with pagination
+- Admin Removal Super admins can remove items from marketplace
+- Database Storage All listings saved in database
+- Item Filtering Filter items by type and category
 
 <br><br>
 <p align="center">
   <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
     <source src="https://bleonheart.github.io/assets/Marketplace.mp4" type="video/mp4">
-    Your browser does not support the video tag.c
+    Your browser does not support the video tag.
   </video>
 </p>
 <br><br>

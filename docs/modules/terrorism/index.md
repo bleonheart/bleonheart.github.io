@@ -2,17 +2,16 @@
 
 Terrorism mechanics with vehicle car bombs (engine-activated) and door explosives, both with timed detonation, remote detonation, and debris creation.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Vehicle Bombs**: Arm vehicles with timed explosive devices
-- **Door Explosives**: Plant bombs on doors with timed detonation
-- **Timed Detonation**: Bombs activate when engine starts and explode after delay
-- **Remote Detonation**: Manual detonation using detonator devices
-- **Bomb Disposal**: Specialized equipment for defusing explosives
-- **Explosion Effects**: Realistic explosion mechanics and debris creation
-- **Vehicle Removal**: Explosions destroy vehicles completely
-- **Door Destruction**: Door bombs remove doors and create debris
-- **Workshop Integration**: Custom bomb models and explosion effects
+- Planted Bombs Bomb entities that track target and owner
+- Vehicle Bombs Arm vehicles with timed explosives
+- Door Bombs Plant bombs on doors with timed detonation
+- Fuse Timer Configurable countdown timer before explosion
+- Remote Detonation Manual detonation using detonator
+- Bomb Disarming Disarm bombs to get bomb item back
+- Explosion System Separate functions for door, vehicle, and world explosions
+- Bomb Tracking System Tracks all planted bombs by owner
 
 <br><br>
 

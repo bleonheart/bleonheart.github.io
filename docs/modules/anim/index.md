@@ -2,16 +2,15 @@
 
 Roleplay animations (/act commands) including surrender, salute, cross arms, attention, typing poses, and combat stances that interrupt on movement.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Bone Manipulation System**: Realistic character bone positioning for animations
-- **Movement Interruption**: Animations automatically stop when players move
-- **EGM Pack Integration**: Uses animations from the EGM pack for authentic poses
-- **Smooth Transitions**: Seamless animation activation and deactivation
-- **Velocity Detection**: Smart system that detects player movement to interrupt animations
-- **Network Synchronization**: Animations are properly synchronized across all clients
-- **Character State Management**: Prevents animations during restricted states
-- **Custom Animation Classes**: Support for different animation types and categories
+- Bone Manipulation Manipulates player bone angles for poses
+- Velocity Detection Interrupts animations when player moves
+- Network Sync Animations synchronized across clients
+- Animation Data Stored in netvar with class and active state
+- Deactivate Threshold 0.1 velocity threshold to stop animations
+- State Prevention Prevents animations during noclip or restricted
+- Bone Reset Resets bone angles when animation ends
 
 <br><br>
 

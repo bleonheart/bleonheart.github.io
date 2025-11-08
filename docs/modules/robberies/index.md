@@ -2,18 +2,13 @@
 
 Store robbery system with jewelry cases and cash registers, stealable items (cash, jewelry, watches, rings), police requirements, and respawn timers.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Interactive Robbery Mechanics**: Dynamic robbery system allowing players to target stores, NPCs, and locations for criminal activities
-- **Skill-Based Requirements**: Different robbery types require varying levels of criminal skills for successful execution
-- **Automated Law Enforcement Response**: Immediate police notification and response system when robberies are detected or reported
-- **Dynamic Reward Generation**: Variable money and item rewards based on robbery location difficulty and success rates
-- **Anti-Spam Protection**: Configurable cooldown timers preventing repeated robbery attempts at the same location
-- **Risk-Reward Balance**: Higher difficulty robbery locations provide greater rewards but increased chance of detection
-- **Immersive Criminal Roleplay**: Complete robbery scenarios encouraging strategic planning and criminal cooperation
-- **Comprehensive Admin Toolkit**: Full administrative control suite for robbery monitoring, response coordination, and system tuning
-- **Real-time Status Tracking**: Live robbery progress monitoring with success/failure notifications and police alerts
-- **Scalable Location System**: Extensible robbery location configuration supporting custom positions and requirements
+- Entity Robbing Rob specific entity classes like jewelry cases and cash registers
+- Stealable Items Configurable items with chance percentages
+- Money Rewards Random reward between min and max value per item
+- Police Requirement Requires minimum police online to rob
+- Chance System Each stealable item has individual chance to drop
 
 <br><br>
 

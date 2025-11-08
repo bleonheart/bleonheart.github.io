@@ -2,18 +2,17 @@
 
 Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Persistent Achievement System**: Medals permanently saved to character data and displayed prominently on player profiles
-- **Hierarchical Permission Structure**: Multi-tier admin system with superadmin medal control and standard admin viewing rights
-- **Workshop Model Integration**: High-quality 3D medal models and icon textures provided through Steam Workshop
-- **Achievement-Based Gameplay**: Recognition system encouraging players to pursue specific goals and milestones
-- **Interactive Medal Interface**: Player-accessible medal viewing system with detailed information and descriptions
-- **Comprehensive Admin Toolkit**: Complete administrative control suite for medal distribution and management
-- **Real-time Network Sync**: Instant medal updates and synchronization across all connected clients
-- **Character-Bound Recognition**: Medals tied to specific characters ensuring progression carries across game sessions
-- **Visual Profile Integration**: Medal display system integrated into character information panels
-- **Scalable Reward Framework**: Extensible system supporting unlimited medal types and categories
+- Medal Packs Multiple medal types organized into packs
+- Pack Categories Medals grouped by pack ID for organization
+- Wearable Medals Select medals to wear with maximum limit
+- Medal States Owned medals vs worn medals tracked separately
+- Admin Control Superadmins can give and take medals
+- Rank Permissions Rank system can grant medal permissions
+- Item Medals Medals can be inventory items that auto-award
+- Character Persistence Medals saved to character data
+- Offline Support Can manage medals for offline players
 
 <br><br>
 

@@ -2,18 +2,17 @@
 
 Full banking system with multiple accounts, deposits/withdrawals, transfers, item storage, check writing/redemption, ATMs, and paycheck integration.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Multi-Account Banking**: Create up to 5 separate bank accounts per player with configurable creation fees and VIP tiers
-- **Secure Transaction System**: Deposit, withdraw, and transfer funds between accounts with anti-spam protection and rate limiting
-- **Item Bank Storage**: Dedicated inventory storage system with size scaling based on VIP status (10x10 for regular, 16x16 for VIP)
-- **ATM Network Integration**: Interactive Automated Teller Machines for deposits, withdrawals, and account management
-- **Check System**: Multiple check designs (Standard, Liberty Blue, Liberty Painted, Emerald Green, Crimson Red, Golden, Royal Purple) with faction restrictions
-- **Interest Earning**: Automatic interest accrual system with configurable rates, payment intervals, and maximum earning caps
-- **Paycheck Integration**: Seamless paycheck deposits directly into bank accounts with automatic processing
-- **Administrative Oversight**: Complete admin toolkit for account management, transaction monitoring, and emergency controls
-- **Anti-Exploitation Measures**: Built-in spam protection, rate limiting, and security measures to prevent banking abuse
-- **Persistent Financial Records**: All banking transactions, account history, and balances stored reliably in database
+- Multiple Accounts Up to 5 accounts per player with prices
+- VIP Accounts Accounts 4 and 5 require VIP status
+- Account Members Add members with permissions
+- Item Storage 10x10 regular, 16x16 VIP inventory storage
+- Check System Seven check designs with faction restrictions
+- Interest System 5% interest every 7 days, max 10000
+- ATM Integration Automated teller machines for transactions
+- Paycheck Integration Paychecks deposit into accounts
+- Admin Panel View and manage all accounts
 
 <br><br>
 

@@ -98,26 +98,6 @@ skillName = {
 - **Dependencies**: Endurance (tier 1)
 - **Effects**: +15% tool effectiveness, +30% repair speed
 
-## Configuration Tips
-
-1. **XP Balance**: Start with lower XP values and increase based on server activity
-2. **Level Cap**: Set MaxLevel based on desired long-term progression
-3. **Passive XP**: Balance delay and amount to encourage active play without rewarding AFK
-4. **Skill Costs**: Higher costs encourage strategic skill investment
-5. **NPC XP**: Add specific NPCs that are difficult to defeat for bonus XP rewards
-
-## Admin Commands
-
-- `/setlevel <player> <level>` - Set a player's level
-- `/addxp <player> <amount>` - Add XP to a player
-- `/resetxp <player>` - Reset a player's XP and skills
-- Skill tree accessible through F1 menu under "Skills" tab</contents>
-</xai:function_call">Write contents to injuries/README.md.
-
-When you're done with your current set of changes to view the file, you should call the read_file tool with the specific file path and fix any newly introduced errors. Let me check if policesuite needs a config.md since it had a config.lua. Let me check what policesuite config looks like. 
-
-<xai:function_call name="read_file">
-<parameter name="target_file">policesuite/config.lua
 
 
 

@@ -1,6 +1,6 @@
 # Changelog
 
-### Version 1.5 (07112025)
+### Version 1.5
 
 - Code optimizations and improvements
 - Enhanced compatibility with recent game updates

@@ -2,18 +2,15 @@
 
 Security camera and CCTV monitor system for surveillance with faction-restricted access and live feed viewing.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Static Camera Deployment**: Strategically placed surveillance cameras throughout the game world for comprehensive area coverage
-- **Real-time Monitor Interface**: Interactive camera viewing system allowing players to cycle through and monitor multiple camera feeds
-- **Faction-Based Access Control**: Configurable camera access restrictions allowing only authorized factions (police, security) to view feeds
-- **Workshop Model Integration**: High-quality camera models and textures provided through Steam Workshop for authentic surveillance equipment
-- **Map Integration System**: Cameras seamlessly integrated into map architecture for realistic placement and coverage areas
-- **Multi-Camera Network**: Support for multiple camera instances with individual positioning and viewing angles
-- **Security Operations Support**: Enhanced situational awareness for law enforcement and security personnel during operations
-- **Live Feed Broadcasting**: Real-time video transmission from camera locations to authorized viewing stations
-- **Configurable Camera Settings**: Adjustable camera properties including field of view, positioning, and access permissions
-- **Anti-Tampering Measures**: Camera integrity monitoring and damage detection for realistic security system behavior
+- CCTV Mainframes Spawnable mainframe entities with names
+- Camera Entities Cameras linked to mainframes
+- Distance Check Must be within range of CCTV prompt to use
+- Point Camera Creates point_camera entity to view feeds
+- Camera Selection Cycle through cameras on mainframe
+- Persistence Mainframes and cameras save across restarts
+- Faction Access Configurable faction restrictions
 
 <br><br>
 

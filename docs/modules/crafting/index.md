@@ -2,18 +2,15 @@
 
 Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Recipe-Based Crafting System**: Create items using configurable recipes with specific ingredient requirements and quantities
-- **Multi-Bench Support**: Multiple crafting stations including workbenches, anvils, cooking stations, and specialized crafting areas
-- **Time-Based Production**: Realistic crafting timers with progress visualization and queue management for multiple items
-- **Skill Requirement System**: Blueprint-defined skill prerequisites controlling access to advanced crafting recipes
-- **Resource Integration**: Seamless compatibility with resource gathering systems for raw material utilization
-- **Blueprint Management**: Configurable item blueprints defining crafting requirements, results, and skill prerequisites
-- **Inventory Integration**: Drag-and-drop crafting interface with ingredient validation and result preview
-- **Progress Tracking**: Real-time progress bars and completion notifications for active crafting processes
-- **Batch Crafting**: Support for crafting multiple items simultaneously with queue management and time estimation
-- **Experience Rewards**: Skill progression and experience gains for successful crafting activities
+- Recipe System Recipes organized by station type
+- Station Types Forge, workbench, and other crafting stations
+- CanCraft Check Validates ingredients and requirements before crafting
+- NearStation Check Must be near station to craft
+- Crafting State Tracks active crafting to prevent duplicates
+- Network Messages Start and finish messages for progress
+- Recipe Validation Checks ingredients, skills, and tools
 
 <br><br>
 

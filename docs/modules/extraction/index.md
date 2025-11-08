@@ -2,18 +2,11 @@
 
 Raid-style extraction system requiring players to reach escape zones within countdown timer, with configurable positions per map and audio/visual cues.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Dynamic Escape Mechanics**: Players must reach designated extraction zones within time limits to successfully evacuate during events
-- **Countdown Timer System**: Visual countdown timers with audio warnings as extraction deadline approaches
-- **Map-Specific Zone Configuration**: Customizable extraction positions per map with validation and conflict checking
-- **Raid-Style Event Integration**: Designed for high-stakes raid events where extraction becomes critical for survival
-- **Multi-Sensory Feedback**: Audio announcements, visual indicators, and screen effects for extraction zone status
-- **Flare Signaling System**: Visual flare deployment system to mark active extraction zones for player guidance
-- **Configurable Time Parameters**: Adjustable extraction time limits and warning thresholds for event balancing
-- **Zone Status Tracking**: Real-time monitoring of extraction zone availability and player proximity detection
-- **Event State Management**: Integration with event systems for automatic extraction activation and deactivation
-- **Player Progress Monitoring**: Individual player tracking for extraction completion and failure states
+- Flare Grenade Throwable flare grenade item
+- Flare Entity Creates flare entity when thrown
+- Visual Marker Flare marks location visually
 
 <br><br>
 

@@ -2,18 +2,16 @@
 
 Character leveling system with XP, skill points, and skill tree (Endurance: +25 health, Combat Training: +15% damage, Engineering: +15% tool effectiveness/+30% repair speed) with dependencies, F1 menu integration, and admin adjustment tools.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **Experience Point System**: Earn XP through combat (NPC kills, player kills), passive activities, and special events with configurable reward amounts
-- **Progressive Level Advancement**: Character levels with exponential XP requirements and maximum level caps for balanced progression
-- **Skill Point Allocation**: Gain skill points per level to invest in permanent character upgrades and abilities
-- **Interactive Skill Tree**: Visual skill tree interface with skill dependencies, tiered progression, and intuitive F1 menu integration
-- **Combat Enhancements**: Unlock powerful combat upgrades like increased damage output and improved weapon effectiveness
-- **Survival Improvements**: Enhance character durability with increased health capacity and better tool efficiency
-- **Engineering Mastery**: Unlock advanced crafting bonuses including faster repair speeds and enhanced tool effectiveness
-- **Administrative Controls**: Complete admin toolkit for managing player XP, skill points, individual skill levels, and full skill resets
-- **Persistent Data Storage**: All character progression, skills, and experience levels saved across game sessions
-- **Configurable Parameters**: Extensive customization options for XP rewards, level scaling, skill costs, and visual elements
+- XP Sources NPC kills, player kills, and passive timer
+- Friendly Kill Penalty Lose XP for killing teammates
+- Level Calculation Level calculated from total XP
+- Skill Points Gain points per level to spend on skills
+- Three Skills Endurance, Combat Training, and Engineering
+- Skill Dependencies Engineering requires Endurance tier 1
+- Passive XP Timer-based XP gain when not AFK
+- Character Storage XP, level, and skills saved to character
 
 <br><br>
 

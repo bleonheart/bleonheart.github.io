@@ -2,18 +2,14 @@
 
 Vehicle quality of life features including CD player system with music tracks, albums, and audio streaming for in-car entertainment.
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Features</h2>
+<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
 
-- **In-Car Entertainment System**: CD player and radio functionality allowing drivers to play music from inventory-based CD items with track selection
-- **Vehicle Security Controls**: Toggle vehicle locking/unlocking directly from inside the vehicle for owner convenience
-- **Trunk Storage Access**: Interactive trunk opening system with distance checking and storage inventory management
-- **Passenger Management**: Owner/driver ability to kick passengers from vehicles with dropdown selection interface
-- **Seat Swapping System**: Request and execute seat swaps between vehicle occupants including bot and player interactions
-- **Multi-Passenger Support**: Comprehensive passenger detection system supporting various vehicle types and seating configurations
-- **Interactive User Interface**: Dropdown menus and confirmation dialogs for all vehicle interaction options
-- **Permission-Based Access**: Owner and driver verification system ensuring only authorized users can perform vehicle actions
-- **Real-time Audio Feedback**: Contextual sound effects and chat messages for all vehicle interactions and state changes
-- **Comprehensive Logging**: Detailed logging system tracking all vehicle interactions for administrative oversight
+- CD Player Play music from CD items in inventory while in vehicle
+- Track Selection Select specific tracks from albums with multiple songs
+- Vehicle Locking Toggle lock and unlock from inside vehicle
+- Trunk Access Open vehicle trunk storage inventory
+- Kick Passengers Remove passengers from vehicle via dropdown
+- Owner Driver Only owner or driver can use these features
 
 <br><br>
 
