@@ -1,4 +1,4 @@
-# Daily Rewards Module Configuration
+# Configuration
 
 Comprehensive documentation for all daily rewards system configurations in the Daily Rewards module.
 

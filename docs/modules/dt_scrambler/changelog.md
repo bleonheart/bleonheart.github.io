@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.1
+
+- Updated module documentation
+
 ## Version 1.0
 - Initial release of Death Trooper Scrambler system
 - Added encrypted voice communication for Death Trooper faction

@@ -1,12 +1,9 @@
 # Changelog
 
-### Version 1.4
-
-- Code optimizations and improvements
-- Enhanced compatibility with recent game updates
-
 ### Version 1.3
 
+- Comment cleanup in client and server libraries for cleaner code
+- Added comprehensive config, hooks, and libraries documentation
 - Code optimizations and improvements
 - Enhanced compatibility with recent game updates
 

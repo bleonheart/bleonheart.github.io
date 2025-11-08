@@ -1,12 +1,8 @@
 # Changelog
 
-### Version 1.3
-
-- Code optimizations and improvements
-- Enhanced compatibility with recent game updates
-
 ### Version 1.2
 
+- Added comprehensive config and hooks documentation
 - **Breaking Change**: Standardized function names to camelCase
   - `HasAchievement()` → `hasAchievement()`
 

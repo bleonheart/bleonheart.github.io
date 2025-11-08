@@ -1,4 +1,4 @@
-# Cinematic Loading Module Configuration
+# Configuration
 
 Comprehensive documentation for all cinematic loading system configurations in the Cinematic Loading module.
 

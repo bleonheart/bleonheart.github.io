@@ -1,4 +1,4 @@
-# Looting Module Configuration
+# Configuration
 
 Comprehensive documentation for all looting system configurations in the Looting module.
 

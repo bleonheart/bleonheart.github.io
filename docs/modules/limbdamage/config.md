@@ -1,4 +1,4 @@
-# Limb Damage Module Configuration
+# Configuration
 
 Comprehensive documentation for all configuration settings in the Limb Damage module.
 

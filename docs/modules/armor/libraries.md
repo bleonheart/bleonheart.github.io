@@ -1,4 +1,4 @@
-# Armor Library
+# Libraries
 
 Armor system allowing players to equip armor sets that provide protection, modify movement speed, and change appearance
 

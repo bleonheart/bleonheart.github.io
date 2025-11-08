@@ -1,4 +1,4 @@
-# Referrals Module Configuration
+# Configuration
 
 Comprehensive documentation for all referral system configurations in the Referrals module.
 

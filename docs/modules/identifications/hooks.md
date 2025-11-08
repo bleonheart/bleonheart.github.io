@@ -1,4 +1,4 @@
-# ID System Hooks
+# Hooks
 
 Hooks provided by the ID System module for identification and documentation systems.
 

@@ -1,4 +1,4 @@
-# Gathering Module Configuration
+# Configuration
 
 Comprehensive documentation for all gathering system configurations in the Gathering module.
 

@@ -1,4 +1,4 @@
-# Roleplay NPCs Library
+# Libraries
 
 Roleplay NPC framework with dialogue trees, quest systems, and submodule support (mechanics, taxis, vendors, fences) with centralized NPC management and customization tools.
 

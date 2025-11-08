@@ -1,4 +1,4 @@
-# Medals Module Configuration
+# Configuration
 
 Comprehensive documentation for all medal system configurations in the Medals module.
 

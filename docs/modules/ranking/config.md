@@ -1,4 +1,4 @@
-# Ranking Module Configuration
+# Configuration
 
 Comprehensive documentation for all ranking system configurations in the Ranking module.
 

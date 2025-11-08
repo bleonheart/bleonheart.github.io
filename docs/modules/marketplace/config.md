@@ -1,4 +1,4 @@
-# Marketplace NPC Submodule Configuration
+# Configuration
 
 Comprehensive documentation for all marketplace system configurations in the Marketplace NPC submodule.
 

@@ -1,12 +1,8 @@
 # Changelog
 
-### Version 1.4
-
-- Code optimizations and improvements
-- Enhanced compatibility with recent game updates
-
 ### Version 1.3
 
+- Added comprehensive config and libraries documentation
 - Code optimizations and improvements
 - Enhanced compatibility with recent game updates
 

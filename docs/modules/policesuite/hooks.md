@@ -1,4 +1,4 @@
-# Police Suite Hooks
+# Hooks
 
 Hooks provided by the Police Suite module for law enforcement systems.
 

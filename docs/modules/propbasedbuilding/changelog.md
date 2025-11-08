@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.3
+
+- Updated module documentation
+
 ### Version 1.2
 
 - Code optimizations and improvements

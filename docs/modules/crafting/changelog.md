@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.5
+
+- Comment cleanup in server and client libraries for cleaner code
+- Added comprehensive config documentation
+
 ### Version 1.4
 
 - Code optimizations and improvements

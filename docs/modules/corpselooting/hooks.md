@@ -1,4 +1,4 @@
-# Corpses & Looting Hooks
+# Hooks
 
 Hooks provided by the Corpses & Looting module for corpse interaction systems.
 

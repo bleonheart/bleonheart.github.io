@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.5
+
+- Added comprehensive config and libraries documentation
+
 ### Version 1.4
 
 - Code optimizations and improvements

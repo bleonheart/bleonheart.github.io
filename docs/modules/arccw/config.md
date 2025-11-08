@@ -1,4 +1,4 @@
-# ARCCW Module Configuration
+# Configuration
 
 Comprehensive documentation for all ARCCW weapon system configurations in the ARCCW module.
 

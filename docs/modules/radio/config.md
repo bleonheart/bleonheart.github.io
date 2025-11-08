@@ -1,4 +1,4 @@
-# Radio Module Configuration
+# Configuration
 
 Comprehensive documentation for all radio system configurations in the Radio module.
 

@@ -1,4 +1,4 @@
-# Car Dealer NPC Submodule Configuration
+# Configuration
 
 Comprehensive documentation for all car dealer system configurations in the Car Dealer NPC submodule.
 

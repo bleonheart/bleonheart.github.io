@@ -1,4 +1,4 @@
-# Taxi NPC Submodule Configuration
+# Configuration
 
 Comprehensive documentation for all taxi system configurations in the Taxi NPC submodule.
 

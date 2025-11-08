@@ -1,13 +1,10 @@
 # Changelog
 
-### Version 1.5
-
-- Code optimizations and improvements
-- Enhanced compatibility with recent game updates
-
 ### Version 1.4
 
 - Removed comments from Lua files for cleaner code
+- Additional comment cleanup across medkit and library files for cleaner code
+- Added comprehensive hooks and libraries documentation
 - Enhanced handcuff mechanics and interaction system
 - Improved dragging and restraint functionality
 - Fixed minor bugs in cuffing system

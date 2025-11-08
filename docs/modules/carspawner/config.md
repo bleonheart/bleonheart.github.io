@@ -1,4 +1,4 @@
-# Car Spawner Module Configuration
+# Configuration
 
 Comprehensive documentation for all configuration settings in the Car Spawner module.
 
@@ -10,7 +10,7 @@ This file contains detailed documentation for every configuration setting in the
 
 ---
 
-## Module Configuration
+## Configuration
 
 ### AvailableCars
 

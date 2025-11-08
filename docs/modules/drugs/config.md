@@ -1,4 +1,4 @@
-# Drugs Module Configuration
+# Configuration
 
 Comprehensive documentation for all drug system configurations in the Drugs module.
 

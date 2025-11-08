@@ -1,4 +1,4 @@
-# Robberies Module Configuration
+# Configuration
 
 Comprehensive documentation for all robbery system configurations in the Robberies module.
 

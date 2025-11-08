@@ -1,4 +1,4 @@
-# Blackmarket NPC Submodule Configuration
+# Configuration
 
 Comprehensive documentation for all blackmarket system configurations in the Blackmarket NPC submodule.
 

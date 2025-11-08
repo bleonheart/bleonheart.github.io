@@ -1,4 +1,4 @@
-# Medals Library
+# Libraries
 
 Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls
 

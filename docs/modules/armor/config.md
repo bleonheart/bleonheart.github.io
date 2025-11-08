@@ -1,4 +1,4 @@
-# Armor Module Configuration
+# Configuration
 
 Comprehensive documentation for all armor system configurations in the Armor module.
 

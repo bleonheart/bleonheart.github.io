@@ -1,13 +1,10 @@
 # Changelog
 
-### Version 1.5
-
-- Code optimizations and improvements
-- Enhanced compatibility with recent game updates
-
 ### Version 1.4
 
 - Removed comments from Lua files for cleaner code
+- Additional comment cleanup in client and server libraries for cleaner code
+- Added comprehensive config and libraries documentation
 - Enhanced ATM functionality and UI improvements
 - Improved banking interface responsiveness
 - Fixed minor bugs in account management

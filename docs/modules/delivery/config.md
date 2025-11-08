@@ -1,4 +1,4 @@
-# Delivery NPC Submodule Configuration
+# Configuration
 
 Comprehensive documentation for all delivery system configurations in the Delivery NPC submodule.
 

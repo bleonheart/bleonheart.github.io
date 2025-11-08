@@ -1,4 +1,4 @@
-# Medals Hooks
+# Hooks
 
 Hooks provided by the Medals module for achievement and recognition systems.
 

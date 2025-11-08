@@ -1,4 +1,4 @@
-# Police Suite Module Configuration
+# Configuration
 
 Comprehensive documentation for all police system configurations in the Police Suite module.
 

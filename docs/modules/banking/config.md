@@ -1,4 +1,4 @@
-# Banking Module Configuration
+# Configuration
 
 Comprehensive documentation for all banking system configurations in the Banking module.
 

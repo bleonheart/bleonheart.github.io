@@ -1,4 +1,4 @@
-# Crafting Module Configuration
+# Configuration
 
 Comprehensive documentation for all crafting system configurations in the Crafting module.
 

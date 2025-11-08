@@ -1,4 +1,4 @@
-# Ranking Library
+# Libraries
 
 Player ranking and leaderboard system with configurable categories and competitive mechanics
 

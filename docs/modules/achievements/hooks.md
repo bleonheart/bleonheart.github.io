@@ -1,4 +1,4 @@
-# Achievements Hooks
+# Hooks
 
 Hooks provided by the Achievements module for tracking player progress, rewards, and achievement-related events.
 

@@ -1,4 +1,4 @@
-# Food Module Configuration
+# Configuration
 
 Comprehensive documentation for all food and hunger system configurations in the Food module.
 

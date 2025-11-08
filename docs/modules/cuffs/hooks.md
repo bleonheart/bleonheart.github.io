@@ -1,4 +1,4 @@
-# Tying Hooks
+# Hooks
 
 Hooks provided by the Tying module for player restraint systems.
 

@@ -1,13 +1,10 @@
 # Changelog
 
-### Version 1.5
-
-- Code optimizations and improvements
-- Enhanced compatibility with recent game updates
-
 ### Version 1.4
 
 - Removed comments from Lua files for cleaner code
+- Additional comment cleanup in client and shared libraries for cleaner code
+- Added comprehensive hooks and libraries documentation
 - Enhanced radio functionality and frequency management
 - Improved encrypted frequency access controls
 - Fixed minor bugs in radio communication system

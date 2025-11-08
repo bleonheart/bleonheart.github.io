@@ -1,4 +1,4 @@
-# Identifications Module Configuration
+# Configuration
 
 Comprehensive documentation for all identification system configurations in the Identifications module.
 

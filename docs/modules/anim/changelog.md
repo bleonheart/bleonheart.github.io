@@ -1,13 +1,10 @@
 # Changelog
 
-### Version 1.5
-
-- Code optimizations and improvements
-- Enhanced compatibility with recent game updates
-
 ### Version 1.4
 
 - Removed comments from Lua files for cleaner code
+- Additional comment cleanup in server hooks for cleaner code
+- Added comprehensive libraries documentation
 - Enhanced animation system and pose mechanics
 - Improved animation interruption and movement detection
 - Fixed minor bugs in animation system

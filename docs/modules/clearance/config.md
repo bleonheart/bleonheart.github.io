@@ -1,4 +1,4 @@
-# Clearance Module Configuration
+# Configuration
 
 Comprehensive documentation for all clearance level configurations in the Clearance module.
 

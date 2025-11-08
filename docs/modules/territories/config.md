@@ -1,4 +1,4 @@
-# Territories Module Configuration
+# Configuration
 
 Comprehensive documentation for all territory system configurations in the Territories module.
 

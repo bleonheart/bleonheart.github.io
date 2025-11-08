@@ -1,4 +1,4 @@
-# Store Robbery Library
+# Libraries
 
 Store robbery system with jewelry cases and cash registers, stealable items (cash, jewelry, watches, rings), police requirements, and respawn timers
 

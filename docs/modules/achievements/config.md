@@ -1,4 +1,4 @@
-# Achievements Module Configuration
+# Configuration
 
 Comprehensive documentation for all achievement system configurations in the Achievements module.
 

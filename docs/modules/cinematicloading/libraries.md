@@ -1,4 +1,4 @@
-# Welcome Cinematic Library
+# Libraries
 
 Welcome cinematic system for new players with 5 scenes (Welcome, Character Creation, World Exploration, Social Interaction, Journey Begins) and smooth camera transitions
 

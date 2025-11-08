@@ -1,4 +1,4 @@
-# Radio Voice Chat Hooks
+# Hooks
 
 Hooks provided by the Radio Voice Chat module for communication systems.
 

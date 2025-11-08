@@ -1,4 +1,4 @@
-# Events Module Configuration
+# Configuration
 
 Comprehensive documentation for all event system configurations in the Events module.
 

@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.4
+
+- Comment cleanup in server hooks for cleaner code
+- Added comprehensive config and hooks documentation
+
 ### Version 1.3
 
 - Code optimizations and improvements
