@@ -1,5 +1,14 @@
 # Changelog
 
+### Version 1.3
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "Samael"
+  - MODULE.discord = "liliaplayer" → "@liliaplayer"
+  - Updated ENT.Author fields to "Samael"
+  - Added ENT.Contact = "@liliaplayer" to control point entity
+- Code attribution consistency improvements
+
 ### Version 1.2
 
 - Added comprehensive config documentation

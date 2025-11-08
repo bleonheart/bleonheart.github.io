@@ -1,5 +1,14 @@
 # Changelog
 
+### Version 1.7
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "Samael"
+  - MODULE.discord = "liliaplayer" → "@liliaplayer"
+  - Updated all ENT.Author fields to "Samael"
+  - Added ENT.Contact = "@liliaplayer" to clothing vendor entity
+- Code attribution consistency improvements
+
 ### Version 1.6
 
 - Updated module documentation

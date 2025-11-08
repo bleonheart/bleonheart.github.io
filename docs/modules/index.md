@@ -56,6 +56,8 @@
 
 - [Improved Constructable Props](../modules/propbasedbuilding/)
 
+- [Injuries System](../modules/injuries/)
+
 - [LSCS Compatibility](../modules/lscs/)
 
 - [Leveling](../modules/leveling/)

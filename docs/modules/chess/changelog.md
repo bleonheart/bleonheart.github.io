@@ -1,5 +1,16 @@
 # Changelog
 
+### Version 1.4
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "Samael"
+  - MODULE.discord = "liliaplayer" → "@liliaplayer"
+  - Updated all ENT.Author fields to "Samael"
+  - Added ENT.Contact = "@liliaplayer" to chess board entities
+  - Updated SWEP.Author in chess admin tool to "Samael"
+  - Added SWEP.Contact = "@liliaplayer" to chess admin tool
+- Code attribution consistency improvements
+
 ### Version 1.3
 
 - Fixed missing newlines at end of files

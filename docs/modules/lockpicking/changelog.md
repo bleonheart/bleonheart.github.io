@@ -1,5 +1,15 @@
 # Changelog
 
+### Version 1.5
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "BleonHeart" → "Samael"
+  - MODULE.discord = "@bleonheart" → "@liliaplayer"
+  - Updated SWEP.Author in sh_lockpick_override.lua to "Samael"
+  - Added SWEP.Contact = "@liliaplayer" to lockpick override
+  - Updated MODULE.author in sh_config.lua to "Samael"
+- Code attribution consistency improvements
+
 ### Version 1.4
 
 - Updated module documentation

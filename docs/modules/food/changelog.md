@@ -1,5 +1,12 @@
 # Changelog
 
+### Version 1.6
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "Samael"
+  - MODULE.discord = "liliaplayer" → "@liliaplayer"
+- Code attribution consistency improvements
+
 ### Version 1.5
 
 - Added comprehensive config documentation

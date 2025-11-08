@@ -1,5 +1,16 @@
 # Changelog
 
+### Version 1.5
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "Samael"
+  - MODULE.discord = "liliaplayer" → "@liliaplayer"
+  - Updated all SWEP.Author fields to "Samael"
+  - Added SWEP.Contact = "@liliaplayer" to all handcuff weapons
+  - Updated ENT.Author fields to "Samael"
+  - Added ENT.Contact = "@liliaplayer" to cuff entities
+- Code attribution consistency improvements
+
 ### Version 1.4
 
 - Removed comments from Lua files for cleaner code

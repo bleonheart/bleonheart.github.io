@@ -1,5 +1,16 @@
 # Changelog
 
+### Version 1.6
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "Samael"
+  - MODULE.discord = "liliaplayer" → "@liliaplayer"
+  - Updated ENT.Author fields to "Samael"
+  - Added ENT.Contact = "@liliaplayer" to flare entity
+  - Updated SWEP.Author to "Samael"
+  - Added SWEP.Contact = "@liliaplayer" to extraction flare weapon
+- Code attribution consistency improvements
+
 ### Version 1.5
 
 - Added comprehensive config documentation

@@ -1,5 +1,14 @@
 # Changelog
 
+### Version 1.1
+
+- **Authorship Update**: Standardized all author and contact information
+  - MODULE.author = "Samael"
+  - MODULE.discord = "liliaplayer" → "@liliaplayer"
+  - Updated all ENT.Author fields to "Samael"
+  - Added ENT.Contact = "@liliaplayer" to car dealer and crate entities
+- Code attribution consistency improvements
+
 ### Version 1.0
 
 - Comment cleanup across dealer entities and vehicle spawner items for cleaner code
