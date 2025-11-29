@@ -1,5 +1,12 @@
 # Changelog
 
+### Version 1.8
+
+- Refactored extraction flare weapon from single-file to proper SWEP folder structure (cl_init, init, shared)
+- Renamed flare entity to lia_flare for naming consistency
+- Updated weapon reference to lia_extraction_flare
+- Improved item and library integration with new weapon structure
+
 ### Version 1.7
 
 - Removed config.md documentation file for streamlined documentation

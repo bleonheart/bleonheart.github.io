@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.31
+
+- Client library improvements for marketplace interface
+
 ### Version 1.3
 
 - Major restructuring: moved from npcs/submodules to top-level module
@@ -12,3 +16,4 @@
 ### Version 1.2
 
 - Initial marketplace system for player-to-player trading
+

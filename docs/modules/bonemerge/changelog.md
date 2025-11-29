@@ -1,5 +1,11 @@
 # Changelog
 
+### Version 1.85
+
+- Network code improvements in sv_network.lua for better synchronization
+- Enhanced client-side bonemerge handling
+- Improved clothing system stability
+
 ### Version 1.8
 
 - Code cleanup: removed comments from core files (cl_bonemerge.lua, sh_core.lua, sv_network.lua) for cleaner code

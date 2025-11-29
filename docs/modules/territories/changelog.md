@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.41
+
+- Client library improvements for territory display
+
 ### Version 1.4
 
 - Removed config.md documentation file for streamlined documentation

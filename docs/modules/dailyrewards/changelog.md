@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.41
+
+- Client library improvements and optimizations
+
 ### Version 1.4
 
 - Removed config.md and libraries.md documentation files for streamlined documentation

@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.61
+
+- Minor banking calls library improvements
+
 ### Version 1.6
 
 - Code cleanup and optimization improvements

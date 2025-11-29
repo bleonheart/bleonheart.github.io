@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.41
+
+- Minor client library improvements
+
 ### Version 1.4
 
 - Removed config.md and hooks.md documentation files for streamlined documentation

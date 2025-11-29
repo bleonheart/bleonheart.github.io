@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.81
+
+- Updated weapon class references to lia_ prefix (lia_axe, lia_pickaxe)
+- Standardized weapon naming for gathering tools
+
 ### Version 1.8
 
 - Removed config.md and libraries.md documentation files for streamlined documentation

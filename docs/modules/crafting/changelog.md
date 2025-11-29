@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.81
+
+- Renamed crafting station entity to lia_craftingstation for naming consistency
+- Configuration updates and improvements
+
 ### Version 1.8
 
 - Removed config.md documentation file for streamlined documentation

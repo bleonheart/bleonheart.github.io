@@ -1,5 +1,11 @@
 # Changelog
 
+### Version 1.65
+
+- Standardized entity/weapon naming to lia_ prefix (lia_cuffs, lia_handcuffed, lia_handcuffs, lia_medkit)
+- Meta file improvements for server and shared functionality
+- Updated pim.lua for better integration
+
 ### Version 1.6
 
 - Removed hooks.md and libraries.md documentation files for streamlined documentation

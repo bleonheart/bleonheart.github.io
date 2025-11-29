@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.31
+
+- Server configuration improvements
+
 ### Version 1.3
 
 - Major restructuring: moved from npcs/submodules to top-level module
@@ -14,3 +18,4 @@
 ### Version 1.2
 
 - Initial black market NPC system with basic functionality
+

@@ -1,5 +1,14 @@
 # Changelog
 
+### Version 1.6
+
+- Added new taser weapon (lia_taser) with deployable taser prong entity
+- Added lia_taserprong entity for taser projectile mechanics
+- Major config expansion with enhanced police equipment options
+- Standardized entity/weapon naming to lia_ prefix (lia_policecomputer, lia_policelocker, lia_finebook, lia_nightstick)
+- Library improvements for client and server police operations
+- Hook updates for improved police system integration
+
 ### Version 1.5
 
 - Major code cleanup: removed comments from client and server libraries for cleaner code

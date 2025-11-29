@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.61
+
+- Module configuration improvements
+
 ### Version 1.6
 
 - Removed config.md and hooks.md documentation files for streamlined documentation

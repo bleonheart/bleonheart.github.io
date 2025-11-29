@@ -1,5 +1,12 @@
 # Changelog
 
+### Version 1.3
+
+- Significant improvements to vehiclespawner base item with enhanced functionality
+- Renamed entities to lia_ prefix (lia_cardealer, lia_imperialcarcrate)
+- Improved vehicle spawning mechanics and server library updates
+- Enhanced car dealer entity functionality
+
 ### Version 1.2
 
 - Removed config.md documentation file for streamlined documentation

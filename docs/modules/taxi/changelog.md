@@ -12,3 +12,4 @@
 ### Version 1.2
 
 - Initial taxi NPC system with vehicle hiring and teleportation
+

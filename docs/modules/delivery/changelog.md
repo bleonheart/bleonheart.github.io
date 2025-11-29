@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.31
+
+- Renamed delivery crate entity to lia_deliverycrate for naming consistency
+- Server library improvements
+
 ### Version 1.3
 
 - Major restructuring: moved from npcs/submodules to top-level module
@@ -12,3 +17,4 @@
 ### Version 1.2
 
 - Initial delivery NPC system with parcel delivery missions
+

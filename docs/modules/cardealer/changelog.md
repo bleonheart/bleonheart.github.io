@@ -1,5 +1,11 @@
 # Changelog
 
+### Version 1.35
+
+- Library improvements across client, server, and shared components
+- Added new configuration options in server config
+- Enhanced vehicle management and dealer functionality
+
 ### Version 1.3
 
 - Major restructuring: moved from npcs/submodules to top-level module
@@ -14,3 +20,4 @@
 ### Version 1.2
 
 - Initial module setup and basic functionality
+

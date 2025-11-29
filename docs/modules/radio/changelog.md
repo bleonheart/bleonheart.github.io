@@ -1,5 +1,11 @@
 # Changelog
 
+### Version 1.65
+
+- Standardized entity/weapon naming to lia_ prefix (lia_staticradio, lia_radio)
+- Enhanced client, server, and shared library functionality
+- Improved radio weapon mechanics and transmission handling
+
 ### Version 1.6
 
 - Removed config.md, hooks.md, and libraries.md documentation files for streamlined documentation

@@ -1,5 +1,12 @@
 # Changelog
 
+### Version 1.65
+
+- Enhanced client and server library functionality
+- Improved CCTV entity mechanics
+- Updated pad item integration
+- Better camera feed handling and performance
+
 ### Version 1.6
 
 - Major server library updates with enhanced camera functionality (49+ line changes)

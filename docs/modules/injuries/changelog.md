@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 1.81
+
+- Standardized weapon naming to lia_ prefix (lia_defibrilator, lia_grizzly, lia_injectormorphine, lia_salewa, lia_surgicalkit)
+- Minor weapon functionality improvements
+
 ### Version 1.8
 
 - Removed config.md and hooks.md documentation files for streamlined documentation

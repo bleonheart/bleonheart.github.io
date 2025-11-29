@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 1.51
+
+- Renamed chess admin tool to lia_chessadmintool for naming consistency
+
 ### Version 1.5
 
 - Major database updates with enhanced chess game tracking (194+ line changes)

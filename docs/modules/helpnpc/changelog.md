@@ -12,3 +12,4 @@
 ### Version 1.2
 
 - Initial help NPC system for new player guidance
+
