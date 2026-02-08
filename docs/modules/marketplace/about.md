@@ -1,17 +1,17 @@
-<h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
+# Marketplace
 
-Marketplace system for player-to-player trading with no expiration dates. Provides features such as marketplace system for player-to-player trading, buy and sell items with no expiration dates, configurable listing limits and minimum prices, NPC vendor interface for easy access, search and filter functionality for items, economic system integration for server economy, and super admin item removal tools.
+## Module Information
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
+- **Author**: Samael
+- **Discord**: @liliaplayer
+- **Version**: 1.31
+- **Version ID**: private_marketplace
 
-- Item Listings Players can list items for sale through NPC
-- No Expiration Listings never expire and stay active indefinitely
-- Listing Limits Maximum 10 listings per player configurable
-- Minimum Price Enforces minimum price requirement for listings
-- Search Function Find specific items quickly in marketplace
-- Page System Browse listings with pagination
-- Admin Removal Super admins can remove items from marketplace
-- Database Storage All listings saved in database
-- Item Filtering Filter items by type and category
+## Description
 
-<br><br>
+Provides features such as Marketplace system for player-to-player trading, Buy and sell items with no expiration dates, Configurable listing limits and minimum prices, NPC vendor interface for easy access, Search and filter functionality for items, Economic system integration for server economy, and Super admin item removal tools.
+
+## Changelog
+
+No changelog information available.
+

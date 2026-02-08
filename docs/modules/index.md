@@ -4,8 +4,6 @@
 
 - [Animations](anim/about)
 
-- [ArcCW Attachments](arccw/about)
-
 - [Armor](armor/about)
 
 - [Banking](banking/about)
@@ -34,6 +32,10 @@
 
 - [Daily Rewards](dailyrewards/about)
 
+- [Data Disks](computers/about)
+
+- [Data Disks](disks/about)
+
 - [Death Trooper Scrambler](dt_scrambler/about)
 
 - [Delivery NPC](delivery/about)
@@ -45,6 +47,8 @@
 - [Events](events/about)
 
 - [Extraction](extraction/about)
+
+- [FOB Respawn Points](respawnpoints/about)
 
 - [Fence NPC](fence/about)
 
@@ -64,13 +68,13 @@
 
 - [Limb Damage](limbdamage/about)
 
-- [Lockpicking](lockpicking/about)
-
 - [Lootables](looting/about)
 
 - [Marketplace](marketplace/about)
 
 - [Medals](medals/about)
+
+- [Medical Kit](medical/about)
 
 - [Mobile Phones](cellphones/about)
 
@@ -92,5 +96,5 @@
 
 - [Territories](territories/about)
 
-- [Tying](cuffs/about)
+- [Tying](handcuffs/about)
 

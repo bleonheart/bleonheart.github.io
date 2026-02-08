@@ -5,7 +5,7 @@
     "author": "Samael",
     "discord": "@liliaplayer",
     "description": "Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards",
-    "version": "1.41",
+    "version": "1.0",
     "source": "https://bleonheart.github.io/modules/achievements/about/",
     "directory": "./achievements",
     "features": [],
@@ -20,18 +20,6 @@
     "version": "1.6",
     "source": "https://bleonheart.github.io/modules/anim/about/",
     "directory": "./anim",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "ArcCW Attachments",
-    "versionID": "private_arccw",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Creates inventory items for all ArcCW weapon attachments",
-    "version": "1.8",
-    "source": "https://bleonheart.github.io/modules/arccw/about/",
-    "directory": "./arccw",
     "features": [],
     "workshop": []
   },
@@ -158,7 +146,7 @@
     "author": "Samael",
     "discord": "@liliaplayer",
     "description": "Interactive chess and checkers (draughts) board games with multiplayer support, wagering system, and leaderboard tracking",
-    "version": "1.51",
+    "version": "1.0",
     "source": "https://bleonheart.github.io/modules/chess/about/",
     "directory": "./chess",
     "features": [],
@@ -175,6 +163,18 @@
     "version": "1.5",
     "source": "https://bleonheart.github.io/modules/clearance/about/",
     "directory": "./clearance",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Data Disks",
+    "versionID": "private_disks",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Adds memory disk entities (64C-1024C) for terminal/decoder interactions.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/computers/about/",
+    "directory": "./computers",
     "features": [],
     "workshop": []
   },
@@ -203,20 +203,6 @@
     "workshop": []
   },
   {
-    "name": "Tying",
-    "versionID": "private_tying",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios",
-    "version": "1.65",
-    "source": "https://bleonheart.github.io/modules/cuffs/about/",
-    "directory": "./cuffs",
-    "features": [],
-    "workshop": [
-      "3527551786"
-    ]
-  },
-  {
     "name": "Daily Rewards",
     "versionID": "private_dailyrewards",
     "author": "Samael",
@@ -237,6 +223,18 @@
     "version": "1.31",
     "source": "https://bleonheart.github.io/modules/delivery/about/",
     "directory": "./delivery",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Data Disks",
+    "versionID": "private_disks",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Adds memory disk entities (64C-1024C) for terminal/decoder interactions.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/disks/about/",
+    "directory": "./disks",
     "features": [],
     "workshop": []
   },
@@ -312,9 +310,7 @@
     "source": "https://bleonheart.github.io/modules/food/about/",
     "directory": "./food",
     "features": [],
-    "workshop": [
-      "3527551464"
-    ]
+    "workshop": []
   },
   {
     "name": "Gathering System",
@@ -328,6 +324,20 @@
     "features": [],
     "workshop": [
       "3527546250"
+    ]
+  },
+  {
+    "name": "Tying",
+    "versionID": "private_tying",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios",
+    "version": "1.65",
+    "source": "https://bleonheart.github.io/modules/handcuffs/about/",
+    "directory": "./handcuffs",
+    "features": [],
+    "workshop": [
+      "3527551786"
     ]
   },
   {
@@ -391,18 +401,6 @@
     "workshop": []
   },
   {
-    "name": "Lockpicking",
-    "versionID": "private_lockpicking",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Door lockpicking system with 4 difficulty levels (Basic, Copper Easy, Silver Medium, Gold Hard), job restrictions (thieves can lockpick, police cannot), and configurable success margins with interactive mini-game",
-    "version": "1.5",
-    "source": "https://bleonheart.github.io/modules/lockpicking/about/",
-    "directory": "./lockpicking",
-    "features": [],
-    "workshop": []
-  },
-  {
     "name": "Lootables",
     "versionID": "private_looting",
     "author": "Samael",
@@ -447,6 +445,18 @@
     "version": "1.8",
     "source": "https://bleonheart.github.io/modules/medals/about/",
     "directory": "./medals",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Medical Kit",
+    "versionID": "private_medical",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Adds a configurable medkit SWEP for healing yourself or others with cooldowns.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/medical/about/",
+    "directory": "./medical",
     "features": [],
     "workshop": []
   },
@@ -535,6 +545,18 @@
     "version": "1.2",
     "source": "https://bleonheart.github.io/modules/referrals/about/",
     "directory": "./referrals",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "FOB Respawn Points",
+    "versionID": "private_respawnpoints",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Forward operating base terminals that manage faction access and respawn locations.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/respawnpoints/about/",
+    "directory": "./respawnpoints",
     "features": [],
     "workshop": []
   },
