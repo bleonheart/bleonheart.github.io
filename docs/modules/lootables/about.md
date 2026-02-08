@@ -1,0 +1,17 @@
+# Lootables
+
+## Module Information
+
+- **Author**: Samael
+- **Discord**: @liliaplayer
+- **Version**: 1.5
+- **Version ID**: private_looting
+
+## Description
+
+Searchable loot containers (cardboard boxes, wooden crates, metal barrels, lockers, safes) with rarity tiers (Common/Uncommon/Rare/Legendary/Unique), skill requirements (strength/luck), alarm systems, and cooldown timers for exploration-based item gathering.
+
+## Changelog
+
+No changelog information available.
+

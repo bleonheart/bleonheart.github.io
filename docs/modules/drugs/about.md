@@ -1,25 +1,17 @@
-<h1 style="text-align:center; font-size:2rem; font-weight:bold;">About</h1>
+# Drugs
 
-Drug cultivation, processing, consumption, and addiction system with effects like speed boost, damage reduction, and stamina regeneration.
+## Module Information
 
-<h2 style="text-align:center; font-size:1.5rem; font-weight:bold;">Main Features</h2>
+- **Author**: Samael
+- **Discord**: @liliaplayer
+- **Version**: 1.7
+- **Version ID**: private_drugs
 
-- Drug Processor Process drugs with processor items
-- Single Processor Only one processor per player allowed
-- Drug Effects Speed boost, damage reduction, stamina regen, melee speed, ragdoll recovery
-- Effect Stacking New effects replace old ones of same type
-- Overdose Notifications Admins notified when players overdose
-- Timed Effects Effects expire after configurable duration
-- Effect Replacement Previous effect replaced when new drug consumed
-- Clear Effects Effects cleared on death or disconnect
+## Description
 
-<br><br>
+Drug cultivation, processing, consumption, and addiction system with effects like speed boost, damage reduction, and stamina regeneration
 
-<p align="center">
-  <video width="1200" style="max-width:100%; margin-bottom: 40px; margin-top: 20px;" controls>
-    <source src="https://bleonheart.github.io/assets/Drugs.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</p>
+## Changelog
 
-<br><br>
+No changelog information available.
+
