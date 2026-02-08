@@ -1,11 +1,4 @@
-# Death Trooper Scrambler
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.2
-- **Version ID**: private_dt_scrambler
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Communication scrambler system for Death Trooper faction allowing private, encry
 
 ## Changelog
 
-No changelog information available.
+### 1.2
+
+- Initial release
 

@@ -1,11 +1,4 @@
-# Taxi NPC
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.3
-- **Version ID**: private_taxi
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides features such as Spawns taxi vehicles for hire, NPC teleports you to pr
 
 ## Changelog
 
-No changelog information available.
+### 1.3
+
+- Initial release
 

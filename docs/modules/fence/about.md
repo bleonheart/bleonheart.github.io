@@ -1,11 +1,4 @@
-# Fence NPC
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.3
-- **Version ID**: private_fence
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides features such as Buy stolen items from players, Pay based on item rewar
 
 ## Changelog
 
-No changelog information available.
+### 1.3
+
+- Initial release
 

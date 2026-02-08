@@ -1,11 +1,4 @@
-# Radio Voice Chat
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.65
-- **Version ID**: private_radio
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Handheld radio voice chat system with frequency tuning, encrypted channels, fact
 
 ## Changelog
 
-No changelog information available.
+### 1.65
+
+- Initial release
 

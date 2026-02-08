@@ -1,11 +1,4 @@
-# Chess and Droughts
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.0
-- **Version ID**: private_chess
+# About
 
 ## Description
 
@@ -13,7 +6,7 @@ Interactive chess and checkers (draughts) board games with multiplayer support, 
 
 ## Changelog
 
-### Version 1.0
+### 1.0
 
 - Initial Release
 

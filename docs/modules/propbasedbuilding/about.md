@@ -1,11 +1,4 @@
-# Improved Constructable Props
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.6
-- **Version ID**: private_propbasedbuilding
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
 
 ## Changelog
 
-No changelog information available.
+### 1.6
+
+- Initial release
 

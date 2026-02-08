@@ -1,11 +1,4 @@
-# Medals
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.8
-- **Version ID**: private_medals
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Persistent medal award system displayed on character profiles with staff permiss
 
 ## Changelog
 
-No changelog information available.
+### 1.8
+
+- Initial release
 

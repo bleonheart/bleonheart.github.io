@@ -1,11 +1,4 @@
-# Referrals
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.2
-- **Version ID**: private_referrals
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Player referral system allowing players to refer others and earn monetary reward
 
 ## Changelog
 
-No changelog information available.
+### 1.2
+
+- Initial release
 

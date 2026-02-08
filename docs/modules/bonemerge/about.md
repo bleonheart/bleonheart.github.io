@@ -1,11 +1,4 @@
-# Clothing System
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.85
-- **Version ID**: private_bonemerge
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, v
 
 ## Changelog
 
-No changelog information available.
+### 1.85
+
+- Initial release
 

@@ -1,11 +1,4 @@
-# Daily Rewards
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.41
-- **Version ID**: private_dailyrewards
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Daily rewards system with 20 objectives (walking, chatting, playtime, money, int
 
 ## Changelog
 
-No changelog information available.
+### 1.41
+
+- Initial release
 

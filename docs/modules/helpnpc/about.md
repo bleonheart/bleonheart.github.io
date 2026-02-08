@@ -1,11 +1,4 @@
-# Help NPCs
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.3
-- **Version ID**: private_helpnpc
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides features such as Provides information to new players, Can give basic st
 
 ## Changelog
 
-No changelog information available.
+### 1.3
+
+- Initial release
 

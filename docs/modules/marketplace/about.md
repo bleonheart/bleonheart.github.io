@@ -1,11 +1,4 @@
-# Marketplace
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.31
-- **Version ID**: private_marketplace
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides features such as Marketplace system for player-to-player trading, Buy a
 
 ## Changelog
 
-No changelog information available.
+### 1.31
+
+- Initial release
 

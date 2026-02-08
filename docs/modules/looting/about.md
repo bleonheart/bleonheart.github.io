@@ -1,11 +1,4 @@
-# Lootables
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.5
-- **Version ID**: private_looting
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Searchable loot containers (cardboard boxes, wooden crates, metal barrels, locke
 
 ## Changelog
 
-No changelog information available.
+### 1.5
+
+- Initial release
 

@@ -1,11 +1,4 @@
-# Territories
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.41
-- **Version ID**: private_controlpoint
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Faction control point system with configurable capture zones, NPC defenders, HUD
 
 ## Changelog
 
-No changelog information available.
+### 1.41
+
+- Initial release
 

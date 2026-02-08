@@ -1,11 +1,4 @@
-# Car Bomb
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.5
-- **Version ID**: private_terrorism
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Terrorism mechanics with vehicle car bombs (engine-activated) and door explosive
 
 ## Changelog
 
-No changelog information available.
+### 1.5
+
+- Initial release
 

@@ -1,11 +1,4 @@
-# Leveling
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.5
-- **Version ID**: private_leveling
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Character leveling system with XP, skill points, and skill tree (Endurance: +25 
 
 ## Changelog
 
-No changelog information available.
+### 1.5
+
+- Initial release
 

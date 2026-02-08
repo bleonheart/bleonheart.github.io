@@ -1,11 +1,4 @@
-# Achievements
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.0
-- **Version ID**: private_achievements
+# About
 
 ## Description
 
@@ -13,7 +6,7 @@ Achievement system tracking kills (zombies, players, NPCs), item pickups, playti
 
 ## Changelog
 
-### Version 1.0
+### 1.0
 
 - Initial Release
 

@@ -1,11 +1,4 @@
-# Black Market NPC
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.31
-- **Version ID**: private_blackmarket
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides features such as Sells illegal weapons and contraband, Limited stock wi
 
 ## Changelog
 
-No changelog information available.
+### 1.31
+
+- Initial release
 

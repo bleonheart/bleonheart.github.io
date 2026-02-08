@@ -1,11 +1,4 @@
-# Police Suite
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.6
-- **Version ID**: private_policesuite
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Comprehensive police system with stun weapons, crime tracking, warrants, arrests
 
 ## Changelog
 
-No changelog information available.
+### 1.6
+
+- Initial release
 

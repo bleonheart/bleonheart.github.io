@@ -1,11 +1,4 @@
-# Banking
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.61
-- **Version ID**: private_banking
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Full banking system with multiple accounts, deposits/withdrawals, transfers, ite
 
 ## Changelog
 
-No changelog information available.
+### 1.61
+
+- Initial release
 

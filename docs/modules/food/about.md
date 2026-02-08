@@ -1,11 +1,4 @@
-# Dynamic Food
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.7
-- **Version ID**: private_food
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Restaurant cooking system with cooking machines, customer orders, ingredient fri
 
 ## Changelog
 
-No changelog information available.
+### 1.7
+
+- Initial release
 

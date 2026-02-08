@@ -1,11 +1,4 @@
-# Drugs
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.7
-- **Version ID**: private_drugs
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Drug cultivation, processing, consumption, and addiction system with effects lik
 
 ## Changelog
 
-No changelog information available.
+### 1.7
+
+- Initial release
 

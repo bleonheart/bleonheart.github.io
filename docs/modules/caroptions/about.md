@@ -1,11 +1,4 @@
-# Car Options
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.5
-- **Version ID**: private_caroptions
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Vehicle quality of life features including CD player system with music tracks, a
 
 ## Changelog
 
-No changelog information available.
+### 1.5
+
+- Initial release
 

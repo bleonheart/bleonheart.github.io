@@ -1,11 +1,4 @@
-# Delivery NPC
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.31
-- **Version ID**: private_delivery
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides features such as Offers parcel delivery side jobs, Random drop-off loca
 
 ## Changelog
 
-No changelog information available.
+### 1.31
+
+- Initial release
 

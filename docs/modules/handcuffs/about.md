@@ -1,11 +1,4 @@
-# Tying
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.65
-- **Version ID**: private_tying
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and b
 
 ## Changelog
 
-No changelog information available.
+### 1.65
+
+- Initial release
 

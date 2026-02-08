@@ -1,11 +1,4 @@
-# Recruiter NPC
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.1
-- **Version ID**: private_recruiternpc
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides a Recruiter NPC that allows players to join or resign from a list of co
 
 ## Changelog
 
-No changelog information available.
+### 1.1
+
+- Initial release
 

@@ -1,11 +1,4 @@
-# Animations
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.6
-- **Version ID**: private_anim
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Roleplay animations (/act commands) including surrender, salute, cross arms, att
 
 ## Changelog
 
-No changelog information available.
+### 1.6
+
+- Initial release
 

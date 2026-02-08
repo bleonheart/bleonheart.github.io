@@ -1,11 +1,4 @@
-# Limb Damage
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.7
-- **Version ID**: private_limbdamage
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Limb damage system where leg shots cause configurable sprint delay with automati
 
 ## Changelog
 
-No changelog information available.
+### 1.7
+
+- Initial release
 

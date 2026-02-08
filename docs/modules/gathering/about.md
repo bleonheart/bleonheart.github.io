@@ -1,11 +1,4 @@
-# Gathering System
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.81
-- **Version ID**: private_gathering
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
 
 ## Changelog
 
-No changelog information available.
+### 1.81
+
+- Initial release
 

@@ -1,11 +1,4 @@
-# LSCS Compatibility
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.5
-- **Version ID**: private_lscs
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber 
 
 ## Changelog
 
-No changelog information available.
+### 1.5
+
+- Initial release
 

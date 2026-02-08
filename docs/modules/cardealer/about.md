@@ -1,11 +1,4 @@
-# Car Dealer
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.35
-- **Version ID**: private_cardealer
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Provides features such as Purchase vehicles from a dealer NPC, Return or repair 
 
 ## Changelog
 
-No changelog information available.
+### 1.35
+
+- Initial release
 

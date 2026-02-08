@@ -1,11 +1,4 @@
-# Realtor
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.1
-- **Version ID**: private_realtor
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Property creation and management system with tool-based door selection.
 
 ## Changelog
 
-No changelog information available.
+### 1.1
+
+- Initial release
 

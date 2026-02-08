@@ -1,11 +1,4 @@
-# Corpses & Looting
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.61
-- **Version ID**: private_corpses_looting
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Corpse looting system allowing players to search dead bodies, transfer items and
 
 ## Changelog
 
-No changelog information available.
+### 1.61
+
+- Initial release
 

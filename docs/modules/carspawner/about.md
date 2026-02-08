@@ -1,11 +1,4 @@
-# Car Spawner
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.3
-- **Version ID**: private_carspawner
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Module for spawning themed cars for players.
 
 ## Changelog
 
-No changelog information available.
+### 1.3
+
+- Initial release
 

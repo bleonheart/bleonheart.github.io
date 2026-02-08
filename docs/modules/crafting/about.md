@@ -1,11 +1,4 @@
-# Crafting
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.81
-- **Version ID**: private_crafting
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Recipe-based crafting system with crafting stations (forge, workbench), time-bas
 
 ## Changelog
 
-No changelog information available.
+### 1.81
+
+- Initial release
 

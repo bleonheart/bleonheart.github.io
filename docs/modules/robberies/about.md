@@ -1,11 +1,4 @@
-# Store Robbery
-
-## Module Information
-
-- **Author**: Samael
-- **Discord**: @liliaplayer
-- **Version**: 1.5
-- **Version ID**: private_robberies
+# About
 
 ## Description
 
@@ -13,5 +6,7 @@ Store robbery system with jewelry cases and cash registers, stealable items (cas
 
 ## Changelog
 
-No changelog information available.
+### 1.5
+
+- Initial release
 
