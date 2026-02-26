@@ -67,7 +67,7 @@
     "author": "Samael",
     "discord": "@liliaplayer",
     "description": "Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, vests, rings, and accessories to players with vendor purchase and persistence",
-    "version": "1.85",
+    "version": "1.0",
     "source": "https://bleonheart.github.io/modules/bonemerge/about/",
     "directory": "./bonemerge",
     "features": [],
