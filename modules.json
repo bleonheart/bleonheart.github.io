@@ -12,18 +12,6 @@
     "workshop": []
   },
   {
-    "name": "Animations",
-    "versionID": "private_anim",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Roleplay animations (/act commands) including surrender, salute, cross arms, attention, typing poses, and combat stances that interrupt on movement",
-    "version": "1.6",
-    "source": "https://bleonheart.github.io/modules/anim/about/",
-    "directory": "./anim",
-    "features": [],
-    "workshop": []
-  },
-  {
     "name": "Armor",
     "versionID": "private_armor",
     "author": "Samael",
@@ -32,73 +20,6 @@
     "version": "1.4",
     "source": "https://bleonheart.github.io/modules/armor/about/",
     "directory": "./armor",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Banking",
-    "versionID": "private_banking",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Full banking system with multiple accounts, deposits/withdrawals, transfers, item storage, check writing/redemption, ATMs, and paycheck integration",
-    "version": "1.61",
-    "source": "https://bleonheart.github.io/modules/banking/about/",
-    "directory": "./banking",
-    "features": [],
-    "workshop": [
-      "3527541984"
-    ]
-  },
-  {
-    "name": "Black Market NPC",
-    "versionID": "private_blackmarket",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Provides features such as Sells illegal weapons and contraband, Limited stock with restock timers, Requires players to find secret location, Prices configurable via script, and Great for underground roleplay.",
-    "version": "1.31",
-    "source": "https://bleonheart.github.io/modules/blackmarket/about/",
-    "directory": "./blackmarket",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Clothing System",
-    "versionID": "private_bonemerge",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, vests, rings, and accessories to players with vendor purchase and persistence",
-    "version": "1.0",
-    "source": "https://bleonheart.github.io/modules/bonemerge/about/",
-    "directory": "./bonemerge",
-    "features": [],
-    "workshop": [
-      "3425707500",
-      "3425693671"
-    ]
-  },
-  {
-    "name": "Cameras",
-    "versionID": "private_cameras",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Security camera and CCTV monitor system for surveillance with faction-restricted access and live feed viewing",
-    "version": "1.65",
-    "source": "https://bleonheart.github.io/modules/cameras/about/",
-    "directory": "./cameras",
-    "features": [],
-    "workshop": [
-      "3527545883"
-    ]
-  },
-  {
-    "name": "Car Dealer",
-    "versionID": "private_cardealer",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Provides features such as Purchase vehicles from a dealer NPC, Return or repair owned vehicles for a fee, Custom paint jobs and bodygroup modifications with configurable price, Garages store vehicles safely, and Integrates with driving addons.",
-    "version": "1.35",
-    "source": "https://bleonheart.github.io/modules/cardealer/about/",
-    "directory": "./cardealer",
     "features": [],
     "workshop": []
   },
@@ -167,18 +88,6 @@
     "workshop": []
   },
   {
-    "name": "Data Disks",
-    "versionID": "private_disks",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Adds memory disk entities (64C-1024C) for terminal/decoder interactions.",
-    "version": "1.0",
-    "source": "https://bleonheart.github.io/modules/computers/about/",
-    "directory": "./computers",
-    "features": [],
-    "workshop": []
-  },
-  {
     "name": "Corpses & Looting",
     "versionID": "private_corpses_looting",
     "author": "Samael",
@@ -239,20 +148,6 @@
     "workshop": []
   },
   {
-    "name": "Drugs",
-    "versionID": "private_drugs",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Drug cultivation, processing, consumption, and addiction system with effects like speed boost, damage reduction, and stamina regeneration",
-    "version": "1.7",
-    "source": "https://bleonheart.github.io/modules/drugs/about/",
-    "directory": "./drugs",
-    "features": [],
-    "workshop": [
-      "3527542199"
-    ]
-  },
-  {
     "name": "Death Trooper Scrambler",
     "versionID": "private_dt_scrambler",
     "author": "Samael",
@@ -301,18 +196,6 @@
     "workshop": []
   },
   {
-    "name": "Dynamic Food",
-    "versionID": "private_food",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Restaurant cooking system with cooking machines, customer orders, ingredient fridges, worktables, dish preparation, and hunger restoration mechanics",
-    "version": "1.7",
-    "source": "https://bleonheart.github.io/modules/food/about/",
-    "directory": "./food",
-    "features": [],
-    "workshop": []
-  },
-  {
     "name": "Gathering System",
     "versionID": "private_gathering",
     "author": "Samael",
@@ -327,20 +210,6 @@
     ]
   },
   {
-    "name": "Tying",
-    "versionID": "private_tying",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios",
-    "version": "1.65",
-    "source": "https://bleonheart.github.io/modules/handcuffs/about/",
-    "directory": "./handcuffs",
-    "features": [],
-    "workshop": [
-      "3527551786"
-    ]
-  },
-  {
     "name": "Help NPCs",
     "versionID": "private_helpnpc",
     "author": "Samael",
@@ -349,18 +218,6 @@
     "version": "1.3",
     "source": "https://bleonheart.github.io/modules/helpnpc/about/",
     "directory": "./helpnpc",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "ID System",
-    "versionID": "private_idsystem",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "ID card system allowing players to show/request/force view IDs with multiple designs (California, German, New York, Southside, Yorkshire) and character recognition mechanics.",
-    "version": "1.7",
-    "source": "https://bleonheart.github.io/modules/identifications/about/",
-    "directory": "./identifications",
     "features": [],
     "workshop": []
   },
@@ -461,20 +318,6 @@
     "workshop": []
   },
   {
-    "name": "Police Suite",
-    "versionID": "private_policesuite",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Comprehensive police system with stun weapons, crime tracking, warrants, arrests, police NPCs, and computer database for law enforcement management.",
-    "version": "1.6",
-    "source": "https://bleonheart.github.io/modules/policesuite/about/",
-    "directory": "./policesuite",
-    "features": [],
-    "workshop": [
-      "3556219887"
-    ]
-  },
-  {
     "name": "Improved Constructable Props",
     "versionID": "private_propbasedbuilding",
     "author": "Samael",
@@ -485,20 +328,6 @@
     "directory": "./propbasedbuilding",
     "features": [],
     "workshop": []
-  },
-  {
-    "name": "Radio Voice Chat",
-    "versionID": "private_radio",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication",
-    "version": "1.65",
-    "source": "https://bleonheart.github.io/modules/radio/about/",
-    "directory": "./radio",
-    "features": [],
-    "workshop": [
-      "3527548881"
-    ]
   },
   {
     "name": "Ranking",
@@ -598,19 +427,5 @@
     "directory": "./territories",
     "features": [],
     "workshop": []
-  },
-  {
-    "name": "Car Bomb",
-    "versionID": "private_terrorism",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Terrorism mechanics with vehicle car bombs (engine-activated) and door explosives, both with timed detonation, remote detonation, and debris creation",
-    "version": "1.5",
-    "source": "https://bleonheart.github.io/modules/terrorism/about/",
-    "directory": "./terrorism",
-    "features": [],
-    "workshop": [
-      "3555533196"
-    ]
   }
 ]
