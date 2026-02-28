@@ -4,17 +4,21 @@ Provides features such as Purchase vehicles from a dealer NPC, Return or repair 
 
 ---
 
-<div class="card-grid">
-  <a href="./name.md" class="card">
-    <h3>Name</h3>
-    <p>MODULE.name</p>
-  </a>
-  <a href="./description.md" class="card">
-    <h3>Description</h3>
-    <p>MODULE.desc</p>
-  </a>
-  <a href="./changelog.md" class="card">
-    <h3>Changelog</h3>
-    <p>MODULE.Changelog</p>
-  </a>
-</div>
+<details class="realm-shared no-icon">
+  <summary>Version 1.0</summary>
+  <div class="details-content" style="margin-left: 20px;">
+    <ul>
+      <li>Initial Release</li>
+    </ul>
+  </div>
+</details>
+
+
+---
+
+## Video Demo
+
+<video controls width="100%" style="max-width: 800px;">
+  <source src="https://bleonheart.github.io/assets/cardealer.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

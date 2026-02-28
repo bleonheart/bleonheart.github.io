@@ -4,15 +4,6 @@ Comprehensive collection of modules for the Lilia framework.
 
 ---
 
-<h3 style="margin-bottom: 5px; font-weight: 700;">Overview</h3>
-<div style="margin-left: 20px; margin-bottom: 20px;">
-  <p>Modules are self-contained extensions that add new features or modify existing behavior in the Lilia framework. They allow for easy organization and distribution of custom code without modifying core gamemode files.</p>
-  <p>For server owners and developers looking to add custom functionality, modules should be placed in the following directory relative to your server installation:</p>
-  <code style="display: block; padding: 12px; background: rgba(0, 0, 0, 0.05); border-left: 4px solid #46a9ff; margin-top: 10px; font-family: 'JetBrains Mono', monospace;">garrysmod/gamemodes/lilia_rp/modules/[module folder]</code>
-</div>
-
----
-
 <div class="card-grid">
   <a href="./achievements/" class="card">
     <h3>Achievements</h3>
