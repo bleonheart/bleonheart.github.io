@@ -18,7 +18,7 @@ Interactive chess and checkers (draughts) board games with multiplayer support, 
 
 ## Video Demo
 
-<video controls width="100%" style="max-width: 800px;">
+<video controls width="100%" style="width: 100%;">
   <source src="https://bleonheart.github.io/assets/chess.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
