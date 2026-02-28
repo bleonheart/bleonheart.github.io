@@ -864,17 +864,3 @@
 .md-header__title {
     display: none !important;
 }
-
-/* Additional header hiding - Updated 2026-02-28 */
-.md-header__inner {
-    display: none !important;
-}
-
-.md-content__inner {
-    margin-top: 0 !important;
-}
-
-/* Force hide any remaining header elements */
-header {
-    display: none !important;
-}
