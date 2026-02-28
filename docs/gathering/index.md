@@ -4,6 +4,8 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
 
 ---
 
+## Changelog
+
 <details class="realm-shared no-icon">
   <summary>Version 1.0</summary>
   <div class="details-content" style="margin-left: 20px;">

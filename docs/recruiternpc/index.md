@@ -4,6 +4,8 @@ Provides a Recruiter NPC that allows players to join or resign from a list of co
 
 ---
 
+## Changelog
+
 <details class="realm-shared no-icon">
   <summary>Version 1.0</summary>
   <div class="details-content" style="margin-left: 20px;">

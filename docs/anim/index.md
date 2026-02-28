@@ -4,6 +4,8 @@ Roleplay animations (/act commands) including surrender, salute, cross arms, att
 
 ---
 
+## Changelog
+
 <details class="realm-shared no-icon">
   <summary>Version 1.6</summary>
   <div class="details-content" style="margin-left: 20px;">

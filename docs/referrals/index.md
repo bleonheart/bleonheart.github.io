@@ -4,6 +4,8 @@ Player referral system allowing players to refer others and earn monetary reward
 
 ---
 
+## Changelog
+
 <details class="realm-shared no-icon">
   <summary>Version 1.0</summary>
   <div class="details-content" style="margin-left: 20px;">

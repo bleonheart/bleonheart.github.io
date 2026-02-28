@@ -4,6 +4,8 @@ Provides features such as Provides information to new players, Can give basic st
 
 ---
 
+## Changelog
+
 <details class="realm-shared no-icon">
   <summary>Version 1.0</summary>
   <div class="details-content" style="margin-left: 20px;">

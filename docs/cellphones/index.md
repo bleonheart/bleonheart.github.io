@@ -4,6 +4,8 @@ Mobile phone system with unique phone numbers, voice calling, text messaging, an
 
 ---
 
+## Changelog
+
 <details class="realm-shared no-icon">
   <summary>Version 1.0</summary>
   <div class="details-content" style="margin-left: 20px;">
