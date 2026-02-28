@@ -1,27 +1,57 @@
-site_name: Samael Portofolio
-site_url: 'https://bleonheart.github.io/'
+site_name: Modules Documentation
+site_description: Documentation for Lilia Framework modules
+site_author: Lilia Framework Team
+
 theme:
   name: material
-  logo: assets/logo.png
-  favicon: assets/favicon.ico
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - header.autohide
+    - announce.dismiss
     - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - content.footnote.tooltips
   font:
-    text: Noto Sans
+    text: Inter
     code: Roboto Mono
   palette:
     - scheme: slate
       toggle:
-        icon: material/weather-night
+        icon: material/weather-sunny
         name: Dark mode
       primary: teal
-      accent: teal
+      accent: lavender
     - scheme: default
       toggle:
-        icon: material/weather-sunny
+        icon: material/weather-night
         name: Light mode
       primary: teal
-      accent: teal
+      accent: lavender
+
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -30,17 +60,3 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - attr_list
-  - md_in_html
-  - pymdownx.blocks.caption
-  - admonition
-  - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
-extra:
-  social:
-    - icon: simple/github
-      link: 'https://github.com/bleonheart'
-plugins:
-  - search
-  - awesome-pages

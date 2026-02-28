@@ -1,0 +1,97 @@
+/* Card Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+/* Individual Cards */
+.card {
+    display: block;
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-md-color-scheme="slate"] .card {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--md-accent-fg-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: var(--md-default-bg-color--light);
+}
+
+.card h3 {
+    margin: 0 0 0.5rem 0 !important;
+    color: var(--md-primary-fg-color) !important;
+    font-size: 1.05em !important;
+    font-weight: 700 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h3::after {
+    content: "→";
+    opacity: 0.3;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+.card:hover h3::after {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--md-accent-fg-color);
+}
+
+.card p {
+    margin: 0 !important;
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: var(--md-default-fg-color--light);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Collapsible Details */
+.realm-shared {
+    border-left: 4px solid #4caf50;
+}
+
+.details-content {
+    margin-left: 20px;
+}
+
+.no-icon summary {
+    list-style: none;
+}
+
+.no-icon summary::-webkit-details-marker {
+    display: none;
+}
+
+.no-icon summary::before {
+    content: "▶ ";
+    display: inline-block;
+    margin-right: 0.5em;
+    transition: transform 0.2s;
+}
+
+.no-icon[open] summary::before {
+    transform: rotate(90deg);
+}
