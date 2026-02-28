@@ -1,3 +1,0 @@
-# Name
-
-Lootables

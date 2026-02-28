@@ -1,3 +1,0 @@
-# Name
-
-Black Market NPC

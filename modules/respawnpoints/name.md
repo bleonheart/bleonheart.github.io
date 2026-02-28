@@ -1,3 +1,0 @@
-# Name
-
-FOB Respawn Points

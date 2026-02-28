@@ -1,3 +1,0 @@
-# Name
-
-Medical Kit
