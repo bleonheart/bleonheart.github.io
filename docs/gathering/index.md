@@ -66,18 +66,22 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
 
     <div class="generator-section">
       <div class="input-group">
-        <label for="gathering-weapons">Valid Weapons:</label>
-        <textarea id="gathering-weapons" placeholder="lia_pickaxe, lia_hammer" oninput="generateGatheringCode()">lia_pickaxe</textarea>
-        <small>Comma-separated weapon classes that can gather this entity</small>
+        <label>Valid Weapons:</label>
+        <small>Each row is one weapon class that can gather this entity.</small>
       </div>
+
+      <div id="gathering-weapon-list" class="dynamic-list"></div>
+      <button type="button" class="add-btn" onclick="addGatheringWeaponRow()">Add Weapon</button>
     </div>
 
     <div class="generator-section">
       <div class="input-group">
-        <label for="gathering-loot">Loot Table:</label>
-        <textarea id="gathering-loot" placeholder="iron_ore:2-4:85, stone:1-2:60, coal:0-1:25" oninput="generateGatheringCode()">iron_ore:2-4:85, stone:1-2:60, coal:0-1:25</textarea>
-        <small>Format: item_id:min-max:chance (comma-separated). Example: iron_ore:2-4:85</small>
+        <label>Loot Table:</label>
+        <small>Each row is one loot entry (item + min/max + chance 1-100).</small>
       </div>
+
+      <div id="gathering-loot-list" class="dynamic-list"></div>
+      <button type="button" class="add-btn" onclick="addGatheringLootRow()">Add Loot Item</button>
     </div>
 
     <div class="button-group">
@@ -96,33 +100,49 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
 </div>
 
 <script>
-function parseLootTable(lootText) {
-  const lootItems = [];
-  const items = lootText.split(',').map(s => s.trim()).filter(Boolean);
-  
-  items.forEach(item => {
-    const parts = item.split(':').map(s => s.trim());
-    if (parts.length >= 3) {
-      const itemId = parts[0];
-      const range = parts[1].split('-').map(s => parseInt(s.trim()));
-      const chance = parseInt(parts[2]);
-      
-      if (itemId && range.length === 2 && !isNaN(range[0]) && !isNaN(range[1]) && !isNaN(chance)) {
-        lootItems.push({
-          item: itemId,
-          min: range[0],
-          max: range[1],
-          chance: chance
-        });
-      }
-    }
-  });
-  
-  return lootItems;
+function gatheringWeaponRowTemplate(idx, weapon) {
+  return `
+  <div class="dynamic-row" data-idx="${idx}">
+    <input type="text" class="g-weapon" placeholder="lia_pickaxe" value="${weapon || ''}" oninput="generateGatheringCode()">
+    <button type="button" class="remove-btn" onclick="removeGatheringWeaponRow(this)">×</button>
+  </div>`;
 }
 
-function parseWeapons(weaponsText) {
-  return weaponsText.split(',').map(s => s.trim()).filter(Boolean);
+function addGatheringWeaponRow(weapon) {
+  const list = document.getElementById('gathering-weapon-list');
+  const idx = list.children.length;
+  list.insertAdjacentHTML('beforeend', gatheringWeaponRowTemplate(idx, weapon));
+  generateGatheringCode();
+}
+
+function removeGatheringWeaponRow(btn) {
+  const row = btn.closest('.dynamic-row');
+  if (row) row.remove();
+  generateGatheringCode();
+}
+
+function gatheringLootRowTemplate(idx, item, min, max, chance) {
+  return `
+  <div class="dynamic-row" data-idx="${idx}">
+    <input type="text" class="g-loot-item" placeholder="iron_ore" value="${item || ''}" oninput="generateGatheringCode()">
+    <input type="number" class="g-loot-min small-input" placeholder="1" min="0" value="${min ?? 0}" oninput="generateGatheringCode()">
+    <input type="number" class="g-loot-max small-input" placeholder="2" min="0" value="${max ?? 0}" oninput="generateGatheringCode()">
+    <input type="number" class="g-loot-chance small-input" placeholder="50" min="0" max="100" value="${chance ?? 50}" oninput="generateGatheringCode()">
+    <button type="button" class="remove-btn" onclick="removeGatheringLootRow(this)">×</button>
+  </div>`;
+}
+
+function addGatheringLootRow(item, min, max, chance) {
+  const list = document.getElementById('gathering-loot-list');
+  const idx = list.children.length;
+  list.insertAdjacentHTML('beforeend', gatheringLootRowTemplate(idx, item, min, max, chance));
+  generateGatheringCode();
+}
+
+function removeGatheringLootRow(btn) {
+  const row = btn.closest('.dynamic-row');
+  if (row) row.remove();
+  generateGatheringCode();
 }
 
 function generateGatheringCode() {
@@ -135,11 +155,29 @@ function generateGatheringCode() {
   const itemsBeforeCooldown = document.getElementById('gathering-items-before-cooldown').value || '3';
   const cooldownTime = document.getElementById('gathering-cooldown-time').value || '300';
 
-  const weaponsText = (document.getElementById('gathering-weapons').value || '').trim();
-  const weapons = weaponsText ? parseWeapons(weaponsText) : [];
-  
-  const lootText = (document.getElementById('gathering-loot').value || '').trim();
-  const lootItems = parseLootTable(lootText);
+  const weaponRows = Array.from(document.querySelectorAll('#gathering-weapon-list .dynamic-row'));
+  const weapons = [];
+  for (const row of weaponRows) {
+    const weapon = (row.querySelector('.g-weapon').value || '').trim();
+    if (!weapon) continue;
+    weapons.push(weapon);
+  }
+
+  const lootRows = Array.from(document.querySelectorAll('#gathering-loot-list .dynamic-row'));
+  const lootItems = [];
+  for (const row of lootRows) {
+    const item = (row.querySelector('.g-loot-item').value || '').trim();
+    const min = (row.querySelector('.g-loot-min').value || '').trim();
+    const max = (row.querySelector('.g-loot-max').value || '').trim();
+    const chance = (row.querySelector('.g-loot-chance').value || '').trim();
+    if (!item) continue;
+    lootItems.push({
+      item,
+      min: min === '' ? 0 : Number(min),
+      max: max === '' ? 0 : Number(max),
+      chance: chance === '' ? 0 : Number(chance)
+    });
+  }
 
   const lines = [
   '-- Copy and paste this code into your gathering module',
@@ -198,13 +236,32 @@ function fillExampleGathering() {
   document.getElementById('gathering-health').value = '100';
   document.getElementById('gathering-items-before-cooldown').value = '3';
   document.getElementById('gathering-cooldown-time').value = '300';
-  document.getElementById('gathering-weapons').value = 'lia_axe, lia_saw';
-  document.getElementById('gathering-loot').value = 'wood:3-6:90, stick:1-3:70, sap:0-1:25, log:1-2:80';
+
+  const weaponList = document.getElementById('gathering-weapon-list');
+  weaponList.innerHTML = '';
+  addGatheringWeaponRow('lia_axe');
+  addGatheringWeaponRow('lia_saw');
+
+  const lootList = document.getElementById('gathering-loot-list');
+  lootList.innerHTML = '';
+  addGatheringLootRow('wood', 3, 6, 90);
+  addGatheringLootRow('stick', 1, 3, 70);
+  addGatheringLootRow('sap', 0, 1, 25);
+  addGatheringLootRow('log', 1, 2, 80);
+
   generateGatheringCode();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  generateGatheringCode();
+  const weaponList = document.getElementById('gathering-weapon-list');
+  weaponList.innerHTML = '';
+  addGatheringWeaponRow('lia_pickaxe');
+
+  const lootList = document.getElementById('gathering-loot-list');
+  lootList.innerHTML = '';
+  addGatheringLootRow('iron_ore', 2, 4, 85);
+  addGatheringLootRow('stone', 1, 2, 60);
+  addGatheringLootRow('coal', 0, 1, 25);
 });
 </script>
 

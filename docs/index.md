@@ -60,10 +60,6 @@
     <h3>Crafting</h3>
     <p>Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions</p>
   </a>
-  <a href="./dailyrewards/" class="card">
-    <h3>Daily Rewards</h3>
-    <p>Daily rewards system with 20 objectives (walking, chatting, playtime, money, interactions, jobs, building, vehicles, arrests, healing, property, lockpicking, paychecks, ads, emergencies, XP, voting, crimes, spending, sprinting) and escalating streak bonuses at 14/30/60/90 days.</p>
-  </a>
   <a href="./computers/" class="card">
     <h3>Data Disks</h3>
     <p>Adds memory disk entities (64C-1024C) for terminal/decoder interactions.</p>
@@ -95,10 +91,6 @@
   <a href="./extraction/" class="card">
     <h3>Extraction</h3>
     <p>Raid-style extraction system requiring players to reach escape zones within countdown timer, with configurable positions per map and audio/visual cues</p>
-  </a>
-  <a href="./faction_pk/" class="card">
-    <h3>Faction PK</h3>
-    <p>Allows faction leaders to perform PKs on their members.</p>
   </a>
   <a href="./fence/" class="card">
     <h3>Fence NPC</h3>
@@ -179,10 +171,6 @@
   <a href="./recruiternpc/" class="card">
     <h3>Recruiter NPC</h3>
     <p>Provides a Recruiter NPC that allows players to join or resign from a list of configured jobs. Features dynamic dialog options based on player</p>
-  </a>
-  <a href="./referrals/" class="card">
-    <h3>Referrals</h3>
-    <p>Player referral system allowing players to refer others and earn monetary rewards when referred players join, with configurable reward amounts and admin management tools.</p>
   </a>
   <a href="./robberies/" class="card">
     <h3>Store Robbery</h3>

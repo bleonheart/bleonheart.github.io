@@ -92,26 +92,84 @@ Searchable loot containers (cardboard boxes, wooden crates, metal barrels, locke
 </div>
 
 <script>
-function tierRowTemplate(idx, tierName, chance, items) {
-  const itemsStr = items || '';
+function tierItemRowTemplate(item) {
   return `
-  <div class="dynamic-row" data-idx="${idx}">
-    <input type="text" class="tier-name" placeholder="Common" value="${tierName || ''}" oninput="generateLootCode()">
-    <input type="number" class="tier-chance small-input" placeholder="55" min="0" max="100" value="${chance || '0'}" oninput="generateLootCode()">
-    <input type="text" class="tier-items" placeholder="item1, item2, item3" value="${itemsStr}" oninput="generateLootCode()">
-    <button type="button" class="remove-btn" onclick="removeTierRow(this)">×</button>
+    <div class="dynamic-row tier-item-row">
+      <input type="text" class="tier-item" placeholder="item_uniqueid" value="${item || ''}" oninput="generateLootCode()">
+      <button type="button" class="remove-btn" onclick="removeTierItemRow(this)">×</button>
+    </div>`;
+}
+
+function tierBlockTemplate(idx, tierName, chance) {
+  return `
+  <div class="dynamic-row tier-block" data-idx="${idx}">
+    <div class="form-grid-3">
+      <div class="input-group">
+        <label>Tier Name:</label>
+        <input type="text" class="tier-name" placeholder="Common" value="${tierName || ''}" oninput="generateLootCode()">
+      </div>
+
+      <div class="input-group">
+        <label>Chance:</label>
+        <input type="number" class="tier-chance" placeholder="55" min="0" max="100" value="${chance || '0'}" oninput="generateLootCode()">
+      </div>
+
+      <div class="input-group">
+        <label>Actions:</label>
+        <button type="button" class="remove-btn" onclick="removeTierRow(this)">×</button>
+      </div>
+    </div>
+
+    <div class="generator-section">
+      <div class="input-group">
+        <label>Tier Items:</label>
+        <small>Add item uniqueIDs for this tier.</small>
+      </div>
+
+      <div class="tier-items-list dynamic-list"></div>
+      <button type="button" class="add-btn" onclick="addTierItemRow(this)">Add Item</button>
+    </div>
   </div>`;
 }
 
 function addTierRow(tierName, chance, items) {
   const list = document.getElementById('tier-list');
   const idx = list.children.length;
-  list.insertAdjacentHTML('beforeend', tierRowTemplate(idx, tierName, chance, items));
+  list.insertAdjacentHTML('beforeend', tierBlockTemplate(idx, tierName, chance));
+
+  const blocks = list.querySelectorAll('.tier-block');
+  const block = blocks[blocks.length - 1];
+  const itemsList = block.querySelector('.tier-items-list');
+  itemsList.innerHTML = '';
+  const safeItems = Array.isArray(items) ? items : [];
+  if (safeItems.length === 0) {
+    itemsList.insertAdjacentHTML('beforeend', tierItemRowTemplate(''));
+  } else {
+    for (const it of safeItems) {
+      itemsList.insertAdjacentHTML('beforeend', tierItemRowTemplate(it));
+    }
+  }
+
   generateLootCode();
 }
 
 function removeTierRow(btn) {
-  const row = btn.closest('.dynamic-row');
+  const row = btn.closest('.tier-block');
+  if (row) row.remove();
+  generateLootCode();
+}
+
+function addTierItemRow(btnOrBlock, item) {
+  const block = btnOrBlock.closest ? btnOrBlock.closest('.tier-block') : btnOrBlock;
+  if (!block) return;
+  const list = block.querySelector('.tier-items-list');
+  if (!list) return;
+  list.insertAdjacentHTML('beforeend', tierItemRowTemplate(item || ''));
+  generateLootCode();
+}
+
+function removeTierItemRow(btn) {
+  const row = btn.closest('.tier-item-row');
   if (row) row.remove();
   generateLootCode();
 }
@@ -128,13 +186,18 @@ function generateLootCode() {
   const luck = document.getElementById('sr-luck').value || '0';
   const luckChance = document.getElementById('sr-luckchance').value || '0';
 
-  const rows = Array.from(document.querySelectorAll('#tier-list .dynamic-row'));
+  const rows = Array.from(document.querySelectorAll('#tier-list .tier-block'));
   const tiers = [];
   for (const row of rows) {
     const tname = (row.querySelector('.tier-name').value || '').trim();
     const tch = (row.querySelector('.tier-chance').value || '').trim() || '0';
-    const itemsText = (row.querySelector('.tier-items').value || '').trim();
-    const items = itemsText ? itemsText.split(',').map(i => i.trim()).filter(Boolean) : [];
+    const itemRows = Array.from(row.querySelectorAll('.tier-items-list .tier-item-row'));
+    const items = [];
+    for (const ir of itemRows) {
+      const it = (ir.querySelector('.tier-item').value || '').trim();
+      if (!it) continue;
+      items.push(it);
+    }
     if (!tname) continue;
     tiers.push({ tname, tch, items });
   }
@@ -192,11 +255,11 @@ function fillExampleLoot() {
 
   const list = document.getElementById('tier-list');
   list.innerHTML = '';
-  addTierRow('Common', '55', 'civilianmale, civilianfemale');
-  addTierRow('Uncommon', '22', 'civilprotection, resistancefighter, mod_swift');
-  addTierRow('Rare', '15', 'combinesoldier, mod_fortified, mod_wardbound, mod_temper');
-  addTierRow('Legendary', '8', 'combineelitepowerarmor, mod_regen');
-  addTierRow('Unique', '0', '');
+  addTierRow('Common', '55', ['civilianmale', 'civilianfemale']);
+  addTierRow('Uncommon', '22', ['civilprotection', 'resistancefighter', 'mod_swift']);
+  addTierRow('Rare', '15', ['combinesoldier', 'mod_fortified', 'mod_wardbound', 'mod_temper']);
+  addTierRow('Legendary', '8', ['combineelitepowerarmor', 'mod_regen']);
+  addTierRow('Unique', '0', []);
   generateLootCode();
 }
 

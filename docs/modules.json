@@ -202,18 +202,6 @@
     ]
   },
   {
-    "name": "Daily Rewards",
-    "versionID": "private_dailyrewards",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Daily rewards system with 20 objectives (walking, chatting, playtime, money, interactions, jobs, building, vehicles, arrests, healing, property, lockpicking, paychecks, ads, emergencies, XP, voting, crimes, spending, sprinting) and escalating streak bonuses at 14/30/60/90 days.",
-    "version": "1.41",
-    "source": "https://bleonheart.github.io/modules/dailyrewards/about/",
-    "directory": "./dailyrewards",
-    "features": [],
-    "workshop": []
-  },
-  {
     "name": "Delivery NPC",
     "versionID": "private_delivery",
     "author": "Samael",
@@ -518,18 +506,6 @@
     "version": "1.1",
     "source": "https://bleonheart.github.io/modules/recruiternpc/about/",
     "directory": "./recruiternpc",
-    "features": [],
-    "workshop": []
-  },
-  {
-    "name": "Referrals",
-    "versionID": "private_referrals",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Player referral system allowing players to refer others and earn monetary rewards when referred players join, with configurable reward amounts and admin management tools.",
-    "version": "1.2",
-    "source": "https://bleonheart.github.io/modules/referrals/about/",
-    "directory": "./referrals",
     "features": [],
     "workshop": []
   },

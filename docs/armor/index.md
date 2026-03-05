@@ -98,10 +98,12 @@ Adds Funny Armors
         </div>
 
         <div class="input-group">
-          <label for="armor-supported-mods">Supported Mods:</label>
-          <textarea id="armor-supported-mods" placeholder="fortified, wardbound, swift" oninput="generateArmorCode()">fortified, wardbound, swift, temper</textarea>
-          <small>Comma-separated mod types (not uniqueIDs). Example: swift, regen</small>
+          <label>Supported Mods:</label>
+          <small>Each row is one mod type this armor supports (not uniqueIDs).</small>
         </div>
+
+        <div id="armor-mods-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addArmorModRow()">Add Mod</button>
       </div>
 
       <div class="button-group">
@@ -212,6 +214,27 @@ function showArmorTab(which) {
   }
 }
 
+function armorModRowTemplate(idx, mod) {
+  return `
+  <div class="dynamic-row" data-idx="${idx}">
+    <input type="text" class="armor-mod" placeholder="fortified" value="${mod || ''}" oninput="generateArmorCode()">
+    <button type="button" class="remove-btn" onclick="removeArmorModRow(this)">×</button>
+  </div>`;
+}
+
+function addArmorModRow(mod) {
+  const list = document.getElementById('armor-mods-list');
+  const idx = list.children.length;
+  list.insertAdjacentHTML('beforeend', armorModRowTemplate(idx, mod));
+  generateArmorCode();
+}
+
+function removeArmorModRow(btn) {
+  const row = btn.closest('.dynamic-row');
+  if (row) row.remove();
+  generateArmorCode();
+}
+
 function generateArmorCode() {
   const uniqueId = (document.getElementById('armor-id').value || '').trim() || 'armor_example';
   const name = (document.getElementById('armor-name').value || '').trim() || 'Armor';
@@ -225,10 +248,14 @@ function generateArmorCode() {
   const fallDamage = document.getElementById('armor-falldmg').checked;
   const powerArmor = document.getElementById('armor-pa').checked;
   const overlay = (document.getElementById('armor-overlay').value || '').trim();
-  const supportedModsText = (document.getElementById('armor-supported-mods').value || '').trim();
-  const supportedMods = supportedModsText
-    ? supportedModsText.split(',').map(s => s.trim()).filter(Boolean)
-    : [];
+
+  const rows = Array.from(document.querySelectorAll('#armor-mods-list .dynamic-row'));
+  const supportedMods = [];
+  for (const row of rows) {
+    const mod = (row.querySelector('.armor-mod').value || '').trim();
+    if (!mod) continue;
+    supportedMods.push(mod);
+  }
 
   const lines = [
   '-- Copy and paste this code into the module armor list',
@@ -268,7 +295,13 @@ function fillExampleArmor() {
   document.getElementById('armor-falldmg').checked = true;
   document.getElementById('armor-pa').checked = false;
   document.getElementById('armor-overlay').value = 'gasmask.png';
-  document.getElementById('armor-supported-mods').value = 'fortified, wardbound, swift';
+
+  const list = document.getElementById('armor-mods-list');
+  list.innerHTML = '';
+  addArmorModRow('fortified');
+  addArmorModRow('wardbound');
+  addArmorModRow('swift');
+
   generateArmorCode();
 }
 
@@ -326,6 +359,13 @@ function fillExampleArmorMod() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const list = document.getElementById('armor-mods-list');
+  list.innerHTML = '';
+  addArmorModRow('fortified');
+  addArmorModRow('wardbound');
+  addArmorModRow('swift');
+  addArmorModRow('temper');
+
   showArmorTab('armor');
 });
 </script>

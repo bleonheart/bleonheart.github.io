@@ -14,7 +14,7 @@ Persistent medal award system displayed on character profiles with staff permiss
         <div class="input-group">
           <label for="medal-pack">Pack ID:</label>
           <input type="text" id="medal-pack" placeholder="e.g., lapd" value="lapd" oninput="generateMedalCode()">
-          <small>Used for MEDAL_PACK_ID and medal asset folder</small>
+          <small>Used for medal asset folder</small>
         </div>
 
         <div class="input-group">
@@ -90,7 +90,6 @@ function generateMedalCode() {
   '-- Copy and paste this code into a medals pack file',
   '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/medals/medals/<pack>.lua',
   '',
-  'MEDAL_PACK_ID = ' + JSON.stringify(packId),
   `lia.medals.registerMedal(${JSON.stringify(medalId)}, {`,
   '    name = ' + JSON.stringify(name) + ',',
   '    desc = ' + JSON.stringify(desc) + ',',

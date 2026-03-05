@@ -58,12 +58,16 @@ Ranking system for the gamemode
           <label for="rank-tier">Tier:</label>
           <input type="number" id="rank-tier" min="0" value="1" oninput="generateRankingCode()">
         </div>
+      </div>
 
+      <div class="generator-section">
         <div class="input-group">
-          <label for="rank-weapons">Weapons:</label>
-          <input type="text" id="rank-weapons" placeholder="arccw_bo3_c96, arccw_waw_p38" value="arccw_bo3_c96" oninput="generateRankingCode()">
-          <small>Comma-separated swep classnames</small>
+          <label>Weapons:</label>
+          <small>Each row is one swep classname entry in the "Weapons" list.</small>
         </div>
+
+        <div id="weapon-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addWeaponRow()">Add Weapon</button>
       </div>
 
       <div class="form-grid-4">
@@ -109,6 +113,27 @@ Ranking system for the gamemode
 </div>
 
 <script>
+function weaponRowTemplate(idx, weapon) {
+  return `
+  <div class="dynamic-row" data-idx="${idx}">
+    <input type="text" class="weapon-class" placeholder="arccw_bo3_c96" value="${weapon || ''}" oninput="generateRankingCode()">
+    <button type="button" class="remove-btn" onclick="removeWeaponRow(this)">×</button>
+  </div>`;
+}
+
+function addWeaponRow(weapon) {
+  const list = document.getElementById('weapon-list');
+  const idx = list.children.length;
+  list.insertAdjacentHTML('beforeend', weaponRowTemplate(idx, weapon));
+  generateRankingCode();
+}
+
+function removeWeaponRow(btn) {
+  const row = btn.closest('.dynamic-row');
+  if (row) row.remove();
+  generateRankingCode();
+}
+
 function generateRankingCode() {
   const classConst = (document.getElementById('rank-class').value || '').trim() || 'CLASS_EXAMPLE';
   const rankId = (document.getElementById('rank-id').value || '').trim() || 'rank_example';
@@ -118,8 +143,13 @@ function generateRankingCode() {
   const clearance = document.getElementById('rank-clearance').value || '0';
   const salary = document.getElementById('rank-salary').value || '0';
   const tier = document.getElementById('rank-tier').value || '0';
-  const weaponsText = (document.getElementById('rank-weapons').value || '').trim();
-  const weapons = weaponsText ? weaponsText.split(',').map(w => w.trim()).filter(Boolean) : [];
+  const rows = Array.from(document.querySelectorAll('#weapon-list .dynamic-row'));
+  const weapons = [];
+  for (const row of rows) {
+    const weapon = (row.querySelector('.weapon-class').value || '').trim();
+    if (!weapon) continue;
+    weapons.push(weapon);
+  }
 
   const canPromote = document.getElementById('rank-promote').checked;
   const canDemote = document.getElementById('rank-demote').checked;
@@ -160,7 +190,12 @@ function fillExampleRank() {
   document.getElementById('rank-clearance').value = '4';
   document.getElementById('rank-salary').value = '80';
   document.getElementById('rank-tier').value = '4';
-  document.getElementById('rank-weapons').value = 'arccw_bo3_c96, arccw_waw_p38';
+
+  const list = document.getElementById('weapon-list');
+  list.innerHTML = '';
+  addWeaponRow('arccw_bo3_c96');
+  addWeaponRow('arccw_waw_p38');
+
   document.getElementById('rank-promote').checked = true;
   document.getElementById('rank-demote').checked = true;
   document.getElementById('rank-hire').checked = true;
@@ -169,7 +204,9 @@ function fillExampleRank() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  generateRankingCode();
+  const list = document.getElementById('weapon-list');
+  list.innerHTML = '';
+  addWeaponRow('arccw_bo3_c96');
 });
 </script>
 
