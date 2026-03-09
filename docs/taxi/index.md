@@ -1,6 +1,6 @@
-# Taxi NPC
+# Taxi Transportation Service
 
-Provides features such as Spawns taxi vehicles for hire, NPC teleports you to preset locations, Charges fee based on distance, Checks if player already owns a taxi, and Uses workshop vehicle models.
+A comprehensive taxi transportation system featuring an NPC dispatcher that spawns taxi vehicles for player hire, provides instant teleportation to predefined city locations with distance-based pricing, prevents duplicate taxi ownership, and integrates custom workshop vehicle models for realistic taxi services.
 
 ---
 

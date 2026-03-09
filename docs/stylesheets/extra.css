@@ -677,6 +677,34 @@
     margin-bottom: 0 !important;
     padding: 10px 14px !important;
     font-size: 14px !important;
+    border: 2px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 16px !important;
+    background: rgba(0, 0, 0, 0.02) !important;
+    color: var(--md-default-fg-color) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    box-sizing: border-box !important;
+}
+
+[data-md-color-scheme="slate"] .dynamic-row input[type="text"],
+[data-md-color-scheme="slate"] .dynamic-row input[type="number"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dynamic-row input[type="text"]:focus,
+.dynamic-row input[type="number"]:focus {
+    outline: none !important;
+    border-color: var(--md-primary-fg-color) !important;
+    background: var(--md-default-bg-color) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+[data-md-color-scheme="slate"] .dynamic-row input[type="text"]:focus,
+[data-md-color-scheme="slate"] .dynamic-row input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Handle multi-input rows (like spawns) */
@@ -828,6 +856,20 @@
     transform: translateY(0);
 }
 
+/* Hide the top navigation bar */
+.md-header {
+    display: none;
+}
+
+/* Adjust spacing to account for hidden header */
+.md-content {
+    padding-top: 0;
+}
+
+.md-content__inner {
+    margin-top: 0;
+}
+
 /* Sidebar Disabling */
 .md-sidebar--primary,
 .md-sidebar--secondary {
@@ -845,22 +887,4 @@
 
 .md-content__inner {
     max-width: 100% !important;
-}
-
-/* Remove top header bar */
-.md-header {
-    display: none !important;
-}
-
-.md-main {
-    margin-top: 0 !important;
-}
-
-/* Hide site title/header */
-.md-header__topic {
-    display: none !important;
-}
-
-.md-header__title {
-    display: none !important;
 }

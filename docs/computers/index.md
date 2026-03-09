@@ -1,6 +1,6 @@
-# Data Disks
+# Computer
 
-Adds memory disk entities (64C-1024C) for terminal/decoder interactions.
+Comprehensive computer system featuring interactive computer entities with customizable desktop interfaces, built-in applications including Notes and Fakebook social media, web browser functionality, and game integration. Provides network communication for computer interactions, popup management, and extensible app panel system for creating custom computer applications within the Lilia RP framework.
 
 ---
 

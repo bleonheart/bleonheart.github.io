@@ -1,6 +1,6 @@
-# Radio Voice Chat
+# Advanced Radio Communication
 
-Handheld radio voice chat system with frequency tuning, encrypted channels, faction access, static radios, and range-based communication
+Comprehensive radio communication framework featuring handheld radios and stationary broadcast units with frequency tuning, encrypted faction channels, preset stations, range-based transmission, static noise effects, and Star Wars RP comlink compatibility. Supports both item-based and entity-based radio devices with real-time voice transmission, channel management, and secure communications for different factions.
 
 ---
 
@@ -22,12 +22,13 @@ Handheld radio voice chat system with frequency tuning, encrypted channels, fact
           <div class="input-group">
             <label for="preset-frequency">Frequency:</label>
             <input type="text" id="preset-frequency" placeholder="e.g., 101.1" value="101.1" oninput="generatePresetCode()">
-            <small>Radio frequency as a string (e.g. 101.1)</small>
+            <small>Radio frequency for this preset.</small>
           </div>
 
           <div class="input-group">
             <label for="preset-name">Preset Name:</label>
             <input type="text" id="preset-name" placeholder="e.g., Emergency Channel" value="Emergency Channel" oninput="generatePresetCode()">
+            <small>Label shown for this preset in the radio UI (frequency remains the actual channel identifier).</small>
           </div>
         </div>
       </div>
@@ -44,13 +45,13 @@ Handheld radio voice chat system with frequency tuning, encrypted channels, fact
           <div class="input-group">
             <label for="encrypted-frequency">Frequency:</label>
             <input type="text" id="encrypted-frequency" placeholder="e.g., 101.1" value="101.1" oninput="generateEncryptedCode()">
-            <small>Radio frequency as a string (e.g. 101.1)</small>
+            <small>Radio frequency for this encrypted channel.</small>
           </div>
 
           <div class="input-group">
             <label for="encrypted-name">Channel Name:</label>
             <input type="text" id="encrypted-name" placeholder="e.g., Police Channel" value="Police Channel" oninput="generateEncryptedCode()">
-            <small>Optional name for the encrypted channel</small>
+            <small>Optional name shown in the radio UI for the encrypted channel; if empty, the frequency is typically shown by itself (module-defined behavior).</small>
           </div>
         </div>
 
@@ -82,6 +83,24 @@ Handheld radio voice chat system with frequency tuning, encrypted channels, fact
 </div>
 
 <script>
+function luaValueFromText(text) {
+  const t = (text || '').trim();
+  if (!t) return '';
+  if (/^[A-Za-z_][A-Za-z0-9_]*$/.test(t)) return t;
+  return JSON.stringify(t);
+}
+
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function showRadioTab(which) {
   const presetPanel = document.getElementById('radio-panel-preset');
   const encryptedPanel = document.getElementById('radio-panel-encrypted');
@@ -152,7 +171,8 @@ function generateEncryptedCode() {
   ''
   ];
 
-  const factionTable = factions.length > 0 ? `{${factions.join(', ')}}` : '{}';
+  const factionLuaValues = factions.map(luaValueFromText).filter(Boolean);
+  const factionTable = factionLuaValues.length > 0 ? `{${factionLuaValues.join(', ')}}` : '{}';
   
   if (channelName) {
     lines.push(`lia.radio.registerEncryptedFrequency(${JSON.stringify(frequency)}, ${factionTable}, ${JSON.stringify(channelName)})`);
@@ -189,6 +209,14 @@ document.addEventListener('DOMContentLoaded', () => {
     list.innerHTML = '';
     addEncryptedFactionRow('FACTION_POLICE');
   }
+  setupLiveUpdate(() => {
+    const encryptedPanel = document.getElementById('radio-panel-encrypted');
+    if (encryptedPanel && encryptedPanel.style.display !== 'none') {
+      generateEncryptedCode();
+    } else {
+      generatePresetCode();
+    }
+  });
   showRadioTab('preset');
 });
 </script>

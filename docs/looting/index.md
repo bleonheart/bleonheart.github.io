@@ -1,6 +1,6 @@
-# Lootables
+# Interactive Looting
 
-Searchable loot containers (cardboard boxes, wooden crates, metal barrels, lockers, safes) with rarity tiers (Common/Uncommon/Rare/Legendary/Unique), skill requirements (strength/luck), alarm systems, and cooldown timers for exploration-based item gathering.
+A comprehensive looting system that creates searchable container entities throughout the world. Features dynamic entity registration, skill-based access requirements (strength/luck attributes), multi-tiered rarity system (Common/Uncommon/Rare/Legendary/Unique) with weighted probability distribution, intelligent reward allocation with inventory management, customizable container types (cardboard boxes, crates, barrels, lockers, safes), cooldown timers for respawn prevention, audio feedback systems, and seamless integration with the Lilia framework
 
 ---
 
@@ -14,11 +14,13 @@ Searchable loot containers (cardboard boxes, wooden crates, metal barrels, locke
         <div class="input-group">
           <label for="loot-id">Unique ID:</label>
           <input type="text" id="loot-id" placeholder="e.g., loot_cardboard_box" value="loot_cardboard_box" oninput="generateLootCode()">
+          <small>Unique identifier passed to <code>lia.loot.registerLoot</code>.</small>
         </div>
 
         <div class="input-group">
           <label for="loot-name">Name:</label>
           <input type="text" id="loot-name" placeholder="e.g., Cardboard Box" value="Cardboard Box" oninput="generateLootCode()">
+          <small>Shown to players for this loot container type.</small>
         </div>
       </div>
 
@@ -26,11 +28,13 @@ Searchable loot containers (cardboard boxes, wooden crates, metal barrels, locke
         <div class="input-group">
           <label for="loot-model">Model:</label>
           <input type="text" id="loot-model" placeholder="models/props_junk/cardboard_box001a.mdl" value="models/props_junk/cardboard_box001a.mdl" oninput="generateLootCode()">
+          <small>World model for the loot container entity.</small>
         </div>
 
         <div class="input-group">
           <label for="loot-sound">Opening Sound:</label>
           <input type="text" id="loot-sound" placeholder="doors/door_metal_thin_open1.wav" value="doors/door_metal_thin_open1.wav" oninput="generateLootCode()">
+          <small>Played when the container is opened/searched.</small>
         </div>
       </div>
     </div>
@@ -40,30 +44,31 @@ Searchable loot containers (cardboard boxes, wooden crates, metal barrels, locke
         <div class="input-group">
           <label for="loot-chance">Chance:</label>
           <input type="number" id="loot-chance" min="0" value="5" oninput="generateLootCode()">
+          <small>Base chance value used by the looting system (module-defined meaning; commonly treated as a percent or weight).</small>
         </div>
 
         <div class="input-group">
           <label for="loot-chancetime">Chance Time:</label>
           <input type="number" id="loot-chancetime" min="0" value="15" oninput="generateLootCode()">
-        </div>
-
-        <div class="input-group">
-          <label for="sr-strength">Strength Req:</label>
-          <input type="number" id="sr-strength" min="0" value="0" oninput="generateLootCode()">
-        </div>
-
-        <div class="input-group">
-          <label for="sr-luck">Luck Req:</label>
-          <input type="number" id="sr-luck" min="0" value="0" oninput="generateLootCode()">
+          <small>Additional timing/chance configuration used by the module (schema/module-defined; keep consistent with other loot definitions).</small>
         </div>
       </div>
+    </div>
 
-      <div class="form-grid-2">
-        <div class="input-group">
-          <label for="sr-luckchance">Luck Chance:</label>
-          <input type="number" id="sr-luckchance" min="0" value="0" oninput="generateLootCode()">
-        </div>
+    <div class="generator-section">
+      <div class="input-group">
+        <label>Attributes Requirements:</label>
+        <small>
+          Each row becomes one entry in <code>skillRequirements</code> (<code>[attribKey] = requiredValue</code>).
+          <br>
+          <b>Attribute</b>: character attribute key (e.g. <code>strength</code>, <code>luck</code>).
+          <br>
+          <b>Required</b>: minimum value required to search this container.
+        </small>
       </div>
+
+      <div id="attr-list" class="dynamic-list"></div>
+      <button type="button" class="add-btn" onclick="addLootAttribRow()">Add Attribute</button>
     </div>
 
     <div class="generator-section">
@@ -92,6 +97,39 @@ Searchable loot containers (cardboard boxes, wooden crates, metal barrels, locke
 </div>
 
 <script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
+function lootAttribRowTemplate(attrib, value) {
+  return `
+    <div class="dynamic-row loot-attrib-row">
+      <input type="text" class="loot-attrib-key" placeholder="strength" value="${attrib || ''}" oninput="generateLootCode()">
+      <input type="number" class="loot-attrib-value small-input" placeholder="0" min="0" value="${value ?? 0}" oninput="generateLootCode()">
+      <button type="button" class="remove-btn" onclick="removeLootAttribRow(this)">×</button>
+    </div>`;
+}
+
+function addLootAttribRow(attrib, value) {
+  const list = document.getElementById('attr-list');
+  if (!list) return;
+  list.insertAdjacentHTML('beforeend', lootAttribRowTemplate(attrib, value));
+  generateLootCode();
+}
+
+function removeLootAttribRow(btn) {
+  const row = btn.closest('.loot-attrib-row');
+  if (row) row.remove();
+  generateLootCode();
+}
+
 function tierItemRowTemplate(item) {
   return `
     <div class="dynamic-row tier-item-row">
@@ -182,9 +220,17 @@ function generateLootCode() {
   const chanceTime = document.getElementById('loot-chancetime').value || '15';
   const openingSound = (document.getElementById('loot-sound').value || '').trim() || 'doors/door_metal_thin_open1.wav';
 
-  const strength = document.getElementById('sr-strength').value || '0';
-  const luck = document.getElementById('sr-luck').value || '0';
-  const luckChance = document.getElementById('sr-luckchance').value || '0';
+  const attribRows = Array.from(document.querySelectorAll('#attr-list .loot-attrib-row'));
+  const attribs = [];
+  for (const row of attribRows) {
+    const key = (row.querySelector('.loot-attrib-key').value || '').trim();
+    const value = (row.querySelector('.loot-attrib-value').value || '').trim();
+    if (!key) continue;
+    attribs.push({
+      key,
+      value: value === '' ? 0 : Number(value)
+    });
+  }
 
   const rows = Array.from(document.querySelectorAll('#tier-list .tier-block'));
   const tiers = [];
@@ -204,21 +250,29 @@ function generateLootCode() {
 
   const lines = [
   '-- Copy and paste this code into the module definitions file',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/looting/definitions.lua',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/looting/definitions.lua',
   '',
   `lia.loot.registerLoot(${JSON.stringify(uniqueId)}, {`,
   `    name = ${JSON.stringify(name)},`,
   `    model = ${JSON.stringify(model)},`,
   `    chance = ${chance},`,
   `    chanceTime = ${chanceTime},`,
-  '    skillRequirements = {',
-  `        strength = ${strength},`,
-  `        luck = ${luck},`,
-  `        luckChance = ${luckChance},`,
-  '    },',
-  `    openingSound = ${JSON.stringify(openingSound)},`,
-  '    items = {'
+  '    skillRequirements = {'
   ];
+
+  if (attribs.length > 0) {
+    for (const a of attribs) {
+      lines.push(`        [${JSON.stringify(a.key)}] = ${a.value},`);
+    }
+    if (lines[lines.length - 1].endsWith(',')) {
+      lines[lines.length - 1] = lines[lines.length - 1].slice(0, -1);
+    }
+  }
+
+  lines.push('    },');
+
+  lines.push(`    openingSound = ${JSON.stringify(openingSound)},`);
+  lines.push('    items = {');
 
   if (tiers.length === 0) {
     lines.push('        -- Add tiers via generator UI');
@@ -249,9 +303,12 @@ function fillExampleLoot() {
   document.getElementById('loot-chance').value = '5';
   document.getElementById('loot-chancetime').value = '15';
   document.getElementById('loot-sound').value = 'doors/door_metal_thin_open1.wav';
-  document.getElementById('sr-strength').value = '0';
-  document.getElementById('sr-luck').value = '0';
-  document.getElementById('sr-luckchance').value = '0';
+
+  const attrList = document.getElementById('attr-list');
+  if (attrList) {
+    attrList.innerHTML = '';
+    addLootAttribRow('strength', 0);
+  }
 
   const list = document.getElementById('tier-list');
   list.innerHTML = '';
@@ -264,6 +321,7 @@ function fillExampleLoot() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(generateLootCode);
   fillExampleLoot();
 });
 </script>

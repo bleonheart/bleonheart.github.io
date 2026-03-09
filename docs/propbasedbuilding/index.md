@@ -1,6 +1,6 @@
-# Improved Constructable Props
+# Prop-Based Building
 
-Constructable prop system with furniture items (boxes, cabinets, chairs, tables, couches) requiring resources and supporting upgrades into functional entities
+Advanced prop-based construction system enabling players to craft and place diverse furniture items including chairs, tables, couches, storage units, and decorative props. Features resource requirements, health systems, destruction mechanics with specialized tools, and supports upgrades into functional entities for comprehensive base building and interior customization.
 
 ---
 
@@ -28,12 +28,14 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
           <div class="input-group">
             <label for="prop-name">Prop Name:</label>
             <input type="text" id="prop-name" placeholder="e.g., Wooden Chair" value="Wooden Chair" oninput="generatePropCode()">
+            <small>Name shown to players for this constructable prop entry.</small>
           </div>
         </div>
 
         <div class="input-group">
           <label for="prop-desc">Description:</label>
           <textarea id="prop-desc" placeholder="e.g., A simple wooden chair for sitting" oninput="generatePropCode()">A simple wooden chair for sitting.</textarea>
+          <small>Shown in UI/tooltip for this constructable prop.</small>
         </div>
       </div>
 
@@ -54,13 +56,13 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
           <div class="input-group">
             <label for="prop-width">Inventory Width:</label>
             <input type="number" id="prop-width" min="1" max="5" value="2" oninput="generatePropCode()">
-            <small>Inventory grid width (defaults to 2)</small>
+            <small>Inventory grid width for the item representation (defaults to <code>2</code>).</small>
           </div>
 
           <div class="input-group">
             <label for="prop-height">Inventory Height:</label>
             <input type="number" id="prop-height" min="1" max="5" value="2" oninput="generatePropCode()">
-            <small>Inventory grid height (defaults to 2)</small>
+            <small>Inventory grid height for the item representation (defaults to <code>2</code>).</small>
           </div>
         </div>
 
@@ -68,7 +70,7 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
           <div class="input-group">
             <label for="prop-health">Health:</label>
             <input type="number" id="prop-health" min="0" value="100" oninput="generatePropCode()">
-            <small>Optional health value (0 for indestructible)</small>
+            <small>Optional health value for the placed prop (<code>0</code> = indestructible).</small>
           </div>
 
           <div class="input-group">
@@ -78,11 +80,6 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
           </div>
         </div>
 
-        <div class="input-group">
-          <label for="prop-time">Construction Time:</label>
-          <input type="number" id="prop-time" min="1" value="5" oninput="generatePropCode()">
-          <small>Construction time in seconds (defaults to 5)</small>
-        </div>
       </div>
 
       <div class="button-group">
@@ -103,12 +100,14 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
           <div class="input-group">
             <label for="item-name">Item Name:</label>
             <input type="text" id="item-name" placeholder="e.g., Custom Construction Item" value="Custom Construction Item" oninput="generateItemCode()">
+            <small>Name shown to players for the generated item.</small>
           </div>
         </div>
 
         <div class="input-group">
           <label for="item-desc">Description:</label>
           <textarea id="item-desc" placeholder="e.g., A custom construction item" oninput="generateItemCode()">A custom construction item.</textarea>
+          <small>Shown in item tooltip/details.</small>
         </div>
       </div>
 
@@ -129,19 +128,16 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
           <div class="input-group">
             <label for="item-width">Inventory Width:</label>
             <input type="number" id="item-width" min="1" max="5" value="2" oninput="generateItemCode()">
+            <small>Inventory grid width for the item.</small>
           </div>
 
           <div class="input-group">
             <label for="item-height">Inventory Height:</label>
             <input type="number" id="item-height" min="1" max="5" value="2" oninput="generateItemCode()">
+            <small>Inventory grid height for the item.</small>
           </div>
         </div>
 
-        <div class="input-group">
-          <label for="item-time">Construction Time:</label>
-          <input type="number" id="item-time" min="1" value="5" oninput="generateItemCode()">
-          <small>Construction time in seconds</small>
-        </div>
 
         <div class="input-group">
           <label for="item-health">Prop Health:</label>
@@ -167,6 +163,17 @@ Constructable prop system with furniture items (boxes, cabinets, chairs, tables,
 </div>
 
 <script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function showPropTab(which) {
   const propPanel = document.getElementById('prop-panel-prop');
   const itemPanel = document.getElementById('prop-panel-item');
@@ -192,11 +199,10 @@ function generatePropCode() {
   const height = document.getElementById('prop-height').value || '2';
   const health = document.getElementById('prop-health').value || '0';
   const category = (document.getElementById('prop-category').value || '').trim() || 'Constructable';
-  const time = document.getElementById('prop-time').value || '5';
 
   const lines = [
   '-- Copy and paste this code into the props.lua file',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/propbasedbuilding/props.lua',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/propbasedbuilding/props.lua',
   '',
   `MODULE:RegisterProp(${JSON.stringify(uniqueId)}, {`,
   `    name = ${JSON.stringify(name)},`,
@@ -224,9 +230,6 @@ function generatePropCode() {
     lines.push(`    category = ${JSON.stringify(category)},`);
   }
 
-  if (time && time !== '5') {
-    lines.push(`    time = ${time},`);
-  }
 
   // Remove trailing comma if present
   if (lines[lines.length - 1].endsWith(',')) {
@@ -248,19 +251,17 @@ function generateItemCode() {
   const prop = (document.getElementById('item-prop').value || '').trim() || 'models/props_c17/FurnitureChair001a.mdl';
   const width = document.getElementById('item-width').value || '2';
   const height = document.getElementById('item-height').value || '2';
-  const time = document.getElementById('item-time').value || '5';
   const health = document.getElementById('item-health').value || '0';
 
   const lines = [
   '-- Copy and paste this code into a new item file',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/propbasedbuilding/items/custom_item.lua',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/propbasedbuilding/items/custom_item.lua',
   '',
   'ITEM.name = ' + JSON.stringify(name),
   'ITEM.desc = ' + JSON.stringify(desc),
   'ITEM.category = "Constructable"',
   'ITEM.model = ' + JSON.stringify(model),
   'ITEM.prop = ' + JSON.stringify(prop),
-  'ITEM.time = ' + time,
   'ITEM.width = ' + width,
   'ITEM.height = ' + height,
   ];
@@ -308,7 +309,6 @@ function fillExampleProp() {
   document.getElementById('prop-height').value = '2';
   document.getElementById('prop-health').value = '150';
   document.getElementById('prop-category').value = 'Furniture';
-  document.getElementById('prop-time').value = '5';
   generatePropCode();
 }
 
@@ -320,12 +320,19 @@ function fillExampleItem() {
   document.getElementById('item-prop').value = 'models/props_c17/FurnitureChair001a.mdl';
   document.getElementById('item-width').value = '2';
   document.getElementById('item-height').value = '2';
-  document.getElementById('item-time').value = '3';
   document.getElementById('item-health').value = '75';
   generateItemCode();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(() => {
+    const itemPanel = document.getElementById('prop-panel-item');
+    if (itemPanel && itemPanel.style.display !== 'none') {
+      generateItemCode();
+    } else {
+      generatePropCode();
+    }
+  });
   showPropTab('prop');
 });
 </script>

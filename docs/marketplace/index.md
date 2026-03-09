@@ -1,6 +1,6 @@
-# Marketplace
+# Player Marketplace
 
-Provides features such as Marketplace system for player-to-player trading, Buy and sell items with no expiration dates, Configurable listing limits and minimum prices, NPC vendor interface for easy access, Search and filter functionality for items, Economic system integration for server economy, and Super admin item removal tools.
+A comprehensive player-to-player trading marketplace system featuring persistent database storage, configurable listing limits and pricing controls, intuitive GUI interfaces for buyers and sellers, administrative management tools with item removal and price modification capabilities, automatic economic transactions with money transfers, NPC vendor integration for marketplace access, real-time listing updates and search functionality, item validation and blacklist support, and robust server economy integration.
 
 ---
 

@@ -1,6 +1,6 @@
-# Gathering System
+# Comprehensive Resource Gathering & Crafting
 
-Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver ore, coal), fishing system with pole/bait and fish types (trout, bass, catfish, perch) plus junk, crafting materials (ingots, wood, swords), and stackable inventory management.
+A complete resource gathering system featuring tree harvesting (spruce wood, sticks, tree sap, logs, wood planks) with axe-based chopping mechanics, ore mining from rocks (iron, gold, silver ore, coal, stone) for smelting into ingots, an interactive fishing system requiring poles and bait that yields various fish types (lake trout, bass, catfish, perch) plus junk items (old boots, trash), comprehensive crafting materials processing (raw resources into refined materials like iron ingots, wood planks, and weapons such as iron swords), and full stackable inventory management with configurable max quantities for all gathered items.
 
 ---
 
@@ -20,12 +20,14 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
         <div class="input-group">
           <label for="gathering-name">Display Name:</label>
           <input type="text" id="gathering-name" placeholder="e.g., Iron Vein" value="Iron Vein" oninput="generateGatheringCode()">
+          <small>Shown to players when looking at or interacting with the gatherable entity.</small>
         </div>
       </div>
 
       <div class="input-group">
         <label for="gathering-desc">Description:</label>
         <textarea id="gathering-desc" placeholder="e.g., A rich vein of iron ore embedded in the rock face." oninput="generateGatheringCode()">A rich vein of iron ore embedded in the rock face.</textarea>
+        <small>Player-facing description for the gatherable entity.</small>
       </div>
     </div>
 
@@ -34,6 +36,7 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
         <div class="input-group">
           <label for="gathering-model">Model Path:</label>
           <input type="text" id="gathering-model" placeholder="e.g., models/props_mining/rock01.mdl" value="models/fallenlogic_environment/rocks/scattersmooth_01.mdl" oninput="generateGatheringCode()">
+          <small>World model used by the spawned gatherable entity.</small>
         </div>
 
         <div class="input-group">
@@ -47,19 +50,19 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
         <div class="input-group">
           <label for="gathering-health">Health:</label>
           <input type="number" id="gathering-health" placeholder="100" min="1" value="150" oninput="generateGatheringCode()">
-          <small>How many hits the entity can take</small>
+          <small>How many hits/damage units the entity can take before it is depleted.</small>
         </div>
 
         <div class="input-group">
           <label for="gathering-items-before-cooldown">Items Before Cooldown:</label>
           <input type="number" id="gathering-items-before-cooldown" placeholder="3" min="1" value="5" oninput="generateGatheringCode()">
-          <small>How many items can be gathered before cooldown</small>
+          <small>How many gather rewards can be obtained before the node goes on cooldown.</small>
         </div>
 
         <div class="input-group">
           <label for="gathering-cooldown-time">Cooldown Time (seconds):</label>
           <input type="number" id="gathering-cooldown-time" placeholder="300" min="1" value="600" oninput="generateGatheringCode()">
-          <small>Cooldown duration in seconds</small>
+          <small>How long the node stays inactive before it can be gathered again.</small>
         </div>
       </div>
     </div>
@@ -77,7 +80,15 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
     <div class="generator-section">
       <div class="input-group">
         <label>Loot Table:</label>
-        <small>Each row is one loot entry (item + min/max + chance 1-100).</small>
+        <small>
+          Each row becomes one entry in <code>lootTable</code> (<code>[itemID] = { min = X, max = Y, chance = Z }</code>).
+          <br>
+          <b>Item</b>: the item unique ID to award (e.g. <code>iron_ore</code>).
+          <br>
+          <b>Min</b>/<b>Max</b>: random quantity range to give when this item drops (inclusive).
+          <br>
+          <b>Chance</b>: percent chance (0-100) to drop this item per gather reward roll.
+        </small>
       </div>
 
       <div id="gathering-loot-list" class="dynamic-list"></div>
@@ -100,6 +111,17 @@ Resource gathering from trees (spruce, sticks, sap) and rocks (iron/gold/silver 
 </div>
 
 <script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function gatheringWeaponRowTemplate(idx, weapon) {
   return `
   <div class="dynamic-row" data-idx="${idx}">
@@ -262,6 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
   addGatheringLootRow('iron_ore', 2, 4, 85);
   addGatheringLootRow('stone', 1, 2, 60);
   addGatheringLootRow('coal', 0, 1, 25);
+
+  setupLiveUpdate(generateGatheringCode);
+  generateGatheringCode();
 });
 </script>
 

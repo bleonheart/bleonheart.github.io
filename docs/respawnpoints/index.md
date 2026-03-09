@@ -1,6 +1,6 @@
-# FOB Respawn Points
+# FOB Respawn
 
-Forward operating base terminals that manage faction access and respawn locations.
+A comprehensive Forward Operating Base (FOB) respawn management system that allows administrators to place faction-specific respawn terminals. Players can respawn at designated FOB points based on their faction affiliation, with support for multiple spawn points per faction and map-specific configurations. The system includes client-server synchronization, administrative placement tools, and automatic respawn location selection.
 
 ---
 

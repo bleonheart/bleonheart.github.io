@@ -1,6 +1,6 @@
-# LSCS Compatibility
+# LSCS Lightsaber
 
-Adds compatibility with LSCS (Lightsaber Combat System) for enhanced lightsaber combat mechanics.
+Integrates LSCS (Lightsaber Combat System) framework with Lilia, providing comprehensive lightsaber mechanics including customizable hilts, crystals, stances, and abilities. Features dual-wielding support, inventory management, and seamless character data synchronization for enhanced Jedi/Sith roleplay combat experience.
 
 ---
 

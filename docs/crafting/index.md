@@ -1,6 +1,6 @@
-# Crafting
+# Advanced Crafting
 
-Recipe-based crafting system with crafting stations (forge, workbench), time-based progress, attribute requirements, tool dependencies, and faction restrictions
+Comprehensive crafting system featuring multiple crafting stations (forge, workbench), recipe-based crafting with time-based progress bars, attribute requirements and skill progression, tool dependencies, faction restrictions, knowledge system with recipe books, dynamic UI with progress tracking and cancellation, item consumption and output with randomized quantities, and automatic entity registration for crafting stations
 
 ---
 
@@ -28,12 +28,14 @@ Recipe-based crafting system with crafting stations (forge, workbench), time-bas
           <div class="input-group">
             <label for="station-name">Station Name:</label>
             <input type="text" id="station-name" placeholder="e.g., Forge" value="Forge" oninput="generateCraftStationCode()">
+            <small>Display name shown to players for this crafting station.</small>
           </div>
         </div>
 
         <div class="input-group">
           <label for="station-model">Model:</label>
           <input type="text" id="station-model" placeholder="models/props_c17/FurnitureStove001a.mdl" value="models/props_c17/FurnitureStove001a.mdl" oninput="generateCraftStationCode()">
+          <small>World model used by the spawned crafting station entity.</small>
         </div>
       </div>
 
@@ -49,17 +51,20 @@ Recipe-based crafting system with crafting stations (forge, workbench), time-bas
           <div class="input-group">
             <label for="recipe-station">Station ID:</label>
             <input type="text" id="recipe-station" placeholder="e.g., forge" value="forge" oninput="generateCraftRecipeCode()">
+            <small>Which station this recipe belongs to (must match a generated station ID).</small>
           </div>
 
           <div class="input-group">
             <label for="recipe-id">Recipe ID:</label>
             <input type="text" id="recipe-id" placeholder="e.g., iron_ingot" value="iron_ingot" oninput="generateCraftRecipeCode()">
+            <small>Unique key for this recipe within the station.</small>
           </div>
         </div>
 
         <div class="input-group">
           <label for="recipe-name">Recipe Name:</label>
           <input type="text" id="recipe-name" placeholder="e.g., Iron Ingot" value="Iron Ingot" oninput="generateCraftRecipeCode()">
+          <small>Display name shown in the crafting menu.</small>
         </div>
       </div>
 
@@ -68,24 +73,22 @@ Recipe-based crafting system with crafting stations (forge, workbench), time-bas
           <div class="input-group">
             <label for="recipe-time">Craft Time:</label>
             <input type="number" id="recipe-time" min="0" value="10" oninput="generateCraftRecipeCode()">
+            <small>Time in seconds required to craft this recipe.</small>
           </div>
 
           <div class="input-group">
             <label for="recipe-knowledge">Requires Knowledge:</label>
             <select id="recipe-knowledge" oninput="generateCraftRecipeCode()">
-              <option value="false" selected>false</option>
-              <option value="true">true</option>
+              <option value="false" selected>No</option>
+              <option value="true">Yes</option>
             </select>
+            <small>If enabled, this recipe requires knowledge to craft (module-defined meaning).</small>
           </div>
 
           <div class="input-group">
             <label for="recipe-reward">Crafting Reward:</label>
             <input type="number" id="recipe-reward" value="1" oninput="generateCraftRecipeCode()">
-          </div>
-
-          <div class="input-group">
-            <label for="recipe-faction">Faction (optional):</label>
-            <input type="text" id="recipe-faction" placeholder="FACTION_BLACKSMITH or {FACTION_A, FACTION_B}" value="" oninput="generateCraftRecipeCode()">
+            <small>How much crafting progression/reward to grant on completion (module-defined meaning).</small>
           </div>
         </div>
       </div>
@@ -111,19 +114,32 @@ Recipe-based crafting system with crafting stations (forge, workbench), time-bas
       <div class="generator-section">
         <div class="input-group">
           <label>Tools (optional):</label>
-          <small>Comma-separated list of tool item uniqueIDs.</small>
+          <small>Each row is one required tool item uniqueID.</small>
         </div>
-        <div class="input-group">
-          <input type="text" id="recipe-tools" placeholder="hammer, wrench" value="" oninput="generateCraftRecipeCode()">
-        </div>
+        <div id="tools-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addToolRow()">Add Tool</button>
 
         <div class="input-group">
           <label>Attributes (optional):</label>
-          <small>Format: attrib=minimum,attrib2=minimum</small>
+          <small>
+            Each row becomes one entry in <code>attributes</code> (<code>[attribKey] = minimum</code>).
+            <br>
+            <b>Attribute</b>: character attribute key (e.g. <code>strength</code>).
+            <br>
+            <b>Minimum</b>: minimum value required.
+          </small>
         </div>
+        <div id="attribs-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addAttribRow()">Add Attribute</button>
+      </div>
+
+      <div class="generator-section">
         <div class="input-group">
-          <input type="text" id="recipe-attribs" placeholder="strength=5,crafting=2" value="" oninput="generateCraftRecipeCode()">
+          <label>Faction (optional):</label>
+          <small>Each row is one faction constant (e.g., FACTION_CITIZEN). Use multiple rows for lists.</small>
         </div>
+        <div id="recipe-factions-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addCraftFactionRow()">Add Faction</button>
       </div>
 
       <div class="button-group">
@@ -143,6 +159,24 @@ Recipe-based crafting system with crafting stations (forge, workbench), time-bas
 </div>
 
 <script>
+function luaValueFromText(text) {
+  const t = (text || '').trim();
+  if (!t) return '';
+  if (/^[A-Za-z_][A-Za-z0-9_]*$/.test(t)) return t;
+  return JSON.stringify(t);
+}
+
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function showCraftTab(which) {
   const sPanel = document.getElementById('craft-panel-station');
   const rPanel = document.getElementById('craft-panel-recipe');
@@ -185,6 +219,70 @@ function removePairRow(btn) {
   generateCraftRecipeCode();
 }
 
+function toolRowTemplate(tool) {
+  return `
+  <div class="dynamic-row tool-row">
+    <input type="text" class="tool-item" placeholder="hammer" value="${tool || ''}" oninput="generateCraftRecipeCode()">
+    <button type="button" class="remove-btn" onclick="removeToolRow(this)">×</button>
+  </div>`;
+}
+
+function addToolRow(tool) {
+  const list = document.getElementById('tools-list');
+  if (!list) return;
+  list.insertAdjacentHTML('beforeend', toolRowTemplate(tool));
+  generateCraftRecipeCode();
+}
+
+function removeToolRow(btn) {
+  const row = btn.closest('.tool-row');
+  if (row) row.remove();
+  generateCraftRecipeCode();
+}
+
+function attribRowTemplate(attrib, value) {
+  return `
+  <div class="dynamic-row attrib-row">
+    <input type="text" class="attrib-key" placeholder="strength" value="${attrib || ''}" oninput="generateCraftRecipeCode()">
+    <input type="number" class="attrib-min small-input" placeholder="0" min="0" value="${value ?? 0}" oninput="generateCraftRecipeCode()">
+    <button type="button" class="remove-btn" onclick="removeAttribRow(this)">×</button>
+  </div>`;
+}
+
+function addAttribRow(attrib, value) {
+  const list = document.getElementById('attribs-list');
+  if (!list) return;
+  list.insertAdjacentHTML('beforeend', attribRowTemplate(attrib, value));
+  generateCraftRecipeCode();
+}
+
+function removeAttribRow(btn) {
+  const row = btn.closest('.attrib-row');
+  if (row) row.remove();
+  generateCraftRecipeCode();
+}
+
+function craftFactionRowTemplate(faction) {
+  return `
+  <div class="dynamic-row craft-faction-row">
+    <input type="text" class="craft-faction-item" placeholder="FACTION_CITIZEN" value="${faction || ''}" oninput="generateCraftRecipeCode()">
+    <button type="button" class="remove-btn" onclick="removeCraftFactionRow(this)">×</button>
+  </div>`;
+}
+
+function addCraftFactionRow(faction) {
+  const list = document.getElementById('recipe-factions-list');
+  if (!list) return;
+  list.insertAdjacentHTML('beforeend', craftFactionRowTemplate(faction));
+  generateCraftRecipeCode();
+}
+
+function removeCraftFactionRow(btn) {
+  const row = btn.closest('.craft-faction-row');
+  if (row) row.remove();
+  generateCraftRecipeCode();
+}
+
 function generateCraftStationCode() {
   const stationId = (document.getElementById('station-id').value || '').trim() || 'station';
   const stationName = (document.getElementById('station-name').value || '').trim() || 'Station';
@@ -192,7 +290,7 @@ function generateCraftStationCode() {
 
   const lines = [
   '-- Copy and paste this code into a shared file loaded by the crafting module',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/crafting/libraries/shared.lua',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/crafting/libraries/shared.lua',
   '',
   `lia.crafting.generateCraftingTable(${JSON.stringify(stationId)}, {`,
   `    name = ${JSON.stringify(stationName)},`,
@@ -212,21 +310,6 @@ function fillExampleCraftStation() {
   generateCraftStationCode();
 }
 
-function parseAttribs(text) {
-  const out = [];
-  if (!text) return out;
-  const parts = text.split(',').map(p => p.trim()).filter(Boolean);
-  for (const p of parts) {
-    const m = p.split('=').map(x => x.trim());
-    if (m.length !== 2) continue;
-    const key = m[0];
-    const val = m[1];
-    if (!key || !val) continue;
-    out.push({ key, val });
-  }
-  return out;
-}
-
 function generateCraftRecipeCode() {
   const stationId = (document.getElementById('recipe-station').value || '').trim() || 'station';
   const recipeId = (document.getElementById('recipe-id').value || '').trim() || 'recipe';
@@ -235,13 +318,34 @@ function generateCraftRecipeCode() {
   const craftTime = document.getElementById('recipe-time').value || '0';
   const requiresKnowledge = document.getElementById('recipe-knowledge').value;
   const craftingReward = document.getElementById('recipe-reward').value || '0';
-  const faction = (document.getElementById('recipe-faction').value || '').trim();
 
-  const toolsText = (document.getElementById('recipe-tools').value || '').trim();
-  const tools = toolsText ? toolsText.split(',').map(t => t.trim()).filter(Boolean) : [];
+  const factionRows = Array.from(document.querySelectorAll('#recipe-factions-list .craft-faction-row'));
+  const factions = [];
+  for (const row of factionRows) {
+    const faction = (row.querySelector('.craft-faction-item').value || '').trim();
+    if (!faction) continue;
+    factions.push(faction);
+  }
 
-  const attribsText = (document.getElementById('recipe-attribs').value || '').trim();
-  const attribs = parseAttribs(attribsText);
+  const toolRows = Array.from(document.querySelectorAll('#tools-list .tool-row'));
+  const tools = [];
+  for (const row of toolRows) {
+    const toolID = (row.querySelector('.tool-item').value || '').trim();
+    if (!toolID) continue;
+    tools.push(toolID);
+  }
+
+  const attribRows = Array.from(document.querySelectorAll('#attribs-list .attrib-row'));
+  const attribs = [];
+  for (const row of attribRows) {
+    const key = (row.querySelector('.attrib-key').value || '').trim();
+    const val = (row.querySelector('.attrib-min').value || '').trim();
+    if (!key) continue;
+    attribs.push({
+      key,
+      val: val === '' ? 0 : Number(val)
+    });
+  }
 
   const reqRows = Array.from(document.querySelectorAll('#req-list .dynamic-row'));
   const requirements = [];
@@ -263,7 +367,7 @@ function generateCraftRecipeCode() {
 
   const lines = [
   '-- Copy and paste this code into a shared file loaded by the crafting module',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/crafting/libraries/shared.lua',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/crafting/libraries/shared.lua',
   '',
   `lia.crafting.generateCraftingRecipe(${JSON.stringify(stationId)}, {`,
   `    [${JSON.stringify(recipeId)}] = {`,
@@ -301,8 +405,15 @@ function generateCraftRecipeCode() {
   lines.push(`        requiresKnowledge = ${requiresKnowledge},`);
   lines.push(`        craftingReward = ${craftingReward},`);
 
-  if (faction) {
-    lines.push(`        faction = ${faction},`);
+  if (factions.length > 0) {
+    const factionLuaValues = factions.map(luaValueFromText).filter(Boolean);
+    if (factionLuaValues.length === 0) {
+      // no-op
+    } else if (factionLuaValues.length === 1) {
+      lines.push(`        faction = ${factionLuaValues[0]},`);
+    } else {
+      lines.push(`        faction = {${factionLuaValues.join(', ')}},`);
+    }
   }
 
   if (tools.length > 0) {
@@ -312,7 +423,7 @@ function generateCraftRecipeCode() {
   if (attribs.length > 0) {
     lines.push('        attributes = {');
     for (const a of attribs) {
-      lines.push(`            ${a.key} = ${a.val},`);
+      lines.push(`            [${JSON.stringify(a.key)}] = ${a.val},`);
     }
     if (lines[lines.length - 1].endsWith(',')) {
       lines[lines.length - 1] = lines[lines.length - 1].slice(0, -1);
@@ -340,9 +451,14 @@ function fillExampleCraftRecipe() {
   document.getElementById('recipe-time').value = '10';
   document.getElementById('recipe-knowledge').value = 'false';
   document.getElementById('recipe-reward').value = '1';
-  document.getElementById('recipe-faction').value = '';
-  document.getElementById('recipe-tools').value = '';
-  document.getElementById('recipe-attribs').value = '';
+
+  const factionsList = document.getElementById('recipe-factions-list');
+  if (factionsList) factionsList.innerHTML = '';
+
+  const toolsList = document.getElementById('tools-list');
+  if (toolsList) toolsList.innerHTML = '';
+  const attribsList = document.getElementById('attribs-list');
+  if (attribsList) attribsList.innerHTML = '';
 
   document.getElementById('req-list').innerHTML = '';
   document.getElementById('out-list').innerHTML = '';
@@ -356,8 +472,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // Seed some rows for recipe tab so it isn't empty when switched
   document.getElementById('req-list').innerHTML = '';
   document.getElementById('out-list').innerHTML = '';
+  const toolsList = document.getElementById('tools-list');
+  if (toolsList) toolsList.innerHTML = '';
+  const attribsList = document.getElementById('attribs-list');
+  if (attribsList) attribsList.innerHTML = '';
+  const factionsList = document.getElementById('recipe-factions-list');
+  if (factionsList) factionsList.innerHTML = '';
   addReqRow('iron_ore', '1');
   addOutRow('iron_ingot', '1');
+  setupLiveUpdate(() => {
+    const recipePanel = document.getElementById('craft-panel-recipe');
+    if (recipePanel && recipePanel.style.display !== 'none') {
+      generateCraftRecipeCode();
+    } else {
+      generateCraftStationCode();
+    }
+  });
 });
 </script>
 

@@ -1,6 +1,6 @@
-# Medals
+# Comprehensive Medal
 
-Persistent medal award system displayed on character profiles with staff permissions for giving/taking medals and admin controls
+A comprehensive medal award and display system featuring multiple themed medal packs (1942 RP, US Military branches, Police departments, Star Wars RP), persistent character-based medal storage with rarity tiers (Common, Uncommon, Rare, Exceptionally Rare), staff permissions for medal management, wearable medal slots (up to 5 medals), character profile integration, and admin controls for giving/taking medals with full network synchronization
 
 ---
 
@@ -12,25 +12,22 @@ Persistent medal award system displayed on character profiles with staff permiss
     <div class="generator-section">
       <div class="form-grid-2">
         <div class="input-group">
-          <label for="medal-pack">Pack ID:</label>
-          <input type="text" id="medal-pack" placeholder="e.g., lapd" value="lapd" oninput="generateMedalCode()">
-          <small>Used for medal asset folder</small>
+          <label for="medal-id">Medal ID:</label>
+          <input type="text" id="medal-id" placeholder="e.g., lapd_pd1" value="lapd_pd1" oninput="generateMedalCode()">
+          <small>Unique identifier/key for this medal.</small>
         </div>
 
         <div class="input-group">
-          <label for="medal-id">Medal ID:</label>
-          <input type="text" id="medal-id" placeholder="e.g., lapd_pd1" value="lapd_pd1" oninput="generateMedalCode()">
+          <label for="medal-name">Medal Name:</label>
+          <input type="text" id="medal-name" placeholder="e.g., LAPD - Patrol 1" value="LAPD - Patrol 1" oninput="generateMedalCode()">
+          <small>Display name shown to players.</small>
         </div>
-      </div>
-
-      <div class="input-group">
-        <label for="medal-name">Medal Name:</label>
-        <input type="text" id="medal-name" placeholder="e.g., LAPD - Patrol 1" value="LAPD - Patrol 1" oninput="generateMedalCode()">
       </div>
 
       <div class="input-group">
         <label for="medal-desc">Description:</label>
         <textarea id="medal-desc" placeholder="e.g., Awarded for ..." oninput="generateMedalCode()">Awarded for attaining Patrol Level 1 in the LAPD.</textarea>
+        <small>Description shown to players (tooltip/details panel).</small>
       </div>
 
     </div>
@@ -39,23 +36,31 @@ Persistent medal award system displayed on character profiles with staff permiss
       <div class="input-group">
         <label for="medal-icon">Icon filename:</label>
         <input type="text" id="medal-icon" placeholder="e.g., pd1.png" value="pd1.png" oninput="generateMedalCode()">
-        <small>Filename inside medals pack folder</small>
+        <small>Filename inside medals pack folder. Use lowercase letters, numbers, and underscores only.</small>
       </div>
 
       <div class="form-grid-3">
         <div class="input-group">
           <label for="medal-size-w">Size W:</label>
           <input type="number" id="medal-size-w" placeholder="96" min="1" value="96" oninput="generateMedalCode()">
+          <small>Icon render width in pixels.</small>
         </div>
 
         <div class="input-group">
           <label for="medal-size-h">Size H:</label>
           <input type="number" id="medal-size-h" placeholder="80" min="1" value="80" oninput="generateMedalCode()">
+          <small>Icon render height in pixels.</small>
         </div>
 
         <div class="input-group">
           <label for="medal-rtype">Rarity Type:</label>
-          <input type="number" id="medal-rtype" placeholder="1" min="1" value="1" oninput="generateMedalCode()">
+          <select id="medal-rtype" onchange="generateMedalCode()">
+            <option value="1">Common</option>
+            <option value="2">Uncommon</option>
+            <option value="3">Rare</option>
+            <option value="4">Legendary</option>
+          </select>
+          <small>Controls rarity styling/labeling for this medal.</small>
         </div>
       </div>
     </div>
@@ -76,8 +81,19 @@ Persistent medal award system displayed on character profiles with staff permiss
 </div>
 
 <script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function generateMedalCode() {
-  const packId = (document.getElementById('medal-pack').value || '').trim() || 'custom';
+  const packId = 'custom';
   const medalId = (document.getElementById('medal-id').value || '').trim() || 'medal_example';
   const name = (document.getElementById('medal-name').value || '').trim() || 'Unknown Medal';
   const desc = (document.getElementById('medal-desc').value || '').trim() || 'No description.';
@@ -88,7 +104,7 @@ function generateMedalCode() {
 
   const lines = [
   '-- Copy and paste this code into a medals pack file',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/medals/medals/<pack>.lua',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/medals/medals/<pack>.lua',
   '',
   `lia.medals.registerMedal(${JSON.stringify(medalId)}, {`,
   '    name = ' + JSON.stringify(name) + ',',
@@ -112,7 +128,6 @@ function generateMedalCode() {
 }
 
 function fillExampleMedal() {
-  document.getElementById('medal-pack').value = 'lapd';
   document.getElementById('medal-id').value = 'lapd_pd1';
   document.getElementById('medal-name').value = 'LAPD - Patrol 1';
   document.getElementById('medal-desc').value = 'Awarded for attaining Patrol Level 1 in the LAPD.';
@@ -125,6 +140,7 @@ function fillExampleMedal() {
 
 // Initial generation
 document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(generateMedalCode);
   generateMedalCode();
 });
 </script>

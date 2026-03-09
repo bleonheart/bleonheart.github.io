@@ -1,6 +1,6 @@
-# Delivery NPC
+# Delivery Job
 
-Provides features such as Offers parcel delivery side jobs, Random drop-off locations per mission, Pays players money on completion, NPC shows delivery progress via dialog, and Encourages exploration of the map.
+A comprehensive delivery job system that provides players with parcel delivery missions. Features include a dedicated Delivery faction, randomly generated delivery locations across different maps, time-sensitive deliveries with visual indicators, delivery van spawning with custom bodygroups, crate pickup and drop-off mechanics, distance-based interaction prompts, monetary rewards for completed deliveries, visual waypoint markers showing delivery destinations, cooldown system between deliveries, and proper cleanup of delivery entities on disconnect or faction change. The system encourages map exploration and provides an engaging roleplaying experience for players seeking delivery work.
 
 ---
 

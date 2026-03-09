@@ -1,6 +1,6 @@
-# Territories
+# Territories - Faction Control Point
 
-Faction control point system with configurable capture zones, NPC defenders, HUD status display, and rewards for holding territories
+Comprehensive territory control system that allows factions to capture, defend, and hold strategic control points. Features include configurable capture zones with customizable radius and capture timers, automatic NPC defender spawning, real-time HUD status displays showing current ownership and capture progress, faction-based ownership mechanics with collision prevention to ensure proper point distribution, reward systems for holding territories, persistent entity saving, and administrative tools for managing control points. The system supports dynamic territory warfare where factions can contest control points through presence-based capture mechanics requiring minimum defenders to secure areas.
 
 ---
 

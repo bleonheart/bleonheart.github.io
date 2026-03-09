@@ -1,6 +1,6 @@
-# Clothing System
+# Advanced Bonemerge Clothing
 
-Bonemerging System for Clothing and Outfits.
+Comprehensive bonemerge-based clothing system that allows players to equip and customize outfits with multiple clothing slots. Features dynamic model merging, slot-based inventory management, gender-specific clothing, VIP items, plastic surgery, and a complete vendor system for purchasing and managing clothing items including hats, shirts, pants, shoes, accessories, and full outfits.
 
 ---
 

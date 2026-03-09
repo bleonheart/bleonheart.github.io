@@ -1,6 +1,6 @@
-# Injuries System
+# Comprehensive Injury
 
-Adds indepth damage to legs with side effects
+A comprehensive injury management system featuring multiple injury types including broken legs, bleeding wounds, head concussions, and pain effects. Each injury has unique side effects, healing requirements, and medical treatment options. Includes medical items, treatment minigames, and persistent injury tracking across player sessions.
 
 ---
 

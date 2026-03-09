@@ -1,6 +1,6 @@
-# Realtor
+# Realtor - Property Management
 
-Property creation and management system with tool-based door selection.
+Comprehensive property creation and management system featuring a specialized Property Creator weapon for intuitive door selection. Supports temporary rentals with daily pricing and permanent faction-owned properties with database persistence, preview positioning, and multi-door property compilation.
 
 ---
 

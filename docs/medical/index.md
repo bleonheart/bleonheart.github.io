@@ -1,6 +1,6 @@
-# Medical Kit
+# Medical & Wound
 
-Adds a configurable medkit SWEP for healing yourself or others with cooldowns.
+Comprehensive medical system featuring persistent wound tracking that reduces max health, a configurable medkit SWEP for healing self/others with cooldowns, and a surgery system requiring certified providers and surgical kits to treat lingering wounds. Players accumulate wounds on death that permanently decrease maximum health until treated through surgery.
 
 ---
 

@@ -1,6 +1,6 @@
-# Drugs
+# Comprehensive Drug
 
-Drug cultivation, processing, consumption, and addiction system with effects like speed boost, damage reduction, and stamina regeneration
+Complete drug economy and gameplay system featuring cultivation (weed planting with growth phases), processing (drug processor machines), consumption with various effects (speed boost, damage reduction, stamina regeneration, melee speed, needs decay reduction, ragdoll recovery), overdose mechanics with configurable chances, addiction system, visual effects HUD, and administrative controls. Includes 6 drug types: Cocaine, Heroin, Weed, Meth, LSD, and MDMA, each with unique properties and processing requirements.
 
 ---
 

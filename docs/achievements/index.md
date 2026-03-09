@@ -1,6 +1,6 @@
-# Achievements
+# Comprehensive Achievement
 
-Achievement system tracking kills (zombies, players, NPCs), item pickups, playtime, deaths, and multi-objective challenges with rewards
+Full-featured achievement system with real-time progress tracking, visual progress bars, and administrative oversight. Supports multiple achievement types: kill-based tracking (zombies, players, NPCs with specific entity targeting), item collection milestones, playtime rewards, death tracking, and complex multi-objective challenges with nested progress tracking. Features persistent character-based storage via Lilia
 
 ---
 

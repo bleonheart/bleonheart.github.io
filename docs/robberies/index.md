@@ -1,6 +1,6 @@
 # Store Robbery
 
-Store robbery system with jewelry cases and cash registers, stealable items (cash, jewelry, watches, rings), police requirements, and respawn timers
+Comprehensive store robbery system featuring interactive jewelry cases and cash registers with timed robbery mechanics. Players can steal various valuable items including cash bundles (0-500 value), jewelry bags (100-300 value), gold watches (50-150 value), and diamond rings (200-500 value) with weighted probability drops. The system includes police requirements (minimum 1-2 officers), configurable respawn timers (15-30 minutes), cooldown states, inventory management, and faction blacklist support. Features visual feedback with entity information display, action progress bars, and success/failure notifications.
 
 ---
 
@@ -10,10 +10,8 @@ Store robbery system with jewelry cases and cash registers, stealable items (cas
   <!-- Input Column -->
   <div class="generator-card form-card">
     <div class="generator-section">
-      <div class="form-grid-2">
-        <button id="rob-tab-location" onclick="showRobTab('location')" class="generate-btn">Robbery Location</button>
-        <button id="rob-tab-item" onclick="showRobTab('item')" class="generate-btn example-btn">Robbery Item</button>
-      </div>
+      <h3>Robbery Location Generator</h3>
+      <p>Create new robbery locations with configurable settings and faction restrictions.</p>
     </div>
 
     <div id="rob-panel-location">
@@ -22,12 +20,13 @@ Store robbery system with jewelry cases and cash registers, stealable items (cas
           <div class="input-group">
             <label for="rob-loc-id">Entity Class:</label>
             <input type="text" id="rob-loc-id" placeholder="e.g., jewelry_case" value="jewelry_case" oninput="generateRobberyLocationCode()">
-            <small>Used as the key in lia.robberies.RobbingTable and becomes the spawned entity class</small>
+            <small>Used as the key in <code>lia.robberies.RobbingTable</code> and becomes the spawned entity class.</small>
           </div>
 
           <div class="input-group">
             <label for="rob-loc-name">Name:</label>
             <input type="text" id="rob-loc-name" placeholder="e.g., Jewelry Case" value="Jewelry Case" oninput="generateRobberyLocationCode()">
+            <small>Player-facing name shown for this robbery location/entity.</small>
           </div>
         </div>
 
@@ -35,11 +34,13 @@ Store robbery system with jewelry cases and cash registers, stealable items (cas
           <div class="input-group">
             <label for="rob-loc-model">Model:</label>
             <input type="text" id="rob-loc-model" placeholder="models/props_c17/briefcase001a.mdl" value="models/props_c17/briefcase001a.mdl" oninput="generateRobberyLocationCode()">
+            <small>World model used by the robbery entity.</small>
           </div>
 
           <div class="input-group">
             <label for="rob-loc-police">Min Police:</label>
             <input type="number" id="rob-loc-police" min="0" value="2" oninput="generateRobberyLocationCode()">
+            <small>Minimum number of police players required online to start the robbery.</small>
           </div>
         </div>
       </div>
@@ -49,15 +50,25 @@ Store robbery system with jewelry cases and cash registers, stealable items (cas
           <div class="input-group">
             <label for="rob-loc-robtime">Robbing Timer:</label>
             <input type="number" id="rob-loc-robtime" min="1" value="5" oninput="generateRobberyLocationCode()">
-            <small>Seconds to complete robbery</small>
+            <small>Seconds required to complete the robbery interaction.</small>
           </div>
 
           <div class="input-group">
             <label for="rob-loc-respawn">Respawn Timer:</label>
             <input type="number" id="rob-loc-respawn" min="1" value="1800" oninput="generateRobberyLocationCode()">
-            <small>Seconds until robbery can be done again</small>
+            <small>Cooldown time before this robbery can be performed again.</small>
           </div>
         </div>
+      </div>
+
+      <div class="generator-section">
+        <div class="input-group">
+          <label for="rob-loc-blacklist">Blacklisted Factions:</label>
+          <small>Each row is one faction constant (e.g., FACTION_CITIZEN).</small>
+        </div>
+
+        <div id="blacklist-faction-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addBlacklistFactionRow()">Add Faction</button>
       </div>
 
       <div class="generator-section">
@@ -75,63 +86,6 @@ Store robbery system with jewelry cases and cash registers, stealable items (cas
         <button onclick="fillExampleRobberyLocation()" class="generate-btn example-btn">Generate Example</button>
       </div>
     </div>
-
-    <div id="rob-panel-item" style="display: none;">
-      <div class="generator-section">
-        <div class="form-grid-2">
-          <div class="input-group">
-            <label for="rob-item-id">Item Unique ID:</label>
-            <input type="text" id="rob-item-id" placeholder="e.g., jewelrybag" value="jewelrybag" oninput="generateRobberyItemCode()">
-          </div>
-
-          <div class="input-group">
-            <label for="rob-item-name">Name:</label>
-            <input type="text" id="rob-item-name" placeholder="e.g., Jewelry Bag" value="Jewelry Bag" oninput="generateRobberyItemCode()">
-          </div>
-        </div>
-
-        <div class="input-group">
-          <label for="rob-item-desc">Description:</label>
-          <textarea id="rob-item-desc" oninput="generateRobberyItemCode()">A bag containing valuable jewelry.</textarea>
-        </div>
-      </div>
-
-      <div class="generator-section">
-        <div class="form-grid-3">
-          <div class="input-group">
-            <label for="rob-item-model">Model:</label>
-            <input type="text" id="rob-item-model" value="models/props_c17/briefcase001a.mdl" oninput="generateRobberyItemCode()">
-          </div>
-
-          <div class="input-group">
-            <label for="rob-item-w">Width:</label>
-            <input type="number" id="rob-item-w" min="1" value="1" oninput="generateRobberyItemCode()">
-          </div>
-
-          <div class="input-group">
-            <label for="rob-item-h">Height:</label>
-            <input type="number" id="rob-item-h" min="1" value="1" oninput="generateRobberyItemCode()">
-          </div>
-        </div>
-
-        <div class="form-grid-2">
-          <div class="input-group">
-            <label for="rob-item-min">Reward Min:</label>
-            <input type="number" id="rob-item-min" value="100" oninput="generateRobberyItemCode()">
-          </div>
-
-          <div class="input-group">
-            <label for="rob-item-max">Reward Max:</label>
-            <input type="number" id="rob-item-max" value="300" oninput="generateRobberyItemCode()">
-          </div>
-        </div>
-      </div>
-
-      <div class="button-group">
-        <button onclick="generateRobberyItemCode()" class="generate-btn">Generate Item Code</button>
-        <button onclick="fillExampleRobberyItem()" class="generate-btn example-btn">Generate Example</button>
-      </div>
-    </div>
   </div>
 
   <!-- Output Column -->
@@ -144,19 +98,22 @@ Store robbery system with jewelry cases and cash registers, stealable items (cas
 </div>
 
 <script>
-function showRobTab(which) {
-  const locPanel = document.getElementById('rob-panel-location');
-  const itemPanel = document.getElementById('rob-panel-item');
+function luaValueFromText(text) {
+  const t = (text || '').trim();
+  if (!t) return '';
+  if (/^[A-Za-z_][A-Za-z0-9_]*$/.test(t)) return t;
+  return JSON.stringify(t);
+}
 
-  if (which === 'item') {
-    locPanel.style.display = 'none';
-    itemPanel.style.display = 'block';
-    generateRobberyItemCode();
-  } else {
-    locPanel.style.display = 'block';
-    itemPanel.style.display = 'none';
-    generateRobberyLocationCode();
-  }
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
 }
 
 function stealableRowTemplate(idx, item, name, chance) {
@@ -182,6 +139,27 @@ function removeStealableRow(btn) {
   generateRobberyLocationCode();
 }
 
+function blacklistFactionRowTemplate(faction) {
+  return `
+  <div class="dynamic-row blacklist-faction-row">
+    <input type="text" class="blacklist-faction-item" placeholder="FACTION_CITIZEN" value="${faction || ''}" oninput="generateRobberyLocationCode()">
+    <button type="button" class="remove-btn" onclick="removeBlacklistFactionRow(this)">×</button>
+  </div>`;
+}
+
+function addBlacklistFactionRow(faction) {
+  const list = document.getElementById('blacklist-faction-list');
+  if (!list) return;
+  list.insertAdjacentHTML('beforeend', blacklistFactionRowTemplate(faction));
+  generateRobberyLocationCode();
+}
+
+function removeBlacklistFactionRow(btn) {
+  const row = btn.closest('.blacklist-faction-row');
+  if (row) row.remove();
+  generateRobberyLocationCode();
+}
+
 function generateRobberyLocationCode() {
   const className = (document.getElementById('rob-loc-id').value || '').trim() || 'robbery_entity';
   const name = (document.getElementById('rob-loc-name').value || '').trim() || 'Robbery';
@@ -189,6 +167,15 @@ function generateRobberyLocationCode() {
   const respawnTimer = document.getElementById('rob-loc-respawn').value || '3600';
   const robbingTimer = document.getElementById('rob-loc-robtime').value || '25';
   const minPolice = document.getElementById('rob-loc-police').value || '0';
+  const blacklistRows = Array.from(document.querySelectorAll('#blacklist-faction-list .blacklist-faction-row'));
+  const blacklistedFactions = [];
+  for (const row of blacklistRows) {
+    const faction = (row.querySelector('.blacklist-faction-item').value || '').trim();
+    if (!faction) continue;
+    blacklistedFactions.push(faction);
+  }
+
+  const blacklistedFactionLuaValues = blacklistedFactions.map(luaValueFromText).filter(Boolean);
 
   const rows = Array.from(document.querySelectorAll('#stealable-list .dynamic-row'));
   const stealable = [];
@@ -203,13 +190,13 @@ function generateRobberyLocationCode() {
   const lines = [
   '-- Copy and paste this into: modules/done/robberies/config/shared.lua',
   '',
-  'lia.robberies.RobbingTable = lia.robberies.RobbingTable or {}',
   `lia.robberies.RobbingTable[${JSON.stringify(className)}] = {`,
   `    name = ${JSON.stringify(name)},`,
   `    model = ${JSON.stringify(model)},`,
   `    respawnTimer = ${respawnTimer},`,
   `    robbingTimer = ${robbingTimer},`,
   `    minPolice = ${minPolice},`,
+  `    BlackListedFactions = {${blacklistedFactionLuaValues.join(', ')}}`,
   '    stealable = {'
   ];
 
@@ -244,6 +231,8 @@ function fillExampleRobberyLocation() {
   document.getElementById('rob-loc-respawn').value = '1800';
   document.getElementById('rob-loc-robtime').value = '5';
   document.getElementById('rob-loc-police').value = '2';
+  const blacklistList = document.getElementById('blacklist-faction-list');
+  if (blacklistList) blacklistList.innerHTML = '';
   const list = document.getElementById('stealable-list');
   list.innerHTML = '';
   addStealableRow('jewelrybag', 'Jewelry Bag', '50');
@@ -252,53 +241,14 @@ function fillExampleRobberyLocation() {
   generateRobberyLocationCode();
 }
 
-function generateRobberyItemCode() {
-  const uniqueId = (document.getElementById('rob-item-id').value || '').trim() || 'robbery_item';
-  const name = (document.getElementById('rob-item-name').value || '').trim() || 'Robbery Item';
-  const desc = (document.getElementById('rob-item-desc').value || '').trim() || '';
-  const model = (document.getElementById('rob-item-model').value || '').trim() || 'models/props_junk/cardboard_box003a.mdl';
-  const width = document.getElementById('rob-item-w').value || '1';
-  const height = document.getElementById('rob-item-h').value || '1';
-  const rewardMin = document.getElementById('rob-item-min').value || '0';
-  const rewardMax = document.getElementById('rob-item-max').value || '0';
-
-  const lines = [
-  '-- Copy and paste this into: modules/done/robberies/config/shared.lua',
-  '',
-  'lia.robberies.Items = lia.robberies.Items or {}',
-  `lia.robberies.Items[${JSON.stringify(uniqueId)}] = {`,
-  `    name = ${JSON.stringify(name)},`,
-  `    desc = ${JSON.stringify(desc)},`,
-  `    model = ${JSON.stringify(model)},`,
-  `    width = ${width},`,
-  `    height = ${height},`,
-  `    rewardMin = ${rewardMin},`,
-  `    rewardMax = ${rewardMax}`,
-  '}'
-  ];
-
-  const code = `${lines.join('\n')}\n`;
-  const outputBox = document.getElementById('output-code');
-  if (outputBox) outputBox.value = code;
-}
-
-function fillExampleRobberyItem() {
-  document.getElementById('rob-item-id').value = 'cash_bundle';
-  document.getElementById('rob-item-name').value = 'Bundle of Cash';
-  document.getElementById('rob-item-desc').value = 'A bundle of cash that gives you a random amount between 0 and 500.';
-  document.getElementById('rob-item-model').value = 'models/props/cs_assault/money.mdl';
-  document.getElementById('rob-item-w').value = '1';
-  document.getElementById('rob-item-h').value = '1';
-  document.getElementById('rob-item-min').value = '0';
-  document.getElementById('rob-item-max').value = '500';
-  generateRobberyItemCode();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  showRobTab('location');
   const list = document.getElementById('stealable-list');
   list.innerHTML = '';
+  const blacklistList = document.getElementById('blacklist-faction-list');
+  if (blacklistList) blacklistList.innerHTML = '';
   addStealableRow('jewelrybag', 'Jewelry Bag', '50');
+  setupLiveUpdate(generateRobberyLocationCode);
+  generateRobberyLocationCode();
 });
 </script>
 

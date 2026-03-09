@@ -1,6 +1,6 @@
-# Clearance Levels
+# Security Clearance
 
-Adds clearance level system to doors
+Implements a comprehensive security clearance level system that controls access to restricted areas through door permissions. Features include character-based clearance levels, administrative management tools, flag-based access control, and integration with the existing door system to enforce security restrictions based on player authorization levels.
 
 ---
 
@@ -20,24 +20,27 @@ Adds clearance level system to doors
         <div class="input-group">
           <label for="clearance-pay">Pay Bonus:</label>
           <input type="number" id="clearance-pay" value="25" oninput="generateClearanceCode()">
+          <small>Extra pay/salary bonus granted for this clearance level (module-defined meaning).</small>
         </div>
 
         <div class="input-group">
           <label>
             <input type="checkbox" id="clearance-warned" oninput="generateClearanceCode()"> Warned
           </label>
-          <small>Receives hack alerts</small>
+          <small>If enabled, players of this clearance level receive hack alerts.</small>
         </div>
       </div>
 
       <div class="input-group">
         <label for="clearance-title">Title:</label>
-        <input type="text" id="clearance-title" value="Clearance level 1 required - Enlisted Access." oninput="generateClearanceCode()">
+        <input type="text" id="clearance-title" placeholder="e.g., Clearance level 1 required - Enlisted Access." value="Clearance level 1 required - Enlisted Access." oninput="generateClearanceCode()">
+        <small>Short title/summary shown to players for this clearance level.</small>
       </div>
 
       <div class="input-group">
         <label for="clearance-desc">Description:</label>
-        <textarea id="clearance-desc" oninput="generateClearanceCode()">Enlisted access for standard operational areas.</textarea>
+        <textarea id="clearance-desc" placeholder="e.g., Enlisted access for standard operational areas." oninput="generateClearanceCode()">Enlisted access for standard operational areas.</textarea>
+        <small>Longer description of what this clearance level represents or grants.</small>
       </div>
     </div>
 
@@ -46,16 +49,19 @@ Adds clearance level system to doors
         <div class="input-group">
           <label for="clearance-passes">Passes:</label>
           <input type="number" id="clearance-passes" min="0" value="2" oninput="generateClearanceCode()">
+          <small>How many passes/uses this clearance level provides (module-defined meaning).</small>
         </div>
 
         <div class="input-group">
           <label for="speed-min">Speed Min:</label>
           <input type="number" id="speed-min" value="300" oninput="generateClearanceCode()">
+          <small>Minimum speed value for this clearance tier (used by module configuration).</small>
         </div>
 
         <div class="input-group">
           <label for="speed-max">Speed Max:</label>
           <input type="number" id="speed-max" value="360" oninput="generateClearanceCode()">
+          <small>Maximum speed value for this clearance tier (used by module configuration).</small>
         </div>
       </div>
 
@@ -63,11 +69,13 @@ Adds clearance level system to doors
         <div class="input-group">
           <label for="width-green">Width Green:</label>
           <input type="number" id="width-green" value="50" oninput="generateClearanceCode()">
+          <small>Green width setting used by the module (UI/scan tuning).</small>
         </div>
 
         <div class="input-group">
           <label for="width-blue">Width Blue:</label>
           <input type="number" id="width-blue" value="40" oninput="generateClearanceCode()">
+          <small>Blue width setting used by the module (UI/scan tuning).</small>
         </div>
       </div>
     </div>
@@ -88,6 +96,17 @@ Adds clearance level system to doors
 </div>
 
 <script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function generateClearanceCode() {
   const level = document.getElementById('clearance-level').value || '0';
   const title = (document.getElementById('clearance-title').value || '').trim() || 'Clearance Title';
@@ -102,7 +121,7 @@ function generateClearanceCode() {
 
   const lines = [
   '-- Copy and paste this code into the module definitions file',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/done/clearance/definitions.lua',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/clearance/definitions.lua',
   '',
   `MODULE:RegisterClearance(${level}, {`,
   `    title = ${JSON.stringify(title)},`,
@@ -141,6 +160,7 @@ function fillExampleClearance() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(generateClearanceCode);
   generateClearanceCode();
 });
 </script>

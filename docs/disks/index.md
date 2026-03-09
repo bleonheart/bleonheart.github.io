@@ -1,6 +1,6 @@
-# Data Disks
+# Data Storage
 
-Adds memory disk entities (64C-1024C) for terminal/decoder interactions.
+Comprehensive data storage system featuring portable memory disks (64C-1024C capacity) with read/write functionality, password protection, and terminal/decoder integration. Includes physical disk entities, inventory items, and interactive terminals for data manipulation and storage.
 
 ---
 

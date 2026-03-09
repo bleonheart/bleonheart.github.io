@@ -1,6 +1,6 @@
-# ID System
+# Advanced Identification & Character Registry
 
-ID card system allowing players to show/request/force view IDs with multiple designs (California, German, New York, Southside, Yorkshire) and character recognition mechanics.
+Comprehensive identification system featuring customizable character profiles with physical attributes (age, sex, ethnicity, weight, eye/hair color, blood type), multiple regional ID card designs (California, German, Florida, New York, Southside, Yorkshire), character recognition mechanics, and interactive ID viewing/requesting functionality. Includes gender-based model filtering, persistent character data storage, and administrative ID management tools for immersive roleplaying scenarios.
 
 ---
 

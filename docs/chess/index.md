@@ -1,6 +1,6 @@
-# Chess and Droughts
+# Chess & Draughts Gaming
 
-Interactive chess and checkers (draughts) board games with multiplayer support, wagering system, and leaderboard tracking
+Comprehensive chess and draughts (checkers) gaming system featuring fully interactive board games with real-time multiplayer support, Elo rating system with K-factor customization, persistent game statistics tracking, wagering mechanics for competitive play, global leaderboards, draw/resign functionality, pawn promotion selection, and seamless integration with the Lilia framework
 
 ---
 

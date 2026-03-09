@@ -1,6 +1,6 @@
-# Car Bomb
+# Terrorism
 
-Terrorism mechanics with vehicle car bombs (engine-activated) and door explosives, both with timed detonation, remote detonation, and debris creation
+Comprehensive terrorism system featuring vehicle car bombs that detonate on engine start and door breach explosives. Both bomb types support timed detonation (0-60 seconds) and remote detonation using handheld detonators. Includes realistic explosion physics with debris creation, player interaction menus for remote detonation, and a complete item system with explosive devices and detonators. Perfect for sabotage operations, controlled demolitions, and asymmetric warfare scenarios.
 
 ---
 

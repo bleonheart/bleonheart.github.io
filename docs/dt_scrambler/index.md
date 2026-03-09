@@ -1,6 +1,6 @@
-# Death Trooper Scrambler
+# Death Trooper Voice Scrambler
 
-Communication scrambler system for Death Trooper faction allowing private, encrypted voice communications with sound effects for non-authorized listeners
+Advanced voice communication scrambling system for the Death Trooper faction. Provides secure encrypted voice channels that prevent unauthorized players from hearing DT communications. When enabled, non-Death Trooper listeners cannot hear the voice chat and instead hear randomized static/scrambling sound effects. Authorized Death Trooper members and uplinked players can communicate normally while maintaining operational security. Features real-time voice filtering, multiple scrambling sound effects, and visual voice indicators showing scrambler status.
 
 ---
 

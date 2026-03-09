@@ -1,6 +1,6 @@
-# Tying
+# Handcuffs & Restraint
 
-Provides features such as Rope items can restrain other players, Bound players cannot use weapons, Supports dragging with submodules, Blindfold and gag features available, and Encourages hostage scenarios.
+Comprehensive player restraint system featuring handcuff items and weapons, rope-based tying mechanics, complete weapon and movement restrictions for restrained players, drag functionality with submodule support, blindfold and gag features, lockpicking mechanics, realistic restraint sounds, and robust hostage scenario tools for immersive roleplay interactions.
 
 ---
 

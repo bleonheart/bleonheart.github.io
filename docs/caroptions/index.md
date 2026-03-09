@@ -1,6 +1,6 @@
-# Car Options
+# Vehicle Entertainment & Passenger
 
-Vehicle quality of life features including CD player system with music tracks, albums, and audio streaming for in-car entertainment
+Comprehensive vehicle enhancement system featuring CD player with music track management, album organization, and audio streaming for in-car entertainment. Includes passenger detection and management for both players and bots, supporting various vehicle types including LVS and SCars with proper seat identification and driver/passenger tracking.
 
 ---
 

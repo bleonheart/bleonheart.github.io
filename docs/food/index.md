@@ -1,6 +1,6 @@
-# Dynamic Food
+# Hunger & Thirst
 
-Restaurant cooking system with cooking machines, customer orders, ingredient fridges, worktables, dish preparation, and hunger restoration mechanics
+Comprehensive survival system that manages player hunger and thirst levels. Features dynamic food registration with customizable hunger/thirst values, stamina penalties for low hunger, automatic hunger degradation over time, and a variety of food items including canned goods, beverages, and MREs. Integrates with character factions and includes staff exemptions.
 
 ---
 
@@ -20,12 +20,14 @@ Restaurant cooking system with cooking machines, customer orders, ingredient fri
         <div class="input-group">
           <label for="item-name">Item Name:</label>
           <input type="text" id="item-name" placeholder="e.g., Cooked Burger" value="Delicious Cooked Burger" oninput="generateFoodItem()">
+          <small>Name shown to players in the inventory UI.</small>
         </div>
       </div>
 
       <div class="input-group">
         <label for="item-desc">Description:</label>
         <textarea id="item-desc" placeholder="e.g., A freshly cooked burger that satisfies hunger" oninput="generateFoodItem()">A juicy burger cooked to perfection, served with fresh vegetables and a special sauce. Perfect for satisfying your hunger.</textarea>
+        <small>Description shown to players (tooltip/details panel).</small>
       </div>
 
     </div>
@@ -34,26 +36,26 @@ Restaurant cooking system with cooking machines, customer orders, ingredient fri
       <div class="input-group">
         <label for="item-model">Model:</label>
         <input type="text" id="item-model" placeholder="models/props_junk/garbage_takeoutcarton001a.mdl" value="models/props_junk/garbage_takeoutcarton001a.mdl" oninput="generateFoodItem()">
-        <small>3D model path for the food item</small>
+        <small>3D model path for the food item.</small>
       </div>
 
       <div class="form-grid-3">
         <div class="input-group">
           <label for="hunger-amount">Hunger:</label>
           <input type="number" id="hunger-amount" placeholder="25" min="0" max="100" value="30" oninput="generateFoodItem()">
-          <small>Hunger restored (0-100)</small>
+          <small>How much hunger to restore when consumed (0-100).</small>
         </div>
 
         <div class="input-group">
           <label for="thirst-amount">Thirst:</label>
           <input type="number" id="thirst-amount" placeholder="0" min="0" max="100" value="5" oninput="generateFoodItem()">
-          <small>Thirst restored (0-100)</small>
+          <small>How much thirst to restore when consumed (0-100).</small>
         </div>
 
         <div class="input-group">
           <label for="item-width">Width:</label>
           <input type="number" id="item-width" placeholder="1" min="1" value="1" oninput="generateFoodItem()">
-          <small>Inventory width</small>
+          <small>Inventory grid width.</small>
         </div>
       </div>
 
@@ -61,13 +63,13 @@ Restaurant cooking system with cooking machines, customer orders, ingredient fri
         <div class="input-group">
           <label for="item-height">Height:</label>
           <input type="number" id="item-height" placeholder="1" min="1" value="1" oninput="generateFoodItem()">
-          <small>Inventory height</small>
+          <small>Inventory grid height.</small>
         </div>
 
         <div class="input-group">
           <label for="item-category">Category:</label>
           <input type="text" id="item-category" placeholder="Consumable" value="Consumable" oninput="generateFoodItem()">
-          <small>Item category in inventory</small>
+          <small>Item category shown in inventory UI.</small>
         </div>
       </div>
     </div>
@@ -88,6 +90,17 @@ Restaurant cooking system with cooking machines, customer orders, ingredient fri
 </div>
 
 <script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function generateFoodItem() {
   const uniqueId = (document.getElementById('item-id').value || '').trim() || 'food_example';
   const name = (document.getElementById('item-name').value || '').trim() || 'Food Item';
@@ -137,6 +150,7 @@ function fillExampleFood() {
 
 // Initial generation
 document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(generateFoodItem);
   generateFoodItem();
 });
 </script>

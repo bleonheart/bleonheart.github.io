@@ -1,6 +1,6 @@
-# Extraction
+# Extraction Flare
 
-Raid-style extraction system requiring players to reach escape zones within countdown timer, with configurable positions per map and audio/visual cues
+Extraction flare system that allows players to signal extraction points by throwing throwable flares. Includes configurable extraction positions per map, flare grenade items, visual effects, and network messaging for extraction coordination. Provides raid-style extraction mechanics with countdown timers and escape zone functionality.
 
 ---
 

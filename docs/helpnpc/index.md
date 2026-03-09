@@ -1,6 +1,6 @@
-# Help NPCs
+# City Guide NPC
 
-Provides features such as Provides information to new players, Can give basic starter items, Dialog tree explains server mechanics, Directs players to other NPC services, and Simple friendly conversation.
+Implements a comprehensive City Guide NPC system that provides new player orientation and navigation assistance. Features include interactive dialog trees with multiple conversation paths, automatic waypoint marking for important city landmarks (Downtown, Central Park), detailed location information, and contextual guidance about the city
 
 ---
 

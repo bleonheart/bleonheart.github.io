@@ -1,6 +1,6 @@
-# Ranking
+# Class Ranking
 
-Ranking system for the gamemode
+Comprehensive hierarchical ranking system that manages player positions within classes. Provides promotion, demotion, hiring, and kicking functionality with tier-based permissions. Automatically assigns rank-specific weapons, clearance levels, and models. Includes administrative commands and privilege-based access control for class management.
 
 ---
 
@@ -14,13 +14,13 @@ Ranking system for the gamemode
         <div class="input-group">
           <label for="rank-class">Class Constant:</label>
           <input type="text" id="rank-class" placeholder="e.g., CLASS_HARTY" value="CLASS_HARTY" oninput="generateRankingCode()">
-          <small>The class key inside lia.ranking.rankTable</small>
+          <small>The top-level key inside <code>lia.ranking.rankTable</code> for the class you are defining ranks for.</small>
         </div>
 
         <div class="input-group">
           <label for="rank-id">Rank ID:</label>
           <input type="text" id="rank-id" placeholder="e.g., rank_private" value="rank_private" oninput="generateRankingCode()">
-          <small>Unique key for this rank inside the class table</small>
+          <small>Unique key for this rank within the selected class; used to reference/promote/demote to this rank.</small>
         </div>
       </div>
 
@@ -28,17 +28,20 @@ Ranking system for the gamemode
         <div class="input-group">
           <label for="rank-tag">Rank Tag:</label>
           <input type="text" id="rank-tag" placeholder="e.g., PVT" value="PVT" oninput="generateRankingCode()">
+          <small>Rank abbreviation/shorthand shown in UI/overhead displays (module-defined usage).</small>
         </div>
 
         <div class="input-group">
           <label for="rank-name">Rank Name:</label>
           <input type="text" id="rank-name" placeholder="e.g., Private" value="Private" oninput="generateRankingCode()">
+          <small>The full readable name shown for this rank.</small>
         </div>
       </div>
 
       <div class="input-group">
         <label for="rank-model">Model:</label>
         <input type="text" id="rank-model" placeholder="models/player/group01/male_01.mdl" value="models/player/group01/male_01.mdl" oninput="generateRankingCode()">
+        <small>Player model applied/used for this rank (module-defined behavior).</small>
       </div>
     </div>
 
@@ -47,16 +50,19 @@ Ranking system for the gamemode
         <div class="input-group">
           <label for="rank-clearance">Clearance:</label>
           <input type="number" id="rank-clearance" min="0" value="1" oninput="generateRankingCode()">
+          <small>Clearance level required/granted for this rank (used by clearance/door systems if your schema ties them together).</small>
         </div>
 
         <div class="input-group">
           <label for="rank-salary">Salary:</label>
           <input type="number" id="rank-salary" min="0" value="30" oninput="generateRankingCode()">
+          <small>Salary/pay value associated with this rank (how/when it is paid is schema/module-defined).</small>
         </div>
 
         <div class="input-group">
           <label for="rank-tier">Tier:</label>
           <input type="number" id="rank-tier" min="0" value="1" oninput="generateRankingCode()">
+          <small>Tier/order value for this rank (commonly used to compare seniority; higher usually means higher rank).</small>
         </div>
       </div>
 
@@ -75,24 +81,28 @@ Ranking system for the gamemode
           <label>
             <input type="checkbox" id="rank-promote" oninput="generateRankingCode()"> Can Promote
           </label>
+          <small>If enabled, players of this rank can promote other members.</small>
         </div>
 
         <div class="input-group">
           <label>
             <input type="checkbox" id="rank-demote" oninput="generateRankingCode()"> Can Demote
           </label>
+          <small>If enabled, players of this rank can demote other members.</small>
         </div>
 
         <div class="input-group">
           <label>
             <input type="checkbox" id="rank-hire" oninput="generateRankingCode()"> Can Hire
           </label>
+          <small>If enabled, players of this rank can hire/recruit into the class.</small>
         </div>
 
         <div class="input-group">
           <label>
             <input type="checkbox" id="rank-kick" oninput="generateRankingCode()"> Can Kick
           </label>
+          <small>If enabled, players of this rank can remove members from the class.</small>
         </div>
       </div>
     </div>
@@ -113,6 +123,17 @@ Ranking system for the gamemode
 </div>
 
 <script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
 function weaponRowTemplate(idx, weapon) {
   return `
   <div class="dynamic-row" data-idx="${idx}">
@@ -161,7 +182,7 @@ function generateRankingCode() {
   '',
   'lia.ranking.rankTable = lia.ranking.rankTable or {}',
   `lia.ranking.rankTable[${classConst}] = lia.ranking.rankTable[${classConst}] or {}`,
-  `lia.ranking.rankTable[${classConst}][${JSON.stringify(rankId)}] = {`,
+  `lia.ranking.registerRank(${classConst}, ${JSON.stringify(rankId)}, {`,
   `    Clearance = ${clearance},`,
   `    Model = ${JSON.stringify(model)},`,
   `    RankTag = ${JSON.stringify(tag)},`,
@@ -173,7 +194,7 @@ function generateRankingCode() {
   `    CanHire = ${canHire ? 'true' : 'false'},`,
   `    CanKick = ${canKick ? 'true' : 'false'},`,
   `    Tier = ${tier},`,
-  '}'
+  '})'
   ];
 
   const code = `${lines.join('\n')}\n`;
@@ -207,6 +228,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const list = document.getElementById('weapon-list');
   list.innerHTML = '';
   addWeaponRow('arccw_bo3_c96');
+  setupLiveUpdate(generateRankingCode);
+  generateRankingCode();
 });
 </script>
 

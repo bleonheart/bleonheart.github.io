@@ -1,6 +1,6 @@
 # Limb Damage
 
-Limb damage system where leg shots cause configurable sprint delay with automatic healing and toggleable enable/disable functionality
+Advanced limb damage system that simulates realistic leg injuries. When players are shot in the legs (left or right leg hitgroups), they experience a temporary sprint disability with configurable duration. Features include automatic healing after the damage duration, visual HUD indicators with red screen effects and text warnings, server-side damage validation with blast damage immunity, toggleable system enable/disable functionality, and proper cleanup on player disconnection. The system uses networked variables for synchronized client-server state and provides immersive gameplay feedback through notifications and visual effects.
 
 ---
 

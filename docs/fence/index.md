@@ -1,6 +1,6 @@
-# Fence NPC
+# Fence - Black Market Dealer
 
-Provides features such as Buy stolen items from players, Pay based on item reward values, Support for all robbery items, and Secure transaction system.
+A comprehensive fence NPC system that provides underground black market services. Features include: Purchase stolen items and contraband from players at fair market values, Dynamic pricing based on item reward values and rarity, Full integration with the robbery system for all stolen goods, Secure transaction processing with inventory validation, Interactive dialogue system with contextual responses, Buy and sell interface with item filtering, Support for weapons, valuables, and illegal items, Anti-theft protection and transaction logging.
 
 ---
 

@@ -1,6 +1,6 @@
-# Mobile Phones
+# Cellphone Communication
 
-Mobile phone system with unique phone numbers, voice calling, text messaging, and contact management for player communication
+Comprehensive cellphone communication system featuring physical phone items with unique phone numbers and area codes (408, 650, 925), voice calling with call management, SMS/text messaging capabilities, private phone chat channels, player interaction menu integration for direct calling, contact management through phone number discovery, and network synchronization for multiplayer communication. Includes realistic phone number assignment, call state management, and support for phone-to-phone communication with proper validation and error handling.
 
 ---
 

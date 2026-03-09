@@ -1,6 +1,6 @@
-# Recruiter NPC
+# Job Recruiter NPC
 
-Provides a Recruiter NPC that allows players to join or resign from a list of configured jobs. Features dynamic dialog options based on player
+Automated job recruitment system that dynamically creates recruiter NPCs for all configured factions. Each NPC provides contextual dialog options allowing players to join jobs (with proper faction transfer hooks and loadout updates) or resign (reverting to default faction). Features intelligent option visibility based on player
 
 ---
 
