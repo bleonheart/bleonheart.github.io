@@ -62,21 +62,6 @@
     "workshop": []
   },
   {
-    "name": "Clothing System",
-    "versionID": "private_bonemerge",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Bonemerge clothing system attaching hats, glasses, shirts, pants, shoes, ties, vests, rings, and accessories to players with vendor purchase and persistence",
-    "version": "1.85",
-    "source": "https://bleonheart.github.io/modules/bonemerge/about/",
-    "directory": "./bonemerge",
-    "features": [],
-    "workshop": [
-      "3425707500",
-      "3425693671"
-    ]
-  },
-  {
     "name": "Cameras",
     "versionID": "private_cameras",
     "author": "Samael",
@@ -203,6 +188,20 @@
     "workshop": []
   },
   {
+    "name": "Tying",
+    "versionID": "private_tying",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Provides features such as Rope items can restrain other players, Bound players cannot use weapons, Supports dragging with submodules, Blindfold and gag features available, and Encourages hostage scenarios.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/cuffs/about/",
+    "directory": "./cuffs",
+    "features": [],
+    "workshop": [
+      "3527551786"
+    ]
+  },
+  {
     "name": "Daily Rewards",
     "versionID": "private_dailyrewards",
     "author": "Samael",
@@ -324,20 +323,6 @@
     "features": [],
     "workshop": [
       "3527546250"
-    ]
-  },
-  {
-    "name": "Tying",
-    "versionID": "private_tying",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Player restraint system with ropes/cuffs, blindfolding, gagging, dragging, and body searching mechanics for hostage scenarios",
-    "version": "1.65",
-    "source": "https://bleonheart.github.io/modules/handcuffs/about/",
-    "directory": "./handcuffs",
-    "features": [],
-    "workshop": [
-      "3527551786"
     ]
   },
   {

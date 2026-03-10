@@ -1,0 +1,525 @@
+# Advanced Armors - Fantasy Edition
+
+Adds fantasy-themed armors with equippable protection stats, overlays, optional training requirements, and mod support. Features: damage resistance, movement/jump bonuses, fall protection, footstep sounds, armor mod installation/removal, and admin toggletraining command.
+
+---
+
+## Generator
+
+<div class="generator-grid">
+  <!-- Input Column -->
+  <div class="generator-card form-card">
+    <div class="generator-section">
+      <div class="form-grid-2">
+        <button id="armor-tab-armor" onclick="showArmorTab('armor')" class="generate-btn">Armor Generator</button>
+        <button id="armor-tab-mod" onclick="showArmorTab('mod')" class="generate-btn example-btn">Mod Generator</button>
+      </div>
+    </div>
+
+    <div id="armor-panel-armor">
+      <div class="generator-section">
+        <div class="form-grid-2">
+          <div class="input-group">
+            <label for="armor-id">Unique ID:</label>
+            <input type="text" id="armor-id" placeholder="e.g., combinesoldier" value="combinesoldier" oninput="generateArmorCode()">
+            <small>Unique identifier for this armor (no spaces, lowercase)</small>
+          </div>
+
+          <div class="input-group">
+            <label for="armor-name">Armor Name:</label>
+            <input type="text" id="armor-name" placeholder="e.g., Combine Soldier Armor" value="Combine Soldier Armor" oninput="generateArmorCode()">
+            <small>The name shown to players for this armor item.</small>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="armor-desc">Description:</label>
+          <textarea id="armor-desc" placeholder="e.g., Standard combat armor worn by Combine soldiers" oninput="generateArmorCode()">Standard combat armor worn by Combine soldiers</textarea>
+          <small>Shown in item tooltip/details.</small>
+        </div>
+      </div>
+
+      <div class="generator-section">
+        <div class="form-grid-2">
+          <div class="input-group">
+            <label for="armor-icon">Icon Model:</label>
+            <input type="text" id="armor-icon" placeholder="models/player/combine_soldier.mdl" value="models/player/combine_soldier.mdl" oninput="generateArmorCode()">
+            <small>Shown in inventory (also defaults item model)</small>
+          </div>
+
+          <div class="input-group">
+            <label for="armor-model">Player Model:</label>
+            <input type="text" id="armor-model" placeholder="models/player/combine_soldier.mdl" value="models/player/combine_soldier.mdl" oninput="generateArmorCode()">
+            <small>Applied to player when equipped (optional)</small>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="armor-model-mode">Player Model Mode:</label>
+          <select id="armor-model-mode" oninput="showArmorModelMode()">
+            <option value="single" selected>Single Model</option>
+            <option value="table">Multi Model</option>
+          </select>
+          <small>Multi Model uses an equivalency table compatible with lia.armors.resolvePlayerModel.</small>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="input-group">
+            <label for="armor-physical-resistance">Physical Resistance:</label>
+            <input type="number" id="armor-physical-resistance" placeholder="50" min="0" max="100" value="50" oninput="generateArmorCode()">
+            <small>0-100 physical damage resistance</small>
+          </div>
+
+          <div class="input-group">
+            <label for="armor-magic-resistance">Magic Resistance:</label>
+            <input type="number" id="armor-magic-resistance" placeholder="50" min="0" max="100" value="50" oninput="generateArmorCode()">
+            <small>0-100 magical damage resistance</small>
+          </div>
+
+          <div class="input-group">
+            <label for="armor-speed">Speed Boost:</label>
+            <input type="number" id="armor-speed" placeholder="0" value="-5" oninput="generateArmorCode()">
+            <small>Negative slows, positive speeds up</small>
+          </div>
+
+          <div class="input-group">
+            <label for="armor-jump">Jump Boost:</label>
+            <input type="number" id="armor-jump" placeholder="0" value="-5" oninput="generateArmorCode()">
+            <small>Adjusts jump height while equipped (module-defined scaling).</small>
+          </div>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="input-group">
+            <label>
+              <input type="checkbox" id="armor-falldmg" checked oninput="generateArmorCode()"> Takes Fall Damage
+            </label>
+            <small>If enabled, normal fall damage applies while this armor is equipped.</small>
+          </div>
+
+          <div class="input-group">
+            <label>
+              <input type="checkbox" id="armor-pa" oninput="generateArmorCode()"> Requires Training
+            </label>
+            <small>If enabled, players must meet the module's training requirement before equipping/using this armor.</small>
+          </div>
+
+          <div class="input-group">
+            <label for="armor-overlay">Overlay:</label>
+            <input type="text" id="armor-overlay" placeholder="e.g., gasmask.png" value="power_armor_t51b.png" oninput="generateArmorCode()">
+            <small>Overlay to apply while this armor is equipped. Leave empty for none.</small>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="armor-footstep">Footstep Sound:</label>
+          <input type="text" id="armor-footstep" placeholder="e.g., npc/combine_soldier/gear1.wav" value="" oninput="generateArmorCode()">
+          <small>Footstep sound used while this armor is equipped. Leave empty for <code>nil</code> (use default footstep sounds).</small>
+        </div>
+
+        <div class="input-group">
+          <label>Supported Mods:</label>
+          <small>Each row is one mod type this armor supports (not uniqueIDs).</small>
+        </div>
+
+        <div id="armor-mods-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addArmorModRow()">Add Mod</button>
+      </div>
+
+      <div id="armor-model-table-panel" style="display: none;">
+        <div class="input-group">
+          <label>Model Equivalencies:</label>
+          <small>Each row maps a current model to a replacement. Use key <code>default</code> or <code>*</code for fallback.</small>
+        </div>
+        <div id="armor-model-map-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addArmorModelMapRow()">Add Model Mapping</button>
+      </div>
+
+      <div class="button-group">
+        <button onclick="generateArmorCode()" class="generate-btn">Generate Armor Code</button>
+        <button onclick="fillExampleArmor()" class="generate-btn example-btn">Generate Example</button>
+      </div>
+    </div>
+
+    <div id="armor-panel-mod">
+      <div class="generator-section">
+        <div class="form-grid-2">
+          <div class="input-group">
+            <label for="mod-id">Unique ID:</label>
+            <input type="text" id="mod-id" placeholder="e.g., mod_fortified" value="mod_fortified" oninput="generateArmorModCode()">
+            <small>Unique identifier for this mod item</small>
+          </div>
+
+          <div class="input-group">
+            <label for="mod-type">Mod Type:</label>
+            <input type="text" id="mod-type" placeholder="e.g., fortified" value="fortified" oninput="generateArmorModCode()">
+            <small>This must match armor "supportedMods" entries</small>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="mod-name">Mod Name:</label>
+          <input type="text" id="mod-name" placeholder="e.g., Fortified Mod" value="Fortified Mod" oninput="generateArmorModCode()">
+          <small>The name shown to players for this mod item.</small>
+        </div>
+
+        <div class="input-group">
+          <label for="mod-desc">Description:</label>
+          <textarea id="mod-desc" placeholder="e.g., Increases physical damage resistance" oninput="generateArmorModCode()">Increases physical damage resistance.</textarea>
+          <small>Shown in item tooltip/details.</small>
+        </div>
+      </div>
+
+      <div class="generator-section">
+        <div class="form-grid-2">
+          <div class="input-group">
+            <label for="mod-effectdesc">Effect Description:</label>
+            <input type="text" id="mod-effectdesc" placeholder="e.g., +5% physical resistance" value="+5% physical resistance" oninput="generateArmorModCode()">
+            <small>A player-facing summary of what the mod does (does not affect stats by itself).</small>
+          </div>
+
+          <div class="input-group">
+            <label for="mod-model">Model:</label>
+            <input type="text" id="mod-model" placeholder="models/props_lab/box01a.mdl" value="models/props_lab/box01a.mdl" oninput="generateArmorModCode()">
+            <small>World/inventory model for the mod item.</small>
+          </div>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="input-group">
+            <label for="mod-phys">Physical Resist:</label>
+            <input type="number" id="mod-phys" value="5" oninput="generateArmorModCode()">
+            <small>Resistance value to apply via <code>effects.physicalResist</code> when the mod is installed (module-defined scaling).</small>
+          </div>
+
+          <div class="input-group">
+            <label for="mod-magic">Magic Resist:</label>
+            <input type="number" id="mod-magic" value="0" oninput="generateArmorModCode()">
+            <small>Resistance value to apply via <code>effects.magicResist</code> when the mod is installed (module-defined scaling).</small>
+          </div>
+
+          <div class="input-group">
+            <label for="mod-regen">Regen:</label>
+            <input type="number" id="mod-regen" value="0" oninput="generateArmorModCode()">
+            <small>Regeneration value to apply via <code>effects.regen</code> when the mod is installed (module-defined scaling).</small>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="input-group">
+            <label for="mod-speed">Speed:</label>
+            <input type="number" id="mod-speed" value="0" oninput="generateArmorModCode()">
+            <small>Speed modifier to apply via <code>effects.speed</code> when installed (negative slows, positive speeds up).</small>
+          </div>
+
+          <div class="input-group">
+            <label for="mod-dmg">Damage:</label>
+            <input type="number" id="mod-dmg" value="0" oninput="generateArmorModCode()">
+            <small>Damage modifier to apply via <code>effects.damage</code> when installed (module-defined usage).</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button onclick="generateArmorModCode()" class="generate-btn">Generate Mod Code</button>
+        <button onclick="fillExampleArmorMod()" class="generate-btn example-btn">Generate Example</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Output Column -->
+  <div class="generator-card output-card">
+    <div class="card-header">
+      <h3>Generated Code</h3>
+    </div>
+    <textarea id="output-code" class="generator-code-output" readonly></textarea>
+  </div>
+</div>
+
+<script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
+function showArmorTab(which) {
+  const armorPanel = document.getElementById('armor-panel-armor');
+  const modPanel = document.getElementById('armor-panel-mod');
+
+  if (which === 'mod') {
+    armorPanel.style.display = 'none';
+    modPanel.style.display = 'block';
+    generateArmorModCode();
+  } else {
+    armorPanel.style.display = 'block';
+    modPanel.style.display = 'none';
+    generateArmorCode();
+  }
+}
+
+function armorModRowTemplate(idx, mod) {
+  return `
+  <div class="dynamic-row" data-idx="${idx}">
+    <input type="text" class="armor-mod" placeholder="fortified" value="${mod || ''}" oninput="generateArmorCode()">
+    <button type="button" class="remove-btn" onclick="removeArmorModRow(this)">×</button>
+  </div>`;
+}
+
+function addArmorModRow(mod) {
+  const list = document.getElementById('armor-mods-list');
+  const idx = list.children.length;
+  list.insertAdjacentHTML('beforeend', armorModRowTemplate(idx, mod));
+  generateArmorCode();
+}
+
+function removeArmorModRow(btn) {
+  const row = btn.closest('.dynamic-row');
+  if (row) row.remove();
+  generateArmorCode();
+}
+
+function getArmorModelMode() {
+  const select = document.getElementById('armor-model-mode');
+  return (select && select.value) ? select.value : 'single';
+}
+
+function showArmorModelMode() {
+  const mode = getArmorModelMode();
+  const panel = document.getElementById('armor-model-table-panel');
+  if (panel) panel.style.display = (mode === 'table') ? 'block' : 'none';
+  generateArmorCode();
+}
+
+function armorModelMapRowTemplate(idx, key, value) {
+  return `
+  <div class="dynamic-row" data-idx="${idx}">
+    <input type="text" class="armor-model-map-key" placeholder="default" value="${key || ''}" oninput="generateArmorCode()">
+    <input type="text" class="armor-model-map-value" placeholder="models/player/.." value="${value || ''}" oninput="generateArmorCode()">
+    <button type="button" class="remove-btn" onclick="removeArmorModelMapRow(this)">×</button>
+  </div>`;
+}
+
+function addArmorModelMapRow(key, value) {
+  const list = document.getElementById('armor-model-map-list');
+  if (!list) return;
+  const idx = list.children.length;
+  list.insertAdjacentHTML('beforeend', armorModelMapRowTemplate(idx, key, value));
+  generateArmorCode();
+}
+
+function removeArmorModelMapRow(btn) {
+  const row = btn.closest('.dynamic-row');
+  if (row) row.remove();
+  generateArmorCode();
+}
+
+function luaTableKeyForModelEquiv(rawKey) {
+  const key = (rawKey || '').trim();
+  if (!key) return null;
+  if (key === 'default') return 'default';
+  if (key === '*') return '["*"]';
+  return `[${JSON.stringify(key)}]`;
+}
+
+function buildArmorModelLuaValue() {
+  const mode = getArmorModelMode();
+  const singleModel = (document.getElementById('armor-model').value || '').trim();
+
+  if (mode !== 'table') {
+    return singleModel ? JSON.stringify(singleModel) : 'nil';
+  }
+
+  const rows = Array.from(document.querySelectorAll('#armor-model-map-list .dynamic-row'));
+  const pairs = [];
+  for (const row of rows) {
+    const key = (row.querySelector('.armor-model-map-key')?.value || '').trim();
+    const value = (row.querySelector('.armor-model-map-value')?.value || '').trim();
+    if (!key || !value) continue;
+    const luaKey = luaTableKeyForModelEquiv(key);
+    if (!luaKey) continue;
+    pairs.push(`        ${luaKey} = ${JSON.stringify(value)},`);
+  }
+
+  if (pairs.length === 0) {
+    return singleModel ? JSON.stringify(singleModel) : 'nil';
+  }
+
+  return `\n    {\n${pairs.join('\n')}\n    }`;
+}
+
+function generateArmorCode() {
+  const uniqueId = (document.getElementById('armor-id').value || '').trim() || 'armor_example';
+  const name = (document.getElementById('armor-name').value || '').trim() || 'Armor';
+  const desc = (document.getElementById('armor-desc').value || '').trim() || 'Armor description.';
+  const icon = (document.getElementById('armor-icon').value || '').trim() || 'models/hunter/blocks/cube025x025x025.mdl';
+  const modelLua = buildArmorModelLuaValue();
+  const footstep = (document.getElementById('armor-footstep').value || '').trim();
+  const jumpBoost = document.getElementById('armor-jump').value || '0';
+  const speedBoost = document.getElementById('armor-speed').value || '0';
+  const physicalResistance = document.getElementById('armor-physical-resistance').value || '0';
+  const magicResistance = document.getElementById('armor-magic-resistance').value || '0';
+  const fallDamage = document.getElementById('armor-falldmg').checked;
+  const requiresTraining = document.getElementById('armor-pa').checked;
+  const overlay = (document.getElementById('armor-overlay').value || '').trim();
+
+  const rows = Array.from(document.querySelectorAll('#armor-mods-list .dynamic-row'));
+  const supportedMods = [];
+  for (const row of rows) {
+    const mod = (row.querySelector('.armor-mod').value || '').trim();
+    if (!mod) continue;
+    supportedMods.push(mod);
+  }
+
+  const lines = [
+  '-- Copy and paste this code into the module armor list',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/fantasyarmors/armors.lua',
+  '',
+  `lia.armors.registerArmor(${JSON.stringify(uniqueId)}, {`,
+  `    name = ${JSON.stringify(name)},`,
+  `    desc = ${JSON.stringify(desc)},`,
+  `    icon = ${JSON.stringify(icon)},`,
+  `    model = ${modelLua},`,
+  `    footstep = ${footstep ? JSON.stringify(footstep) : 'nil'},`,
+  `    jumpBoost = ${jumpBoost},`,
+  `    speedBoost = ${speedBoost},`,
+  `    physicalResistance = ${physicalResistance},`,
+  `    magicResistance = ${magicResistance},`,
+  `    fallDamage = ${fallDamage ? 'true' : 'false'},`,
+  `    requiresTraining = ${requiresTraining ? 'true' : 'false'},`,
+  `    overlay = ${overlay ? JSON.stringify(overlay) : 'nil'},`,
+  `    supportedMods = {${supportedMods.map(m => JSON.stringify(m)).join(', ')}},`,
+  '})'
+  ];
+
+  const code = `${lines.join('\n')}\n`;
+  const outputBox = document.getElementById('output-code');
+  if (outputBox) outputBox.value = code;
+}
+
+function fillExampleArmor() {
+  document.getElementById('armor-id').value = 'civilprotection';
+  document.getElementById('armor-name').value = 'Civil Protection Armor';
+  document.getElementById('armor-desc').value = 'Standard issue armor worn by Civil Protection officers';
+  document.getElementById('armor-icon').value = 'models/player/police.mdl';
+  document.getElementById('armor-model').value = 'models/player/police.mdl';
+  document.getElementById('armor-model-mode').value = 'single';
+  document.getElementById('armor-footstep').value = '';
+  document.getElementById('armor-jump').value = '0';
+  document.getElementById('armor-speed').value = '0';
+  document.getElementById('armor-physical-resistance').value = '30';
+  document.getElementById('armor-magic-resistance').value = '15';
+  document.getElementById('armor-falldmg').checked = true;
+  document.getElementById('armor-pa').checked = false;
+  document.getElementById('armor-overlay').value = 'gasmask.png';
+
+  const modelMapList = document.getElementById('armor-model-map-list');
+  if (modelMapList) modelMapList.innerHTML = '';
+  showArmorModelMode();
+
+  const list = document.getElementById('armor-mods-list');
+  list.innerHTML = '';
+  addArmorModRow('fortified');
+  addArmorModRow('wardbound');
+  addArmorModRow('swift');
+
+  generateArmorCode();
+}
+
+function generateArmorModCode() {
+  const uniqueId = (document.getElementById('mod-id').value || '').trim() || 'mod_example';
+  const type = (document.getElementById('mod-type').value || '').trim() || 'swift';
+  const name = (document.getElementById('mod-name').value || '').trim() || 'Armor Mod';
+  const desc = (document.getElementById('mod-desc').value || '').trim() || 'Armor mod description.';
+  const effectDesc = (document.getElementById('mod-effectdesc').value || '').trim() || '';
+  const model = (document.getElementById('mod-model').value || '').trim() || 'models/props_lab/box01a.mdl';
+  const physicalResist = document.getElementById('mod-phys').value || '0';
+  const magicResist = document.getElementById('mod-magic').value || '0';
+  const regen = document.getElementById('mod-regen').value || '0';
+  const speed = document.getElementById('mod-speed').value || '0';
+  const damage = document.getElementById('mod-dmg').value || '0';
+
+  const lines = [
+  '-- Copy and paste this code into the module mods list',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/fantasyarmors/mods.lua',
+  '',
+  `lia.armors.registerMod(${JSON.stringify(uniqueId)}, {`,
+  `    type = ${JSON.stringify(type)},`,
+  `    name = ${JSON.stringify(name)},`,
+  `    desc = ${JSON.stringify(desc)},`,
+  `    effectDesc = ${JSON.stringify(effectDesc)},`,
+  `    model = ${JSON.stringify(model)},`,
+  '    effects = {',
+  `        physicalResist = ${physicalResist},`,
+  `        magicResist = ${magicResist},`,
+  `        regen = ${regen},`,
+  `        speed = ${speed},`,
+  `        damage = ${damage}`,
+  '    }',
+  '})'
+  ];
+
+  const code = `${lines.join('\n')}\n`;
+  const outputBox = document.getElementById('output-code');
+  if (outputBox) outputBox.value = code;
+}
+
+function fillExampleArmorMod() {
+  document.getElementById('mod-id').value = 'mod_swift';
+  document.getElementById('mod-type').value = 'swift';
+  document.getElementById('mod-name').value = 'Swift Step Mod';
+  document.getElementById('mod-desc').value = 'Increases movement speed.';
+  document.getElementById('mod-effectdesc').value = '+5% movement speed';
+  document.getElementById('mod-model').value = 'models/props_lab/box01a.mdl';
+  document.getElementById('mod-phys').value = '0';
+  document.getElementById('mod-magic').value = '0';
+  document.getElementById('mod-regen').value = '0';
+  document.getElementById('mod-speed').value = '5';
+  document.getElementById('mod-dmg').value = '0';
+  generateArmorModCode();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(() => {
+    const modPanel = document.getElementById('armor-panel-mod');
+    if (modPanel && modPanel.style.display !== 'none') {
+      generateArmorModCode();
+    } else {
+      generateArmorCode();
+    }
+  });
+  const list = document.getElementById('armor-mods-list');
+  list.innerHTML = '';
+  addArmorModRow('fortified');
+  addArmorModRow('wardbound');
+  addArmorModRow('swift');
+  addArmorModRow('temper');
+
+  const modelMapList = document.getElementById('armor-model-map-list');
+  if (modelMapList) modelMapList.innerHTML = '';
+  const modelMode = document.getElementById('armor-model-mode');
+  if (modelMode) modelMode.value = 'single';
+  showArmorModelMode();
+
+  showArmorTab('armor');
+});
+</script>
+
+---
+
+## Changelog
+
+<details class="realm-shared no-icon">
+  <summary>Version 1.4</summary>
+  <div class="details-content" style="margin-left: 20px;">
+    <ul>
+      <li>Initial Release</li>
+    </ul>
+  </div>
+</details>
+
