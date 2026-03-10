@@ -7,7 +7,19 @@ Advanced bone manipulation system that provides realistic roleplay animations th
 ## Changelog
 
 <details class="realm-shared no-icon">
-  <summary>Version 1.6</summary>
+  <summary>Version 1.1</summary>
+  <div class="details-content" style="margin-left: 20px;">
+    <ul>
+      <li>Added smooth blend-in/blend-out transitions for animations</li>
+      <li>Adjusted interruption logic (including crouch and lower movement threshold) and centralized animation updating</li>
+      <li>Added additional gesture animations (e.g., Peace Sign, Thumbs Up/Down, Pew Pew, etc.)</li>
+      <li>Added player interaction action to sequence/play all animations and ensured Stop Animation cancels active sequence</li>
+    </ul>
+  </div>
+</details>
+
+<details class="realm-shared no-icon">
+  <summary>Version 1.0</summary>
   <div class="details-content" style="margin-left: 20px;">
     <ul>
       <li>Initial Release</li>
@@ -15,3 +27,12 @@ Advanced bone manipulation system that provides realistic roleplay animations th
   </div>
 </details>
 
+
+---
+
+## Video Demo
+
+<video controls width="100%" style="width: 100%;">
+  <source src="https://bleonheart.github.io/assets/anim.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
