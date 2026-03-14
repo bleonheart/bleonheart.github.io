@@ -16,10 +16,6 @@
     <h3>Advanced Bone Manipulation Animation</h3>
     <p>Advanced bone manipulation system that provides realistic roleplay animations through precise skeletal control. Utilizes ValveBiped bone structure to create natural-looking poses including surrender (hands-up), military salutes, crossed arms, attention stances, typing posture, and various gestures. Features automatic interruption on movement, jumping, weapon switching, or vehicle entry to maintain gameplay flow. Integrates with lia.playerinteract for seamless context menu access, supports timed animations with auto-deactivation, and includes comprehensive cleanup systems for map changes and character respawns. Server-authoritative with networked synchronization ensures all players see consistent animations across the multiplayer environment.</p>
   </a>
-  <a href="./bonemerge/" class="card">
-    <h3>Advanced Bonemerge Clothing</h3>
-    <p>Comprehensive bonemerge-based clothing system that allows players to equip and customize outfits with multiple clothing slots. Features dynamic model merging, slot-based inventory management, gender-specific clothing, VIP items, plastic surgery, and a complete vendor system for purchasing and managing clothing items including hats, shirts, pants, shoes, accessories, and full outfits.</p>
-  </a>
   <a href="./carspawner/" class="card">
     <h3>Advanced Car Spawner</h3>
     <p>Comprehensive vehicle spawning system that provides players with an interactive GUI menu to browse, purchase, and spawn various vehicles. Features include customizable car registration system, physical car crate entities, intelligent spawn positioning with collision detection, currency integration, and support for both LVS and custom vehicle classes. The system includes server-side vehicle management, client-side interface with scrollable car listings, and automatic vehicle ownership assignment through CPPI.</p>
@@ -31,10 +27,6 @@
   <a href="./crafting/" class="card">
     <h3>Advanced Crafting</h3>
     <p>Comprehensive crafting system featuring multiple crafting stations (forge, workbench), recipe-based crafting with time-based progress bars, attribute requirements and skill progression, tool dependencies, faction restrictions, knowledge system with recipe books, dynamic UI with progress tracking and cancellation, item consumption and output with randomized quantities, and automatic entity registration for crafting stations</p>
-  </a>
-  <a href="./identifications/" class="card">
-    <h3>Advanced Identification & Character Registry</h3>
-    <p>Comprehensive identification system featuring customizable character profiles with physical attributes (age, sex, ethnicity, weight, eye/hair color, blood type), multiple regional ID card designs (California, German, Florida, New York, Southside, Yorkshire), character recognition mechanics, and interactive ID viewing/requesting functionality. Includes gender-based model filtering, persistent character data storage, and administrative ID management tools for immersive roleplaying scenarios.</p>
   </a>
   <a href="./policesuite/" class="card">
     <h3>Advanced Police Suite</h3>

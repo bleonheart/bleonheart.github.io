@@ -178,10 +178,8 @@ function generateRankingCode() {
   const canKick = document.getElementById('rank-kick').checked;
 
   const lines = [
-  '-- Copy and paste this into: modules/done/ranking/config.lua',
+  '-- Copy and paste this into: modules/ranking/definitions.lua',
   '',
-  'lia.ranking.rankTable = lia.ranking.rankTable or {}',
-  `lia.ranking.rankTable[${classConst}] = lia.ranking.rankTable[${classConst}] or {}`,
   `lia.ranking.registerRank(${classConst}, ${JSON.stringify(rankId)}, {`,
   `    Clearance = ${clearance},`,
   `    Model = ${JSON.stringify(model)},`,

@@ -20,7 +20,7 @@ Comprehensive store robbery system featuring interactive jewelry cases and cash 
           <div class="input-group">
             <label for="rob-loc-id">Entity Class:</label>
             <input type="text" id="rob-loc-id" placeholder="e.g., jewelry_case" value="jewelry_case" oninput="generateRobberyLocationCode()">
-            <small>Used as the key in <code>lia.robberies.RobbingTable</code> and becomes the spawned entity class.</small>
+            <small>Used as the entity class name for <code>lia.robberies.registerEntity()</code> and becomes the spawned entity class.</small>
           </div>
 
           <div class="input-group">
@@ -190,7 +190,7 @@ function generateRobberyLocationCode() {
   const lines = [
   '-- Copy and paste this into: modules/done/robberies/config/shared.lua',
   '',
-  `lia.robberies.RobbingTable[${JSON.stringify(className)}] = {`,
+  `lia.robberies.registerEntity(${JSON.stringify(className)}, {`,
   `    name = ${JSON.stringify(name)},`,
   `    model = ${JSON.stringify(model)},`,
   `    respawnTimer = ${respawnTimer},`,
@@ -217,7 +217,7 @@ function generateRobberyLocationCode() {
   }
 
   lines.push('    }');
-  lines.push('}');
+  lines.push('})');
 
   const code = `${lines.join('\n')}\n`;
   const outputBox = document.getElementById('output-code');
