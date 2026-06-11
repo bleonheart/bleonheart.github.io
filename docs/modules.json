@@ -112,12 +112,12 @@
     "workshop": []
   },
   {
-    "name": "Cellphone Communication",
+    "name": "Telecommunications Network",
     "versionID": "private_cellphones",
     "author": "Samael",
     "discord": "@liliaplayer",
-    "description": "Comprehensive cellphone communication system featuring physical phone items with unique phone numbers and area codes (408, 650, 925), voice calling with call management, SMS/text messaging capabilities, private phone chat channels, player interaction menu integration for direct calling, contact management through phone number discovery, and network synchronization for multiplayer communication. Includes realistic phone number assignment, call state management, and support for phone-to-phone communication with proper validation and error handling.",
-    "version": "1.0",
+    "description": "Connects handheld phones and placed telephones through a shared network with direct dialing, ringing, answering, hangups, and live voice routing between both endpoint types.",
+    "version": "2.0",
     "source": "https://bleonheart.github.io/modules/cellphones/about/",
     "directory": "./cellphones",
     "features": [],
@@ -164,6 +164,20 @@
     "workshop": []
   },
   {
+    "name": "Advanced Radio Communication",
+    "versionID": "private_radio",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Comprehensive radio communication framework featuring handheld radios and stationary broadcast units with frequency tuning, encrypted faction channels, preset stations, range-based transmission, static noise effects, and Star Wars RP comlink compatibility. Supports both item-based and entity-based radio devices with real-time voice transmission, channel management, and secure communications for different factions.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/radio/about/",
+    "directory": "./computers/radio",
+    "features": [],
+    "workshop": [
+      "3527548881"
+    ]
+  },
+  {
     "name": "Advanced Corpse Looting",
     "versionID": "private_corpses_looting",
     "author": "Samael",
@@ -186,20 +200,6 @@
     "directory": "./crafting",
     "features": [],
     "workshop": []
-  },
-  {
-    "name": "Handcuffs & Restraint",
-    "versionID": "private_tying",
-    "author": "Samael",
-    "discord": "liliaplayer",
-    "description": "Comprehensive player restraint system featuring handcuff items and weapons, rope-based tying mechanics, complete weapon and movement restrictions for restrained players, drag functionality with submodule support, blindfold and gag features, lockpicking mechanics, realistic restraint sounds, and robust hostage scenario tools for immersive roleplay interactions.",
-    "version": "1.0",
-    "source": "https://bleonheart.github.io/modules/cuffs/about/",
-    "directory": "./cuffs",
-    "features": [],
-    "workshop": [
-      "3527551786"
-    ]
   },
   {
     "name": "Delivery Job",
@@ -326,6 +326,20 @@
     ]
   },
   {
+    "name": "Handcuffs & Restraint",
+    "versionID": "private_tying",
+    "author": "Samael",
+    "discord": "liliaplayer",
+    "description": "Comprehensive player restraint system featuring handcuff items and weapons, rope-based tying mechanics, complete weapon and movement restrictions for restrained players, drag functionality with submodule support, blindfold and gag features, lockpicking mechanics, realistic restraint sounds, and robust hostage scenario tools for immersive roleplay interactions.",
+    "version": "1.1",
+    "source": "https://bleonheart.github.io/modules/handcuffs/about/",
+    "directory": "./handcuffs",
+    "features": [],
+    "workshop": [
+      "3527551786"
+    ]
+  },
+  {
     "name": "City Guide NPC",
     "versionID": "private_helpnpc",
     "author": "Samael",
@@ -334,6 +348,18 @@
     "version": "1.0",
     "source": "https://bleonheart.github.io/modules/helpnpc/about/",
     "directory": "./helpnpc",
+    "features": [],
+    "workshop": []
+  },
+  {
+    "name": "Advanced Identification & Character Registry",
+    "versionID": "private_idsystem",
+    "author": "Samael",
+    "discord": "@liliaplayer",
+    "description": "Comprehensive identification system featuring customizable character profiles with physical attributes (age, sex, ethnicity, weight, eye/hair color, blood type), multiple regional ID card designs (California, German, Florida, New York, Southside, Yorkshire), character recognition mechanics, and interactive ID viewing/requesting functionality. Includes gender-based model filtering, persistent character data storage, and administrative ID management tools for immersive roleplaying scenarios.",
+    "version": "1.0",
+    "source": "https://bleonheart.github.io/modules/identifications/about/",
+    "directory": "./identifications",
     "features": [],
     "workshop": []
   },
@@ -378,8 +404,8 @@
     "versionID": "private_looting",
     "author": "Samael",
     "discord": "@liliaplayer",
-    "description": "A comprehensive looting system that creates searchable container entities throughout the world. Features dynamic entity registration, skill-based access requirements (strength/luck attributes), multi-tiered rarity system (Common/Uncommon/Rare/Legendary/Unique) with weighted probability distribution, intelligent reward allocation with inventory management, customizable container types (cardboard boxes, crates, barrels, lockers, safes), cooldown timers for respawn prevention, audio feedback systems, and seamless integration with the Lilia framework",
-    "version": "1.0",
+    "description": "Lootable container system with two-panel UI. Containers generate flat item tables on chance roll. Players pick up or deposit items one at a time. Container resets timer when fully depleted.",
+    "version": "2.0",
     "source": "https://bleonheart.github.io/modules/looting/about/",
     "directory": "./looting",
     "features": [],
@@ -547,18 +573,6 @@
       "1238235086",
       "771487490"
     ]
-  },
-  {
-    "name": "Territories - Faction Control Point",
-    "versionID": "private_controlpoint",
-    "author": "Samael",
-    "discord": "@liliaplayer",
-    "description": "Comprehensive territory control system that allows factions to capture, defend, and hold strategic control points. Features include configurable capture zones with customizable radius and capture timers, automatic NPC defender spawning, real-time HUD status displays showing current ownership and capture progress, faction-based ownership mechanics with collision prevention to ensure proper point distribution, reward systems for holding territories, persistent entity saving, and administrative tools for managing control points. The system supports dynamic territory warfare where factions can contest control points through presence-based capture mechanics requiring minimum defenders to secure areas.",
-    "version": "1.0",
-    "source": "https://bleonheart.github.io/modules/territories/about/",
-    "directory": "./territories",
-    "features": [],
-    "workshop": []
   },
   {
     "name": "Terrorism",

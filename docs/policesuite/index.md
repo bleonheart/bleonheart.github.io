@@ -15,12 +15,3 @@ Complete law enforcement management system featuring 23-tier police rank hierarc
   </div>
 </details>
 
-
----
-
-## Video Demo
-
-<video controls width="100%" style="width: 100%;">
-  <source src="https://bleonheart.github.io/assets/policesuite.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

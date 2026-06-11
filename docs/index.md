@@ -16,6 +16,10 @@
     <h3>Advanced Bone Manipulation Animation</h3>
     <p>Advanced bone manipulation system that provides realistic roleplay animations through precise skeletal control. Utilizes ValveBiped bone structure to create natural-looking poses including surrender (hands-up), military salutes, crossed arms, attention stances, typing posture, and various gestures. Features automatic interruption on movement, jumping, weapon switching, or vehicle entry to maintain gameplay flow. Integrates with lia.playerinteract for seamless context menu access, supports timed animations with auto-deactivation, and includes comprehensive cleanup systems for map changes and character respawns. Server-authoritative with networked synchronization ensures all players see consistent animations across the multiplayer environment.</p>
   </a>
+  <a href="./bonemerge/" class="card">
+    <h3>Advanced Bonemerge Clothing</h3>
+    <p>Comprehensive bonemerge-based clothing system that allows players to equip and customize outfits with multiple clothing slots. Features dynamic model merging, slot-based inventory management, gender-specific clothing, VIP items, plastic surgery, and a complete vendor system for purchasing and managing clothing items including hats, shirts, pants, shoes, accessories, and full outfits.</p>
+  </a>
   <a href="./carspawner/" class="card">
     <h3>Advanced Car Spawner</h3>
     <p>Comprehensive vehicle spawning system that provides players with an interactive GUI menu to browse, purchase, and spawn various vehicles. Features include customizable car registration system, physical car crate entities, intelligent spawn positioning with collision detection, currency integration, and support for both LVS and custom vehicle classes. The system includes server-side vehicle management, client-side interface with scrollable car listings, and automatic vehicle ownership assignment through CPPI.</p>
@@ -28,6 +32,10 @@
     <h3>Advanced Crafting</h3>
     <p>Comprehensive crafting system featuring multiple crafting stations (forge, workbench), recipe-based crafting with time-based progress bars, attribute requirements and skill progression, tool dependencies, faction restrictions, knowledge system with recipe books, dynamic UI with progress tracking and cancellation, item consumption and output with randomized quantities, and automatic entity registration for crafting stations</p>
   </a>
+  <a href="./identifications/" class="card">
+    <h3>Advanced Identification & Character Registry</h3>
+    <p>Comprehensive identification system featuring customizable character profiles with physical attributes (age, sex, ethnicity, weight, eye/hair color, blood type), multiple regional ID card designs (California, German, Florida, New York, Southside, Yorkshire), character recognition mechanics, and interactive ID viewing/requesting functionality. Includes gender-based model filtering, persistent character data storage, and administrative ID management tools for immersive roleplaying scenarios.</p>
+  </a>
   <a href="./policesuite/" class="card">
     <h3>Advanced Police Suite</h3>
     <p>Complete law enforcement management system featuring 23-tier police rank hierarchy with progressive salaries and equipment kits, comprehensive criminal code with detailed offenses and sentencing guidelines, advanced police computer database with real-time criminal records, warrant management, and serial number tracking, specialized police equipment including tasers, nightsticks, and finebooks, dynamic jail cell management system with map-specific configurations, police locker and NPC integration, dispatcher system for citizen help requests, internal affairs oversight, and extensive administrative privileges for police faction management.</p>
@@ -36,6 +44,10 @@
     <h3>Advanced Radio Communication</h3>
     <p>Comprehensive radio communication framework featuring handheld radios and stationary broadcast units with frequency tuning, encrypted faction channels, preset stations, range-based transmission, static noise effects, and Star Wars RP comlink compatibility. Supports both item-based and entity-based radio devices with real-time voice transmission, channel management, and secure communications for different factions.</p>
   </a>
+  <a href="./airraids/" class="card">
+    <h3>Air Raid Event System</h3>
+    <p>Random and staff-triggered bombing raids with configurable map zones and post-raid looting.</p>
+  </a>
   <a href="./blackmarket/" class="card">
     <h3>Black Market Trading</h3>
     <p>A comprehensive underground trading system featuring an elusive NPC black market dealer who sells illegal weapons, contraband items, and restricted goods. The system includes dynamic inventory management with limited stock quantities, automatic restock timers that replenish supplies over time, configurable pricing structures, secret location mechanics requiring players to discover the hidden shop, waypoint/package delivery systems for illicit transactions, and administrative tools for managing the black market economy. Perfect for servers seeking enhanced criminal roleplay opportunities with an immersive underground economy.</p>
@@ -43,10 +55,6 @@
   <a href="./cameras/" class="card">
     <h3>CCTV Surveillance</h3>
     <p>Complete CCTV surveillance network system featuring physical camera entities (lia_cam) that can be deployed and linked to monitor mainframes (lia_cctv). Players can access live camera feeds through monitor interfaces with faction-restricted permissions, or remotely using Personal Access Devices (PAD). The system supports multiple mainframes, named camera networks, real-time feed streaming, and provides comprehensive surveillance capabilities for roleplay scenarios with proper access control and authentication mechanisms.</p>
-  </a>
-  <a href="./cellphones/" class="card">
-    <h3>Cellphone Communication</h3>
-    <p>Comprehensive cellphone communication system featuring physical phone items with unique phone numbers and area codes (408, 650, 925), voice calling with call management, SMS/text messaging capabilities, private phone chat channels, player interaction menu integration for direct calling, contact management through phone number discovery, and network synchronization for multiplayer communication. Includes realistic phone number assignment, call state management, and support for phone-to-phone communication with proper validation and error handling.</p>
   </a>
   <a href="./leveling/" class="card">
     <h3>Character Progression</h3>
@@ -108,6 +116,10 @@
     <h3>Extraction Flare</h3>
     <p>Extraction flare system that allows players to signal extraction points by throwing throwable flares. Includes configurable extraction positions per map, flare grenade items, visual effects, and network messaging for extraction coordination. Provides raid-style extraction mechanics with countdown timers and escape zone functionality.</p>
   </a>
+  <a href="./factionwar/" class="card">
+    <h3>Faction War</h3>
+    <p>Standalone faction relation, war operation, and Derma manager system.</p>
+  </a>
   <a href="./fence/" class="card">
     <h3>Fence - Black Market Dealer</h3>
     <p>A comprehensive fence NPC system that provides underground black market services. Features include: Purchase stolen items and contraband from players at fair market values, Dynamic pricing based on item reward values and rarity, Full integration with the robbery system for all stolen goods, Secure transaction processing with inventory validation, Interactive dialogue system with contextual responses, Buy and sell interface with item filtering, Support for weapons, valuables, and illegal items, Anti-theft protection and transaction logging.</p>
@@ -116,7 +128,7 @@
     <h3>FOB Respawn</h3>
     <p>A comprehensive Forward Operating Base (FOB) respawn management system that allows administrators to place faction-specific respawn terminals. Players can respawn at designated FOB points based on their faction affiliation, with support for multiple spawn points per faction and map-specific configurations. The system includes client-server synchronization, administrative placement tools, and automatic respawn location selection.</p>
   </a>
-  <a href="./cuffs/" class="card">
+  <a href="./handcuffs/" class="card">
     <h3>Handcuffs & Restraint</h3>
     <p>Comprehensive player restraint system featuring handcuff items and weapons, rope-based tying mechanics, complete weapon and movement restrictions for restrained players, drag functionality with submodule support, blindfold and gag features, lockpicking mechanics, realistic restraint sounds, and robust hostage scenario tools for immersive roleplay interactions.</p>
   </a>
@@ -126,11 +138,15 @@
   </a>
   <a href="./looting/" class="card">
     <h3>Interactive Looting</h3>
-    <p>A comprehensive looting system that creates searchable container entities throughout the world. Features dynamic entity registration, skill-based access requirements (strength/luck attributes), multi-tiered rarity system (Common/Uncommon/Rare/Legendary/Unique) with weighted probability distribution, intelligent reward allocation with inventory management, customizable container types (cardboard boxes, crates, barrels, lockers, safes), cooldown timers for respawn prevention, audio feedback systems, and seamless integration with the Lilia framework</p>
+    <p>Lootable container system with two-panel UI. Containers generate flat item tables on chance roll. Players pick up or deposit items one at a time. Container resets timer when fully depleted.</p>
   </a>
   <a href="./recruiternpc/" class="card">
     <h3>Job Recruiter NPC</h3>
     <p>Automated job recruitment system that dynamically creates recruiter NPCs for all configured factions. Each NPC provides contextual dialog options allowing players to join jobs (with proper faction transfer hooks and loadout updates) or resign (reverting to default faction). Features intelligent option visibility based on player</p>
+  </a>
+  <a href="./keycards/" class="card">
+    <h3>Keycards</h3>
+    <p>Scanner and keycard access control built as a native Lilia module.</p>
   </a>
   <a href="./limbdamage/" class="card">
     <h3>Limb Damage</h3>
@@ -168,9 +184,9 @@
     <h3>Taxi Transportation Service</h3>
     <p>A comprehensive taxi transportation system featuring an NPC dispatcher that spawns taxi vehicles for player hire, provides instant teleportation to predefined city locations with distance-based pricing, prevents duplicate taxi ownership, and integrates custom workshop vehicle models for realistic taxi services.</p>
   </a>
-  <a href="./territories/" class="card">
-    <h3>Territories - Faction Control Point</h3>
-    <p>Comprehensive territory control system that allows factions to capture, defend, and hold strategic control points. Features include configurable capture zones with customizable radius and capture timers, automatic NPC defender spawning, real-time HUD status displays showing current ownership and capture progress, faction-based ownership mechanics with collision prevention to ensure proper point distribution, reward systems for holding territories, persistent entity saving, and administrative tools for managing control points. The system supports dynamic territory warfare where factions can contest control points through presence-based capture mechanics requiring minimum defenders to secure areas.</p>
+  <a href="./cellphones/" class="card">
+    <h3>Telecommunications Network</h3>
+    <p>Connects handheld phones and placed telephones through a shared network with direct dialing, ringing, answering, hangups, and live voice routing between both endpoint types.</p>
   </a>
   <a href="./terrorism/" class="card">
     <h3>Terrorism</h3>
@@ -179,6 +195,10 @@
   <a href="./cardealer/" class="card">
     <h3>Vehicle Dealership</h3>
     <p>A comprehensive vehicle management system that provides NPC-based vehicle purchasing, ownership tracking, and maintenance services. Features include interactive dealer NPCs for vehicle sales with configurable pricing, vehicle return and repair systems with fee-based services, custom paint jobs and bodygroup modifications with individual pricing, secure garage storage for owned vehicles, full integration with popular driving addons, administrative privileges for staff vehicle access, and persistent vehicle ownership data across server restarts.</p>
+  </a>
+  <a href="./vehiclebeacons/" class="card">
+    <h3>Vehicle Deployment Beacons</h3>
+    <p>Faction-based in-world vehicle deployment beacons with ghost placement, secure validation, and support for Source and simfphys vehicle spawning.</p>
   </a>
   <a href="./caroptions/" class="card">
     <h3>Vehicle Entertainment & Passenger</h3>

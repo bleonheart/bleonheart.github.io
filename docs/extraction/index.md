@@ -15,12 +15,3 @@ Extraction flare system that allows players to signal extraction points by throw
   </div>
 </details>
 
-
----
-
-## Video Demo
-
-<video controls width="100%" style="width: 100%;">
-  <source src="https://bleonheart.github.io/assets/extraction.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

@@ -15,12 +15,3 @@ Comprehensive identification system featuring customizable character profiles wi
   </div>
 </details>
 
-
----
-
-## Video Demo
-
-<video controls width="100%" style="width: 100%;">
-  <source src="https://bleonheart.github.io/assets/identifications.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

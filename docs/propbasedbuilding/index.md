@@ -254,45 +254,45 @@ function generateItemCode() {
   const health = document.getElementById('item-health').value || '0';
 
   const lines = [
-  '-- Copy and paste this code into a new item file',
-  '-- Example: garrysmod/gamemodes/[schema folder]/modules/propbasedbuilding/items/custom_item.lua',
+  '-- Copy and paste this code into any Lua file that loads during initialization',
+  '-- Example: garrysmod/gamemodes/[schema folder]/schema/items.lua',
   '',
-  'ITEM.name = ' + JSON.stringify(name),
-  'ITEM.desc = ' + JSON.stringify(desc),
-  'ITEM.category = "Constructable"',
-  'ITEM.model = ' + JSON.stringify(model),
-  'ITEM.prop = ' + JSON.stringify(prop),
-  'ITEM.width = ' + width,
-  'ITEM.height = ' + height,
+  'lia.item.registerItem(' + JSON.stringify(uniqueId) + ', "propbasedconstruction", {',
+  '    name = ' + JSON.stringify(name) + ',',
+  '    desc = ' + JSON.stringify(desc) + ',',
+  '    category = "Constructable",',
+  '    model = ' + JSON.stringify(model) + ',',
+  '    prop = ' + JSON.stringify(prop) + ',',
+  '    width = ' + width + ',',
+  '    height = ' + height + ',',
   ];
 
   if (health && health !== '0') {
-    lines.push('ITEM.health = ' + health);
-  } else {
-    lines.push('ITEM.health = nil');
+    lines.push('    health = ' + health + ',');
   }
 
-  lines.push('');
-  lines.push('ITEM.functions.Place = {');
-  lines.push('    name = "Place",');
-  lines.push('    tip = "Place Object",');
-  lines.push('    icon = "icon16/wrench.png",');
-  lines.push('    onRun = function(item)');
-  lines.push('        local client = item.player');
-  lines.push('        client:setNetVar("ConstructablePropModel", item.prop)');
-  lines.push('        client:setNetVar("ConstructablePropPlacing", true)');
-  lines.push('        client:setNetVar("ConstructablePropID", item.uniqueID)');
-  lines.push('        return false');
-  lines.push('    end,');
-  lines.push('    onCanRun = function(item)');
-  lines.push('        local client = item.player');
-  lines.push('        return not IsValid(item.entity) and IsValid(client)');
+  lines.push('    functions = {');
+  lines.push('        Place = {');
+  lines.push('            name = "Place",');
+  lines.push('            tip = "Place Object",');
+  lines.push('            icon = "icon16/wrench.png",');
+  lines.push('            onRun = function(item)');
+  lines.push('                local client = item.player');
+  lines.push('                client:setNetVar("ConstructablePropModel", item.prop)');
+  lines.push('                client:setNetVar("ConstructablePropPlacing", true)');
+  lines.push('                client:setNetVar("ConstructablePropID", item.uniqueID)');
+  lines.push('                return false');
+  lines.push('            end,');
+  lines.push('            onCanRun = function(item)');
+  lines.push('                local client = item.player');
+  lines.push('                return not IsValid(item.entity) and IsValid(client)');
+  lines.push('            end');
+  lines.push('        }');
+  lines.push('    },');
+  lines.push('    GetModel = function(self)');
+  lines.push('        return (self.invID == 0 or not self.invID) and self.model or self.prop');
   lines.push('    end');
-  lines.push('}');
-  lines.push('');
-  lines.push('function ITEM:GetModel()');
-  lines.push('    return (self.invID == 0 or not self.invID) and self.model or self.prop');
-  lines.push('end');
+  lines.push('})');
 
   const code = `${lines.join('\n')}\n`;
   const outputBox = document.getElementById('output-code');

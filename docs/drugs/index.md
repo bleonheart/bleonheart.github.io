@@ -15,12 +15,3 @@ Complete drug economy and gameplay system featuring cultivation (weed planting w
   </div>
 </details>
 
-
----
-
-## Video Demo
-
-<video controls width="100%" style="width: 100%;">
-  <source src="https://bleonheart.github.io/assets/drugs.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

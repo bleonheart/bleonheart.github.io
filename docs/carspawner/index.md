@@ -40,20 +40,6 @@ Comprehensive vehicle spawning system that provides players with an interactive 
         </div>
 
         <div class="input-group">
-          <label for="car-spawn-dist">Spawn Distance:</label>
-          <input type="number" id="car-spawn-dist" placeholder="200" value="200" oninput="generateCarSpawnerCode()">
-          <small>Optional distance offset used when spawning the vehicle (defaults to <code>200</code>).</small>
-        </div>
-
-        <div class="input-group">
-          <label for="car-spawn-height">Spawn Height:</label>
-          <input type="number" id="car-spawn-height" placeholder="12" value="12" oninput="generateCarSpawnerCode()">
-          <small>Optional height offset used when spawning the vehicle (defaults to <code>12</code>).</small>
-        </div>
-      </div>
-
-      <div class="form-grid-2">
-        <div class="input-group">
           <label for="car-category">Category:</label>
           <input type="text" id="car-category" placeholder="e.g., Vehicles" value="Vehicles" oninput="generateCarSpawnerCode()">
           <small>Optional organization category shown in the spawner UI (defaults to <code>"Vehicles"</code>).</small>
@@ -65,16 +51,6 @@ Comprehensive vehicle spawning system that provides players with an interactive 
           <small>Optional crate/placeholder model (defaults to a wood crate if omitted).</small>
         </div>
       </div>
-    </div>
-
-    <div class="generator-section">
-      <div class="input-group">
-        <label for="car-factions">Allowed Factions:</label>
-        <small>Optional. Add faction unique IDs that can spawn this vehicle. Leave empty for all factions.</small>
-      </div>
-
-      <div id="factions-list" class="dynamic-list"></div>
-      <button type="button" class="add-btn" onclick="addFactionRow()">Add Faction</button>
     </div>
 
     <div class="button-group">
@@ -93,13 +69,6 @@ Comprehensive vehicle spawning system that provides players with an interactive 
 </div>
 
 <script>
-function luaValueFromText(text) {
-  const t = (text || '').trim();
-  if (!t) return '';
-  if (/^[A-Za-z_][A-Za-z0-9_]*$/.test(t)) return t;
-  return JSON.stringify(t);
-}
-
 function setupLiveUpdate(generateFn) {
   if (typeof generateFn !== 'function') return;
   const root = document.querySelector('.generator-card.form-card') || document;
@@ -111,27 +80,6 @@ function setupLiveUpdate(generateFn) {
   });
 }
 
-function factionRowTemplate(idx, faction) {
-  return `
-  <div class="dynamic-row" data-idx="${idx}">
-    <input type="text" class="fac-id" placeholder="FACTION_CITIZEN" value="${faction || ''}" oninput="generateCarSpawnerCode()">
-    <button type="button" class="remove-btn" onclick="removeFactionRow(this)">×</button>
-  </div>`;
-}
-
-function addFactionRow(faction) {
-  const list = document.getElementById('factions-list');
-  const idx = list.children.length;
-  list.insertAdjacentHTML('beforeend', factionRowTemplate(idx, faction));
-  generateCarSpawnerCode();
-}
-
-function removeFactionRow(btn) {
-  const row = btn.closest('.dynamic-row');
-  if (row) row.remove();
-  generateCarSpawnerCode();
-}
-
 function generateCarSpawnerCode() {
   const vehicleClass = (document.getElementById('car-class').value || '').trim() || 'vehicle_class';
   const name = (document.getElementById('car-name').value || '').trim() || 'Vehicle';
@@ -139,18 +87,6 @@ function generateCarSpawnerCode() {
   const price = document.getElementById('car-price').value || '0';
   const category = (document.getElementById('car-category').value || '').trim();
   const model = (document.getElementById('car-model').value || '').trim();
-  const spawnDist = (document.getElementById('car-spawn-dist').value || '').trim();
-  const spawnHeight = (document.getElementById('car-spawn-height').value || '').trim();
-
-  const factionRows = Array.from(document.querySelectorAll('#factions-list .dynamic-row'));
-  const factionList = [];
-  for (const row of factionRows) {
-    const faction = (row.querySelector('.fac-id').value || '').trim();
-    if (!faction) continue;
-    factionList.push(faction);
-  }
-
-  const factionLuaValues = factionList.map(luaValueFromText).filter(Boolean);
 
   const lines = [
   '-- Copy and paste this code into the module definitions file',
@@ -164,15 +100,8 @@ function generateCarSpawnerCode() {
 
   if (category) lines.push(`    category = ${JSON.stringify(category)},`);
   if (model) lines.push(`    model = ${JSON.stringify(model)},`);
-  if (spawnDist) lines.push(`    spawnDistance = ${spawnDist},`);
-  if (spawnHeight) lines.push(`    spawnHeight = ${spawnHeight},`);
 
-  // Add factions at the end
-  if (factionLuaValues.length > 0) {
-    lines.push(`    factions = {${factionLuaValues.join(', ')}},`);
-  }
-
-  // Remove trailing comma from last entry if present by rewriting last line
+  // Remove trailing comma from last entry
   if (lines[lines.length - 1].endsWith(',')) {
     lines[lines.length - 1] = lines[lines.length - 1].slice(0, -1);
   }
@@ -191,18 +120,10 @@ function fillExampleCarSpawner() {
   document.getElementById('car-price').value = '10000';
   document.getElementById('car-category').value = 'Vehicles';
   document.getElementById('car-model').value = 'models/props_junk/wood_crate001a.mdl';
-  document.getElementById('car-spawn-dist').value = '200';
-  document.getElementById('car-spawn-height').value = '12';
-  const factionsList = document.getElementById('factions-list');
-  factionsList.innerHTML = '';
-  addFactionRow('FACTION_CITIZEN');
-  addFactionRow('FACTION_COP');
   generateCarSpawnerCode();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const factionsList = document.getElementById('factions-list');
-  if (factionsList) factionsList.innerHTML = '';
   setupLiveUpdate(generateCarSpawnerCode);
   generateCarSpawnerCode();
 });

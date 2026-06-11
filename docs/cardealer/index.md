@@ -24,12 +24,6 @@ A comprehensive vehicle management system that provides NPC-based vehicle purcha
         </div>
       </div>
 
-      <div class="input-group">
-        <label for="vehicle-category">Category:</label>
-        <input type="text" id="vehicle-category" placeholder="e.g., Sports" value="Sports" oninput="generateVehicleItem()">
-        <small>Shown as the tab/category in the dealer UI</small>
-      </div>
-
     </div>
 
     <div class="generator-section">
@@ -46,6 +40,14 @@ A comprehensive vehicle management system that provides NPC-based vehicle purcha
           <small>Purchase price in currency</small>
         </div>
 
+        <div class="input-group">
+          <label for="vehicle-category">Category:</label>
+          <input type="text" id="vehicle-category" placeholder="e.g., Civilian" value="Civilian" oninput="generateVehicleItem()">
+          <small>Dealer category used for grouping vehicles in the UI.</small>
+        </div>
+      </div>
+
+      <div class="form-grid-2">
         <div class="input-group">
           <label for="vehicle-simfphys">Simfphys Vehicle:</label>
           <select id="vehicle-simfphys" oninput="generateVehicleItem()">
@@ -180,9 +182,9 @@ function removeFactionRow(btn) {
 function generateVehicleItem() {
   const carClass = (document.getElementById('item-id').value || '').trim() || 'sim_fphys_example';
   const name = (document.getElementById('item-name').value || '').trim() || 'Vehicle';
-  const category = (document.getElementById('vehicle-category').value || '').trim() || 'Uncategorized';
   const model = (document.getElementById('vehicle-model').value || '').trim();
   const price = document.getElementById('vehicle-price').value || '0';
+  const category = (document.getElementById('vehicle-category').value || '').trim();
   const vip = document.getElementById('vehicle-vip').value === '1';
   const simfphysMode = document.getElementById('vehicle-simfphys').value;
   const noBuy = document.getElementById('vehicle-nobuy').value === '1';
@@ -212,7 +214,7 @@ function generateVehicleItem() {
   const props = [];
   props.push('    Name = ' + JSON.stringify(name) + ',');
   props.push('    Price = ' + price + ',');
-  props.push('    Category = ' + JSON.stringify(category) + ',');
+  if (category) props.push('    Category = ' + JSON.stringify(category) + ',');
   if (model) props.push('    Model = ' + JSON.stringify(model) + ',');
   if (vip) props.push('    vip = true,');
   if (factionLuaValues.length > 0) props.push('    factions = {' + factionLuaValues.join(', ') + '},');
@@ -245,7 +247,7 @@ function fillExampleVehicle() {
   document.getElementById('item-name').value = 'Dukes';
   document.getElementById('vehicle-model').value = '';
   document.getElementById('vehicle-price').value = '15000';
-  document.getElementById('vehicle-category').value = 'Standard';
+  document.getElementById('vehicle-category').value = 'Civilian';
   document.getElementById('vehicle-simfphys').value = 'auto';
   document.getElementById('vehicle-nobuy').value = '0';
   document.getElementById('vehicle-vip').value = '0';

@@ -36,7 +36,15 @@ A comprehensive medal award and display system featuring multiple themed medal p
       <div class="input-group">
         <label for="medal-icon">Icon filename:</label>
         <input type="text" id="medal-icon" placeholder="e.g., pd1.png" value="pd1.png" oninput="generateMedalCode()">
-        <small>Filename inside medals pack folder. Use lowercase letters, numbers, and underscores only.</small>
+        <small>Filename inside the medal pack folder or workshop material path. Use lowercase letters, numbers, and underscores only.</small>
+      </div>
+
+      <div class="input-group">
+        <label for="medal-is-workshop">
+          <input type="checkbox" id="medal-is-workshop" onchange="generateMedalCode()">
+          Use workshop content
+        </label>
+        <small>When enabled, the medal reads directly from mounted workshop materials instead of the GitHub URL source.</small>
       </div>
 
       <div class="form-grid-3">
@@ -58,7 +66,7 @@ A comprehensive medal award and display system featuring multiple themed medal p
             <option value="1">Common</option>
             <option value="2">Uncommon</option>
             <option value="3">Rare</option>
-            <option value="4">Legendary</option>
+            <option value="4">Exceptionally Rare</option>
           </select>
           <small>Controls rarity styling/labeling for this medal.</small>
         </div>
@@ -98,6 +106,7 @@ function generateMedalCode() {
   const name = (document.getElementById('medal-name').value || '').trim() || 'Unknown Medal';
   const desc = (document.getElementById('medal-desc').value || '').trim() || 'No description.';
   const icon = (document.getElementById('medal-icon').value || '').trim() || 'default.png';
+  const isWorkshop = document.getElementById('medal-is-workshop').checked;
   const sizeW = document.getElementById('medal-size-w').value || '96';
   const sizeH = document.getElementById('medal-size-h').value || '80';
   const rtype = document.getElementById('medal-rtype').value || '1';
@@ -113,6 +122,7 @@ function generateMedalCode() {
   '    size_h = ' + sizeH + ',',
   '    rtype = ' + rtype + ',',
   '    icon = ' + JSON.stringify(icon) + ',',
+  '    isWorkshop = ' + (isWorkshop ? 'true' : 'false') + ',',
   '    TextFont = "Trebuchet18",',
   '    TextColor = Color(255, 255, 255),',
   '    TextHeight = 18',
@@ -132,6 +142,7 @@ function fillExampleMedal() {
   document.getElementById('medal-name').value = 'LAPD - Patrol 1';
   document.getElementById('medal-desc').value = 'Awarded for attaining Patrol Level 1 in the LAPD.';
   document.getElementById('medal-icon').value = 'pd1.png';
+  document.getElementById('medal-is-workshop').checked = false;
   document.getElementById('medal-size-w').value = '96';
   document.getElementById('medal-size-h').value = '80';
   document.getElementById('medal-rtype').value = '1';
@@ -158,12 +169,3 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </details>
 
-
----
-
-## Video Demo
-
-<video controls width="100%" style="width: 100%;">
-  <source src="https://bleonheart.github.io/assets/medals.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

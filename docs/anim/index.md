@@ -13,7 +13,6 @@ Advanced bone manipulation system that provides realistic roleplay animations th
       <li>Added smooth blend-in/blend-out transitions for animations</li>
       <li>Adjusted interruption logic (including crouch and lower movement threshold) and centralized animation updating</li>
       <li>Added additional gesture animations (e.g., Peace Sign, Thumbs Up/Down, Pew Pew, etc.)</li>
-      <li>Added player interaction action to sequence/play all animations and ensured Stop Animation cancels active sequence</li>
     </ul>
   </div>
 </details>
@@ -27,12 +26,3 @@ Advanced bone manipulation system that provides realistic roleplay animations th
   </div>
 </details>
 
-
----
-
-## Video Demo
-
-<video controls width="100%" style="width: 100%;">
-  <source src="https://bleonheart.github.io/assets/anim.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>

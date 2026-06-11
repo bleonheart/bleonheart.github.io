@@ -1,6 +1,6 @@
 # Interactive Looting
 
-A comprehensive looting system that creates searchable container entities throughout the world. Features dynamic entity registration, skill-based access requirements (strength/luck attributes), multi-tiered rarity system (Common/Uncommon/Rare/Legendary/Unique) with weighted probability distribution, intelligent reward allocation with inventory management, customizable container types (cardboard boxes, crates, barrels, lockers, safes), cooldown timers for respawn prevention, audio feedback systems, and seamless integration with the Lilia framework
+Lootable container system with two-panel UI. Containers generate flat item tables on chance roll. Players pick up or deposit items one at a time. Container resets timer when fully depleted.
 
 ---
 
@@ -14,13 +14,13 @@ A comprehensive looting system that creates searchable container entities throug
         <div class="input-group">
           <label for="loot-id">Unique ID:</label>
           <input type="text" id="loot-id" placeholder="e.g., loot_cardboard_box" value="loot_cardboard_box" oninput="generateLootCode()">
-          <small>Unique identifier passed to <code>lia.loot.registerLoot</code>.</small>
+          <small>Unique identifier passed to <code>lia.loot.registerLoot</code>. Becomes the entity class name.</small>
         </div>
 
         <div class="input-group">
           <label for="loot-name">Name:</label>
           <input type="text" id="loot-name" placeholder="e.g., Cardboard Box" value="Cardboard Box" oninput="generateLootCode()">
-          <small>Shown to players for this loot container type.</small>
+          <small>Display name shown to players for this loot container type.</small>
         </div>
       </div>
 
@@ -34,51 +34,91 @@ A comprehensive looting system that creates searchable container entities throug
         <div class="input-group">
           <label for="loot-sound">Opening Sound:</label>
           <input type="text" id="loot-sound" placeholder="doors/door_metal_thin_open1.wav" value="doors/door_metal_thin_open1.wav" oninput="generateLootCode()">
-          <small>Played when the container is opened/searched.</small>
+          <small>Sound played when the container is opened/searched.</small>
         </div>
       </div>
     </div>
 
     <div class="generator-section">
-      <div class="form-grid-4">
+      <div class="form-grid-3">
         <div class="input-group">
           <label for="loot-chance">Chance:</label>
           <input type="number" id="loot-chance" min="0" value="5" oninput="generateLootCode()">
-          <small>Base chance value used by the looting system (module-defined meaning; commonly treated as a percent or weight).</small>
+          <small>Spawn chance weight. Used when the module auto-spawns loot containers.</small>
         </div>
 
         <div class="input-group">
-          <label for="loot-chancetime">Chance Time:</label>
+          <label for="loot-chancetime">Chance Time (seconds):</label>
           <input type="number" id="loot-chancetime" min="0" value="15" oninput="generateLootCode()">
-          <small>Additional timing/chance configuration used by the module (schema/module-defined; keep consistent with other loot definitions).</small>
+          <small>Interval between spawn chance checks.</small>
+        </div>
+
+        <div class="input-group">
+          <label for="loot-maxitems">Max Items:</label>
+          <input type="number" id="loot-maxitems" min="1" value="6" oninput="generateLootCode()">
+          <small>Maximum number of item stacks the container can hold.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="generator-section">
+      <div class="form-grid-2">
+        <div class="input-group">
+          <label for="loot-postraid">Post-Raid Only:</label>
+          <select id="loot-postraid" oninput="generateLootCode()">
+            <option value="false" selected>No</option>
+            <option value="true">Yes</option>
+          </select>
+          <small>If enabled, this container only spawns during post-raid events.</small>
         </div>
       </div>
     </div>
 
     <div class="generator-section">
       <div class="input-group">
-        <label>Attributes Requirements:</label>
+        <label>Skill Requirements:</label>
         <small>
-          Each row becomes one entry in <code>skillRequirements</code> (<code>[attribKey] = requiredValue</code>).
+          Each row becomes one entry in <code>skillRequirements</code> (<code>[attribKey] = minimumValue</code>).
           <br>
           <b>Attribute</b>: character attribute key (e.g. <code>strength</code>, <code>luck</code>).
           <br>
-          <b>Required</b>: minimum value required to search this container.
+          <b>Minimum</b>: minimum value required to search this container.
         </small>
       </div>
 
       <div id="attr-list" class="dynamic-list"></div>
-      <button type="button" class="add-btn" onclick="addLootAttribRow()">Add Attribute</button>
+      <button type="button" class="add-btn" onclick="addLootAttribRow()">Add Skill Requirement</button>
     </div>
 
     <div class="generator-section">
       <div class="input-group">
-        <label>Rarity Tiers:</label>
-        <small>Add tiers like Common/Uncommon/Rare/etc with an overall chance and item list.</small>
+        <label>Items (Loot Table):</label>
+        <small>
+          Each row becomes one entry in <code>items</code> (<code>[itemID] = { min = X, max = Y, chance = Z }</code>).
+          <br>
+          <b>Item</b>: the item unique ID that can spawn (e.g. <code>iron_ore</code>).
+          <br>
+          <b>Min</b>/<b>Max</b>: random quantity range (inclusive).
+          <br>
+          <b>Chance</b>: percent chance (0-100) for this item to be selected per roll.
+        </small>
       </div>
 
-      <div id="tier-list" class="dynamic-list"></div>
-      <button type="button" class="add-btn" onclick="addTierRow()">Add Tier</button>
+      <div id="loot-items-list" class="dynamic-list"></div>
+      <button type="button" class="add-btn" onclick="addLootItemRow()">Add Loot Item</button>
+    </div>
+
+    <div class="generator-section">
+      <div class="input-group">
+        <label>Fixed Contents (optional):</label>
+        <small>
+          Items that are always present in the container (bypasses chance roll).
+          Each row is <code>[itemID] = amount</code>.
+        </small>
+      </div>
+
+      <div id="fixed-list" class="dynamic-list"></div>
+      <button type="button" class="add-btn" onclick="addFixedRow()">Add Fixed Item</button>
     </div>
 
     <div class="button-group">
@@ -130,94 +170,60 @@ function removeLootAttribRow(btn) {
   generateLootCode();
 }
 
-function tierItemRowTemplate(item) {
+function lootItemRowTemplate(item, min, max, chance) {
   return `
-    <div class="dynamic-row tier-item-row">
-      <input type="text" class="tier-item" placeholder="item_uniqueid" value="${item || ''}" oninput="generateLootCode()">
-      <button type="button" class="remove-btn" onclick="removeTierItemRow(this)">×</button>
+    <div class="dynamic-row loot-item-row">
+      <input type="text" class="loot-item-id" placeholder="item_uniqueid" value="${item || ''}" oninput="generateLootCode()">
+      <input type="number" class="loot-item-min small-input" placeholder="1" min="0" value="${min ?? 0}" oninput="generateLootCode()">
+      <input type="number" class="loot-item-max small-input" placeholder="2" min="0" value="${max ?? 0}" oninput="generateLootCode()">
+      <input type="number" class="loot-item-chance small-input" placeholder="50" min="0" max="100" value="${chance ?? 50}" oninput="generateLootCode()">
+      <button type="button" class="remove-btn" onclick="removeLootItemRow(this)">×</button>
     </div>`;
 }
 
-function tierBlockTemplate(idx, tierName, chance) {
-  return `
-  <div class="dynamic-row tier-block" data-idx="${idx}">
-    <div class="form-grid-3">
-      <div class="input-group">
-        <label>Tier Name:</label>
-        <input type="text" class="tier-name" placeholder="Common" value="${tierName || ''}" oninput="generateLootCode()">
-      </div>
-
-      <div class="input-group">
-        <label>Chance:</label>
-        <input type="number" class="tier-chance" placeholder="55" min="0" max="100" value="${chance || '0'}" oninput="generateLootCode()">
-      </div>
-
-      <div class="input-group">
-        <label>Actions:</label>
-        <button type="button" class="remove-btn" onclick="removeTierRow(this)">×</button>
-      </div>
-    </div>
-
-    <div class="generator-section">
-      <div class="input-group">
-        <label>Tier Items:</label>
-        <small>Add item uniqueIDs for this tier.</small>
-      </div>
-
-      <div class="tier-items-list dynamic-list"></div>
-      <button type="button" class="add-btn" onclick="addTierItemRow(this)">Add Item</button>
-    </div>
-  </div>`;
-}
-
-function addTierRow(tierName, chance, items) {
-  const list = document.getElementById('tier-list');
-  const idx = list.children.length;
-  list.insertAdjacentHTML('beforeend', tierBlockTemplate(idx, tierName, chance));
-
-  const blocks = list.querySelectorAll('.tier-block');
-  const block = blocks[blocks.length - 1];
-  const itemsList = block.querySelector('.tier-items-list');
-  itemsList.innerHTML = '';
-  const safeItems = Array.isArray(items) ? items : [];
-  if (safeItems.length === 0) {
-    itemsList.insertAdjacentHTML('beforeend', tierItemRowTemplate(''));
-  } else {
-    for (const it of safeItems) {
-      itemsList.insertAdjacentHTML('beforeend', tierItemRowTemplate(it));
-    }
-  }
-
+function addLootItemRow(item, min, max, chance) {
+  const list = document.getElementById('loot-items-list');
+  if (!list) return;
+  list.insertAdjacentHTML('beforeend', lootItemRowTemplate(item, min, max, chance));
   generateLootCode();
 }
 
-function removeTierRow(btn) {
-  const row = btn.closest('.tier-block');
+function removeLootItemRow(btn) {
+  const row = btn.closest('.loot-item-row');
   if (row) row.remove();
   generateLootCode();
 }
 
-function addTierItemRow(btnOrBlock, item) {
-  const block = btnOrBlock.closest ? btnOrBlock.closest('.tier-block') : btnOrBlock;
-  if (!block) return;
-  const list = block.querySelector('.tier-items-list');
+function fixedRowTemplate(item, amt) {
+  return `
+    <div class="dynamic-row fixed-row">
+      <input type="text" class="fixed-item" placeholder="item_uniqueid" value="${item || ''}" oninput="generateLootCode()">
+      <input type="number" class="fixed-amt small-input" placeholder="1" min="1" value="${amt ?? 1}" oninput="generateLootCode()">
+      <button type="button" class="remove-btn" onclick="removeFixedRow(this)">×</button>
+    </div>`;
+}
+
+function addFixedRow(item, amt) {
+  const list = document.getElementById('fixed-list');
   if (!list) return;
-  list.insertAdjacentHTML('beforeend', tierItemRowTemplate(item || ''));
+  list.insertAdjacentHTML('beforeend', fixedRowTemplate(item, amt));
   generateLootCode();
 }
 
-function removeTierItemRow(btn) {
-  const row = btn.closest('.tier-item-row');
+function removeFixedRow(btn) {
+  const row = btn.closest('.fixed-row');
   if (row) row.remove();
   generateLootCode();
 }
 
 function generateLootCode() {
   const uniqueId = (document.getElementById('loot-id').value || '').trim() || 'loot_example';
-  const name = (document.getElementById('loot-name').value || '').trim() || 'Loot';
+  const name = (document.getElementById('loot-name').value || '').trim() || 'Loot Container';
   const model = (document.getElementById('loot-model').value || '').trim() || 'models/props_junk/cardboard_box001a.mdl';
   const chance = document.getElementById('loot-chance').value || '5';
   const chanceTime = document.getElementById('loot-chancetime').value || '15';
+  const maxItems = document.getElementById('loot-maxitems').value || '6';
+  const postRaid = document.getElementById('loot-postraid').value;
   const openingSound = (document.getElementById('loot-sound').value || '').trim() || 'doors/door_metal_thin_open1.wav';
 
   const attribRows = Array.from(document.querySelectorAll('#attr-list .loot-attrib-row'));
@@ -232,20 +238,32 @@ function generateLootCode() {
     });
   }
 
-  const rows = Array.from(document.querySelectorAll('#tier-list .tier-block'));
-  const tiers = [];
-  for (const row of rows) {
-    const tname = (row.querySelector('.tier-name').value || '').trim();
-    const tch = (row.querySelector('.tier-chance').value || '').trim() || '0';
-    const itemRows = Array.from(row.querySelectorAll('.tier-items-list .tier-item-row'));
-    const items = [];
-    for (const ir of itemRows) {
-      const it = (ir.querySelector('.tier-item').value || '').trim();
-      if (!it) continue;
-      items.push(it);
-    }
-    if (!tname) continue;
-    tiers.push({ tname, tch, items });
+  const itemRows = Array.from(document.querySelectorAll('#loot-items-list .loot-item-row'));
+  const items = [];
+  for (const row of itemRows) {
+    const item = (row.querySelector('.loot-item-id').value || '').trim();
+    const min = (row.querySelector('.loot-item-min').value || '').trim();
+    const max = (row.querySelector('.loot-item-max').value || '').trim();
+    const ch = (row.querySelector('.loot-item-chance').value || '').trim();
+    if (!item) continue;
+    items.push({
+      item,
+      min: min === '' ? 0 : Number(min),
+      max: max === '' ? 0 : Number(max),
+      chance: ch === '' ? 0 : Number(ch)
+    });
+  }
+
+  const fixedRows = Array.from(document.querySelectorAll('#fixed-list .fixed-row'));
+  const fixedContents = [];
+  for (const row of fixedRows) {
+    const item = (row.querySelector('.fixed-item').value || '').trim();
+    const amt = (row.querySelector('.fixed-amt').value || '').trim();
+    if (!item) continue;
+    fixedContents.push({
+      item,
+      amt: amt === '' ? 1 : Number(amt)
+    });
   }
 
   const lines = [
@@ -257,6 +275,7 @@ function generateLootCode() {
   `    model = ${JSON.stringify(model)},`,
   `    chance = ${chance},`,
   `    chanceTime = ${chanceTime},`,
+  `    maxItems = ${maxItems},`,
   '    skillRequirements = {'
   ];
 
@@ -272,23 +291,43 @@ function generateLootCode() {
   lines.push('    },');
 
   lines.push(`    openingSound = ${JSON.stringify(openingSound)},`);
-  lines.push('    items = {');
 
-  if (tiers.length === 0) {
-    lines.push('        -- Add tiers via generator UI');
+  lines.push('    items = {');
+  if (items.length === 0) {
+    lines.push('        -- Add loot items via generator UI');
   } else {
-    for (const t of tiers) {
-      lines.push(`        [${JSON.stringify(t.tname)}] = {`);
-      lines.push(`            items = {${t.items.map(i => JSON.stringify(i)).join(', ')}},`);
-      lines.push(`            chance = ${t.tch},`);
+    for (const it of items) {
+      lines.push(`        [${JSON.stringify(it.item)}] = {`);
+      lines.push(`            min = ${it.min},`);
+      lines.push(`            max = ${it.max},`);
+      lines.push(`            chance = ${it.chance}`);
       lines.push('        },');
     }
     if (lines[lines.length - 1] === '        },') {
       lines[lines.length - 1] = '        }';
     }
   }
+  lines.push('    },');
 
-  lines.push('    }');
+  if (fixedContents.length > 0) {
+    lines.push('    fixedContents = {');
+    for (const fc of fixedContents) {
+      lines.push(`        [${JSON.stringify(fc.item)}] = ${fc.amt},`);
+    }
+    if (lines[lines.length - 1].endsWith(',')) {
+      lines[lines.length - 1] = lines[lines.length - 1].slice(0, -1);
+    }
+    lines.push('    },');
+
+    if (postRaid === 'true') {
+      lines.push(`    postRaid = true`);
+    }
+  } else {
+    if (postRaid === 'true') {
+      lines.push(`    postRaid = true`);
+    }
+  }
+
   lines.push('})');
 
   const code = `${lines.join('\n')}\n`;
@@ -302,23 +341,38 @@ function fillExampleLoot() {
   document.getElementById('loot-model').value = 'models/props_junk/cardboard_box001a.mdl';
   document.getElementById('loot-chance').value = '5';
   document.getElementById('loot-chancetime').value = '15';
+  document.getElementById('loot-maxitems').value = '6';
+  document.getElementById('loot-postraid').value = 'false';
   document.getElementById('loot-sound').value = 'doors/door_metal_thin_open1.wav';
 
   const attrList = document.getElementById('attr-list');
   if (attrList) {
     attrList.innerHTML = '';
     addLootAttribRow('strength', 0);
+    addLootAttribRow('luck', 0);
   }
 
-  const list = document.getElementById('tier-list');
-  list.innerHTML = '';
-  addTierRow('Common', '55', ['civilianmale', 'civilianfemale']);
-  addTierRow('Uncommon', '22', ['civilprotection', 'resistancefighter', 'mod_swift']);
-  addTierRow('Rare', '15', ['combinesoldier', 'mod_fortified', 'mod_wardbound', 'mod_temper']);
-  addTierRow('Legendary', '8', ['combineelitepowerarmor', 'mod_regen']);
-  addTierRow('Unique', '0', []);
+  const itemsList = document.getElementById('loot-items-list');
+  if (itemsList) {
+    itemsList.innerHTML = '';
+    addLootItemRow('iron_ore', 1, 3, 80);
+    addLootItemRow('coal', 0, 2, 50);
+    addLootItemRow('wood', 2, 5, 90);
+  }
+
+  const fixedList = document.getElementById('fixed-list');
+  if (fixedList) {
+    fixedList.innerHTML = '';
+  }
+
   generateLootCode();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(generateLootCode);
+  fillExampleLoot();
+});
+</script>
 
 document.addEventListener('DOMContentLoaded', () => {
   setupLiveUpdate(generateLootCode);
@@ -335,6 +389,15 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="details-content" style="margin-left: 20px;">
     <ul>
       <li>Initial Release</li>
+    </ul>
+  </div>
+</details>
+
+<details class="realm-shared no-icon">
+  <summary>Version 2.0</summary>
+  <div class="details-content" style="margin-left: 20px;">
+    <ul>
+      <li>Two-panel loot UI, flat item table generation, deposit/withdraw interaction</li>
     </ul>
   </div>
 </details>

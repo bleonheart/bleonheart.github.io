@@ -15,12 +15,3 @@ Comprehensive vehicle enhancement system featuring CD player with music track ma
   </div>
 </details>
 
-
----
-
-## Video Demo
-
-<video controls width="100%" style="width: 100%;">
-  <source src="https://bleonheart.github.io/assets/caroptions.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
