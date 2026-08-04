@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Samael profile mark</title>
+  <desc id="desc">A white open-book symbol on a purple dark background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="20" y1="10" x2="145" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8d8dff"/>
+      <stop offset="1" stop-color="#7855d9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(48 34) rotate(46) scale(116)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="160" height="160" rx="38" fill="#10131a"/>
+  <rect x="5" y="5" width="150" height="150" rx="34" fill="url(#bg)"/>
+  <rect x="5" y="5" width="150" height="150" rx="34" fill="url(#glow)"/>
+  <path fill="#fff" d="M80 62c-12-12-29-19-49-19v63c20 0 37 7 49 19 12-12 29-19 49-19V43c-20 0-37 7-49 19Zm0-18a15 15 0 1 0 0-30 15 15 0 0 0 0 30Z"/>
+</svg>
