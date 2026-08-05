@@ -1,4 +1,5 @@
 :root{--portfolio-ui-scale:1}
+.showcase-site .portrait-frame img{-webkit-filter:none!important;filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
 body.showcase-site{zoom:var(--portfolio-ui-scale)}
 .showcase-shell,.case-shell{margin-inline:auto}
 .showcase-shell.showcase-collection{width:min(calc(100% - 64px),1680px);padding:28px 0 110px}
