@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Comprehensive hierarchical ranking system that manages player positions within classes. Provides promotion, demotion, hiring, and kicking functionality with tier-based permissions. Automatically assigns rank-specific weapons, clearance levels, and models. Includes administrative commands and privilege-based access control for class management.">
+<meta name="author" content="Samael">
+<meta name="color-scheme" content="dark">
+<title>Class Ranking · Samael · Development Portfolio</title>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/generated.css">
+<script>if(window.self!==window.top)document.documentElement.classList.add("is-embedded");</script>
+</head>
+<body class="portfolio-site showcase-site module">
+<header class="site-header showcase-header">
+<div class="header-inner">
+<a aria-label="Portfolio home" class="showcase-home-logo" href="../"><img alt="" height="40" src="../assets/logo.png" width="40"></a>
+<nav aria-label="Primary navigation" class="primary-nav showcase-nav">
+<a href="../#about">About</a>
+<a aria-current="page" href="../creations/">Creations</a>
+<button aria-label="Search creations and documentation" class="search-trigger showcase-search" data-search-open type="button"><svg aria-hidden="true" class="showcase-search__icon" viewBox="0 0 24 24"><path d="m20.4 21.8-5.2-5.2a8.4 8.4 0 1 1 1.4-1.4l5.2 5.2-1.4 1.4ZM10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"></path></svg><span>Search</span><kbd>Ctrl K</kbd></button>
+</nav>
+</div>
+</header>
+<main class="site-main"><div class="page-shell case-shell original-case-shell"><article class="content module-page case-study original-case-study"><div class="module-sections" data-module-sections>
+<div aria-label="Module sections" class="module-section-nav" role="tablist">
+<button aria-controls="module-panel-core" aria-selected="true" class="module-section-tab" data-module-section="core" id="module-tab-core" role="tab" tabindex="0" type="button">Core Information</button>
+<button aria-controls="module-panel-developer" aria-selected="false" class="module-section-tab" data-module-section="developer" id="module-tab-developer" role="tab" tabindex="-1" type="button">Developer</button>
+<button aria-controls="module-panel-generator" aria-selected="false" class="module-section-tab" data-module-section="generator" id="module-tab-generator" role="tab" tabindex="-1" type="button">Generator</button>
+</div>
+<section aria-labelledby="module-tab-core" class="module-section-panel" data-module-panel="core" id="module-panel-core" role="tabpanel">
+<div class="module-core-card"><header class="case-hero original-case-hero case-hero--text-only"><div class="case-hero__copy"><h1>Class Ranking</h1><p class="case-lead">Comprehensive hierarchical ranking system that manages player positions within classes. Provides promotion, demotion, hiring, and kicking functionality with tier-based permissions. Automatically assigns rank-specific weapons, clearance levels, and models. Includes administrative commands and privilege-based access control for class management.</p></div></header>
+</div>
+<section class="case-technical"><div class="case-technical__body case-original-content"><h2>Changelog</h2><details class="realm-shared no-icon"><summary>Version 1.0</summary><div class="details-content"><ul><li>Initial Release</li></ul></div></details></div></section>
+</section>
+<section aria-labelledby="module-tab-developer" class="module-section-panel" data-module-panel="developer" hidden id="module-panel-developer" role="tabpanel">
+<p class="module-section-empty">No documented libraries or hooks were found for this module.</p>
+</section>
+<section aria-labelledby="module-tab-generator" class="module-section-panel" data-module-panel="generator" hidden id="module-panel-generator" role="tabpanel">
+<div class="generator-grid">
+  <!-- Input Column -->
+  <div class="generator-card form-card">
+    <div class="generator-section">
+      <div class="form-grid-2">
+        <div class="input-group">
+          <label for="rank-class">Class Constant:</label>
+          <input type="text" id="rank-class" placeholder="e.g., CLASS_HARTY" value="CLASS_HARTY" oninput="generateRankingCode()">
+          <small>The top-level key inside <code>lia.ranking.rankTable</code> for the class you are defining ranks for.</small>
+        </div>
+
+        <div class="input-group">
+          <label for="rank-id">Rank ID:</label>
+          <input type="text" id="rank-id" placeholder="e.g., rank_private" value="rank_private" oninput="generateRankingCode()">
+          <small>Unique key for this rank within the selected class; used to reference/promote/demote to this rank.</small>
+        </div>
+      </div>
+
+      <div class="form-grid-2">
+        <div class="input-group">
+          <label for="rank-tag">Rank Tag:</label>
+          <input type="text" id="rank-tag" placeholder="e.g., PVT" value="PVT" oninput="generateRankingCode()">
+          <small>Rank abbreviation/shorthand shown in UI/overhead displays (module-defined usage).</small>
+        </div>
+
+        <div class="input-group">
+          <label for="rank-name">Rank Name:</label>
+          <input type="text" id="rank-name" placeholder="e.g., Private" value="Private" oninput="generateRankingCode()">
+          <small>The full readable name shown for this rank.</small>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="rank-model">Model:</label>
+        <input type="text" id="rank-model" placeholder="models/player/group01/male_01.mdl" value="models/player/group01/male_01.mdl" oninput="generateRankingCode()">
+        <small>Player model applied/used for this rank (module-defined behavior).</small>
+      </div>
+    </div>
+
+    <div class="generator-section">
+      <div class="form-grid-4">
+        <div class="input-group">
+          <label for="rank-clearance">Clearance:</label>
+          <input type="number" id="rank-clearance" min="0" value="1" oninput="generateRankingCode()">
+          <small>Clearance level required/granted for this rank (used by clearance/door systems if your schema ties them together).</small>
+        </div>
+
+        <div class="input-group">
+          <label for="rank-salary">Salary:</label>
+          <input type="number" id="rank-salary" min="0" value="30" oninput="generateRankingCode()">
+          <small>Salary/pay value associated with this rank (how/when it is paid is schema/module-defined).</small>
+        </div>
+
+        <div class="input-group">
+          <label for="rank-tier">Tier:</label>
+          <input type="number" id="rank-tier" min="0" value="1" oninput="generateRankingCode()">
+          <small>Tier/order value for this rank (commonly used to compare seniority; higher usually means higher rank).</small>
+        </div>
+      </div>
+
+      <div class="generator-section">
+        <div class="input-group">
+          <label>Weapons:</label>
+          <small>Each row is one swep classname entry in the "Weapons" list.</small>
+        </div>
+
+        <div id="weapon-list" class="dynamic-list"></div>
+        <button type="button" class="add-btn" onclick="addWeaponRow()">Add Weapon</button>
+      </div>
+
+      <div class="form-grid-4">
+        <div class="input-group">
+          <label>
+            <input type="checkbox" id="rank-promote" oninput="generateRankingCode()"> Can Promote
+          </label>
+          <small>If enabled, players of this rank can promote other members.</small>
+        </div>
+
+        <div class="input-group">
+          <label>
+            <input type="checkbox" id="rank-demote" oninput="generateRankingCode()"> Can Demote
+          </label>
+          <small>If enabled, players of this rank can demote other members.</small>
+        </div>
+
+        <div class="input-group">
+          <label>
+            <input type="checkbox" id="rank-hire" oninput="generateRankingCode()"> Can Hire
+          </label>
+          <small>If enabled, players of this rank can hire/recruit into the class.</small>
+        </div>
+
+        <div class="input-group">
+          <label>
+            <input type="checkbox" id="rank-kick" oninput="generateRankingCode()"> Can Kick
+          </label>
+          <small>If enabled, players of this rank can remove members from the class.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button onclick="generateRankingCode()" class="generate-btn">Generate Rank Code</button>
+      <button onclick="fillExampleRank()" class="generate-btn example-btn">Generate Example</button>
+    </div>
+  </div>
+
+  <!-- Output Column -->
+  <div class="generator-card output-card">
+    <div class="card-header">
+      <h3>Generated Code</h3>
+    </div>
+    <textarea id="output-code" class="generator-code-output" readonly></textarea>
+  </div>
+</div>
+
+<script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
+function weaponRowTemplate(idx, weapon) {
+  return `
+  <div class="dynamic-row" data-idx="${idx}">
+    <input type="text" class="weapon-class" placeholder="arccw_bo3_c96" value="${weapon || ''}" oninput="generateRankingCode()">
+    <button type="button" class="remove-btn" onclick="removeWeaponRow(this)">×</button>
+  </div>`;
+}
+
+function addWeaponRow(weapon) {
+  const list = document.getElementById('weapon-list');
+  const idx = list.children.length;
+  list.insertAdjacentHTML('beforeend', weaponRowTemplate(idx, weapon));
+  generateRankingCode();
+}
+
+function removeWeaponRow(btn) {
+  const row = btn.closest('.dynamic-row');
+  if (row) row.remove();
+  generateRankingCode();
+}
+
+function generateRankingCode() {
+  const classConst = (document.getElementById('rank-class').value || '').trim() || 'CLASS_EXAMPLE';
+  const rankId = (document.getElementById('rank-id').value || '').trim() || 'rank_example';
+  const model = (document.getElementById('rank-model').value || '').trim() || 'models/player/group01/male_01.mdl';
+  const tag = (document.getElementById('rank-tag').value || '').trim() || 'TAG';
+  const name = (document.getElementById('rank-name').value || '').trim() || 'Rank Name';
+  const clearance = document.getElementById('rank-clearance').value || '0';
+  const salary = document.getElementById('rank-salary').value || '0';
+  const tier = document.getElementById('rank-tier').value || '0';
+  const rows = Array.from(document.querySelectorAll('#weapon-list .dynamic-row'));
+  const weapons = [];
+  for (const row of rows) {
+    const weapon = (row.querySelector('.weapon-class').value || '').trim();
+    if (!weapon) continue;
+    weapons.push(weapon);
+  }
+
+  const canPromote = document.getElementById('rank-promote').checked;
+  const canDemote = document.getElementById('rank-demote').checked;
+  const canHire = document.getElementById('rank-hire').checked;
+  const canKick = document.getElementById('rank-kick').checked;
+
+  const lines = [
+  '-- Copy and paste this into: modules/ranking/definitions.lua',
+  '',
+  `lia.ranking.registerRank(${classConst}, ${JSON.stringify(rankId)}, {`,
+  `    Clearance = ${clearance},`,
+  `    Model = ${JSON.stringify(model)},`,
+  `    RankTag = ${JSON.stringify(tag)},`,
+  `    RankName = ${JSON.stringify(name)},`,
+  `    Salary = ${salary},`,
+  `    Weapons = {${weapons.map(w => JSON.stringify(w)).join(', ')}},`,
+  `    CanPromote = ${canPromote ? 'true' : 'false'},`,
+  `    CanDemote = ${canDemote ? 'true' : 'false'},`,
+  `    CanHire = ${canHire ? 'true' : 'false'},`,
+  `    CanKick = ${canKick ? 'true' : 'false'},`,
+  `    Tier = ${tier},`,
+  '})'
+  ];
+
+  const code = `${lines.join('\n')}\n`;
+  const outputBox = document.getElementById('output-code');
+  if (outputBox) outputBox.value = code;
+}
+
+function fillExampleRank() {
+  document.getElementById('rank-class').value = 'CLASS_HARTY';
+  document.getElementById('rank-id').value = 'rank_lieutenant';
+  document.getElementById('rank-tag').value = 'LT';
+  document.getElementById('rank-name').value = 'Lieutenant';
+  document.getElementById('rank-model').value = 'models/player/group01/male_04.mdl';
+  document.getElementById('rank-clearance').value = '4';
+  document.getElementById('rank-salary').value = '80';
+  document.getElementById('rank-tier').value = '4';
+
+  const list = document.getElementById('weapon-list');
+  list.innerHTML = '';
+  addWeaponRow('arccw_bo3_c96');
+  addWeaponRow('arccw_waw_p38');
+
+  document.getElementById('rank-promote').checked = true;
+  document.getElementById('rank-demote').checked = true;
+  document.getElementById('rank-hire').checked = true;
+  document.getElementById('rank-kick').checked = true;
+  generateRankingCode();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.getElementById('weapon-list');
+  list.innerHTML = '';
+  addWeaponRow('arccw_bo3_c96');
+  setupLiveUpdate(generateRankingCode);
+  generateRankingCode();
+});
+</script>
+</section>
+</div></article></div></main>
+<button aria-label="Back to top" class="back-to-top" type="button">↑</button>
+<dialog aria-labelledby="search-title" class="search-dialog" id="search-dialog"><div class="search-form"><input aria-label="Search creations and documentation" autocomplete="off" class="search-input" id="search-input" placeholder="Search creations and documentation" type="search"><button aria-label="Close search" class="search-close" onclick="document.getElementById('search-dialog').close()" type="button">×</button></div><div class="search-results" id="search-results" role="list"></div><div class="search-meta" id="search-meta"></div></dialog>
+<section aria-label="Website soundtrack" class="site-audio-player" data-audio-file="../assets/websound.mp3" data-site-audio-player>
+<div class="site-audio-player__inner">
+<img alt="" aria-hidden="true" class="site-audio-player__cover" height="54" src="../assets/logo.png" width="54">
+<button aria-label="Play website soundtrack" aria-pressed="false" class="site-audio-player__button" data-site-audio-toggle type="button"><svg aria-hidden="true" class="site-audio-player__play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg><svg aria-hidden="true" class="site-audio-player__pause-icon" viewBox="0 0 24 24"><path d="M7 5h4v14H7zm6 0h4v14h-4z"></path></svg></button>
+<div class="site-audio-player__timeline"><span class="site-audio-player__time" data-site-audio-current>0:00</span><input aria-label="Website soundtrack position" class="site-audio-player__range" data-site-audio-progress max="100" min="0" step="0.1" type="range" value="0"><span class="site-audio-player__time" data-site-audio-duration>0:00</span></div>
+<div class="site-audio-player__volume"><button aria-label="Mute website soundtrack" aria-pressed="false" class="site-audio-player__mute" data-site-audio-mute type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Z"></path><path d="M16 9c1.3 1.6 1.3 4.4 0 6"></path><path d="M18.7 6.5c3 3 3 8 0 11"></path><path class="site-audio-player__mute-line" d="m5 5 14 14"></path></svg></button><input aria-label="Website soundtrack volume" class="site-audio-player__range" data-site-audio-volume max="1" min="0" step="0.01" type="range" value="0.75"></div>
+</div>
+</section>
+<script>window.PORTFOLIO_ROOT="..";</script>
+<script src="../assets/search-data.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/persistent-audio.js"></script>
+<script>(()=>{const root=document.querySelector("[data-module-sections]");if(!root)return;const tabs=[...root.querySelectorAll('[role="tab"]')];const panels=[...root.querySelectorAll('[role="tabpanel"]')];const valid=new Set(tabs.map((tab)=>tab.dataset.moduleSection));const activate=(section,updateHash)=>{if(!valid.has(section))section="core";for(const tab of tabs){const selected=tab.dataset.moduleSection===section;tab.setAttribute("aria-selected",String(selected));tab.tabIndex=selected?0:-1}for(const panel of panels)panel.hidden=panel.dataset.modulePanel!==section;if(updateHash)history.replaceState(null,"","#"+section)};for(const tab of tabs){tab.addEventListener("click",()=>activate(tab.dataset.moduleSection,true));tab.addEventListener("keydown",(event)=>{const index=tabs.indexOf(tab);let next=index;if(event.key==="ArrowRight")next=(index+1)%tabs.length;else if(event.key==="ArrowLeft")next=(index-1+tabs.length)%tabs.length;else if(event.key==="Home")next=0;else if(event.key==="End")next=tabs.length-1;else return;event.preventDefault();tabs[next].focus();tabs[next].click()})}const fromHash=location.hash.slice(1);activate(valid.has(fromHash)?fromHash:"core",false);window.addEventListener("hashchange",()=>activate(location.hash.slice(1),false))})();</script>
+</body>
+</html>

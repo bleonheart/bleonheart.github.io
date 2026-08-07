@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A comprehensive medal award and display system featuring multiple themed medal packs (1942 RP, US Military branches, Police departments, Star Wars RP), persistent character-based medal storage with rarity tiers (Common, Uncommon, Rare, Exceptionally Rare), staff permissions for medal management, wearable medal slots (up to 5 medals), character profile integration, and admin controls for giving/taking medals with full network synchronization">
+<meta name="author" content="Samael">
+<meta name="color-scheme" content="dark">
+<title>Comprehensive Medal · Samael · Development Portfolio</title>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/generated.css">
+<script>if(window.self!==window.top)document.documentElement.classList.add("is-embedded");</script>
+</head>
+<body class="portfolio-site showcase-site module">
+<header class="site-header showcase-header">
+<div class="header-inner">
+<a aria-label="Portfolio home" class="showcase-home-logo" href="../"><img alt="" height="40" src="../assets/logo.png" width="40"></a>
+<nav aria-label="Primary navigation" class="primary-nav showcase-nav">
+<a href="../#about">About</a>
+<a aria-current="page" href="../creations/">Creations</a>
+<button aria-label="Search creations and documentation" class="search-trigger showcase-search" data-search-open type="button"><svg aria-hidden="true" class="showcase-search__icon" viewBox="0 0 24 24"><path d="m20.4 21.8-5.2-5.2a8.4 8.4 0 1 1 1.4-1.4l5.2 5.2-1.4 1.4ZM10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"></path></svg><span>Search</span><kbd>Ctrl K</kbd></button>
+</nav>
+</div>
+</header>
+<main class="site-main"><div class="page-shell case-shell original-case-shell"><article class="content module-page case-study original-case-study"><div class="module-sections" data-module-sections>
+<div aria-label="Module sections" class="module-section-nav" role="tablist">
+<button aria-controls="module-panel-core" aria-selected="true" class="module-section-tab" data-module-section="core" id="module-tab-core" role="tab" tabindex="0" type="button">Core Information</button>
+<button aria-controls="module-panel-developer" aria-selected="false" class="module-section-tab" data-module-section="developer" id="module-tab-developer" role="tab" tabindex="-1" type="button">Developer</button>
+<button aria-controls="module-panel-generator" aria-selected="false" class="module-section-tab" data-module-section="generator" id="module-tab-generator" role="tab" tabindex="-1" type="button">Generator</button>
+</div>
+<section aria-labelledby="module-tab-core" class="module-section-panel" data-module-panel="core" id="module-panel-core" role="tabpanel">
+<div class="module-core-card"><header class="case-hero original-case-hero case-hero--text-only"><div class="case-hero__copy"><h1>Comprehensive Medal</h1><p class="case-lead">A comprehensive medal award and display system featuring multiple themed medal packs (1942 RP, US Military branches, Police departments, Star Wars RP), persistent character-based medal storage with rarity tiers (Common, Uncommon, Rare, Exceptionally Rare), staff permissions for medal management, wearable medal slots (up to 5 medals), character profile integration, and admin controls for giving/taking medals with full network synchronization</p></div></header>
+</div>
+<section class="case-technical"><div class="case-technical__body case-original-content"><h2>Changelog</h2><details class="realm-shared no-icon"><summary>Version 1.0</summary><div class="details-content"><ul><li>Initial Release</li></ul></div></details></div></section>
+</section>
+<section aria-labelledby="module-tab-developer" class="module-section-panel" data-module-panel="developer" hidden id="module-panel-developer" role="tabpanel">
+<p class="module-section-empty">No documented libraries or hooks were found for this module.</p>
+</section>
+<section aria-labelledby="module-tab-generator" class="module-section-panel" data-module-panel="generator" hidden id="module-panel-generator" role="tabpanel">
+<div class="generator-grid">
+  <!-- Input Column -->
+  <div class="generator-card form-card">
+    <div class="generator-section">
+      <div class="form-grid-2">
+        <div class="input-group">
+          <label for="medal-id">Medal ID:</label>
+          <input type="text" id="medal-id" placeholder="e.g., lapd_pd1" value="lapd_pd1" oninput="generateMedalCode()">
+          <small>Unique identifier/key for this medal.</small>
+        </div>
+
+        <div class="input-group">
+          <label for="medal-name">Medal Name:</label>
+          <input type="text" id="medal-name" placeholder="e.g., LAPD - Patrol 1" value="LAPD - Patrol 1" oninput="generateMedalCode()">
+          <small>Display name shown to players.</small>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="medal-desc">Description:</label>
+        <textarea id="medal-desc" placeholder="e.g., Awarded for ..." oninput="generateMedalCode()">Awarded for attaining Patrol Level 1 in the LAPD.</textarea>
+        <small>Description shown to players (tooltip/details panel).</small>
+      </div>
+
+    </div>
+
+    <div class="generator-section">
+      <div class="input-group">
+        <label for="medal-icon">Icon filename:</label>
+        <input type="text" id="medal-icon" placeholder="e.g., pd1.png" value="pd1.png" oninput="generateMedalCode()">
+        <small>Filename inside the medal pack folder or workshop material path. Use lowercase letters, numbers, and underscores only.</small>
+      </div>
+
+      <div class="input-group">
+        <label for="medal-is-workshop">
+          <input type="checkbox" id="medal-is-workshop" onchange="generateMedalCode()">
+          Use workshop content
+        </label>
+        <small>When enabled, the medal reads directly from mounted workshop materials instead of the GitHub URL source.</small>
+      </div>
+
+      <div class="form-grid-3">
+        <div class="input-group">
+          <label for="medal-size-w">Size W:</label>
+          <input type="number" id="medal-size-w" placeholder="96" min="1" value="96" oninput="generateMedalCode()">
+          <small>Icon render width in pixels.</small>
+        </div>
+
+        <div class="input-group">
+          <label for="medal-size-h">Size H:</label>
+          <input type="number" id="medal-size-h" placeholder="80" min="1" value="80" oninput="generateMedalCode()">
+          <small>Icon render height in pixels.</small>
+        </div>
+
+        <div class="input-group">
+          <label for="medal-rtype">Rarity Type:</label>
+          <select id="medal-rtype" onchange="generateMedalCode()">
+            <option value="1">Common</option>
+            <option value="2">Uncommon</option>
+            <option value="3">Rare</option>
+            <option value="4">Exceptionally Rare</option>
+          </select>
+          <small>Controls rarity styling/labeling for this medal.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button onclick="generateMedalCode()" class="generate-btn">Generate Medal Code</button>
+      <button onclick="fillExampleMedal()" class="generate-btn example-btn">Generate Example</button>
+    </div>
+  </div>
+
+  <!-- Output Column -->
+  <div class="generator-card output-card">
+    <div class="card-header">
+      <h3>Generated Code</h3>
+    </div>
+    <textarea id="output-code" class="generator-code-output" readonly></textarea>
+  </div>
+</div>
+
+<script>
+function setupLiveUpdate(generateFn) {
+  if (typeof generateFn !== 'function') return;
+  const root = document.querySelector('.generator-card.form-card') || document;
+  const handler = () => generateFn();
+
+  root.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+}
+
+function generateMedalCode() {
+  const packId = 'custom';
+  const medalId = (document.getElementById('medal-id').value || '').trim() || 'medal_example';
+  const name = (document.getElementById('medal-name').value || '').trim() || 'Unknown Medal';
+  const desc = (document.getElementById('medal-desc').value || '').trim() || 'No description.';
+  const icon = (document.getElementById('medal-icon').value || '').trim() || 'default.png';
+  const isWorkshop = document.getElementById('medal-is-workshop').checked;
+  const sizeW = document.getElementById('medal-size-w').value || '96';
+  const sizeH = document.getElementById('medal-size-h').value || '80';
+  const rtype = document.getElementById('medal-rtype').value || '1';
+
+  const lines = [
+  '-- Copy and paste this code into a medals pack file',
+  '-- Example: garrysmod/gamemodes/[schema folder]/modules/medals/medals/<pack>.lua',
+  '',
+  `lia.medals.registerMedal(${JSON.stringify(medalId)}, {`,
+  '    name = ' + JSON.stringify(name) + ',',
+  '    desc = ' + JSON.stringify(desc) + ',',
+  '    size_w = ' + sizeW + ',',
+  '    size_h = ' + sizeH + ',',
+  '    rtype = ' + rtype + ',',
+  '    icon = ' + JSON.stringify(icon) + ',',
+  '    isWorkshop = ' + (isWorkshop ? 'true' : 'false') + ',',
+  '    TextFont = "Trebuchet18",',
+  '    TextColor = Color(255, 255, 255),',
+  '    TextHeight = 18',
+  '})'
+  ];
+
+  const code = `${lines.join('\n')}\n`;
+
+  const outputBox = document.getElementById('output-code');
+  if (outputBox) {
+    outputBox.value = code;
+  }
+}
+
+function fillExampleMedal() {
+  document.getElementById('medal-id').value = 'lapd_pd1';
+  document.getElementById('medal-name').value = 'LAPD - Patrol 1';
+  document.getElementById('medal-desc').value = 'Awarded for attaining Patrol Level 1 in the LAPD.';
+  document.getElementById('medal-icon').value = 'pd1.png';
+  document.getElementById('medal-is-workshop').checked = false;
+  document.getElementById('medal-size-w').value = '96';
+  document.getElementById('medal-size-h').value = '80';
+  document.getElementById('medal-rtype').value = '1';
+  generateMedalCode();
+}
+
+// Initial generation
+document.addEventListener('DOMContentLoaded', () => {
+  setupLiveUpdate(generateMedalCode);
+  generateMedalCode();
+});
+</script>
+</section>
+</div></article></div></main>
+<button aria-label="Back to top" class="back-to-top" type="button">↑</button>
+<dialog aria-labelledby="search-title" class="search-dialog" id="search-dialog"><div class="search-form"><input aria-label="Search creations and documentation" autocomplete="off" class="search-input" id="search-input" placeholder="Search creations and documentation" type="search"><button aria-label="Close search" class="search-close" onclick="document.getElementById('search-dialog').close()" type="button">×</button></div><div class="search-results" id="search-results" role="list"></div><div class="search-meta" id="search-meta"></div></dialog>
+<section aria-label="Website soundtrack" class="site-audio-player" data-audio-file="../assets/websound.mp3" data-site-audio-player>
+<div class="site-audio-player__inner">
+<img alt="" aria-hidden="true" class="site-audio-player__cover" height="54" src="../assets/logo.png" width="54">
+<button aria-label="Play website soundtrack" aria-pressed="false" class="site-audio-player__button" data-site-audio-toggle type="button"><svg aria-hidden="true" class="site-audio-player__play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg><svg aria-hidden="true" class="site-audio-player__pause-icon" viewBox="0 0 24 24"><path d="M7 5h4v14H7zm6 0h4v14h-4z"></path></svg></button>
+<div class="site-audio-player__timeline"><span class="site-audio-player__time" data-site-audio-current>0:00</span><input aria-label="Website soundtrack position" class="site-audio-player__range" data-site-audio-progress max="100" min="0" step="0.1" type="range" value="0"><span class="site-audio-player__time" data-site-audio-duration>0:00</span></div>
+<div class="site-audio-player__volume"><button aria-label="Mute website soundtrack" aria-pressed="false" class="site-audio-player__mute" data-site-audio-mute type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Z"></path><path d="M16 9c1.3 1.6 1.3 4.4 0 6"></path><path d="M18.7 6.5c3 3 3 8 0 11"></path><path class="site-audio-player__mute-line" d="m5 5 14 14"></path></svg></button><input aria-label="Website soundtrack volume" class="site-audio-player__range" data-site-audio-volume max="1" min="0" step="0.01" type="range" value="0.75"></div>
+</div>
+</section>
+<script>window.PORTFOLIO_ROOT="..";</script>
+<script src="../assets/search-data.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/persistent-audio.js"></script>
+<script>(()=>{const root=document.querySelector("[data-module-sections]");if(!root)return;const tabs=[...root.querySelectorAll('[role="tab"]')];const panels=[...root.querySelectorAll('[role="tabpanel"]')];const valid=new Set(tabs.map((tab)=>tab.dataset.moduleSection));const activate=(section,updateHash)=>{if(!valid.has(section))section="core";for(const tab of tabs){const selected=tab.dataset.moduleSection===section;tab.setAttribute("aria-selected",String(selected));tab.tabIndex=selected?0:-1}for(const panel of panels)panel.hidden=panel.dataset.modulePanel!==section;if(updateHash)history.replaceState(null,"","#"+section)};for(const tab of tabs){tab.addEventListener("click",()=>activate(tab.dataset.moduleSection,true));tab.addEventListener("keydown",(event)=>{const index=tabs.indexOf(tab);let next=index;if(event.key==="ArrowRight")next=(index+1)%tabs.length;else if(event.key==="ArrowLeft")next=(index-1+tabs.length)%tabs.length;else if(event.key==="Home")next=0;else if(event.key==="End")next=tabs.length-1;else return;event.preventDefault();tabs[next].focus();tabs[next].click()})}const fromHash=location.hash.slice(1);activate(valid.has(fromHash)?fromHash:"core",false);window.addEventListener("hashchange",()=>activate(location.hash.slice(1),false))})();</script>
+</body>
+</html>
