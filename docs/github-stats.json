@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-30T23:02:24.941Z",
+  "personal": {
+    "profile": {
+      "login": "bleonheart",
+      "name": "Samael",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/33399712?v=4",
+      "url": "https://github.com/bleonheart",
+      "createdAt": "2017-11-05T17:59:13Z",
+      "followers": 10,
+      "following": 1
+    },
+    "repositories": {
+      "public": 25,
+      "original": 14,
+      "forks": 11,
+      "activeOriginal": 14,
+      "archived": 0,
+      "totalStars": 5,
+      "totalForks": 0,
+      "mostStarred": {
+        "name": "Collection-Optimizer",
+        "fullName": "bleonheart/Collection-Optimizer",
+        "url": "https://github.com/bleonheart/Collection-Optimizer",
+        "stars": 5,
+        "forks": 0,
+        "pushedAt": "2026-05-20T10:23:24Z"
+      },
+      "mostRecentlyActive": {
+        "name": "bleonheart.github.io",
+        "fullName": "bleonheart/bleonheart.github.io",
+        "url": "https://github.com/bleonheart/bleonheart.github.io",
+        "stars": 0,
+        "forks": 0,
+        "pushedAt": "2026-08-30T12:31:30Z"
+      }
+    }
+  },
+  "liliaFramework": {
+    "profile": {
+      "login": "LiliaFramework",
+      "name": "Lilia Framework",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/148652302?v=4",
+      "url": "https://github.com/LiliaFramework",
+      "createdAt": "2023-10-21T18:54:42Z",
+      "followers": 2,
+      "following": 0
+    },
+    "repositories": {
+      "public": 5,
+      "original": 4,
+      "forks": 1,
+      "activeOriginal": 4,
+      "archived": 0,
+      "totalStars": 39,
+      "totalForks": 24,
+      "mostStarred": {
+        "name": "Lilia",
+        "fullName": "LiliaFramework/Lilia",
+        "url": "https://github.com/LiliaFramework/Lilia",
+        "stars": 36,
+        "forks": 19,
+        "pushedAt": "2026-08-24T14:04:20Z"
+      },
+      "mostRecentlyActive": {
+        "name": "Lilia",
+        "fullName": "LiliaFramework/Lilia",
+        "url": "https://github.com/LiliaFramework/Lilia",
+        "stars": 36,
+        "forks": 19,
+        "pushedAt": "2026-08-24T14:04:20Z"
+      }
+    },
+    "flagship": {
+      "repository": {
+        "name": "Lilia",
+        "fullName": "LiliaFramework/Lilia",
+        "url": "https://github.com/LiliaFramework/Lilia",
+        "stars": 36,
+        "forks": 19,
+        "pushedAt": "2026-08-24T14:04:20Z"
+      },
+      "latestRelease": {
+        "name": "Lilia 7.612",
+        "tag": "release",
+        "url": "https://github.com/LiliaFramework/Lilia/releases/tag/release",
+        "publishedAt": "2026-08-12T17:20:07Z"
+      }
+    }
+  }
+}
