@@ -4,7 +4,7 @@
   const embedded = window.self !== window.top;
   const player = document.querySelector("[data-site-audio-player]");
   const profileTriggers = [...document.querySelectorAll("[data-pfp-audio-trigger]")];
-  const stateKey = "portfolio.soundtrack.state";
+  const stateKey = "portfolio.soundtrack.state.v2";
   let soundtrack = null;
   let profileSound = null;
 
@@ -32,11 +32,29 @@
     window.addEventListener("pageshow", notifyParent);
     window.addEventListener("popstate", notifyParent);
     window.addEventListener("hashchange", notifyParent);
+    document.addEventListener("click", (event) => {
+      const anchor = event.target instanceof Element ? event.target.closest("a[href]") : null;
+      if (!anchor || anchor.target && anchor.target !== "_self") return;
+      const raw = anchor.getAttribute("href");
+      if (!raw || raw.startsWith("#") || raw.startsWith("mailto:") || raw.startsWith("tel:")) return;
+      let target;
+      let portfolioRoot;
+      try {
+        target = new URL(anchor.href, window.location.href);
+        portfolioRoot = new URL((window.PORTFOLIO_ROOT || ".") + "/", window.location.href);
+      } catch {
+        return;
+      }
+      if (target.origin !== window.location.origin || target.pathname !== portfolioRoot.pathname) return;
+      event.preventDefault();
+      window.parent.postMessage({ type: "portfolio-open-app", app: "about" }, "*");
+    }, true);
   }
 
   if (typeof Audio === "function" && !embedded && player?.dataset.audioFile) {
     soundtrack = new Audio(player.dataset.audioFile);
     soundtrack.preload = "metadata";
+    soundtrack.volume = 0.12;
     window.__portfolioSoundtrack = soundtrack;
 
     const toggle = player.querySelector("[data-site-audio-toggle]");
@@ -287,7 +305,7 @@
     });
   }
 
-  if (!embedded) {
+  if (!embedded && !document.body.classList.contains("desktop-page")) {
     const initialUrl = window.location.href;
     const initialTitle = document.title;
     let frame = null;
