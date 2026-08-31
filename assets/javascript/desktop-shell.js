@@ -128,9 +128,9 @@
     image.alt = "";
     image.className = `${className}${application.id === "lilia" ? " app-icon--lilia" : ""}`.trim();
     image.decoding = "async";
-    image.src = icon.src || "./assets/desktop/fallback.svg";
+    image.src = icon.src || "./assets/icons/fallback.svg";
     image.addEventListener("error", () => {
-      if (!image.src.endsWith("/assets/desktop/fallback.svg")) image.src = "./assets/desktop/fallback.svg";
+      if (!image.src.endsWith("/assets/icons/fallback.svg")) image.src = "./assets/icons/fallback.svg";
     }, { once: true });
     return image;
   }
