@@ -590,7 +590,8 @@
       chess: { genre: "Strategy", players: "1–2 Players", description: "A full chess board for local play or a match against the computer." },
       pinball: { genre: "Arcade", players: "1 Player", description: "Keep the ball alive with the flippers and build a higher score across the table." },
       memory: { genre: "Puzzle", players: "1 Player", description: "Flip cards, remember their positions, and match every pair using as few moves as possible." },
-      "lunar-lander": { genre: "Arcade", players: "1 Player", description: "Control your descent and land the craft safely without running out of fuel." }
+      "lunar-lander": { genre: "Arcade", players: "1 Player", description: "Control your descent and land the craft safely without running out of fuel." },
+      "epoch-siege": { genre: "Strategy", players: "1 Player", description: "Build an army, evolve through five eras, install base turrets, and destroy the opposing fortress." }
     };
 
     const body = document.createElement("div");
@@ -1008,15 +1009,23 @@
     return entry;
   }
 
+  function setWindowMinimizedState(entry, minimized) {
+    entry.minimized = minimized;
+    entry.element.hidden = minimized;
+    entry.element.style.display = minimized ? "none" : "";
+    if (minimized) entry.element.setAttribute("aria-hidden", "true");
+    else entry.element.removeAttribute("aria-hidden");
+    entry.taskbarButton?.classList.toggle("is-minimized", minimized);
+    if (minimized) entry.taskbarButton?.classList.remove("is-active");
+  }
+
   function openApplication(id, options = {}) {
     const application = applications.get(id);
     if (!application) return;
     playUiSound("open");
     let entry = windows.get(id);
     if (!entry) entry = createWindow(application);
-    entry.minimized = false;
-    entry.element.hidden = false;
-    entry.taskbarButton?.classList.remove("is-minimized");
+    setWindowMinimizedState(entry, false);
     const saved = state.windows?.[id];
     const shouldMaximize = window.matchMedia("(max-width: 700px)").matches || saved?.maximized;
     if (shouldMaximize && !entry.maximized) maximizeWindow(entry, false);
@@ -1033,10 +1042,7 @@
   function minimizeWindow(entry) {
     playUiSound("minimize");
     entry.gameController?.pause?.();
-    entry.minimized = true;
-    entry.element.hidden = true;
-    entry.taskbarButton?.classList.add("is-minimized");
-    entry.taskbarButton?.classList.remove("is-active");
+    setWindowMinimizedState(entry, true);
     persistWindow(entry);
     const next = [...windows.values()].filter((item) => !item.minimized && item !== entry).sort((a, b) => Number(b.element.style.zIndex) - Number(a.element.style.zIndex))[0];
     if (next) setActive(next);
