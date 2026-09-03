@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,21 +17,48 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: 3.x
+          node-version: "22"
 
-      - run: pip install mkdocs-material mkdocs-awesome-pages-plugin
-
-      - run: mkdocs build
-
-      - run: |
-          rm -rf site/assets
-          cp -R assets site/assets
-          cp modules.json site/modules.json
+      - name: Validate generated portfolio
+        shell: bash
+        run: |
+          games=(
+            tetris.js pong.js minesweeper.js solitaire.js snake.js breakout.js asteroids.js
+            sokoban.js chess.js pinball.js memory.js lunar-lander.js epoch-siege.js
+          )
+          programs=(browser.js creations.js lilia.js recycle-bin.js reviews.js)
+          test -s docs/index.html
+          test -s docs/.nojekyll
+          test -s docs/modules.json
+          test -s docs/reviews.json
+          test -s docs/github-stats.json
+          for base in assets/javascript docs/assets/javascript; do
+            test -s "$base/desktop.js"
+            test -s "$base/site.js"
+            test -s "$base/persistent-audio.js"
+            for file in "${games[@]}"; do
+              test -s "$base/games/$file"
+            done
+            for file in "${programs[@]}"; do
+              test -s "$base/programs/$file"
+            done
+            test ! -e "$base/desktop-games.js"
+            test ! -e "$base/desktop-games-suite.js"
+            test ! -e "$base/desktop-age-war.js"
+            test ! -e "$base/desktop-shell.js"
+          done
+          if grep -Eq 'desktop-(games|games-suite|age-war|shell)\.js' docs/index.html; then
+            echo "docs/index.html references legacy desktop scripts."
+            exit 1
+          fi
+          while IFS= read -r -d '' file; do
+            node --check "$file"
+          done < <(find assets/javascript docs/assets/javascript -type f -name "*.js" -print0)
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          publish_dir: ./docs
           force_orphan: true

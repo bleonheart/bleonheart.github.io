@@ -88,5 +88,8 @@
         "publishedAt": "2026-08-12T17:20:07Z"
       }
     }
-  }
+  },
+  "stale": true,
+  "fetchError": "fetch failed",
+  "fetchedAt": "2026-09-03T05:01:59.223Z"
 }

@@ -13,6 +13,7 @@
   }
 
   const applications = new Map(registry.map((application) => [application.id, application]));
+  const programModules = window.PortfolioPrograms instanceof Map ? window.PortfolioPrograms : new Map();
   const desktop = root.querySelector("[data-desktop-workspace]");
   const shortcuts = root.querySelector("[data-desktop-shortcuts]");
   const taskbar = root.querySelector("[data-taskbar-apps]");
@@ -794,11 +795,25 @@
     return shell;
   }
 
+  function buildTemplateContent(application) {
+    const template = document.getElementById(application.templateId);
+    return template ? template.content.cloneNode(true) : document.createTextNode("Application content unavailable.");
+  }
+
   function buildContent(application) {
-    if (application.kind === "template") {
-      const template = document.getElementById(application.templateId);
-      return template ? template.content.cloneNode(true) : document.createTextNode("Application content unavailable.");
+    const program = programModules.get(application.id);
+    if (program?.build) {
+      const content = program.build(application, {
+        applications,
+        buildExternalBrowser,
+        buildInternalFrame,
+        buildTemplateContent,
+        openApplication,
+        root
+      });
+      if (content) return content;
     }
+    if (application.kind === "template") return buildTemplateContent(application);
     if (application.kind === "folder") return buildFolderContent(application);
     if (application.kind === "game" && window.PortfolioGames?.create) {
       const game = window.PortfolioGames.create(application);
@@ -809,155 +824,6 @@
     }
     if (application.kind === "external") return buildExternalBrowser(application);
     return buildInternalFrame(application);
-  }
-
-  function initializeReviewsApp(container) {
-    const app = container.querySelector("[data-reviews-app]");
-    if (!app || app.dataset.reviewsInitialized === "true") return;
-    const list = app.querySelector("[data-review-list]");
-    const status = app.querySelector("[data-review-status]");
-    const sort = app.querySelector("[data-review-sort]");
-    const filters = [...app.querySelectorAll("[data-review-filter]")];
-    const pages = app.querySelector("[data-review-pages]");
-    const previous = app.querySelector('[data-review-page="previous"]');
-    const next = app.querySelector('[data-review-page="next"]');
-    if (!list) return;
-
-    const rows = [...list.querySelectorAll("[data-review-sentiment]")];
-    let filter = "all";
-    let sortMode = sort?.value || "recent";
-    let page = 1;
-    let resizeFrame = 0;
-
-    const renderPagination = (totalPages) => {
-      if (pages) {
-        pages.replaceChildren();
-        for (let number = 1; number <= totalPages; number += 1) {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.textContent = String(number);
-          button.setAttribute("aria-label", `Review page ${number}`);
-          button.setAttribute("aria-current", number === page ? "page" : "false");
-          button.addEventListener("click", () => {
-            page = number;
-            render();
-          });
-          pages.append(button);
-        }
-      }
-      if (previous) previous.disabled = page <= 1;
-      if (next) next.disabled = totalPages === 0 || page >= totalPages;
-    };
-
-    const buildPages = (filtered) => {
-      if (!filtered.length) return [];
-      const style = getComputedStyle(list);
-      const availableHeight = Math.max(0, list.clientHeight - (Number.parseFloat(style.paddingTop) || 0) - (Number.parseFloat(style.paddingBottom) || 0) - 8);
-      if (availableHeight <= 0) {
-        const fallback = [];
-        for (let index = 0; index < filtered.length; index += 6) fallback.push(filtered.slice(index, index + 6));
-        return fallback;
-      }
-
-      const filteredSet = new Set(filtered);
-      for (const row of rows) row.hidden = !filteredSet.has(row);
-      const gap = Number.parseFloat(style.rowGap || style.gap) || 0;
-      const result = [];
-      let current = [];
-      let currentHeight = 0;
-
-      for (const row of filtered) {
-        const rowHeight = Math.ceil(row.getBoundingClientRect().height);
-        const nextHeight = currentHeight + (current.length ? gap : 0) + rowHeight;
-        if (current.length && nextHeight > availableHeight) {
-          result.push(current);
-          current = [row];
-          currentHeight = rowHeight;
-        } else {
-          current.push(row);
-          currentHeight = nextHeight;
-        }
-      }
-
-      if (current.length) result.push(current);
-      return result;
-    };
-
-    const render = () => {
-      const ordered = [...rows].sort((a, b) => {
-        const first = Number(a.dataset.reviewTimestamp || 0);
-        const second = Number(b.dataset.reviewTimestamp || 0);
-        return sortMode === "oldest" ? first - second : second - first;
-      });
-      const filtered = ordered.filter((row) => filter === "all" || row.dataset.reviewSentiment === filter);
-
-      for (const row of ordered) list.append(row);
-
-      const reviewPages = buildPages(filtered);
-      const totalPages = reviewPages.length;
-      page = totalPages ? Math.min(page, totalPages) : 1;
-      const visible = totalPages ? reviewPages[page - 1] : [];
-      const visibleSet = new Set(visible);
-      const start = totalPages ? reviewPages.slice(0, page - 1).reduce((count, group) => count + group.length, 0) : 0;
-
-      for (const row of ordered) row.hidden = !visibleSet.has(row);
-
-      for (const button of filters) {
-        const active = button.dataset.reviewFilter === filter;
-        button.classList.toggle("is-active", active);
-        button.setAttribute("aria-pressed", String(active));
-      }
-
-      if (status) status.textContent = filtered.length ? `Showing ${start + 1}–${start + visible.length} of ${filtered.length} reviews` : "No reviews found";
-      renderPagination(totalPages);
-      list.scrollTop = 0;
-    };
-
-    const scheduleRender = () => {
-      if (resizeFrame) cancelAnimationFrame(resizeFrame);
-      resizeFrame = requestAnimationFrame(() => {
-        resizeFrame = 0;
-        render();
-      });
-    };
-
-    for (const button of filters) {
-      button.addEventListener("click", () => {
-        filter = button.dataset.reviewFilter || "all";
-        page = 1;
-        render();
-      });
-    }
-
-    sort?.addEventListener("change", () => {
-      sortMode = sort.value === "oldest" ? "oldest" : "recent";
-      page = 1;
-      render();
-    });
-
-    previous?.addEventListener("click", () => {
-      if (page > 1) {
-        page -= 1;
-        render();
-      }
-    });
-
-    next?.addEventListener("click", () => {
-      page += 1;
-      render();
-    });
-
-    let resizeObserver = null;
-    if (typeof ResizeObserver === "function") {
-      resizeObserver = new ResizeObserver(scheduleRender);
-      resizeObserver.observe(app);
-    }
-    app.portfolioReviewsDestroy = () => {
-      if (resizeFrame) cancelAnimationFrame(resizeFrame);
-      resizeObserver?.disconnect();
-    };
-    app.dataset.reviewsInitialized = "true";
-    render();
   }
 
   function createWindow(application) {
@@ -989,7 +855,10 @@
     content.className = "desktop-window__content";
     const contentNode = buildContent(application);
     content.append(contentNode);
-    initializeReviewsApp(content);
+    const program = programModules.get(application.id);
+    const programDestroy = typeof program?.initialize === "function"
+      ? program.initialize(content, { applications, openApplication, root })
+      : null;
     element.append(titlebar, content);
 
     if (application.resizable !== false) {
@@ -1001,7 +870,7 @@
     }
 
     desktop.append(element);
-    const entry = { application, element, minimized: false, maximized: false, restoreGeometry: null, taskbarButton: null, gameController: contentNode?.portfolioGameController || null };
+    const entry = { application, element, minimized: false, maximized: false, restoreGeometry: null, taskbarButton: null, gameController: contentNode?.portfolioGameController || null, programDestroy: typeof programDestroy === "function" ? programDestroy : null };
     windows.set(application.id, entry);
     createTaskbarButton(entry);
     applyGeometry(entry, getRestoredGeometry(application));
@@ -1091,7 +960,7 @@
     playUiSound("close");
     entry.element.querySelector(".retro-game")?.portfolioGameAudioDestroy?.();
     entry.gameController?.destroy?.();
-    entry.element.querySelector("[data-reviews-app]")?.portfolioReviewsDestroy?.();
+    entry.programDestroy?.();
     entry.element.remove();
     entry.taskbarButton?.remove();
     windows.delete(entry.application.id);
@@ -1327,39 +1196,6 @@
     syncSettingsUi();
   }
 
-  function openRecycleTarget() {
-    const browser = applications.get("ai-browser");
-    if (browser?.url) window.open(browser.url, "_blank", "noopener,noreferrer");
-  }
-
-  function updateRecycleDetails(recycleItem) {
-    const app = recycleItem?.closest(".recycle-bin-app");
-    const details = app?.querySelector("[data-recycle-details]");
-    const icon = app?.querySelector("[data-recycle-details-icon]");
-    const title = app?.querySelector("[data-recycle-details-title]");
-    const description = app?.querySelector("[data-recycle-details-description]");
-    const sourceIcon = recycleItem?.querySelector("img");
-    if (icon && sourceIcon) icon.src = sourceIcon.src;
-    if (title) title.textContent = recycleItem?.querySelector("span")?.textContent || "Program";
-    if (description) description.textContent = recycleItem?.dataset.description || "Select a program to view its description.";
-    if (details) details.hidden = false;
-    app?.classList.add("has-details");
-  }
-
-  function clearRecycleSelection(app) {
-    for (const item of app?.querySelectorAll("[data-recycle-ai]") || []) item.classList.remove("is-selected");
-    const details = app?.querySelector("[data-recycle-details]");
-    if (details) details.hidden = true;
-    app?.classList.remove("has-details");
-  }
-
-  function selectRecycleItem(recycleItem) {
-    const grid = recycleItem?.closest("[data-recycle-grid]");
-    for (const item of grid?.querySelectorAll("[data-recycle-ai]") || []) item.classList.toggle("is-selected", item === recycleItem);
-    updateRecycleDetails(recycleItem);
-    recycleItem?.focus({ preventScroll: true });
-  }
-
   function updateClock() {
     const now = new Date();
     clock.textContent = new Intl.DateTimeFormat(undefined, { hour: "2-digit", minute: "2-digit", hour12: false }).format(now);
@@ -1516,41 +1352,7 @@
   });
   root.addEventListener("click", (event) => {
     const trigger = event.target instanceof Element ? event.target.closest("[data-pfp-audio-trigger]") : null;
-    if (trigger) {
-      document.querySelector("[data-global-profile-audio-trigger]")?.click();
-      return;
-    }
-    const recycleItem = event.target instanceof Element ? event.target.closest("[data-recycle-ai]") : null;
-    if (recycleItem) {
-      selectRecycleItem(recycleItem);
-      return;
-    }
-    const recycleGrid = event.target instanceof Element ? event.target.closest("[data-recycle-grid]") : null;
-    if (recycleGrid) clearRecycleSelection(recycleGrid.closest(".recycle-bin-app"));
-  });
-  root.addEventListener("click", (event) => {
-    const recycleOpen = event.target instanceof Element ? event.target.closest("[data-recycle-details-open]") : null;
-    if (recycleOpen) openRecycleTarget();
-  });
-  root.addEventListener("dblclick", (event) => {
-    const recycleItem = event.target instanceof Element ? event.target.closest("[data-recycle-ai]") : null;
-    if (!recycleItem) return;
-    selectRecycleItem(recycleItem);
-    openRecycleTarget();
-  });
-  root.addEventListener("keydown", (event) => {
-    const recycleItem = event.target instanceof Element ? event.target.closest("[data-recycle-ai]") : null;
-    if (!recycleItem) return;
-    if (event.key === "Enter") {
-      event.preventDefault();
-      selectRecycleItem(recycleItem);
-      openRecycleTarget();
-      return;
-    }
-    if (event.key === " ") {
-      event.preventDefault();
-      selectRecycleItem(recycleItem);
-    }
+    if (trigger) document.querySelector("[data-global-profile-audio-trigger]")?.click();
   });
   startPrograms.addEventListener("click", (event) => {
     const item = event.target instanceof Element ? event.target.closest("[data-app-id]") : null;
