@@ -34,6 +34,12 @@ jobs:
           test -s docs/modules.json
           test -s docs/reviews.json
           test -s docs/github-stats.json
+          test -s docs/derma-creator/index.html
+          test -d docs/derma-creator/assets
+          grep -q 'src="./assets/' docs/derma-creator/index.html
+          grep -q 'href="./assets/' docs/derma-creator/index.html
+          test -s derma-creator/index.html
+          test -d derma-creator/assets
           for base in assets/javascript docs/assets/javascript; do
             test -s "$base/desktop.js"
             test -s "$base/site.js"

@@ -1,8 +1,7 @@
 (() => {
   "use strict";
 
-  const previousCreate = window.PortfolioGames?.create;
-  if (typeof previousCreate !== "function") return;
+  const previousCreate = typeof window.PortfolioGames?.create === "function" ? window.PortfolioGames.create : null;
 
   const WIDTH = 1000;
   const HEIGHT = 520;
@@ -1209,13 +1208,15 @@
     };
   }
 
-  window.PortfolioGames.create = function create(application) {
+  function create(application) {
     const id = application?.game || application?.id;
     if (id === "epoch-siege") {
       const game = createAgeWar();
       window.PortfolioGameAudio?.bind?.(game.element);
       return game;
     }
-    return previousCreate(application);
-  };
+    return previousCreate ? previousCreate(application) : null;
+  }
+
+  window.PortfolioGames = { ...(window.PortfolioGames || {}), create };
 })();
