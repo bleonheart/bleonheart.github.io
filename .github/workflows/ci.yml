@@ -30,7 +30,7 @@ jobs:
           )
           programs=(browser.js creations.js lilia.js recycle-bin.js reviews.js)
           test -s docs/index.html
-          test -s docs/.nojekyll
+          test -e docs/.nojekyll
           test -s docs/modules.json
           test -s docs/reviews.json
           test -s docs/github-stats.json
