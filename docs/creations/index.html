@@ -293,7 +293,8 @@
     if(!item)return;
     const appId=item.dataset.appId;
     if(appId&&window.parent!==window){
-      window.parent.postMessage({type:'portfolio-open-app',app:appId},location.origin);
+      const targetOrigin=location.origin==='null'?'*':location.origin;
+      window.parent.postMessage({type:'portfolio-open-app',app:appId},targetOrigin);
       return;
     }
     const href=item.dataset.href;
