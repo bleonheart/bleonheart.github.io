@@ -1,2 +1,0 @@
-/* Keep the contact and GitHub widgets reachable when desktop windows overlap them. */
-.desktop-right-rail{z-index:100}
