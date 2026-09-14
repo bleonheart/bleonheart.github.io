@@ -555,8 +555,6 @@
     const frame = document.createElement("iframe");
     frame.className = "internal-app-frame__iframe";
     frame.title = application.windowTitle || application.label;
-    // Resolve app URLs against the published page. This keeps embedded apps
-    // working when the homepage is served from a GitHub Pages project path.
     frame.src = new URL(application.url, document.baseURI).href;
     shell.append(frame);
     return shell;
@@ -1423,8 +1421,6 @@
   });
   window.addEventListener("message", (event) => {
     if (!event.data) return;
-    // GitHub Pages is same-origin in production, while local file previews
-    // report a `null` origin. Only accept messages from our own app frames.
     const sourceIsInternalApplication = [...windows.values()].some((entry) => {
       const frame = entry.element.querySelector(".internal-app-frame__iframe");
       return frame && frame.contentWindow === event.source;

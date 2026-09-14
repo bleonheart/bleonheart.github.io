@@ -555,7 +555,7 @@
     const frame = document.createElement("iframe");
     frame.className = "internal-app-frame__iframe";
     frame.title = application.windowTitle || application.label;
-    frame.src = application.url;
+    frame.src = new URL(application.url, document.baseURI).href;
     shell.append(frame);
     return shell;
   }
@@ -1420,7 +1420,7 @@
     }
   });
   window.addEventListener("message", (event) => {
-    if (event.origin !== location.origin || !event.data) return;
+    if (!event.data) return;
     const sourceIsInternalApplication = [...windows.values()].some((entry) => {
       const frame = entry.element.querySelector(".internal-app-frame__iframe");
       return frame && frame.contentWindow === event.source;
