@@ -14,9 +14,9 @@
   const TEAM_ENEMY = 1;
 
   const DIFFICULTIES = {
-    easy: { label: "Easy", description: "Slower enemy economy and gentler pressure", income: 0.82, health: 0.9, damage: 0.9, think: 1.18, evolve: 1.18 },
-    normal: { label: "Normal", description: "Balanced economy, evolution and combat", income: 1, health: 1, damage: 1, think: 1, evolve: 1 },
-    hard: { label: "Hard", description: "Faster income, tougher armies and quicker evolution", income: 1.24, health: 1.12, damage: 1.12, think: 0.8, evolve: 0.82 }
+    easy: { label: "Easy", description: "Steady enemy pressure with limited economic bonuses", income: 0.96, health: 0.98, damage: 0.96, think: 1.04, evolve: 1.02, startMoney: 1.04, baseHealth: 1, specialChance: 0.2, turretChance: 0.15, reserveChance: 0.1, unitCap: 28 },
+    normal: { label: "Normal", description: "Aggressive economy, stronger armies and faster evolution", income: 1.16, health: 1.08, damage: 1.1, think: 0.82, evolve: 0.86, startMoney: 1.18, baseHealth: 1.1, specialChance: 0.3, turretChance: 0.23, reserveChance: 0.05, unitCap: 30 },
+    hard: { label: "Hard", description: "Relentless production, fortified base and rapid evolution", income: 1.42, health: 1.22, damage: 1.26, think: 0.62, evolve: 0.68, startMoney: 1.42, baseHealth: 1.28, specialChance: 0.44, turretChance: 0.34, reserveChance: 0.01, unitCap: 32 }
   };
 
   const ERA_DATA = [
@@ -231,13 +231,15 @@
     }
 
     function makeSide(team) {
+      const enemySide = team === TEAM_ENEMY;
+      const baseMaxHealth = Math.round(2600 * (enemySide ? difficulty.baseHealth : 1));
       return {
         team,
-        money: team === TEAM_PLAYER ? 180 : 210,
+        money: enemySide ? Math.round(210 * difficulty.startMoney) : 180,
         xp: 0,
         era: 0,
-        baseHealth: 2600,
-        baseMaxHealth: 2600,
+        baseHealth: baseMaxHealth,
+        baseMaxHealth,
         incomeTimer: 0,
         specialCooldown: 0,
         turrets: [null, null]
@@ -251,6 +253,7 @@
       projectiles = [];
       particles = [];
       damageTexts = [];
+      stage.querySelector(".age-war__result")?.remove();
       player = makeSide(TEAM_PLAYER);
       enemy = makeSide(TEAM_ENEMY);
       playing = true;
@@ -494,13 +497,14 @@
       side.specialCooldown = spec.cooldown;
       const targetTeam = team === TEAM_PLAYER ? TEAM_ENEMY : TEAM_PLAYER;
       const targets = units.filter((unit) => unit.team === targetTeam && !unit.dead);
+      const specialScale = team === TEAM_ENEMY ? difficulty.damage : 1;
       targets.forEach((unit, index) => {
         const delayScale = 0.72 + Math.sin(index * 1.9) * 0.16;
-        damageUnit(unit, spec.damage * delayScale, team, true);
+        damageUnit(unit, spec.damage * delayScale * specialScale, team, true);
         burst(unit.x, unit.y - unit.size, 11, side.era >= 4 ? "energy" : side.era >= 2 ? "explosion" : "impact");
       });
       const targetSide = team === TEAM_PLAYER ? enemy : player;
-      targetSide.baseHealth = Math.max(0, targetSide.baseHealth - spec.baseDamage);
+      targetSide.baseHealth = Math.max(0, targetSide.baseHealth - spec.baseDamage * specialScale);
       const center = team === TEAM_PLAYER ? 690 : 310;
       for (let index = 0; index < 36; index += 1) burst(center + rand(-280, 280), rand(100, GROUND_Y - 20), 1, side.era >= 4 ? "energy" : "special");
       shake = Math.max(shake, 14);
@@ -719,19 +723,20 @@
       }
       const ownCount = units.filter((unit) => unit.team === TEAM_ENEMY && !unit.dead).length;
       const playerCount = units.filter((unit) => unit.team === TEAM_PLAYER && !unit.dead).length;
-      if (enemy.specialCooldown <= 0 && playerCount >= 5 && Math.random() < 0.18) useSpecial(TEAM_ENEMY);
-      if (enemy.money >= 240 && Math.random() < 0.12) {
-        const turretType = enemy.era >= 3 && Math.random() < 0.45 ? 2 : Math.random() < 0.55 ? 0 : 1;
+      if (enemy.specialCooldown <= 0 && playerCount >= 4 && Math.random() < difficulty.specialChance) useSpecial(TEAM_ENEMY);
+      if (enemy.money >= 220 && Math.random() < difficulty.turretChance) {
+        const turretType = enemy.era >= 3 && Math.random() < 0.5 ? 2 : Math.random() < 0.52 ? 0 : 1;
         installTurret(TEAM_ENEMY, turretType);
       }
-      if (ownCount >= 26) return;
+      if (ownCount >= difficulty.unitCap) return;
       const defs = ERA_DATA[enemy.era].units;
       let choices = [0, 0, 1, 2];
       if (enemy.money > defs[3].cost * 1.25) choices = [0, 1, 2, 3, 3];
-      if (playerCount > ownCount + 4) choices = [0, 0, 1, 1, 3];
+      if (playerCount > ownCount + 3) choices = [0, 0, 1, 1, 3, 3];
+      if (enemy.era >= 2 && playerCount <= ownCount) choices.push(2, 3);
       const affordable = choices.filter((index) => enemy.money >= defs[index].cost);
       if (!affordable.length) return;
-      if (Math.random() < 0.15 && enemy.money < defs[3].cost * 1.45) return;
+      if (Math.random() < difficulty.reserveChance && enemy.money < defs[3].cost * 1.45) return;
       spawnUnit(TEAM_ENEMY, affordable[Math.floor(Math.random() * affordable.length)]);
     }
 
@@ -786,14 +791,40 @@
       else if (player.baseHealth <= 0) finish(TEAM_ENEMY);
     }
 
+    function showResult(winner) {
+      stage.querySelector(".age-war__result")?.remove();
+      const overlay = document.createElement("div");
+      overlay.className = "game-start-screen age-war__result";
+      const panel = document.createElement("div");
+      panel.className = "game-start-screen__panel game-start-screen__panel--compact";
+      const title = document.createElement("strong");
+      title.className = "game-start-screen__game-title";
+      title.textContent = winner === TEAM_PLAYER ? "Victory" : "Defeat";
+      const copy = document.createElement("p");
+      copy.className = "game-start-screen__description is-note";
+      copy.textContent = winner === TEAM_PLAYER ? `Enemy fortress destroyed in ${formatTime(elapsed)} on ${difficulty.label}.` : `Your fortress fell after ${formatTime(elapsed)} on ${difficulty.label}.`;
+      const actions = document.createElement("div");
+      actions.className = "game-start-screen__mode-actions";
+      const replay = createButton("Play Again", "restart", "game-start-screen__start");
+      const choose = createButton("Choose Difficulty", "new");
+      actions.append(replay, choose);
+      panel.append(title, copy, actions);
+      overlay.append(panel);
+      stage.append(overlay);
+    }
+
     function finish(winner) {
+      if (over || !player || !enemy) return;
       over = true;
       playing = false;
+      paused = false;
+      projectiles = [];
       status.textContent = winner === TEAM_PLAYER ? "Victory · Enemy base destroyed" : "Defeat · Your base has fallen";
       burst(winner === TEAM_PLAYER ? ENEMY_BASE_X : PLAYER_BASE_X, GROUND_Y - 70, 55, "explosion");
       shake = 18;
       flash = 0.55;
       updateUI();
+      showResult(winner);
     }
 
     function tick(now) {
@@ -804,16 +835,24 @@
         elapsed += dt;
         updateEconomy(player, dt);
         updateEconomy(enemy, dt);
-        for (const unit of units) updateUnit(unit, dt);
-        for (const projectile of projectiles) updateProjectile(projectile, dt);
-        updateTurrets(player, dt);
-        updateTurrets(enemy, dt);
-        updateAI(dt);
+        for (const unit of units) {
+          if (over) break;
+          updateUnit(unit, dt);
+        }
+        if (!over) {
+          for (const projectile of projectiles) {
+            if (over) break;
+            updateProjectile(projectile, dt);
+          }
+        }
+        if (!over) updateTurrets(player, dt);
+        if (!over) updateTurrets(enemy, dt);
+        if (!over) updateAI(dt);
         updateEffects(dt);
         for (const unit of units) { if (unit.dead) unit.deathTimer -= dt; }
         units = units.filter((unit) => !unit.dead || unit.deathTimer > 0);
         projectiles = projectiles.filter((projectile) => projectile.life > 0);
-        checkEnd();
+        if (!over) checkEnd();
         updateUI();
       } else {
         updateEffects(rawDt);
@@ -1198,6 +1237,7 @@
         resume() { if (playing && !over) { paused = false; pauseButton.textContent = "Pause"; lastFrame = performance.now(); } },
         destroy() {
           cancelAnimationFrame(animationFrame);
+          root.portfolioGameAudioDestroy?.();
           units = [];
           projectiles = [];
           particles = [];
