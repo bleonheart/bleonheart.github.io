@@ -129,9 +129,9 @@
     image.alt = "";
     image.className = `${className}${application.id === "lilia" ? " app-icon--lilia" : ""}`.trim();
     image.decoding = "async";
-    image.src = icon.src || "./assets/icons/fallback.svg";
+    image.src = icon.src || "/assets/icons/fallback.svg";
     image.addEventListener("error", () => {
-      if (!image.src.endsWith("/assets/icons/fallback.svg")) image.src = "./assets/icons/fallback.svg";
+      if (!image.src.endsWith("/assets/icons/fallback.svg")) image.src = "/assets/icons/fallback.svg";
     }, { once: true });
     return image;
   }
@@ -1070,7 +1070,7 @@
     desktop.addEventListener("pointerdown", (event) => {
       if (event.button !== 0 || window.matchMedia("(max-width: 700px)").matches) return;
       if (!(event.target instanceof Element)) return;
-      if (event.target.closest(".desktop-shortcut, .desktop-window")) return;
+      if (event.target.closest('.desktop-shortcut, .desktop-window, .desktop-right-rail, a, button, input, select, textarea, label, summary, [role="button"], [role="link"], [data-no-desktop-select]')) return;
       const bounds = desktop.getBoundingClientRect();
       const startX = clamp(event.clientX - bounds.left, 0, bounds.width);
       const startY = clamp(event.clientY - bounds.top, 0, bounds.height);
