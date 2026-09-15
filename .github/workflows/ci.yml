@@ -28,43 +28,63 @@ jobs:
             tetris.js pong.js minesweeper.js solitaire.js snake.js breakout.js asteroids.js
             sokoban.js chess.js pinball.js memory.js lunar-lander.js epoch-siege.js
           )
-          programs=(browser.js creations.js lilia.js recycle-bin.js reviews.js)
+
+          programs=(
+            browser.js creations.js lilia.js recycle-bin.js reviews.js
+          )
+
           test -s docs/index.html
           test -e docs/.nojekyll
           test -s docs/modules.json
           test -s docs/reviews.json
           test -s docs/github-stats.json
           test -s docs/derma-creator/index.html
+
           if find docs -type d -name assets -print -quit | grep -q .; then
             echo "Asset directories must not exist inside docs/."
             exit 1
           fi
-          test -s assets/derma-creator/index-Dk4lLcms.js
-          test -s assets/derma-creator/index-9e7a9b3c.css
-          grep -q 'src="/assets/derma-creator/' docs/derma-creator/index.html
-          grep -q 'href="/assets/derma-creator/' docs/derma-creator/index.html
+
+          derma_js="$(sed -n 's/.*src="\([^"]*\.js\)".*/\1/p' docs/derma-creator/index.html | head -n 1)"
+          derma_css="$(sed -n 's/.*href="\([^"]*\.css\)".*/\1/p' docs/derma-creator/index.html | head -n 1)"
+
+          test -n "$derma_js"
+          test -n "$derma_css"
+
+          [[ "$derma_js" == /assets/derma-creator/* ]]
+          [[ "$derma_css" == /assets/derma-creator/* ]]
+
+          test -s ".${derma_js}"
+          test -s ".${derma_css}"
+
           test -s derma-creator/index.html
           test -s assets/javascript/desktop.js
           test -s assets/javascript/site.js
           test -s assets/javascript/persistent-audio.js
+
           for file in "${games[@]}"; do
             test -s "assets/javascript/games/$file"
           done
+
           for file in "${programs[@]}"; do
             test -s "assets/javascript/programs/$file"
           done
+
           test ! -e assets/javascript/desktop-games.js
           test ! -e assets/javascript/desktop-games-suite.js
           test ! -e assets/javascript/desktop-age-war.js
           test ! -e assets/javascript/desktop-shell.js
+
           if grep -REq '(\.\.?/)+assets/' docs --include='*.html'; then
             echo "docs contains relative asset paths instead of /assets/."
             exit 1
           fi
+
           if grep -Eq 'desktop-(games|games-suite|age-war|shell)\.js' docs/index.html; then
             echo "docs/index.html references legacy desktop scripts."
             exit 1
           fi
+
           while IFS= read -r -d '' file; do
             node --check "$file"
           done < <(find assets/javascript -type f -name "*.js" -print0)
@@ -74,11 +94,21 @@ jobs:
         run: |
           rm -rf .site
           mkdir -p .site
+
           cp -a docs/. .site/
           cp -a assets .site/assets
+
           test -s .site/index.html
           test -s .site/assets/javascript/site.js
-          test -s .site/assets/derma-creator/index-Dk4lLcms.js
+          test -s .site/derma-creator/index.html
+
+          derma_js="$(sed -n 's/.*src="\([^"]*\.js\)".*/\1/p' .site/derma-creator/index.html | head -n 1)"
+          derma_css="$(sed -n 's/.*href="\([^"]*\.css\)".*/\1/p' .site/derma-creator/index.html | head -n 1)"
+
+          test -n "$derma_js"
+          test -n "$derma_css"
+          test -s ".site${derma_js}"
+          test -s ".site${derma_css}"
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
