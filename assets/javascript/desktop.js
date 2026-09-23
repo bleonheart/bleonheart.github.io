@@ -896,7 +896,7 @@
     if (!entry) entry = createWindow(application);
     setWindowMinimizedState(entry, false);
     const saved = state.windows?.[id];
-    const shouldMaximize = window.matchMedia("(max-width: 700px)").matches || saved?.maximized;
+    const shouldMaximize = window.matchMedia("(max-width: 700px)").matches || saved?.maximized || (!saved && (application.defaultMaximized || application.id === "about"));
     if (shouldMaximize && !entry.maximized) maximizeWindow(entry, false);
     setActive(entry);
     persistWindow(entry);
