@@ -1,0 +1,2 @@
+.desktop-right-rail{z-index:100}
+.desktop-workspace:has(> .desktop-window.is-maximized:not([hidden])) > .desktop-right-rail{display:none}
