@@ -200,7 +200,10 @@
 
   const previewDialog = document.getElementById("creation-preview");
   if (previewDialog) {
-    const creations = Array.isArray(window.PORTFOLIO_CREATIONS) ? window.PORTFOLIO_CREATIONS : [];
+    const creations = (Array.isArray(window.PORTFOLIO_CREATIONS) ? window.PORTFOLIO_CREATIONS : []).map((entry) => {
+      const video = String(entry?.video || "");
+      return video.includes("/assets/creations/videos/") ? { ...entry, video: "" } : entry;
+    });
     const bySlug = new Map(creations.map((entry) => [entry.slug, entry]));
     const title = document.getElementById("creation-preview-title");
     const description = document.getElementById("creation-preview-description");
