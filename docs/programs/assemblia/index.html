@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assemblia</title>
+<style>
+:root{color-scheme:dark;font-family:"Segoe UI",Tahoma,sans-serif;background:#202020;color:#e6e6e6}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{overflow:auto;background:#202020}.app{min-height:100%;padding:18px}.header{display:flex;align-items:center;gap:14px;margin-bottom:16px}.header img{width:58px;height:58px}.header h1{margin:0;font-size:25px;font-weight:650}.header p{margin:3px 0 0;color:#a9a9a9;font-size:13px}.group{margin:0 0 14px;border:1px solid #555;border-radius:4px;background:#282828}.group>h2{display:inline-block;margin:-10px 0 0 12px;padding:0 7px;background:#202020;font-size:14px;font-weight:600}.group__body{padding:14px}.form{display:grid;grid-template-columns:125px minmax(0,1fr) auto;gap:9px 10px;align-items:center}.form label{color:#d7d7d7;font-size:13px}.path{min-height:32px;padding:7px 9px;border:1px solid #555;background:#181818;color:#cfcfcf;font:13px Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.text{width:92px;height:32px;padding:0 8px;border:1px solid #555;background:#181818;color:#fff}.button{min-height:32px;padding:0 14px;border:1px solid #666;border-radius:2px;background:linear-gradient(#444,#333);color:#fff;font:13px "Segoe UI",sans-serif;cursor:pointer}.button:hover:not(:disabled){background:linear-gradient(#505050,#3b3b3b)}.button:focus-visible{outline:1px dotted #fff;outline-offset:-4px}.button:disabled{opacity:.5;cursor:default}.button--green{border-color:#43764e;background:linear-gradient(#3f714a,#31583a)}.button--green:hover:not(:disabled){background:linear-gradient(#4b8458,#376642)}.button--amber{border-color:#8a6b3f;background:linear-gradient(#775d35,#5d492d)}.checks{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px}.checks label{display:flex;align-items:center;gap:7px;font-size:13px}.hint{margin:10px 0 0;color:#ababab;font-size:12px}.actions{display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));gap:10px}.actions .button{min-height:42px;text-align:left}.actions .button strong,.actions .button span{display:block}.actions .button span{margin-top:3px;color:#d0d0d0;font-size:11px;font-weight:400}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.summary div{padding:10px;border:1px solid #4a4a4a;background:#1e1e1e}.summary span{display:block;color:#9f9f9f;font-size:11px;text-transform:uppercase;letter-spacing:.06em}.summary strong{display:block;margin-top:4px;color:#fff;font-size:18px}.log{height:230px;margin:0;padding:10px;border:1px solid #4f4f4f;background:#111;color:#d7d7d7;font:12px/1.55 Consolas,monospace;white-space:pre-wrap;overflow:auto}.logbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.status{color:#bfbfbf;font-size:12px}.unsupported{margin-bottom:14px;padding:11px 13px;border:1px solid #8c5b35;background:#3c2c20;color:#ffdcb9;font-size:13px}.unsupported[hidden]{display:none}@media(max-width:850px){.form{grid-template-columns:1fr}.actions{grid-template-columns:1fr 1fr}.summary{grid-template-columns:1fr 1fr}}@media(max-width:520px){.app{padding:10px}.actions{grid-template-columns:1fr}.summary{grid-template-columns:1fr}.header img{width:46px;height:46px}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="header"><img src="/assets/icons/assemblia.svg" alt=""><div><h1>Assemblia</h1><p>Garry's Mod Collection Optimizer</p></div></header>
+<div class="unsupported" data-unsupported hidden>This browser does not support the File System Access API. Use a Chromium-based browser over HTTPS to run local collection operations.</div>
+<section class="group"><h2>Work Folders</h2><div class="group__body"><div class="form"><label>Source</label><div class="path" data-source-path>No folder selected</div><button class="button" data-pick-source type="button">Browse...</button><label>Destination</label><div class="path" data-destination-path>No folder selected</div><button class="button" data-pick-destination type="button">Browse...</button><label for="pack-size">Max Pack Size</label><div><input class="text" id="pack-size" data-pack-size inputmode="decimal" value="3.90"> <span>GB</span></div><span></span></div><div class="checks"><label><input data-split-lua type="checkbox"> Separate Lua files</label><label><input data-delete-originals type="checkbox"> Delete originals after split</label></div><p class="hint">Merge is destructive to the selected source directory. Assemblia copies files into the destination and removes processed source addon folders after completion.</p></div></section>
+<section class="group"><h2>Actions</h2><div class="group__body"><div class="actions"><button class="button button--green" data-action="benchmark-merge" type="button"><strong>Benchmark Merge</strong><span>Inspect source addons without changing files</span></button><button class="button button--green" data-action="benchmark-split" type="button"><strong>Benchmark Split</strong><span>Estimate destination pack count</span></button><button class="button button--green" data-action="folder-size" type="button"><strong>Folder Size</strong><span>Calculate destination size</span></button><button class="button button--amber" data-action="merge" type="button"><strong>Run Merge</strong><span>Consolidate top-level addon folders</span></button><button class="button button--amber" data-action="split" type="button"><strong>Run Split</strong><span>Create numbered Addons packs</span></button><button class="button button--amber" data-action="merge-split" type="button"><strong>Merge + Split</strong><span>Run both workflows in sequence</span></button><button class="button" data-action="cleanup" type="button"><strong>Cleanup Destination</strong><span>Remove unsupported Source model sidecars</span></button></div></div></section>
+<section class="group"><h2>Last Result</h2><div class="group__body"><div class="summary" data-summary><div><span>Status</span><strong data-summary-status>Ready</strong></div><div><span>Files</span><strong data-summary-files>0</strong></div><div><span>Size</span><strong data-summary-size>0 B</strong></div><div><span>Packs</span><strong data-summary-packs>0</strong></div></div></div></section>
+<section class="group"><h2>Log</h2><div class="group__body"><div class="logbar"><span class="status" data-status>Ready</span><button class="button" data-clear-log type="button">Clear Log</button></div><pre class="log" data-log>Assemblia browser edition ready.</pre></div></section>
+</main>
+<script>
+(() => {
+  "use strict";
+
+  const BAD_FORMATS = [".dx80.vtx", ".xbox.vtx", ".sw.vtx", ".360.vtx"];
+  const ADDONS_DIR_NAME = "Addons";
+  const LUA_DIR_NAME = "Lua";
+  const GB = 1024 ** 3;
+  const settingsKey = "assemblia.browser.settings.v1";
+  const sourcePath = document.querySelector("[data-source-path]");
+  const destinationPath = document.querySelector("[data-destination-path]");
+  const packSize = document.querySelector("[data-pack-size]");
+  const splitLua = document.querySelector("[data-split-lua]");
+  const deleteOriginals = document.querySelector("[data-delete-originals]");
+  const status = document.querySelector("[data-status]");
+  const logElement = document.querySelector("[data-log]");
+  const summaryStatus = document.querySelector("[data-summary-status]");
+  const summaryFiles = document.querySelector("[data-summary-files]");
+  const summarySize = document.querySelector("[data-summary-size]");
+  const summaryPacks = document.querySelector("[data-summary-packs]");
+  const actionButtons = [...document.querySelectorAll("[data-action]")];
+  const supported = typeof window.showDirectoryPicker === "function";
+  let sourceHandle = null;
+  let destinationHandle = null;
+  let running = false;
+
+  const loadSettings = () => {
+    try {
+      const stored = JSON.parse(localStorage.getItem(settingsKey) || "null");
+      if (!stored) return;
+      if (stored.maxPackSizeGb) packSize.value = String(stored.maxPackSizeGb);
+      splitLua.checked = Boolean(stored.splitLua);
+      deleteOriginals.checked = Boolean(stored.deleteOriginals);
+    } catch {}
+  };
+
+  const saveSettings = () => {
+    try {
+      localStorage.setItem(settingsKey, JSON.stringify({
+        maxPackSizeGb: packSize.value,
+        splitLua: splitLua.checked,
+        deleteOriginals: deleteOriginals.checked
+      }));
+    } catch {}
+  };
+
+  const formatSize = (bytes) => {
+    let value = Number(bytes) || 0;
+    for (const unit of ["B", "KB", "MB", "GB", "TB"]) {
+      if (value < 1024 || unit === "TB") return unit === "B" ? `${Math.round(value)} ${unit}` : `${value.toFixed(2)} ${unit}`;
+      value /= 1024;
+    }
+    return `${bytes} B`;
+  };
+
+  const log = (message) => {
+    const timestamp = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+    logElement.textContent += `\n[${timestamp}] ${message}`;
+    logElement.scrollTop = logElement.scrollHeight;
+  };
+
+  const setSummary = (label, files = 0, bytes = 0, packs = 0) => {
+    summaryStatus.textContent = label;
+    summaryFiles.textContent = Number(files).toLocaleString();
+    summarySize.textContent = formatSize(bytes);
+    summaryPacks.textContent = Number(packs).toLocaleString();
+  };
+
+  const setRunning = (value, label = "Ready") => {
+    running = value;
+    status.textContent = label;
+    for (const button of actionButtons) button.disabled = value || !supported;
+    document.querySelector("[data-pick-source]").disabled = value || !supported;
+    document.querySelector("[data-pick-destination]").disabled = value || !supported;
+  };
+
+  const parsePackSizeBytes = () => {
+    const value = Number.parseFloat(packSize.value.trim());
+    return Number.isFinite(value) && value > 0 ? value * GB : 3.9 * GB;
+  };
+
+  const normalizeLuaName = (name) => name.replace(/_\d+$/, "");
+
+  const getDirectory = async (root, parts, create = true) => {
+    let current = root;
+    for (const part of parts) current = await current.getDirectoryHandle(part, { create });
+    return current;
+  };
+
+  const fileExists = async (root, parts) => {
+    if (!parts.length) return false;
+    try {
+      const parent = await getDirectory(root, parts.slice(0, -1), false);
+      await parent.getFileHandle(parts.at(-1), { create: false });
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  const copyFile = async (sourceFileHandle, destinationRoot, parts) => {
+    const parent = await getDirectory(destinationRoot, parts.slice(0, -1), true);
+    const target = await parent.getFileHandle(parts.at(-1), { create: true });
+    const sourceFile = await sourceFileHandle.getFile();
+    const writer = await target.createWritable();
+    await writer.write(sourceFile);
+    await writer.close();
+    return sourceFile.size;
+  };
+
+  async function* walkFiles(directory, parts = []) {
+    for await (const [name, handle] of directory.entries()) {
+      const nextParts = [...parts, name];
+      if (handle.kind === "file") {
+        yield { handle, parent: directory, name, parts: nextParts };
+      } else {
+        yield* walkFiles(handle, nextParts);
+      }
+    }
+  }
+
+  const topLevelDirectories = async (directory) => {
+    const result = [];
+    for await (const [name, handle] of directory.entries()) if (handle.kind === "directory") result.push({ name, handle });
+    result.sort((a, b) => a.name.localeCompare(b.name));
+    return result;
+  };
+
+  const calculateDirectorySize = async (directory) => {
+    let files = 0;
+    let bytes = 0;
+    for await (const item of walkFiles(directory)) {
+      const file = await item.handle.getFile();
+      files += 1;
+      bytes += file.size;
+    }
+    return { files, bytes };
+  };
+
+  const destinationFilesForSplit = async () => {
+    const files = [];
+    for await (const item of walkFiles(destinationHandle)) {
+      if (item.parts[0] === ADDONS_DIR_NAME || item.parts[0] === LUA_DIR_NAME) continue;
+      const file = await item.handle.getFile();
+      files.push({ ...item, size: file.size });
+    }
+    files.sort((a, b) => a.parts.join("/").localeCompare(b.parts.join("/")));
+    return files;
+  };
+
+  const removeEmptyDirectories = async (directory, preserve = new Set(), root = true) => {
+    let removed = 0;
+    const children = [];
+    for await (const [name, handle] of directory.entries()) if (handle.kind === "directory") children.push([name, handle]);
+    for (const [name, handle] of children) {
+      if (root && preserve.has(name)) continue;
+      removed += await removeEmptyDirectories(handle, preserve, false);
+      let empty = true;
+      for await (const _ of handle.entries()) {
+        empty = false;
+        break;
+      }
+      if (empty) {
+        try {
+          await directory.removeEntry(name);
+          removed += 1;
+        } catch {}
+      }
+    }
+    return removed;
+  };
+
+  const cleanupBadFormats = async () => {
+    let removed = 0;
+    let bytes = 0;
+    for await (const item of walkFiles(destinationHandle)) {
+      const lower = item.name.toLowerCase();
+      if (!BAD_FORMATS.some((format) => lower.endsWith(format))) continue;
+      const file = await item.handle.getFile();
+      try {
+        await item.parent.removeEntry(item.name);
+        removed += 1;
+        bytes += file.size;
+        log(`Removed unsupported model sidecar: ${item.parts.join("/")}`);
+      } catch {
+        log(`Could not remove: ${item.parts.join("/")}`);
+      }
+    }
+    const empty = await removeEmptyDirectories(destinationHandle, new Set([ADDONS_DIR_NAME, LUA_DIR_NAME]));
+    return { removed, bytes, empty };
+  };
+
+  const benchmarkMerge = async () => {
+    if (!sourceHandle) throw new Error("Select a source folder first.");
+    const addons = await topLevelDirectories(sourceHandle);
+    let files = 0;
+    let bytes = 0;
+    for (const addon of addons) {
+      for await (const item of walkFiles(addon.handle)) {
+        const file = await item.handle.getFile();
+        files += 1;
+        bytes += file.size;
+      }
+    }
+    setSummary(`${addons.length} addons`, files, bytes, 0);
+    log(`Merge benchmark: ${addons.length} addons, ${files.toLocaleString()} files, ${formatSize(bytes)}.`);
+  };
+
+  const benchmarkSplit = async () => {
+    if (!destinationHandle) throw new Error("Select a destination folder first.");
+    const files = await destinationFilesForSplit();
+    const maxBytes = parsePackSizeBytes();
+    let packs = files.length ? 1 : 0;
+    let current = 0;
+    let total = 0;
+    for (const file of files) {
+      if (current > 0 && current + file.size > maxBytes) {
+        packs += 1;
+        current = 0;
+      }
+      current += file.size;
+      total += file.size;
+    }
+    setSummary("Split benchmark", files.length, total, packs);
+    log(`Split benchmark: ${files.length.toLocaleString()} files, ${formatSize(total)}, ${packs} estimated packs.`);
+  };
+
+  const merge = async () => {
+    if (!sourceHandle || !destinationHandle) throw new Error("Select both source and destination folders first.");
+    const addons = await topLevelDirectories(sourceHandle);
+    let moved = 0;
+    let luaMoved = 0;
+    let duplicates = 0;
+    let duplicateBytes = 0;
+    let failed = 0;
+    let totalBytes = 0;
+    for (const addon of addons) {
+      log(`Processing addon: ${addon.name}`);
+      const files = [];
+      for await (const item of walkFiles(addon.handle)) files.push(item);
+      for (const item of files) {
+        try {
+          const sourceFile = await item.handle.getFile();
+          const isLua = splitLua.checked && item.name.toLowerCase().endsWith(".lua");
+          const targetParts = isLua ? [LUA_DIR_NAME, normalizeLuaName(addon.name), ...item.parts] : item.parts;
+          if (await fileExists(destinationHandle, targetParts)) {
+            await item.parent.removeEntry(item.name);
+            duplicates += 1;
+            duplicateBytes += sourceFile.size;
+            continue;
+          }
+          const bytes = await copyFile(item.handle, destinationHandle, targetParts);
+          await item.parent.removeEntry(item.name);
+          totalBytes += bytes;
+          if (isLua) luaMoved += 1;
+          else moved += 1;
+        } catch (error) {
+          failed += 1;
+          log(`Failed: ${addon.name}/${item.parts.join("/")} · ${error.message || error}`);
+        }
+      }
+      try {
+        await sourceHandle.removeEntry(addon.name, { recursive: true });
+      } catch {}
+    }
+    const cleanup = await cleanupBadFormats();
+    const files = moved + luaMoved;
+    setSummary(failed ? "Completed with errors" : "Merge complete", files, totalBytes, 0);
+    log(`Merge complete: ${addons.length} addons, ${moved} content files, ${luaMoved} Lua files, ${duplicates} duplicates removed (${formatSize(duplicateBytes)} saved), ${cleanup.removed} sidecar files removed, ${failed} failures.`);
+    return { files, bytes: totalBytes };
+  };
+
+  const split = async () => {
+    if (!destinationHandle) throw new Error("Select a destination folder first.");
+    const files = await destinationFilesForSplit();
+    const maxBytes = parsePackSizeBytes();
+    let pack = files.length ? 1 : 0;
+    let current = 0;
+    let copied = 0;
+    let copiedBytes = 0;
+    let failed = 0;
+    for (const item of files) {
+      try {
+        if (current > 0 && current + item.size > maxBytes) {
+          pack += 1;
+          current = 0;
+        }
+        const targetParts = [ADDONS_DIR_NAME, String(pack), ...item.parts];
+        await copyFile(item.handle, destinationHandle, targetParts);
+        copied += 1;
+        copiedBytes += item.size;
+        current += item.size;
+        if (deleteOriginals.checked) await item.parent.removeEntry(item.name);
+      } catch (error) {
+        failed += 1;
+        log(`Split failed: ${item.parts.join("/")} · ${error.message || error}`);
+      }
+    }
+    if (deleteOriginals.checked) await removeEmptyDirectories(destinationHandle, new Set([ADDONS_DIR_NAME, LUA_DIR_NAME]));
+    setSummary(failed ? "Completed with errors" : "Split complete", copied, copiedBytes, pack);
+    log(`Split complete: ${copied} files copied across ${pack} packs, ${formatSize(copiedBytes)}, ${failed} failures.`);
+    return { files: copied, bytes: copiedBytes, packs: pack };
+  };
+
+  const runAction = async (action) => {
+    if (running) return;
+    saveSettings();
+    setRunning(true, "Working...");
+    try {
+      if (action === "benchmark-merge") await benchmarkMerge();
+      if (action === "benchmark-split") await benchmarkSplit();
+      if (action === "folder-size") {
+        if (!destinationHandle) throw new Error("Select a destination folder first.");
+        const result = await calculateDirectorySize(destinationHandle);
+        setSummary("Folder size", result.files, result.bytes, 0);
+        log(`Destination size: ${formatSize(result.bytes)} across ${result.files.toLocaleString()} files.`);
+      }
+      if (action === "cleanup") {
+        if (!destinationHandle) throw new Error("Select a destination folder first.");
+        const result = await cleanupBadFormats();
+        setSummary("Cleanup complete", result.removed, result.bytes, 0);
+        log(`Cleanup complete: ${result.removed} files removed (${formatSize(result.bytes)}), ${result.empty} empty directories removed.`);
+      }
+      if (action === "merge" || action === "merge-split") {
+        if (!sourceHandle || !destinationHandle) throw new Error("Select both source and destination folders first.");
+        if (!confirm("Assemblia will copy files into the destination and remove processed files and addon folders from the source. Continue?")) return;
+        await merge();
+      }
+      if (action === "split" || action === "merge-split") {
+        if (deleteOriginals.checked && !confirm("Delete original merged files after splitting? Numbered pack copies will remain under Addons/.")) return;
+        await split();
+      }
+      status.textContent = "Ready";
+    } catch (error) {
+      status.textContent = "Error";
+      setSummary("Error", 0, 0, 0);
+      log(error.message || String(error));
+    } finally {
+      setRunning(false, status.textContent === "Error" ? "Error" : "Ready");
+    }
+  };
+
+  document.querySelector("[data-pick-source]").addEventListener("click", async () => {
+    if (!supported || running) return;
+    try {
+      sourceHandle = await window.showDirectoryPicker({ mode: "readwrite" });
+      sourcePath.textContent = sourceHandle.name;
+      sourcePath.title = sourceHandle.name;
+      log(`Source selected: ${sourceHandle.name}`);
+    } catch (error) {
+      if (error.name !== "AbortError") log(`Source selection failed: ${error.message || error}`);
+    }
+  });
+
+  document.querySelector("[data-pick-destination]").addEventListener("click", async () => {
+    if (!supported || running) return;
+    try {
+      destinationHandle = await window.showDirectoryPicker({ mode: "readwrite" });
+      destinationPath.textContent = destinationHandle.name;
+      destinationPath.title = destinationHandle.name;
+      log(`Destination selected: ${destinationHandle.name}`);
+    } catch (error) {
+      if (error.name !== "AbortError") log(`Destination selection failed: ${error.message || error}`);
+    }
+  });
+
+  for (const button of actionButtons) button.addEventListener("click", () => runAction(button.dataset.action));
+  document.querySelector("[data-clear-log]").addEventListener("click", () => { logElement.textContent = ""; });
+  packSize.addEventListener("change", saveSettings);
+  splitLua.addEventListener("change", saveSettings);
+  deleteOriginals.addEventListener("change", saveSettings);
+  loadSettings();
+  document.querySelector("[data-unsupported]").hidden = supported;
+  setRunning(false, "Ready");
+})();
+</script>
+</body>
+</html>
