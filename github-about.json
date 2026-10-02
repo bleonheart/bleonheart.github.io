@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-02T02:47:08.262Z",
+  "repository": "bleonheart/bleonheart",
+  "sourceUrl": "https://github.com/bleonheart/bleonheart/blob/main/README.md",
+  "sha": "ca215631af889294a99152dd96643ae86a29d229",
+  "title": "Hi 👋, I'm Samael",
+  "summary": "Linux Systems Administrator | DevOps | IT Operations | Software Developer",
+  "links": [
+    {
+      "label": "Portfolio",
+      "url": "https://bleonheart.github.io/"
+    },
+    {
+      "label": "Lilia Framework",
+      "url": "https://github.com/LiliaFramework/Lilia"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.com/users/245205823909789706"
+    }
+  ],
+  "sections": [
+    {
+      "title": "About Me",
+      "items": [
+        "🔭 Lead developer of [Lilia Roleplay Framework](https://github.com/LiliaFramework/Lilia)",
+        "🚀 Currently working on **Project Fantasia**, built with **Unity 6.6**",
+        "🐧 Administering **Linux and Windows production systems**, services and infrastructure",
+        "📦 Building and operating **Docker, Docker Compose and Kubernetes** environments",
+        "☁️ Working across **AWS, Microsoft Azure, Google Cloud Platform, Proxmox and Cloudflare**",
+        "⚙️ Automating infrastructure and delivery with **Terraform, Ansible, GitHub Actions, GitLab CI/CD and Jenkins**",
+        "🎮 Building game systems and tooling with **GLua, Python, GDScript and game-server technologies**",
+        "🌐 Developing web and backend systems with **HTML, CSS, JavaScript, TypeScript, React and SQL databases**",
+        "🧰 Focused on **production support, troubleshooting, incident resolution, testing, performance and reliability**",
+        "📦 Explore more projects and technical work on my [Portfolio](https://bleonheart.github.io/)"
+      ]
+    },
+    {
+      "title": "Programming, Scripting & Web",
+      "items": [
+        "**Programming & Scripting:** Lua / GLua, Python, Bash / Shell, PowerShell, GDScript, JavaScript, TypeScript, Java, Go",
+        "**Web:** HTML, CSS, JavaScript, TypeScript, React",
+        "**Game Development:** Unity 6.6, Godot",
+        "**Backend:** API and application development, automation, integrations and data persistence"
+      ]
+    },
+    {
+      "title": "Linux, Systems & Administration",
+      "items": [
+        "**Linux:** Ubuntu, Debian, Rocky Linux, CentOS Stream",
+        "**Windows:** Windows Server, Windows 10/11",
+        "**Remote Administration:** SSH, SFTP",
+        "**Service & Task Management:** systemd, cron",
+        "**Systems Administration:** Production services, configuration, maintenance, updates, availability and performance",
+        "**Operations:** Technical support, troubleshooting, ticket resolution, incident resolution and production support"
+      ]
+    },
+    {
+      "title": "DevOps, CI/CD & Infrastructure as Code",
+      "items": [
+        "**Containers:** Docker, Docker Compose",
+        "**Orchestration:** Kubernetes",
+        "**Version Control:** Git, GitHub",
+        "**CI/CD:** GitHub Actions, GitLab CI/CD, Jenkins",
+        "**Infrastructure as Code:** Terraform",
+        "**Configuration Management & Automation:** Ansible",
+        "**Automation:** Deployment workflows, maintenance tooling, scripting and repeatable infrastructure operations"
+      ]
+    },
+    {
+      "title": "Cloud & Infrastructure",
+      "items": [
+        "**Cloud Platforms:** AWS, Microsoft Azure, Google Cloud Platform",
+        "**Virtualization & Infrastructure:** Proxmox",
+        "**Edge & Web Infrastructure:** Cloudflare, Cloudflare Workers",
+        "**Infrastructure Services:** Load balancing, reverse proxies, service exposure and production deployments"
+      ]
+    },
+    {
+      "title": "Databases, Data & Analytics",
+      "items": [
+        "**SQL & Databases:** SQL, PostgreSQL, MySQL, MariaDB, SQLite",
+        "**Data & Reporting:** Excel, Power BI",
+        "**Database Work:** Schema design, queries, data processing, persistence, administration and troubleshooting"
+      ]
+    },
+    {
+      "title": "Networking & Security",
+      "items": [
+        "**Security & Diagnostics:** FortiGate, Wireshark",
+        "**Linux Firewalling:** iptables, nftables",
+        "**Networking:** VLANs, NAT, port forwarding, subnetting, CIDR and routing",
+        "**Traffic & Availability:** Load balancing and reverse proxies",
+        "**Operations:** Firewall configuration, ports, DNS, service exposure and connectivity troubleshooting"
+      ]
+    },
+    {
+      "title": "Game Server Infrastructure",
+      "items": [
+        "**Deployment & Management:** SteamCMD, LinuxGSM",
+        "**Source Engine:** SRCDS",
+        "**Game Server Panels:** Pterodactyl",
+        "**Administration:** Dedicated servers, configuration, deployment, updates and maintenance",
+        "**Operations:** Monitoring, troubleshooting, backups and performance optimization",
+        "**Automation:** Deployment scripts, update workflows and server maintenance tooling"
+      ]
+    },
+    {
+      "title": "IT Operations, QA & Support",
+      "items": [
+        "**Production Support:** Production systems and service operations",
+        "**Troubleshooting:** Technical diagnosis, root-cause investigation and issue resolution",
+        "**Ticket & Incident Management:** Ticket resolution, incident resolution and escalation handling",
+        "**Systems Administration:** Linux and Windows administration, services and infrastructure",
+        "**Technical Support:** User, customer and operational support",
+        "**QA & Testing:** Functional testing, validation, release testing and quality control",
+        "**Requirements:** Requirements gathering, prioritization and implementation planning",
+        "**Documentation:** Technical documentation and operational reporting",
+        "**Process Improvement:** Workflow optimization, maintenance and continuous improvement"
+      ]
+    },
+    {
+      "title": "Tools & Collaboration",
+      "items": [
+        "**Project & Issue Management:** Jira, Trello",
+        "**Productivity:** Microsoft 365, Google Workspace",
+        "**Communication:** Slack",
+        "**Creative & Hardware:** Blender, Arduino"
+      ]
+    }
+  ],
+  "featuredProject": {
+    "name": "Lilia Roleplay Framework",
+    "url": "https://github.com/LiliaFramework/Lilia",
+    "description": "A modular roleplay framework for Garry's Mod built with extensibility, maintainability and server development in mind."
+  }
+}
