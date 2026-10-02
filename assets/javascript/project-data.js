@@ -102,6 +102,33 @@
       ]
     },
     {
+      "id": "rune-wars",
+      "name": "Rune Wars",
+      "summary": "A Ren'Py game project focused on narrative progression, scripted gameplay systems and integrated visual and audio content.",
+      "status": "games",
+      "category": "Game · Ren'Py",
+      "technologies": [
+        "Ren'Py",
+        "Python",
+        "Game Scripting",
+        "2D Assets"
+      ],
+      "lifecycle": "games",
+      "work": [
+        "Gameplay and narrative system development",
+        "Scene, progression and game-state scripting",
+        "Visual and audio asset integration",
+        "Iteration on game logic and content delivery"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Rune-Wars"
+        }
+      ],
+      "githubRepository": "bleonheart/Rune-Wars"
+    },
+    {
       id: "codex",
       name: "Codex",
       summary: "A deploy-time Project Gutenberg digital library and reader built for static hosting, offline-friendly reading and automated catalog generation.",
@@ -177,6 +204,963 @@
       links: [
         { label: "Repository", url: "https://github.com/bleonheart/Samael-Assets" },
         { label: "Asset Browser", url: "https://bleonheart.github.io/Samael-Assets/" }
+      ]
+    },
+    {
+      "id": "glua-toolchain",
+      "name": "GLua Toolchain",
+      "summary": "A production-style static-analysis and developer-tooling suite for real Garry's Mod Lua projects.",
+      "status": "tools",
+      "category": "Tool · GLua Static Analysis",
+      "technologies": [
+        "Go",
+        "GLua",
+        "Lua",
+        "AST",
+        "SARIF",
+        "LSP",
+        "Graphviz",
+        "GitHub Actions"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "GLua-aware lexer, parser and source-aware AST",
+        "Project-wide semantic, realm and dependency analysis",
+        "Networking and security diagnostics with control-flow analysis",
+        "Formatting, documentation, LSP, SARIF and CI integration"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/GLua-Toolchain"
+        }
+      ],
+      "githubRepository": "bleonheart/GLua-Toolchain"
+    },
+    {
+      "id": "gmod-optimization-tool",
+      "name": "Garry's Mod Optimization Tool",
+      "summary": "A customized desktop utility for cleaning, compressing and reorganizing Garry's Mod addons, maps and content packs.",
+      "status": "tools",
+      "category": "Tool · Garry's Mod Content Optimization",
+      "technologies": [
+        "Python",
+        "PySide6",
+        "Pillow",
+        "SourcePP",
+        "Source Engine",
+        "Garry's Mod"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "Customized and maintained the desktop optimization workflow",
+        "Texture and audio compression pipelines",
+        "Unused-content and missing-material discovery",
+        "BSP dependency collection and addon cleanup utilities"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/GMod-Optimization-Tool"
+        }
+      ],
+      "githubRepository": "bleonheart/GMod-Optimization-Tool"
+    },
+    {
+      "id": "lilia-snippets",
+      "name": "Lilia Snippets",
+      "summary": "A Visual Studio Code extension providing framework-aware snippets and development shortcuts for Lilia and GLua.",
+      "status": "tools",
+      "category": "Tool · VS Code Extension",
+      "technologies": [
+        "TypeScript",
+        "VS Code API",
+        "JSON",
+        "GLua",
+        "Lua"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "Framework-aware snippets for classes, hooks, libraries and meta APIs",
+        "Lua and GLua editor integration",
+        "Extension commands for common development transformations",
+        "Marketplace packaging and extension maintenance"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/LiliaFramework/Snippets"
+        }
+      ],
+      "githubRepository": "LiliaFramework/Snippets"
+    },
+    {
+      "id": "lilia-modules",
+      "name": "Lilia Modules",
+      "summary": "The maintained collection of optional gameplay, administration, presentation and utility modules for the Lilia ecosystem.",
+      "status": "tools",
+      "category": "Tool · Lilia Module Ecosystem",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Lilia",
+        "Garry's Mod",
+        "JavaScript"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "Reusable gameplay, administration and presentation modules",
+        "Self-contained module architecture and framework conventions",
+        "Server utilities, NPC systems, UI and interaction features",
+        "Documentation and metadata generation tooling"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/LiliaFramework/Modules"
+        }
+      ],
+      "githubRepository": "LiliaFramework/Modules"
+    },
+    {
+      "id": "lilia-skeleton",
+      "name": "Lilia Skeleton",
+      "summary": "The official minimal Lilia schema foundation for starting custom roleplay projects with a clean structure.",
+      "status": "tools",
+      "category": "Tool · Lilia Schema Starter",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Lilia",
+        "Garry's Mod"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "Minimal production-ready schema starter",
+        "Baseline gamemode and schema structure",
+        "Clean extension points for factions, classes and modules",
+        "Reference foundation for new Lilia projects"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/LiliaFramework/Skeleton"
+        }
+      ],
+      "githubRepository": "LiliaFramework/Skeleton"
+    },
+    {
+      "id": "gluacheck",
+      "name": "GLuaCheck",
+      "summary": "A Lilia-oriented Luacheck-based static-analysis repository adapted for Garry's Mod and framework development workflows.",
+      "status": "tools",
+      "category": "Tool · Lua / GLua Static Analysis",
+      "technologies": [
+        "Lua",
+        "Luacheck",
+        "GLua",
+        "Static Analysis",
+        "CI"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "Maintained a Lilia-oriented static-analysis fork",
+        "Adapted globals and warning behavior for Garry's Mod development",
+        "Integrated framework-specific linting conventions",
+        "Supported CI-oriented Lua and GLua quality checks"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/LiliaFramework/GluaCheck"
+        }
+      ],
+      "githubRepository": "LiliaFramework/GluaCheck"
+    },
+    {
+      "id": "lilia-documentation",
+      "name": "Lilia Documentation Platform",
+      "summary": "The documentation publishing platform for Lilia installation, configuration, APIs, hooks, modules and development workflows.",
+      "status": "tools",
+      "category": "Tool · Documentation Platform",
+      "technologies": [
+        "Python",
+        "MkDocs",
+        "Markdown",
+        "JavaScript",
+        "GitHub Pages"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "Framework guides and API/reference documentation",
+        "MkDocs documentation-site architecture",
+        "Generated reference and module metadata workflows",
+        "Documentation publishing and maintenance pipeline"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/LiliaFramework/LiliaFramework.github.io"
+        },
+        {
+          "label": "Documentation",
+          "url": "https://liliaframework.github.io/"
+        }
+      ],
+      "githubRepository": "LiliaFramework/LiliaFramework.github.io"
+    },
+    {
+      "id": "gmod-globals-scraper",
+      "name": "GMod Globals Scraper",
+      "summary": "A customized scraper for generating Garry's Mod global-function and global-variable definitions for static-analysis workflows.",
+      "status": "tools",
+      "category": "Tool · GLua Developer Utility",
+      "technologies": [
+        "Lua",
+        "GLua",
+        "Luacheck",
+        "Data Scraping"
+      ],
+      "lifecycle": "tools",
+      "work": [
+        "Customized Garry's Mod API scraping workflow",
+        "Global function and variable extraction",
+        "Luacheck-compatible definition generation",
+        "Static-analysis support for Garry's Mod projects"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/gmod-globals-scraper"
+        }
+      ],
+      "githubRepository": "bleonheart/gmod-globals-scraper"
+    },
+    {
+      "id": "linux-infrastructure-lab",
+      "name": "Linux Infrastructure Lab",
+      "summary": "A reproducible production-style Linux infrastructure environment covering deployment, automation, observability and day-two operations.",
+      "status": "labs",
+      "category": "Lab · Linux / DevOps Infrastructure",
+      "technologies": [
+        "Linux",
+        "Go",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Ansible",
+        "PostgreSQL",
+        "Nginx",
+        "Prometheus",
+        "Grafana",
+        "Loki",
+        "GitHub Actions"
+      ],
+      "lifecycle": "labs",
+      "work": [
+        "Production-style Linux environment and service architecture",
+        "Infrastructure as Code and configuration management",
+        "Container and Kubernetes deployment workflows",
+        "Observability, backups, hardening, CI validation and runbooks"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Linux-Infrastructure-Lab"
+        }
+      ],
+      "githubRepository": "bleonheart/Linux-Infrastructure-Lab"
+    },
+    {
+      "id": "game-server-control-plane",
+      "name": "Game Server Control Plane",
+      "summary": "A production-oriented API and worker control plane for provisioning, operating, updating, monitoring and recovering dedicated game servers.",
+      "status": "labs",
+      "category": "Lab · Backend / Game Infrastructure",
+      "technologies": [
+        "Go",
+        "PostgreSQL",
+        "Docker",
+        "SteamCMD",
+        "SRCDS",
+        "Prometheus",
+        "Kubernetes",
+        "GitHub Actions"
+      ],
+      "lifecycle": "labs",
+      "work": [
+        "Dedicated-server provisioning and lifecycle API",
+        "SteamCMD updates and desired/actual-state reconciliation",
+        "Concurrency locking, scheduling and automated recovery",
+        "RBAC, encrypted secrets, backups, metrics and CI/CD"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Game-Server-Control-Plane"
+        }
+      ],
+      "githubRepository": "bleonheart/Game-Server-Control-Plane"
+    },
+    {
+      "id": "production-troubleshooting-lab",
+      "name": "Production Troubleshooting Lab",
+      "summary": "A resettable incident-response environment covering Linux, networking, containers, databases and Kubernetes failures.",
+      "status": "labs",
+      "category": "Lab · Production Support / SRE",
+      "technologies": [
+        "Linux",
+        "Bash",
+        "Docker",
+        "Kubernetes",
+        "Nginx",
+        "PostgreSQL",
+        "Prometheus",
+        "Grafana",
+        "GitHub Actions"
+      ],
+      "lifecycle": "labs",
+      "work": [
+        "Reproducible production-support incident scenarios",
+        "Linux, Nginx, networking and container troubleshooting",
+        "PostgreSQL, TLS, permissions and Kubernetes failure labs",
+        "Monitoring, reset workflows, runbooks and incident reports"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Production-Troubleshooting-Lab"
+        }
+      ],
+      "githubRepository": "bleonheart/Production-Troubleshooting-Lab"
+    },
+    {
+      "id": "postgresql-operations-lab",
+      "name": "PostgreSQL Operations Lab",
+      "summary": "A production-style PostgreSQL environment for SQL engineering, performance tuning, troubleshooting and operational reliability.",
+      "status": "labs",
+      "category": "Lab · PostgreSQL Operations",
+      "technologies": [
+        "PostgreSQL 16",
+        "SQL",
+        "PL/pgSQL",
+        "Python",
+        "Docker Compose",
+        "Bash",
+        "GitHub Actions"
+      ],
+      "lifecycle": "labs",
+      "work": [
+        "Normalized schemas, migrations and operational SQL",
+        "CTE, window-function and JSONB workloads",
+        "Query-plan analysis, indexing and transaction labs",
+        "Monitoring, deterministic data generation and backup/restore verification"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/PostgreSQL-Operations-Lab"
+        }
+      ],
+      "githubRepository": "bleonheart/PostgreSQL-Operations-Lab"
+    },
+    {
+      "id": "titan-forge",
+      "name": "Titan Forge",
+      "summary": "A historical Garry's Mod server project combining custom gamemode and addon systems.",
+      "status": "legacy",
+      "category": "Garry's Mod · Server Project",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "Source Engine"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Custom gamemode and addon integration",
+        "Server-side gameplay architecture",
+        "Project-specific systems and mechanics",
+        "Content and deployment maintenance"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Titan-Forge"
+        }
+      ],
+      "githubRepository": "bleonheart/Titan-Forge"
+    },
+    {
+      "id": "project-manhattan",
+      "name": "Project Manhattan",
+      "summary": "A complete Garry's Mod server project spanning gamemode logic, addon integration and Workshop-oriented content.",
+      "status": "legacy",
+      "category": "Garry's Mod · Server Project",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "Workshop Content"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Gamemode and addon integration",
+        "Roleplay and gameplay systems",
+        "Workshop content organization",
+        "Server deployment structure"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Project-Manhattan"
+        }
+      ],
+      "githubRepository": "bleonheart/Project-Manhattan"
+    },
+    {
+      "id": "skyrim-incursion",
+      "name": "Skyrim Incursion",
+      "summary": "A Skyrim-inspired Garry's Mod project with custom gamemode systems, addons and supporting tooling.",
+      "status": "legacy",
+      "category": "Garry's Mod · Fantasy RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "Source Engine"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Fantasy-oriented gamemode systems",
+        "Custom addon integration",
+        "Gameplay and roleplay mechanics",
+        "Supporting development tooling"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Skyrim-Incursion"
+        }
+      ],
+      "githubRepository": "bleonheart/Skyrim-Incursion"
+    },
+    {
+      "id": "zombie-wars",
+      "name": "Zombie Wars",
+      "summary": "A zombie-oriented Garry's Mod roleplay and gamemode project with custom gameplay loops and schema systems.",
+      "status": "legacy",
+      "category": "Garry's Mod · Zombie RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Zombie-oriented gameplay loops",
+        "Roleplay and schema systems",
+        "Server and client mechanics",
+        "Project-specific content integration"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Zombie-Wars"
+        }
+      ],
+      "githubRepository": "bleonheart/Zombie-Wars"
+    },
+    {
+      "id": "blackpowder-and-magic",
+      "name": "Blackpowder and Magic",
+      "summary": "A fantasy and historical roleplay schema with custom character, gameplay and setting-specific systems.",
+      "status": "legacy",
+      "category": "Garry's Mod · Fantasy / Historical RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Roleplay schema development",
+        "Character and gameplay systems",
+        "Setting-specific mechanics",
+        "Server-side project customization"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Blackpowder-and-Magic"
+        }
+      ],
+      "githubRepository": "bleonheart/Blackpowder-and-Magic"
+    },
+    {
+      "id": "partum-verse",
+      "name": "Partum Verse",
+      "summary": "A custom Garry's Mod universe built around a dedicated gamemode and supporting addon architecture.",
+      "status": "legacy",
+      "category": "Garry's Mod · Custom RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Custom universe and gamemode architecture",
+        "Project-specific gameplay systems",
+        "Roleplay mechanics and server logic",
+        "Addon integration and maintenance"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Partum-Verse"
+        }
+      ],
+      "githubRepository": "bleonheart/Partum-Verse"
+    },
+    {
+      "id": "lilia-scprp",
+      "name": "Lilia SCPRP",
+      "summary": "An SCP-oriented roleplay schema demonstrating a specialized project built on top of the Lilia framework.",
+      "status": "legacy",
+      "category": "Garry's Mod · Lilia SCP RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Lilia",
+        "Garry's Mod"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "SCP-oriented Lilia schema structure",
+        "Project configuration, factions and classes",
+        "Schema-specific modules and mechanics",
+        "Isolation of project behavior from framework core"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/LiliaFramework/SCPRP"
+        }
+      ],
+      "githubRepository": "LiliaFramework/SCPRP"
+    },
+    {
+      "id": "improved-simfphys",
+      "name": "Improved Simfphys",
+      "summary": "A historical Garry's Mod vehicle project spanning Lua systems and Source-engine models, materials, particles and audio.",
+      "status": "legacy",
+      "category": "Garry's Mod · Vehicle Systems",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "Source Engine",
+        "Models",
+        "Materials"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Vehicle gameplay and integration work",
+        "Lua-side system customization",
+        "Model, material, particle and sound integration",
+        "Source-engine content maintenance"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Improved-Simfphys"
+        }
+      ],
+      "githubRepository": "bleonheart/Improved-Simfphys"
+    },
+    {
+      "id": "fallout-alaska",
+      "name": "Fallout Alaska / Alaskan Frontier",
+      "summary": "A multi-generation Fallout-themed roleplay project developed across several repository iterations.",
+      "status": "legacy",
+      "category": "Garry's Mod · Fallout RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "SQL",
+        "Source Engine"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Multiple generations of Fallout roleplay development",
+        "Schemas, factions, items and gameplay systems",
+        "Server-specific addon integration",
+        "Architecture evolution across project iterations"
+      ],
+      "links": [
+        {
+          "label": "Alaska",
+          "url": "https://github.com/bleonheart/Alaska"
+        },
+        {
+          "label": "Fallout Alaska",
+          "url": "https://github.com/bleonheart/Fallout-Alaska"
+        }
+      ]
+    },
+    {
+      "id": "nevada-wastes",
+      "name": "The Nevada Wastes",
+      "summary": "A Fallout/Nevada roleplay project developed and later reworked through a dedicated revamped iteration.",
+      "status": "legacy",
+      "category": "Garry's Mod · Fallout RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "SQL"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Fallout-themed schema development",
+        "Gameplay and roleplay module implementation",
+        "Server-specific systems and content",
+        "Major rework through the revamped iteration"
+      ],
+      "links": [
+        {
+          "label": "Original",
+          "url": "https://github.com/bleonheart/TheNevadaWastes"
+        },
+        {
+          "label": "Revamped",
+          "url": "https://github.com/bleonheart/TheNevadaWastesRevamped"
+        }
+      ]
+    },
+    {
+      "id": "flashpoint",
+      "name": "Flashpoint",
+      "summary": "A Garry's Mod roleplay project that progressed from an original implementation into a restructured 2.0 iteration.",
+      "status": "legacy",
+      "category": "Garry's Mod · Roleplay Project",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Custom gameplay and roleplay systems",
+        "Server-specific feature development",
+        "Feature migration and restructuring",
+        "Second-generation 2.0 project iteration"
+      ],
+      "links": [
+        {
+          "label": "Original",
+          "url": "https://github.com/bleonheart/Flashpoint"
+        },
+        {
+          "label": "2.0",
+          "url": "https://github.com/bleonheart/Flashpoint-2.0"
+        }
+      ]
+    },
+    {
+      "id": "project-rebirth",
+      "name": "Project Rebirth",
+      "summary": "A large historical Garry's Mod server codebase combining gamemode logic, addons and integrated content.",
+      "status": "legacy",
+      "category": "Garry's Mod · Server Project",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "Source Engine"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Large interconnected server codebase",
+        "Custom gamemode and addon systems",
+        "Gameplay and roleplay feature integration",
+        "Content and project maintenance"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Project-Rebirth"
+        }
+      ],
+      "githubRepository": "bleonheart/Project-Rebirth"
+    },
+    {
+      "id": "modified-gaming-wwii",
+      "name": "Modified Gaming WWII RP",
+      "summary": "Historical-roleplay development across successive 1942 and 1943 server iterations.",
+      "status": "legacy",
+      "category": "Garry's Mod · WWII RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Historical roleplay system development",
+        "Factions and gameplay mechanics",
+        "Administration and server-specific features",
+        "Iteration across 1942 and 1943 projects"
+      ],
+      "links": [
+        {
+          "label": "1942",
+          "url": "https://github.com/bleonheart/Modified-Gaming-1942RP"
+        },
+        {
+          "label": "1943",
+          "url": "https://github.com/bleonheart/Modified-Gaming-1943"
+        }
+      ]
+    },
+    {
+      "id": "guynolie-hl2rp",
+      "name": "Guynolie HL2RP",
+      "summary": "A Half-Life 2 roleplay project with custom schema systems, addon integration and server-specific gameplay.",
+      "status": "legacy",
+      "category": "Garry's Mod · Half-Life 2 RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "HL2RP Systems"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Half-Life 2 roleplay schema development",
+        "Faction and character systems",
+        "Addon and content integration",
+        "Server-specific gameplay mechanics"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/bleonheart/Guynolie-HL2RP"
+        }
+      ],
+      "githubRepository": "bleonheart/Guynolie-HL2RP"
+    },
+    {
+      "id": "warhammer-40k-projects",
+      "name": "Warhammer 40K Projects",
+      "summary": "A collection of Warhammer-inspired roleplay projects and experiments across multiple historical repositories.",
+      "status": "legacy",
+      "category": "Garry's Mod · Warhammer 40K RP",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Warhammer-inspired roleplay schemas",
+        "Faction and character systems",
+        "Setting-specific gameplay mechanics",
+        "Iteration across multiple project concepts"
+      ],
+      "links": [
+        {
+          "label": "Warhammer40k",
+          "url": "https://github.com/bleonheart/Warhammer40k"
+        },
+        {
+          "label": "Anathema Imperalis",
+          "url": "https://github.com/bleonheart/Anathema-Imperalis"
+        }
+      ]
+    },
+    {
+      "id": "legacy-star-wars-rp",
+      "name": "Star Wars RP Projects",
+      "summary": "A consolidated archive of Star Wars and SWTOR roleplay projects developed for different communities and server requirements.",
+      "status": "legacy",
+      "category": "Garry's Mod · Star Wars RP Archive",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "SQL"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Multiple Star Wars roleplay schemas and server projects",
+        "Faction, class and progression systems",
+        "Custom gameplay and administration features",
+        "Community-specific integration and maintenance"
+      ],
+      "links": [
+        {
+          "label": "StarWarsRP",
+          "url": "https://github.com/bleonheart/StarWarsRP"
+        },
+        {
+          "label": "Project Vindication",
+          "url": "https://github.com/bleonheart/ProjectVindicationSWRP"
+        }
+      ]
+    },
+    {
+      "id": "legacy-fallout-rp",
+      "name": "Fallout RP Projects",
+      "summary": "A consolidated archive of Fallout-themed Garry's Mod projects spanning multiple frameworks, settings and community servers.",
+      "status": "legacy",
+      "category": "Garry's Mod · Fallout RP Archive",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "SQL",
+        "Lilia"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Multiple Fallout-themed schemas and server projects",
+        "Inventory, faction and character systems",
+        "Economy and wasteland gameplay mechanics",
+        "Reusable server modules and project-specific integrations"
+      ],
+      "links": [
+        {
+          "label": "FalloutRP",
+          "url": "https://github.com/bleonheart/FalloutRP"
+        },
+        {
+          "label": "Mojave Reborn",
+          "url": "https://github.com/bleonheart/MojaveReborn"
+        }
+      ]
+    },
+    {
+      "id": "legacy-historical-rp",
+      "name": "Historical RP Projects",
+      "summary": "A consolidated archive of WWI, WWII, interwar and other historically themed Garry's Mod roleplay projects.",
+      "status": "legacy",
+      "category": "Garry's Mod · Historical RP Archive",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "SQL"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Historical roleplay schemas across multiple eras",
+        "Faction and character structures",
+        "Economy, progression and gameplay mechanics",
+        "Administration and community-specific systems"
+      ],
+      "links": [
+        {
+          "label": "Elysium 1942RP",
+          "url": "https://github.com/bleonheart/Elysium1942RP"
+        },
+        {
+          "label": "Time Capsule Berlin",
+          "url": "https://github.com/bleonheart/Time-Capsule-Berlin"
+        }
+      ]
+    },
+    {
+      "id": "legacy-mafia-rp",
+      "name": "Mafia RP Projects",
+      "summary": "A consolidated archive of Mafia and organized-crime roleplay projects built for several Garry's Mod communities.",
+      "status": "legacy",
+      "category": "Garry's Mod · Mafia RP Archive",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "SQL"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Crime and Mafia roleplay systems",
+        "Organization and economy mechanics",
+        "Character progression and interactions",
+        "Server administration and community customization"
+      ],
+      "links": [
+        {
+          "label": "MafiaRP",
+          "url": "https://github.com/bleonheart/MafiaRP"
+        },
+        {
+          "label": "Slayer MafiaRP",
+          "url": "https://github.com/bleonheart/Slayer-MafiaRP"
+        }
+      ]
+    },
+    {
+      "id": "legacy-hl2rp",
+      "name": "Half-Life 2 RP Projects",
+      "summary": "A consolidated archive of Half-Life 2 roleplay schemas and server projects across several communities and framework variants.",
+      "status": "legacy",
+      "category": "Garry's Mod · Half-Life 2 RP Archive",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "Helix",
+        "HL2RP Systems"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Half-Life 2 roleplay schema customization",
+        "Faction, class and character systems",
+        "Combine, citizen and inventory mechanics",
+        "Administration and server-specific integrations"
+      ],
+      "links": [
+        {
+          "label": "HL2RP",
+          "url": "https://github.com/bleonheart/HL2RP"
+        },
+        {
+          "label": "MG HL2RP",
+          "url": "https://github.com/bleonheart/MG-HL2RP"
+        }
+      ]
+    },
+    {
+      "id": "legacy-community-rp",
+      "name": "General RP / Community Projects",
+      "summary": "A consolidated archive of custom roleplay and community-server work covering city, DarkRP and bespoke server concepts.",
+      "status": "legacy",
+      "category": "Garry's Mod · Community Project Archive",
+      "technologies": [
+        "GLua",
+        "Lua",
+        "Garry's Mod",
+        "SQL"
+      ],
+      "lifecycle": "legacy",
+      "work": [
+        "Custom schemas for multiple communities",
+        "Economy and roleplay mechanics",
+        "UI, administration and server utilities",
+        "Deployment-specific integrations and maintenance"
+      ],
+      "links": [
+        {
+          "label": "Skyline CityRP",
+          "url": "https://github.com/bleonheart/SkylineCityRP"
+        },
+        {
+          "label": "HeadRush DarkRP",
+          "url": "https://github.com/bleonheart/HeadRush-DarkRP"
+        }
       ]
     },
     {
