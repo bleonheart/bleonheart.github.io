@@ -2,14 +2,14 @@
   "use strict";
 
   const programs = window.PortfolioPrograms instanceof Map ? window.PortfolioPrograms : (window.PortfolioPrograms = new Map());
+  const RECYCLE_BIN_TARGET_URL = "https://youtu.be/dQw4w9WgXcQ?list=RDdQw4w9WgXcQ";
 
   function initialize(container, api) {
     const app = container.querySelector(".recycle-bin-app");
     if (!app) return null;
-    const browser = api.applications.get("ai-browser");
 
     const openTarget = () => {
-      if (browser?.url) window.open(browser.url, "_blank", "noopener,noreferrer");
+      window.open(RECYCLE_BIN_TARGET_URL, "_blank", "noopener,noreferrer");
     };
 
     const updateDetails = (item) => {
