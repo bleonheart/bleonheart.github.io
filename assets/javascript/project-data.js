@@ -1167,10 +1167,10 @@
       id: "derma-creator",
       name: "Derma Creator",
       summary: "A visual Garry's Mod Derma UI builder with project import/export and Lua generation.",
-      status: "legacy",
+      status: "tools",
       category: "Garry's Mod · Developer Tool",
       technologies: ["JavaScript", "React", "GLua", "Vite"],
-      lifecycle: "legacy",
+      lifecycle: "tools",
       work: [
         "Component-based visual interface editor",
         "Project serialization and import/export workflows",
