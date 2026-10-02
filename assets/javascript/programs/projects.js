@@ -91,7 +91,7 @@
     const heading = create("header", "cv-project-entry__header");
     const title = create("div");
     title.append(create("h2", "", project.name), create("span", "cv-project-entry__type", project.category || "Project"));
-    const lifecycleLabels = { maintained: "Maintained", legacy: "Legacy", labs: "Labs" };
+    const lifecycleLabels = { maintained: "Maintained", games: "Games", tools: "Tools", labs: "Labs", legacy: "Legacy" };
     heading.append(title, create("span", `project-status project-status--${project.lifecycle}`, lifecycleLabels[project.lifecycle] || "Legacy"));
 
     const description = create("p", "cv-project-entry__description", project.summary || "");
@@ -132,7 +132,7 @@
       copy.append(
         create("span", "feature-eyebrow", "PROJECT LIST"),
         create("h1", "", "Projects"),
-        create("p", "", "Current and past work in a CV-style format. Maintained projects are separated from the legacy archive so the list can grow without changing the layout.")
+        create("p", "", "Current and past work in a CV-style format, organized into maintained projects, games, tools, labs and the legacy archive.")
       );
       header.append(copy);
 
@@ -140,7 +140,7 @@
       const filters = create("div", "feature-tabs projects-lifecycle-tabs");
       filters.setAttribute("role", "group");
       filters.setAttribute("aria-label", "Project lifecycle");
-      for (const [value, label] of [["maintained", "Maintained"], ["legacy", "Legacy"], ["labs", "Labs"]]) {
+      for (const [value, label] of [["maintained", "Maintained"], ["games", "Games"], ["tools", "Tools"], ["labs", "Labs"], ["legacy", "Legacy"]]) {
         const button = create("button", "", label);
         button.type = "button";
         button.dataset.projectFilter = value;
@@ -165,7 +165,7 @@
 
       try {
         const stored = JSON.parse(sessionStorage.getItem(storageKey) || "null");
-        if (["maintained", "legacy", "labs"].includes(stored?.filter)) filter = stored.filter;
+        if (["maintained", "games", "tools", "labs", "legacy"].includes(stored?.filter)) filter = stored.filter;
       } catch {}
 
       const render = () => {
@@ -187,7 +187,7 @@
       };
 
       const setFilter = (next) => {
-        filter = ["maintained", "legacy", "labs"].includes(next) ? next : "maintained";
+        filter = ["maintained", "games", "tools", "labs", "legacy"].includes(next) ? next : "maintained";
         try { sessionStorage.setItem(storageKey, JSON.stringify({ filter })); } catch {}
         render();
       };
