@@ -10,20 +10,6 @@
     return element;
   };
 
-  const action = (label, value, primary = false) => {
-    const button = create("button", `feature-button${primary ? " feature-button--primary" : ""}`, label);
-    button.type = "button";
-    button.addEventListener("click", () => window.PortfolioActions?.execute?.(value));
-    return button;
-  };
-
-  const link = (label, href, primary = false, download = false) => {
-    const anchor = create("a", `feature-button${primary ? " feature-button--primary" : ""}`, label);
-    anchor.href = href;
-    if (download) anchor.download = "";
-    return anchor;
-  };
-
   const sectionTabs = (active) => {
     const tabs = create("nav", "portfolio-section-tabs");
     tabs.setAttribute("aria-label", "Portfolio sections");
@@ -60,28 +46,14 @@
     for (const item of ["Linux Systems Administration", "DevOps / Infrastructure", "Production Support", "Ticket / Incident Resolution", "SQL / Data Operations"]) roleList.append(create("li", "", item));
     roles.append(roleList);
 
-    const experience = create("section", "feature-panel");
-    experience.append(create("h2", "", "Core Experience"));
-    const experienceList = create("ul", "feature-list");
-    for (const item of ["Linux: Ubuntu, Debian, Rocky Linux, CentOS Stream", "Docker and Kubernetes", "Terraform and Ansible", "GitHub Actions, GitLab CI/CD and Jenkins", "AWS, Azure, GCP and Proxmox", "SQL, MySQL and MariaDB", "Python, Bash and PowerShell"]) experienceList.append(create("li", "", item));
-    experience.append(experienceList);
-    columns.append(roles, experience);
+    const coreInformation = create("section", "feature-panel");
+    coreInformation.append(create("h2", "", "Core Information"));
+    const coreInformationList = create("ul", "feature-list");
+    for (const item of ["Immediately available", "Seeking full-time opportunities", "Prefer hybrid or remote work"]) coreInformationList.append(create("li", "", item));
+    coreInformation.append(coreInformationList);
+    columns.append(roles, coreInformation);
 
-    const meta = create("div", "work-meta-grid");
-    for (const [title, value] of [["Location", "Porto, Portugal"], ["Availability", "Open to appropriate remote and on-site opportunities"], ["Contact", "baratoxis@gmail.com"]]) {
-      const card = create("article", "work-meta-card");
-      card.append(create("strong", "", title), create("span", "", value));
-      meta.append(card);
-    }
-
-    const actions = create("div", "feature-actions work-primary-actions");
-    actions.append(
-      link("Email Me", "mailto:baratoxis@gmail.com", true),
-      action("View About Me", { type: "open-about-tab", target: "about" }),
-      action("LinkedIn ↗", { type: "open-external", target: "linkedin" })
-    );
-
-    wrapper.append(intro, columns, meta, actions);
+    wrapper.append(intro, columns);
     return wrapper;
   };
 
@@ -90,22 +62,19 @@
     const intro = create("section", "work-hero-panel");
     const heading = create("div");
     heading.append(create("span", "feature-eyebrow", "FREELANCE WORK"), create("h2", "", "Game Development · Server Infrastructure · Technical Support"));
-    intro.append(heading, create("p", "", "I take game-related technical work where the scope and requirements can be clearly defined. This includes development, server setup, optimization and ongoing support. Pricing is based on the actual work required so rates remain fair to both sides."));
+    intro.append(heading, create("p", "", "I take game-related technical work where the scope and requirements can be clearly defined. This includes development, server setup, optimization and ongoing support."));
 
     const services = create("section", "work-service-grid");
     services.append(
       serviceCard("Garry's Mod Development", ["GLua development", "Framework and system work", "Existing codebase work", "Debugging and optimization", "Custom gameplay systems"]),
       serviceCard("Project Zomboid", ["Server setup and configuration", "Modded environments", "Maintenance and updates", "Troubleshooting", "Database and performance work"]),
+      serviceCard("Roblox Development", ["Luau development", "Gameplay systems and scripting", "Client and server systems", "Debugging and optimization", "Existing project work"]),
+      serviceCard("Unity Development", ["C# development", "Gameplay systems and tools", "UI and gameplay implementation", "Debugging and optimization", "Existing project work"]),
       serviceCard("Game Server Hosting", ["Linux server deployment", "Docker / container environments", "Pterodactyl", "SteamCMD / SRCDS", "Databases and backups", "Networking and reverse proxies"]),
       serviceCard("Custom Infrastructure", ["Migrations and optimization", "Performance problems", "Database issues", "Automation and deployment", "Ongoing technical support"])
     );
 
-    const pricing = create("section", "work-pricing");
-    pricing.append(create("h3", "", "Pricing"), create("p", "", "Quoted per project based on scope, complexity and expected support. I prefer work-specific pricing so the rate stays fair for both sides."));
-
-    const actions = create("div", "feature-actions work-primary-actions");
-    actions.append(link("Discuss a Project", "mailto:baratoxis@gmail.com?subject=Freelance%20Project", true), link("baratoxis@gmail.com", "mailto:baratoxis@gmail.com"));
-    wrapper.append(intro, services, pricing, actions);
+    wrapper.append(intro, services);
     return wrapper;
   };
 

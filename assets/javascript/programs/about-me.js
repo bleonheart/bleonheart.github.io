@@ -6,7 +6,7 @@
   const content = {
     en: {
       eyebrow: "ABOUT ME",
-      name: "David Barata / Samael",
+      name: "David Barata",
       role: "Linux Systems Administrator | DevOps | IT Operations",
       location: "Matosinhos, Porto, Portugal",
       summaryTitle: "Professional Summary",
@@ -88,13 +88,14 @@
       languagesTitle: "Languages",
       languages: [["Portuguese", "C2"], ["English", "C2"], ["Spanish", "B2"]],
       portfolioTitle: "Portfolio & Technical Projects",
-      portfolio: "Technical portfolio with a broader selection of projects, previous work, documentation and practical examples of software development, systems administration, Linux, infrastructure, automation, CI/CD, databases and troubleshooting. It complements the skills and experience shown here with verifiable examples of completed work.",
+      portfolio: "Technical portfolio with a broader selection of projects, previous work, documentation and practical examples of software development, systems administration, Linux, infrastructure, automation, CI/CD, databases and troubleshooting. It complements the skills and experience shown in this CV with verifiable examples of completed work.",
+      portfolioUrl: "https://bleonheart.github.io/",
       tabs: { about: "About Me", projects: "Projects", work: "Work With Me" },
-      actions: { email: "Email", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", projects: "View Projects", work: "Work With Me" }
+      actions: { email: "Email", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", portfolio: "Open Portfolio ↗", projects: "View Projects", work: "Work With Me" }
     },
     pt: {
       eyebrow: "SOBRE MIM",
-      name: "David Barata / Samael",
+      name: "David Barata",
       role: "Administrador de Sistemas Linux | DevOps | Operações de TI",
       location: "Matosinhos, Porto, Portugal",
       summaryTitle: "Resumo Profissional",
@@ -175,10 +176,11 @@
       educationPeriod: "Setembro de 2019 - Junho de 2022",
       languagesTitle: "Idiomas",
       languages: [["Português", "C2"], ["Inglês", "C2"], ["Espanhol", "B2"]],
-      portfolioTitle: "Portefólio e Projetos Técnicos",
-      portfolio: "Portefólio técnico com uma seleção mais extensa de projetos, trabalhos anteriores, documentação e exemplos práticos de desenvolvimento de software, administração de sistemas, Linux, infraestrutura, automação, CI/CD, bases de dados e troubleshooting. Complementa as competências e experiência apresentadas aqui com exemplos verificáveis do trabalho realizado.",
+      portfolioTitle: "Portfólio e Projetos Técnicos",
+      portfolio: "Portfólio técnico com uma seleção mais extensa de projetos, trabalhos anteriores, documentação e exemplos práticos de desenvolvimento de software, administração de sistemas, Linux, infraestrutura, automação, CI/CD, bases de dados e troubleshooting. Complementa as competências e a experiência apresentadas neste CV com exemplos verificáveis do trabalho realizado.",
+      portfolioUrl: "https://bleonheart.github.io/",
       tabs: { about: "Sobre Mim", projects: "Projetos", work: "Trabalha Comigo" },
-      actions: { email: "Email", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", projects: "Ver Projetos", work: "Trabalha Comigo" }
+      actions: { email: "Email", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", portfolio: "Abrir Portfólio ↗", projects: "Ver Projetos", work: "Trabalha Comigo" }
     }
   };
 
@@ -228,14 +230,15 @@
     const sheet = create("article", "full-cv__sheet");
 
     const hero = create("header", "full-cv__hero");
-    hero.append(
+    const heroCopy = create("div", "full-cv__hero-copy");
+    heroCopy.append(
       create("span", "feature-eyebrow", copy.eyebrow),
       create("h1", "", copy.name),
       create("strong", "", copy.role),
       create("p", "", copy.location)
     );
 
-    const actions = create("div", "feature-actions full-cv__actions");
+    const actions = create("div", "feature-actions full-cv__actions full-cv__hero-actions");
     actions.append(
       link(copy.actions.email, "mailto:baratoxis@gmail.com", "feature-button feature-button--primary"),
       action(copy.actions.linkedin, { type: "open-external", target: "linkedin" }),
@@ -243,29 +246,32 @@
       action(copy.actions.steam, { type: "open-external", target: "steam" }),
       action(copy.actions.pivity, { type: "open-external", target: "pivity" })
     );
-    hero.append(actions);
+    hero.append(heroCopy, actions);
 
-    const summary = create("section", "full-cv__section");
+    const summary = create("section", "full-cv__section full-cv__summary");
     summary.append(create("h2", "", copy.summaryTitle), create("p", "", copy.summary));
 
-    const skills = create("section", "full-cv__section");
+    const skills = create("section", "full-cv__section full-cv__skills-section");
     skills.append(create("h2", "", copy.skillsTitle));
     const skillsList = create("div", "full-cv__skills");
     for (const [title, value] of copy.skills) {
-      const line = create("p", "full-cv__skill-line");
-      line.append(create("strong", "", `${title}: `), document.createTextNode(value));
-      skillsList.append(line);
+      const group = create("div", "full-cv__skill-group");
+      group.append(create("h3", "", title));
+      const tags = create("div", "full-cv__skill-tags");
+      for (const skill of value.split("|").map((item) => item.trim()).filter(Boolean)) tags.append(create("span", "", skill));
+      group.append(tags);
+      skillsList.append(group);
     }
     skills.append(skillsList);
 
-    const experience = create("section", "full-cv__section");
+    const experience = create("section", "full-cv__section full-cv__experience-section");
     experience.append(create("h2", "", copy.experienceTitle));
     const experienceList = create("div", "full-cv__experience");
     for (const job of copy.experience) {
       const item = create("article", "full-cv__job");
       const header = create("header", "full-cv__job-header");
       const heading = create("h3");
-      heading.append(document.createTextNode(`${job.title} | `), create("span", "", job.company));
+      heading.append(document.createTextNode(job.title), create("span", "", job.company));
       header.append(heading, create("p", "", job.period));
       const bullets = create("ul", "full-cv__bullets");
       for (const bullet of job.bullets) bullets.append(create("li", "", bullet));
@@ -274,10 +280,10 @@
     }
     experience.append(experienceList);
 
-    const footer = create("section", "full-cv__footer");
-    const education = create("article", "full-cv__section");
+    const education = create("section", "full-cv__section full-cv__sidebar-section");
     education.append(create("h2", "", copy.educationTitle), create("strong", "", copy.education), create("p", "", copy.educationPeriod));
-    const languages = create("article", "full-cv__section");
+
+    const languages = create("section", "full-cv__section full-cv__sidebar-section");
     languages.append(create("h2", "", copy.languagesTitle));
     const languageList = create("div", "cv-language-list");
     for (const [languageName, level] of copy.languages) {
@@ -286,14 +292,20 @@
       languageList.append(row);
     }
     languages.append(languageList);
-    const portfolio = create("article", "full-cv__section full-cv__portfolio");
-    portfolio.append(create("h2", "", copy.portfolioTitle), create("p", "", copy.portfolio));
-    const portfolioActions = create("div", "feature-actions full-cv__actions");
-    portfolioActions.append(action(copy.actions.projects, { type: "open-about-tab", target: "projects" }, true));
-    portfolio.append(portfolioActions);
-    footer.append(education, languages, portfolio);
 
-    sheet.append(hero, summary, skills, experience, footer);
+    const portfolio = create("section", "full-cv__section full-cv__sidebar-section");
+    portfolio.append(create("h2", "", copy.portfolioTitle), create("p", "", copy.portfolio), link(copy.actions.portfolio, copy.portfolioUrl));
+
+    const main = create("main", "full-cv__main");
+    main.append(summary, experience);
+
+    const sidebar = create("aside", "full-cv__sidebar");
+    sidebar.append(skills, education, languages, portfolio);
+
+    const layout = create("div", "full-cv__layout");
+    layout.append(main, sidebar);
+
+    sheet.append(hero, layout);
     body.append(sheet);
     return body;
   };
