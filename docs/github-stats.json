@@ -88,5 +88,8 @@
         "publishedAt": "2026-08-12T17:20:07Z"
       }
     }
-  }
+  },
+  "stale": true,
+  "fetchError": "403 Forbidden: https://api.github.com/user",
+  "fetchedAt": "2026-10-02T01:27:59.925Z"
 }

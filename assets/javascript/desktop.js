@@ -3,6 +3,7 @@
   if (!root) return;
 
   const registryElement = document.getElementById("portfolio-app-registry");
+  const sessionStartedAt = Date.now();
   if (!registryElement) return;
 
   let registry;
@@ -12,14 +13,109 @@
     return;
   }
 
+  const sharedData = window.PORTFOLIO_DATA || {};
+  const sharedApplications = Array.isArray(sharedData.applications) ? sharedData.applications : [];
+  for (const application of sharedApplications) {
+    if (!application?.id || registry.some((candidate) => candidate.id === application.id)) continue;
+    registry.push(application);
+  }
+  for (const application of registry) {
+    if (application.desktopShortcut === undefined) application.desktopShortcut = !(application.kind === "game" && application.category === "games");
+  }
+  const categoryOrder = { system: 0, portfolio: 1, games: 2 };
+  registry = registry.map((application, index) => ({ application, index })).sort((first, second) => {
+    const categoryDifference = (categoryOrder[first.application.category] ?? 9) - (categoryOrder[second.application.category] ?? 9);
+    return categoryDifference || first.index - second.index;
+  }).map(({ application }) => application);
+  const sharedGames = Array.isArray(sharedData.games) ? sharedData.games : [];
+  for (const game of sharedGames) {
+    const application = registry.find((candidate) => candidate.id === game.id);
+    if (application && game.icon) application.icon = { type: "local", src: game.icon };
+  }
+  for (const application of registry) application.startMenu = true;
   const applications = new Map(registry.map((application) => [application.id, application]));
   const programModules = window.PortfolioPrograms instanceof Map ? window.PortfolioPrograms : new Map();
   const desktop = root.querySelector("[data-desktop-workspace]");
+  const DESKTOP_REFERENCE_WIDTH = 1920;
+  const DESKTOP_REFERENCE_HEIGHT = 1080;
+  const DESKTOP_REFERENCE_WORKSPACE_HEIGHT = 1012;
+  let desktopUiScale = 1;
+
+  function syncDesktopCanvasScale() {
+    if (window.matchMedia("(max-width: 760px)").matches) {
+      desktopUiScale = 1;
+      root.style.removeProperty("width");
+      root.style.removeProperty("height");
+      root.style.removeProperty("right");
+      root.style.removeProperty("bottom");
+      root.style.removeProperty("transform");
+      root.style.removeProperty("transform-origin");
+      root.style.removeProperty("--desktop-ui-scale");
+      delete root.dataset.canvasScale;
+      return;
+    }
+
+    const viewportWidth = Math.max(1, window.innerWidth || document.documentElement.clientWidth || DESKTOP_REFERENCE_WIDTH);
+    const viewportHeight = Math.max(1, window.innerHeight || document.documentElement.clientHeight || DESKTOP_REFERENCE_HEIGHT);
+    desktopUiScale = Math.max(0.1, Math.min(viewportWidth / DESKTOP_REFERENCE_WIDTH, viewportHeight / DESKTOP_REFERENCE_HEIGHT));
+    const canvasWidth = viewportWidth / desktopUiScale;
+    const canvasHeight = viewportHeight / desktopUiScale;
+
+    root.style.width = `${canvasWidth}px`;
+    root.style.height = `${canvasHeight}px`;
+    root.style.right = "auto";
+    root.style.bottom = "auto";
+    root.style.transformOrigin = "0 0";
+    root.style.transform = `scale(${desktopUiScale})`;
+    root.style.setProperty("--desktop-ui-scale", String(desktopUiScale));
+    root.dataset.canvasScale = desktopUiScale.toFixed(6);
+  }
+
+  function getDesktopScale() {
+    return window.matchMedia("(max-width: 760px)").matches ? 1 : desktopUiScale || 1;
+  }
+
+  function toDesktopUnits(value) {
+    return Number(value) / getDesktopScale();
+  }
+
+  syncDesktopCanvasScale();
+
+  const logViewportDiagnostics = (reason) => {
+    const shellRect = root.getBoundingClientRect();
+    const desktopRect = desktop?.getBoundingClientRect();
+    const rootStyle = getComputedStyle(document.documentElement);
+    const shellStyle = getComputedStyle(root);
+    console.warn("[PortfolioViewport]", {
+      reason,
+      inner: `${window.innerWidth}x${window.innerHeight}`,
+      visual: window.visualViewport ? `${Math.round(window.visualViewport.width)}x${Math.round(window.visualViewport.height)}` : "unavailable",
+      devicePixelRatio: window.devicePixelRatio,
+      screen: `${window.screen?.width || 0}x${window.screen?.height || 0}`,
+      mediaCompact: window.matchMedia("(min-width: 761px) and (max-width: 1600px)").matches,
+      mediaMobile: window.matchMedia("(max-width: 760px)").matches,
+      shell: `${Math.round(shellRect.width)}x${Math.round(shellRect.height)}`,
+      desktop: desktopRect ? `${Math.round(desktopRect.width)}x${Math.round(desktopRect.height)}` : "missing",
+      taskbarHeight: rootStyle.getPropertyValue("--desktop-taskbar-height").trim(),
+      shellZoom: shellStyle.zoom,
+      bodyZoom: getComputedStyle(document.body).zoom,
+      canvasScale: getDesktopScale(),
+      canvas: `${Math.round(root.clientWidth)}x${Math.round(root.clientHeight)}`
+    });
+    const shortcut = root.querySelector(".desktop-shortcut");
+    const windowElement = root.querySelector(".desktop-window");
+    const rail = root.querySelector(".desktop-right-rail");
+    console.warn(`[PortfolioViewportSummary] ${reason} viewport=${window.innerWidth}x${window.innerHeight} compact=${window.matchMedia("(min-width: 761px) and (max-width: 1600px)").matches} taskbar=${rootStyle.getPropertyValue("--desktop-taskbar-height").trim()} shortcut=${shortcut ? Math.round(shortcut.getBoundingClientRect().width) + "x" + Math.round(shortcut.getBoundingClientRect().height) : "none"} window=${windowElement ? Math.round(windowElement.getBoundingClientRect().width) + "x" + Math.round(windowElement.getBoundingClientRect().height) : "none"} rail=${rail ? Math.round(rail.getBoundingClientRect().width) : "none"}`);
+  };
+  logViewportDiagnostics("initial");
   const shortcuts = root.querySelector("[data-desktop-shortcuts]");
   const taskbar = root.querySelector("[data-taskbar-apps]");
   const startButton = root.querySelector("[data-start-button]");
   const startMenu = root.querySelector("[data-start-menu]");
   const startPrograms = root.querySelector("[data-start-programs]");
+  const startPlaces = root.querySelector("[data-start-places]");
+  const startSearch = root.querySelector("[data-start-search]");
+  const startAllPrograms = root.querySelector("[data-start-all-programs]");
   const clock = root.querySelector("[data-desktop-clock]");
   const settingsButton = root.querySelector("[data-settings-toggle]");
   const settingsPanel = root.querySelector("[data-settings-panel]");
@@ -29,7 +125,12 @@
   const musicVolume = root.querySelector("[data-setting-volume]");
   const musicVolumeOutput = root.querySelector("[data-setting-volume-output]");
   const startupOverlay = root.querySelector("[data-page-startup]");
+  const startupTitle = root.querySelector("[data-page-startup-title]");
   const startupStatus = root.querySelector("[data-page-startup-status]");
+  const restartButton = root.querySelector("[data-system-restart]");
+  const shutdownButton = root.querySelector("[data-system-shutdown]");
+  const shutdownScreen = root.querySelector("[data-system-shutdown-screen]");
+  const shutdownStart = root.querySelector("[data-system-start]");
   const windows = new Map();
   const stateKey = "samael.desktop.state.v2";
   const preferenceKey = "samael.desktop.preferences.v1";
@@ -38,37 +139,59 @@
   const selectedShortcuts = new Set();
   let audioContext = null;
   let uiAudioEnabled = false;
+  let showingAllPrograms = false;
   let state = readState();
   let preferences = readPreferences();
 
-  function runPageStartup() {
+  function runPageStartup(options = {}) {
+    const restart = Boolean(options.restart);
     if (!startupOverlay) {
       root.classList.remove("is-page-starting");
       root.classList.add("is-page-ready");
+      if (restart) location.reload();
       return;
     }
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const duration = 5500;
+    const duration = restart ? (reducedMotion ? 1100 : 3200) : (reducedMotion ? 2200 : 6500);
     const leaveDuration = reducedMotion ? 220 : 920;
-    const statuses = [
-      [0, "Preparing the desktop"],
-      [0.24, "Organizing the pudding files"],
-      [0.5, "Restoring your workspace"],
-      [0.76, "Polishing the windows"],
-      [0.92, "Desktop ready"]
+    const statuses = restart ? [
+      [0, "Stopping desktop services"],
+      [0.32, "Closing active sessions"],
+      [0.62, "Restarting server"],
+      [0.88, "Reconnecting"]
+    ] : [
+      [0, "Initializing session"],
+      [0.22, "Loading user profile"],
+      [0.5, "Starting desktop services"],
+      [0.78, "Preparing the workspace"],
+      [0.93, "System ready"]
     ];
     const timers = [];
     let finished = false;
+
+    root.classList.remove("is-page-ready", "is-shutdown");
+    root.classList.add("is-page-starting");
+    startupOverlay.hidden = false;
+    startupOverlay.classList.remove("is-leaving");
+    if (startupTitle) startupTitle.textContent = restart ? "Pompompurin is restarting your system..." : "Pompompurin is starting your system...";
 
     const finish = () => {
       if (finished) return;
       finished = true;
       for (const timer of timers) clearTimeout(timer);
+      if (restart) {
+        if (startupStatus) startupStatus.textContent = "Server restart complete";
+        setTimeout(() => location.reload(), reducedMotion ? 120 : 420);
+        return;
+      }
       root.classList.add("is-page-ready");
       root.classList.remove("is-page-starting");
       startupOverlay.classList.add("is-leaving");
-      setTimeout(() => startupOverlay.remove(), leaveDuration);
+      setTimeout(() => {
+        startupOverlay.hidden = true;
+        startupOverlay.classList.remove("is-leaving");
+      }, leaveDuration);
     };
 
     for (const [ratio, text] of statuses) {
@@ -80,6 +203,25 @@
     timers.push(setTimeout(finish, duration));
     startupOverlay.tabIndex = -1;
     startupOverlay.focus({ preventScroll: true });
+  }
+
+  function shutdownSystem() {
+    closeStartMenu();
+    setSettingsOpen(false);
+    try { sessionStorage.removeItem(stateKey); } catch {}
+    root.classList.remove("is-page-ready", "is-page-starting");
+    root.classList.add("is-shutdown");
+    if (shutdownScreen) {
+      shutdownScreen.hidden = false;
+      shutdownStart?.focus({ preventScroll: true });
+    }
+  }
+
+  function restartSystem() {
+    closeStartMenu();
+    setSettingsOpen(false);
+    try { sessionStorage.removeItem(stateKey); } catch {}
+    runPageStartup({ restart: true });
   }
 
   function readState() {
@@ -98,14 +240,16 @@
   }
 
   function readPreferences() {
-    const defaults = { wallpaper: false, musicEnabled: false, musicVolume: 0.12 };
+    const defaults = { wallpaper: true, wallpaperStyle: "pompompurin", musicEnabled: false, musicVolume: 0.12, iconPositions: {} };
     try {
       const stored = JSON.parse(localStorage.getItem(preferenceKey) || "null");
       if (!stored || typeof stored !== "object") return defaults;
       return {
         wallpaper: Boolean(stored.wallpaper),
+        wallpaperStyle: ["pompompurin", "minimal", "dark", "aurora"].includes(stored.wallpaperStyle) ? stored.wallpaperStyle : "pompompurin",
         musicEnabled: Boolean(stored.musicEnabled),
-        musicVolume: clamp(Number(stored.musicVolume), 0, 1)
+        musicVolume: clamp(Number(stored.musicVolume), 0, 1),
+        iconPositions: stored.iconPositions && typeof stored.iconPositions === "object" ? stored.iconPositions : {}
       };
     } catch {
       return defaults;
@@ -125,63 +269,180 @@
       generated.textContent = String(icon.glyph || application.label || "?").slice(0, 2).toUpperCase();
       return generated;
     }
+
     const image = document.createElement("img");
     image.alt = "";
-    image.className = `${className}${application.id === "lilia" ? " app-icon--lilia" : ""}`.trim();
+    image.className = `${application.id === "lilia" ? "app-icon--lilia " : ""}${className}`.trim();
     image.decoding = "async";
     image.src = icon.src || "/assets/icons/fallback.svg";
     image.addEventListener("error", () => {
       if (!image.src.endsWith("/assets/icons/fallback.svg")) image.src = "/assets/icons/fallback.svg";
     }, { once: true });
-    return image;
+
+    if (className !== "desktop-shortcut__icon" || application.desktopIconStyle !== "emblem") return image;
+
+    const emblem = document.createElement("span");
+    emblem.className = "desktop-shortcut__icon desktop-shortcut__emblem";
+    emblem.setAttribute("aria-hidden", "true");
+    image.className = `${application.id === "lilia" ? "app-icon--lilia " : ""}desktop-shortcut__emblem-image`.trim();
+    emblem.append(image);
+    return emblem;
+  }
+
+  const desktopGroupDefinitions = [
+    { id: "portfolio", label: "PORTFOLIO" },
+    { id: "projects", label: "PROJECTS" },
+    { id: "utilities", label: "UTILITIES" }
+  ];
+
+  function getDesktopGroup(application) {
+    if (application.desktopGroup) return application.desktopGroup;
+    if (application.id === "recycle-bin") return "pinned";
+    if (application.category === "system") return "utilities";
+    if (application.category === "games") return "portfolio";
+    return "projects";
+  }
+
+  function createDesktopShortcut(application, group) {
+    const shortcut = document.createElement("button");
+    shortcut.type = "button";
+    shortcut.className = `desktop-shortcut desktop-shortcut--${group}`;
+    shortcut.dataset.appId = application.id;
+    shortcut.dataset.desktopGroup = group;
+    shortcut.dataset.layoutLocked = "true";
+    shortcut.dataset.description = application.description || application.windowTitle || "Portfolio program";
+    shortcut.setAttribute("aria-label", `Open ${application.label}: ${shortcut.dataset.description}`);
+    shortcut.setAttribute("aria-pressed", "false");
+    shortcut.title = shortcut.dataset.description;
+    shortcut.append(iconElement(application, "desktop-shortcut__icon"));
+    const label = document.createElement("span");
+    label.className = "desktop-shortcut__label";
+    label.textContent = application.label;
+    shortcut.append(label);
+    return shortcut;
+  }
+
+  function renderDesktopShortcuts() {
+    const grouped = new Map(desktopGroupDefinitions.map(({ id }) => [id, []]));
+    const pinned = [];
+
+    for (const application of registry) {
+      if (application.desktopShortcut === false) continue;
+      const group = getDesktopGroup(application);
+      if (group === "pinned") {
+        pinned.push(application);
+        continue;
+      }
+      if (!grouped.has(group)) grouped.set(group, []);
+      grouped.get(group).push(application);
+    }
+
+    const orderApplications = (items) => [...items].sort((first, second) => {
+      const firstOrder = Number.isFinite(Number(first.desktopOrder)) ? Number(first.desktopOrder) : Number.MAX_SAFE_INTEGER;
+      const secondOrder = Number.isFinite(Number(second.desktopOrder)) ? Number(second.desktopOrder) : Number.MAX_SAFE_INTEGER;
+      return firstOrder - secondOrder || first.label.localeCompare(second.label);
+    });
+
+    for (const definition of desktopGroupDefinitions) {
+      const items = orderApplications(grouped.get(definition.id) || []);
+      if (!items.length) continue;
+      const heading = document.createElement("div");
+      heading.className = "desktop-shortcuts__section-title";
+      heading.dataset.desktopSection = definition.id;
+      const text = document.createElement("span");
+      text.textContent = definition.label;
+      heading.append(text);
+      shortcuts.append(heading);
+      for (const application of items) shortcuts.append(createDesktopShortcut(application, definition.id));
+    }
+
+    for (const [group, items] of grouped) {
+      if (desktopGroupDefinitions.some((definition) => definition.id === group) || !items.length) continue;
+      const heading = document.createElement("div");
+      heading.className = "desktop-shortcuts__section-title";
+      heading.dataset.desktopSection = group;
+      const text = document.createElement("span");
+      text.textContent = group.replace(/[-_]+/g, " ").toUpperCase();
+      heading.append(text);
+      shortcuts.append(heading);
+      for (const application of orderApplications(items)) shortcuts.append(createDesktopShortcut(application, group));
+    }
+
+    for (const application of orderApplications(pinned)) {
+      const shortcut = createDesktopShortcut(application, "pinned");
+      shortcut.classList.add("desktop-shortcut--pinned");
+      shortcuts.append(shortcut);
+    }
+  }
+
+  const embeddedApplicationTabs = new Map([["projects", "projects"], ["work-with-me", "work"]]);
+  const mainStartMenuIds = new Set(["recycle-bin", "terminal", "about-me", "about", "derma-creator", "creations", "projects", "games-folder"]);
+
+  function renderStartPrograms() {
+    startPrograms.replaceChildren();
+    let activeCategory = null;
+    for (const application of registry) {
+      if (embeddedApplicationTabs.has(application.id)) continue;
+      if (application.startMenu === false || (!showingAllPrograms && !mainStartMenuIds.has(application.id))) continue;
+      const category = application.category || "portfolio";
+      const item = document.createElement("button");
+      item.type = "button";
+      item.className = `start-menu__program${activeCategory && category !== activeCategory ? " start-menu__program--separator" : ""}`;
+      item.dataset.appId = application.id;
+      item.dataset.searchText = `${application.label} ${application.description || ""} ${category} ${window.PortfolioI18n?.t?.(application.label, "pt") || ""} ${window.PortfolioI18n?.t?.(application.description || "", "pt") || ""}`.toLowerCase();
+      item.append(iconElement(application, "start-menu__icon"));
+      const copy = document.createElement("span");
+      const label = document.createElement("strong");
+      label.textContent = application.label;
+      const description = document.createElement("small");
+      description.textContent = application.description || application.windowTitle || "Portfolio program";
+      copy.append(label, description);
+      item.append(copy);
+      startPrograms.append(item);
+      activeCategory = category;
+    }
+
+    if (startAllPrograms) {
+      startAllPrograms.setAttribute("aria-pressed", String(showingAllPrograms));
+      const parts = startAllPrograms.querySelectorAll("span");
+      if (parts[1]) parts[1].textContent = showingAllPrograms ? "Pinned Programs" : "All Programs";
+      if (parts[2]) parts[2].textContent = showingAllPrograms ? "‹" : "›";
+    }
   }
 
   function renderRegistry() {
     shortcuts.replaceChildren();
-    startPrograms.replaceChildren();
-    const categoryLabels = { portfolio: "Portfolio", system: "System", games: "Games" };
-    let activeCategory = null;
-    for (const application of registry) {
-      if (application.desktopShortcut !== false) {
-        const shortcut = document.createElement("button");
-        shortcut.type = "button";
-        shortcut.className = "desktop-shortcut";
-        shortcut.dataset.appId = application.id;
-        shortcut.dataset.description = application.description || application.windowTitle || "Portfolio program";
-        shortcut.setAttribute("aria-label", `Open ${application.label}: ${shortcut.dataset.description}`);
-        shortcut.setAttribute("aria-pressed", "false");
-        shortcut.title = shortcut.dataset.description;
-        shortcut.append(iconElement(application, "desktop-shortcut__icon"));
-        const label = document.createElement("span");
-        label.className = "desktop-shortcut__label";
-        label.textContent = application.label;
-        shortcut.append(label);
-        shortcuts.append(shortcut);
-      }
+    startPlaces?.replaceChildren();
+    renderDesktopShortcuts();
+    renderStartPrograms();
+    const quickStartIds = new Set(["about-me", "projects", "creations", "games-folder", "about"]);
 
-      if (application.startMenu !== false) {
-        const category = application.category || "portfolio";
-        if (category !== activeCategory) {
-          activeCategory = category;
-          const heading = document.createElement("div");
-          heading.className = "start-menu__group-heading";
-          heading.textContent = categoryLabels[category] || category;
-          startPrograms.append(heading);
-        }
+    if (startPlaces) {
+      for (const id of quickStartIds) {
+        const application = applications.get(id);
+        if (!application) continue;
         const item = document.createElement("button");
         item.type = "button";
-        item.className = "start-menu__program";
+        item.className = "start-menu__place";
         item.dataset.appId = application.id;
-        item.append(iconElement(application, "start-menu__icon"));
-        const copy = document.createElement("span");
-        const label = document.createElement("strong");
+        item.dataset.searchText = `${application.label} ${application.description || ""} ${window.PortfolioI18n?.t?.(application.label, "pt") || ""} ${window.PortfolioI18n?.t?.(application.description || "", "pt") || ""}`.toLowerCase();
+        item.append(iconElement(application, "start-menu__place-icon"));
+        const label = document.createElement("span");
         label.textContent = application.label;
-        const description = document.createElement("small");
-        description.textContent = application.description || application.windowTitle || "Portfolio program";
-        copy.append(label, description);
-        item.append(copy);
-        startPrograms.append(item);
+        item.append(label);
+        startPlaces.append(item);
       }
+    }
+  }
+
+  function filterStartMenu(query = "") {
+    const normalized = String(query).trim().toLowerCase();
+    if (normalized && !showingAllPrograms) {
+      showingAllPrograms = true;
+      renderStartPrograms();
+    }
+    for (const item of startPrograms.querySelectorAll("[data-search-text]")) {
+      item.hidden = normalized.length > 0 && !item.dataset.searchText.includes(normalized);
     }
   }
 
@@ -252,6 +513,54 @@
     for (const shortcut of [...selectedShortcuts]) setShortcutSelected(shortcut, false);
   }
 
+  const desktopShortcutColumnStep = 94;
+  const desktopShortcutRowStep = 110;
+
+  function snapShortcutOffset(value, step) {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric)) return 0;
+    return Math.round(numeric / step) * step;
+  }
+
+  function applySavedShortcutPositions() {
+    const compact = window.matchMedia("(max-width: 760px)").matches;
+    for (const shortcut of shortcuts.querySelectorAll(".desktop-shortcut")) {
+      const locked = shortcut.dataset.layoutLocked === "true";
+      const saved = compact || locked ? null : preferences.iconPositions?.[shortcut.dataset.appId];
+      const x = snapShortcutOffset(saved?.x, desktopShortcutColumnStep);
+      const y = snapShortcutOffset(saved?.y, desktopShortcutRowStep);
+      shortcut.dataset.positionX = String(x);
+      shortcut.dataset.positionY = String(y);
+      shortcut.style.setProperty("--shortcut-x", `${x}px`);
+      shortcut.style.setProperty("--shortcut-y", `${y}px`);
+    }
+  }
+
+  function persistShortcutDrag(items, deltaX, deltaY) {
+    const bounds = desktop.getBoundingClientRect();
+    preferences.iconPositions = preferences.iconPositions && typeof preferences.iconPositions === "object" ? preferences.iconPositions : {};
+    for (const item of items) {
+      if (item.dataset.layoutLocked === "true") continue;
+      const id = item.dataset.appId;
+      if (!id) continue;
+      const currentX = Number(item.dataset.positionX || 0);
+      const currentY = Number(item.dataset.positionY || 0);
+      const rect = item.getBoundingClientRect();
+      const scale = getDesktopScale();
+      const edgePadding = 4 * scale;
+      const correctedX = currentX + deltaX + Math.max(0, bounds.left + edgePadding - rect.left) / scale - Math.max(0, rect.right - bounds.right + edgePadding) / scale;
+      const correctedY = currentY + deltaY + Math.max(0, bounds.top + edgePadding - rect.top) / scale - Math.max(0, rect.bottom - bounds.bottom + edgePadding) / scale;
+      const x = snapShortcutOffset(correctedX, desktopShortcutColumnStep);
+      const y = snapShortcutOffset(correctedY, desktopShortcutRowStep);
+      preferences.iconPositions[id] = { x, y };
+      item.dataset.positionX = String(x);
+      item.dataset.positionY = String(y);
+      item.style.setProperty("--shortcut-x", `${x}px`);
+      item.style.setProperty("--shortcut-y", `${y}px`);
+    }
+    savePreferences();
+  }
+
   const dragClickSuppression = new WeakMap();
 
   function suppressDragClick(item) {
@@ -270,10 +579,10 @@
 
   function bindSimulatedItemDragging(container, selector, getSelectedItems, selectExclusive) {
     container.addEventListener("pointerdown", (event) => {
-      if (event.button !== 0 || !event.isPrimary || window.matchMedia("(max-width: 700px)").matches) return;
+      if (event.button !== 0 || !event.isPrimary || window.matchMedia("(max-width: 760px)").matches) return;
       if (!(event.target instanceof Element)) return;
       const source = event.target.closest(selector);
-      if (!source || !container.contains(source)) return;
+      if (!source || !container.contains(source) || source.dataset.layoutLocked === "true") return;
 
       const pointerId = event.pointerId;
       const startX = event.clientX;
@@ -294,8 +603,8 @@
 
       const move = (moveEvent) => {
         if (moveEvent.pointerId !== pointerId) return;
-        const deltaX = moveEvent.clientX - startX;
-        const deltaY = moveEvent.clientY - startY;
+        const deltaX = toDesktopUnits(moveEvent.clientX - startX);
+        const deltaY = toDesktopUnits(moveEvent.clientY - startY);
         if (!dragging && Math.hypot(deltaX, deltaY) < 14) return;
 
         if (!dragging) {
@@ -335,6 +644,7 @@
 
         container.classList.remove("is-simulating-item-drag");
         suppressDragClick(source);
+        if (container === shortcuts) persistShortcutDrag(dragItems, lastX, lastY);
         for (const item of dragItems) {
           item.classList.remove("is-simulated-dragging");
           item.classList.add("is-dropping");
@@ -371,34 +681,87 @@
   }
 
   function getWorkspaceBounds() {
-    return desktop.getBoundingClientRect();
+    const rect = desktop.getBoundingClientRect();
+    return {
+      left: rect.left,
+      top: rect.top,
+      right: rect.right,
+      bottom: rect.bottom,
+      width: desktop.clientWidth || rect.width,
+      height: desktop.clientHeight || rect.height
+    };
+  }
+
+  function getWindowLimits(application, bounds) {
+    const margin = clamp(Math.round(Math.min(bounds.width, bounds.height) * 0.018), 8, 28);
+    const availableWidth = Math.max(1, bounds.width - margin * 2);
+    const availableHeight = Math.max(1, bounds.height - margin * 2);
+    return {
+      margin,
+      availableWidth,
+      availableHeight,
+      minWidth: Math.min(Number(application.minWidth || 360), availableWidth),
+      minHeight: Math.min(Number(application.minHeight || 260), availableHeight)
+    };
   }
 
   function getLaunchGeometry(application) {
     const bounds = getWorkspaceBounds();
-    const availableWidth = Math.max(320, bounds.width - 24);
-    const availableHeight = Math.max(240, bounds.height - 24);
-    const targetWidth = Math.min(1380, Math.max(900, bounds.width - (bounds.width >= 1500 ? 360 : 240)));
-    const targetHeight = Math.min(820, Math.max(620, bounds.height - (bounds.height >= 900 ? 150 : 100)));
-    const width = clamp(targetWidth, Number(application.minWidth || 360), availableWidth);
-    const height = clamp(targetHeight, Number(application.minHeight || 260), availableHeight);
-    return {
-      x: Math.max(0, Math.round((bounds.width - width) / 2)),
-      y: Math.max(0, Math.round((bounds.height - height) / 2)),
-      width,
-      height
-    };
+    const limits = getWindowLimits(application, bounds);
+    const initialWidth = Number(application.initial?.width || 1180);
+    const initialHeight = Number(application.initial?.height || 760);
+    const width = Math.round(clamp(initialWidth, limits.minWidth, limits.availableWidth));
+    const height = Math.round(clamp(initialHeight, limits.minHeight, limits.availableHeight));
+    const initialX = Number(application.initial?.x);
+    const initialY = Number(application.initial?.y);
+    const maxX = Math.max(limits.margin, bounds.width - width - limits.margin);
+    const maxY = Math.max(limits.margin, bounds.height - height - limits.margin);
+    const x = clamp(Number.isFinite(initialX) ? initialX : (bounds.width - width) / 2, limits.margin, maxX);
+    const y = clamp(Number.isFinite(initialY) ? initialY : (bounds.height - height) / 2, limits.margin, maxY);
+    return { x: Math.round(x), y: Math.round(y), width, height };
   }
 
   function getRestoredGeometry(application) {
     const bounds = getWorkspaceBounds();
     const saved = state.windows?.[application.id] || {};
     const launch = getLaunchGeometry(application);
-    const width = clamp(Number(saved.width ?? launch.width), Number(application.minWidth || 360), Math.max(320, bounds.width - 16));
-    const height = clamp(Number(saved.height ?? launch.height), Number(application.minHeight || 260), Math.max(240, bounds.height - 16));
-    const x = saved.x === undefined ? Math.round((bounds.width - width) / 2) : clamp(Number(saved.x), 0, Math.max(0, bounds.width - width - 8));
-    const y = saved.y === undefined ? Math.round((bounds.height - height) / 2) : clamp(Number(saved.y), 0, Math.max(0, bounds.height - height - 8));
-    return { x: Math.max(0, x), y: Math.max(0, y), width, height };
+    const limits = getWindowLimits(application, bounds);
+    const isReferenceCanvasGeometry = Number(saved.canvasVersion) === 1;
+    const savedViewportWidth = Number(saved.viewportWidth || 0);
+    const savedViewportHeight = Number(saved.viewportHeight || 0);
+
+    const legacyWidth = Number.isFinite(Number(saved.widthRatio))
+      ? DESKTOP_REFERENCE_WIDTH * Number(saved.widthRatio)
+      : savedViewportWidth > 0 && saved.width !== undefined
+        ? Number(saved.width) * DESKTOP_REFERENCE_WIDTH / savedViewportWidth
+        : Number(saved.width ?? launch.width);
+    const legacyHeight = Number.isFinite(Number(saved.heightRatio))
+      ? DESKTOP_REFERENCE_WORKSPACE_HEIGHT * Number(saved.heightRatio)
+      : savedViewportHeight > 0 && saved.height !== undefined
+        ? Number(saved.height) * DESKTOP_REFERENCE_WORKSPACE_HEIGHT / savedViewportHeight
+        : Number(saved.height ?? launch.height);
+
+    const width = clamp(isReferenceCanvasGeometry ? Number(saved.width ?? launch.width) : legacyWidth, limits.minWidth, limits.availableWidth);
+    const height = clamp(isReferenceCanvasGeometry ? Number(saved.height ?? launch.height) : legacyHeight, limits.minHeight, limits.availableHeight);
+    const maxX = Math.max(limits.margin, bounds.width - width - limits.margin);
+    const maxY = Math.max(limits.margin, bounds.height - height - limits.margin);
+
+    const legacyX = Number.isFinite(Number(saved.xRatio))
+      ? DESKTOP_REFERENCE_WIDTH * Number(saved.xRatio)
+      : savedViewportWidth > 0 && saved.x !== undefined
+        ? Number(saved.x) * DESKTOP_REFERENCE_WIDTH / savedViewportWidth
+        : Number(saved.x ?? launch.x);
+    const legacyY = Number.isFinite(Number(saved.yRatio))
+      ? DESKTOP_REFERENCE_WORKSPACE_HEIGHT * Number(saved.yRatio)
+      : savedViewportHeight > 0 && saved.y !== undefined
+        ? Number(saved.y) * DESKTOP_REFERENCE_WORKSPACE_HEIGHT / savedViewportHeight
+        : Number(saved.y ?? launch.y);
+
+    const rawX = isReferenceCanvasGeometry ? Number(saved.x ?? launch.x) : legacyX;
+    const rawY = isReferenceCanvasGeometry ? Number(saved.y ?? launch.y) : legacyY;
+    const x = clamp(rawX, limits.margin, maxX);
+    const y = clamp(rawY, limits.margin, maxY);
+    return { x: Math.round(x), y: Math.round(y), width: Math.round(width), height: Math.round(height) };
   }
 
   function persistWindow(entry) {
@@ -413,6 +776,7 @@
       open: true,
       minimized: entry.minimized,
       maximized: entry.maximized,
+      canvasVersion: 1,
       ...geometry
     };
     state.lastActive = entry.application.id;
@@ -720,13 +1084,14 @@
     });
 
     grid.addEventListener("pointerdown", (event) => {
-      if (event.button !== 0 || window.matchMedia("(max-width: 700px)").matches) return;
+      if (event.button !== 0 || window.matchMedia("(max-width: 760px)").matches) return;
       if (!(event.target instanceof Element) || event.target.closest(".folder-app__item")) return;
       const bounds = grid.getBoundingClientRect();
       const startClientX = clamp(event.clientX, bounds.left, bounds.right);
       const startClientY = clamp(event.clientY, bounds.top, bounds.bottom);
-      const startX = startClientX - bounds.left + grid.scrollLeft;
-      const startY = startClientY - bounds.top + grid.scrollTop;
+      const scale = getDesktopScale();
+      const startX = (startClientX - bounds.left) / scale + grid.scrollLeft;
+      const startY = (startClientY - bounds.top) / scale + grid.scrollTop;
       const additive = event.ctrlKey || event.metaKey || event.shiftKey;
       const baseline = additive ? new Set(selectedItems) : new Set();
       if (!additive) clearSelection();
@@ -740,8 +1105,8 @@
       const move = (moveEvent) => {
         const currentClientX = clamp(moveEvent.clientX, bounds.left, bounds.right);
         const currentClientY = clamp(moveEvent.clientY, bounds.top, bounds.bottom);
-        const currentX = currentClientX - bounds.left + grid.scrollLeft;
-        const currentY = currentClientY - bounds.top + grid.scrollTop;
+        const currentX = (currentClientX - bounds.left) / scale + grid.scrollLeft;
+        const currentY = (currentClientY - bounds.top) / scale + grid.scrollTop;
         const left = Math.min(startX, currentX);
         const top = Math.min(startY, currentY);
         const width = Math.abs(currentX - startX);
@@ -857,7 +1222,7 @@
     content.append(contentNode);
     const program = programModules.get(application.id);
     const programDestroy = typeof program?.initialize === "function"
-      ? program.initialize(content, { applications, openApplication, root })
+      ? program.initialize(content, { applications, openApplication, root, actions: window.PortfolioActions })
       : null;
     element.append(titlebar, content);
 
@@ -889,23 +1254,34 @@
   }
 
   function openApplication(id, options = {}) {
-    const application = applications.get(id);
-    if (!application) return;
+    const embeddedTab = embeddedApplicationTabs.get(id);
+    if (embeddedTab) {
+      if (!openApplication("about-me", options)) return false;
+      requestAnimationFrame(() => window.dispatchEvent(new CustomEvent("portfolio:about-tab", { detail: { target: embeddedTab } })));
+      return true;
+    }
+    const registeredApplication = applications.get(id);
+    if (!registeredApplication) return false;
+    const application = id === "lilia" ? { ...registeredApplication, url: "https://github.com/LiliaFramework/" } : registeredApplication;
     playUiSound("open");
     let entry = windows.get(id);
     if (!entry) entry = createWindow(application);
     setWindowMinimizedState(entry, false);
     const saved = state.windows?.[id];
-    const shouldMaximize = window.matchMedia("(max-width: 700px)").matches || saved?.maximized || (!saved && (application.defaultMaximized || application.id === "about"));
+    const shouldMaximize = window.matchMedia("(max-width: 760px)").matches || saved?.maximized || (!saved && (application.defaultMaximized || application.id === "about"));
     if (shouldMaximize && !entry.maximized) maximizeWindow(entry, false);
     setActive(entry);
     persistWindow(entry);
     entry.gameController?.resume?.();
     if (options.focus !== false) {
+      const program = programModules.get(application.id);
       if (entry.gameController?.focus) entry.gameController.focus();
+      else if (typeof program?.focus === "function") program.focus(entry.element, { applications, openApplication, root, actions: window.PortfolioActions });
       else entry.element.focus({ preventScroll: true });
     }
     closeStartMenu();
+    window.dispatchEvent(new CustomEvent("portfolio:app-opened", { detail: { id: application.id } }));
+    return true;
   }
 
   function minimizeWindow(entry) {
@@ -978,6 +1354,7 @@
     entry.element.addEventListener("pointerdown", () => {
       setActive(entry);
       entry.gameController?.focus?.();
+      programModules.get(entry.application.id)?.focus?.(entry.element, { applications, openApplication, root, actions: window.PortfolioActions });
     });
     entry.element.addEventListener("click", (event) => {
       const action = event.target instanceof Element ? event.target.closest("[data-window-action]")?.dataset.windowAction : "";
@@ -992,7 +1369,7 @@
     });
 
     titlebar?.addEventListener("pointerdown", (event) => {
-      if (entry.maximized || window.matchMedia("(max-width: 700px)").matches || event.button !== 0 || event.target instanceof Element && event.target.closest("button")) return;
+      if (entry.maximized || window.matchMedia("(max-width: 760px)").matches || event.button !== 0 || event.target instanceof Element && event.target.closest("button")) return;
       const bounds = getWorkspaceBounds();
       const startX = event.clientX;
       const startY = event.clientY;
@@ -1002,8 +1379,8 @@
       playUiSound("drag");
       entry.element.classList.add("is-being-dragged");
       const move = (moveEvent) => {
-        const x = clamp(startLeft + moveEvent.clientX - startX, 0, Math.max(0, bounds.width - 160));
-        const y = clamp(startTop + moveEvent.clientY - startY, 0, Math.max(0, bounds.height - 34));
+        const x = clamp(startLeft + toDesktopUnits(moveEvent.clientX - startX), 0, Math.max(0, bounds.width - 160));
+        const y = clamp(startTop + toDesktopUnits(moveEvent.clientY - startY), 0, Math.max(0, bounds.height - 34));
         entry.element.style.left = `${x}px`;
         entry.element.style.top = `${y}px`;
       };
@@ -1021,7 +1398,7 @@
     });
 
     resize?.addEventListener("pointerdown", (event) => {
-      if (entry.maximized || window.matchMedia("(max-width: 700px)").matches || event.button !== 0) return;
+      if (entry.maximized || window.matchMedia("(max-width: 760px)").matches || event.button !== 0) return;
       const bounds = getWorkspaceBounds();
       const startX = event.clientX;
       const startY = event.clientY;
@@ -1033,8 +1410,8 @@
       const move = (moveEvent) => {
         const left = Number.parseFloat(entry.element.style.left) || 0;
         const top = Number.parseFloat(entry.element.style.top) || 0;
-        const width = clamp(startWidth + moveEvent.clientX - startX, Number(entry.application.minWidth || 360), bounds.width - left);
-        const height = clamp(startHeight + moveEvent.clientY - startY, Number(entry.application.minHeight || 260), bounds.height - top);
+        const width = clamp(startWidth + toDesktopUnits(moveEvent.clientX - startX), Number(entry.application.minWidth || 360), bounds.width - left);
+        const height = clamp(startHeight + toDesktopUnits(moveEvent.clientY - startY), Number(entry.application.minHeight || 260), bounds.height - top);
         entry.element.style.width = `${width}px`;
         entry.element.style.height = `${height}px`;
       };
@@ -1068,12 +1445,15 @@
 
   function bindDesktopMarqueeSelection() {
     desktop.addEventListener("pointerdown", (event) => {
-      if (event.button !== 0 || window.matchMedia("(max-width: 700px)").matches) return;
+      if (event.button !== 0 || window.matchMedia("(max-width: 760px)").matches) return;
       if (!(event.target instanceof Element)) return;
       if (event.target.closest('.desktop-shortcut, .desktop-window, .desktop-right-rail, a, button, input, select, textarea, label, summary, [role="button"], [role="link"], [data-no-desktop-select]')) return;
       const bounds = desktop.getBoundingClientRect();
-      const startX = clamp(event.clientX - bounds.left, 0, bounds.width);
-      const startY = clamp(event.clientY - bounds.top, 0, bounds.height);
+      const scale = getDesktopScale();
+      const startClientX = clamp(event.clientX, bounds.left, bounds.right);
+      const startClientY = clamp(event.clientY, bounds.top, bounds.bottom);
+      const startX = clamp((startClientX - bounds.left) / scale, 0, desktop.clientWidth);
+      const startY = clamp((startClientY - bounds.top) / scale, 0, desktop.clientHeight);
       const additive = event.ctrlKey || event.metaKey || event.shiftKey;
       const baseline = additive ? new Set(selectedShortcuts) : new Set();
       if (!additive) clearShortcutSelection();
@@ -1085,8 +1465,10 @@
       desktop.setPointerCapture?.(event.pointerId);
       let dragging = false;
       const move = (moveEvent) => {
-        const currentX = clamp(moveEvent.clientX - bounds.left, 0, bounds.width);
-        const currentY = clamp(moveEvent.clientY - bounds.top, 0, bounds.height);
+        const currentClientX = clamp(moveEvent.clientX, bounds.left, bounds.right);
+        const currentClientY = clamp(moveEvent.clientY, bounds.top, bounds.bottom);
+        const currentX = clamp((currentClientX - bounds.left) / scale, 0, desktop.clientWidth);
+        const currentY = clamp((currentClientY - bounds.top) / scale, 0, desktop.clientHeight);
         const left = Math.min(startX, currentX);
         const top = Math.min(startY, currentY);
         const width = Math.abs(currentX - startX);
@@ -1102,7 +1484,7 @@
         marquee.style.top = `${top}px`;
         marquee.style.width = `${width}px`;
         marquee.style.height = `${height}px`;
-        const selectionRect = { left: bounds.left + left, top: bounds.top + top, right: bounds.left + left + width, bottom: bounds.top + top + height };
+        const selectionRect = { left: Math.min(startClientX, currentClientX), top: Math.min(startClientY, currentClientY), right: Math.max(startClientX, currentClientX), bottom: Math.max(startClientY, currentClientY) };
         for (const shortcut of shortcuts.querySelectorAll(".desktop-shortcut")) {
           const selected = baseline.has(shortcut) || rectanglesIntersect(selectionRect, shortcut.getBoundingClientRect());
           setShortcutSelected(shortcut, selected);
@@ -1165,6 +1547,7 @@
 
   function syncSettingsUi() {
     root.classList.toggle("is-wallpaper-enabled", preferences.wallpaper);
+    root.dataset.wallpaper = preferences.wallpaperStyle || "pompompurin";
     if (wallpaperToggle) wallpaperToggle.checked = preferences.wallpaper;
     if (musicToggle) musicToggle.checked = preferences.musicEnabled;
     if (musicVolume) musicVolume.value = String(preferences.musicVolume);
@@ -1196,6 +1579,57 @@
     syncSettingsUi();
   }
 
+  function initializePompompurinWidget() {
+    // Assistant widget removed.
+  }
+
+  function openCreation(slug) {
+    if (!/^[a-z0-9_-]+$/i.test(String(slug || ""))) return false;
+    if (!openApplication("creations")) return false;
+    requestAnimationFrame(() => {
+      const entry = windows.get("creations");
+      const frame = entry?.element.querySelector(".internal-app-frame__iframe");
+      if (frame) frame.src = new URL(`./${encodeURIComponent(slug)}/?embedded=1`, document.baseURI).href;
+    });
+    return true;
+  }
+
+  function formatSessionDuration() {
+    const seconds = Math.max(0, Math.floor((Date.now() - sessionStartedAt) / 1000));
+    const minutes = Math.floor(seconds / 60);
+    return `${String(minutes).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
+  }
+
+  function getRuntimeStats() {
+    return {
+      openApplications: windows.size,
+      theme: root.dataset.theme || "medium",
+      wallpaper: root.dataset.wallpaper || "pompompurin",
+      musicEnabled: Boolean(preferences.musicEnabled),
+      sessionDuration: formatSessionDuration()
+    };
+  }
+
+  function initializeNotices() {
+    const onNotice = (event) => {
+      const message = String(event.detail?.message || "").trim();
+      if (!message) return;
+      let notice = root.querySelector("[data-portfolio-notice]");
+      if (!notice) {
+        notice = document.createElement("div");
+        notice.className = "portfolio-notice";
+        notice.dataset.portfolioNotice = "";
+        notice.setAttribute("role", "status");
+        root.append(notice);
+      }
+      notice.textContent = message;
+      notice.classList.add("is-visible");
+      clearTimeout(notice.hideTimer);
+      notice.hideTimer = setTimeout(() => notice.classList.remove("is-visible"), 3600);
+    };
+    window.addEventListener("portfolio:notice", onNotice);
+  }
+
   function updateClock() {
     const now = new Date();
     clock.textContent = new Intl.DateTimeFormat(undefined, { hour: "2-digit", minute: "2-digit", hour12: false }).format(now);
@@ -1203,6 +1637,7 @@
   }
 
   function formatGitHubStat(value) {
+    if (value === null || value === undefined || value === "") return "—";
     const number = Number(value);
     if (!Number.isFinite(number)) return "—";
     if (number >= 1000000) return `${(number / 1000000).toFixed(number >= 10000000 ? 0 : 1).replace(/\.0$/, "")}m`;
@@ -1210,8 +1645,8 @@
     return String(number);
   }
 
-  async function initializeGitHubStats() {
-    const widget = root.querySelector("[data-github-stats]");
+  async function initializeGitHubStats(scope = root) {
+    const widget = scope?.matches?.("[data-github-stats]") ? scope : scope?.querySelector?.("[data-github-stats]");
     const username = widget?.dataset.githubUser?.trim();
     const organization = widget?.dataset.githubOrg?.trim() || "LiliaFramework";
     if (!widget || !username) return;
@@ -1222,19 +1657,31 @@
 
     const fields = {
       repositories: widget.querySelector("[data-github-repos]"),
+      publicRepositories: widget.querySelector("[data-github-public-repos]"),
+      privateRepositories: widget.querySelector("[data-github-private-repos]"),
+      ownedPrivateRepositories: widget.querySelector("[data-github-owned-private-repos]"),
+      totalRepositories: widget.querySelector("[data-github-total-repos]"),
       followers: widget.querySelector("[data-github-followers]"),
       stars: widget.querySelector("[data-github-stars]"),
       forks: widget.querySelector("[data-github-forks]"),
       since: widget.querySelector("[data-github-since]"),
       top: widget.querySelector("[data-github-top]"),
       recent: widget.querySelector("[data-github-recent]"),
+      profileMetrics: widget.querySelector("[data-github-profile-metrics]"),
+      repositoryMetrics: widget.querySelector("[data-github-repository-metrics]"),
+      activityMetrics: widget.querySelector("[data-github-activity-metrics]"),
+      recentEvents: widget.querySelector("[data-github-recent-events]"),
+      languages: widget.querySelector("[data-github-languages]"),
+      repositoryList: widget.querySelector("[data-github-repositories]"),
       liliaRepositories: widget.querySelector("[data-github-lilia-repos]"),
       liliaStars: widget.querySelector("[data-github-lilia-stars]"),
       liliaForks: widget.querySelector("[data-github-lilia-forks]"),
       liliaRelease: widget.querySelector("[data-github-lilia-release]"),
+      liliaMetrics: widget.querySelector("[data-github-lilia-metrics]"),
+      liliaLanguages: widget.querySelector("[data-github-lilia-languages]"),
       status: widget.querySelector("[data-github-status]")
     };
-    const cacheKey = `samael.github.public.${username}.${organization}.v2`;
+    const cacheKey = `samael.github.public.${username}.${organization}.v3`;
     const cacheLifetime = 6 * 60 * 60 * 1000;
 
     const setText = (element, value) => {
@@ -1244,6 +1691,211 @@
       const date = new Date(value || 0);
       if (Number.isNaN(date.getTime())) return "—";
       return new Intl.DateTimeFormat(undefined, { day: "2-digit", month: "short", year: "numeric" }).format(date);
+    };
+    const formatSize = (value) => {
+      const kilobytes = Number(value);
+      if (!Number.isFinite(kilobytes) || kilobytes < 0) return "—";
+      if (kilobytes >= 1048576) return `${(kilobytes / 1048576).toFixed(1).replace(/\.0$/, "")} GB`;
+      if (kilobytes >= 1024) return `${(kilobytes / 1024).toFixed(1).replace(/\.0$/, "")} MB`;
+      return `${Math.round(kilobytes)} KB`;
+    };
+    const formatPercent = (value) => {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return "—";
+      return `${number.toFixed(number >= 10 ? 1 : 2).replace(/\.0+$/, "")}%`;
+    };
+    const accountYears = (value) => {
+      const created = Date.parse(value || "");
+      if (!Number.isFinite(created)) return "—";
+      return `${Math.max(0, Math.floor((Date.now() - created) / 31556952000))}y`;
+    };
+    const renderMetrics = (container, values) => {
+      if (!container) return;
+      container.replaceChildren();
+      for (const [label, value] of values) {
+        const item = document.createElement("div");
+        const strong = document.createElement("strong");
+        const span = document.createElement("span");
+        strong.textContent = value;
+        span.textContent = label;
+        item.append(strong, span);
+        container.append(item);
+      }
+    };
+    const renderLanguages = (container, languageData) => {
+      if (!container) return;
+      container.replaceChildren();
+      const items = Array.isArray(languageData?.items) ? languageData.items.slice(0, 10) : [];
+      if (!items.length) {
+        const empty = document.createElement("span");
+        empty.className = "about-github-empty";
+        empty.textContent = "No language data available";
+        container.append(empty);
+        return;
+      }
+      const list = document.createElement("div");
+      list.className = "about-github-language-list";
+      for (const language of items) {
+        const row = document.createElement("div");
+        row.className = "about-github-language";
+        const heading = document.createElement("div");
+        const name = document.createElement("strong");
+        const percent = document.createElement("span");
+        const track = document.createElement("div");
+        const fill = document.createElement("span");
+        name.textContent = language.name || "Unknown";
+        percent.textContent = `${formatPercent(language.percent)} · ${formatSize(Number(language.bytes || 0) / 1024)}`;
+        heading.append(name, percent);
+        track.className = "about-github-language__track";
+        fill.className = "about-github-language__fill";
+        fill.style.width = `${Math.max(0, Math.min(100, Number(language.percent || 0)))}%`;
+        track.append(fill);
+        row.append(heading, track);
+        list.append(row);
+      }
+      container.append(list);
+    };
+    const renderRepositories = (container, repositories) => {
+      if (!container) return;
+      container.replaceChildren();
+      const items = Array.isArray(repositories) ? repositories.slice(0, 5) : [];
+      if (!items.length) {
+        const empty = document.createElement("span");
+        empty.className = "about-github-empty";
+        empty.textContent = "No repository data available";
+        container.append(empty);
+        return;
+      }
+      const list = document.createElement("div");
+      list.className = "about-github-repository-list";
+      for (const repository of items) {
+        const anchor = document.createElement("a");
+        anchor.className = "about-github-repository";
+        anchor.href = repository.url || `https://github.com/${repository.fullName || ""}`;
+        anchor.target = "_blank";
+        anchor.rel = "noopener noreferrer";
+        const heading = document.createElement("div");
+        const name = document.createElement("strong");
+        const meta = document.createElement("span");
+        const description = document.createElement("p");
+        name.textContent = repository.name || repository.fullName || "Repository";
+        meta.textContent = `${formatGitHubStat(repository.stars)} ★ · ${formatGitHubStat(repository.forks)} forks${repository.language ? ` · ${repository.language}` : ""}`;
+        heading.append(name, meta);
+        description.textContent = repository.description || `Last pushed ${formatDate(repository.pushedAt)}`;
+        anchor.append(heading, description);
+        list.append(anchor);
+      }
+      container.append(list);
+    };
+    const eventLabels = {
+      PushEvent: "Push",
+      PullRequestEvent: "Pull request",
+      IssuesEvent: "Issue",
+      IssueCommentEvent: "Issue comment",
+      PullRequestReviewEvent: "PR review",
+      PullRequestReviewCommentEvent: "Review comment",
+      ReleaseEvent: "Release",
+      CreateEvent: "Create",
+      ForkEvent: "Fork",
+      WatchEvent: "Star"
+    };
+    const renderEvents = (container, events) => {
+      if (!container) return;
+      container.replaceChildren();
+      const items = Array.isArray(events) ? events.slice(0, 8) : [];
+      if (!items.length) {
+        const empty = document.createElement("span");
+        empty.className = "about-github-empty";
+        empty.textContent = "No recent public events available";
+        container.append(empty);
+        return;
+      }
+      const list = document.createElement("div");
+      list.className = "about-github-event-list";
+      for (const event of items) {
+        const row = document.createElement(event.repositoryUrl ? "a" : "div");
+        row.className = "about-github-event";
+        if (event.repositoryUrl) {
+          row.href = event.repositoryUrl;
+          row.target = "_blank";
+          row.rel = "noopener noreferrer";
+        }
+        const copy = document.createElement("div");
+        const title = document.createElement("strong");
+        const meta = document.createElement("span");
+        title.textContent = `${eventLabels[event.type] || event.type || "Activity"}${event.action ? ` · ${event.action}` : ""}`;
+        meta.textContent = `${event.repository || "GitHub"} · ${formatDate(event.createdAt)}${event.commits ? ` · ${event.commits} commits` : ""}`;
+        copy.append(title, meta);
+        row.append(copy);
+        list.append(row);
+      }
+      container.append(list);
+    };
+    const renderExtended = (snapshot) => {
+      const profile = snapshot?.personal?.profile || {};
+      const repositories = snapshot?.personal?.repositories || {};
+      const activity = snapshot?.personal?.activity || {};
+      const labs = Array.isArray(snapshot?.personal?.labs) ? snapshot.personal.labs : [];
+      const organizations = Array.isArray(snapshot?.personal?.organizations) ? snapshot.personal.organizations : [];
+      renderMetrics(fields.profileMetrics, [
+        ["Public repos", formatGitHubStat(repositories.public ?? profile.publicRepos)],
+        ["Private repos", formatGitHubStat(profile.privateRepos)],
+        ["Owned private", formatGitHubStat(profile.ownedPrivateRepos)],
+        ["Total repos", formatGitHubStat(profile.totalRepos)],
+        ["Original", formatGitHubStat(repositories.original)],
+        ["Forked", formatGitHubStat(repositories.forks)],
+        ["Active", formatGitHubStat(repositories.activeOriginal)],
+        ["Archived", formatGitHubStat(repositories.archived)],
+        ["Following", formatGitHubStat(profile.following)],
+        ["Public gists", formatGitHubStat(profile.publicGists)],
+        ["Organizations", formatGitHubStat(organizations.length)],
+        ["Account age", accountYears(profile.createdAt)]
+      ]);
+      renderMetrics(fields.repositoryMetrics, [
+        ["Stars received", formatGitHubStat(repositories.totalStars)],
+        ["Forks received", formatGitHubStat(repositories.totalForks)],
+        ["Open issues / PRs", formatGitHubStat(repositories.totalOpenIssues)],
+        ["Repository size", formatSize(repositories.totalSizeKb)],
+        ["Public releases", formatGitHubStat(repositories.totalReleases)],
+        ["Release downloads", formatGitHubStat(repositories.totalReleaseDownloads)],
+        ["Average stars", String(repositories.averageStars ?? "—")],
+        ["Average forks", String(repositories.averageForks ?? "—")],
+        ["Active · 30d", formatGitHubStat(repositories.active30Days)],
+        ["Active · 90d", formatGitHubStat(repositories.active90Days)],
+        ["Active · 1y", formatGitHubStat(repositories.active365Days)],
+      ]);
+      renderMetrics(fields.activityMetrics, [
+        ["Public events", formatGitHubStat(activity.total)],
+        ["Push events", formatGitHubStat(activity.pushes)],
+        ["Commits in pushes", formatGitHubStat(activity.commits)],
+        ["PR events", formatGitHubStat(activity.pullRequests)],
+        ["Issue events", formatGitHubStat(activity.issues)],
+        ["Reviews", formatGitHubStat(activity.reviews)],
+        ["Issue comments", formatGitHubStat(activity.issueComments)],
+        ["Releases", formatGitHubStat(activity.releases)],
+        ["Active days", formatGitHubStat(activity.activeDays)],
+        ["Repos touched", formatGitHubStat(activity.repositoriesTouched)],
+        ["Current streak", `${formatGitHubStat(activity.currentStreak)}d`],
+        ["Longest streak", `${formatGitHubStat(activity.longestStreak)}d`]
+      ]);
+      renderLanguages(fields.languages, snapshot?.personal?.languages);
+      renderRepositories(fields.repositoryList, repositories.top);
+      renderEvents(fields.recentEvents, activity.recentEvents);
+
+      const frameworkRepositories = snapshot?.liliaFramework?.repositories || {};
+      const flagship = snapshot?.liliaFramework?.flagship || {};
+      const flagshipRepository = flagship.repository || {};
+      renderMetrics(fields.liliaMetrics, [
+        ["Active repos", formatGitHubStat(frameworkRepositories.activeOriginal)],
+        ["Archived", formatGitHubStat(frameworkRepositories.archived)],
+        ["Open issues / PRs", formatGitHubStat(frameworkRepositories.totalOpenIssues)],
+        ["Lilia stars", formatGitHubStat(flagshipRepository.stars)],
+        ["Lilia forks", formatGitHubStat(flagshipRepository.forks)],
+        ["Public releases", formatGitHubStat(flagship.releases)],
+        ["Asset downloads", formatGitHubStat(flagship.releaseDownloads)],
+        ["Contributors", formatGitHubStat(flagship.contributors)]
+      ]);
+      renderLanguages(fields.liliaLanguages, flagship.languages);
     };
     const summarize = (repositories) => {
       const publicRepositories = Array.isArray(repositories) ? repositories.filter((repository) => repository && repository.private !== true && repository.visibility !== "private") : [];
@@ -1274,6 +1926,10 @@
     };
     const applyData = (data, cached = false) => {
       setText(fields.repositories, formatGitHubStat(data.personal.original));
+      setText(fields.publicRepositories, formatGitHubStat(data.personal.public));
+      setText(fields.privateRepositories, formatGitHubStat(data.personal.privateRepos));
+      setText(fields.ownedPrivateRepositories, formatGitHubStat(data.personal.ownedPrivateRepos));
+      setText(fields.totalRepositories, formatGitHubStat(data.personal.totalRepos));
       setText(fields.followers, formatGitHubStat(data.personal.followers));
       setText(fields.stars, formatGitHubStat(data.personal.stars));
       setText(fields.forks, formatGitHubStat(data.personal.forks));
@@ -1288,6 +1944,42 @@
       widget.classList.remove("has-error");
       widget.classList.add("is-loaded");
     };
+
+    try {
+      const response = await fetch("/github-stats.json", { cache: "no-store" });
+      if (response.ok) {
+        const snapshot = await response.json();
+        const personalRepositories = snapshot?.personal?.repositories || {};
+        const personalProfile = snapshot?.personal?.profile || {};
+        const frameworkRepositories = snapshot?.liliaFramework?.repositories || {};
+        const release = snapshot?.liliaFramework?.flagship?.latestRelease || null;
+        if (personalRepositories.original !== undefined && frameworkRepositories.original !== undefined) {
+          renderExtended(snapshot);
+          applyData({
+            personal: {
+              original: personalRepositories.original,
+              public: personalRepositories.public,
+              privateRepos: personalProfile.privateRepos,
+              ownedPrivateRepos: personalProfile.ownedPrivateRepos,
+              totalRepos: personalProfile.totalRepos ?? (personalProfile.publicRepos !== undefined && personalProfile.privateRepos !== undefined ? Number(personalProfile.publicRepos) + Number(personalProfile.privateRepos) : null),
+              followers: personalProfile.followers,
+              stars: personalRepositories.totalStars,
+              forks: personalRepositories.totalForks,
+              createdAt: personalProfile.createdAt,
+              top: personalRepositories.mostStarred ? { name: personalRepositories.mostStarred.name, stargazers_count: personalRepositories.mostStarred.stars } : null,
+              recent: personalRepositories.mostRecentlyActive ? { name: personalRepositories.mostRecentlyActive.name, pushed_at: personalRepositories.mostRecentlyActive.pushedAt } : null
+            },
+            framework: {
+              original: frameworkRepositories.original,
+              stars: frameworkRepositories.totalStars,
+              forks: frameworkRepositories.totalForks,
+              release: release ? { name: release.name, tag_name: release.tag, published_at: release.publishedAt } : null
+            }
+          }, Boolean(snapshot?.stale));
+          return;
+        }
+      }
+    } catch {}
 
     try {
       const cached = JSON.parse(localStorage.getItem(cacheKey) || "null");
@@ -1351,6 +2043,15 @@
     activateShortcut(shortcut, true);
   });
   root.addEventListener("click", (event) => {
+    const applicationTrigger = event.target instanceof Element ? event.target.closest("[data-open-app]") : null;
+    if (applicationTrigger) {
+      const appId = String(applicationTrigger.dataset.openApp || "").trim();
+      if (applications.has(appId)) {
+        event.preventDefault();
+        openApplication(appId);
+        return;
+      }
+    }
     const trigger = event.target instanceof Element ? event.target.closest("[data-pfp-audio-trigger]") : null;
     if (trigger) document.querySelector("[data-global-profile-audio-trigger]")?.click();
   });
@@ -1358,6 +2059,27 @@
     const item = event.target instanceof Element ? event.target.closest("[data-app-id]") : null;
     if (item) openApplication(item.dataset.appId);
   });
+  startPlaces?.addEventListener("click", (event) => {
+    const item = event.target instanceof Element ? event.target.closest("[data-app-id]") : null;
+    if (item) openApplication(item.dataset.appId);
+  });
+  startSearch?.addEventListener("input", () => filterStartMenu(startSearch.value));
+  startSearch?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const firstVisible = startPrograms.querySelector("[data-search-text]:not([hidden])");
+    if (!(firstVisible instanceof HTMLElement)) return;
+    event.preventDefault();
+    firstVisible.click();
+  });
+  startAllPrograms?.addEventListener("click", () => {
+    showingAllPrograms = !showingAllPrograms;
+    if (startSearch) startSearch.value = "";
+    renderStartPrograms();
+    startPrograms.querySelector("button")?.focus({ preventScroll: true });
+  });
+  restartButton?.addEventListener("click", restartSystem);
+  shutdownButton?.addEventListener("click", shutdownSystem);
+  shutdownStart?.addEventListener("click", () => location.reload());
   taskbar.addEventListener("click", (event) => {
     const button = event.target instanceof Element ? event.target.closest("[data-app-id]") : null;
     if (!button) return;
@@ -1411,14 +2133,38 @@
     if (!startMenu.hidden && !startMenu.contains(event.target) && !startButton.contains(event.target)) closeStartMenu();
     if (settingsPanel && !settingsPanel.hidden && !settingsPanel.contains(event.target) && !settingsButton?.contains(event.target)) setSettingsOpen(false);
   });
-  window.addEventListener("resize", () => {
+  let viewportSyncFrame = 0;
+  const synchronizeViewport = () => {
+    syncDesktopCanvasScale();
+    logViewportDiagnostics("resize");
+    applySavedShortcutPositions();
     for (const entry of windows.values()) {
-      if (entry.maximized) continue;
+      if (entry.maximized) {
+        entry.element.style.left = "0px";
+        entry.element.style.top = "0px";
+        entry.element.style.width = "100%";
+        entry.element.style.height = "100%";
+        entry.gameController?.resize?.();
+        continue;
+      }
       applyGeometry(entry, getRestoredGeometry(entry.application));
       entry.gameController?.resize?.();
       persistWindow(entry);
     }
-  });
+  };
+  const scheduleViewportSync = () => {
+    if (viewportSyncFrame) cancelAnimationFrame(viewportSyncFrame);
+    viewportSyncFrame = requestAnimationFrame(() => {
+      viewportSyncFrame = 0;
+      synchronizeViewport();
+    });
+  };
+  window.addEventListener("resize", scheduleViewportSync);
+  window.visualViewport?.addEventListener("resize", scheduleViewportSync);
+  if (typeof ResizeObserver === "function") {
+    const viewportObserver = new ResizeObserver(scheduleViewportSync);
+    viewportObserver.observe(desktop);
+  }
   window.addEventListener("message", (event) => {
     if (!event.data) return;
     const sourceIsInternalApplication = [...windows.values()].some((entry) => {
@@ -1434,35 +2180,31 @@
   window.addEventListener("keydown", unlockUiAudio, { capture: true, once: true });
 
   renderRegistry();
-  bindSimulatedItemDragging(
-    shortcuts,
-    ".desktop-shortcut",
-    () => [...selectedShortcuts],
-    (shortcut) => activateShortcut(shortcut, false, false)
-  );
+  applySavedShortcutPositions();
   bindDesktopMarqueeSelection();
   initializeTheme();
   syncSettingsUi();
+  initializeNotices();
   updateClock();
   initializeGitHubStats();
   setInterval(updateClock, 15000);
 
+  window.PortfolioDesktop = {
+    applications,
+    openApplication,
+    openCreation,
+    getRuntimeStats,
+    initializeGitHubStats
+  };
+
   const requestedApplication = new URLSearchParams(location.search).get("app");
 
   function restoreDesktopSession() {
-    const hasSavedWindowState = state.windows && Object.keys(state.windows).length > 0;
-    for (const application of registry) {
-      const saved = state.windows?.[application.id];
-      if (saved?.open) {
-        openApplication(application.id, { focus: false });
-        if (saved.minimized) minimizeWindow(windows.get(application.id));
-      } else if (!hasSavedWindowState && application.defaultOpen) {
-        openApplication(application.id, { focus: false });
-      }
+    if (requestedApplication && applications.has(requestedApplication)) {
+      openApplication(requestedApplication, { focus: false });
+      const requestedWindow = windows.get(requestedApplication);
+      if (requestedWindow && !requestedWindow.minimized) setActive(requestedWindow);
     }
-    if (requestedApplication && applications.has(requestedApplication)) openApplication(requestedApplication, { focus: false });
-    const preferred = windows.get(requestedApplication) || windows.get(state.lastActive) || windows.get(root.dataset.defaultApplication) || [...windows.values()][0];
-    if (preferred && !preferred.minimized) setActive(preferred);
     navigateHash();
   }
 
