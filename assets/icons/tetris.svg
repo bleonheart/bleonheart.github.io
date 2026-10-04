@@ -1,13 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
-  <rect width="96" height="96" rx="10" fill="#1e241f"/>
-  <rect x="10" y="10" width="76" height="76" rx="6" fill="#141916" stroke="#485345"/>
-  <rect x="22" y="19" width="13" height="13" fill="#e0b95c" stroke="#8a6333"/>
-  <rect x="35" y="19" width="13" height="13" fill="#e0b95c" stroke="#8a6333"/>
-  <rect x="48" y="19" width="13" height="13" fill="#e0b95c" stroke="#8a6333"/>
-  <rect x="48" y="32" width="13" height="13" fill="#e0b95c" stroke="#8a6333"/>
-  <rect x="26" y="46" width="13" height="13" fill="#8fcf5b" stroke="#4c6d31"/>
-  <rect x="39" y="46" width="13" height="13" fill="#8fcf5b" stroke="#4c6d31"/>
-  <rect x="52" y="46" width="13" height="13" fill="#8fcf5b" stroke="#4c6d31"/>
-  <rect x="65" y="46" width="13" height="13" fill="#8fcf5b" stroke="#4c6d31"/>
-  <rect x="26" y="61" width="52" height="8" rx="4" fill="#303831"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="66%"><stop stop-color="#211033"/><stop offset="1" stop-color="#050909"/></radialGradient>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8b7ff"/><stop offset=".48" stop-color="#9b4dff"/><stop offset="1" stop-color="#472080"/></linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7ffff"/><stop offset="1" stop-color="#d8b7ff"/></linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="8"/><feOffset dy="6"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="512" height="512" rx="74" fill="#090d0c"/>
+<g filter="url(#sh)">
+<path d="M256 18 286 72 256 116 226 72Z" fill="url(#a)" stroke="#d8b7ff" stroke-width="5"/>
+<path d="M494 256 440 286 396 256 440 226Z" fill="url(#a)" stroke="#d8b7ff" stroke-width="5"/>
+<path d="M256 494 226 440 256 396 286 440Z" fill="url(#a)" stroke="#d8b7ff" stroke-width="5"/>
+<path d="M18 256 72 226 116 256 72 286Z" fill="url(#a)" stroke="#d8b7ff" stroke-width="5"/>
+<circle cx="256" cy="256" r="171" fill="url(#bg)" stroke="url(#a)" stroke-width="13"/>
+<circle cx="256" cy="256" r="140" fill="none" stroke="#9b4dff" stroke-width="5" stroke-dasharray="62 20" opacity=".92"/>
+<circle cx="256" cy="256" r="119" fill="none" stroke="#d8b7ff" stroke-width="2" opacity=".2"/>
+<path d="m256 92 6 13 13 6-13 6-6 13-6-13-13-6 13-6Z" fill="#d8b7ff" opacity=".78"/>
+<path d="m145 150 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#9b4dff" opacity=".72"/>
+<path d="m367 150 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#9b4dff" opacity=".72"/>
+
+<g stroke="#e9f6ff" stroke-width="4">
+<rect x="187" y="187" width="45" height="45" rx="5" fill="#7d3cff"/><rect x="234" y="187" width="45" height="45" rx="5" fill="#39bfff"/>
+<rect x="234" y="234" width="45" height="45" rx="5" fill="#5b63ff"/><rect x="281" y="234" width="45" height="45" rx="5" fill="#26d6ff"/>
+<rect x="187" y="281" width="45" height="45" rx="5" fill="#b139e8"/><rect x="234" y="281" width="45" height="45" rx="5" fill="#7348ff"/>
+<rect x="281" y="281" width="45" height="45" rx="5" fill="#39bfff"/>
+</g>
+</g>
 </svg>

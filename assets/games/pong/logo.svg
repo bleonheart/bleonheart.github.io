@@ -1,9 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
-  <rect width="96" height="96" rx="10" fill="#1f251f"/>
-  <rect x="10" y="10" width="76" height="76" rx="6" fill="#141916" stroke="#485345"/>
-  <rect x="29" y="24" width="5" height="48" rx="2" fill="#f1d89a"/>
-  <rect x="62" y="34" width="5" height="32" rx="2" fill="#f1d89a"/>
-  <circle cx="47" cy="40" r="4" fill="#92b95a"/>
-  <path d="M48 48c-6 4-9 9-13 16" fill="none" stroke="#d69a47" stroke-width="3" stroke-dasharray="3 4" stroke-linecap="round"/>
-  <rect x="20" y="75" width="56" height="4" rx="2" fill="#343d35"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="66%"><stop stop-color="#0c2034"/><stop offset="1" stop-color="#050909"/></radialGradient>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cceeff"/><stop offset=".48" stop-color="#43b7ff"/><stop offset="1" stop-color="#1263a8"/></linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7ffff"/><stop offset="1" stop-color="#cceeff"/></linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="8"/><feOffset dy="6"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="512" height="512" rx="74" fill="#090d0c"/>
+<g filter="url(#sh)">
+<path d="M256 18 286 72 256 116 226 72Z" fill="url(#a)" stroke="#cceeff" stroke-width="5"/>
+<path d="M494 256 440 286 396 256 440 226Z" fill="url(#a)" stroke="#cceeff" stroke-width="5"/>
+<path d="M256 494 226 440 256 396 286 440Z" fill="url(#a)" stroke="#cceeff" stroke-width="5"/>
+<path d="M18 256 72 226 116 256 72 286Z" fill="url(#a)" stroke="#cceeff" stroke-width="5"/>
+<circle cx="256" cy="256" r="171" fill="url(#bg)" stroke="url(#a)" stroke-width="13"/>
+<circle cx="256" cy="256" r="140" fill="none" stroke="#43b7ff" stroke-width="5" stroke-dasharray="62 20" opacity=".92"/>
+<circle cx="256" cy="256" r="119" fill="none" stroke="#cceeff" stroke-width="2" opacity=".2"/>
+<path d="m256 92 6 13 13 6-13 6-6 13-6-13-13-6 13-6Z" fill="#cceeff" opacity=".78"/>
+<path d="m145 150 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#43b7ff" opacity=".72"/>
+<path d="m367 150 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#43b7ff" opacity=".72"/>
+
+<g fill="url(#m)" stroke="#5cc8ff" stroke-width="5">
+<rect x="169" y="185" width="22" height="142" rx="11"/><rect x="321" y="185" width="22" height="142" rx="11"/>
+<circle cx="256" cy="256" r="29"/>
+</g><path d="M256 170v42M256 300v42" stroke="#8fd9ff" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+</g>
 </svg>
