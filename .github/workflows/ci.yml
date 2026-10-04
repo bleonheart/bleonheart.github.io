@@ -35,9 +35,9 @@ jobs:
 
           test -s docs/index.html
           test -e docs/.nojekyll
-          test -s docs/modules.json
-          test -s docs/reviews.json
-          test -s docs/github-stats.json
+          test -s docs/.jsons/modules.json
+          test -s docs/.jsons/reviews.json
+          test -s docs/.jsons/github-stats.json
           test -s docs/derma-creator/index.html
 
           if find docs -type d -name assets -print -quit | grep -q .; then
