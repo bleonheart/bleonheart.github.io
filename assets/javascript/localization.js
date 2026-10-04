@@ -86,7 +86,6 @@
   "items": "itens",
   "Application content unavailable.": "Conteúdo da aplicação indisponível.",
   "About Me": "Sobre Mim",
-  "Work With Me": "Trabalha Comigo",
   "Games": "Jogos",
   "Creations": "Criações",
   "Other Creations": "Outras Criações",

@@ -7,10 +7,14 @@
     en: {
       eyebrow: "ABOUT ME",
       name: "David Barata",
-      role: "Linux Systems Administrator | DevOps | IT Operations",
+      profileTitle: "PROFILE",
+      role: "Linux Systems Administrator | DevOps",
       location: "Matosinhos, Porto, Portugal",
+      availability: "Open to opportunities",
       summaryTitle: "Professional Summary",
-      summary: "Linux Systems Administration, DevOps and IT Operations professional with hands-on experience in production environments, automation, containers, cloud, CI/CD, Infrastructure as Code (IaC), databases and technical support. Experienced in troubleshooting, ticket and incident resolution, Docker/Kubernetes, Terraform/Ansible, scripting and SQL/MySQL/MariaDB. Focused on stability, automation, diagnosis, operational quality and continuous systems improvement.",
+      summary: "Linux Systems Administration, DevOps and IT Operations professional experienced in production systems, automation, containers, cloud, CI/CD, IaC, databases and technical support. Focused on troubleshooting, reliability, automation and continuous improvement.",
+      targetRolesTitle: "Roles I'm Looking For",
+      targetRoles: ["Linux Systems Administrator", "DevOps Engineer", "IT Operations Engineer", "IT Support Technician"],
       skillsTitle: "Technical Skills",
       skills: [
         ["Linux & Systems", "Linux (Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
@@ -86,20 +90,22 @@
       education: "Bachelor's Degree in Anthropology | NOVA FCSH",
       educationPeriod: "September 2019 - June 2022",
       languagesTitle: "Languages",
+      localizationTitle: "Languages",
       languages: [["Portuguese", "C2"], ["English", "C2"], ["Spanish", "B2"]],
-      portfolioTitle: "Portfolio & Technical Projects",
-      portfolio: "Technical portfolio with a broader selection of projects, previous work, documentation and practical examples of software development, systems administration, Linux, infrastructure, automation, CI/CD, databases and troubleshooting. It complements the skills and experience shown in this CV with verifiable examples of completed work.",
-      portfolioUrl: "https://bleonheart.github.io/",
-      tabs: { about: "About Me", projects: "Projects", work: "Work With Me" },
-      actions: { email: "Email", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", portfolio: "Open Portfolio ↗", projects: "View Projects", work: "Work With Me" }
+      tabs: { about: "About Me", projects: "Projects" },
+      actions: { email: "Email", emailCopied: "Email copied to clipboard.", emailCopiedShort: "Copied ✓", emailCopyFailed: "Could not copy the email address.", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", projects: "View Projects" }
     },
     pt: {
       eyebrow: "SOBRE MIM",
       name: "David Barata",
-      role: "Administrador de Sistemas Linux | DevOps | Operações de TI",
+      profileTitle: "PERFIL",
+      role: "Administrador de Sistemas Linux | DevOps",
       location: "Matosinhos, Porto, Portugal",
+      availability: "Disponível para oportunidades",
       summaryTitle: "Resumo Profissional",
-      summary: "Profissional de Administração de Sistemas Linux, DevOps e Operações de TI com experiência prática em ambientes de produção, automação, contentores, cloud, CI/CD, Infrastructure as Code (IaC), bases de dados e suporte técnico. Experiência em troubleshooting, resolução de tickets e incidentes, Docker/Kubernetes, Terraform/Ansible, scripting e SQL/MySQL/MariaDB. Orientado para estabilidade, automação, diagnóstico, qualidade operacional e melhoria contínua de sistemas.",
+      summary: "Profissional de Administração de Sistemas Linux, DevOps e Operações de TI com experiência em sistemas de produção, automação, contentores, cloud, CI/CD, IaC, bases de dados e suporte técnico. Focado em troubleshooting, fiabilidade, automação e melhoria contínua.",
+      targetRolesTitle: "Funções que Procuro",
+      targetRoles: ["Linux Systems Administrator", "DevOps Engineer", "IT Operations Engineer", "IT Support Technician"],
       skillsTitle: "Competências Técnicas",
       skills: [
         ["Linux e Sistemas", "Linux (Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
@@ -175,12 +181,10 @@
       education: "Licenciatura em Antropologia | NOVA FCSH",
       educationPeriod: "Setembro de 2019 - Junho de 2022",
       languagesTitle: "Idiomas",
+      localizationTitle: "Idiomas",
       languages: [["Português", "C2"], ["Inglês", "C2"], ["Espanhol", "B2"]],
-      portfolioTitle: "Portfólio e Projetos Técnicos",
-      portfolio: "Portfólio técnico com uma seleção mais extensa de projetos, trabalhos anteriores, documentação e exemplos práticos de desenvolvimento de software, administração de sistemas, Linux, infraestrutura, automação, CI/CD, bases de dados e troubleshooting. Complementa as competências e a experiência apresentadas neste CV com exemplos verificáveis do trabalho realizado.",
-      portfolioUrl: "https://bleonheart.github.io/",
-      tabs: { about: "Sobre Mim", projects: "Projetos", work: "Trabalha Comigo" },
-      actions: { email: "Email", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", portfolio: "Abrir Portfólio ↗", projects: "Ver Projetos", work: "Trabalha Comigo" }
+      tabs: { about: "Sobre Mim", projects: "Projetos" },
+      actions: { email: "Email", emailCopied: "Email copiado para a área de transferência.", emailCopiedShort: "Copiado ✓", emailCopyFailed: "Não foi possível copiar o endereço de email.", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", projects: "Ver Projetos" }
     }
   };
 
@@ -191,9 +195,29 @@
     return element;
   };
 
-  const action = (label, value, primary = false) => {
-    const button = create("button", `feature-button${primary ? " feature-button--primary" : ""}`, label);
+  const actionIcons = {
+    email: "https://www.gstatic.com/images/branding/product/2x/gmail_2020q4_48dp.png",
+    linkedin: "https://www.google.com/s2/favicons?domain=linkedin.com&sz=128",
+    discord: "https://www.google.com/s2/favicons?domain=discord.com&sz=128",
+    steam: "https://www.google.com/s2/favicons?domain=steampowered.com&sz=128",
+    pivity: "https://www.google.com/s2/favicons?domain=pivity.com&sz=128"
+  };
+
+  const createActionIcon = (name) => {
+    const image = create("img", `full-cv__action-icon full-cv__action-icon--${name}`);
+    image.src = actionIcons[name];
+    image.alt = "";
+    image.setAttribute("aria-hidden", "true");
+    image.referrerPolicy = "no-referrer";
+    return image;
+  };
+
+  const action = (name, label, value, primary = false) => {
+    const button = create("button", `feature-button full-cv__icon-button${primary ? " feature-button--primary" : ""}`);
     button.type = "button";
+    button.title = label;
+    button.setAttribute("aria-label", label);
+    button.append(createActionIcon(name));
     button.addEventListener("click", () => window.PortfolioActions?.execute?.(value));
     return button;
   };
@@ -208,12 +232,66 @@
     return anchor;
   };
 
+  const emailAddress = "baratoxis@gmail.com";
+
+  const copyToClipboard = async (value) => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(value);
+        return true;
+      }
+    } catch {}
+
+    const textarea = create("textarea");
+    textarea.value = value;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    textarea.style.pointerEvents = "none";
+    document.body.append(textarea);
+    textarea.select();
+    textarea.setSelectionRange(0, value.length);
+
+    let copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } catch {}
+    textarea.remove();
+    return copied;
+  };
+
+  const emailButton = (copy) => {
+    const button = create("button", "feature-button feature-button--primary full-cv__icon-button full-cv__icon-button--email");
+    button.type = "button";
+    button.title = copy.actions.email;
+    button.setAttribute("aria-label", copy.actions.email);
+    button.append(createActionIcon("email"));
+    button.addEventListener("click", async () => {
+      const copied = await copyToClipboard(emailAddress);
+      const message = copied ? copy.actions.emailCopied : copy.actions.emailCopyFailed;
+      window.dispatchEvent(new CustomEvent("portfolio:notice", { detail: { message } }));
+      if (!copied) return;
+
+      clearTimeout(button.emailResetTimer);
+      button.classList.add("is-copied");
+      button.title = copy.actions.emailCopied;
+      button.setAttribute("aria-label", copy.actions.emailCopied);
+      button.emailResetTimer = setTimeout(() => {
+        if (!button.isConnected) return;
+        button.classList.remove("is-copied");
+        button.title = copy.actions.email;
+        button.setAttribute("aria-label", copy.actions.email);
+      }, 1800);
+    });
+    return button;
+  };
+
   const getLanguage = () => window.PortfolioI18n?.language === "pt" ? "pt" : "en";
 
   const sectionTabs = (copy, active, onSelect) => {
     const tabs = create("nav", "about-me-tabs");
     tabs.setAttribute("aria-label", copy.tabs.about);
-    for (const [id, label] of [["about", copy.tabs.about], ["projects", copy.tabs.projects], ["work", copy.tabs.work]]) {
+    for (const [id, label] of [["about", copy.tabs.about], ["projects", copy.tabs.projects]]) {
       const button = create("button", `about-me-tab${id === active ? " is-active" : ""}`, label);
       button.type = "button";
       button.dataset.aboutTab = id;
@@ -229,29 +307,84 @@
     const body = create("div", "feature-app__body full-cv about-me-subtab");
     const sheet = create("article", "full-cv__sheet");
 
-    const hero = create("header", "full-cv__hero");
-    const heroCopy = create("div", "full-cv__hero-copy");
-    heroCopy.append(
-      create("span", "feature-eyebrow", copy.eyebrow),
-      create("h1", "", copy.name),
-      create("strong", "", copy.role),
-      create("p", "", copy.location)
-    );
-
-    const actions = create("div", "feature-actions full-cv__actions full-cv__hero-actions");
+    const actions = create("div", "feature-actions full-cv__actions full-cv__profile-actions");
     actions.append(
-      link(copy.actions.email, "mailto:baratoxis@gmail.com", "feature-button feature-button--primary"),
-      action(copy.actions.linkedin, { type: "open-external", target: "linkedin" }),
-      action(copy.actions.discord, { type: "open-external", target: "discord" }),
-      action(copy.actions.steam, { type: "open-external", target: "steam" }),
-      action(copy.actions.pivity, { type: "open-external", target: "pivity" })
+      emailButton(copy),
+      action("linkedin", copy.actions.linkedin, { type: "open-external", target: "linkedin" }),
+      action("discord", copy.actions.discord, { type: "open-external", target: "discord" }),
+      action("steam", copy.actions.steam, { type: "open-external", target: "steam" }),
+      action("pivity", copy.actions.pivity, { type: "open-external", target: "pivity" })
     );
-    hero.append(heroCopy, actions);
 
-    const summary = create("section", "full-cv__section full-cv__summary");
-    summary.append(create("h2", "", copy.summaryTitle), create("p", "", copy.summary));
+    const identity = create("section", "full-cv__identity full-cv__top-cell full-cv__top-cell--profile");
+    const initials = copy.name.split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0]?.toUpperCase() || "").join("");
+    const profileHeader = create("div", "full-cv__profile-header");
+    const avatar = create("div", "full-cv__profile-avatar");
+    avatar.setAttribute("aria-hidden", "true");
+    avatar.append(create("span", "", initials));
+    const profileCopy = create("div", "full-cv__profile-copy");
+    profileCopy.append(
+      create("h1", "", copy.name),
+      create("p", "full-cv__profile-role", copy.role.replace(" | ", " · ")),
+      create("p", "full-cv__location", copy.location)
+    );
+    profileHeader.append(avatar, profileCopy);
+    const availability = create("div", "full-cv__availability", copy.availability);
+    identity.append(create("span", "feature-eyebrow full-cv__profile-eyebrow", copy.profileTitle), profileHeader, actions, availability);
 
-    const skills = create("section", "full-cv__section full-cv__skills-section");
+    const localization = create("section", "full-cv__section full-cv__localization-card");
+    localization.append(create("h2", "", copy.localizationTitle));
+    const localizationList = create("div", "cv-language-list full-cv__localization-list");
+    for (const [languageName, level] of copy.languages) {
+      const row = create("div", "cv-language-row");
+      const meter = create("span", "cv-language-meter");
+      const fill = create("span", "cv-language-meter__fill");
+      fill.style.setProperty("--language-level", level === "C2" ? "92%" : level === "C1" ? "84%" : level === "B2" ? "72%" : "60%");
+      meter.append(fill);
+      row.append(create("span", "", languageName), meter, create("strong", "", level));
+      localizationList.append(row);
+    }
+    localization.append(localizationList);
+
+    const github = buildGitHubSummary();
+    github.classList.add("full-cv__profile-github");
+
+    const hero = create("header", "full-cv__hero full-cv__top-cell full-cv__top-cell--hero");
+    hero.dataset.cvSection = "overview";
+    const heroCopy = create("div", "full-cv__hero-copy");
+    heroCopy.append(create("span", "feature-eyebrow", copy.eyebrow), create("h2", "", copy.role), create("p", "", copy.summary));
+
+    hero.append(heroCopy);
+
+    const experience = create("section", "full-cv__section full-cv__experience-section");
+    experience.dataset.cvSection = "experience";
+    experience.append(create("h2", "", copy.experienceTitle));
+    const experienceList = create("div", "full-cv__experience");
+    for (const job of copy.experience) {
+      const item = create("article", "full-cv__job");
+      const marker = create("span", "full-cv__timeline-marker");
+      marker.setAttribute("aria-hidden", "true");
+      const jobBody = create("div", "full-cv__job-body");
+      const header = create("header", "full-cv__job-header");
+      const heading = create("h3");
+      heading.append(document.createTextNode(job.title), create("span", "", job.company));
+      header.append(heading, create("p", "", job.period));
+      const bullets = create("ul", "full-cv__bullets");
+      for (const bullet of job.bullets) bullets.append(create("li", "", bullet));
+      jobBody.append(header, bullets);
+      item.append(marker, jobBody);
+      experienceList.append(item);
+    }
+    experience.append(experienceList);
+
+    const roles = create("section", "full-cv__section full-cv__sidebar-section full-cv__card full-cv__roles-card");
+    roles.append(create("h2", "", copy.targetRolesTitle));
+    const roleTags = create("div", "full-cv__skill-tags");
+    for (const role of copy.targetRoles) roleTags.append(create("span", "", role));
+    roles.append(roleTags);
+
+    const skills = create("section", "full-cv__section full-cv__skills-section full-cv__card");
+    skills.dataset.cvSection = "skills";
     skills.append(create("h2", "", copy.skillsTitle));
     const skillsList = create("div", "full-cv__skills");
     for (const [title, value] of copy.skills) {
@@ -264,58 +397,49 @@
     }
     skills.append(skillsList);
 
-    const experience = create("section", "full-cv__section full-cv__experience-section");
-    experience.append(create("h2", "", copy.experienceTitle));
-    const experienceList = create("div", "full-cv__experience");
-    for (const job of copy.experience) {
-      const item = create("article", "full-cv__job");
-      const header = create("header", "full-cv__job-header");
-      const heading = create("h3");
-      heading.append(document.createTextNode(job.title), create("span", "", job.company));
-      header.append(heading, create("p", "", job.period));
-      const bullets = create("ul", "full-cv__bullets");
-      for (const bullet of job.bullets) bullets.append(create("li", "", bullet));
-      item.append(header, bullets);
-      experienceList.append(item);
-    }
-    experience.append(experienceList);
-
-    const education = create("section", "full-cv__section full-cv__sidebar-section");
+    const education = create("section", "full-cv__section full-cv__sidebar-section full-cv__card");
+    education.dataset.cvSection = "education";
     education.append(create("h2", "", copy.educationTitle), create("strong", "", copy.education), create("p", "", copy.educationPeriod));
 
-    const languages = create("section", "full-cv__section full-cv__sidebar-section");
-    languages.append(create("h2", "", copy.languagesTitle));
-    const languageList = create("div", "cv-language-list");
-    for (const [languageName, level] of copy.languages) {
-      const row = create("div", "cv-language-row");
-      row.append(create("span", "", languageName), create("strong", "", level));
-      languageList.append(row);
-    }
-    languages.append(languageList);
+    roles.classList.add("full-cv__top-cell", "full-cv__top-cell--roles");
 
-    const portfolio = create("section", "full-cv__section full-cv__sidebar-section");
-    portfolio.append(create("h2", "", copy.portfolioTitle), create("p", "", copy.portfolio), link(copy.actions.portfolio, copy.portfolioUrl));
+    const topRow = create("div", "full-cv__top-row");
+    topRow.append(identity, hero, roles);
+
+    const profileBody = create("aside", "full-cv__profile-body");
+    profileBody.append(localization, github);
 
     const main = create("main", "full-cv__main");
-    main.append(summary, experience);
+    main.append(experience);
 
-    const sidebar = create("aside", "full-cv__sidebar");
-    sidebar.append(skills, education, languages, portfolio);
+    const sidebarBody = create("aside", "full-cv__sidebar-body");
+    sidebarBody.append(skills, education);
 
-    const layout = create("div", "full-cv__layout");
-    layout.append(main, sidebar);
+    const bodyRow = create("div", "full-cv__body-row");
+    bodyRow.append(profileBody, main, sidebarBody);
 
-    sheet.append(hero, layout);
+    sheet.append(topRow, bodyRow);
     body.append(sheet);
     return body;
   };
 
   const stat = (label, attribute) => {
-    const item = create("div");
-    const value = create("strong", "", "—");
+    const item = create("div", "about-github-stat");
+    item.dataset.githubMetricItem = "";
+    const value = create("strong", "", "…");
     value.setAttribute(attribute, "");
     item.append(value, create("span", "", label));
     return item;
+  };
+
+  const statGroup = (title, entries) => {
+    const group = create("section", "about-github-stat-group");
+    group.dataset.githubStatGroup = "";
+    group.append(create("h3", "", title));
+    const list = create("div", "about-github-stat-list");
+    for (const [label, attribute] of entries) list.append(stat(label, attribute));
+    group.append(list);
+    return group;
   };
 
 
@@ -342,24 +466,55 @@
   const buildGitHubSummary = () => {
     const section = create("section", "full-cv__section about-github-summary");
     const heading = create("div", "about-github-summary__heading");
-    heading.append(create("h2", "", "GitHub Statistics"), link("Open GitHub ↗", "https://github.com/bleonheart", "about-github-link"));
+    const headingCopy = create("div", "about-github-summary__heading-copy");
+    headingCopy.append(create("h2", "", "GitHub Statistics"), create("p", "", "Repository, reach and account overview."));
+    heading.append(headingCopy);
+
     const widget = create("div", "desktop-github-widget about-github-summary__widget");
     widget.dataset.githubStats = "";
     widget.dataset.githubUser = "bleonheart";
     widget.dataset.githubOrg = "LiliaFramework";
     widget.dataset.githubStatic = "false";
-    const stats = create("div", "desktop-github-widget__stats about-github-summary__stats");
-    stats.append(
-      stat("Public repos", "data-github-public-repos"),
-      stat("Private repos", "data-github-private-repos"),
-      stat("Owned private", "data-github-owned-private-repos"),
-      stat("Total repos", "data-github-total-repos"),
-      stat("Stars received", "data-github-stars"),
-      stat("Forks received", "data-github-forks")
+
+    const groups = create("div", "about-github-summary__groups");
+    groups.append(
+      statGroup("Repositories", [
+        ["Public repos", "data-github-public-repos"],
+        ["Private repos", "data-github-private-repos"],
+        ["Owned private", "data-github-owned-private-repos"],
+        ["Total repos", "data-github-total-repos"],
+        ["Original repos", "data-github-repos"],
+        ["Forked repos", "data-github-forked-repos"],
+        ["Active repos", "data-github-active-repos"],
+        ["Archived", "data-github-archived-repos"]
+      ]),
+      statGroup("Reach", [
+        ["Stars received", "data-github-stars"],
+        ["Forks received", "data-github-forks"],
+        ["Followers", "data-github-followers"],
+        ["Following", "data-github-following"],
+        ["Organizations", "data-github-organizations"],
+        ["Public gists", "data-github-public-gists"]
+      ]),
+      statGroup("Repository Activity", [
+        ["Open issues / PRs", "data-github-open-issues"],
+        ["Public releases", "data-github-releases"],
+        ["Release downloads", "data-github-release-downloads"],
+        ["Repository size", "data-github-repository-size"],
+        ["Active · 30d", "data-github-active-30d"],
+        ["Account age", "data-github-account-age"]
+      ]),
+      statGroup("Recent Activity", [
+        ["Public events", "data-github-public-events"],
+        ["Push events", "data-github-push-events"],
+        ["Commits pushed", "data-github-push-commits"],
+        ["PR events", "data-github-pr-events"],
+        ["Active days", "data-github-active-days"],
+        ["Repos touched", "data-github-repos-touched"]
+      ])
     );
-    const status = create("div", "desktop-github-widget__status", "Loading GitHub statistics…");
-    status.dataset.githubStatus = "";
-    widget.append(stats, status);
+
+    widget.append(groups);
     section.append(heading, widget);
     return section;
   };
@@ -430,6 +585,10 @@
     return { view, initialize: typeof program.initialize === "function" ? () => program.initialize(view) : null };
   };
 
+  const refreshGitHubStats = (scope) => {
+    requestAnimationFrame(() => window.PortfolioDesktop?.initializeGitHubStats?.(scope));
+  };
+
   const buildProgram = (root, language = getLanguage()) => {
     let currentLanguage = language === "pt" ? "pt" : "en";
     let active = "about";
@@ -449,7 +608,7 @@
     };
 
     function setTab(target) {
-      const next = ["about", "projects", "work"].includes(target) ? target : "about";
+      const next = ["about", "projects"].includes(target) ? target : "about";
       clearCurrent();
       active = next;
       renderTabs();
@@ -457,10 +616,11 @@
       if (next === "about") {
         const view = buildAboutView(currentLanguage);
         pane.replaceChildren(view);
+        refreshGitHubStats(view);
         return;
       }
 
-      const embedded = buildEmbeddedProgram(next === "projects" ? "projects" : "work-with-me");
+      const embedded = buildEmbeddedProgram("projects");
       pane.replaceChildren(embedded.view);
       cleanup = embedded.initialize?.() || null;
     }
@@ -473,7 +633,9 @@
       currentLanguage = nextLanguage === "pt" ? "pt" : "en";
       if (active === "about") {
         clearCurrent();
-        pane.replaceChildren(buildAboutView(currentLanguage));
+        const view = buildAboutView(currentLanguage);
+        pane.replaceChildren(view);
+        refreshGitHubStats(view);
       }
       renderTabs();
     };

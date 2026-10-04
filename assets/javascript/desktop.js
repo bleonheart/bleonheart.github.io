@@ -375,7 +375,7 @@
     }
   }
 
-  const embeddedApplicationTabs = new Map([["projects", "projects"], ["work-with-me", "work"]]);
+  const embeddedApplicationTabs = new Map([["projects", "projects"]]);
   const mainStartMenuIds = new Set(["recycle-bin", "terminal", "about-me", "about", "derma-creator", "creations", "projects", "games-folder"]);
 
   function renderStartPrograms() {
@@ -844,6 +844,15 @@
     return rawUrl;
   }
 
+  function getFrameRestriction(rawUrl) {
+    try {
+      const url = new URL(rawUrl, document.baseURI);
+      const host = url.hostname.toLowerCase().replace(/^www\./, "");
+      if (host === "github.com") return "GitHub blocks embedded pages with frame security headers.";
+    } catch {}
+    return "";
+  }
+
   function buildExternalBrowser(application) {
     const shell = document.createElement("div");
     shell.className = "legacy-browser";
@@ -883,10 +892,35 @@
     iframe.className = "legacy-browser__frame";
     iframe.title = application.windowTitle || application.label;
     iframe.src = embeddedUrl;
+    iframe.tabIndex = 0;
     iframe.referrerPolicy = "strict-origin-when-cross-origin";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
+    iframe.allow = "autoplay; clipboard-read; clipboard-write; encrypted-media; fullscreen; gamepad; keyboard-map; picture-in-picture; web-share";
     iframe.allowFullscreen = true;
-    iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox");
+
+    let sameOrigin = false;
+    try {
+      sameOrigin = new URL(embeddedUrl, document.baseURI).origin === location.origin;
+    } catch {}
+    if (!sameOrigin) iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-downloads allow-modals");
+
+    const focusFrame = () => {
+      try {
+        iframe.contentWindow?.focus();
+      } catch {}
+      try {
+        iframe.focus({ preventScroll: true });
+      } catch {
+        iframe.focus();
+      }
+      requestAnimationFrame(() => {
+        try {
+          iframe.contentWindow?.focus();
+        } catch {}
+      });
+    };
+
+    content.addEventListener("pointerenter", focusFrame);
+
     const loading = document.createElement("div");
     loading.className = "legacy-browser__loading";
     const loadingTitle = document.createElement("strong");
@@ -899,17 +933,31 @@
     loadingLink.rel = "noopener noreferrer";
     loadingLink.textContent = "Open page externally";
     loading.append(loadingTitle, loadingStatus, loadingLink);
-    iframe.addEventListener("load", () => loading.hidden = true);
-    iframe.addEventListener("error", () => {
+
+    const frameRestriction = getFrameRestriction(application.url);
+    if (frameRestriction) {
+      iframe.hidden = true;
       loading.hidden = false;
-      loadingStatus.textContent = "The embedded page could not be displayed.";
-    });
+      loading.classList.add("is-blocked");
+      loadingStatus.textContent = frameRestriction;
+      loadingLink.textContent = "Open GitHub externally";
+    } else {
+      iframe.addEventListener("load", () => {
+        loading.hidden = true;
+        if (shell.closest(".desktop-window")?.classList.contains("is-active")) requestAnimationFrame(focusFrame);
+      });
+      iframe.addEventListener("error", () => {
+        loading.hidden = false;
+        loadingStatus.textContent = "The embedded page could not be displayed.";
+      });
+    }
     content.append(iframe, loading);
 
     const status = document.createElement("div");
     status.className = "legacy-browser__status";
-    status.textContent = `Internet · ${new URL(application.url).host}`;
+    status.textContent = frameRestriction ? `Internet · ${new URL(application.url).host} · external-only` : `Internet · ${new URL(application.url).host}`;
     shell.append(toolbar, content, status);
+    shell.portfolioFrameController = { focus: focusFrame };
     return shell;
   }
 
@@ -920,7 +968,19 @@
     frame.className = "internal-app-frame__iframe";
     frame.title = application.windowTitle || application.label;
     frame.src = new URL(application.url, document.baseURI).href;
+    frame.tabIndex = 0;
+    const focusFrame = () => {
+      try {
+        frame.focus({ preventScroll: true });
+      } catch {
+        frame.focus();
+      }
+    };
+    frame.addEventListener("load", () => {
+      if (shell.closest(".desktop-window")?.classList.contains("is-active")) requestAnimationFrame(focusFrame);
+    });
     shell.append(frame);
+    shell.portfolioFrameController = { focus: focusFrame };
     return shell;
   }
 
@@ -1209,11 +1269,9 @@
     title.append(titleText);
     const controls = document.createElement("div");
     controls.className = "desktop-window__controls";
-    controls.append(
-      createTitlebarButton(`Minimize ${application.label}`, "minimize", "—"),
-      createTitlebarButton(`Maximize ${application.label}`, "maximize", "□"),
-      createTitlebarButton(`Close ${application.label}`, "close", "×")
-    );
+    controls.append(createTitlebarButton(`Minimize ${application.label}`, "minimize", "—"));
+    if (!application.forceMaximized) controls.append(createTitlebarButton(`Maximize ${application.label}`, "maximize", "□"));
+    controls.append(createTitlebarButton(`Close ${application.label}`, "close", "×"));
     titlebar.append(title, controls);
 
     const content = document.createElement("div");
@@ -1226,7 +1284,7 @@
       : null;
     element.append(titlebar, content);
 
-    if (application.resizable !== false) {
+    if (application.resizable !== false && !application.forceMaximized) {
       const resize = document.createElement("div");
       resize.className = "desktop-window__resize";
       resize.dataset.windowResize = "";
@@ -1235,7 +1293,10 @@
     }
 
     desktop.append(element);
-    const entry = { application, element, minimized: false, maximized: false, restoreGeometry: null, taskbarButton: null, gameController: contentNode?.portfolioGameController || null, programDestroy: typeof programDestroy === "function" ? programDestroy : null };
+    // GitHub stats widgets are created by dynamically-built applications, so
+    // the initial page-wide initialization may run before they exist.
+    initializeGitHubStats(content);
+    const entry = { application, element, minimized: false, maximized: false, restoreGeometry: null, taskbarButton: null, gameController: contentNode?.portfolioGameController || null, frameController: contentNode?.portfolioFrameController || null, programDestroy: typeof programDestroy === "function" ? programDestroy : null };
     windows.set(application.id, entry);
     createTaskbarButton(entry);
     applyGeometry(entry, getRestoredGeometry(application));
@@ -1268,7 +1329,7 @@
     if (!entry) entry = createWindow(application);
     setWindowMinimizedState(entry, false);
     const saved = state.windows?.[id];
-    const shouldMaximize = window.matchMedia("(max-width: 760px)").matches || saved?.maximized || (!saved && (application.defaultMaximized || application.id === "about"));
+    const shouldMaximize = application.forceMaximized || window.matchMedia("(max-width: 760px)").matches || saved?.maximized || (!saved && (application.defaultMaximized || application.id === "about"));
     if (shouldMaximize && !entry.maximized) maximizeWindow(entry, false);
     setActive(entry);
     persistWindow(entry);
@@ -1276,6 +1337,7 @@
     if (options.focus !== false) {
       const program = programModules.get(application.id);
       if (entry.gameController?.focus) entry.gameController.focus();
+      else if (entry.frameController?.focus) entry.frameController.focus();
       else if (typeof program?.focus === "function") program.focus(entry.element, { applications, openApplication, root, actions: window.PortfolioActions });
       else entry.element.focus({ preventScroll: true });
     }
@@ -1319,6 +1381,10 @@
   }
 
   function restoreWindow(entry) {
+    if (entry.application.forceMaximized) {
+      if (!entry.maximized) maximizeWindow(entry);
+      return;
+    }
     playUiSound("maximize");
     entry.maximized = false;
     entry.element.classList.remove("is-maximized");
@@ -1354,6 +1420,7 @@
     entry.element.addEventListener("pointerdown", () => {
       setActive(entry);
       entry.gameController?.focus?.();
+      entry.frameController?.focus?.();
       programModules.get(entry.application.id)?.focus?.(entry.element, { applications, openApplication, root, actions: window.PortfolioActions });
     });
     entry.element.addEventListener("click", (event) => {
@@ -1365,6 +1432,7 @@
 
     titlebar?.addEventListener("dblclick", (event) => {
       if (event.target instanceof Element && event.target.closest("button")) return;
+      if (entry.application.forceMaximized) return;
       entry.maximized ? restoreWindow(entry) : maximizeWindow(entry);
     });
 
@@ -1661,9 +1729,27 @@
       privateRepositories: widget.querySelector("[data-github-private-repos]"),
       ownedPrivateRepositories: widget.querySelector("[data-github-owned-private-repos]"),
       totalRepositories: widget.querySelector("[data-github-total-repos]"),
+      forkedRepositories: widget.querySelector("[data-github-forked-repos]"),
       followers: widget.querySelector("[data-github-followers]"),
+      following: widget.querySelector("[data-github-following]"),
       stars: widget.querySelector("[data-github-stars]"),
       forks: widget.querySelector("[data-github-forks]"),
+      activeRepositories: widget.querySelector("[data-github-active-repos]"),
+      archivedRepositories: widget.querySelector("[data-github-archived-repos]"),
+      publicGists: widget.querySelector("[data-github-public-gists]"),
+      organizations: widget.querySelector("[data-github-organizations]"),
+      openIssues: widget.querySelector("[data-github-open-issues]"),
+      releases: widget.querySelector("[data-github-releases]"),
+      releaseDownloads: widget.querySelector("[data-github-release-downloads]"),
+      repositorySize: widget.querySelector("[data-github-repository-size]"),
+      active30Days: widget.querySelector("[data-github-active-30d]"),
+      accountAge: widget.querySelector("[data-github-account-age]"),
+      publicEvents: widget.querySelector("[data-github-public-events]"),
+      pushEvents: widget.querySelector("[data-github-push-events]"),
+      pushCommits: widget.querySelector("[data-github-push-commits]"),
+      pullRequestEvents: widget.querySelector("[data-github-pr-events]"),
+      activeDays: widget.querySelector("[data-github-active-days]"),
+      repositoriesTouched: widget.querySelector("[data-github-repos-touched]"),
       since: widget.querySelector("[data-github-since]"),
       top: widget.querySelector("[data-github-top]"),
       recent: widget.querySelector("[data-github-recent]"),
@@ -1681,11 +1767,31 @@
       liliaLanguages: widget.querySelector("[data-github-lilia-languages]"),
       status: widget.querySelector("[data-github-status]")
     };
-    const cacheKey = `samael.github.public.${username}.${organization}.v3`;
+    const cacheKey = `samael.github.public.${username}.${organization}.v6`;
     const cacheLifetime = 6 * 60 * 60 * 1000;
 
     const setText = (element, value) => {
       if (element) element.textContent = value;
+    };
+    const setMetric = (element, value, formatter = formatGitHubStat) => {
+      if (!element) return false;
+      const item = element.closest("[data-github-metric-item]");
+      const formatted = formatter(value);
+      const available = formatted !== "—" && formatted !== "";
+      if (available) {
+        element.textContent = formatted;
+        element.dataset.githubResolved = "true";
+        if (item) item.hidden = false;
+        return true;
+      }
+      if (element.dataset.githubResolved !== "true" && item) item.hidden = true;
+      return false;
+    };
+    const refreshMetricGroups = () => {
+      for (const group of widget.querySelectorAll("[data-github-stat-group]")) {
+        const items = [...group.querySelectorAll("[data-github-metric-item]")];
+        group.hidden = Boolean(items.length) && items.every((item) => item.hidden);
+      }
     };
     const formatDate = (value) => {
       const date = new Date(value || 0);
@@ -1903,12 +2009,49 @@
       const active = originals.filter((repository) => !repository.archived);
       const mostStarred = [...originals].sort((a, b) => Number(b.stargazers_count || 0) - Number(a.stargazers_count || 0) || Number(b.forks_count || 0) - Number(a.forks_count || 0))[0] || null;
       const mostRecent = [...active].sort((a, b) => Date.parse(b.pushed_at || 0) - Date.parse(a.pushed_at || 0))[0] || null;
+      const active30Days = active.filter((repository) => {
+        const pushedAt = Date.parse(repository.pushed_at || "");
+        return Number.isFinite(pushedAt) && pushedAt >= Date.now() - 30 * 86400000;
+      }).length;
       return {
         original: originals.length,
+        forkedRepos: publicRepositories.length - originals.length,
+        active: active.length,
+        archived: originals.length - active.length,
         stars: originals.reduce((total, repository) => total + Number(repository.stargazers_count || 0), 0),
         forks: originals.reduce((total, repository) => total + Number(repository.forks_count || 0), 0),
+        openIssues: originals.reduce((total, repository) => total + Number(repository.open_issues_count || 0), 0),
+        repositorySizeKb: originals.reduce((total, repository) => total + Number(repository.size || 0), 0),
+        active30Days,
+        originals,
         mostStarred,
         mostRecent
+      };
+    };
+    const summarizeActivity = (events) => {
+      const values = Array.isArray(events) ? events.filter(Boolean) : [];
+      const repositories = new Set();
+      const days = new Set();
+      let pushes = 0;
+      let commits = 0;
+      let pullRequests = 0;
+      for (const event of values) {
+        if (event?.repo?.name) repositories.add(event.repo.name);
+        const day = String(event?.created_at || "").slice(0, 10);
+        if (/^\d{4}-\d{2}-\d{2}$/.test(day)) days.add(day);
+        if (event?.type === "PushEvent") {
+          pushes += 1;
+          commits += Array.isArray(event?.payload?.commits) ? event.payload.commits.length : 0;
+        }
+        if (event?.type === "PullRequestEvent") pullRequests += 1;
+      }
+      return {
+        total: values.length,
+        pushes,
+        commits,
+        pullRequests,
+        activeDays: days.size,
+        repositoriesTouched: repositories.size
       };
     };
     const fetchAll = async (baseUrl, headers) => {
@@ -1925,24 +2068,65 @@
       return values;
     };
     const applyData = (data, cached = false) => {
-      setText(fields.repositories, formatGitHubStat(data.personal.original));
-      setText(fields.publicRepositories, formatGitHubStat(data.personal.public));
-      setText(fields.privateRepositories, formatGitHubStat(data.personal.privateRepos));
-      setText(fields.ownedPrivateRepositories, formatGitHubStat(data.personal.ownedPrivateRepos));
-      setText(fields.totalRepositories, formatGitHubStat(data.personal.totalRepos));
-      setText(fields.followers, formatGitHubStat(data.personal.followers));
-      setText(fields.stars, formatGitHubStat(data.personal.stars));
-      setText(fields.forks, formatGitHubStat(data.personal.forks));
+      setMetric(fields.repositories, data.personal.original);
+      setMetric(fields.publicRepositories, data.personal.public);
+      setMetric(fields.privateRepositories, data.personal.privateRepos);
+      setMetric(fields.ownedPrivateRepositories, data.personal.ownedPrivateRepos);
+      setMetric(fields.totalRepositories, data.personal.totalRepos);
+      setMetric(fields.forkedRepositories, data.personal.forkedRepos);
+      setMetric(fields.followers, data.personal.followers);
+      setMetric(fields.following, data.personal.following);
+      setMetric(fields.stars, data.personal.stars);
+      setMetric(fields.forks, data.personal.forks);
+      setMetric(fields.activeRepositories, data.personal.active);
+      setMetric(fields.archivedRepositories, data.personal.archived);
+      setMetric(fields.publicGists, data.personal.publicGists);
+      setMetric(fields.organizations, data.personal.organizations);
+      setMetric(fields.openIssues, data.personal.openIssues);
+      setMetric(fields.releases, data.personal.releases);
+      setMetric(fields.releaseDownloads, data.personal.releaseDownloads);
+      setMetric(fields.repositorySize, data.personal.repositorySizeKb, formatSize);
+      setMetric(fields.active30Days, data.personal.active30Days);
+      setMetric(fields.accountAge, data.personal.createdAt, accountYears);
+      setMetric(fields.publicEvents, data.personal.publicEvents);
+      setMetric(fields.pushEvents, data.personal.pushEvents);
+      setMetric(fields.pushCommits, data.personal.pushCommits);
+      setMetric(fields.pullRequestEvents, data.personal.pullRequestEvents);
+      setMetric(fields.activeDays, data.personal.activeDays);
+      setMetric(fields.repositoriesTouched, data.personal.repositoriesTouched);
       setText(fields.since, data.personal.createdAt ? `GitHub since ${new Date(data.personal.createdAt).getFullYear()}` : "Public profile");
       setText(fields.top, data.personal.top ? `${data.personal.top.name} · ${formatGitHubStat(data.personal.top.stargazers_count)} ★` : "—");
       setText(fields.recent, data.personal.recent ? `${data.personal.recent.name} · ${formatDate(data.personal.recent.pushed_at)}` : "—");
-      setText(fields.liliaRepositories, formatGitHubStat(data.framework.original));
-      setText(fields.liliaStars, formatGitHubStat(data.framework.stars));
-      setText(fields.liliaForks, formatGitHubStat(data.framework.forks));
+      setMetric(fields.liliaRepositories, data.framework.original);
+      setMetric(fields.liliaStars, data.framework.stars);
+      setMetric(fields.liliaForks, data.framework.forks);
       setText(fields.liliaRelease, data.framework.release ? `${data.framework.release.name || data.framework.release.tag_name || "Release"} · ${formatDate(data.framework.release.published_at || data.framework.release.created_at)}` : "No public release yet");
-      setText(fields.status, `Public GitHub data${cached ? " · cached" : ""}`);
+      setText(fields.status, `GitHub data${cached ? " · cached" : ""}`);
+      refreshMetricGroups();
       widget.classList.remove("has-error");
       widget.classList.add("is-loaded");
+    };
+
+    const snapshotHasExtendedPublicData = (snapshot) => {
+      const profile = snapshot?.personal?.profile || {};
+      const repositories = snapshot?.personal?.repositories || {};
+      const organizations = snapshot?.personal?.organizations;
+      const activity = snapshot?.personal?.activity || {};
+      return [
+        profile.publicGists,
+        repositories.totalOpenIssues,
+        repositories.totalSizeKb,
+        repositories.active30Days,
+        repositories.totalReleases,
+        repositories.totalReleaseDownloads,
+        Array.isArray(organizations) ? organizations.length : null,
+        activity.total,
+        activity.pushes,
+        activity.commits,
+        activity.pullRequests,
+        activity.activeDays,
+        activity.repositoriesTouched
+      ].every((value) => value !== undefined && value !== null);
     };
 
     try {
@@ -1962,10 +2146,27 @@
               privateRepos: personalProfile.privateRepos,
               ownedPrivateRepos: personalProfile.ownedPrivateRepos,
               totalRepos: personalProfile.totalRepos ?? (personalProfile.publicRepos !== undefined && personalProfile.privateRepos !== undefined ? Number(personalProfile.publicRepos) + Number(personalProfile.privateRepos) : null),
+              forkedRepos: personalRepositories.forks,
               followers: personalProfile.followers,
+              following: personalProfile.following,
               stars: personalRepositories.totalStars,
               forks: personalRepositories.totalForks,
+              active: personalRepositories.activeOriginal,
+              archived: personalRepositories.archived,
+              publicGists: personalProfile.publicGists,
+              organizations: Array.isArray(snapshot?.personal?.organizations) ? snapshot.personal.organizations.length : null,
+              openIssues: personalRepositories.totalOpenIssues,
+              releases: personalRepositories.totalReleases,
+              releaseDownloads: personalRepositories.totalReleaseDownloads,
+              repositorySizeKb: personalRepositories.totalSizeKb,
+              active30Days: personalRepositories.active30Days,
               createdAt: personalProfile.createdAt,
+              publicEvents: snapshot?.personal?.activity?.total,
+              pushEvents: snapshot?.personal?.activity?.pushes,
+              pushCommits: snapshot?.personal?.activity?.commits,
+              pullRequestEvents: snapshot?.personal?.activity?.pullRequests,
+              activeDays: snapshot?.personal?.activity?.activeDays,
+              repositoriesTouched: snapshot?.personal?.activity?.repositoriesTouched,
               top: personalRepositories.mostStarred ? { name: personalRepositories.mostStarred.name, stargazers_count: personalRepositories.mostStarred.stars } : null,
               recent: personalRepositories.mostRecentlyActive ? { name: personalRepositories.mostRecentlyActive.name, pushed_at: personalRepositories.mostRecentlyActive.pushedAt } : null
             },
@@ -1976,7 +2177,7 @@
               release: release ? { name: release.name, tag_name: release.tag, published_at: release.publishedAt } : null
             }
           }, Boolean(snapshot?.stale));
-          return;
+          if (!snapshot?.stale && snapshotHasExtendedPublicData(snapshot)) return;
         }
       }
     } catch {}
@@ -1991,24 +2192,65 @@
 
     try {
       const headers = { Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
-      const [profileResponse, personalRepositories, frameworkRepositories, releaseResponse] = await Promise.all([
+      const [profileResponse, personalRepositories, organizations, publicEvents, frameworkRepositories, releaseResponse] = await Promise.all([
         fetch(`https://api.github.com/users/${encodeURIComponent(username)}`, { headers }),
         fetchAll(`https://api.github.com/users/${encodeURIComponent(username)}/repos?type=owner&sort=pushed&direction=desc`, headers),
+        fetchAll(`https://api.github.com/users/${encodeURIComponent(username)}/orgs`, headers).catch(() => []),
+        fetchAll(`https://api.github.com/users/${encodeURIComponent(username)}/events/public`, headers).catch(() => []),
         fetchAll(`https://api.github.com/orgs/${encodeURIComponent(organization)}/repos?type=public&sort=pushed&direction=desc`, headers),
         fetch("https://api.github.com/repos/LiliaFramework/Lilia/releases/latest", { headers })
       ]);
       if (!profileResponse.ok) throw new Error("GitHub profile request failed");
       const profile = await profileResponse.json();
       const personal = summarize(personalRepositories);
+      const activity = summarizeActivity(publicEvents);
       const framework = summarize(frameworkRepositories);
       const release = releaseResponse.ok ? await releaseResponse.json() : null;
+
+      let releaseTotals = null;
+      try {
+        const releaseResults = await Promise.all(personal.originals.map(async (repository) => {
+          const fullName = String(repository?.full_name || "");
+          if (!fullName) return null;
+          const releases = await fetchAll(`https://api.github.com/repos/${fullName.split("/").map(encodeURIComponent).join("/")}/releases`, headers);
+          return {
+            count: releases.length,
+            downloads: releases.reduce((total, item) => total + (Array.isArray(item?.assets) ? item.assets.reduce((sum, asset) => sum + Number(asset?.download_count || 0), 0) : 0), 0)
+          };
+        }));
+        if (releaseResults.every(Boolean)) {
+          releaseTotals = releaseResults.reduce((totals, item) => ({ count: totals.count + item.count, downloads: totals.downloads + item.downloads }), { count: 0, downloads: 0 });
+        }
+      } catch {}
+
       const data = {
         personal: {
           original: personal.original,
+          public: Number(profile.public_repos || 0),
+          privateRepos: null,
+          ownedPrivateRepos: null,
+          totalRepos: null,
+          forkedRepos: personal.forkedRepos,
           followers: Number(profile.followers || 0),
+          following: Number(profile.following || 0),
           stars: personal.stars,
           forks: personal.forks,
+          active: personal.active,
+          archived: personal.archived,
+          publicGists: Number(profile.public_gists || 0),
+          organizations: Array.isArray(organizations) ? organizations.length : null,
+          openIssues: personal.openIssues,
+          releases: releaseTotals?.count ?? null,
+          releaseDownloads: releaseTotals?.downloads ?? null,
+          repositorySizeKb: personal.repositorySizeKb,
+          active30Days: personal.active30Days,
           createdAt: profile.created_at || null,
+          publicEvents: activity.total,
+          pushEvents: activity.pushes,
+          pushCommits: activity.commits,
+          pullRequestEvents: activity.pullRequests,
+          activeDays: activity.activeDays,
+          repositoriesTouched: activity.repositoriesTouched,
           top: personal.mostStarred,
           recent: personal.mostRecent
         },
@@ -2021,9 +2263,15 @@
       };
       applyData(data, false);
       try { localStorage.setItem(cacheKey, JSON.stringify({ cachedAt: Date.now(), data })); } catch {}
+
     } catch {
-      setText(fields.status, "GitHub stats unavailable");
-      widget.classList.add("has-error");
+      if (widget.classList.contains("is-loaded")) {
+        setText(fields.status, "GitHub data · cached");
+      } else {
+        setText(fields.status, "GitHub stats unavailable");
+        widget.classList.add("has-error");
+      }
+      refreshMetricGroups();
     }
   }
 
@@ -2087,7 +2335,10 @@
     if (!entry) return;
     if (entry.minimized) openApplication(entry.application.id);
     else if (button.classList.contains("is-active")) minimizeWindow(entry);
-    else setActive(entry);
+    else {
+      setActive(entry);
+      entry.frameController?.focus?.();
+    }
   });
   taskbar.addEventListener("auxclick", (event) => {
     if (event.button !== 1) return;

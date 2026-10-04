@@ -6,7 +6,7 @@
   const version = `portfolio-desktop ${data.version || "3.0"}`;
   const homePath = "/home/samael/portfolio";
   const commandGroups = {
-    portfolio: ["about", "apps", "contact", "creations", "current", "discord", "docs", "featured", "game", "games", "github", "hire", "legacy", "lilia", "links", "modules", "open", "pivity", "play", "portfolio", "project", "projects", "random", "repo", "reviews", "search", "skills", "stats", "status", "tech"],
+    portfolio: ["about", "apps", "creations", "current", "discord", "docs", "featured", "game", "games", "github", "legacy", "lilia", "links", "modules", "open", "pivity", "play", "portfolio", "project", "projects", "random", "repo", "reviews", "search", "skills", "stats", "status", "tech"],
     shell: ["alias", "cat", "cd", "clear", "cls", "commands", "dir", "echo", "env", "find", "grep", "head", "help", "history", "ls", "man", "printenv", "printf", "pwd", "tail", "tree", "type", "wc", "whereis", "which"],
     system: ["cal", "date", "df", "fastfetch", "free", "groups", "hostname", "id", "languages", "neofetch", "online", "platform", "ps", "time", "top", "uname", "uptime", "version", "whoami"],
     utilities: ["fortune", "length", "lower", "motd", "pudding", "purin", "rand", "repeat", "reverse", "upper", "uuid"]
@@ -36,8 +36,6 @@
     repo: { type: "open-external", target: "lilia-repository" },
     portfolio: { type: "open-external", target: "portfolio" },
     reviews: { type: "open-app", target: "about" },
-    contact: { type: "open-app", target: "work-with-me" },
-    hire: { type: "open-app", target: "work-with-me" },
     random: { type: "random-game" }
   };
   const manual = {
@@ -173,7 +171,7 @@
     };
 
     const listDirectory = (path) => {
-      if (path === homePath) return ["projects/", "creations/", "games/", "reviews/", "terminal/", "README.md", "contact.txt", "skills.txt", "version.txt"];
+      if (path === homePath) return ["projects/", "creations/", "games/", "reviews/", "terminal/", "README.md", "skills.txt", "version.txt"];
       if (path === `${homePath}/projects`) return projects.map((project) => project.id);
       if (path === `${homePath}/games`) return games.map((game) => game.id);
       if (path === `${homePath}/creations`) return ["Use 'creations' to open the full generated creation library."];
@@ -187,7 +185,6 @@
       const fixedFiles = {
         [`${homePath}/README.md`]: "Samael Portfolio Terminal\nA browser-based command interface for navigating projects, games, creations, reviews, and portfolio information.\nUse 'help' for command groups.\nUse 'commands' for the complete command list.",
         [`${homePath}/skills.txt`]: "GLua, Python, Bash/Shell, PowerShell, GDScript, JavaScript, TypeScript, Java, Go, Unity, Godot, web, SQL, Linux/Windows, Docker, Kubernetes, CI/CD, game-server infrastructure.",
-        [`${homePath}/contact.txt`]: "Use 'contact' or 'hire' to open the Work With Me section.",
         [`${homePath}/version.txt`]: version,
         [`${homePath}/terminal/commands.txt`]: commands.join("\n"),
         [`${homePath}/terminal/motd.txt`]: "Welcome to Samael's portfolio terminal."
@@ -195,7 +192,7 @@
       if (fixedFiles[resolved]) return fixedFiles[resolved];
       if (resolved.startsWith(`${homePath}/projects/`)) {
         const project = projectById(resolved.slice(`${homePath}/projects/`.length));
-        if (project) return `${project.name}\n${project.summary}\nStatus: ${data.statusLabels?.[project.status] || project.status}\nLifecycle: ${project.lifecycle}\nTechnologies: ${(project.technologies || []).join(", ")}`;
+        if (project) return `${project.name}\n${project.summary}\nYears: ${project.years || "Not listed"}\nStatus: ${data.statusLabels?.[project.status] || project.status}\nLifecycle: ${project.lifecycle}\nTechnologies: ${(project.technologies || []).join(", ")}`;
       }
       if (resolved.startsWith(`${homePath}/games/`)) {
         const game = gameById(resolved.slice(`${homePath}/games/`.length));
@@ -554,14 +551,14 @@
           print("No featured projects are indexed.");
           return;
         }
-        featured.forEach((project) => print(`${project.name} — ${project.summary}`));
+        featured.forEach((project) => print(`${project.name}${project.years ? ` (${project.years})` : ""} — ${project.summary}`));
       },
       status() {
         if (!projects.length) {
           print("No projects are indexed.");
           return;
         }
-        projects.forEach((project) => print(`${project.name}: ${data.statusLabels?.[project.status] || project.status} (${project.lifecycle})`));
+        projects.forEach((project) => print(`${project.name}: ${data.statusLabels?.[project.status] || project.status} (${project.lifecycle})${project.years ? ` · ${project.years}` : ""}`));
       },
       stats() {
         const appCount = entries().filter((entry) => entry.id.startsWith("app-")).length;

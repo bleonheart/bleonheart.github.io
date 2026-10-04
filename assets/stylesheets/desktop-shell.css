@@ -57,11 +57,7 @@ html.is-embedded body{min-height:100vh!important;overflow:hidden!important}html.
 .desktop-latest-review-widget__item{grid-template-columns:42px minmax(0,1fr);gap:11px;padding:13px 12px}
 .desktop-latest-review-widget__avatar{width:42px;height:42px}
 .desktop-latest-review-widget__content p{-webkit-line-clamp:4;line-clamp:4}
-.work-with-me-tabs{padding:0 2px}
-.work-with-me-tabs button{flex:1;min-width:220px}
-.work-with-me-content{display:grid;gap:12px}
-.work-with-me-intro h2{margin:4px 0 6px;color:#f1f3ef;font-size:22px;line-height:1.1}
-@media(max-width:700px){.start-menu{width:calc(100vw - 8px)}.start-menu__body{height:min(540px,calc(100vh - var(--desktop-taskbar-height) - 10px))}.work-with-me-tabs{display:grid;grid-template-columns:1fr}.work-with-me-tabs button{min-width:0}}
+@media(max-width:700px){.start-menu{width:calc(100vw - 8px)}.start-menu__body{height:min(540px,calc(100vh - var(--desktop-taskbar-height) - 10px))}}
 
 .tray-language-switch{display:grid;grid-template-columns:repeat(2,32px);gap:2px;align-items:center}.tray-language-switch button{height:24px;padding:0;border:1px solid #111611;border-top-color:#525d51;border-left-color:#525d51;background:#29312a;color:#cfd6cd;font:700 11px/1 var(--desktop-font);cursor:default}.tray-language-switch button:hover,.tray-language-switch button:focus-visible{outline:1px dotted #f1d89a;outline-offset:-4px;background:#39433a}.tray-language-switch button.is-active,.tray-language-switch button[aria-pressed="true"]{border-color:#8c693e;background:#4b3d27;color:#f5dfaa;box-shadow:inset 0 0 0 1px #6f5937}
 .tray-settings{min-width:64px;color:var(--desktop-cream)}.tray-settings[aria-expanded="true"]{background:#303830;color:var(--desktop-orange)}

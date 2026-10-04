@@ -57,7 +57,6 @@
     if (!action || typeof action !== "object") return false;
     const target = String(action.target || "");
     if (action.type === "open-app" && target === "projects") return openAboutDestination("projects");
-    if (action.type === "open-app" && target === "work-with-me") return openAboutDestination("work");
     if (action.type === "open-app") return Boolean(desktop()?.openApplication?.(target));
     if (action.type === "open-about-tab") return openAboutDestination(target);
     if (action.type === "open-work-audience") return openWorkAudience(target);
