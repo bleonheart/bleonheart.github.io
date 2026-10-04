@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="66%"><stop stop-color="#0b2925"/><stop offset="1" stop-color="#050909"/></radialGradient>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5fff7"/><stop offset=".48" stop-color="#3eb9a3"/><stop offset="1" stop-color="#1c6e61"/></linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8ffff"/><stop offset="1" stop-color="#d5fff7"/></linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="8"/><feOffset dy="6"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g filter="url(#sh)">
+<path d="M256 18 286 72 256 116 226 72Z" fill="url(#a)" stroke="#d5fff7" stroke-width="5"/>
+<path d="M494 256 440 286 396 256 440 226Z" fill="url(#a)" stroke="#d5fff7" stroke-width="5"/>
+<path d="M256 494 226 440 256 396 286 440Z" fill="url(#a)" stroke="#d5fff7" stroke-width="5"/>
+<path d="M18 256 72 226 116 256 72 286Z" fill="url(#a)" stroke="#d5fff7" stroke-width="5"/>
+<circle cx="256" cy="256" r="171" fill="url(#bg)" stroke="url(#a)" stroke-width="13"/>
+<circle cx="256" cy="256" r="140" fill="none" stroke="#3eb9a3" stroke-width="5" stroke-dasharray="62 20" opacity=".92"/>
+<circle cx="256" cy="256" r="119" fill="none" stroke="#d5fff7" stroke-width="2" opacity=".2"/>
+<circle cx="222" cy="218" r="34" fill="#5fd1bd" stroke="#ddfff8" stroke-width="6"/><circle cx="294" cy="218" r="34" fill="#459b8b" stroke="#c8f8ef" stroke-width="6"/><path d="M166 330c8-47 32-70 56-70s48 23 56 70M234 330c7-41 28-62 60-62 24 0 46 20 53 62" fill="#1d6457" stroke="#a9ebdf" stroke-width="7"/><circle cx="341" cy="183" r="27" fill="#163e36" stroke="#d5fff7" stroke-width="5"/><path d="M341 168v30M326 183h30" stroke="#68e0c5" stroke-width="7" stroke-linecap="round"/>
+</g>
+</svg>
