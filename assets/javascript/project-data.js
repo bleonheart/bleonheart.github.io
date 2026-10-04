@@ -28,14 +28,14 @@
   const loadProjects = () => {
     const request = new XMLHttpRequest();
     try {
-      request.open("GET", "/assets/data/projects.json", false);
+      request.open("GET", "/.jsons/projects.json", false);
       request.send(null);
       if (request.status < 200 || request.status >= 300) throw new Error(`HTTP ${request.status}`);
       const payload = JSON.parse(request.responseText);
       if (!Array.isArray(payload?.projects)) throw new Error("Missing projects array");
       return payload.projects;
     } catch (error) {
-      console.error("Unable to load portfolio projects from /assets/data/projects.json.", error);
+      console.error("Unable to load portfolio projects from /.jsons/projects.json.", error);
       return [];
     }
   };

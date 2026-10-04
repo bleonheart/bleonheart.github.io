@@ -15,6 +15,7 @@
       summary: "Linux Systems Administration, DevOps and IT Operations professional experienced in production systems, automation, containers, cloud, CI/CD, IaC, databases and technical support. Focused on troubleshooting, reliability, automation and continuous improvement.",
       targetRolesTitle: "Roles I'm Looking For",
       targetRoles: ["Linux Systems Administrator", "DevOps Engineer", "IT Operations Engineer", "IT Support Technician"],
+      targetRolesNote: "These are examples, not limits. If my broader skill set fits another role, even if it is not listed here, feel free to get in touch.",
       skillsTitle: "Technical Skills",
       skills: [
         ["Linux & Systems", "Linux (Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
@@ -106,6 +107,7 @@
       summary: "Profissional de Administração de Sistemas Linux, DevOps e Operações de TI com experiência em sistemas de produção, automação, contentores, cloud, CI/CD, IaC, bases de dados e suporte técnico. Focado em troubleshooting, fiabilidade, automação e melhoria contínua.",
       targetRolesTitle: "Funções que Procuro",
       targetRoles: ["Linux Systems Administrator", "DevOps Engineer", "IT Operations Engineer", "IT Support Technician"],
+      targetRolesNote: "Estes são exemplos, não limites. Se o meu conjunto de competências se adequar a outra função, mesmo que não esteja listada aqui, sinta-se à vontade para me contactar.",
       skillsTitle: "Competências Técnicas",
       skills: [
         ["Linux e Sistemas", "Linux (Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
@@ -381,7 +383,7 @@
     roles.append(create("h2", "", copy.targetRolesTitle));
     const roleTags = create("div", "full-cv__skill-tags");
     for (const role of copy.targetRoles) roleTags.append(create("span", "", role));
-    roles.append(roleTags);
+    roles.append(roleTags, create("p", "full-cv__roles-note", copy.targetRolesNote));
 
     const skills = create("section", "full-cv__section full-cv__skills-section full-cv__card");
     skills.dataset.cvSection = "skills";

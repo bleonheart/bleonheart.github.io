@@ -436,3 +436,6 @@ html.is-embedded body{min-height:100vh!important;overflow:hidden!important}html.
 }
 .language-picker__chevron{display:none}
 .desktop-settings-panel .desktop-setting-row--language{display:none!important}
+
+/* A selected desktop program uses its outer border as the sole selection cue. */
+.desktop-shortcut.is-selected .desktop-shortcut__label{background:transparent;outline:none}
