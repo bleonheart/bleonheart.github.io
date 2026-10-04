@@ -30,19 +30,6 @@
       experienceTitle: "Professional Experience",
       experience: [
         {
-          title: "Technical Systems Administrator & Software Developer",
-          company: "Freelance",
-          period: "August 2018 - Present",
-          bullets: [
-            "Administration, troubleshooting and optimization of production systems and services, focused on availability, performance, stability, security and maintenance.",
-            "Creation and management of containerized environments with Docker and Kubernetes for applications and services.",
-            "Development and maintenance of backend applications integrated with MySQL and MariaDB, including data structure, queries, processing and persistence.",
-            "Development of systems, automations and scripts in Python, Lua and web technologies for international clients and large-scale projects.",
-            "Version management, updates, functional testing, technical documentation and deployment of solutions to production.",
-            "Simultaneous management of projects and clients, balancing requirements, priorities, deadlines, technical support and continuous evolution of solutions."
-          ]
-        },
-        {
           title: "Business Customer Consultant",
           company: "Concentrix",
           period: "January 2025 - October 2025 | Porto, Portugal",
@@ -85,6 +72,19 @@
             "Experimentation and validation of client tools, including test planning, result analysis and report preparation.",
             "Collaboration on process improvement and with different stakeholders to clarify requirements and align priorities."
           ]
+        },
+        {
+          title: "Technical Systems Administrator & Software Developer",
+          company: "Freelance",
+          period: "August 2018 - Present",
+          bullets: [
+            "Administration, troubleshooting and optimization of production systems and services, focused on availability, performance, stability, security and maintenance.",
+            "Creation and management of containerized environments with Docker and Kubernetes for applications and services.",
+            "Development and maintenance of backend applications integrated with MySQL and MariaDB, including data structure, queries, processing and persistence.",
+            "Development of systems, automations and scripts in Python, Lua and web technologies for international clients and large-scale projects.",
+            "Version management, updates, functional testing, technical documentation and deployment of solutions to production.",
+            "Simultaneous management of projects and clients, balancing requirements, priorities, deadlines, technical support and continuous evolution of solutions."
+          ]
         }
       ],
       educationTitle: "Education",
@@ -121,19 +121,6 @@
       ],
       experienceTitle: "Experiência Profissional",
       experience: [
-        {
-          title: "Administrador Técnico de Sistemas e Desenvolvedor de Software",
-          company: "Freelance",
-          period: "Agosto de 2018 - Presente",
-          bullets: [
-            "Administração, troubleshooting e otimização de sistemas e serviços em produção, com foco em disponibilidade, desempenho, estabilidade, segurança e manutenção.",
-            "Criação e gestão de ambientes containerizados com Docker e Kubernetes para aplicações e serviços.",
-            "Desenvolvimento e manutenção de aplicações backend integradas com MySQL e MariaDB, incluindo estruturação, consultas, tratamento e persistência de dados.",
-            "Desenvolvimento de sistemas, automações e scripts em Python, Lua e tecnologias web para clientes internacionais e projetos de grande dimensão.",
-            "Gestão de versões, atualizações, testes funcionais, documentação técnica e implementação de soluções em produção.",
-            "Gestão simultânea de projetos e clientes, conciliando requisitos, prioridades, prazos, suporte técnico e evolução contínua das soluções."
-          ]
-        },
         {
           title: "Consultor de Clientes Empresariais",
           company: "Concentrix",
@@ -176,6 +163,19 @@
             "Controlo de qualidade, identificação de inconsistências e reporte de situações relevantes para suporte à resolução de problemas.",
             "Experimentação e validação de ferramentas do cliente, incluindo planeamento de testes, análise de resultados e elaboração de relatórios.",
             "Colaboração na melhoria de processos e com diferentes intervenientes para clarificação de requisitos e alinhamento de prioridades."
+          ]
+        },
+        {
+          title: "Administrador Técnico de Sistemas e Desenvolvedor de Software",
+          company: "Freelance",
+          period: "Agosto de 2018 - Presente",
+          bullets: [
+            "Administração, troubleshooting e otimização de sistemas e serviços em produção, com foco em disponibilidade, desempenho, estabilidade, segurança e manutenção.",
+            "Criação e gestão de ambientes containerizados com Docker e Kubernetes para aplicações e serviços.",
+            "Desenvolvimento e manutenção de aplicações backend integradas com MySQL e MariaDB, incluindo estruturação, consultas, tratamento e persistência de dados.",
+            "Desenvolvimento de sistemas, automações e scripts em Python, Lua e tecnologias web para clientes internacionais e projetos de grande dimensão.",
+            "Gestão de versões, atualizações, testes funcionais, documentação técnica e implementação de soluções em produção.",
+            "Gestão simultânea de projetos e clientes, conciliando requisitos, prioridades, prazos, suporte técnico e evolução contínua das soluções."
           ]
         }
       ],

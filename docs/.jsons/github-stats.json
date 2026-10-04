@@ -2367,5 +2367,8 @@
         "downloads": 16
       }
     }
-  }
+  },
+  "stale": true,
+  "fetchError": "403 rate limit exceeded: https://api.github.com/orgs/LiliaFramework/repos?type=public&sort=pushed&direction=desc&per_page=100&page=1",
+  "fetchedAt": "2026-10-04T10:00:17.182Z"
 }
