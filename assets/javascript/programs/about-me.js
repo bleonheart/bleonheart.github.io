@@ -41,7 +41,7 @@
           ]
         },
         {
-          title: "Technical Systems & Online Communities Administrator",
+          title: "Systems Administrator & Online Infrastructure Manager",
           company: "Freelance",
           period: "January 2024 - May 2025 | Parallel freelance project",
           bullets: [
@@ -52,7 +52,7 @@
           ]
         },
         {
-          title: "Web Administrator & Digital Analyst",
+          title: "Web Administrator & Digital Operations Analyst",
           company: "Freelance",
           period: "January 2024 - December 2024 | Parallel freelance project",
           bullets: [
@@ -74,7 +74,7 @@
           ]
         },
         {
-          title: "Technical Systems Administrator & Software Developer",
+          title: "Linux Systems Administrator & Software Developer",
           company: "Freelance",
           period: "August 2018 - Present",
           bullets: [
@@ -133,7 +133,7 @@
           ]
         },
         {
-          title: "Administrador Técnico de Sistemas e Comunidades Online",
+          title: "Administrador de Sistemas e Gestor de Infraestrutura Online",
           company: "Freelance",
           period: "Janeiro de 2024 - Maio de 2025 | Projeto freelance em paralelo",
           bullets: [
@@ -144,7 +144,7 @@
           ]
         },
         {
-          title: "Administrador Web e Analista Digital",
+          title: "Administrador Web e Analista de Operações Digitais",
           company: "Freelance",
           period: "Janeiro de 2024 - Dezembro de 2024 | Projeto freelance em paralelo",
           bullets: [
@@ -166,7 +166,7 @@
           ]
         },
         {
-          title: "Administrador Técnico de Sistemas e Desenvolvedor de Software",
+          title: "Administrador de Sistemas Linux e Programador de Software",
           company: "Freelance",
           period: "Agosto de 2018 - Presente",
           bullets: [
