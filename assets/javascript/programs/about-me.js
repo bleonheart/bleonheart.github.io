@@ -298,7 +298,11 @@
       button.type = "button";
       button.dataset.aboutTab = id;
       button.setAttribute("aria-current", id === active ? "page" : "false");
-      button.addEventListener("click", () => onSelect(id));
+      button.addEventListener("click", () => {
+        onSelect(id);
+        const path = id === "projects" ? "/projects/" : "/cv/";
+        if (location.pathname !== path) history.pushState({ portfolioTab: id }, "", `${path}${location.search}`);
+      });
       tabs.append(button);
     }
     return tabs;
