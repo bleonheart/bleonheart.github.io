@@ -97,8 +97,13 @@ jobs:
 
           cp -a docs/. .site/
           cp -a assets .site/assets
+          mkdir -p .site/cv .site/projects
+          cp .site/index.html .site/cv/index.html
+          cp .site/index.html .site/projects/index.html
 
           test -s .site/index.html
+          test -s .site/cv/index.html
+          test -s .site/projects/index.html
           test -s .site/assets/javascript/site.js
           test -s .site/derma-creator/index.html
 
