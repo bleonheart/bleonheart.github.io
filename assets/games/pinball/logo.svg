@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="66%"><stop stop-color="#31102e"/><stop offset="1" stop-color="#050909"/></radialGradient>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd4ff"/><stop offset=".48" stop-color="#e74bd8"/><stop offset="1" stop-color="#77226e"/></linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7ffff"/><stop offset="1" stop-color="#ffd4ff"/></linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="8"/><feOffset dy="6"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g filter="url(#sh)">
+<path d="M256 18 286 72 256 116 226 72Z" fill="url(#a)" stroke="#ffd4ff" stroke-width="5"/>
+<path d="M494 256 440 286 396 256 440 226Z" fill="url(#a)" stroke="#ffd4ff" stroke-width="5"/>
+<path d="M256 494 226 440 256 396 286 440Z" fill="url(#a)" stroke="#ffd4ff" stroke-width="5"/>
+<path d="M18 256 72 226 116 256 72 286Z" fill="url(#a)" stroke="#ffd4ff" stroke-width="5"/>
+<circle cx="256" cy="256" r="171" fill="url(#bg)" stroke="url(#a)" stroke-width="13"/>
+<circle cx="256" cy="256" r="140" fill="none" stroke="#e74bd8" stroke-width="5" stroke-dasharray="62 20" opacity=".92"/>
+<circle cx="256" cy="256" r="119" fill="none" stroke="#ffd4ff" stroke-width="2" opacity=".2"/>
+<path d="m256 92 6 13 13 6-13 6-6 13-6-13-13-6 13-6Z" fill="#ffd4ff" opacity=".78"/>
+<path d="m145 150 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#e74bd8" opacity=".72"/>
+<path d="m367 150 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#e74bd8" opacity=".72"/>
+
+<circle cx="256" cy="238" r="34" fill="url(#m)" stroke="#ff80ee" stroke-width="6"/>
+<circle cx="192" cy="195" r="18" fill="#e65589" stroke="#ffd1e5" stroke-width="5"/><circle cx="320" cy="195" r="18" fill="#e65589" stroke="#ffd1e5" stroke-width="5"/>
+<path d="m173 305 24-20 49 30-17 26Z" fill="url(#a)" stroke="#ffd4ff" stroke-width="6" stroke-linejoin="round"/>
+<path d="m339 305-24-20-49 30 17 26Z" fill="url(#a)" stroke="#ffd4ff" stroke-width="6" stroke-linejoin="round"/>
+<path d="M194 232c-28 19-35 43-22 72M318 232c28 19 35 43 22 72" fill="none" stroke="#cb64ff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+</g>
+</svg>
