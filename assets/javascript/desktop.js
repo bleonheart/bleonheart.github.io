@@ -2450,38 +2450,7 @@
 
   const requestedApplication = new URLSearchParams(location.search).get("app");
 
-  const getDirectRoute = () => {
-    const path = location.pathname.replace(/\/+$/, "") || "/";
-    if (path === "/cv") return "about";
-    if (path === "/projects") return "projects";
-
-    const hash = location.hash.toLowerCase();
-    if (hash === "#cv") return "about";
-    if (hash === "#projects") return "projects";
-    return "";
-  };
-
-  const openAboutRoute = (target) => {
-    if (target === "projects") return openApplication("projects", { focus: false });
-    if (!openApplication("about-me", { focus: false })) return false;
-    requestAnimationFrame(() => window.dispatchEvent(new CustomEvent("portfolio:about-tab", { detail: { target: "about" } })));
-    return true;
-  };
-
-  const navigateDirectRoute = () => {
-    const target = getDirectRoute();
-    return target ? openAboutRoute(target) : false;
-  };
-
-  const navigateHash = () => {
-    if (navigateDirectRoute()) return;
-    if (location.hash !== "#reviews" && location.hash !== "#about-reviews") return;
-    openApplication("about", { focus: false });
-    requestAnimationFrame(() => windows.get("about")?.element.querySelector("#about-reviews")?.scrollIntoView({ block: "start" }));
-  };
-
   function restoreDesktopSession() {
-    if (navigateDirectRoute()) return;
     if (requestedApplication && applications.has(requestedApplication)) {
       openApplication(requestedApplication, { focus: false });
       const requestedWindow = windows.get(requestedApplication);
@@ -2490,12 +2459,13 @@
     navigateHash();
   }
 
+  const navigateHash = () => {
+    if (location.hash !== "#reviews" && location.hash !== "#about-reviews") return;
+    openApplication("about", { focus: false });
+    requestAnimationFrame(() => windows.get("about")?.element.querySelector("#about-reviews")?.scrollIntoView({ block: "start" }));
+  };
+
   window.addEventListener("hashchange", navigateHash);
-  window.addEventListener("popstate", () => {
-    if (navigateDirectRoute()) return;
-    if (location.pathname === "/" && !location.hash) openAboutRoute("about");
-    else navigateHash();
-  });
   restoreDesktopSession();
   runPageStartup();
 })();
