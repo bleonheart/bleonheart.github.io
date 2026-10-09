@@ -529,66 +529,6 @@
       "githubRepository": "bleonheart/gmod-globals-scraper"
     },
     {
-      "id": "rhel-system-baseline",
-      "name": "RHEL 9 System Baseline",
-      "summary": "A Red Hat Enterprise Linux 9 lab using Ansible to configure core services, firewall rules, packages and SELinux status checks.",
-      "status": "labs",
-      "category": "Lab · Red Hat Enterprise Linux / Ansible",
-      "years": "2026",
-      "technologies": [
-        "Red Hat Enterprise Linux 9",
-        "Ansible",
-        "DNF",
-        "firewalld",
-        "SELinux",
-        "chrony",
-        "SSH"
-      ],
-      "lifecycle": "labs",
-      "work": [
-        "RHEL 9 distribution and SSH port validation",
-        "Idempotent Ansible package and service configuration",
-        "SSH firewall rule applied before firewalld activation",
-        "SELinux mode inspection without automatically weakening enforcement"
-      ],
-      "links": [
-        {
-          "label": "Project Source",
-          "url": "https://github.com/bleonheart/My-Modules/tree/main/rhel-labs/system-baseline"
-        }
-      ]
-    },
-    {
-      "id": "rhel-quadlet-web",
-      "name": "RHEL Podman Quadlet Web Service",
-      "summary": "A Red Hat Enterprise Linux 9 example deploying a static web page through a rootless Podman container managed by systemd Quadlet.",
-      "status": "labs",
-      "category": "Lab · Red Hat Enterprise Linux / Containers",
-      "years": "2026",
-      "technologies": [
-        "Red Hat Enterprise Linux 9",
-        "Podman",
-        "Quadlet",
-        "systemd",
-        "SELinux",
-        "Bash",
-        "UBI 9"
-      ],
-      "lifecycle": "labs",
-      "work": [
-        "Rootless Red Hat UBI 9 HTTP server container",
-        "Quadlet service with loopback-only published port",
-        "SELinux-aware read-only bind mount",
-        "Reproducible installer and verification instructions"
-      ],
-      "links": [
-        {
-          "label": "Project Source",
-          "url": "https://github.com/bleonheart/My-Modules/tree/main/rhel-labs/quadlet-web"
-        }
-      ]
-    },
-    {
       "id": "linux-infrastructure-lab",
       "name": "Linux Infrastructure Lab",
       "summary": "A reproducible production-style Linux infrastructure environment covering deployment, automation, observability and day-two operations.",

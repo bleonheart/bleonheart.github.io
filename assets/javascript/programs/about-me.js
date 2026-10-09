@@ -18,7 +18,7 @@
       targetRolesNote: "These are examples, not limits. If my broader skill set fits another role, even if it is not listed here, feel free to get in touch.",
       skillsTitle: "Technical Skills",
       skills: [
-        ["Linux & Systems", "Linux (Red Hat Enterprise Linux / RHEL, Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
+        ["Linux & Systems", "Linux (Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
         ["DevOps, CI/CD & IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | Terraform | Ansible | Bash/Shell | PowerShell"],
         ["Cloud & Infrastructure", "AWS | Microsoft Azure | Google Cloud Platform | Proxmox | Cloudflare | Cloudflare Workers"],
         ["Data & SQL", "SQL | MySQL | MariaDB | Excel | Power BI"],
@@ -110,7 +110,7 @@
       targetRolesNote: "Estes são exemplos, não limites. Se o meu conjunto de competências se adequar a outra função, mesmo que não esteja listada aqui, sinta-se à vontade para me contactar.",
       skillsTitle: "Competências Técnicas",
       skills: [
-        ["Linux e Sistemas", "Linux (Red Hat Enterprise Linux / RHEL, Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
+        ["Linux e Sistemas", "Linux (Ubuntu, Debian, Rocky Linux, CentOS Stream) | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
         ["DevOps, CI/CD e IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | Terraform | Ansible | Bash/Shell | PowerShell"],
         ["Cloud e Infraestrutura", "AWS | Microsoft Azure | Google Cloud Platform | Proxmox | Cloudflare | Cloudflare Workers"],
         ["Dados e SQL", "SQL | MySQL | MariaDB | Excel | Power BI"],
