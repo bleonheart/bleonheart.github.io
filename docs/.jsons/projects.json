@@ -529,6 +529,75 @@
       "githubRepository": "bleonheart/gmod-globals-scraper"
     },
     {
+      "id": "rhel-game-server-hosting",
+      "name": "RHEL Game Server Hosting",
+      "summary": "Administration of Red Hat Enterprise Linux servers hosting multiplayer games, with a focus on reliable operation, deployment and ongoing maintenance.",
+      "status": "labs",
+      "category": "Infrastructure · RHEL / Game Server Hosting",
+      "years": "Not specified",
+      "technologies": [
+        "Red Hat Enterprise Linux (RHEL)",
+        "Linux",
+        "Game Servers",
+        "SSH",
+        "systemd"
+      ],
+      "lifecycle": "labs",
+      "work": [
+        "Managed RHEL servers used to host multiplayer games",
+        "Handled server setup, game-service configuration and deployment",
+        "Performed game-server updates, restarts and routine maintenance",
+        "Troubleshot hosting availability, connectivity and performance issues"
+      ],
+      "links": []
+    },
+    {
+      "id": "rhel-website-hosting",
+      "name": "RHEL Website Hosting",
+      "summary": "Management of Red Hat Enterprise Linux web-hosting infrastructure supporting website availability, configuration and day-to-day operations.",
+      "status": "labs",
+      "category": "Infrastructure · RHEL / Web Hosting",
+      "years": "Not specified",
+      "technologies": [
+        "Red Hat Enterprise Linux (RHEL)",
+        "Linux",
+        "Web Hosting",
+        "HTTP/HTTPS",
+        "SSH"
+      ],
+      "lifecycle": "labs",
+      "work": [
+        "Managed RHEL servers hosting a website",
+        "Maintained website deployment and host-level web-service configuration",
+        "Performed system maintenance and service availability checks",
+        "Investigated website access and server connectivity issues"
+      ],
+      "links": []
+    },
+    {
+      "id": "rhel-hosting-operations",
+      "name": "RHEL Hosting Operations & Maintenance",
+      "summary": "Ongoing administration of Red Hat Enterprise Linux machines supporting game servers and a website, encompassing service operations and general server maintenance.",
+      "status": "labs",
+      "category": "Infrastructure · RHEL / Systems Administration",
+      "years": "Not specified",
+      "technologies": [
+        "Red Hat Enterprise Linux (RHEL)",
+        "Linux",
+        "SSH",
+        "systemd",
+        "Server Administration"
+      ],
+      "lifecycle": "labs",
+      "work": [
+        "Administered RHEL hosts supporting both game and website workloads",
+        "Maintained running services and handled routine operating-system updates",
+        "Monitored system health, resource usage and service availability",
+        "Resolved operational issues affecting hosted services"
+      ],
+      "links": []
+    },
+    {
       "id": "linux-infrastructure-lab",
       "name": "Linux Infrastructure Lab",
       "summary": "A reproducible production-style Linux infrastructure environment covering deployment, automation, observability and day-two operations.",
