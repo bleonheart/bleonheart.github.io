@@ -156,10 +156,7 @@
     launcher.type = "button";
     launcher.setAttribute("aria-label", t("reopen"));
     launcher.hidden = true;
-    launcher.addEventListener("click", () => {
-      window.PortfolioDesktop?.minimizeAllApplications?.();
-      setExpanded(true);
-    });
+    launcher.addEventListener("click", () => setExpanded(true));
     document.body.append(panel, launcher);
 
     const setExpanded = (expanded) => {
@@ -334,12 +331,13 @@
     loadSkills();
     render();
 
+    window.addEventListener("portfolio:app-opened", () => setExpanded(false));
+
     let openedOnStartup = false;
     const openOnStartup = () => {
       if (openedOnStartup) return;
       openedOnStartup = true;
-      window.PortfolioDesktop?.minimizeAllApplications?.();
-      setExpanded(true);
+      setExpanded(!window.PortfolioDesktop?.hasVisibleApplications?.());
     };
     window.addEventListener("portfolio:desktop-ready", openOnStartup, { once: true });
     if (document.querySelector("[data-desktop-shell]")?.dataset.startupComplete === "true") openOnStartup();

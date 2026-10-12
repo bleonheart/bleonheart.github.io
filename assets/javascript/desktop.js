@@ -1353,6 +1353,13 @@
     if (next) setActive(next);
   }
 
+  function hasVisibleApplications() {
+    for (const entry of windows.values()) {
+      if (!entry.minimized) return true;
+    }
+    return false;
+  }
+
   function minimizeAllApplications() {
     let minimized = 0;
     for (const entry of windows.values()) {
@@ -2454,6 +2461,7 @@
   window.PortfolioDesktop = {
     applications,
     openApplication,
+    hasVisibleApplications,
     minimizeAllApplications,
     openCreation,
     getRuntimeStats,
@@ -2464,7 +2472,7 @@
   const aboutTabRoutes = new Map([["/cv", "about"], ["/projects", "projects"], ["/skills", "proficiency"]]);
 
   function getRequestedAboutTab() {
-    const path = location.pathname.replace(/\/index\.html$/i, "").replace(/\/+$/, "");
+    const path = location.pathname.replace(/\/+/g, "/").replace(/\/index\.html$/i, "").replace(/\/+$/, "");
     const requestedTab = aboutTabRoutes.get(path);
     if (requestedTab) return requestedTab;
     const initialTab = window.PORTFOLIO_INITIAL_TAB;
