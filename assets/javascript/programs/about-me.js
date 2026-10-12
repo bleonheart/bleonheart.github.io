@@ -34,7 +34,7 @@
         ["Microsoft Office & Applications", "Microsoft Word | Microsoft PowerPoint | Microsoft Outlook | Microsoft Teams | Microsoft OneNote | Microsoft Access | Microsoft Publisher | Microsoft OneDrive | Microsoft SharePoint | Microsoft Visio | Microsoft Project | Microsoft Forms | Microsoft Planner | Microsoft To Do | Microsoft Power Automate | Microsoft Power Apps | Microsoft Loop | Microsoft Whiteboard | Microsoft Copilot"]
       ],
       overviewSkills: [
-        ["Linux & Systems", "Linux | RHEL | Windows Server | Proxmox | SSH"],
+        ["Linux & Systems", "Linux | Red Hat Linux | RHEL | Windows Server | Proxmox | SSH"],
         ["DevOps & Cloud", "Docker | Kubernetes | GitHub Actions | Terraform | AWS"],
         ["Programming & Scripting", "Python | Lua | GLua | Bash | JavaScript"],
         ["Databases & Web", "MySQL | MariaDB | PostgreSQL | Nginx"],
@@ -125,10 +125,6 @@
         notPublished: "Proficiency ratings have not been set yet.",
         loadError: "Could not load the published ratings. Showing unrated technologies.",
         loading: "Loading proficiency ratings...",
-        edit: "Edit ratings",
-        done: "Finish editing",
-        download: "Download ratings JSON",
-        editNote: "This editor only previews changes in your browser. Download the JSON, replace .jsons/technology-proficiency.json in the project, then regenerate and publish the site to make them public.",
         levels: ["Not rated", "Beginner", "Familiar", "Intermediate", "Advanced", "Expert"]
       },
       actions: { email: "Email", emailCopied: "Email copied to clipboard.", emailCopiedShort: "Copied ✓", emailCopyFailed: "Could not copy the email address.", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", projects: "View Projects" }
@@ -163,7 +159,7 @@
         ["Microsoft Office e Aplicações", "Microsoft Word | Microsoft PowerPoint | Microsoft Outlook | Microsoft Teams | Microsoft OneNote | Microsoft Access | Microsoft Publisher | Microsoft OneDrive | Microsoft SharePoint | Microsoft Visio | Microsoft Project | Microsoft Forms | Microsoft Planner | Microsoft To Do | Microsoft Power Automate | Microsoft Power Apps | Microsoft Loop | Microsoft Whiteboard | Microsoft Copilot"]
       ],
       overviewSkills: [
-        ["Linux e Sistemas", "Linux | RHEL | Windows Server | Proxmox | SSH"],
+        ["Linux e Sistemas", "Linux | Red Hat Linux | RHEL | Windows Server | Proxmox | SSH"],
         ["DevOps e Cloud", "Docker | Kubernetes | GitHub Actions | Terraform | AWS"],
         ["Programação e Scripting", "Python | Lua | GLua | Bash | JavaScript"],
         ["Bases de Dados e Web", "MySQL | MariaDB | PostgreSQL | Nginx"],
@@ -564,20 +560,7 @@
 
   const normalizeRating = (level) => Number.isInteger(level) && level >= 1 && level <= 5 ? level : null;
 
-  const downloadRatings = (ratings) => {
-    const payload = { scale: 5, ratings: Object.fromEntries(technologyNames.map((name) => [name, normalizeRating(ratings[name])])) };
-    const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const anchor = create("a");
-    anchor.href = url;
-    anchor.download = "technology-proficiency.json";
-    document.body.append(anchor);
-    anchor.click();
-    anchor.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  };
-
-  const buildProficiencyView = (language, ratings, loaded, error, editing, onToggleEditing, onUpdate) => {
+  const buildProficiencyView = (language, ratings, loaded, error) => {
     const copy = content[language] || content.en;
     const labels = copy.proficiency;
     const body = create("div", "feature-app__body about-me-subtab technology-proficiency");
@@ -585,19 +568,7 @@
     const header = create("header", "technology-proficiency__header");
     const heading = create("div", "technology-proficiency__heading");
     heading.append(create("span", "feature-eyebrow", copy.eyebrow), create("h1", "", labels.title), create("p", "", labels.description));
-    const headerActions = create("div", "technology-proficiency__actions");
-    const toggle = create("button", "feature-button technology-proficiency__edit", editing ? labels.done : labels.edit);
-    toggle.type = "button";
-    toggle.disabled = !loaded;
-    toggle.addEventListener("click", onToggleEditing);
-    headerActions.append(toggle);
-    if (editing) {
-      const download = create("button", "feature-button feature-button--primary", labels.download);
-      download.type = "button";
-      download.addEventListener("click", () => downloadRatings(ratings));
-      headerActions.append(download);
-    }
-    header.append(heading, headerActions);
+    header.append(heading);
     sheet.append(header);
 
     if (!loaded) {
@@ -607,8 +578,6 @@
     }
 
     if (error) sheet.append(create("p", "technology-proficiency__notice", labels.loadError));
-    if (editing) sheet.append(create("p", "technology-proficiency__notice technology-proficiency__notice--editing", labels.editNote));
-
     const groups = create("div", "technology-proficiency__groups");
     let ratedCount = technologyNames.filter((name) => normalizeRating(ratings[name]) !== null).length;
 
@@ -639,26 +608,6 @@
 
         setGrade(ratings[name]);
 
-        if (editing) {
-          const picker = create("select", "technology-proficiency__picker");
-          picker.setAttribute("aria-label", `${displayName}: ${labels.title}`);
-          for (let level = 0; level <= 5; level++) {
-            const option = create("option", "", level === 0 ? labels.levels[0] : `${level}/5 · ${labels.levels[level]}`);
-            option.value = String(level);
-            picker.append(option);
-          }
-          picker.value = String(normalizeRating(ratings[name]) || 0);
-          picker.addEventListener("change", () => {
-            const before = normalizeRating(ratings[name]);
-            const after = normalizeRating(Number(picker.value));
-            onUpdate(name, after);
-            if (before === null && after !== null) ratedCount++;
-            if (before !== null && after === null) ratedCount--;
-            setGrade(after);
-            notice.hidden = ratedCount > 0;
-          });
-          card.append(picker);
-        }
         grid.append(card);
       }
       groups.append(section);
@@ -832,7 +781,6 @@
     let ratingsLoaded = false;
     let ratingsError = false;
     let ratingsRequest = null;
-    let editingRatings = false;
     const pane = create("div", "about-me-subtab-host");
 
     const renderTabs = () => {
@@ -853,15 +801,7 @@
         currentLanguage,
         ratings,
         ratingsLoaded,
-        ratingsError,
-        editingRatings,
-        () => {
-          editingRatings = !editingRatings;
-          renderProficiency();
-        },
-        (name, level) => {
-          ratings[name] = level;
-        }
+        ratingsError
       ));
     };
 
