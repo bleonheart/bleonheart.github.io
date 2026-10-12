@@ -19,14 +19,14 @@
       skillsEmpty: "No skills are currently rated 4 or higher.",
       skills: [
         ["Linux & Systems", "Linux | Red Hat Enterprise Linux (RHEL) | Fedora | Ubuntu | Debian | Arch Linux | Linux Mint | Kali Linux | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
-        ["Windows Administration & Virtualization", "VirtualBox | VMware | Active Directory | Group Policy | DNS Server | DHCP Server | winget | Chocolatey"],
-        ["DevOps, CI/CD & IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | GitHub Desktop | Terraform | Ansible | Bash/Shell | PowerShell | CI"],
+        ["Windows Administration & Virtualization", "VirtualBox | VMware | Active Directory | Group Policy | DNS Server | DHCP Server | winget | Chocolatey | Windows Terminal | PuTTY | WinSCP | FileZilla"],
+        ["DevOps, CI/CD & IaC", "Docker | Docker Compose | Docker Desktop | Kubernetes | Git | GitHub Actions | GitHub CLI | GitLab CI/CD | Jenkins | GitHub Desktop | Terraform | Ansible | Bash/Shell | PowerShell | CI"],
         ["Cloud & Infrastructure", "AWS | Microsoft Azure | Google Cloud Platform | Proxmox | Cloudflare | Cloudflare Workers"],
         ["Data & SQL", "SQL | MySQL | MariaDB | Excel | Power BI | PostgreSQL | phpMyAdmin | PostgreSQL 16 | PL/pgSQL | IndexedDB"],
         ["Networking & Security", "FortiGate | Wireshark | iptables | nftables | VLANs | NAT | Port Forwarding | Subnetting | CIDR | Routing | Load Balancing | Reverse Proxies | HTTP/HTTPS"],
         ["Operations & Support", "Production Support | Troubleshooting | Ticket Resolution | Incident Resolution | Systems Administration | Technical Support | QA/Testing | Technical Documentation | Requirements Management | Process Improvement | Server Administration | Zendesk"],
         ["Programming & Scripting", "Python | Lua | HTML | CSS | JavaScript | TypeScript | Go | GLua | Bash | JSON"],
-        ["Web Development & Hosting", "React | Vite | Nginx | XAMPP | GitHub Pages | Browser Runtime | Static Hosting | Static Assets | Web Hosting | MkDocs | Markdown | Data Scraping"],
+        ["Web Development & Hosting", "React | Vite | Node.js | Nginx | XAMPP | GitHub Pages | Browser Runtime | Static Hosting | Static Assets | Web Hosting | MkDocs | Markdown | Data Scraping"],
         ["Monitoring & Observability", "Prometheus | Grafana | Loki"],
         ["Game Development & Servers", "Garry's Mod | Source Engine | Unity 6.6 | Ren'Py | Game Scripting | Game Systems | Game Servers | SteamCMD | SRCDS | Lilia | Helix"],
         ["Development Tools & Libraries", "PySide6 | Pillow | AST | SARIF | LSP | Graphviz | VS Code API | Luacheck | Static Analysis | pytest | npm | Ollama"],
@@ -148,14 +148,14 @@
       skillsEmpty: "Não há competências avaliadas com nível 4 ou superior.",
       skills: [
         ["Linux e Sistemas", "Linux | Red Hat Enterprise Linux (RHEL) | Fedora | Ubuntu | Debian | Arch Linux | Linux Mint | Kali Linux | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
-        ["Administração Windows e Virtualização", "VirtualBox | VMware | Active Directory | Group Policy | DNS Server | DHCP Server | winget | Chocolatey"],
-        ["DevOps, CI/CD e IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | GitHub Desktop | Terraform | Ansible | Bash/Shell | PowerShell | CI"],
+        ["Administração Windows e Virtualização", "VirtualBox | VMware | Active Directory | Group Policy | DNS Server | DHCP Server | winget | Chocolatey | Windows Terminal | PuTTY | WinSCP | FileZilla"],
+        ["DevOps, CI/CD e IaC", "Docker | Docker Compose | Docker Desktop | Kubernetes | Git | GitHub Actions | GitHub CLI | GitLab CI/CD | Jenkins | GitHub Desktop | Terraform | Ansible | Bash/Shell | PowerShell | CI"],
         ["Cloud e Infraestrutura", "AWS | Microsoft Azure | Google Cloud Platform | Proxmox | Cloudflare | Cloudflare Workers"],
         ["Dados e SQL", "SQL | MySQL | MariaDB | Excel | Power BI | PostgreSQL | phpMyAdmin | PostgreSQL 16 | PL/pgSQL | IndexedDB"],
         ["Redes e Segurança", "FortiGate | Wireshark | iptables | nftables | VLANs | NAT | Port Forwarding | Subnetting | CIDR | Routing | Load Balancing | Reverse Proxies | HTTP/HTTPS"],
         ["Operações e Suporte", "Production Support | Troubleshooting | Ticket Resolution | Incident Resolution | Administração de Sistemas | Suporte Técnico | QA/Testes | Documentação Técnica | Gestão de Requisitos | Melhoria de Processos | Administração de Servidores | Zendesk"],
         ["Programação e Scripting", "Python | Lua | HTML | CSS | JavaScript | TypeScript | Go | GLua | Bash | JSON"],
-        ["Desenvolvimento Web e Alojamento", "React | Vite | Nginx | XAMPP | GitHub Pages | Ambiente de Execução no Navegador | Alojamento Estático | Recursos Estáticos | Alojamento Web | MkDocs | Markdown | Extração de Dados"],
+        ["Desenvolvimento Web e Alojamento", "React | Vite | Node.js | Nginx | XAMPP | GitHub Pages | Ambiente de Execução no Navegador | Alojamento Estático | Recursos Estáticos | Alojamento Web | MkDocs | Markdown | Extração de Dados"],
         ["Monitorização e Observabilidade", "Prometheus | Grafana | Loki"],
         ["Desenvolvimento de Jogos e Servidores", "Garry's Mod | Source Engine | Unity 6.6 | Ren'Py | Programação de Jogos | Sistemas de Jogos | Servidores de Jogos | SteamCMD | SRCDS | Lilia | Helix"],
         ["Ferramentas e Bibliotecas de Desenvolvimento", "PySide6 | Pillow | AST | SARIF | LSP | Graphviz | VS Code API | Luacheck | Análise Estática | pytest | npm | Ollama"],
@@ -431,6 +431,7 @@
 
     let count = 0;
     for (const [groupIndex, group] of technologyGroups.entries()) {
+      if (group.category === "Corporate Tools") continue;
       const selected = group.names.map((name, index) => ({
         name,
         label: language === "pt" ? group.translations[index] || name : name,
@@ -893,8 +894,8 @@
     function setTab(target, updateHistory = false) {
       const next = ["about", "proficiency", "projects"].includes(target) ? target : "about";
       if (updateHistory) {
-        const path = { about: "/cv", proficiency: "/skills", projects: "/projects" }[next];
-        if (location.pathname.replace(/\/$/, "") !== path) history.pushState({ portfolioTab: next }, "", path);
+        const path = { about: "/cv/", proficiency: "/skills/", projects: "/projects/" }[next];
+        if (location.pathname.replace(/\/index\.html$/, "").replace(/\/?$/, "/") !== path) history.pushState({ portfolioTab: next }, "", path);
       }
       clearCurrent();
       active = next;
@@ -936,7 +937,10 @@
       renderTabs();
     };
     root.__destroyAboutProgram = clearCurrent;
-    setTab("about");
+    const initialPath = location.pathname.replace(/\/index\.html$/i, "").replace(/\/+$/, "");
+    const initialTab = { "/cv": "about", "/projects": "projects", "/skills": "proficiency" }[initialPath]
+      || window.PORTFOLIO_INITIAL_TAB || "about";
+    setTab(initialTab);
   };
 
   programs.set("about-me", {

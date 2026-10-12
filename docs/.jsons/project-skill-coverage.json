@@ -1,9 +1,9 @@
 {
   "minimumProjects": 3,
   "projectCount": 1796,
-  "technologyCount": 148,
-  "technologyWithCoverage": 51,
-  "withoutEnoughProjects": 97,
+  "technologyCount": 155,
+  "technologyWithCoverage": 52,
+  "withoutEnoughProjects": 103,
   "skills": [
     {
       "technology": "Arch Linux",
@@ -55,6 +55,13 @@
       "exampleProjects": []
     },
     {
+      "technology": "Docker Desktop",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
       "technology": "Excel",
       "rating": 5,
       "count": 0,
@@ -69,6 +76,13 @@
       "exampleProjects": []
     },
     {
+      "technology": "FileZilla",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
       "technology": "FortiGate",
       "rating": 4,
       "count": 0,
@@ -76,8 +90,15 @@
       "exampleProjects": []
     },
     {
+      "technology": "GitHub CLI",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
       "technology": "GitHub Desktop",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
@@ -154,7 +175,7 @@
     },
     {
       "technology": "Microsoft Access",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
@@ -168,126 +189,126 @@
     },
     {
       "technology": "Microsoft Copilot",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Forms",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Loop",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft OneDrive",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft OneNote",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Outlook",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Planner",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Power Apps",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Power Automate",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft PowerPoint",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Project",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Publisher",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft SharePoint",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Teams",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft To Do",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Visio",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Whiteboard",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
     },
     {
       "technology": "Microsoft Word",
-      "rating": null,
+      "rating": 5,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
@@ -315,7 +336,7 @@
     },
     {
       "technology": "phpMyAdmin",
-      "rating": null,
+      "rating": 4,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
@@ -336,6 +357,13 @@
     },
     {
       "technology": "Process Improvement",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "PuTTY",
       "rating": 4,
       "count": 0,
       "meetsMinimum": false,
@@ -440,8 +468,22 @@
       "exampleProjects": []
     },
     {
+      "technology": "Windows Terminal",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
       "technology": "winget",
       "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "WinSCP",
+      "rating": 4,
       "count": 0,
       "meetsMinimum": false,
       "exampleProjects": []
@@ -976,6 +1018,30 @@
         {
           "id": "legacy-fallout-rp",
           "name": "Fallout RP Projects"
+        }
+      ]
+    },
+    {
+      "technology": "Node.js",
+      "rating": 3,
+      "count": 4,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-1508-northstar-forge-hosting-release-pipeline-hardening",
+          "name": "Northstar Forge Hosting — Release Pipeline Hardening"
+        },
+        {
+          "id": "freelance-1588-delta-field-server-works-build-validation-pipeline",
+          "name": "Delta Field Server Works — Build Validation Pipeline"
+        },
+        {
+          "id": "freelance-1608-beacon-junction-roleplay-network-rollback-aware-release-process",
+          "name": "Beacon Junction Roleplay Network — Rollback-Aware Release Process"
+        },
+        {
+          "id": "freelance-1688-pioneer-gate-gaming-collective-ci-failure-remediation",
+          "name": "Pioneer Gate Gaming Collective — CI Failure Remediation"
         }
       ]
     },

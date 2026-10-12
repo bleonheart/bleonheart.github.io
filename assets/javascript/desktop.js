@@ -145,6 +145,12 @@
 
   function runPageStartup(options = {}) {
     const restart = Boolean(options.restart);
+    if (options.skip && !restart) {
+      root.classList.remove("is-page-starting", "is-shutdown");
+      root.classList.add("is-page-ready");
+      if (startupOverlay) startupOverlay.hidden = true;
+      return;
+    }
     if (!startupOverlay) {
       root.classList.remove("is-page-starting");
       root.classList.add("is-page-ready");
@@ -289,11 +295,7 @@
     return emblem;
   }
 
-  const desktopGroupDefinitions = [
-    { id: "portfolio", label: "PORTFOLIO" },
-    { id: "projects", label: "PROJECTS" },
-    { id: "utilities", label: "UTILITIES" }
-  ];
+  const desktopGroupDefinitions = ["portfolio", "projects", "utilities"];
 
   function getDesktopGroup(application) {
     if (application.desktopGroup) return application.desktopGroup;
@@ -323,7 +325,7 @@
   }
 
   function renderDesktopShortcuts() {
-    const grouped = new Map(desktopGroupDefinitions.map(({ id }) => [id, []]));
+    const grouped = new Map(desktopGroupDefinitions.map((id) => [id, []]));
     const pinned = [];
 
     for (const application of registry) {
@@ -343,29 +345,17 @@
       return firstOrder - secondOrder || first.label.localeCompare(second.label);
     });
 
-    for (const definition of desktopGroupDefinitions) {
-      const items = orderApplications(grouped.get(definition.id) || []);
-      if (!items.length) continue;
-      const heading = document.createElement("div");
-      heading.className = "desktop-shortcuts__section-title";
-      heading.dataset.desktopSection = definition.id;
-      const text = document.createElement("span");
-      text.textContent = definition.label;
-      heading.append(text);
-      shortcuts.append(heading);
-      for (const application of items) shortcuts.append(createDesktopShortcut(application, definition.id));
+    for (const group of desktopGroupDefinitions) {
+      for (const application of orderApplications(grouped.get(group) || [])) {
+        shortcuts.append(createDesktopShortcut(application, group));
+      }
     }
 
     for (const [group, items] of grouped) {
-      if (desktopGroupDefinitions.some((definition) => definition.id === group) || !items.length) continue;
-      const heading = document.createElement("div");
-      heading.className = "desktop-shortcuts__section-title";
-      heading.dataset.desktopSection = group;
-      const text = document.createElement("span");
-      text.textContent = group.replace(/[-_]+/g, " ").toUpperCase();
-      heading.append(text);
-      shortcuts.append(heading);
-      for (const application of orderApplications(items)) shortcuts.append(createDesktopShortcut(application, group));
+      if (desktopGroupDefinitions.includes(group)) continue;
+      for (const application of orderApplications(items)) {
+        shortcuts.append(createDesktopShortcut(application, group));
+      }
     }
 
     for (const application of orderApplications(pinned)) {
@@ -2449,8 +2439,37 @@
   };
 
   const requestedApplication = new URLSearchParams(location.search).get("app");
+  const aboutTabRoutes = new Map([["/cv", "about"], ["/projects", "projects"], ["/skills", "proficiency"]]);
+
+  function getRequestedAboutTab() {
+    const path = location.pathname.replace(/\/index\.html$/i, "").replace(/\/+$/, "");
+    const requestedTab = aboutTabRoutes.get(path);
+    if (requestedTab) return requestedTab;
+    const initialTab = window.PORTFOLIO_INITIAL_TAB;
+    return ["about", "projects", "proficiency"].includes(initialTab) ? initialTab : null;
+  }
+
+  function navigateAboutRoute() {
+    const tab = getRequestedAboutTab();
+    if (!tab || !openApplication("about-me", { focus: false })) return false;
+    const aboutWindow = windows.get("about-me");
+    const aboutView = aboutWindow?.element.querySelector(".about-profile-app");
+    if (typeof aboutView?.__setAboutTab === "function") {
+      aboutView.__setAboutTab(tab);
+    } else {
+      requestAnimationFrame(() => window.dispatchEvent(new CustomEvent("portfolio:about-tab", { detail: { target: tab } })));
+    }
+    return true;
+  }
+
+  function navigateHash() {
+    if (location.hash !== "#reviews" && location.hash !== "#about-reviews") return;
+    openApplication("about", { focus: false });
+    requestAnimationFrame(() => windows.get("about")?.element.querySelector("#about-reviews")?.scrollIntoView({ block: "start" }));
+  }
 
   function restoreDesktopSession() {
+    if (navigateAboutRoute()) return;
     if (requestedApplication && applications.has(requestedApplication)) {
       openApplication(requestedApplication, { focus: false });
       const requestedWindow = windows.get(requestedApplication);
@@ -2459,13 +2478,10 @@
     navigateHash();
   }
 
-  const navigateHash = () => {
-    if (location.hash !== "#reviews" && location.hash !== "#about-reviews") return;
-    openApplication("about", { focus: false });
-    requestAnimationFrame(() => windows.get("about")?.element.querySelector("#about-reviews")?.scrollIntoView({ block: "start" }));
-  };
-
   window.addEventListener("hashchange", navigateHash);
+  window.addEventListener("popstate", () => {
+    if (!navigateAboutRoute()) navigateHash();
+  });
   restoreDesktopSession();
-  runPageStartup();
+  runPageStartup({ skip: Boolean(getRequestedAboutTab()) });
 })();
