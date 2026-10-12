@@ -315,7 +315,7 @@
       const disclaimerGroup = create("section", "projects-sidebar-group projects-disclaimer-group");
       disclaimerGroup.append(
         create("h2", "", "Disclaimer"),
-        create("p", "projects-disclaimer-copy", "Some project entries were dynamically retrieved via a Python script with properties assigned from the detected source contents. Because this process is automated, occasional errors, omissions, or mismatches may exist.")
+        create("p", "projects-disclaimer-copy", "Some project entries were dynamically retrieved via a Python script with properties assigned from the detected source contents. Because this process is automated, occasional errors, omissions, or mismatches may exist. Some entries still require manual assignment, so do not assume this list is fully finished.")
       );
 
       sidebar.append(filterGroup, statusGroup, tagsGroup, disclaimerGroup);
