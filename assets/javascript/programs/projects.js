@@ -245,17 +245,9 @@
 
       const body = create("div", "feature-app__body projects-archive-body");
       const results = create("section", "projects-results");
-      const lookup = create("div", "projects-lookup");
-      const lookupLabel = create("label", "projects-lookup__label", "Search projects and tags");
-      const lookupInput = create("input", "projects-lookup__input");
-      lookupInput.type = "search";
-      lookupInput.placeholder = "Search by name, technology or topic…";
-      lookupInput.autocomplete = "off";
-      lookupInput.dataset.projectSearch = "";
-      const lookupId = `projects-search-${Math.random().toString(36).slice(2, 9)}`;
-      lookupInput.id = lookupId;
-      lookupLabel.htmlFor = lookupId;
-      const lookupControls = create("div", "projects-lookup__controls");
+      const activeFilters = create("div", "projects-active-filters projects-lookup__controls");
+      activeFilters.setAttribute("aria-label", "Active project filters");
+      activeFilters.hidden = true;
       const selection = create("div", "projects-lookup__selection");
       selection.dataset.projectSelectedTag = "";
       selection.hidden = true;
@@ -263,15 +255,14 @@
       clearFilters.type = "button";
       clearFilters.dataset.projectClearFilters = "";
       clearFilters.hidden = true;
-      lookupControls.append(selection, clearFilters);
-      lookup.append(lookupLabel, lookupInput, lookupControls);
+      activeFilters.append(selection, clearFilters);
       const list = create("div", "cv-project-list");
       list.dataset.projectList = "";
       const pagination = create("nav", "projects-pagination");
       pagination.dataset.projectPagination = "";
       pagination.setAttribute("aria-label", "Project pages");
       pagination.hidden = true;
-      results.append(lookup, list, pagination);
+      results.append(activeFilters, list, pagination);
 
       const sidebar = create("aside", "projects-archive-sidebar");
       sidebar.setAttribute("aria-label", "Project filters and status");
@@ -347,15 +338,14 @@
       const pagination = app.querySelector("[data-project-pagination]");
       const categoryButtons = [...app.querySelectorAll("[data-project-category-filter]")];
       const statusRows = [...app.querySelectorAll("[data-project-status-row]")];
-      const projectSearch = app.querySelector("[data-project-search]");
       const tagSearch = app.querySelector("[data-project-tag-search]");
       const tagList = app.querySelector("[data-project-tag-list]");
       const selectedTagLabel = app.querySelector("[data-project-selected-tag]");
+      const activeFilters = app.querySelector(".projects-active-filters");
       const clearFilters = app.querySelector("[data-project-clear-filters]");
       let categoryFilter = "all";
       let statusFilter = "";
       const selectedTags = new Set();
-      let searchQuery = "";
       let currentPage = 1;
       let availableProjects = [...projects];
       let githubLabsLoaded = false;
@@ -370,28 +360,13 @@
           const tag = normalizeTag(value).slice(0, 100);
           if (tag) selectedTags.add(tag);
         }
-        if (typeof stored?.query === "string") searchQuery = stored.query.slice(0, 180);
       } catch {}
 
-      projectSearch.value = searchQuery;
 
       const saveSelection = () => {
         try {
-          sessionStorage.setItem(storageKey, JSON.stringify({ category: categoryFilter, status: statusFilter, tags: [...selectedTags], query: searchQuery }));
+          sessionStorage.setItem(storageKey, JSON.stringify({ category: categoryFilter, status: statusFilter, tags: [...selectedTags] }));
         } catch {}
-      };
-
-      const matchesSearch = (project) => {
-        const words = normalizeTag(searchQuery).split(/\s+/).filter(Boolean);
-        if (!words.length) return true;
-        const searchable = normalizeTag([
-          project.name,
-          project.summary,
-          project.category,
-          ...(Array.isArray(project.work) ? project.work : []),
-          ...projectTags(project)
-        ].join(" "));
-        return words.every((word) => searchable.includes(word));
       };
 
       const matchesProject = (project) => {
@@ -401,7 +376,7 @@
           const tags = new Set(projectTags(project).map(normalizeTag));
           if (![...selectedTags].every((tag) => tags.has(tag))) return false;
         }
-        return matchesSearch(project);
+        return true;
       };
 
       const selectTag = (value) => {
@@ -420,7 +395,6 @@
         for (const project of availableProjects) {
           if (categoryFilter !== "all" && projectCategory(project) !== categoryFilter) continue;
           if (statusFilter && projectState(project) !== statusFilter) continue;
-          if (!matchesSearch(project)) continue;
           for (const tag of projectTags(project)) {
             const key = normalizeTag(tag);
             counts.set(key, (counts.get(key) || 0) + 1);
@@ -442,7 +416,8 @@
           tagList.append(button);
         }
         if (!keys.length) tagList.append(create("p", "projects-tag-list__empty", "No matching tags"));
-        const hasFilters = categoryFilter !== "all" || Boolean(statusFilter || selectedTags.size || searchQuery.trim());
+        const hasFilters = categoryFilter !== "all" || Boolean(statusFilter || selectedTags.size);
+        activeFilters.hidden = !hasFilters;
         clearFilters.hidden = !hasFilters;
         selectedTagLabel.hidden = !selectedTags.size;
         selectedTagLabel.replaceChildren();
@@ -464,7 +439,6 @@
               const tags = new Set(projectTags(project).map(normalizeTag));
               if (![...selectedTags].every((tag) => tags.has(tag))) return false;
             }
-            if (!matchesSearch(project)) return false;
             return value === "all" || projectCategory(project) === value;
           }).length;
           const active = value === categoryFilter;
@@ -475,7 +449,7 @@
 
         for (const row of statusRows) {
           const value = row.dataset.projectStatusRow;
-          row.querySelector(".projects-status-row__count").textContent = String(availableProjects.filter((project) => (categoryFilter === "all" || projectCategory(project) === categoryFilter) && (!selectedTags.size || [...selectedTags].every((tag) => projectTags(project).some((value) => normalizeTag(value) === tag))) && matchesSearch(project) && projectState(project) === value).length);
+          row.querySelector(".projects-status-row__count").textContent = String(availableProjects.filter((project) => (categoryFilter === "all" || projectCategory(project) === categoryFilter) && (!selectedTags.size || [...selectedTags].every((tag) => projectTags(project).some((value) => normalizeTag(value) === tag))) && projectState(project) === value).length);
         }
       };
 
@@ -529,7 +503,7 @@
           pagination.hidden = true;
           const empty = create("div", "feature-empty");
           if (categoryFilter === "experiments" && !githubLabsLoaded) empty.append(create("strong", "", "Loading experiments…"), create("span", "", "Public experimental repositories are being loaded."));
-          else if (selectedTags.size || searchQuery.trim()) empty.append(create("strong", "", "No matching projects"), create("span", "", "Try another search term or clear your filters."));
+          else if (selectedTags.size) empty.append(create("strong", "", "No matching projects"), create("span", "", "Try another tag or clear your filters."));
           else if (statusFilter) empty.append(create("strong", "", "No projects match this status"), create("span", "", "Choose another project category or status."));
           else empty.append(create("strong", "", "No projects in this section"), create("span", "", "There are no projects available for this filter."));
           list.append(empty);
@@ -547,8 +521,6 @@
       const setLegacyFilter = (next) => {
         const normalized = normalizeFilter(next);
         selectedTags.clear();
-        searchQuery = "";
-        projectSearch.value = "";
         currentPage = 1;
         if (statusFilterKeys.has(normalized)) {
           categoryFilter = "all";
@@ -567,8 +539,6 @@
         categoryFilter = "all";
         statusFilter = "";
         selectedTags.clear();
-        searchQuery = "";
-        projectSearch.value = "";
         const projectIndex = availableProjects.indexOf(project);
         currentPage = Math.max(1, Math.floor(projectIndex / pageSize) + 1);
         saveSelection();
@@ -578,13 +548,6 @@
 
       const onFilter = (event) => setLegacyFilter(String(event.detail?.filter || "all"));
       const onOpenProject = (event) => focusProject(String(event.detail?.id || ""));
-
-      projectSearch.addEventListener("input", () => {
-        searchQuery = projectSearch.value.slice(0, 180);
-        currentPage = 1;
-        saveSelection();
-        render();
-      });
 
       tagSearch.addEventListener("input", updateTags);
 
@@ -607,8 +570,6 @@
         categoryFilter = "all";
         statusFilter = "";
         selectedTags.clear();
-        searchQuery = "";
-        projectSearch.value = "";
         tagSearch.value = "";
         currentPage = 1;
         saveSelection();

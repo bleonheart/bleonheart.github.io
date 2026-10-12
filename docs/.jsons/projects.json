@@ -534,8 +534,8 @@
     {
       "id": "rhel-game-server-hosting",
       "name": "RHEL Game Server Hosting",
-      "summary": "Administration of Red Hat Enterprise Linux servers hosting multiplayer games, with a focus on reliable operation, deployment and ongoing maintenance.",
-      "status": "labs",
+      "summary": "Previously administered Red Hat Enterprise Linux servers hosting multiplayer games, with a focus on reliability, deployment and maintenance.",
+      "status": "archived",
       "category": "Infrastructure · RHEL / Game Server Hosting",
       "years": "Not specified",
       "technologies": [
@@ -545,7 +545,7 @@
         "SSH",
         "systemd"
       ],
-      "lifecycle": "labs",
+      "lifecycle": "archived",
       "work": [
         "Managed RHEL servers used to host multiplayer games",
         "Handled server setup, game-service configuration and deployment",
@@ -557,8 +557,8 @@
     {
       "id": "rhel-website-hosting",
       "name": "RHEL Website Hosting",
-      "summary": "Management of Red Hat Enterprise Linux web-hosting infrastructure supporting website availability, configuration and day-to-day operations.",
-      "status": "labs",
+      "summary": "Previously managed Red Hat Enterprise Linux web-hosting infrastructure supporting website availability, configuration and operations.",
+      "status": "archived",
       "category": "Infrastructure · RHEL / Web Hosting",
       "years": "Not specified",
       "technologies": [
@@ -568,7 +568,7 @@
         "HTTP/HTTPS",
         "SSH"
       ],
-      "lifecycle": "labs",
+      "lifecycle": "archived",
       "work": [
         "Managed RHEL servers hosting a website",
         "Maintained website deployment and host-level web-service configuration",
@@ -580,8 +580,8 @@
     {
       "id": "rhel-hosting-operations",
       "name": "RHEL Hosting Operations & Maintenance",
-      "summary": "Ongoing administration of Red Hat Enterprise Linux machines supporting game servers and a website, encompassing service operations and general server maintenance.",
-      "status": "labs",
+      "summary": "Past administration of Red Hat Enterprise Linux machines supporting game servers and a website, including service operations and server maintenance.",
+      "status": "archived",
       "category": "Infrastructure · RHEL / Systems Administration",
       "years": "Not specified",
       "technologies": [
@@ -593,7 +593,7 @@
         "Game Servers",
         "Systems Administration"
       ],
-      "lifecycle": "labs",
+      "lifecycle": "archived",
       "work": [
         "Administered RHEL hosts supporting both game and website workloads",
         "Maintained running services and handled routine operating-system updates",
