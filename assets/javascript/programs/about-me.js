@@ -13,24 +13,55 @@
       availability: "Open to opportunities",
       summaryTitle: "Professional Summary",
       summary: "Linux Systems Administration, DevOps and IT Operations professional experienced in production systems, automation, containers, cloud, CI/CD, IaC, databases and technical support. Focused on troubleshooting, reliability, automation and continuous improvement.",
-      targetRolesTitle: "Roles I'm Looking For",
-      targetRoles: ["Linux Systems Administrator", "DevOps Engineer", "IT Operations Engineer", "IT Support Technician"],
-      targetRolesNote: "These are examples, not limits. If my broader skill set fits another role, even if it is not listed here, feel free to get in touch.",
-      skillsTitle: "Technical Skills",
+      skillsTitle: "Main Technical Skills",
+      skillsLoading: "Loading rated skills…",
+      skillsUnavailable: "Skill ratings are temporarily unavailable.",
+      skillsEmpty: "No skills are currently rated 4 or higher.",
       skills: [
-        ["Linux & Systems", "Linux | Red Hat Enterprise Linux (RHEL) | Fedora | Ubuntu | Debian | Arch Linux | Linux Mint | Kali Linux | CentOS Stream | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
-        ["DevOps, CI/CD & IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | Terraform | Ansible | Bash/Shell | PowerShell"],
+        ["Linux & Systems", "Linux | Red Hat Enterprise Linux (RHEL) | Fedora | Ubuntu | Debian | Arch Linux | Linux Mint | Kali Linux | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
+        ["Windows Administration & Virtualization", "VirtualBox | VMware | Active Directory | Group Policy | DNS Server | DHCP Server | winget | Chocolatey"],
+        ["DevOps, CI/CD & IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | GitHub Desktop | Terraform | Ansible | Bash/Shell | PowerShell | CI"],
         ["Cloud & Infrastructure", "AWS | Microsoft Azure | Google Cloud Platform | Proxmox | Cloudflare | Cloudflare Workers"],
-        ["Data & SQL", "SQL | MySQL | MariaDB | Excel | Power BI"],
-        ["Networking & Security", "FortiGate | Wireshark | iptables | nftables | VLANs | NAT | Port Forwarding | Subnetting | CIDR | Routing | Load Balancing | Reverse Proxies"],
-        ["Operations & Support", "Production Support | Troubleshooting | Ticket Resolution | Incident Resolution | Systems Administration | Technical Support | QA/Testing | Technical Documentation | Requirements Management | Process Improvement"],
-        ["Programming & Scripting", "Python | Lua | HTML | CSS"],
-        ["Corporate Tools", "Jira | Trello | Microsoft 365 | Google Workspace | Slack"]
+        ["Data & SQL", "SQL | MySQL | MariaDB | Excel | Power BI | PostgreSQL | phpMyAdmin | PostgreSQL 16 | PL/pgSQL | IndexedDB"],
+        ["Networking & Security", "FortiGate | Wireshark | iptables | nftables | VLANs | NAT | Port Forwarding | Subnetting | CIDR | Routing | Load Balancing | Reverse Proxies | HTTP/HTTPS"],
+        ["Operations & Support", "Production Support | Troubleshooting | Ticket Resolution | Incident Resolution | Systems Administration | Technical Support | QA/Testing | Technical Documentation | Requirements Management | Process Improvement | Server Administration | Zendesk"],
+        ["Programming & Scripting", "Python | Lua | HTML | CSS | JavaScript | TypeScript | Go | GLua | Bash | JSON"],
+        ["Web Development & Hosting", "React | Vite | Nginx | XAMPP | GitHub Pages | Browser Runtime | Static Hosting | Static Assets | Web Hosting | MkDocs | Markdown | Data Scraping"],
+        ["Monitoring & Observability", "Prometheus | Grafana | Loki"],
+        ["Game Development & Servers", "Garry's Mod | Source Engine | Unity 6.6 | Ren'Py | Game Scripting | Game Systems | Game Servers | SteamCMD | SRCDS | Lilia | Helix"],
+        ["Development Tools & Libraries", "PySide6 | Pillow | AST | SARIF | LSP | Graphviz | VS Code API | Luacheck | Static Analysis | pytest | npm | Ollama"],
+        ["Corporate Tools", "Jira | Trello | Microsoft 365 | Google Workspace | Slack"],
+        ["Microsoft Office & Applications", "Microsoft Word | Microsoft PowerPoint | Microsoft Outlook | Microsoft Teams | Microsoft OneNote | Microsoft Access | Microsoft Publisher | Microsoft OneDrive | Microsoft SharePoint | Microsoft Visio | Microsoft Project | Microsoft Forms | Microsoft Planner | Microsoft To Do | Microsoft Power Automate | Microsoft Power Apps | Microsoft Loop | Microsoft Whiteboard | Microsoft Copilot"]
+      ],
+      overviewSkills: [
+        ["Linux & Systems", "Linux | RHEL | Windows Server | Proxmox | SSH"],
+        ["DevOps & Cloud", "Docker | Kubernetes | GitHub Actions | Terraform | AWS"],
+        ["Programming & Scripting", "Python | Lua | GLua | Bash | JavaScript"],
+        ["Databases & Web", "MySQL | MariaDB | PostgreSQL | Nginx"],
+        ["Networking & Security", "FortiGate | Wireshark | VLANs | iptables"],
+        ["Operations & Support", "Troubleshooting | Incident Resolution | Production Support | Technical Documentation"]
       ],
       experienceTitle: "Professional Experience",
       experience: [
         {
+          title: "Linux Systems Administrator & Software Developer",
+          icon: "server",
+          teaser: "Production infrastructure, backend systems and automations.",
+          company: "Freelance",
+          period: "August 2018 - Present",
+          bullets: [
+            "Administration, troubleshooting and optimization of production systems and services, focused on availability, performance, stability, security and maintenance.",
+            "Creation and management of containerized environments with Docker and Kubernetes for applications and services.",
+            "Development and maintenance of backend applications integrated with MySQL and MariaDB, including data structure, queries, processing and persistence.",
+            "Development of systems, automations and scripts in Python, Lua and web technologies for international clients and large-scale projects.",
+            "Version management, updates, functional testing, technical documentation and deployment of solutions to production.",
+            "Simultaneous management of projects and clients, balancing requirements, priorities, deadlines, technical support and continuous evolution of solutions."
+          ]
+        },
+        {
           title: "Business Customer Consultant",
+          icon: "headset",
+          teaser: "Management and resolution of business customer requests, tickets and escalations. Coordination across teams to maintain service quality.",
           company: "Concentrix",
           period: "January 2025 - October 2025 | Porto, Portugal",
           bullets: [
@@ -42,6 +73,8 @@
         },
         {
           title: "Systems Administrator & Online Infrastructure Manager",
+          icon: "server",
+          teaser: "Technical services for large North American communities with multiple game servers. Server administration, monitoring and production optimization.",
           company: "Freelance",
           period: "January 2024 - May 2025 | Parallel freelance project",
           bullets: [
@@ -53,6 +86,8 @@
         },
         {
           title: "Web Administrator & Digital Operations Analyst",
+          icon: "globe",
+          teaser: "Technical administration of websites and digital platforms. Traffic analysis, digital metrics and search visibility improvements.",
           company: "Freelance",
           period: "January 2024 - December 2024 | Parallel freelance project",
           bullets: [
@@ -63,6 +98,8 @@
         },
         {
           title: "Operations Administrative Assistant",
+          icon: "file",
+          teaser: "Processing and validation of data across multiple formats. Quality assurance, reporting and operational support.",
           company: "Accenture Portugal",
           period: "November 2022 - October 2024 | Lisbon, Portugal",
           bullets: [
@@ -72,19 +109,6 @@
             "Experimentation and validation of client tools, including test planning, result analysis and report preparation.",
             "Collaboration on process improvement and with different stakeholders to clarify requirements and align priorities."
           ]
-        },
-        {
-          title: "Linux Systems Administrator & Software Developer",
-          company: "Freelance",
-          period: "August 2018 - Present",
-          bullets: [
-            "Administration, troubleshooting and optimization of production systems and services, focused on availability, performance, stability, security and maintenance.",
-            "Creation and management of containerized environments with Docker and Kubernetes for applications and services.",
-            "Development and maintenance of backend applications integrated with MySQL and MariaDB, including data structure, queries, processing and persistence.",
-            "Development of systems, automations and scripts in Python, Lua and web technologies for international clients and large-scale projects.",
-            "Version management, updates, functional testing, technical documentation and deployment of solutions to production.",
-            "Simultaneous management of projects and clients, balancing requirements, priorities, deadlines, technical support and continuous evolution of solutions."
-          ]
         }
       ],
       educationTitle: "Education",
@@ -93,7 +117,20 @@
       languagesTitle: "Languages",
       localizationTitle: "Languages",
       languages: [["Portuguese", "C2"], ["English", "C2"], ["Spanish", "B2"]],
-      tabs: { about: "About Me", projects: "Projects" },
+      tabs: { about: "About Me", proficiency: "Technology Proficiency", projects: "Projects" },
+      proficiency: {
+        title: "Technology Proficiency",
+        description: "My self-assessed proficiency across the technologies and skills I work with.",
+        unrated: "Not rated",
+        notPublished: "Proficiency ratings have not been set yet.",
+        loadError: "Could not load the published ratings. Showing unrated technologies.",
+        loading: "Loading proficiency ratings...",
+        edit: "Edit ratings",
+        done: "Finish editing",
+        download: "Download ratings JSON",
+        editNote: "This editor only previews changes in your browser. Download the JSON, replace .jsons/technology-proficiency.json in the project, then regenerate and publish the site to make them public.",
+        levels: ["Not rated", "Beginner", "Familiar", "Intermediate", "Advanced", "Expert"]
+      },
       actions: { email: "Email", emailCopied: "Email copied to clipboard.", emailCopiedShort: "Copied ✓", emailCopyFailed: "Could not copy the email address.", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", projects: "View Projects" }
     },
     pt: {
@@ -105,24 +142,55 @@
       availability: "Disponível para oportunidades",
       summaryTitle: "Resumo Profissional",
       summary: "Profissional de Administração de Sistemas Linux, DevOps e Operações de TI com experiência em sistemas de produção, automação, contentores, cloud, CI/CD, IaC, bases de dados e suporte técnico. Focado em troubleshooting, fiabilidade, automação e melhoria contínua.",
-      targetRolesTitle: "Funções que Procuro",
-      targetRoles: ["Linux Systems Administrator", "DevOps Engineer", "IT Operations Engineer", "IT Support Technician"],
-      targetRolesNote: "Estes são exemplos, não limites. Se o meu conjunto de competências se adequar a outra função, mesmo que não esteja listada aqui, sinta-se à vontade para me contactar.",
-      skillsTitle: "Competências Técnicas",
+      skillsTitle: "Principais Competências Técnicas",
+      skillsLoading: "A carregar competências avaliadas…",
+      skillsUnavailable: "As avaliações das competências estão temporariamente indisponíveis.",
+      skillsEmpty: "Não há competências avaliadas com nível 4 ou superior.",
       skills: [
-        ["Linux e Sistemas", "Linux | Red Hat Enterprise Linux (RHEL) | Fedora | Ubuntu | Debian | Arch Linux | Linux Mint | Kali Linux | CentOS Stream | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
-        ["DevOps, CI/CD e IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | Terraform | Ansible | Bash/Shell | PowerShell"],
+        ["Linux e Sistemas", "Linux | Red Hat Enterprise Linux (RHEL) | Fedora | Ubuntu | Debian | Arch Linux | Linux Mint | Kali Linux | Windows Server | Windows 10/11 | SSH | SFTP | systemd | cron"],
+        ["Administração Windows e Virtualização", "VirtualBox | VMware | Active Directory | Group Policy | DNS Server | DHCP Server | winget | Chocolatey"],
+        ["DevOps, CI/CD e IaC", "Docker | Docker Compose | Kubernetes | Git | GitHub Actions | GitLab CI/CD | Jenkins | GitHub Desktop | Terraform | Ansible | Bash/Shell | PowerShell | CI"],
         ["Cloud e Infraestrutura", "AWS | Microsoft Azure | Google Cloud Platform | Proxmox | Cloudflare | Cloudflare Workers"],
-        ["Dados e SQL", "SQL | MySQL | MariaDB | Excel | Power BI"],
-        ["Redes e Segurança", "FortiGate | Wireshark | iptables | nftables | VLANs | NAT | Port Forwarding | Subnetting | CIDR | Routing | Load Balancing | Reverse Proxies"],
-        ["Operações e Suporte", "Production Support | Troubleshooting | Ticket Resolution | Incident Resolution | Administração de Sistemas | Suporte Técnico | QA/Testes | Documentação Técnica | Gestão de Requisitos | Melhoria de Processos"],
-        ["Programação e Scripting", "Python | Lua | HTML | CSS"],
-        ["Ferramentas Corporativas", "Jira | Trello | Microsoft 365 | Google Workspace | Slack"]
+        ["Dados e SQL", "SQL | MySQL | MariaDB | Excel | Power BI | PostgreSQL | phpMyAdmin | PostgreSQL 16 | PL/pgSQL | IndexedDB"],
+        ["Redes e Segurança", "FortiGate | Wireshark | iptables | nftables | VLANs | NAT | Port Forwarding | Subnetting | CIDR | Routing | Load Balancing | Reverse Proxies | HTTP/HTTPS"],
+        ["Operações e Suporte", "Production Support | Troubleshooting | Ticket Resolution | Incident Resolution | Administração de Sistemas | Suporte Técnico | QA/Testes | Documentação Técnica | Gestão de Requisitos | Melhoria de Processos | Administração de Servidores | Zendesk"],
+        ["Programação e Scripting", "Python | Lua | HTML | CSS | JavaScript | TypeScript | Go | GLua | Bash | JSON"],
+        ["Desenvolvimento Web e Alojamento", "React | Vite | Nginx | XAMPP | GitHub Pages | Ambiente de Execução no Navegador | Alojamento Estático | Recursos Estáticos | Alojamento Web | MkDocs | Markdown | Extração de Dados"],
+        ["Monitorização e Observabilidade", "Prometheus | Grafana | Loki"],
+        ["Desenvolvimento de Jogos e Servidores", "Garry's Mod | Source Engine | Unity 6.6 | Ren'Py | Programação de Jogos | Sistemas de Jogos | Servidores de Jogos | SteamCMD | SRCDS | Lilia | Helix"],
+        ["Ferramentas e Bibliotecas de Desenvolvimento", "PySide6 | Pillow | AST | SARIF | LSP | Graphviz | VS Code API | Luacheck | Análise Estática | pytest | npm | Ollama"],
+        ["Ferramentas Corporativas", "Jira | Trello | Microsoft 365 | Google Workspace | Slack"],
+        ["Microsoft Office e Aplicações", "Microsoft Word | Microsoft PowerPoint | Microsoft Outlook | Microsoft Teams | Microsoft OneNote | Microsoft Access | Microsoft Publisher | Microsoft OneDrive | Microsoft SharePoint | Microsoft Visio | Microsoft Project | Microsoft Forms | Microsoft Planner | Microsoft To Do | Microsoft Power Automate | Microsoft Power Apps | Microsoft Loop | Microsoft Whiteboard | Microsoft Copilot"]
+      ],
+      overviewSkills: [
+        ["Linux e Sistemas", "Linux | RHEL | Windows Server | Proxmox | SSH"],
+        ["DevOps e Cloud", "Docker | Kubernetes | GitHub Actions | Terraform | AWS"],
+        ["Programação e Scripting", "Python | Lua | GLua | Bash | JavaScript"],
+        ["Bases de Dados e Web", "MySQL | MariaDB | PostgreSQL | Nginx"],
+        ["Redes e Segurança", "FortiGate | Wireshark | VLANs | iptables"],
+        ["Operações e Suporte", "Troubleshooting | Resolução de Incidentes | Suporte de Produção | Documentação Técnica"]
       ],
       experienceTitle: "Experiência Profissional",
       experience: [
         {
+          title: "Administrador de Sistemas Linux e Programador de Software",
+          icon: "server",
+          teaser: "Infraestruturas de produção, sistemas backend e automações.",
+          company: "Freelance",
+          period: "Agosto de 2018 - Presente",
+          bullets: [
+            "Administração, troubleshooting e otimização de sistemas e serviços em produção, com foco em disponibilidade, desempenho, estabilidade, segurança e manutenção.",
+            "Criação e gestão de ambientes containerizados com Docker e Kubernetes para aplicações e serviços.",
+            "Desenvolvimento e manutenção de aplicações backend integradas com MySQL e MariaDB, incluindo estruturação, consultas, tratamento e persistência de dados.",
+            "Desenvolvimento de sistemas, automações e scripts em Python, Lua e tecnologias web para clientes internacionais e projetos de grande dimensão.",
+            "Gestão de versões, atualizações, testes funcionais, documentação técnica e implementação de soluções em produção.",
+            "Gestão simultânea de projetos e clientes, conciliando requisitos, prioridades, prazos, suporte técnico e evolução contínua das soluções."
+          ]
+        },
+        {
           title: "Consultor de Clientes Empresariais",
+          icon: "headset",
+          teaser: "Gestão e resolução de pedidos, tickets e escalamentos de clientes empresariais. Colaboração entre equipas para assegurar a qualidade do serviço.",
           company: "Concentrix",
           period: "Janeiro de 2025 - Outubro de 2025 | Porto, Portugal",
           bullets: [
@@ -134,6 +202,8 @@
         },
         {
           title: "Administrador de Sistemas e Gestor de Infraestrutura Online",
+          icon: "server",
+          teaser: "Serviços técnicos para grandes comunidades norte-americanas com múltiplos servidores. Administração, monitorização e otimização de sistemas em produção.",
           company: "Freelance",
           period: "Janeiro de 2024 - Maio de 2025 | Projeto freelance em paralelo",
           bullets: [
@@ -145,6 +215,8 @@
         },
         {
           title: "Administrador Web e Analista de Operações Digitais",
+          icon: "globe",
+          teaser: "Administração de websites e plataformas digitais. Análise de tráfego, métricas e melhorias de visibilidade nos motores de pesquisa.",
           company: "Freelance",
           period: "Janeiro de 2024 - Dezembro de 2024 | Projeto freelance em paralelo",
           bullets: [
@@ -155,6 +227,8 @@
         },
         {
           title: "Assistente Administrativo de Operações",
+          icon: "file",
+          teaser: "Processamento e validação de dados em vários formatos. Controlo de qualidade, relatórios e apoio operacional.",
           company: "Accenture Portugal",
           period: "Novembro de 2022 - Outubro de 2024 | Lisboa, Portugal",
           bullets: [
@@ -164,19 +238,6 @@
             "Experimentação e validação de ferramentas do cliente, incluindo planeamento de testes, análise de resultados e elaboração de relatórios.",
             "Colaboração na melhoria de processos e com diferentes intervenientes para clarificação de requisitos e alinhamento de prioridades."
           ]
-        },
-        {
-          title: "Administrador de Sistemas Linux e Programador de Software",
-          company: "Freelance",
-          period: "Agosto de 2018 - Presente",
-          bullets: [
-            "Administração, troubleshooting e otimização de sistemas e serviços em produção, com foco em disponibilidade, desempenho, estabilidade, segurança e manutenção.",
-            "Criação e gestão de ambientes containerizados com Docker e Kubernetes para aplicações e serviços.",
-            "Desenvolvimento e manutenção de aplicações backend integradas com MySQL e MariaDB, incluindo estruturação, consultas, tratamento e persistência de dados.",
-            "Desenvolvimento de sistemas, automações e scripts em Python, Lua e tecnologias web para clientes internacionais e projetos de grande dimensão.",
-            "Gestão de versões, atualizações, testes funcionais, documentação técnica e implementação de soluções em produção.",
-            "Gestão simultânea de projetos e clientes, conciliando requisitos, prioridades, prazos, suporte técnico e evolução contínua das soluções."
-          ]
         }
       ],
       educationTitle: "Formação Académica",
@@ -185,7 +246,20 @@
       languagesTitle: "Idiomas",
       localizationTitle: "Idiomas",
       languages: [["Português", "C2"], ["Inglês", "C2"], ["Espanhol", "B2"]],
-      tabs: { about: "Sobre Mim", projects: "Projetos" },
+      tabs: { about: "Sobre Mim", proficiency: "Proficiência Tecnológica", projects: "Projetos" },
+      proficiency: {
+        title: "Proficiência Tecnológica",
+        description: "A minha avaliação de proficiência nas tecnologias e competências com que trabalho.",
+        unrated: "Por avaliar",
+        notPublished: "Os níveis de proficiência ainda não foram definidos.",
+        loadError: "Não foi possível carregar os níveis publicados. As tecnologias aparecem por avaliar.",
+        loading: "A carregar os níveis de proficiência...",
+        edit: "Editar níveis",
+        done: "Terminar edição",
+        download: "Transferir JSON dos níveis",
+        editNote: "Esta edição serve apenas para pré-visualização no navegador. Transfira o JSON, substitua .jsons/technology-proficiency.json no projeto e volte a gerar e publicar o site para tornar os níveis públicos.",
+        levels: ["Por avaliar", "Iniciante", "Familiarizado", "Intermédio", "Avançado", "Especialista"]
+      },
       actions: { email: "Email", emailCopied: "Email copiado para a área de transferência.", emailCopiedShort: "Copiado ✓", emailCopyFailed: "Não foi possível copiar o endereço de email.", linkedin: "LinkedIn ↗", discord: "Discord ↗", steam: "Steam ↗", pivity: "Pivity ↗", projects: "Ver Projetos" }
     }
   };
@@ -293,7 +367,7 @@
   const sectionTabs = (copy, active, onSelect) => {
     const tabs = create("nav", "about-me-tabs");
     tabs.setAttribute("aria-label", copy.tabs.about);
-    for (const [id, label] of [["about", copy.tabs.about], ["projects", copy.tabs.projects]]) {
+    for (const [id, label] of [["about", copy.tabs.about], ["proficiency", copy.tabs.proficiency], ["projects", copy.tabs.projects]]) {
       const button = create("button", `about-me-tab${id === active ? " is-active" : ""}`, label);
       button.type = "button";
       button.dataset.aboutTab = id;
@@ -304,10 +378,84 @@
     return tabs;
   };
 
-  const buildAboutView = (language = getLanguage()) => {
+  const iconPaths = {
+    mail: [["rect", { x: 2, y: 4, width: 20, height: 16, rx: 2 }], ["path", { d: "m3 6 9 7 9-7" }]],
+    linkedin: [["rect", { x: 2, y: 2, width: 20, height: 20, rx: 2 }], ["path", { d: "M7 10v7M7 7h.01M11 17v-7M11 13a3 3 0 0 1 6 0v4" }]],
+    message: [["path", { d: "M21 11a8 8 0 0 1-8 8H8l-5 3 1.5-5A8 8 0 1 1 21 11Z" }], ["path", { d: "M8 11h.01M12 11h.01M16 11h.01" }]],
+    gamepad: [["path", { d: "M6 9h12a4 4 0 0 1 3.9 3.1l.9 4a3 3 0 0 1-4.8 3L15 16H9l-3 3.1a3 3 0 0 1-4.8-3l.9-4A4 4 0 0 1 6 9Z" }], ["path", { d: "M6 13h5M8.5 10.5v5M16 12h.01M19 14h.01" }]],
+    external: [["rect", { x: 3, y: 3, width: 18, height: 18, rx: 2 }], ["path", { d: "M10 14 21 3M14 3h7v7" }]],
+    star: [["path", { d: "m12 2 3.1 6.3 7 1-5.05 4.9 1.2 6.9L12 17.8l-6.25 3.3 1.2-6.9L1.9 9.3l7-1z" }]],
+    server: [["rect", { x: 3, y: 3, width: 18, height: 8, rx: 2 }], ["rect", { x: 3, y: 13, width: 18, height: 8, rx: 2 }], ["path", { d: "M7 7h.01M7 17h.01M11 7h6M11 17h6" }]],
+    headset: [["path", { d: "M3 14v-3a9 9 0 0 1 18 0v3M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5ZM21 14h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-5Z" }]],
+    globe: [["circle", { cx: 12, cy: 12, r: 9 }], ["path", { d: "M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" }]],
+    file: [["path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8" }]],
+    settings: [["circle", { cx: 12, cy: 12, r: 3 }], ["path", { d: "M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06-2.12 2.12-.06-.06A1.7 1.7 0 0 0 15.75 19a1.7 1.7 0 0 0-1 1.55V21h-3v-.45a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06-2.12-2.12.06-.06A1.7 1.7 0 0 0 7 15.35a1.7 1.7 0 0 0-1.55-1H5v-3h.45a1.7 1.7 0 0 0 1.55-1A1.7 1.7 0 0 0 6.66 8.5L6.6 8.44l2.12-2.12.06.06A1.7 1.7 0 0 0 10.65 6a1.7 1.7 0 0 0 1-1.55V4h3v.45a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06 2.12 2.12-.06.06A1.7 1.7 0 0 0 19.3 9.65a1.7 1.7 0 0 0 1.55 1h.45v3h-.45A1.7 1.7 0 0 0 19.4 15Z" }]],
+    package: [["path", { d: "m12 2 9 5-9 5-9-5 9-5ZM3 7v10l9 5 9-5V7M12 12v10" }]],
+    code: [["path", { d: "m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" }]],
+    calendar: [["rect", { x: 3, y: 5, width: 18, height: 16, rx: 2 }], ["path", { d: "M7 3v4M17 3v4M3 10h18" }]],
+    pin: [["path", { d: "M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" }], ["circle", { cx: 12, cy: 10, r: 2.4 }]],
+    briefcase: [["rect", { x: 3, y: 7, width: 18, height: 14, rx: 2 }], ["path", { d: "M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a20 20 0 0 0 18 0M12 12v3" }]],
+    chevron: [["path", { d: "m6 9 6 6 6-6" }]],
+    quote: [["path", { d: "M10 11H5a1 1 0 0 1-1-1V8a4 4 0 0 1 4-4M20 11h-5a1 1 0 0 1-1-1V8a4 4 0 0 1 4-4M4 11h6v8H4zM14 11h6v8h-6z" }]]
+  };
+
+  const icon = (name, className = "") => {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", `cv-icon${className ? ` ${className}` : ""}`);
+    svg.setAttribute("width", "20");
+    svg.setAttribute("height", "20");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "1.8");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    svg.setAttribute("aria-hidden", "true");
+    for (const [tag, attributes] of iconPaths[name] || []) {
+      const shape = document.createElementNS("http://www.w3.org/2000/svg", tag);
+      for (const [attribute, value] of Object.entries(attributes)) shape.setAttribute(attribute, String(value));
+      svg.append(shape);
+    }
+    return svg;
+  };
+
+  const renderMainSkills = (list, language, ratings, loaded, error) => {
+    const copy = content[language] || content.en;
+    list.replaceChildren();
+    if (!loaded || error) {
+      const status = create("p", "full-cv__skills-status", error ? copy.skillsUnavailable : copy.skillsLoading);
+      status.setAttribute("role", "status");
+      list.append(status);
+      return;
+    }
+
+    let count = 0;
+    for (const [groupIndex, group] of technologyGroups.entries()) {
+      const selected = group.names.map((name, index) => ({
+        name,
+        label: language === "pt" ? group.translations[index] || name : name,
+        level: normalizeRating(ratings[name])
+      })).filter((skill) => skill.level >= 4);
+      if (!selected.length) continue;
+      count += selected.length;
+      const section = create("div", "full-cv__skill-group");
+      section.append(create("h3", "", copy.skills[groupIndex][0]));
+      const tags = create("div", "full-cv__skill-tags");
+      for (const skill of selected) {
+        const tag = create("span", "", skill.label);
+        tag.title = `${skill.name}: ${skill.level}/5`;
+        tags.append(tag);
+      }
+      section.append(tags);
+      list.append(section);
+    }
+    if (!count) list.append(create("p", "full-cv__skills-status", copy.skillsEmpty));
+  };
+
+  const buildAboutView = (language = getLanguage(), ratings = {}, loaded = false, error = false, onOpenProjects = null) => {
     const copy = content[language] || content.en;
     const body = create("div", "feature-app__body full-cv about-me-subtab");
-    const sheet = create("article", "full-cv__sheet");
+    const sheet = create("article", "full-cv__sheet full-cv__sheet--showcase");
 
     const actions = create("div", "feature-actions full-cv__actions full-cv__profile-actions");
     actions.append(
@@ -318,23 +466,19 @@
       action("pivity", copy.actions.pivity, { type: "open-external", target: "pivity" })
     );
 
-    const identity = create("section", "full-cv__identity full-cv__top-cell full-cv__top-cell--profile");
+    const identity = create("section", "full-cv__identity full-cv__left-card");
     const initials = copy.name.split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0]?.toUpperCase() || "").join("");
     const profileHeader = create("div", "full-cv__profile-header");
     const avatar = create("div", "full-cv__profile-avatar");
     avatar.setAttribute("aria-hidden", "true");
     avatar.append(create("span", "", initials));
     const profileCopy = create("div", "full-cv__profile-copy");
-    profileCopy.append(
-      create("h1", "", copy.name),
-      create("p", "full-cv__profile-role", copy.role.replace(" | ", " · ")),
-      create("p", "full-cv__location", copy.location)
-    );
+    profileCopy.append(create("h1", "", copy.name), create("p", "full-cv__location", copy.location));
     profileHeader.append(avatar, profileCopy);
     const availability = create("div", "full-cv__availability", copy.availability);
-    identity.append(create("span", "feature-eyebrow full-cv__profile-eyebrow", copy.profileTitle), profileHeader, actions, availability);
+    identity.append(profileHeader, actions, availability);
 
-    const localization = create("section", "full-cv__section full-cv__localization-card");
+    const localization = create("section", "full-cv__section full-cv__localization-card full-cv__left-card");
     localization.append(create("h2", "", copy.localizationTitle));
     const localizationList = create("div", "cv-language-list full-cv__localization-list");
     for (const [languageName, level] of copy.languages) {
@@ -348,79 +492,180 @@
     }
     localization.append(localizationList);
 
-    const github = buildGitHubSummary();
-    github.classList.add("full-cv__profile-github");
+    const github = buildGitHubSummary(copy, onOpenProjects);
+    github.classList.add("full-cv__profile-github", "full-cv__left-card");
+    const leftRail = create("aside", "full-cv__left-rail");
+    leftRail.append(identity, localization, github);
 
-    const hero = create("header", "full-cv__hero full-cv__top-cell full-cv__top-cell--hero");
-    hero.dataset.cvSection = "overview";
-    const heroCopy = create("div", "full-cv__hero-copy");
-    heroCopy.append(create("span", "feature-eyebrow", copy.eyebrow), create("h2", "", copy.role), create("p", "", copy.summary));
+    const career = create("main", "full-cv__career");
+    career.dataset.cvSection = "experience";
 
-    hero.append(heroCopy);
-
-    const experience = create("section", "full-cv__section full-cv__experience-section");
-    experience.dataset.cvSection = "experience";
-    experience.append(create("h2", "", copy.experienceTitle));
-    const experienceList = create("div", "full-cv__experience");
+    const experienceList = create("div", "experience-showcase__list");
     for (const job of copy.experience) {
-      const item = create("article", "full-cv__job");
-      const marker = create("span", "full-cv__timeline-marker");
-      marker.setAttribute("aria-hidden", "true");
-      const jobBody = create("div", "full-cv__job-body");
-      const header = create("header", "full-cv__job-header");
-      const heading = create("h3");
-      heading.append(document.createTextNode(job.title), create("span", "", job.company));
-      header.append(heading, create("p", "", job.period));
-      const bullets = create("ul", "full-cv__bullets");
+      const entry = create("details", "experience-showcase__entry");
+      entry.open = true;
+      const summary = create("summary", "experience-showcase__entry-summary");
+      const symbol = create("div", "experience-showcase__entry-icon");
+      symbol.append(icon(job.icon));
+      const info = create("div", "experience-showcase__entry-info");
+      info.append(create("h4", "", job.title), create("strong", "", job.company), create("p", "", job.teaser));
+      const metadata = create("div", "experience-showcase__entry-meta");
+      const [period, location] = job.period.split(" | ");
+      const dates = create("span");
+      dates.append(icon("calendar"), document.createTextNode(period.replace(" - ", " – ")));
+      metadata.append(dates);
+      if (location) {
+        const place = create("span");
+        place.append(icon("pin"), document.createTextNode(location));
+        metadata.append(place);
+      }
+      summary.append(symbol, info, metadata, icon("chevron", "experience-showcase__entry-chevron"));
+      const panel = create("div", "experience-showcase__entry-panel");
+      const bullets = create("ul", "experience-showcase__bullets");
       for (const bullet of job.bullets) bullets.append(create("li", "", bullet));
-      jobBody.append(header, bullets);
-      item.append(marker, jobBody);
-      experienceList.append(item);
+      panel.append(bullets);
+      entry.append(summary, panel);
+      experienceList.append(entry);
     }
-    experience.append(experienceList);
+    career.append(experienceList);
 
-    const roles = create("section", "full-cv__section full-cv__sidebar-section full-cv__card full-cv__roles-card");
-    roles.append(create("h2", "", copy.targetRolesTitle));
-    const roleTags = create("div", "full-cv__skill-tags");
-    for (const role of copy.targetRoles) roleTags.append(create("span", "", role));
-    roles.append(roleTags, create("p", "full-cv__roles-note", copy.targetRolesNote));
 
-    const skills = create("section", "full-cv__section full-cv__skills-section full-cv__card");
+    const skills = create("section", "full-cv__section full-cv__skills-section full-cv__right-card");
     skills.dataset.cvSection = "skills";
-    skills.append(create("h2", "", copy.skillsTitle));
+    const skillsHeading = create("h2", "experience-showcase__skills-heading");
+    skillsHeading.append(icon("settings"), document.createTextNode(copy.skillsTitle));
+    skills.append(skillsHeading);
     const skillsList = create("div", "full-cv__skills");
-    for (const [title, value] of copy.skills) {
-      const group = create("div", "full-cv__skill-group");
-      group.append(create("h3", "", title));
-      const tags = create("div", "full-cv__skill-tags");
-      for (const skill of value.split("|").map((item) => item.trim()).filter(Boolean)) tags.append(create("span", "", skill));
-      group.append(tags);
-      skillsList.append(group);
-    }
+    renderMainSkills(skillsList, language, ratings, loaded, error);
     skills.append(skillsList);
 
-    const education = create("section", "full-cv__section full-cv__sidebar-section full-cv__card");
+    const education = create("section", "full-cv__section full-cv__left-card full-cv__education-card");
     education.dataset.cvSection = "education";
     education.append(create("h2", "", copy.educationTitle), create("strong", "", copy.education), create("p", "", copy.educationPeriod));
 
-    roles.classList.add("full-cv__top-cell", "full-cv__top-cell--roles");
+    const rightRail = create("aside", "full-cv__right-rail");
+    rightRail.append(skills);
+    leftRail.insertBefore(education, github);
+    sheet.append(leftRail, career, rightRail);
+    body.append(sheet);
+    return body;
+  };
 
-    const topRow = create("div", "full-cv__top-row");
-    topRow.append(identity, hero, roles);
+  const technologyGroups = content.en.skills.map(([category, technologies], index) => ({
+    category,
+    names: technologies.split("|").map((name) => name.trim()).filter(Boolean),
+    translations: content.pt.skills[index][1].split("|").map((name) => name.trim()).filter(Boolean)
+  }));
 
-    const profileBody = create("aside", "full-cv__profile-body");
-    profileBody.append(localization, github);
+  const technologyNames = technologyGroups.flatMap((group) => group.names);
 
-    const main = create("main", "full-cv__main");
-    main.append(experience);
+  const createEmptyRatings = () => Object.fromEntries(technologyNames.map((name) => [name, null]));
 
-    const sidebarBody = create("aside", "full-cv__sidebar-body");
-    sidebarBody.append(skills, education);
+  const normalizeRating = (level) => Number.isInteger(level) && level >= 1 && level <= 5 ? level : null;
 
-    const bodyRow = create("div", "full-cv__body-row");
-    bodyRow.append(profileBody, main, sidebarBody);
+  const downloadRatings = (ratings) => {
+    const payload = { scale: 5, ratings: Object.fromEntries(technologyNames.map((name) => [name, normalizeRating(ratings[name])])) };
+    const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const anchor = create("a");
+    anchor.href = url;
+    anchor.download = "technology-proficiency.json";
+    document.body.append(anchor);
+    anchor.click();
+    anchor.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
 
-    sheet.append(topRow, bodyRow);
+  const buildProficiencyView = (language, ratings, loaded, error, editing, onToggleEditing, onUpdate) => {
+    const copy = content[language] || content.en;
+    const labels = copy.proficiency;
+    const body = create("div", "feature-app__body about-me-subtab technology-proficiency");
+    const sheet = create("section", "technology-proficiency__sheet");
+    const header = create("header", "technology-proficiency__header");
+    const heading = create("div", "technology-proficiency__heading");
+    heading.append(create("span", "feature-eyebrow", copy.eyebrow), create("h1", "", labels.title), create("p", "", labels.description));
+    const headerActions = create("div", "technology-proficiency__actions");
+    const toggle = create("button", "feature-button technology-proficiency__edit", editing ? labels.done : labels.edit);
+    toggle.type = "button";
+    toggle.disabled = !loaded;
+    toggle.addEventListener("click", onToggleEditing);
+    headerActions.append(toggle);
+    if (editing) {
+      const download = create("button", "feature-button feature-button--primary", labels.download);
+      download.type = "button";
+      download.addEventListener("click", () => downloadRatings(ratings));
+      headerActions.append(download);
+    }
+    header.append(heading, headerActions);
+    sheet.append(header);
+
+    if (!loaded) {
+      sheet.append(create("p", "technology-proficiency__notice", labels.loading));
+      body.append(sheet);
+      return body;
+    }
+
+    if (error) sheet.append(create("p", "technology-proficiency__notice", labels.loadError));
+    if (editing) sheet.append(create("p", "technology-proficiency__notice technology-proficiency__notice--editing", labels.editNote));
+
+    const groups = create("div", "technology-proficiency__groups");
+    let ratedCount = technologyNames.filter((name) => normalizeRating(ratings[name]) !== null).length;
+
+    for (const [index, group] of technologyGroups.entries()) {
+      const section = create("section", "technology-proficiency__group");
+      const title = create("h2", "", copy.skills[index][0]);
+      const grid = create("div", "technology-proficiency__grid");
+      section.append(title, grid);
+      for (const [techIndex, name] of group.names.entries()) {
+        const displayName = language === "pt" ? group.translations[techIndex] || name : name;
+        const card = create("div", "technology-proficiency__item");
+        const itemHeader = create("div", "technology-proficiency__item-heading");
+        const label = create("strong", "", displayName);
+        const grade = create("span", "technology-proficiency__grade");
+        itemHeader.append(label, grade);
+        const track = create("div", "technology-proficiency__track");
+        track.setAttribute("aria-hidden", "true");
+        const fill = create("span", "technology-proficiency__fill");
+        track.append(fill);
+        card.append(itemHeader, track);
+
+        const setGrade = (value) => {
+          const level = normalizeRating(value);
+          grade.textContent = level === null ? labels.unrated : `${level}/5 · ${labels.levels[level]}`;
+          fill.style.width = `${(level || 0) * 20}%`;
+          card.classList.toggle("is-unrated", level === null);
+        };
+
+        setGrade(ratings[name]);
+
+        if (editing) {
+          const picker = create("select", "technology-proficiency__picker");
+          picker.setAttribute("aria-label", `${displayName}: ${labels.title}`);
+          for (let level = 0; level <= 5; level++) {
+            const option = create("option", "", level === 0 ? labels.levels[0] : `${level}/5 · ${labels.levels[level]}`);
+            option.value = String(level);
+            picker.append(option);
+          }
+          picker.value = String(normalizeRating(ratings[name]) || 0);
+          picker.addEventListener("change", () => {
+            const before = normalizeRating(ratings[name]);
+            const after = normalizeRating(Number(picker.value));
+            onUpdate(name, after);
+            if (before === null && after !== null) ratedCount++;
+            if (before !== null && after === null) ratedCount--;
+            setGrade(after);
+            notice.hidden = ratedCount > 0;
+          });
+          card.append(picker);
+        }
+        grid.append(card);
+      }
+      groups.append(section);
+    }
+
+    const notice = create("p", "technology-proficiency__notice", labels.notPublished);
+    notice.hidden = ratedCount > 0;
+    sheet.append(notice, groups);
     body.append(sheet);
     return body;
   };
@@ -465,11 +710,11 @@
     return section;
   };
 
-  const buildGitHubSummary = () => {
+  const buildGitHubSummary = (copy, onOpenProjects) => {
     const section = create("section", "full-cv__section about-github-summary");
     const heading = create("div", "about-github-summary__heading");
     const headingCopy = create("div", "about-github-summary__heading-copy");
-    headingCopy.append(create("h2", "", "GitHub Statistics"), create("p", "", "Repository, reach and account overview."));
+    headingCopy.append(create("h2", "", "GitHub Statistics"), create("p", "", "Repository and recent activity overview."));
     heading.append(headingCopy);
 
     const widget = create("div", "desktop-github-widget about-github-summary__widget");
@@ -490,22 +735,6 @@
         ["Active repos", "data-github-active-repos"],
         ["Archived", "data-github-archived-repos"]
       ]),
-      statGroup("Reach", [
-        ["Stars received", "data-github-stars"],
-        ["Forks received", "data-github-forks"],
-        ["Followers", "data-github-followers"],
-        ["Following", "data-github-following"],
-        ["Organizations", "data-github-organizations"],
-        ["Public gists", "data-github-public-gists"]
-      ]),
-      statGroup("Repository Activity", [
-        ["Open issues / PRs", "data-github-open-issues"],
-        ["Public releases", "data-github-releases"],
-        ["Release downloads", "data-github-release-downloads"],
-        ["Repository size", "data-github-repository-size"],
-        ["Active · 30d", "data-github-active-30d"],
-        ["Account age", "data-github-account-age"]
-      ]),
       statGroup("Recent Activity", [
         ["Public events", "data-github-public-events"],
         ["Push events", "data-github-push-events"],
@@ -517,7 +746,10 @@
     );
 
     widget.append(groups);
-    section.append(heading, widget);
+    const projectsButton = create("button", "about-cv__projects-button", copy.actions.projects);
+    projectsButton.type = "button";
+    projectsButton.addEventListener("click", () => onOpenProjects?.());
+    section.append(heading, widget, projectsButton);
     return section;
   };
 
@@ -595,11 +827,16 @@
     let currentLanguage = language === "pt" ? "pt" : "en";
     let active = "about";
     let cleanup = null;
+    let ratings = createEmptyRatings();
+    let ratingsLoaded = false;
+    let ratingsError = false;
+    let ratingsRequest = null;
+    let editingRatings = false;
     const pane = create("div", "about-me-subtab-host");
 
     const renderTabs = () => {
       const existing = root.querySelector(":scope > .about-me-tabs");
-      const tabs = sectionTabs(content[currentLanguage] || content.en, active, setTab);
+      const tabs = sectionTabs(content[currentLanguage] || content.en, active, (target) => setTab(target, true));
       if (existing) existing.replaceWith(tabs);
       else root.prepend(tabs);
     };
@@ -609,16 +846,71 @@
       cleanup = null;
     };
 
-    function setTab(target) {
-      const next = ["about", "projects"].includes(target) ? target : "about";
+    const renderProficiency = () => {
+      if (active !== "proficiency") return;
+      pane.replaceChildren(buildProficiencyView(
+        currentLanguage,
+        ratings,
+        ratingsLoaded,
+        ratingsError,
+        editingRatings,
+        () => {
+          editingRatings = !editingRatings;
+          renderProficiency();
+        },
+        (name, level) => {
+          ratings[name] = level;
+        }
+      ));
+    };
+
+    const loadRatings = () => {
+      if (ratingsRequest) return;
+      ratingsRequest = fetch("/.jsons/technology-proficiency.json", { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error("Unable to load technology proficiency data");
+          return response.json();
+        })
+        .then((payload) => {
+          if (!payload || payload.scale !== 5 || !payload.ratings || typeof payload.ratings !== "object" || Array.isArray(payload.ratings)) {
+            throw new Error("Invalid technology proficiency data");
+          }
+          ratings = Object.fromEntries(technologyNames.map((name) => [name, normalizeRating(payload.ratings[name])]));
+        })
+        .catch(() => {
+          ratingsError = true;
+        })
+        .finally(() => {
+          ratingsLoaded = true;
+          renderProficiency();
+          if (active === "about") {
+            const list = pane.querySelector(".full-cv__skills");
+            if (list) renderMainSkills(list, currentLanguage, ratings, ratingsLoaded, ratingsError);
+          }
+        });
+    };
+
+    function setTab(target, updateHistory = false) {
+      const next = ["about", "proficiency", "projects"].includes(target) ? target : "about";
+      if (updateHistory) {
+        const path = { about: "/cv", proficiency: "/skills", projects: "/projects" }[next];
+        if (location.pathname.replace(/\/$/, "") !== path) history.pushState({ portfolioTab: next }, "", path);
+      }
       clearCurrent();
       active = next;
       renderTabs();
 
       if (next === "about") {
-        const view = buildAboutView(currentLanguage);
+        const view = buildAboutView(currentLanguage, ratings, ratingsLoaded, ratingsError, () => setTab("projects", true));
         pane.replaceChildren(view);
         refreshGitHubStats(view);
+        loadRatings();
+        return;
+      }
+
+      if (next === "proficiency") {
+        renderProficiency();
+        loadRatings();
         return;
       }
 
@@ -635,9 +927,11 @@
       currentLanguage = nextLanguage === "pt" ? "pt" : "en";
       if (active === "about") {
         clearCurrent();
-        const view = buildAboutView(currentLanguage);
+        const view = buildAboutView(currentLanguage, ratings, ratingsLoaded, ratingsError, () => setTab("projects", true));
         pane.replaceChildren(view);
         refreshGitHubStats(view);
+      } else if (active === "proficiency") {
+        renderProficiency();
       }
       renderTabs();
     };

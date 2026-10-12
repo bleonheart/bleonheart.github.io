@@ -1,0 +1,2243 @@
+{
+  "minimumProjects": 3,
+  "projectCount": 1796,
+  "technologyCount": 148,
+  "technologyWithCoverage": 51,
+  "withoutEnoughProjects": 97,
+  "skills": [
+    {
+      "technology": "Arch Linux",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "AWS",
+      "rating": 2,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Chocolatey",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "CIDR",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Cloudflare Workers",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "DHCP Server",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "DNS Server",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Excel",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Fedora",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "FortiGate",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "GitHub Desktop",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Google Cloud Platform",
+      "rating": 2,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Google Workspace",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Group Policy",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Incident Resolution",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Jenkins",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Jira",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Kali Linux",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Linux Mint",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Load Balancing",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft 365",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Access",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Azure",
+      "rating": 2,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Copilot",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Forms",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Loop",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft OneDrive",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft OneNote",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Outlook",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Planner",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Power Apps",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Power Automate",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft PowerPoint",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Project",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Publisher",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft SharePoint",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Teams",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft To Do",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Visio",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Whiteboard",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Microsoft Word",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "NAT",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "npm",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Ollama",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "phpMyAdmin",
+      "rating": null,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Port Forwarding",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Power BI",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Process Improvement",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "pytest",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "QA/Testing",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Requirements Management",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Routing",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "SFTP",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Slack",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Subnetting",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Technical Support",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Ticket Resolution",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Trello",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "VirtualBox",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "VLANs",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "VMware",
+      "rating": 3,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Windows 10/11",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "winget",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Wireshark",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "XAMPP",
+      "rating": 4,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "Zendesk",
+      "rating": 5,
+      "count": 0,
+      "meetsMinimum": false,
+      "exampleProjects": []
+    },
+    {
+      "technology": "AST",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        }
+      ]
+    },
+    {
+      "technology": "Browser Runtime",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "voxelith",
+          "name": "Voxelith"
+        }
+      ]
+    },
+    {
+      "technology": "CSS",
+      "rating": 5,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "deploy-or-die",
+          "name": "Deploy or Die"
+        }
+      ]
+    },
+    {
+      "technology": "Data Scraping",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "gmod-globals-scraper",
+          "name": "GMod Globals Scraper"
+        }
+      ]
+    },
+    {
+      "technology": "Game Scripting",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "rune-wars",
+          "name": "Rune Wars"
+        }
+      ]
+    },
+    {
+      "technology": "Game Systems",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "project-fantasia",
+          "name": "Project Fantasia"
+        }
+      ]
+    },
+    {
+      "technology": "Graphviz",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        }
+      ]
+    },
+    {
+      "technology": "Helix",
+      "rating": 5,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "legacy-hl2rp",
+          "name": "Half-Life 2 RP Projects"
+        }
+      ]
+    },
+    {
+      "technology": "HTTP/HTTPS",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "rhel-website-hosting",
+          "name": "RHEL Website Hosting"
+        }
+      ]
+    },
+    {
+      "technology": "IndexedDB",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "codex",
+          "name": "Codex"
+        }
+      ]
+    },
+    {
+      "technology": "JSON",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "lilia-snippets",
+          "name": "Lilia Snippets"
+        }
+      ]
+    },
+    {
+      "technology": "LSP",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        }
+      ]
+    },
+    {
+      "technology": "Markdown",
+      "rating": 5,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "lilia-documentation",
+          "name": "Lilia Documentation Platform"
+        }
+      ]
+    },
+    {
+      "technology": "MkDocs",
+      "rating": 5,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "lilia-documentation",
+          "name": "Lilia Documentation Platform"
+        }
+      ]
+    },
+    {
+      "technology": "Pillow",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "gmod-optimization-tool",
+          "name": "Garry's Mod Optimization Tool"
+        }
+      ]
+    },
+    {
+      "technology": "PL/pgSQL",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "postgresql-operations-lab",
+          "name": "PostgreSQL Operations Lab"
+        }
+      ]
+    },
+    {
+      "technology": "PostgreSQL 16",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "postgresql-operations-lab",
+          "name": "PostgreSQL Operations Lab"
+        }
+      ]
+    },
+    {
+      "technology": "Production Support",
+      "rating": 5,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        }
+      ]
+    },
+    {
+      "technology": "React",
+      "rating": 2,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "derma-creator",
+          "name": "Derma Creator"
+        }
+      ]
+    },
+    {
+      "technology": "Ren'Py",
+      "rating": 5,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "rune-wars",
+          "name": "Rune Wars"
+        }
+      ]
+    },
+    {
+      "technology": "SARIF",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        }
+      ]
+    },
+    {
+      "technology": "Static Analysis",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "gluacheck",
+          "name": "GLuaCheck"
+        }
+      ]
+    },
+    {
+      "technology": "Static Assets",
+      "rating": 5,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "samael-assets",
+          "name": "Samael Assets"
+        }
+      ]
+    },
+    {
+      "technology": "TypeScript",
+      "rating": 2,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "lilia-snippets",
+          "name": "Lilia Snippets"
+        }
+      ]
+    },
+    {
+      "technology": "Unity 6.6",
+      "rating": 3,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "project-fantasia",
+          "name": "Project Fantasia"
+        }
+      ]
+    },
+    {
+      "technology": "Vite",
+      "rating": 2,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "derma-creator",
+          "name": "Derma Creator"
+        }
+      ]
+    },
+    {
+      "technology": "VS Code API",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "lilia-snippets",
+          "name": "Lilia Snippets"
+        }
+      ]
+    },
+    {
+      "technology": "Web Hosting",
+      "rating": 4,
+      "count": 1,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "rhel-website-hosting",
+          "name": "RHEL Website Hosting"
+        }
+      ]
+    },
+    {
+      "technology": "Luacheck",
+      "rating": 5,
+      "count": 2,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "gluacheck",
+          "name": "GLuaCheck"
+        },
+        {
+          "id": "gmod-globals-scraper",
+          "name": "GMod Globals Scraper"
+        }
+      ]
+    },
+    {
+      "technology": "PySide6",
+      "rating": 3,
+      "count": 2,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "assemblia",
+          "name": "Assemblia"
+        },
+        {
+          "id": "gmod-optimization-tool",
+          "name": "Garry's Mod Optimization Tool"
+        }
+      ]
+    },
+    {
+      "technology": "Static Hosting",
+      "rating": 4,
+      "count": 2,
+      "meetsMinimum": false,
+      "exampleProjects": [
+        {
+          "id": "voxelith",
+          "name": "Voxelith"
+        },
+        {
+          "id": "codex",
+          "name": "Codex"
+        }
+      ]
+    },
+    {
+      "technology": "Active Directory",
+      "rating": 3,
+      "count": 3,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-1576-ridge-bridge-game-services-storage-capacity-recovery",
+          "name": "Ridge Bridge Game Services — Storage Capacity Recovery"
+        },
+        {
+          "id": "freelance-1596-cedar-field-server-works-operator-account-review",
+          "name": "Cedar Field Server Works — Operator Account Review"
+        },
+        {
+          "id": "freelance-1676-ion-forge-systems-host-upgrade-preparation",
+          "name": "Ion Forge Systems — Host Upgrade Preparation"
+        }
+      ]
+    },
+    {
+      "technology": "Go",
+      "rating": 2,
+      "count": 3,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        },
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        }
+      ]
+    },
+    {
+      "technology": "Kubernetes",
+      "rating": 3,
+      "count": 3,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        }
+      ]
+    },
+    {
+      "technology": "Red Hat Enterprise Linux (RHEL)",
+      "rating": 3,
+      "count": 3,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rhel-game-server-hosting",
+          "name": "RHEL Game Server Hosting"
+        },
+        {
+          "id": "rhel-website-hosting",
+          "name": "RHEL Website Hosting"
+        },
+        {
+          "id": "rhel-hosting-operations",
+          "name": "RHEL Hosting Operations & Maintenance"
+        }
+      ]
+    },
+    {
+      "technology": "HTML",
+      "rating": 5,
+      "count": 4,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "deploy-or-die",
+          "name": "Deploy or Die"
+        },
+        {
+          "id": "voxelith",
+          "name": "Voxelith"
+        },
+        {
+          "id": "codex",
+          "name": "Codex"
+        },
+        {
+          "id": "samael-assets",
+          "name": "Samael Assets"
+        }
+      ]
+    },
+    {
+      "technology": "Lilia",
+      "rating": 5,
+      "count": 4,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "lilia-modules",
+          "name": "Lilia Modules"
+        },
+        {
+          "id": "lilia-skeleton",
+          "name": "Lilia Skeleton"
+        },
+        {
+          "id": "lilia-scprp",
+          "name": "Lilia SCPRP"
+        },
+        {
+          "id": "legacy-fallout-rp",
+          "name": "Fallout RP Projects"
+        }
+      ]
+    },
+    {
+      "technology": "GitHub Pages",
+      "rating": 5,
+      "count": 5,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "deploy-or-die",
+          "name": "Deploy or Die"
+        },
+        {
+          "id": "voxelith",
+          "name": "Voxelith"
+        },
+        {
+          "id": "codex",
+          "name": "Codex"
+        },
+        {
+          "id": "samael-assets",
+          "name": "Samael Assets"
+        },
+        {
+          "id": "lilia-documentation",
+          "name": "Lilia Documentation Platform"
+        }
+      ]
+    },
+    {
+      "technology": "JavaScript",
+      "rating": 2,
+      "count": 6,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "deploy-or-die",
+          "name": "Deploy or Die"
+        },
+        {
+          "id": "codex",
+          "name": "Codex"
+        },
+        {
+          "id": "samael-assets",
+          "name": "Samael Assets"
+        },
+        {
+          "id": "lilia-modules",
+          "name": "Lilia Modules"
+        },
+        {
+          "id": "lilia-documentation",
+          "name": "Lilia Documentation Platform"
+        }
+      ]
+    },
+    {
+      "technology": "Debian",
+      "rating": 3,
+      "count": 7,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0835-delta-forge-technologies-operations-reliability-pass",
+          "name": "Delta Forge Technologies — Operations Reliability Pass"
+        },
+        {
+          "id": "freelance-0905-vector-ridge-engineering-operations-reliability-pass",
+          "name": "Vector Ridge Engineering — Operations Reliability Pass"
+        },
+        {
+          "id": "freelance-1241-atlas-ridge-operations-operations-reliability-pass",
+          "name": "Atlas Ridge Operations — Operations Reliability Pass"
+        },
+        {
+          "id": "freelance-1506-fox-junction-game-services-dedicated-host-recovery",
+          "name": "Fox Junction Game Services — Dedicated Host Recovery"
+        },
+        {
+          "id": "freelance-1586-birch-harbor-hosting-automated-restart-operations",
+          "name": "Birch Harbor Hosting — Automated Restart Operations"
+        }
+      ]
+    },
+    {
+      "technology": "Loki",
+      "rating": 2,
+      "count": 17,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "freelance-0011-westmark-server-works-game-fleet-metrics-rollout",
+          "name": "Westmark Server Works — Game Fleet Metrics Rollout"
+        },
+        {
+          "id": "freelance-0162-summitline-technical-services-availability-improvement-pass",
+          "name": "Summitline Technical Services — Availability Improvement Pass"
+        },
+        {
+          "id": "freelance-0277-stonebridge-platform-services-game-fleet-metrics-rollout",
+          "name": "Stonebridge Platform Services — Game Fleet Metrics Rollout"
+        },
+        {
+          "id": "freelance-0358-westmark-networks-availability-improvement-pass",
+          "name": "Westmark Networks — Availability Improvement Pass"
+        }
+      ]
+    },
+    {
+      "technology": "iptables",
+      "rating": 3,
+      "count": 18,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0076-neon-crown-network-game-network-hardening",
+          "name": "Neon Crown Network — Game Network Hardening"
+        },
+        {
+          "id": "freelance-0099-vector-ridge-infrastructure-game-network-hardening",
+          "name": "Vector Ridge Infrastructure — Game Network Hardening"
+        },
+        {
+          "id": "freelance-0116-thunder-stronghold-community-game-network-hardening",
+          "name": "Thunder Stronghold Community — Game Network Hardening"
+        },
+        {
+          "id": "freelance-0136-red-crown-roleplay-game-network-hardening",
+          "name": "Red Crown Roleplay — Game Network Hardening"
+        },
+        {
+          "id": "freelance-0256-rogue-outpost-gaming-network-game-network-hardening",
+          "name": "Rogue Outpost Gaming Network — Game Network Hardening"
+        }
+      ]
+    },
+    {
+      "technology": "PowerShell",
+      "rating": 3,
+      "count": 18,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0168-redstone-grid-hosting-technical-operations-automation",
+          "name": "Redstone Grid Hosting — Technical Operations Automation"
+        },
+        {
+          "id": "freelance-0280-ridgepoint-networks-operator-workflow-modernization",
+          "name": "Ridgepoint Networks — Operator Workflow Modernization"
+        },
+        {
+          "id": "freelance-0364-apexfield-reliability-operator-workflow-modernization",
+          "name": "Apexfield Reliability — Operator Workflow Modernization"
+        },
+        {
+          "id": "freelance-0714-evergrid-platform-engineering-technical-operations-automation",
+          "name": "Evergrid Platform Engineering — Technical Operations Automation"
+        },
+        {
+          "id": "freelance-0798-summitline-automation-technical-operations-automation",
+          "name": "Summitline Automation — Technical Operations Automation"
+        }
+      ]
+    },
+    {
+      "technology": "Windows Server",
+      "rating": 4,
+      "count": 18,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0168-redstone-grid-hosting-technical-operations-automation",
+          "name": "Redstone Grid Hosting — Technical Operations Automation"
+        },
+        {
+          "id": "freelance-0280-ridgepoint-networks-operator-workflow-modernization",
+          "name": "Ridgepoint Networks — Operator Workflow Modernization"
+        },
+        {
+          "id": "freelance-0364-apexfield-reliability-operator-workflow-modernization",
+          "name": "Apexfield Reliability — Operator Workflow Modernization"
+        },
+        {
+          "id": "freelance-0714-evergrid-platform-engineering-technical-operations-automation",
+          "name": "Evergrid Platform Engineering — Technical Operations Automation"
+        },
+        {
+          "id": "freelance-0798-summitline-automation-technical-operations-automation",
+          "name": "Summitline Automation — Technical Operations Automation"
+        }
+      ]
+    },
+    {
+      "technology": "Proxmox",
+      "rating": 2,
+      "count": 19,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0020-silverline-labs-server-recovery-modernization",
+          "name": "Silverline Labs — Server Recovery Modernization"
+        },
+        {
+          "id": "freelance-0062-corebridge-infrastructure-data-protection-overhaul",
+          "name": "Corebridge Infrastructure — Data Protection Overhaul"
+        },
+        {
+          "id": "freelance-0188-harborpoint-reliability-data-protection-overhaul",
+          "name": "Harborpoint Reliability — Data Protection Overhaul"
+        },
+        {
+          "id": "freelance-0202-corebridge-reliability-backup-retention-cleanup",
+          "name": "Corebridge Reliability — Backup Retention Cleanup"
+        },
+        {
+          "id": "freelance-0272-vector-ridge-server-works-data-protection-overhaul",
+          "name": "Vector Ridge Server Works — Data Protection Overhaul"
+        }
+      ]
+    },
+    {
+      "technology": "Server Administration",
+      "rating": 4,
+      "count": 19,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rhel-hosting-operations",
+          "name": "RHEL Hosting Operations & Maintenance"
+        },
+        {
+          "id": "legacy-mafia-rp",
+          "name": "Mafia RP Projects"
+        },
+        {
+          "id": "freelance-0023-corebridge-labs-server-baseline-rebuild",
+          "name": "Corebridge Labs — Server Baseline Rebuild"
+        },
+        {
+          "id": "freelance-0303-atlas-ridge-systems-group-server-baseline-rebuild",
+          "name": "Atlas Ridge Systems Group — Server Baseline Rebuild"
+        },
+        {
+          "id": "freelance-0401-vector-ridge-security-host-configuration-review",
+          "name": "Vector Ridge Security — Host Configuration Review"
+        }
+      ]
+    },
+    {
+      "technology": "Terraform",
+      "rating": 3,
+      "count": 20,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "freelance-0047-summitline-reliability-ansible-host-standardization",
+          "name": "Summitline Reliability — Ansible Host Standardization"
+        },
+        {
+          "id": "freelance-0089-northforge-hosting-ansible-host-standardization",
+          "name": "Northforge Hosting — Ansible Host Standardization"
+        },
+        {
+          "id": "freelance-0117-northforge-platform-services-infrastructure-definition-cleanup",
+          "name": "Northforge Platform Services — Infrastructure Definition Cleanup"
+        },
+        {
+          "id": "freelance-0215-atlas-ridge-infrastructure-ansible-host-standardization",
+          "name": "Atlas Ridge Infrastructure — Ansible Host Standardization"
+        }
+      ]
+    },
+    {
+      "technology": "GitLab CI/CD",
+      "rating": 4,
+      "count": 21,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0049-cinderwave-systems-automated-deployment-workflow",
+          "name": "Cinderwave Systems — Automated Deployment Workflow"
+        },
+        {
+          "id": "freelance-0231-meridian-peak-networks-production-release-standardization",
+          "name": "Meridian Peak Networks — Production Release Standardization"
+        },
+        {
+          "id": "freelance-0427-meridian-peak-technical-services-automated-deployment-workflow",
+          "name": "Meridian Peak Technical Services — Automated Deployment Workflow"
+        },
+        {
+          "id": "freelance-0483-ironwood-integration-automated-deployment-workflow",
+          "name": "Ironwood Integration — Automated Deployment Workflow"
+        },
+        {
+          "id": "freelance-0497-lightwell-technical-services-deployment-automation-project",
+          "name": "Lightwell Technical Services — Deployment Automation Project"
+        }
+      ]
+    },
+    {
+      "technology": "cron",
+      "rating": 5,
+      "count": 40,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0003-ember-line-gaming-network-game-build-promotion-process",
+          "name": "Modified Gaming — Game Build Promotion Process"
+        },
+        {
+          "id": "freelance-0053-silver-station-network-automated-server-update-flow",
+          "name": "Silver Station Network — Automated Server Update Flow"
+        },
+        {
+          "id": "freelance-0123-frost-summit-server-network-workshop-dependency-recovery",
+          "name": "Frost Summit Server Network — Workshop Dependency Recovery"
+        },
+        {
+          "id": "freelance-0313-wild-forge-gaming-workshop-dependency-recovery",
+          "name": "Wild Forge Gaming — Workshop Dependency Recovery"
+        },
+        {
+          "id": "freelance-0343-crimson-bastion-roleplay-network-automated-server-update-flow",
+          "name": "Crimson Bastion Roleplay Network — Automated Server Update Flow"
+        }
+      ]
+    },
+    {
+      "technology": "nftables",
+      "rating": 3,
+      "count": 51,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0001-stonebridge-technical-services-game-host-security-review",
+          "name": "Stonebridge Technical Services — Game Host Security Review"
+        },
+        {
+          "id": "freelance-0026-scarlet-summit-collective-game-host-security-review",
+          "name": "Scarlet Summit Collective — Game Host Security Review"
+        },
+        {
+          "id": "freelance-0043-gridline-platform-services-game-host-security-review",
+          "name": "Gridline Platform Services — Game Host Security Review"
+        },
+        {
+          "id": "freelance-0066-rogue-forge-gaming-network-service-exposure-cleanup",
+          "name": "Rogue Forge Gaming Network — Service Exposure Cleanup"
+        },
+        {
+          "id": "freelance-0127-vertexlane-systems-group-administrative-access-redesign",
+          "name": "Vertexlane Systems Group — Administrative Access Redesign"
+        }
+      ]
+    },
+    {
+      "technology": "Python",
+      "rating": 3,
+      "count": 52,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rune-wars",
+          "name": "Rune Wars"
+        },
+        {
+          "id": "codex",
+          "name": "Codex"
+        },
+        {
+          "id": "assemblia",
+          "name": "Assemblia"
+        },
+        {
+          "id": "codexia",
+          "name": "Codexia"
+        },
+        {
+          "id": "gmod-optimization-tool",
+          "name": "Garry's Mod Optimization Tool"
+        }
+      ]
+    },
+    {
+      "technology": "Source Engine",
+      "rating": 5,
+      "count": 53,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "gfallout-new-vegas",
+          "name": "GFallout New Vegas"
+        },
+        {
+          "id": "assemblia",
+          "name": "Assemblia"
+        },
+        {
+          "id": "codexia",
+          "name": "Codexia"
+        },
+        {
+          "id": "gmod-optimization-tool",
+          "name": "Garry's Mod Optimization Tool"
+        },
+        {
+          "id": "titan-forge",
+          "name": "Titan Forge"
+        }
+      ]
+    },
+    {
+      "technology": "SQL",
+      "rating": 4,
+      "count": 53,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "lilia",
+          "name": "Lilia Framework"
+        },
+        {
+          "id": "postgresql-operations-lab",
+          "name": "PostgreSQL Operations Lab"
+        },
+        {
+          "id": "fallout-alaska",
+          "name": "Fallout Alaska / Alaskan Frontier"
+        },
+        {
+          "id": "nevada-wastes",
+          "name": "The Nevada Wastes"
+        },
+        {
+          "id": "legacy-star-wars-rp",
+          "name": "Star Wars RP Projects"
+        }
+      ]
+    },
+    {
+      "technology": "Technical Documentation",
+      "rating": 4,
+      "count": 56,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0006-signalcrest-operations-restore-validation-program",
+          "name": "Signalcrest Operations — Restore Validation Program"
+        },
+        {
+          "id": "freelance-0020-silverline-labs-server-recovery-modernization",
+          "name": "Silverline Labs — Server Recovery Modernization"
+        },
+        {
+          "id": "freelance-0027-raven-junction-server-network-addon-stack-replacement",
+          "name": "Enigma Networks — Addon Stack Replacement"
+        },
+        {
+          "id": "freelance-0067-midnight-crown-gaming-network-addon-stack-replacement",
+          "name": "Midnight Crown Gaming Network — Addon Stack Replacement"
+        },
+        {
+          "id": "freelance-0087-cobalt-realm-roleplay-network-addon-stack-replacement",
+          "name": "Cobalt Realm Roleplay Network — Addon Stack Replacement"
+        }
+      ]
+    },
+    {
+      "technology": "Systems Administration",
+      "rating": 4,
+      "count": 57,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rhel-hosting-operations",
+          "name": "RHEL Hosting Operations & Maintenance"
+        },
+        {
+          "id": "freelance-0023-corebridge-labs-server-baseline-rebuild",
+          "name": "Corebridge Labs — Server Baseline Rebuild"
+        },
+        {
+          "id": "freelance-0065-northforge-operations-server-baseline-rebuild",
+          "name": "Northforge Operations — Server Baseline Rebuild"
+        },
+        {
+          "id": "freelance-0093-copperline-game-services-systems-operations-refresh",
+          "name": "Copperline Game Services — Systems Operations Refresh"
+        },
+        {
+          "id": "freelance-0107-keystone-harbor-game-services-host-configuration-review",
+          "name": "Keystone Harbor Game Services — Host Configuration Review"
+        }
+      ]
+    },
+    {
+      "technology": "SSH",
+      "rating": 4,
+      "count": 59,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rhel-game-server-hosting",
+          "name": "RHEL Game Server Hosting"
+        },
+        {
+          "id": "rhel-website-hosting",
+          "name": "RHEL Website Hosting"
+        },
+        {
+          "id": "rhel-hosting-operations",
+          "name": "RHEL Hosting Operations & Maintenance"
+        },
+        {
+          "id": "freelance-0006-signalcrest-operations-restore-validation-program",
+          "name": "Signalcrest Operations — Restore Validation Program"
+        },
+        {
+          "id": "freelance-0076-neon-crown-network-game-network-hardening",
+          "name": "Neon Crown Network — Game Network Hardening"
+        }
+      ]
+    },
+    {
+      "technology": "Docker Compose",
+      "rating": 4,
+      "count": 71,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "postgresql-operations-lab",
+          "name": "PostgreSQL Operations Lab"
+        },
+        {
+          "id": "freelance-0016-harborpoint-integration-docker-operations-overhaul",
+          "name": "Harborpoint Integration — Docker Operations Overhaul"
+        },
+        {
+          "id": "freelance-0030-vertexlane-engineering-compose-stack-rebuild",
+          "name": "Vertexlane Engineering — Compose Stack Rebuild"
+        },
+        {
+          "id": "freelance-0054-rogue-crown-server-network-shared-services-modernization",
+          "name": "Rogue Crown Server Network — Shared Services Modernization"
+        },
+        {
+          "id": "freelance-0086-lightwell-data-services-docker-operations-overhaul",
+          "name": "Lightwell Data Services — Docker Operations Overhaul"
+        }
+      ]
+    },
+    {
+      "technology": "CI",
+      "rating": 4,
+      "count": 73,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "lilia",
+          "name": "Lilia Framework"
+        },
+        {
+          "id": "deploy-or-die",
+          "name": "Deploy or Die"
+        },
+        {
+          "id": "gluacheck",
+          "name": "GLuaCheck"
+        },
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "freelance-0049-cinderwave-systems-automated-deployment-workflow",
+          "name": "Cinderwave Systems — Automated Deployment Workflow"
+        }
+      ]
+    },
+    {
+      "technology": "Lua",
+      "rating": 5,
+      "count": 82,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "lilia",
+          "name": "Lilia Framework"
+        },
+        {
+          "id": "gfallout-new-vegas",
+          "name": "GFallout New Vegas"
+        },
+        {
+          "id": "codexia",
+          "name": "Codexia"
+        },
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        },
+        {
+          "id": "lilia-snippets",
+          "name": "Lilia Snippets"
+        }
+      ]
+    },
+    {
+      "technology": "SRCDS",
+      "rating": 5,
+      "count": 84,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "freelance-0042-east-summit-collective-game-node-modernization",
+          "name": "East Summit Collective — Game Node Modernization"
+        },
+        {
+          "id": "freelance-0045-vertexlane-game-services-linux-game-host-refresh",
+          "name": "Vertexlane Game Services — Linux Game Host Refresh"
+        },
+        {
+          "id": "freelance-0051-wild-nexus-collective-production-server-topology",
+          "name": "Wild Nexus Collective — Production Server Topology"
+        },
+        {
+          "id": "freelance-0068-bluepeak-data-services-production-server-topology",
+          "name": "Bluepeak Data Services — Production Server Topology"
+        }
+      ]
+    },
+    {
+      "technology": "Reverse Proxies",
+      "rating": 2,
+      "count": 95,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0001-stonebridge-technical-services-game-host-security-review",
+          "name": "Stonebridge Technical Services — Game Host Security Review"
+        },
+        {
+          "id": "freelance-0011-westmark-server-works-game-fleet-metrics-rollout",
+          "name": "Westmark Server Works — Game Fleet Metrics Rollout"
+        },
+        {
+          "id": "freelance-0026-scarlet-summit-collective-game-host-security-review",
+          "name": "Scarlet Summit Collective — Game Host Security Review"
+        },
+        {
+          "id": "freelance-0039-meridian-peak-security-alerting-noise-reduction",
+          "name": "Meridian Peak Security — Alerting Noise Reduction"
+        },
+        {
+          "id": "freelance-0082-atlas-ridge-technologies-production-server-topology",
+          "name": "Atlas Ridge Technologies — Production Server Topology"
+        }
+      ]
+    },
+    {
+      "technology": "PostgreSQL",
+      "rating": 4,
+      "count": 104,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "freelance-0025-arc-summit-roleplay-database-performance-remediation",
+          "name": "Arc Summit Roleplay — Database Performance Remediation"
+        },
+        {
+          "id": "freelance-0035-crimson-station-network-database-consolidation",
+          "name": "Crimson Station Network — Database Consolidation"
+        }
+      ]
+    },
+    {
+      "technology": "GitHub Actions",
+      "rating": 4,
+      "count": 112,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "lilia",
+          "name": "Lilia Framework"
+        },
+        {
+          "id": "deploy-or-die",
+          "name": "Deploy or Die"
+        },
+        {
+          "id": "codex",
+          "name": "Codex"
+        },
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        },
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        }
+      ]
+    },
+    {
+      "technology": "Cloudflare",
+      "rating": 4,
+      "count": 128,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0034-cobalt-station-server-network-player-services-infrastructure",
+          "name": "Guynolie — Player Services Infrastructure"
+        },
+        {
+          "id": "freelance-0041-bluepeak-server-works-deployment-process-assessment",
+          "name": "Bluepeak Server Works — Deployment Process Assessment"
+        },
+        {
+          "id": "freelance-0044-rogue-junction-collective-game-community-backend-rebuild",
+          "name": "Rogue Junction Collective — Game Community Backend Rebuild"
+        },
+        {
+          "id": "freelance-0047-summitline-reliability-ansible-host-standardization",
+          "name": "Summitline Reliability — Ansible Host Standardization"
+        },
+        {
+          "id": "freelance-0054-rogue-crown-server-network-shared-services-modernization",
+          "name": "Rogue Crown Server Network — Shared Services Modernization"
+        }
+      ]
+    },
+    {
+      "technology": "Grafana",
+      "rating": 4,
+      "count": 169,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "freelance-0002-prime-harbor-digital-service-containerization-project",
+          "name": "Prime Harbor Digital — Service Containerization Project"
+        },
+        {
+          "id": "freelance-0011-westmark-server-works-game-fleet-metrics-rollout",
+          "name": "Westmark Server Works — Game Fleet Metrics Rollout"
+        },
+        {
+          "id": "freelance-0014-obsidian-haven-servers-community-infrastructure-refresh",
+          "name": "Hylics Networks — Community Infrastructure Refresh"
+        }
+      ]
+    },
+    {
+      "technology": "MySQL",
+      "rating": 4,
+      "count": 174,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0008-solar-realm-gaming-network-gameplay-addon-package",
+          "name": "Vigilance Gaming — Gameplay Addon Package"
+        },
+        {
+          "id": "freelance-0014-obsidian-haven-servers-community-infrastructure-refresh",
+          "name": "Hylics Networks — Community Infrastructure Refresh"
+        },
+        {
+          "id": "freelance-0019-scarlet-legion-gaming-police-and-government-systems",
+          "name": "Apollo Networks — Police and Government Systems"
+        },
+        {
+          "id": "freelance-0051-wild-nexus-collective-production-server-topology",
+          "name": "Wild Nexus Collective — Production Server Topology"
+        },
+        {
+          "id": "freelance-0059-ghost-outpost-gaming-inventory-and-progression-overhaul",
+          "name": "Ghost Outpost Gaming — Inventory and Progression Overhaul"
+        }
+      ]
+    },
+    {
+      "technology": "Ubuntu",
+      "rating": 5,
+      "count": 206,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0003-ember-line-gaming-network-game-build-promotion-process",
+          "name": "Modified Gaming — Game Build Promotion Process"
+        },
+        {
+          "id": "freelance-0012-ghost-frontier-rp-dedicated-server-rebuild",
+          "name": "Local Networks — Dedicated Server Rebuild"
+        },
+        {
+          "id": "freelance-0014-obsidian-haven-servers-community-infrastructure-refresh",
+          "name": "Hylics Networks — Community Infrastructure Refresh"
+        },
+        {
+          "id": "freelance-0021-silver-harbor-gaming-network-multi-instance-hosting-design",
+          "name": "Downfall Networks — Multi-Instance Hosting Design"
+        },
+        {
+          "id": "freelance-0031-iron-junction-gaming-network-multi-instance-hosting-design",
+          "name": "Monarchy — Multi-Instance Hosting Design"
+        }
+      ]
+    },
+    {
+      "technology": "Ansible",
+      "rating": 4,
+      "count": 233,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "freelance-0005-bluepeak-infrastructure-repeatable-hosting-deployment",
+          "name": "Bluepeak Infrastructure — Repeatable Hosting Deployment"
+        },
+        {
+          "id": "freelance-0013-north-nexus-servers-steamcmd-update-pipeline",
+          "name": "North Nexus Servers — SteamCMD Update Pipeline"
+        },
+        {
+          "id": "freelance-0021-silver-harbor-gaming-network-multi-instance-hosting-design",
+          "name": "Downfall Networks — Multi-Instance Hosting Design"
+        },
+        {
+          "id": "freelance-0031-iron-junction-gaming-network-multi-instance-hosting-design",
+          "name": "Monarchy — Multi-Instance Hosting Design"
+        }
+      ]
+    },
+    {
+      "technology": "Prometheus",
+      "rating": 4,
+      "count": 242,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "freelance-0002-prime-harbor-digital-service-containerization-project",
+          "name": "Prime Harbor Digital — Service Containerization Project"
+        },
+        {
+          "id": "freelance-0004-harborpoint-automation-hosting-platform-rebuild",
+          "name": "Harborpoint Automation — Hosting Platform Rebuild"
+        }
+      ]
+    },
+    {
+      "technology": "systemd",
+      "rating": 4,
+      "count": 246,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rhel-game-server-hosting",
+          "name": "RHEL Game Server Hosting"
+        },
+        {
+          "id": "rhel-hosting-operations",
+          "name": "RHEL Hosting Operations & Maintenance"
+        },
+        {
+          "id": "freelance-0003-ember-line-gaming-network-game-build-promotion-process",
+          "name": "Modified Gaming — Game Build Promotion Process"
+        },
+        {
+          "id": "freelance-0005-bluepeak-infrastructure-repeatable-hosting-deployment",
+          "name": "Bluepeak Infrastructure — Repeatable Hosting Deployment"
+        },
+        {
+          "id": "freelance-0006-signalcrest-operations-restore-validation-program",
+          "name": "Signalcrest Operations — Restore Validation Program"
+        }
+      ]
+    },
+    {
+      "technology": "Troubleshooting",
+      "rating": 5,
+      "count": 259,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "postgresql-operations-lab",
+          "name": "PostgreSQL Operations Lab"
+        },
+        {
+          "id": "freelance-0002-prime-harbor-digital-service-containerization-project",
+          "name": "Prime Harbor Digital — Service Containerization Project"
+        },
+        {
+          "id": "freelance-0006-signalcrest-operations-restore-validation-program",
+          "name": "Signalcrest Operations — Restore Validation Program"
+        },
+        {
+          "id": "freelance-0023-corebridge-labs-server-baseline-rebuild",
+          "name": "Corebridge Labs — Server Baseline Rebuild"
+        }
+      ]
+    },
+    {
+      "technology": "Bash",
+      "rating": 4,
+      "count": 281,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "postgresql-operations-lab",
+          "name": "PostgreSQL Operations Lab"
+        },
+        {
+          "id": "freelance-0004-harborpoint-automation-hosting-platform-rebuild",
+          "name": "Harborpoint Automation — Hosting Platform Rebuild"
+        },
+        {
+          "id": "freelance-0020-silverline-labs-server-recovery-modernization",
+          "name": "Silverline Labs — Server Recovery Modernization"
+        },
+        {
+          "id": "freelance-0033-black-beacon-collective-steam-workshop-synchronization",
+          "name": "Black Beacon Collective — Steam Workshop Synchronization"
+        }
+      ]
+    },
+    {
+      "technology": "Bash/Shell",
+      "rating": 4,
+      "count": 281,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "postgresql-operations-lab",
+          "name": "PostgreSQL Operations Lab"
+        },
+        {
+          "id": "freelance-0004-harborpoint-automation-hosting-platform-rebuild",
+          "name": "Harborpoint Automation — Hosting Platform Rebuild"
+        },
+        {
+          "id": "freelance-0020-silverline-labs-server-recovery-modernization",
+          "name": "Silverline Labs — Server Recovery Modernization"
+        },
+        {
+          "id": "freelance-0033-black-beacon-collective-steam-workshop-synchronization",
+          "name": "Black Beacon Collective — Steam Workshop Synchronization"
+        }
+      ]
+    },
+    {
+      "technology": "Docker",
+      "rating": 4,
+      "count": 293,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "freelance-0002-prime-harbor-digital-service-containerization-project",
+          "name": "Prime Harbor Digital — Service Containerization Project"
+        },
+        {
+          "id": "freelance-0015-copper-beacon-servers-sql-operations-overhaul",
+          "name": "Copper Beacon Servers — SQL Operations Overhaul"
+        }
+      ]
+    },
+    {
+      "technology": "Git",
+      "rating": 4,
+      "count": 298,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0013-north-nexus-servers-steamcmd-update-pipeline",
+          "name": "North Nexus Servers — SteamCMD Update Pipeline"
+        },
+        {
+          "id": "freelance-0021-silver-harbor-gaming-network-multi-instance-hosting-design",
+          "name": "Downfall Networks — Multi-Instance Hosting Design"
+        },
+        {
+          "id": "freelance-0031-iron-junction-gaming-network-multi-instance-hosting-design",
+          "name": "Monarchy — Multi-Instance Hosting Design"
+        },
+        {
+          "id": "freelance-0036-northforge-reliability-failure-recovery-engineering",
+          "name": "Northforge Reliability — Failure Recovery Engineering"
+        },
+        {
+          "id": "freelance-0037-red-summit-server-network-custom-systems-expansion",
+          "name": "Slayer — Custom Systems Expansion"
+        }
+      ]
+    },
+    {
+      "technology": "Game Servers",
+      "rating": 5,
+      "count": 303,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rhel-game-server-hosting",
+          "name": "RHEL Game Server Hosting"
+        },
+        {
+          "id": "rhel-hosting-operations",
+          "name": "RHEL Hosting Operations & Maintenance"
+        },
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "freelance-0012-ghost-frontier-rp-dedicated-server-rebuild",
+          "name": "Local Networks — Dedicated Server Rebuild"
+        },
+        {
+          "id": "freelance-0021-silver-harbor-gaming-network-multi-instance-hosting-design",
+          "name": "Downfall Networks — Multi-Instance Hosting Design"
+        }
+      ]
+    },
+    {
+      "technology": "MariaDB",
+      "rating": 2,
+      "count": 313,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "freelance-0007-red-colony-rp-gameplay-stack-refactor",
+          "name": "Colonial Networks — Gameplay Stack Refactor"
+        },
+        {
+          "id": "freelance-0012-ghost-frontier-rp-dedicated-server-rebuild",
+          "name": "Local Networks — Dedicated Server Rebuild"
+        },
+        {
+          "id": "freelance-0015-copper-beacon-servers-sql-operations-overhaul",
+          "name": "Copper Beacon Servers — SQL Operations Overhaul"
+        },
+        {
+          "id": "freelance-0016-harborpoint-integration-docker-operations-overhaul",
+          "name": "Harborpoint Integration — Docker Operations Overhaul"
+        },
+        {
+          "id": "freelance-0023-corebridge-labs-server-baseline-rebuild",
+          "name": "Corebridge Labs — Server Baseline Rebuild"
+        }
+      ]
+    },
+    {
+      "technology": "Nginx",
+      "rating": 4,
+      "count": 350,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        },
+        {
+          "id": "freelance-0012-ghost-frontier-rp-dedicated-server-rebuild",
+          "name": "Local Networks — Dedicated Server Rebuild"
+        },
+        {
+          "id": "freelance-0018-harborpoint-platform-services-game-node-platform-upgrade",
+          "name": "Harborpoint Platform Services — Game Node Platform Upgrade"
+        },
+        {
+          "id": "freelance-0021-silver-harbor-gaming-network-multi-instance-hosting-design",
+          "name": "Downfall Networks — Multi-Instance Hosting Design"
+        }
+      ]
+    },
+    {
+      "technology": "GLua",
+      "rating": 5,
+      "count": 444,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "lilia",
+          "name": "Lilia Framework"
+        },
+        {
+          "id": "gfallout-new-vegas",
+          "name": "GFallout New Vegas"
+        },
+        {
+          "id": "codexia",
+          "name": "Codexia"
+        },
+        {
+          "id": "glua-toolchain",
+          "name": "GLua Toolchain"
+        },
+        {
+          "id": "lilia-snippets",
+          "name": "Lilia Snippets"
+        }
+      ]
+    },
+    {
+      "technology": "SteamCMD",
+      "rating": 5,
+      "count": 445,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "game-server-control-plane",
+          "name": "Game Server Control Plane"
+        },
+        {
+          "id": "freelance-0003-ember-line-gaming-network-game-build-promotion-process",
+          "name": "Modified Gaming — Game Build Promotion Process"
+        },
+        {
+          "id": "freelance-0005-bluepeak-infrastructure-repeatable-hosting-deployment",
+          "name": "Bluepeak Infrastructure — Repeatable Hosting Deployment"
+        },
+        {
+          "id": "freelance-0012-ghost-frontier-rp-dedicated-server-rebuild",
+          "name": "Local Networks — Dedicated Server Rebuild"
+        },
+        {
+          "id": "freelance-0013-north-nexus-servers-steamcmd-update-pipeline",
+          "name": "North Nexus Servers — SteamCMD Update Pipeline"
+        }
+      ]
+    },
+    {
+      "technology": "Garry's Mod",
+      "rating": 5,
+      "count": 484,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "lilia",
+          "name": "Lilia Framework"
+        },
+        {
+          "id": "gfallout-new-vegas",
+          "name": "GFallout New Vegas"
+        },
+        {
+          "id": "assemblia",
+          "name": "Assemblia"
+        },
+        {
+          "id": "codexia",
+          "name": "Codexia"
+        },
+        {
+          "id": "gmod-optimization-tool",
+          "name": "Garry's Mod Optimization Tool"
+        }
+      ]
+    },
+    {
+      "technology": "Linux",
+      "rating": 4,
+      "count": 1063,
+      "meetsMinimum": true,
+      "exampleProjects": [
+        {
+          "id": "rhel-game-server-hosting",
+          "name": "RHEL Game Server Hosting"
+        },
+        {
+          "id": "rhel-website-hosting",
+          "name": "RHEL Website Hosting"
+        },
+        {
+          "id": "rhel-hosting-operations",
+          "name": "RHEL Hosting Operations & Maintenance"
+        },
+        {
+          "id": "linux-infrastructure-lab",
+          "name": "Linux Infrastructure Lab"
+        },
+        {
+          "id": "production-troubleshooting-lab",
+          "name": "Production Troubleshooting Lab"
+        }
+      ]
+    }
+  ]
+}

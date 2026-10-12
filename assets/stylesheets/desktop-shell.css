@@ -439,3 +439,5 @@ html.is-embedded body{min-height:100vh!important;overflow:hidden!important}html.
 
 /* A selected desktop program uses its outer border as the sole selection cue. */
 .desktop-shortcut.is-selected .desktop-shortcut__label{background:transparent;outline:none}
+
+.reviews-only-app .steam-review-row[hidden]{display:none!important}.reviews-pagination>span{max-width:min(45vw,460px);overflow-x:auto;scrollbar-width:thin}.reviews-only-list{overscroll-behavior:contain}

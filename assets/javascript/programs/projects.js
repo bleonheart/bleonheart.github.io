@@ -34,6 +34,19 @@
 
   const normalizeTag = (value) => String(value || "").trim().toLowerCase();
 
+  const projectTags = (project) => {
+    const values = [];
+    const seen = new Set();
+    for (const tag of [...(Array.isArray(project?.tags) ? project.tags : []), ...(Array.isArray(project?.technologies) ? project.technologies : [])]) {
+      const value = String(tag || "").trim();
+      const key = normalizeTag(value);
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      values.push(value);
+    }
+    return values;
+  };
+
   const displayTag = (value) => {
     const raw = String(value || "").trim();
     const normalized = normalizeTag(raw);
@@ -174,7 +187,7 @@
     });
   };
 
-  const renderEntry = (project) => {
+  const renderEntry = (project, selectedTags) => {
     const entry = create("article", "cv-project-entry");
     entry.dataset.projectId = project.id || "";
 
@@ -194,7 +207,16 @@
     );
 
     const tags = create("div", "feature-tags cv-project-entry__tags");
-    for (const technology of project.technologies || []) tags.append(create("span", "", displayTag(technology)));
+    tags.setAttribute("aria-label", "Project tags: select to filter projects");
+    for (const tag of projectTags(project)) {
+      const isSelected = selectedTags.has(normalizeTag(tag));
+      const button = create("button", `projects-tag-button${isSelected ? " is-active" : ""}`, displayTag(tag));
+      button.type = "button";
+      button.setAttribute("aria-pressed", String(isSelected));
+      button.dataset.projectTag = normalizeTag(tag);
+      button.title = `Find projects tagged ${displayTag(tag)}`;
+      tags.append(button);
+    }
     main.append(tags);
 
     const features = create("section", "cv-project-entry__features");
@@ -223,13 +245,33 @@
 
       const body = create("div", "feature-app__body projects-archive-body");
       const results = create("section", "projects-results");
+      const lookup = create("div", "projects-lookup");
+      const lookupLabel = create("label", "projects-lookup__label", "Search projects and tags");
+      const lookupInput = create("input", "projects-lookup__input");
+      lookupInput.type = "search";
+      lookupInput.placeholder = "Search by name, technology or topic…";
+      lookupInput.autocomplete = "off";
+      lookupInput.dataset.projectSearch = "";
+      const lookupId = `projects-search-${Math.random().toString(36).slice(2, 9)}`;
+      lookupInput.id = lookupId;
+      lookupLabel.htmlFor = lookupId;
+      const lookupControls = create("div", "projects-lookup__controls");
+      const selection = create("div", "projects-lookup__selection");
+      selection.dataset.projectSelectedTag = "";
+      selection.hidden = true;
+      const clearFilters = create("button", "projects-filter-clear", "Clear filters");
+      clearFilters.type = "button";
+      clearFilters.dataset.projectClearFilters = "";
+      clearFilters.hidden = true;
+      lookupControls.append(selection, clearFilters);
+      lookup.append(lookupLabel, lookupInput, lookupControls);
       const list = create("div", "cv-project-list");
       list.dataset.projectList = "";
       const pagination = create("nav", "projects-pagination");
       pagination.dataset.projectPagination = "";
       pagination.setAttribute("aria-label", "Project pages");
       pagination.hidden = true;
-      results.append(list, pagination);
+      results.append(lookup, list, pagination);
 
       const sidebar = create("aside", "projects-archive-sidebar");
       sidebar.setAttribute("aria-label", "Project filters and status");
@@ -266,13 +308,26 @@
       }
       statusGroup.append(statusList);
 
+      const tagsGroup = create("section", "projects-sidebar-group projects-tags-group");
+      tagsGroup.append(create("h2", "", "Browse tags"));
+      const tagSearch = create("input", "projects-tag-search");
+      tagSearch.type = "search";
+      tagSearch.placeholder = "Find a tag…";
+      tagSearch.autocomplete = "off";
+      tagSearch.dataset.projectTagSearch = "";
+      tagSearch.setAttribute("aria-label", "Find a project tag");
+      const tagList = create("div", "projects-tag-list");
+      tagList.dataset.projectTagList = "";
+      tagList.setAttribute("aria-label", "Available project tags");
+      tagsGroup.append(tagSearch, tagList);
+
       const disclaimerGroup = create("section", "projects-sidebar-group projects-disclaimer-group");
       disclaimerGroup.append(
         create("h2", "", "Disclaimer"),
         create("p", "projects-disclaimer-copy", "Some project entries were dynamically retrieved via a Python script with properties assigned from the detected source contents. Because this process is automated, occasional errors, omissions, or mismatches may exist.")
       );
 
-      sidebar.append(filterGroup, statusGroup, disclaimerGroup);
+      sidebar.append(filterGroup, statusGroup, tagsGroup, disclaimerGroup);
       body.append(results, sidebar);
 
       const panel = create("div", "projects-scroll-panel");
@@ -292,8 +347,15 @@
       const pagination = app.querySelector("[data-project-pagination]");
       const categoryButtons = [...app.querySelectorAll("[data-project-category-filter]")];
       const statusRows = [...app.querySelectorAll("[data-project-status-row]")];
+      const projectSearch = app.querySelector("[data-project-search]");
+      const tagSearch = app.querySelector("[data-project-tag-search]");
+      const tagList = app.querySelector("[data-project-tag-list]");
+      const selectedTagLabel = app.querySelector("[data-project-selected-tag]");
+      const clearFilters = app.querySelector("[data-project-clear-filters]");
       let categoryFilter = "all";
       let statusFilter = "";
+      const selectedTags = new Set();
+      let searchQuery = "";
       let currentPage = 1;
       let availableProjects = [...projects];
       let githubLabsLoaded = false;
@@ -303,17 +365,94 @@
         const stored = JSON.parse(sessionStorage.getItem(storageKey) || "null");
         if (categoryFilterKeys.has(stored?.category)) categoryFilter = stored.category;
         if (statusFilterKeys.has(stored?.status)) statusFilter = stored.status;
+        const savedTags = Array.isArray(stored?.tags) ? stored.tags : typeof stored?.tag === "string" ? [stored.tag] : [];
+        for (const value of savedTags.slice(0, 30)) {
+          const tag = normalizeTag(value).slice(0, 100);
+          if (tag) selectedTags.add(tag);
+        }
+        if (typeof stored?.query === "string") searchQuery = stored.query.slice(0, 180);
       } catch {}
+
+      projectSearch.value = searchQuery;
 
       const saveSelection = () => {
         try {
-          sessionStorage.setItem(storageKey, JSON.stringify({ category: categoryFilter, status: statusFilter }));
+          sessionStorage.setItem(storageKey, JSON.stringify({ category: categoryFilter, status: statusFilter, tags: [...selectedTags], query: searchQuery }));
         } catch {}
+      };
+
+      const matchesSearch = (project) => {
+        const words = normalizeTag(searchQuery).split(/\s+/).filter(Boolean);
+        if (!words.length) return true;
+        const searchable = normalizeTag([
+          project.name,
+          project.summary,
+          project.category,
+          ...(Array.isArray(project.work) ? project.work : []),
+          ...projectTags(project)
+        ].join(" "));
+        return words.every((word) => searchable.includes(word));
       };
 
       const matchesProject = (project) => {
         if (categoryFilter !== "all" && projectCategory(project) !== categoryFilter) return false;
-        return !statusFilter || projectState(project) === statusFilter;
+        if (statusFilter && projectState(project) !== statusFilter) return false;
+        if (selectedTags.size) {
+          const tags = new Set(projectTags(project).map(normalizeTag));
+          if (![...selectedTags].every((tag) => tags.has(tag))) return false;
+        }
+        return matchesSearch(project);
+      };
+
+      const selectTag = (value) => {
+        const normalized = normalizeTag(value);
+        if (!normalized) return;
+        if (selectedTags.has(normalized)) selectedTags.delete(normalized);
+        else selectedTags.add(normalized);
+        currentPage = 1;
+        saveSelection();
+        render();
+      };
+
+      const updateTags = () => {
+        const counts = new Map();
+        const names = new Map();
+        for (const project of availableProjects) {
+          if (categoryFilter !== "all" && projectCategory(project) !== categoryFilter) continue;
+          if (statusFilter && projectState(project) !== statusFilter) continue;
+          if (!matchesSearch(project)) continue;
+          for (const tag of projectTags(project)) {
+            const key = normalizeTag(tag);
+            counts.set(key, (counts.get(key) || 0) + 1);
+            if (!names.has(key)) names.set(key, displayTag(tag));
+          }
+        }
+        for (const tag of selectedTags) if (!names.has(tag)) names.set(tag, displayTag(tag));
+        const query = normalizeTag(tagSearch.value);
+        const keys = [...names.keys()].filter((tag) => !query || tag.includes(query) || normalizeTag(names.get(tag)).includes(query));
+        keys.sort((left, right) => (counts.get(right) || 0) - (counts.get(left) || 0) || names.get(left).localeCompare(names.get(right)));
+        tagList.replaceChildren();
+        for (const key of keys) {
+          const checked = selectedTags.has(key);
+          const button = create("button", `projects-tag-filter-row${checked ? " is-active" : ""}`);
+          button.type = "button";
+          button.dataset.projectTagFilter = key;
+          button.setAttribute("aria-pressed", String(checked));
+          button.append(create("span", "projects-tag-filter-row__name", names.get(key)), create("span", "projects-tag-filter-row__count", String(counts.get(key) || 0)));
+          tagList.append(button);
+        }
+        if (!keys.length) tagList.append(create("p", "projects-tag-list__empty", "No matching tags"));
+        const hasFilters = categoryFilter !== "all" || Boolean(statusFilter || selectedTags.size || searchQuery.trim());
+        clearFilters.hidden = !hasFilters;
+        selectedTagLabel.hidden = !selectedTags.size;
+        selectedTagLabel.replaceChildren();
+        for (const tag of selectedTags) {
+          const chip = create("button", "projects-selected-tag", `${names.get(tag) || displayTag(tag)} ×`);
+          chip.type = "button";
+          chip.dataset.selectedTagRemove = tag;
+          chip.setAttribute("aria-label", `Remove ${names.get(tag) || displayTag(tag)} filter`);
+          selectedTagLabel.append(chip);
+        }
       };
 
       const updateSidebar = () => {
@@ -321,6 +460,11 @@
           const value = button.dataset.projectCategoryFilter;
           const count = availableProjects.filter((project) => {
             if (statusFilter && projectState(project) !== statusFilter) return false;
+            if (selectedTags.size) {
+              const tags = new Set(projectTags(project).map(normalizeTag));
+              if (![...selectedTags].every((tag) => tags.has(tag))) return false;
+            }
+            if (!matchesSearch(project)) return false;
             return value === "all" || projectCategory(project) === value;
           }).length;
           const active = value === categoryFilter;
@@ -331,7 +475,7 @@
 
         for (const row of statusRows) {
           const value = row.dataset.projectStatusRow;
-          row.querySelector(".projects-status-row__count").textContent = String(availableProjects.filter((project) => projectState(project) === value).length);
+          row.querySelector(".projects-status-row__count").textContent = String(availableProjects.filter((project) => (categoryFilter === "all" || projectCategory(project) === categoryFilter) && (!selectedTags.size || [...selectedTags].every((tag) => projectTags(project).some((value) => normalizeTag(value) === tag))) && matchesSearch(project) && projectState(project) === value).length);
         }
       };
 
@@ -377,6 +521,7 @@
 
       const render = () => {
         updateSidebar();
+        updateTags();
         list.replaceChildren();
         const matches = availableProjects.filter(matchesProject);
         if (!matches.length) {
@@ -384,6 +529,7 @@
           pagination.hidden = true;
           const empty = create("div", "feature-empty");
           if (categoryFilter === "experiments" && !githubLabsLoaded) empty.append(create("strong", "", "Loading experiments…"), create("span", "", "Public experimental repositories are being loaded."));
+          else if (selectedTags.size || searchQuery.trim()) empty.append(create("strong", "", "No matching projects"), create("span", "", "Try another search term or clear your filters."));
           else if (statusFilter) empty.append(create("strong", "", "No projects match this status"), create("span", "", "Choose another project category or status."));
           else empty.append(create("strong", "", "No projects in this section"), create("span", "", "There are no projects available for this filter."));
           list.append(empty);
@@ -394,12 +540,15 @@
         currentPage = Math.min(Math.max(1, currentPage), totalPages);
         const startIndex = (currentPage - 1) * pageSize;
         const endIndex = Math.min(startIndex + pageSize, matches.length);
-        for (const project of matches.slice(startIndex, endIndex)) list.append(renderEntry(project));
+        for (const project of matches.slice(startIndex, endIndex)) list.append(renderEntry(project, selectedTags));
         renderPagination(matches.length, totalPages, startIndex, endIndex);
       };
 
       const setLegacyFilter = (next) => {
         const normalized = normalizeFilter(next);
+        selectedTags.clear();
+        searchQuery = "";
+        projectSearch.value = "";
         currentPage = 1;
         if (statusFilterKeys.has(normalized)) {
           categoryFilter = "all";
@@ -417,6 +566,9 @@
         if (!project) return;
         categoryFilter = "all";
         statusFilter = "";
+        selectedTags.clear();
+        searchQuery = "";
+        projectSearch.value = "";
         const projectIndex = availableProjects.indexOf(project);
         currentPage = Math.max(1, Math.floor(projectIndex / pageSize) + 1);
         saveSelection();
@@ -426,6 +578,42 @@
 
       const onFilter = (event) => setLegacyFilter(String(event.detail?.filter || "all"));
       const onOpenProject = (event) => focusProject(String(event.detail?.id || ""));
+
+      projectSearch.addEventListener("input", () => {
+        searchQuery = projectSearch.value.slice(0, 180);
+        currentPage = 1;
+        saveSelection();
+        render();
+      });
+
+      tagSearch.addEventListener("input", updateTags);
+
+      selectedTagLabel.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-selected-tag-remove]");
+        if (button && selectedTagLabel.contains(button)) selectTag(button.dataset.selectedTagRemove);
+      });
+
+      tagList.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-project-tag-filter]");
+        if (button && tagList.contains(button)) selectTag(button.dataset.projectTagFilter);
+      });
+
+      list.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-project-tag]");
+        if (button && list.contains(button)) selectTag(button.dataset.projectTag);
+      });
+
+      clearFilters.addEventListener("click", () => {
+        categoryFilter = "all";
+        statusFilter = "";
+        selectedTags.clear();
+        searchQuery = "";
+        projectSearch.value = "";
+        tagSearch.value = "";
+        currentPage = 1;
+        saveSelection();
+        render();
+      });
 
       for (const button of categoryButtons) {
         button.addEventListener("click", () => {

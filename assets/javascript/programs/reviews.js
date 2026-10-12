@@ -19,17 +19,19 @@
     let filter = "all";
     let sortMode = sort?.value || "recent";
     let page = 1;
-    let resizeFrame = 0;
+    const reviewsPerPage = 6;
 
     const renderPagination = (totalPages) => {
       if (pages) {
         pages.replaceChildren();
-        for (let number = 1; number <= totalPages; number += 1) {
+        const first = Math.max(1, Math.min(page - 3, totalPages - 6));
+        const last = Math.min(totalPages, first + 6);
+        for (let number = first; number <= last; number += 1) {
           const button = document.createElement("button");
           button.type = "button";
           button.textContent = String(number);
           button.setAttribute("aria-label", `Review page ${number}`);
-          button.setAttribute("aria-current", number === page ? "page" : "false");
+          if (number === page) button.setAttribute("aria-current", "page");
           button.addEventListener("click", () => {
             page = number;
             render();
@@ -39,40 +41,6 @@
       }
       if (previous) previous.disabled = page <= 1;
       if (next) next.disabled = totalPages === 0 || page >= totalPages;
-    };
-
-    const buildPages = (filtered) => {
-      if (!filtered.length) return [];
-      const style = getComputedStyle(list);
-      const availableHeight = Math.max(0, list.clientHeight - (Number.parseFloat(style.paddingTop) || 0) - (Number.parseFloat(style.paddingBottom) || 0) - 8);
-      if (availableHeight <= 0) {
-        const fallback = [];
-        for (let index = 0; index < filtered.length; index += 6) fallback.push(filtered.slice(index, index + 6));
-        return fallback;
-      }
-
-      const filteredSet = new Set(filtered);
-      for (const row of rows) row.hidden = !filteredSet.has(row);
-      const gap = Number.parseFloat(style.rowGap || style.gap) || 0;
-      const result = [];
-      let current = [];
-      let currentHeight = 0;
-
-      for (const row of filtered) {
-        const rowHeight = Math.ceil(row.getBoundingClientRect().height);
-        const nextHeight = currentHeight + (current.length ? gap : 0) + rowHeight;
-        if (current.length && nextHeight > availableHeight) {
-          result.push(current);
-          current = [row];
-          currentHeight = rowHeight;
-        } else {
-          current.push(row);
-          currentHeight = nextHeight;
-        }
-      }
-
-      if (current.length) result.push(current);
-      return result;
     };
 
     const render = () => {
@@ -85,12 +53,11 @@
 
       for (const row of ordered) list.append(row);
 
-      const reviewPages = buildPages(filtered);
-      const totalPages = reviewPages.length;
-      page = totalPages ? Math.min(page, totalPages) : 1;
-      const visible = totalPages ? reviewPages[page - 1] : [];
+      const totalPages = Math.ceil(filtered.length / reviewsPerPage);
+      page = totalPages ? Math.max(1, Math.min(page, totalPages)) : 1;
+      const start = (page - 1) * reviewsPerPage;
+      const visible = filtered.slice(start, start + reviewsPerPage);
       const visibleSet = new Set(visible);
-      const start = totalPages ? reviewPages.slice(0, page - 1).reduce((count, group) => count + group.length, 0) : 0;
 
       for (const row of ordered) row.hidden = !visibleSet.has(row);
 
@@ -103,14 +70,6 @@
       if (status) status.textContent = filtered.length ? `Showing ${start + 1}–${start + visible.length} of ${filtered.length} reviews` : "No reviews found";
       renderPagination(totalPages);
       list.scrollTop = 0;
-    };
-
-    const scheduleRender = () => {
-      if (resizeFrame) cancelAnimationFrame(resizeFrame);
-      resizeFrame = requestAnimationFrame(() => {
-        resizeFrame = 0;
-        render();
-      });
     };
 
     for (const button of filters) {
@@ -139,18 +98,10 @@
       render();
     });
 
-    let resizeObserver = null;
-    if (typeof ResizeObserver === "function") {
-      resizeObserver = new ResizeObserver(scheduleRender);
-      resizeObserver.observe(app);
-    }
-
     app.dataset.reviewsInitialized = "true";
     render();
 
     return () => {
-      if (resizeFrame) cancelAnimationFrame(resizeFrame);
-      resizeObserver?.disconnect();
       delete app.dataset.reviewsInitialized;
     };
   }
