@@ -20,7 +20,7 @@
     discord: { label: "Discord", url: "https://discord.com/users/245205823909789706" },
     pivity: { label: "Pivity", url: "https://www.gmodstore.com/users/liliaplayer" },
     linkedin: { label: "LinkedIn", url: "https://linkedin.com/in/davidmpbarata" },
-    lilia: { label: "Lilia Framework", url: "https://github.com/LiliaFramework/" },
+    lilia: { label: "Lilia Framework", url: "https://liliaframework.github.io/" },
     "lilia-repository": { label: "Lilia Repository", url: "https://github.com/LiliaFramework/Lilia" },
     portfolio: { label: "Portfolio", url: "https://bleonheart.github.io/" }
   };

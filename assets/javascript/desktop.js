@@ -143,18 +143,26 @@
   let state = readState();
   let preferences = readPreferences();
 
+  function announceDesktopReady() {
+    root.dataset.startupComplete = "true";
+    window.dispatchEvent(new Event("portfolio:desktop-ready"));
+  }
+
   function runPageStartup(options = {}) {
     const restart = Boolean(options.restart);
+    delete root.dataset.startupComplete;
     if (options.skip && !restart) {
       root.classList.remove("is-page-starting", "is-shutdown");
       root.classList.add("is-page-ready");
       if (startupOverlay) startupOverlay.hidden = true;
+      announceDesktopReady();
       return;
     }
     if (!startupOverlay) {
       root.classList.remove("is-page-starting");
       root.classList.add("is-page-ready");
       if (restart) location.reload();
+      else announceDesktopReady();
       return;
     }
 
@@ -197,6 +205,7 @@
       setTimeout(() => {
         startupOverlay.hidden = true;
         startupOverlay.classList.remove("is-leaving");
+        announceDesktopReady();
       }, leaveDuration);
     };
 
@@ -1311,9 +1320,8 @@
       requestAnimationFrame(() => window.dispatchEvent(new CustomEvent("portfolio:about-tab", { detail: { target: embeddedTab } })));
       return true;
     }
-    const registeredApplication = applications.get(id);
-    if (!registeredApplication) return false;
-    const application = id === "lilia" ? { ...registeredApplication, url: "https://github.com/LiliaFramework/" } : registeredApplication;
+    const application = applications.get(id);
+    if (!application) return false;
     playUiSound("open");
     let entry = windows.get(id);
     if (!entry) entry = createWindow(application);
@@ -1343,6 +1351,19 @@
     persistWindow(entry);
     const next = [...windows.values()].filter((item) => !item.minimized && item !== entry).sort((a, b) => Number(b.element.style.zIndex) - Number(a.element.style.zIndex))[0];
     if (next) setActive(next);
+  }
+
+  function minimizeAllApplications() {
+    let minimized = 0;
+    for (const entry of windows.values()) {
+      if (entry.minimized) continue;
+      entry.gameController?.pause?.();
+      setWindowMinimizedState(entry, true);
+      persistWindow(entry);
+      minimized++;
+    }
+    closeStartMenu();
+    return minimized;
   }
 
   function maximizeWindow(entry, persist = true) {
@@ -2433,6 +2454,7 @@
   window.PortfolioDesktop = {
     applications,
     openApplication,
+    minimizeAllApplications,
     openCreation,
     getRuntimeStats,
     initializeGitHubStats

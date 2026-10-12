@@ -446,7 +446,7 @@
       "name": "GLuaCheck",
       "summary": "A Lilia-oriented Luacheck-based static-analysis repository adapted for Garry's Mod and framework development workflows.",
       "status": "tools",
-      "category": "Tool · Lua / GLua Static Analysis",
+      "category": "Tool · Lua Static Analysis",
       "years": "2024–Present",
       "technologies": [
         "Lua",

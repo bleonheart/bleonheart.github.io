@@ -319,14 +319,14 @@
       );
 
       sidebar.append(filterGroup, statusGroup, tagsGroup, disclaimerGroup);
-      body.append(results, sidebar);
+      body.append(results);
 
       const panel = create("div", "projects-scroll-panel");
       const contentCard = create("section", "projects-content-card");
       contentCard.append(header, body);
       const frame = create("div", "projects-layout-frame");
       frame.append(contentCard);
-      panel.append(frame);
+      panel.append(frame, sidebar);
       app.append(panel);
       return app;
     },
